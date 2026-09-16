@@ -1,0 +1,137 @@
+"""Calibration methods: standard baselines + NN-PPI reproduction + our extension.
+
+All methods share the same interface: fit on (raw_scores, labels) from the
+calibration set, then transform raw scores on new instances into calibrated
+scores in roughly [0, 1].
+
+Ours = NN-PPI base + up to three independently toggleable fixes, so each can
+be ablated on its own:
+  - similarity weighting: weight neighbor residuals by cosine similarity
+    instead of uniform 1/k averaging (motivated by arXiv 2606.31577, which
+    found *naive* cosine weighting alone doesn't help -- so we softmax-sharpen
+    it with a temperature rather than using raw similarity as the weight).
+  - range clipping: clip the final calibrated score into [0, 1].
+  - variance fix: weighted residual variance instead of the paper's
+    unweighted sigma_res^2 / |S_i|, to test whether it improves empirical CI
+    coverage.
+"""
+from dataclasses import dataclass, field
+
+import numpy as np
+from sklearn.isotonic import IsotonicRegression
+from sklearn.linear_model import LogisticRegression
+
+
+def temperature_scale_fit(raw_scores: np.ndarray, labels: np.ndarray) -> float:
+    """Fit a single temperature T minimizing NLL on logit(raw_score)/T -> label."""
+    eps = 1e-6
+    logits = np.log(np.clip(raw_scores, eps, 1 - eps) / np.clip(1 - raw_scores, eps, 1 - eps))
+
+    def nll(T):
+        p = 1 / (1 + np.exp(-logits / T))
+        p = np.clip(p, eps, 1 - eps)
+        return -np.mean(labels * np.log(p) + (1 - labels) * np.log(1 - p))
+
+    # simple 1D grid + local refine (no scipy dependency assumed)
+    grid = np.linspace(0.05, 5.0, 200)
+    losses = [nll(t) for t in grid]
+    best_T = grid[int(np.argmin(losses))]
+    return best_T
+
+
+def temperature_scale_apply(raw_scores: np.ndarray, T: float) -> np.ndarray:
+    eps = 1e-6
+    logits = np.log(np.clip(raw_scores, eps, 1 - eps) / np.clip(1 - raw_scores, eps, 1 - eps))
+    return 1 / (1 + np.exp(-logits / T))
+
+
+def platt_scale_fit(raw_scores: np.ndarray, labels: np.ndarray) -> LogisticRegression:
+    lr = LogisticRegression()
+    lr.fit(raw_scores.reshape(-1, 1), labels)
+    return lr
+
+
+def platt_scale_apply(raw_scores: np.ndarray, model: LogisticRegression) -> np.ndarray:
+    return model.predict_proba(raw_scores.reshape(-1, 1))[:, 1]
+
+
+def isotonic_fit(raw_scores: np.ndarray, labels: np.ndarray) -> IsotonicRegression:
+    iso = IsotonicRegression(out_of_bounds="clip", y_min=0.0, y_max=1.0)
+    iso.fit(raw_scores, labels)
+    return iso
+
+
+def isotonic_apply(raw_scores: np.ndarray, model: IsotonicRegression) -> np.ndarray:
+    return model.predict(raw_scores)
+
+
+@dataclass
+class NNPPIConfig:
+    k: int = 5
+    similarity_weighted: bool = False
+    softmax_temperature: float = 0.1  # only used if similarity_weighted
+    clip_range: bool = False
+    weighted_variance: bool = False
+
+
+@dataclass
+class NNPPIResult:
+    theta: np.ndarray          # calibrated scores
+    ci_half_width: np.ndarray  # z * sqrt(var)
+    out_of_range_rate: float
+
+
+def nn_ppi_apply(
+    test_raw_scores: np.ndarray,
+    test_embeddings: np.ndarray,
+    calib_raw_scores: np.ndarray,
+    calib_embeddings: np.ndarray,
+    calib_labels: np.ndarray,
+    config: NNPPIConfig,
+    alpha: float = 0.05,
+) -> NNPPIResult:
+    """Vectorized NN-PPI (and our ablations) over L2-normalized embeddings."""
+    # cosine similarity via dot product (embeddings must be L2-normalized)
+    sims = test_embeddings @ calib_embeddings.T  # (n_test, n_calib)
+    k = config.k
+    neighbor_idx = np.argpartition(-sims, kth=min(k, sims.shape[1] - 1), axis=1)[:, :k]
+
+    n_test = test_raw_scores.shape[0]
+    theta = np.empty(n_test)
+    var = np.empty(n_test)
+    z = 1.959963985  # z_{0.975} for 95% CI
+
+    for i in range(n_test):
+        idx = neighbor_idx[i]
+        neighbor_residuals = calib_labels[idx] - calib_raw_scores[idx]  # (k,)
+
+        if config.similarity_weighted:
+            neighbor_sims = sims[i, idx]
+            # softmax-sharpen the similarities into weights (raw cosine
+            # weighting alone was shown insufficient in arXiv 2606.31577)
+            w = np.exp(neighbor_sims / config.softmax_temperature)
+            w = w / w.sum()
+        else:
+            w = np.full(k, 1.0 / k)
+
+        r_bar = float(np.sum(w * neighbor_residuals))
+        theta_i = test_raw_scores[i] + r_bar
+
+        if config.weighted_variance:
+            # weighted residual variance (effective-sample-size corrected)
+            mean = r_bar
+            weighted_var = np.sum(w * (neighbor_residuals - mean) ** 2)
+            ess = 1.0 / np.sum(w ** 2)  # effective sample size
+            var_i = weighted_var / max(ess, 1e-6)
+        else:
+            var_i = np.var(neighbor_residuals) / k
+
+        theta[i] = theta_i
+        var[i] = var_i
+
+    out_of_range_rate = float(np.mean((theta < 0) | (theta > 1)))
+    if config.clip_range:
+        theta = np.clip(theta, 0.0, 1.0)
+
+    ci_half_width = z * np.sqrt(np.maximum(var, 0.0))
+    return NNPPIResult(theta=theta, ci_half_width=ci_half_width, out_of_range_rate=out_of_range_rate)
