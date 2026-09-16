@@ -1,0 +1,25 @@
+{
+  "n_scored_so_far": 1153,
+  "overall": {
+    "mean": 0.32688638334778836,
+    "median": 0.15,
+    "stdev": 0.3250644370255686,
+    "min": 0.0,
+    "max": 0.95
+  },
+  "by_label": {
+    "0": {
+      "n": 598,
+      "mean": 0.12332775919732442,
+      "median": 0.1,
+      "stdev": 0.1428840407311037
+    },
+    "1": {
+      "n": 555,
+      "mean": 0.5462162162162162,
+      "median": 0.6,
+      "stdev": 0.3236833455794456
+    }
+  },
+  "note": "preview from clef_calib partial run (in progress); full clef_calib_scores.jsonl will be pushed on completion"
+}
