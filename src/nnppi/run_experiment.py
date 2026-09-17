@@ -187,6 +187,49 @@ def main():
     })
     print(f"conformalized-shrinkage q2 (on top of shrunk variance) = {q2:.3f}  (plain conformal q was {q:.3f})")
 
+    # Joint (k, m) selection for conformalized shrinkage: for each k, refit m
+    # and q2 on the SAME calib holdout/neighbor split, then keep whichever
+    # (k, m) gives the smallest resulting holdout width once q2 already
+    # guarantees ~target coverage there. Never touches the test set for the
+    # selection itself -- only the final chosen (k, m) is applied to test once.
+    best = None
+    for k_cand in (3, 5, 10):
+        base_cfg_k = NNPPIConfig(k=k_cand, similarity_weighted=True, clip_range=True)
+        m_k = shrinkage_m_fit(
+            calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+            calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+            base_cfg_k, global_residual_var_neighbor,
+        )
+        shrink_cfg_k_neighbor = NNPPIConfig(k=k_cand, similarity_weighted=True, clip_range=True,
+                                             variance_shrinkage=True, shrinkage_prior_strength=m_k,
+                                             global_residual_var=global_residual_var_neighbor)
+        q_k = conformal_scale_fit(
+            calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+            calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+            shrink_cfg_k_neighbor, target_coverage=0.95,
+        )
+        res_holdout = nn_ppi_apply(calib_raw[holdout_idx], calib_emb[holdout_idx],
+                                    calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+                                    shrink_cfg_k_neighbor)
+        holdout_width = float(np.mean(q_k * res_holdout.sqrt_var))
+        if best is None or holdout_width < best[3]:
+            best = (k_cand, m_k, q_k, holdout_width)
+    k_best, m_best, q_best, _ = best
+    print(f"joint (k,m) selection on calib holdout only -> k={k_best}, m={m_best}, q={q_best:.3f}")
+
+    shrink_cfg_best = NNPPIConfig(k=k_best, similarity_weighted=True, clip_range=True,
+                                   variance_shrinkage=True, shrinkage_prior_strength=m_best,
+                                   global_residual_var=global_residual_var_full)
+    res = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, shrink_cfg_best)
+    best_half_width = q_best * res.sqrt_var
+    rows.append({
+        "condition": f"nnppi_full+shrinkage+conformal(k={k_best},m={m_best},q={q_best:.2f})", "k": k_best,
+        **report_f1(test_labels, res.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res.theta, best_half_width), 3),
+        "mean_ci_width": round(float(np.mean(best_half_width) * 2), 3),
+        "out_of_range_rate": round(res.out_of_range_rate, 3),
+    })
+
     print(f"\n=== {args.dataset} summary ===")
     header = ["condition", "k", "weighted_f1", "class0_f1", "class1_f1",
               "ci_coverage", "mean_ci_width", "out_of_range_rate"]
