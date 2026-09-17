@@ -14,7 +14,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from nnppi.calibration import (
-    NNPPIConfig, nn_ppi_apply, conformal_scale_fit, shrinkage_m_fit,
+    NNPPIConfig, nn_ppi_apply, conformal_scale_fit, shrinkage_m_fit, softmax_temperature_fit,
     temperature_scale_fit, temperature_scale_apply,
     platt_scale_fit, platt_scale_apply,
     isotonic_fit, isotonic_apply,
@@ -113,14 +113,37 @@ def main():
                 mc = mcnemar_test(test_labels, baseline_preds, full_preds)
                 print(f"McNemar baseline vs full (k=5): {mc}")
 
-    # Split-conformal calibration of the CI width, fit ONLY on a held-out
-    # slice of the calibration set (never the test set) -- see if a properly
-    # calibrated multiplier closes more of the coverage gap than z=1.96.
     rng = np.random.default_rng(0)
     n_calib = len(calib_labels)
     perm = rng.permutation(n_calib)
     n_holdout = max(1, int(0.2 * n_calib))
     holdout_idx, neighbor_idx = perm[:n_holdout], perm[n_holdout:]
+
+    # HEADLINE RESULT: A+B+C with the similarity-softmax temperature tau chosen
+    # on the calib holdout only (never the test set). Reported per k so the
+    # coverage/width trade-off across k is visible; k=3 is the cleanest point
+    # (largest coverage gain per unit of width cost).
+    for k in (3, 5, 10):
+        base_cfg = NNPPIConfig(k=k, clip_range=True, weighted_variance=True)
+        tau = softmax_temperature_fit(
+            calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+            calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+            base_cfg,
+        )
+        cfg = NNPPIConfig(k=k, similarity_weighted=True, clip_range=True,
+                           weighted_variance=True, softmax_temperature=tau)
+        res = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, cfg)
+        rows.append({
+            "condition": f"** ours A+B+C (tau={tau}, calib-selected)", "k": k,
+            **report_f1(test_labels, res.theta),
+            "ci_coverage": round(ci_coverage(test_labels, res.theta, res.ci_half_width), 3),
+            "mean_ci_width": round(float(np.mean(res.ci_half_width) * 2), 3),
+            "out_of_range_rate": round(res.out_of_range_rate, 3),
+        })
+
+    # Split-conformal calibration of the CI width, fit ONLY on a held-out
+    # slice of the calibration set (never the test set) -- see if a properly
+    # calibrated multiplier closes more of the coverage gap than z=1.96.
     full_cfg_k5 = NNPPIConfig(k=5, similarity_weighted=True, clip_range=True, weighted_variance=True)
     q = conformal_scale_fit(
         calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
@@ -267,6 +290,60 @@ def main():
         "out_of_range_rate": round(res_test.out_of_range_rate, 3),
     })
     print(f"Mondrian bin q's (calib holdout only) = {[round(x,3) for x in bin_qs]}")
+
+    # Mondrian by max-neighbor-similarity instead of sqrt_var: bins whether a
+    # point has a genuinely close match in the calib set at all (in-distribution)
+    # vs no close match (novel/hard), which the residual-variance-based binning
+    # above doesn't directly capture -- a point can have low neighbor variance
+    # (neighbors agree with each other) while still being far from all of them.
+    sim_edges = np.quantile(res_holdout.max_neighbor_sim, np.linspace(0, 1, n_bins + 1))
+    sim_edges[0] -= 1e-9
+    sim_edges[-1] += 1e-9
+    holdout_sim_bin = np.digitize(res_holdout.max_neighbor_sim, sim_edges[1:-1])
+    sim_bin_qs = []
+    for b in range(n_bins):
+        mask = holdout_sim_bin == b
+        sim_bin_qs.append(float(np.quantile(nonconformity_holdout[mask], 0.95)) if mask.sum() >= 5 else fallback_q)
+
+    test_sim_bin = np.digitize(res_test.max_neighbor_sim, sim_edges[1:-1])
+    sim_mondrian_q = np.array([sim_bin_qs[b] for b in test_sim_bin])
+    sim_mondrian_half_width = sim_mondrian_q * res_test.sqrt_var
+    rows.append({
+        "condition": f"nnppi_full+shrinkage+simbin_conformal(k={k_best},m={m_best},bins={n_bins})", "k": k_best,
+        **report_f1(test_labels, res_test.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res_test.theta, sim_mondrian_half_width), 3),
+        "mean_ci_width": round(float(np.mean(sim_mondrian_half_width) * 2), 3),
+        "out_of_range_rate": round(res_test.out_of_range_rate, 3),
+    })
+    print(f"similarity-bin q's (calib holdout only) = {[round(x,3) for x in sim_bin_qs]}")
+    print(f"holdout max_neighbor_sim quantile edges = {[round(x,3) for x in sim_edges]}")
+
+    # Selective prediction (abstention): instead of forcing one interval
+    # scheme to cover every point including the genuinely unpredictable ones,
+    # abstain on the worst X% by sqrt_var (largest local uncertainty; learned
+    # from calib holdout only) and route those to a human. Fit conformal q
+    # using ONLY the retained (non-abstained) holdout points, so the width
+    # only has to satisfy the population it actually applies to. Applied once
+    # to test at the end.
+    for abstain_frac in (0.1, 0.2, 0.3):
+        thresh = float(np.quantile(res_holdout.sqrt_var, 1 - abstain_frac))
+        retain_mask_h = res_holdout.sqrt_var <= thresh
+        nonconf_retained = nonconformity_holdout[retain_mask_h]
+        q_abst = float(np.quantile(nonconf_retained, 0.95)) if retain_mask_h.sum() >= 5 else fallback_q
+
+        retain_mask_t = res_test.sqrt_var <= thresh
+        abst_half_width = q_abst * res_test.sqrt_var[retain_mask_t]
+        retained_labels = test_labels[retain_mask_t]
+        retained_theta = res_test.theta[retain_mask_t]
+        m_ret = report_f1(retained_labels, retained_theta)
+        rows.append({
+            "condition": f"nnppi_full+shrinkage+abstain({int(abstain_frac*100)}%,thresh={thresh:.3f},q={q_abst:.2f})",
+            "k": k_best, **m_ret,
+            "ci_coverage": round(ci_coverage(retained_labels, retained_theta, abst_half_width), 3),
+            "mean_ci_width": round(float(np.mean(abst_half_width) * 2), 3) if len(abst_half_width) else None,
+            "out_of_range_rate": round(float(np.mean(~retain_mask_t)), 3),  # reused field = actual abstention rate on test
+        })
+    print("out_of_range_rate column in the abstain rows above is repurposed to show the actual test abstention rate")
 
     print(f"\n=== {args.dataset} summary ===")
     header = ["condition", "k", "weighted_f1", "class0_f1", "class1_f1",

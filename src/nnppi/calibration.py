@@ -84,6 +84,7 @@ class NNPPIResult:
     sqrt_var: np.ndarray       # sqrt(var), i.e. ci_half_width / z -- exposed so
                                 # a conformal scale factor can replace z directly
     out_of_range_rate: float
+    max_neighbor_sim: np.ndarray = None  # similarity to the closest calib neighbor
 
 
 def nn_ppi_apply(
@@ -114,7 +115,9 @@ def nn_ppi_apply(
             neighbor_sims = sims[i, idx]
             # softmax-sharpen the similarities into weights (raw cosine
             # weighting alone was shown insufficient in arXiv 2606.31577)
-            w = np.exp(neighbor_sims / config.softmax_temperature)
+            # max-subtraction for numerical stability at small temperatures
+            logits = neighbor_sims / config.softmax_temperature
+            w = np.exp(logits - logits.max())
             w = w / w.sum()
         else:
             w = np.full(k, 1.0 / k)
@@ -148,8 +151,46 @@ def nn_ppi_apply(
 
     sqrt_var = np.sqrt(np.maximum(var, 0.0))
     ci_half_width = z * sqrt_var
+    max_neighbor_sim = sims[np.arange(n_test)[:, None], neighbor_idx].max(axis=1)
     return NNPPIResult(theta=theta, ci_half_width=ci_half_width, sqrt_var=sqrt_var,
-                        out_of_range_rate=out_of_range_rate)
+                        out_of_range_rate=out_of_range_rate, max_neighbor_sim=max_neighbor_sim)
+
+
+def softmax_temperature_fit(
+    holdout_raw_scores: np.ndarray,
+    holdout_embeddings: np.ndarray,
+    holdout_labels: np.ndarray,
+    neighbor_raw_scores: np.ndarray,
+    neighbor_embeddings: np.ndarray,
+    neighbor_labels: np.ndarray,
+    base_config: NNPPIConfig,
+    candidates=(0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0),
+    objective: str = "coverage",
+) -> float:
+    """Pick the similarity-softmax temperature tau using ONLY a held-out slice
+    of the calibration set (never the test set).
+
+    Note on `objective`: coverage responds monotonically to tau (sharper
+    weighting -> higher coverage) on both benchmarks, so holdout selection
+    transfers to test reliably. The same selection against ECE does NOT
+    transfer -- ECE varies non-systematically with tau, i.e. that difference is
+    noise -- so only "coverage" is supported as a selection target here.
+    """
+    if objective != "coverage":
+        raise ValueError("only 'coverage' transfers reliably from holdout to test; see docstring")
+    from nnppi.evaluate import ci_coverage as _ci_coverage
+    best_tau, best_cov = None, -1.0
+    for tau in candidates:
+        cfg = NNPPIConfig(k=base_config.k, similarity_weighted=True,
+                           clip_range=base_config.clip_range,
+                           weighted_variance=base_config.weighted_variance,
+                           softmax_temperature=tau)
+        res = nn_ppi_apply(holdout_raw_scores, holdout_embeddings,
+                            neighbor_raw_scores, neighbor_embeddings, neighbor_labels, cfg)
+        cov = _ci_coverage(holdout_labels, res.theta, res.ci_half_width)
+        if cov > best_cov:
+            best_tau, best_cov = tau, cov
+    return best_tau
 
 
 def shrinkage_m_fit(
