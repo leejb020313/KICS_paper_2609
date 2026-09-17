@@ -230,6 +230,44 @@ def main():
         "out_of_range_rate": round(res.out_of_range_rate, 3),
     })
 
+    # Mondrian (grouped) conformal on top of the best (k, m): instead of one
+    # global scale q for every point, bin points by their OWN sqrt_var into
+    # quartiles (bin edges learned on the calib holdout only) and fit a
+    # separate q per bin. "Easy" points (small local variance) then keep
+    # tight intervals; only "hard" points pay the width cost. Bin edges and
+    # per-bin q are both fit on the calib holdout; the test set is touched
+    # once, at the end, to assign each point to its bin and apply that bin's q.
+    shrink_cfg_best_neighbor = NNPPIConfig(k=k_best, similarity_weighted=True, clip_range=True,
+                                            variance_shrinkage=True, shrinkage_prior_strength=m_best,
+                                            global_residual_var=global_residual_var_neighbor)
+    res_holdout = nn_ppi_apply(calib_raw[holdout_idx], calib_emb[holdout_idx],
+                                calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+                                shrink_cfg_best_neighbor)
+    n_bins = 4
+    bin_edges = np.quantile(res_holdout.sqrt_var, np.linspace(0, 1, n_bins + 1))
+    bin_edges[0] -= 1e-9
+    bin_edges[-1] += 1e-9
+    holdout_bin = np.digitize(res_holdout.sqrt_var, bin_edges[1:-1])
+    nonconformity_holdout = np.abs(calib_labels[holdout_idx] - res_holdout.theta) / np.maximum(res_holdout.sqrt_var, 1e-6)
+    fallback_q = float(np.quantile(nonconformity_holdout, 0.95))
+    bin_qs = []
+    for b in range(n_bins):
+        mask = holdout_bin == b
+        bin_qs.append(float(np.quantile(nonconformity_holdout[mask], 0.95)) if mask.sum() >= 5 else fallback_q)
+
+    res_test = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, shrink_cfg_best)
+    test_bin = np.digitize(res_test.sqrt_var, bin_edges[1:-1])
+    mondrian_q = np.array([bin_qs[b] for b in test_bin])
+    mondrian_half_width = mondrian_q * res_test.sqrt_var
+    rows.append({
+        "condition": f"nnppi_full+shrinkage+mondrian_conformal(k={k_best},m={m_best},bins={n_bins})", "k": k_best,
+        **report_f1(test_labels, res_test.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res_test.theta, mondrian_half_width), 3),
+        "mean_ci_width": round(float(np.mean(mondrian_half_width) * 2), 3),
+        "out_of_range_rate": round(res_test.out_of_range_rate, 3),
+    })
+    print(f"Mondrian bin q's (calib holdout only) = {[round(x,3) for x in bin_qs]}")
+
     print(f"\n=== {args.dataset} summary ===")
     header = ["condition", "k", "weighted_f1", "class0_f1", "class1_f1",
               "ci_coverage", "mean_ci_width", "out_of_range_rate"]
