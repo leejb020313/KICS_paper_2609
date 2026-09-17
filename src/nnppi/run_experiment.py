@@ -14,7 +14,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from nnppi.calibration import (
-    NNPPIConfig, nn_ppi_apply, conformal_scale_fit,
+    NNPPIConfig, nn_ppi_apply, conformal_scale_fit, shrinkage_m_fit,
     temperature_scale_fit, temperature_scale_apply,
     platt_scale_fit, platt_scale_apply,
     isotonic_fit, isotonic_apply,
@@ -37,9 +37,14 @@ def load_scores(path: Path):
     return texts, raw, labels
 
 
-def embed(texts):
+_EMBED_MODEL_CACHE = {}
+
+
+def embed(texts, model_name="all-MiniLM-L6-v2"):
     from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer("all-MiniLM-L6-v2")
+    if model_name not in _EMBED_MODEL_CACHE:
+        _EMBED_MODEL_CACHE[model_name] = SentenceTransformer(model_name)
+    model = _EMBED_MODEL_CACHE[model_name]
     emb = model.encode(texts, show_progress_bar=False, normalize_embeddings=True)
     return np.asarray(emb)
 
@@ -48,15 +53,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", choices=["clef", "claimbuster"], required=True)
     ap.add_argument("--results-dir", default="results")
+    ap.add_argument("--embed-model", default="all-MiniLM-L6-v2",
+                     help="sentence-transformers model for kNN retrieval embeddings")
     args = ap.parse_args()
 
     results_dir = ROOT / args.results_dir
     calib_texts, calib_raw, calib_labels = load_scores(results_dir / f"{args.dataset}_calib_scores.jsonl")
     test_texts, test_raw, test_labels = load_scores(results_dir / f"{args.dataset}_test_scores.jsonl")
-    print(f"{args.dataset}: calib n={len(calib_labels)} (parse_ok), test n={len(test_labels)} (parse_ok)")
+    print(f"{args.dataset}: calib n={len(calib_labels)} (parse_ok), test n={len(test_labels)} (parse_ok), embed_model={args.embed_model}")
 
-    calib_emb = embed(calib_texts)
-    test_emb = embed(test_texts)
+    calib_emb = embed(calib_texts, args.embed_model)
+    test_emb = embed(test_texts, args.embed_model)
 
     rows = []
 
@@ -129,6 +136,56 @@ def main():
         "out_of_range_rate": round(res.out_of_range_rate, 3),
     })
     print(f"conformal scale q (target 95%, fit on calib holdout only) = {q:.3f}  (parametric z=1.96)")
+
+    # Empirical-Bayes variance shrinkage: local (ESS-corrected) variance shrunk
+    # toward the global residual variance, weighted by ESS. global_residual_var
+    # AND the prior strength m are both selected using ONLY the calib holdout
+    # split (same disjoint split as the conformal fit above) -- m is no longer
+    # hand-picked by looking at test-set outcomes across candidates.
+    base_shrink_cfg = NNPPIConfig(k=5, similarity_weighted=True, clip_range=True)
+    global_residual_var_neighbor = float(np.var(calib_labels[neighbor_idx] - calib_raw[neighbor_idx]))
+    m = shrinkage_m_fit(
+        calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+        calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+        base_shrink_cfg, global_residual_var_neighbor,
+    )
+    global_residual_var_full = float(np.var(calib_labels - calib_raw))  # for the final full-calib-pool run
+    shrink_cfg = NNPPIConfig(k=5, similarity_weighted=True, clip_range=True,
+                              variance_shrinkage=True, shrinkage_prior_strength=m,
+                              global_residual_var=global_residual_var_full)
+    res = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, shrink_cfg)
+    rows.append({
+        "condition": f"nnppi_full+shrinkage(m={m}, calib-selected)", "k": 5, **report_f1(test_labels, res.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res.theta, res.ci_half_width), 3),
+        "mean_ci_width": round(float(np.mean(res.ci_half_width) * 2), 3),
+        "out_of_range_rate": round(res.out_of_range_rate, 3),
+    })
+    print(f"shrinkage m selected on calib holdout only = {m}")
+
+    # "Conformalized shrinkage": fit the conformal scale q on top of the
+    # ALREADY-SHRUNK variance (instead of the naive ESS variance). Shrinkage
+    # first separates reliable from unreliable points; conformal then only
+    # needs to correct the remaining global miscalibration, so q should come
+    # out smaller (narrower intervals) than plain conformal for the same
+    # target coverage. Both m and q are still fit on the calib holdout only.
+    shrink_cfg_neighbor = NNPPIConfig(k=5, similarity_weighted=True, clip_range=True,
+                                       variance_shrinkage=True, shrinkage_prior_strength=m,
+                                       global_residual_var=global_residual_var_neighbor)
+    q2 = conformal_scale_fit(
+        calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+        calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+        shrink_cfg_neighbor, target_coverage=0.95,
+    )
+    res = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, shrink_cfg)
+    combo_half_width = q2 * res.sqrt_var
+    rows.append({
+        "condition": f"nnppi_full+shrinkage+conformal(m={m},q={q2:.2f})", "k": 5,
+        **report_f1(test_labels, res.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res.theta, combo_half_width), 3),
+        "mean_ci_width": round(float(np.mean(combo_half_width) * 2), 3),
+        "out_of_range_rate": round(res.out_of_range_rate, 3),
+    })
+    print(f"conformalized-shrinkage q2 (on top of shrunk variance) = {q2:.3f}  (plain conformal q was {q:.3f})")
 
     print(f"\n=== {args.dataset} summary ===")
     header = ["condition", "k", "weighted_f1", "class0_f1", "class1_f1",

@@ -72,6 +72,9 @@ class NNPPIConfig:
     softmax_temperature: float = 0.1  # only used if similarity_weighted
     clip_range: bool = False
     weighted_variance: bool = False
+    variance_shrinkage: bool = False
+    shrinkage_prior_strength: float = 5.0  # m in ESS/(ESS+m); fit-free, chosen a priori
+    global_residual_var: float = None  # must be set from calib-only data when variance_shrinkage=True
 
 
 @dataclass
@@ -119,14 +122,22 @@ def nn_ppi_apply(
         r_bar = float(np.sum(w * neighbor_residuals))
         theta_i = test_raw_scores[i] + r_bar
 
-        if config.weighted_variance:
+        if config.weighted_variance or config.variance_shrinkage:
             # weighted residual variance (effective-sample-size corrected)
             mean = r_bar
             weighted_var = np.sum(w * (neighbor_residuals - mean) ** 2)
             ess = 1.0 / np.sum(w ** 2)  # effective sample size
-            var_i = weighted_var / max(ess, 1e-6)
+            local_var_i = weighted_var / max(ess, 1e-6)
         else:
-            var_i = np.var(neighbor_residuals) / k
+            ess = k
+            local_var_i = np.var(neighbor_residuals) / k
+
+        if config.variance_shrinkage:
+            assert config.global_residual_var is not None, "set global_residual_var from calib-only data"
+            lam = ess / (ess + config.shrinkage_prior_strength)
+            var_i = lam * local_var_i + (1 - lam) * config.global_residual_var
+        else:
+            var_i = local_var_i
 
         theta[i] = theta_i
         var[i] = var_i
@@ -139,6 +150,41 @@ def nn_ppi_apply(
     ci_half_width = z * sqrt_var
     return NNPPIResult(theta=theta, ci_half_width=ci_half_width, sqrt_var=sqrt_var,
                         out_of_range_rate=out_of_range_rate)
+
+
+def shrinkage_m_fit(
+    holdout_raw_scores: np.ndarray,
+    holdout_embeddings: np.ndarray,
+    holdout_labels: np.ndarray,
+    neighbor_raw_scores: np.ndarray,
+    neighbor_embeddings: np.ndarray,
+    neighbor_labels: np.ndarray,
+    base_config: NNPPIConfig,
+    global_residual_var: float,
+    candidates=(1.0, 2.0, 5.0, 10.0, 20.0),
+    target_coverage: float = 0.95,
+) -> float:
+    """Pick the shrinkage prior strength m from `candidates` using ONLY a
+    held-out slice of the calibration set (never the test set) -- same
+    discipline as conformal_scale_fit. Chooses the smallest m (narrowest
+    intervals) whose holdout coverage reaches target_coverage; if none reach
+    it, returns the m with the highest holdout coverage.
+    """
+    from nnppi.evaluate import ci_coverage as _ci_coverage
+    best_m, best_cov, best_width = None, -1.0, float("inf")
+    for m in candidates:
+        cfg = NNPPIConfig(k=base_config.k, similarity_weighted=base_config.similarity_weighted,
+                           clip_range=base_config.clip_range, variance_shrinkage=True,
+                           shrinkage_prior_strength=m, global_residual_var=global_residual_var)
+        res = nn_ppi_apply(holdout_raw_scores, holdout_embeddings,
+                            neighbor_raw_scores, neighbor_embeddings, neighbor_labels, cfg)
+        cov = _ci_coverage(holdout_labels, res.theta, res.ci_half_width)
+        width = float(np.mean(res.ci_half_width))
+        if cov >= target_coverage and width < best_width:
+            best_m, best_cov, best_width = m, cov, width
+        elif best_m is None and cov > best_cov:
+            best_m, best_cov, best_width = m, cov, width
+    return best_m
 
 
 def conformal_scale_fit(
