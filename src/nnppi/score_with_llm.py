@@ -29,12 +29,17 @@ from nnppi.prompt import build_prompt
 DEFAULT_BASE_URL = "http://127.0.0.1:8080/v1/chat/completions"
 
 
-def call_llm(base_url: str, prompt: str, max_tokens: int, enable_thinking: bool, temperature: float) -> str:
+def call_llm(base_url: str, prompt: str, max_tokens: int, enable_thinking: bool, temperature: float,
+             top_k: int = None, top_p: float = None) -> str:
     payload = {
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": max_tokens,
         "temperature": temperature,
     }
+    if top_k is not None:
+        payload["top_k"] = top_k
+    if top_p is not None:
+        payload["top_p"] = top_p
     if enable_thinking:
         # llama.cpp's Qwen3 chat template honors this extra_body key; if your
         # server build doesn't, thinking is on by default for Qwen3 anyway.
@@ -68,7 +73,9 @@ def main():
     ap.add_argument("--base-url", default=DEFAULT_BASE_URL)
     ap.add_argument("--max-tokens", type=int, default=1536)
     ap.add_argument("--temperature", type=float, default=0.8)
-    ap.add_argument("--enable-thinking", action="store_true", default=True)
+    ap.add_argument("--top-k", type=int, default=None)
+    ap.add_argument("--top-p", type=float, default=None)
+    ap.add_argument("--enable-thinking", dest="enable_thinking", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--retries", type=int, default=3)
     args = ap.parse_args()
 
@@ -93,7 +100,8 @@ def main():
             result = None
             for attempt in range(args.retries):
                 try:
-                    raw = call_llm(args.base_url, prompt, args.max_tokens, args.enable_thinking, args.temperature)
+                    raw = call_llm(args.base_url, prompt, args.max_tokens, args.enable_thinking, args.temperature,
+                                    top_k=args.top_k, top_p=args.top_p)
                     result = parse_response(raw)
                     result["raw_response"] = raw
                     break
