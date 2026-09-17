@@ -14,7 +14,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from nnppi.calibration import (
-    NNPPIConfig, nn_ppi_apply,
+    NNPPIConfig, nn_ppi_apply, conformal_scale_fit,
     temperature_scale_fit, temperature_scale_apply,
     platt_scale_fit, platt_scale_apply,
     isotonic_fit, isotonic_apply,
@@ -105,6 +105,30 @@ def main():
                 full_preds = scores_to_preds(res.theta)
                 mc = mcnemar_test(test_labels, baseline_preds, full_preds)
                 print(f"McNemar baseline vs full (k=5): {mc}")
+
+    # Split-conformal calibration of the CI width, fit ONLY on a held-out
+    # slice of the calibration set (never the test set) -- see if a properly
+    # calibrated multiplier closes more of the coverage gap than z=1.96.
+    rng = np.random.default_rng(0)
+    n_calib = len(calib_labels)
+    perm = rng.permutation(n_calib)
+    n_holdout = max(1, int(0.2 * n_calib))
+    holdout_idx, neighbor_idx = perm[:n_holdout], perm[n_holdout:]
+    full_cfg_k5 = NNPPIConfig(k=5, similarity_weighted=True, clip_range=True, weighted_variance=True)
+    q = conformal_scale_fit(
+        calib_raw[holdout_idx], calib_emb[holdout_idx], calib_labels[holdout_idx],
+        calib_raw[neighbor_idx], calib_emb[neighbor_idx], calib_labels[neighbor_idx],
+        full_cfg_k5, target_coverage=0.95,
+    )
+    res = nn_ppi_apply(test_raw, test_emb, calib_raw, calib_emb, calib_labels, full_cfg_k5)
+    conformal_half_width = q * res.sqrt_var
+    rows.append({
+        "condition": "nnppi_full+conformal", "k": 5, **report_f1(test_labels, res.theta),
+        "ci_coverage": round(ci_coverage(test_labels, res.theta, conformal_half_width), 3),
+        "mean_ci_width": round(float(np.mean(conformal_half_width) * 2), 3),
+        "out_of_range_rate": round(res.out_of_range_rate, 3),
+    })
+    print(f"conformal scale q (target 95%, fit on calib holdout only) = {q:.3f}  (parametric z=1.96)")
 
     print(f"\n=== {args.dataset} summary ===")
     header = ["condition", "k", "weighted_f1", "class0_f1", "class1_f1",

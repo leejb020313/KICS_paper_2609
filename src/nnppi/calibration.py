@@ -78,6 +78,8 @@ class NNPPIConfig:
 class NNPPIResult:
     theta: np.ndarray          # calibrated scores
     ci_half_width: np.ndarray  # z * sqrt(var)
+    sqrt_var: np.ndarray       # sqrt(var), i.e. ci_half_width / z -- exposed so
+                                # a conformal scale factor can replace z directly
     out_of_range_rate: float
 
 
@@ -133,5 +135,31 @@ def nn_ppi_apply(
     if config.clip_range:
         theta = np.clip(theta, 0.0, 1.0)
 
-    ci_half_width = z * np.sqrt(np.maximum(var, 0.0))
-    return NNPPIResult(theta=theta, ci_half_width=ci_half_width, out_of_range_rate=out_of_range_rate)
+    sqrt_var = np.sqrt(np.maximum(var, 0.0))
+    ci_half_width = z * sqrt_var
+    return NNPPIResult(theta=theta, ci_half_width=ci_half_width, sqrt_var=sqrt_var,
+                        out_of_range_rate=out_of_range_rate)
+
+
+def conformal_scale_fit(
+    holdout_raw_scores: np.ndarray,
+    holdout_embeddings: np.ndarray,
+    holdout_labels: np.ndarray,
+    neighbor_raw_scores: np.ndarray,
+    neighbor_embeddings: np.ndarray,
+    neighbor_labels: np.ndarray,
+    config: NNPPIConfig,
+    target_coverage: float = 0.95,
+) -> float:
+    """Split-conformal scale factor, estimated ONLY on a held-out slice of the
+    calibration set (never the test set). Replaces the parametric z=1.96 with
+    an empirically-fit multiplier q such that theta +/- q*sqrt_var achieves
+    close to target_coverage on the holdout slice. `neighbor_*` must be
+    disjoint from `holdout_*` (e.g. an 80/20 split of the original calib set).
+    """
+    res = nn_ppi_apply(holdout_raw_scores, holdout_embeddings,
+                        neighbor_raw_scores, neighbor_embeddings, neighbor_labels,
+                        config)
+    nonconformity = np.abs(holdout_labels - res.theta) / np.maximum(res.sqrt_var, 1e-6)
+    q = float(np.quantile(nonconformity, target_coverage))
+    return q
