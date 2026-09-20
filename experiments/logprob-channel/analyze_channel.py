@@ -38,10 +38,35 @@ def entropy(p):
 
 def quantize_for_ceiling(scores, n_bins=40):
     """A continuous channel would have a trivially perfect oracle ceiling (every
-    value unique), so bin it before measuring. 40 equal-width bins is far finer
-    than the ~13 values the verbalized channel uses, and coarse enough that the
-    ceiling stays meaningful rather than memorizing the test set."""
-    return np.clip((np.asarray(scores) * n_bins).astype(int), 0, n_bins - 1)
+    value unique), so bin it before measuring. 40 bins is far finer than the ~13
+    values the verbalized channel uses, and coarse enough that the ceiling stays
+    meaningful rather than memorizing the test set.
+
+    Equal-FREQUENCY, not equal-width: the yesno channel piles up at 1e-05 and
+    1-1e-07, so equal-width bins would put ~everything in two bins and report a
+    fake-low ceiling. Quantile bins are invariant to any monotone rescaling, so
+    p and logit(p) score identically -- which is what we want, since a threshold
+    rule is itself monotone.
+
+    Ties are never split. Binning by raw rank would scatter the 372 ClaimBuster
+    claims that all share the score 0.70 across several bins and let the oracle
+    label them differently -- i.e. distinguish inputs that are literally the same
+    symbol, inflating the very ceiling this function exists to measure. (Observed:
+    0.780 -> 0.802 on CLEF before this fix.) Whole value-groups are assigned to a
+    bin together, so the ceiling can only ever fall, never rise, from tying."""
+    scores = np.asarray(scores, dtype=float)
+    uniq, inverse, counts = np.unique(scores, return_inverse=True, return_counts=True)
+    # walk the unique values in order, closing a bin once it holds its quota
+    quota = max(1, len(scores) / n_bins)
+    bin_of_value = np.empty(len(uniq), dtype=int)
+    cur_bin, filled = 0, 0
+    for i, c in enumerate(counts):
+        bin_of_value[i] = cur_bin
+        filled += c
+        if filled >= quota and cur_bin < n_bins - 1:
+            cur_bin += 1
+            filled = 0
+    return bin_of_value[inverse]
 
 
 def channel_stats(tag, scores, labels, calib_scores=None, calib_labels=None, n_bins=40):
@@ -61,11 +86,14 @@ def channel_stats(tag, scores, labels, calib_scores=None, calib_labels=None, n_b
     ceiling = correct / n
     mi = entropy(labels.mean()) - H_cond
 
-    # honest accuracy: threshold fitted on calib if available, else fixed 0.5
+    # honest accuracy: threshold fitted on calib if available, else fixed 0.5.
+    # Candidate thresholds come from the calib score quantiles rather than a fixed
+    # [0,1] grid, so this also works for logits and any other unbounded channel.
     if calib_scores is not None and len(calib_scores):
-        grid = np.linspace(0.02, 0.98, 97)
-        errs = [np.mean((np.asarray(calib_scores) >= t).astype(int) != np.asarray(calib_labels))
-                for t in grid]
+        cs = np.asarray(calib_scores, dtype=float)
+        cl = np.asarray(calib_labels)
+        grid = np.unique(np.quantile(cs, np.linspace(0.01, 0.99, 99)))
+        errs = [np.mean((cs >= t).astype(int) != cl) for t in grid]
         thr = float(grid[int(np.argmin(errs))])
     else:
         thr = 0.5
@@ -100,19 +128,36 @@ def main():
         return
 
     print(f"=== {name}: score channel comparison ===")
+    print(f"(ceiling/MI use {args.bins} equal-frequency bins, so they are comparable "
+          f"across channels with different scales)\n")
     for tag, test_path, calib_path in sources:
         test = load(test_path)
         texts = sorted(test)
-        scores = [test[t]["confidence_score"] for t in texts]
         labels = [test[t]["label"] for t in texts]
-        cs, cl = None, None
-        if calib_path.exists():
-            calib = load(calib_path)
-            ct = sorted(calib)
-            cs = [calib[t]["confidence_score"] for t in ct]
-            cl = [calib[t]["label"] for t in ct]
-        channel_stats(tag, scores, labels, cs, cl, args.bins)
-        print()
+        calib = load(calib_path) if calib_path.exists() else None
+        ct = sorted(calib) if calib else None
+
+        # yesno saturates as a probability; its resolution lives in the log-odds,
+        # so report that variant too when the scorer recorded it.
+        variants = [("", "confidence_score")]
+        if any((test[t].get("detail") or {}).get("logit") is not None for t in texts):
+            variants.append((" [logit]", "logit"))
+
+        for suffix, field in variants:
+            def pick(rec):
+                return rec["confidence_score"] if field == "confidence_score" \
+                    else (rec.get("detail") or {}).get("logit")
+            scores = [pick(test[t]) for t in texts]
+            if any(s is None for s in scores):
+                continue
+            cs, cl = None, None
+            if calib:
+                cs = [pick(calib[t]) for t in ct]
+                cl = [calib[t]["label"] for t in ct]
+                if any(s is None for s in cs):
+                    cs, cl = None, None
+            channel_stats(tag + suffix, scores, labels, cs, cl, args.bins)
+            print()
 
 
 if __name__ == "__main__":

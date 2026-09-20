@@ -99,7 +99,7 @@ def build_prompt(mode: str, claim: str) -> str:
     return head + task.format(claim=claim)
 
 
-def call_llm(base_url, prompt, top_logprobs, max_tokens, temperature, timeout=180):
+def call_llm(base_url, prompt, top_logprobs, max_tokens, temperature, model=None, timeout=600):
     payload = {
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": max_tokens,
@@ -109,9 +109,14 @@ def call_llm(base_url, prompt, top_logprobs, max_tokens, temperature, timeout=18
         # Gemma has no thinking mode, but be explicit in case the template honors it:
         "chat_template_kwargs": {"enable_thinking": False},
     }
+    if model:
+        payload["model"] = model  # required by Ollama, ignored by llama-server
     r = requests.post(base_url, json=payload, timeout=timeout)
     r.raise_for_status()
-    return r.json()["choices"][0]
+    body = r.json()
+    if "error" in body:
+        raise RuntimeError(body["error"])
+    return body["choices"][0]
 
 
 def token_distribution(choice, position=0):
@@ -126,7 +131,8 @@ def token_distribution(choice, position=0):
 
 def first_informative_position(choice, predicate, max_scan=8):
     """Find the first generated token whose top-alternatives satisfy `predicate`.
-    Guards against the model opening with whitespace/markdown before answering."""
+    Guards against the model opening with whitespace/markdown/a thinking preamble
+    before answering."""
     content = (choice.get("logprobs") or {}).get("content") or []
     for pos in range(min(len(content), max_scan)):
         dist = token_distribution(choice, pos)
@@ -135,10 +141,32 @@ def first_informative_position(choice, predicate, max_scan=8):
     return None, []
 
 
-def score_yesno(choice):
+# A stray "Yes" sitting at p=0.002 inside a thinking preamble ("Okay, ...") must
+# NOT be mistaken for the answer position -- verified against Ollama's top-10 on
+# qwen3:0.6b, where exactly that happens. Require the target tokens to actually
+# own the position before reading a score off it.
+MIN_ANSWER_MASS = 0.5
+
+
+def _ascii_digit(tok):
+    """int() on a token that merely passes str.isdigit() crashes: isdigit() is True
+    for superscripts and other Unicode digits, and llama/Ollama can hand back
+    mojibake bytes. Seen live as ValueError: invalid literal for int() '\\ufffd'.
+    Only accept a bare ASCII 0-9."""
+    s = tok.strip()
+    return int(s) if len(s) == 1 and "0" <= s <= "9" else None
+
+
+def _leading_ascii_digit(tok):
+    s = tok.strip()
+    return int(s[0]) if s and "0" <= s[0] <= "9" else None
+
+
+def score_yesno(choice, min_mass=MIN_ANSWER_MASS):
     """P(check-worthy) = P(Yes) / (P(Yes) + P(No)), normalized over the two poles."""
     def has_polarity(dist):
-        return any(t.strip().lower().startswith(("yes", "no")) for t, _ in dist)
+        mass = sum(p for t, p in dist if t.strip().lower().startswith(("yes", "no")))
+        return mass >= min_mass
 
     pos, dist = first_informative_position(choice, has_polarity)
     if pos is None:
@@ -148,22 +176,32 @@ def score_yesno(choice):
     total = p_yes + p_no
     if total <= 0:
         return None, None
-    return p_yes / total, {"p_yes": p_yes, "p_no": p_no, "mass_on_poles": total}
+    p = p_yes / total
+    # Gemma 3 4B saturates hard here: measured p_yes values were 1.8e-05, 2.1e-05,
+    # 1.6e-05 for three different non-check-worthy claims, and 0.9999998 /
+    # 1.0000000 for two check-worthy ones. As a probability that is a 2-value
+    # channel -- WORSE than the 13-value verbalized one. But those tail values are
+    # distinct and ordered, so the information survives in log-odds. Record the
+    # logit; analyze_channel.py should evaluate on it, not on p.
+    eps = 1e-12
+    logit = math.log(max(p, eps) / max(1.0 - p, eps))
+    return p, {"p_yes": p_yes, "p_no": p_no, "mass_on_poles": total, "logit": logit}
 
 
-def score_digit(choice):
+def score_digit(choice, min_mass=MIN_ANSWER_MASS):
     """E[score] over the full 0-9 digit distribution, rescaled to [0, 1]."""
     def has_digit(dist):
-        return any(t.strip().isdigit() for t, _ in dist)
+        mass = sum(p for t, p in dist if _ascii_digit(t) is not None)
+        return mass >= min_mass
 
     pos, dist = first_informative_position(choice, has_digit)
     if pos is None:
         return None, None
     weights = {}
     for t, p in dist:
-        s = t.strip()
-        if s.isdigit() and len(s) == 1:
-            weights[int(s)] = weights.get(int(s), 0.0) + p
+        d = _ascii_digit(t)
+        if d is not None:
+            weights[d] = weights.get(d, 0.0) + p
     total = sum(weights.values())
     if total <= 0:
         return None, None
@@ -172,20 +210,21 @@ def score_digit(choice):
                             "mass_on_digits": total}
 
 
-def score_verbal(choice):
+def score_verbal(choice, min_mass=MIN_ANSWER_MASS):
     """Prompt is primed with 'Score: 0.' so the first token is the tenths digit.
     E[tenths] / 10 gives a continuous score in [0, 1]."""
     def has_digit(dist):
-        return any(t.strip().isdigit() for t, _ in dist)
+        mass = sum(p for t, p in dist if _leading_ascii_digit(t) is not None)
+        return mass >= min_mass
 
     pos, dist = first_informative_position(choice, has_digit)
     if pos is None:
         return None, None
     weights = {}
     for t, p in dist:
-        s = t.strip()
-        if s and s[0].isdigit():
-            weights[int(s[0])] = weights.get(int(s[0]), 0.0) + p
+        d = _leading_ascii_digit(t)
+        if d is not None:
+            weights[d] = weights.get(d, 0.0) + p
     total = sum(weights.values())
     if total <= 0:
         return None, None
@@ -203,9 +242,12 @@ def main():
     ap.add_argument("--dataset", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--base-url", default=DEFAULT_BASE_URL)
+    ap.add_argument("--model", default=None,
+                    help="required by Ollama (e.g. gemma3:4b); ignored by llama-server")
     ap.add_argument("--top-logprobs", type=int, default=20)
-    ap.add_argument("--max-tokens", type=int, default=4,
-                    help="we only need the first answer token; keep this tiny")
+    ap.add_argument("--max-tokens", type=int, default=8,
+                    help="we only need the first answer token, but leave room for a "
+                         "short preamble that first_informative_position can skip")
     ap.add_argument("--temperature", type=float, default=0.0,
                     help="irrelevant to the logprob distribution itself, but keeps the "
                          "sampled token deterministic for auditing")
@@ -236,7 +278,7 @@ def main():
             for attempt in range(args.retries):
                 try:
                     choice = call_llm(args.base_url, prompt, args.top_logprobs,
-                                      args.max_tokens, args.temperature)
+                                      args.max_tokens, args.temperature, model=args.model)
                     sampled = choice.get("message", {}).get("content")
                     score, detail = scorer(choice)
                     break

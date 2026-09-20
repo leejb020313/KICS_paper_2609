@@ -49,15 +49,45 @@ score=0.60  n=303 (11.1%)  P(gold=1)=0.366
 | `digit` | "0~9 한 자리로 답하라" → `E[d]/9` | 원 과제의 10점 척도 유지하면서 연속값 |
 | `verbal` | 원 논문 프롬프트 + `Score: 0.` 로 프라이밍 → 소수 첫자리 기대값 | 원 논문에 가장 가까움 |
 
+## 0. 서버 선택 — Ollama로도 됩니다 (검증 완료)
+
+llama-server 대신 **Ollama로 돌려도 됩니다.** 이 저장소를 만든 노트북(Ollama 0.34.2)에서
+`/v1/chat/completions`가 `top_logprobs`를 정상 반환하는 것을 직접 확인했습니다.
+
+```
+ollama pull gemma3:4b
+# Ollama는 payload에 model 필드가 필수 -> --model 로 넘기세요
+python smoke_test.py --base-url http://127.0.0.1:11434/v1/chat/completions --model gemma3:4b
+```
+
+llama-server를 쓴다면 `--model`은 생략해도 됩니다 (무시됨).
+
+**속도 참고**: CPU-only 노트북(Core Ultra 5 228V, 8코어)에서 claim당 **약 7.6초**였습니다.
+CLEF test 318개면 모드당 **약 40분**. GPU 머신이면 훨씬 빠릅니다.
+
 ## 1. 스모크 테스트 먼저 (필수)
 
-llama-server가 `top_logprobs`를 실제로 반환하는지 먼저 확인하세요. 안 되면 전체 실행이 통째로 낭비됩니다.
+서버가 `top_logprobs`를 실제로 반환하는지 먼저 확인하세요. 안 되면 전체 실행이 통째로 낭비됩니다.
 
 ```
 cd experiments/logprob-channel
 pip install pandas requests
-python smoke_test.py
+python smoke_test.py --base-url http://127.0.0.1:11434/v1/chat/completions --model gemma3:4b
 ```
+
+### 이미 잡아둔 함정 3개 (실측으로 발견, 수정 완료)
+
+1. **사고 서두를 답으로 오인** — qwen3:0.6b가 `"Okay"`로 시작하는데 top-10 안에 `'Yes'`가
+   p=0.002로 끼어 있었습니다. "Yes/No가 후보에 있기만 하면 답"으로 보는 가드는 여기서
+   쓰레기 점수를 뱉습니다. → 대상 토큰이 확률질량 **50% 이상**을 차지해야 답 위치로 인정
+   (`MIN_ANSWER_MASS`).
+2. **`int()` 크래시** — `str.isdigit()`은 비ASCII 숫자·모지바케에도 True라서
+   `ValueError: invalid literal for int() '�'`로 죽습니다. → ASCII `0`-`9`만 허용.
+3. **`yesno`의 확률 포화** — Gemma 3 4B 실측값이 `p_yes = 1.8e-05 / 2.1e-05 / 1.6e-05`(비체크가치)
+   대 `0.9999998 / 1.0000000`(체크가치)였습니다. **확률로 보면 사실상 2값 채널이라 기존
+   13값보다 오히려 나쁩니다.** 하지만 저 꼬리값들은 서로 다르고 순서가 있으므로 정보는
+   **log-odds에 살아있습니다.** → `detail.logit`에 기록하고, `analyze_channel.py`가
+   `[logit]` 변형을 따로 평가합니다. **yesno 판정은 반드시 `[logit]` 줄을 보세요.**
 
 **확인할 것:**
 - `OK: logprobs are live` 가 떠야 함. `FAIL: ... returned NO logprobs` 면 llama.cpp 빌드가 지원 안 하는 것 → 최신 빌드로 교체하거나 네이티브 `/completion` + `n_probs`로 전환 필요(알려주시면 수정본 드립니다)
@@ -67,9 +97,13 @@ python smoke_test.py
 ## 2. CLEF test부터 (318개, 제일 빠름)
 
 ```
-python score_with_logprobs.py --mode yesno --dataset ../../data/processed/clef_test.csv --out results/clef_test_yesno.jsonl
-python score_with_logprobs.py --mode digit --dataset ../../data/processed/clef_test.csv --out results/clef_test_digit.jsonl
+OLLAMA="--base-url http://127.0.0.1:11434/v1/chat/completions --model gemma3:4b"
+python score_with_logprobs.py --mode yesno $OLLAMA --dataset ../../data/processed/clef_test.csv --out results/clef_test_yesno.jsonl
+python score_with_logprobs.py --mode digit $OLLAMA --dataset ../../data/processed/clef_test.csv --out results/clef_test_digit.jsonl
 ```
+
+`digit` 모드가 더 유망해 보입니다 — `yesno`는 위에서 본 대로 포화가 심한 반면,
+`digit`은 10개 숫자에 확률이 분산되므로 해상도가 살아있을 가능성이 높습니다.
 
 `--max-tokens 4`라 기존 채점보다 **훨씬 빠릅니다** (기존은 justification 100단어까지 생성했음).
 
