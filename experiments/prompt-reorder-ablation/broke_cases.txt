@@ -1,0 +1,23 @@
+gold=0 orig=0.20(ok) reord=0.60(WRONG)
+  claim: We're going to have a debate where we are talking about the important issues facing our country.
+  reord justification: This statement describes an event – a debate – and its purpose. Debates about ‘important issues’ can be policy-related and potentially high-stakes, particularly if the ‘issues’ are significant societa
+
+gold=0 orig=0.40(ok) reord=0.85(WRONG)
+  claim: They're building some of the biggest plants anywhere in the world, some of the most sophisticated, s
+  reord justification: This statement describes the construction of plants, likely industrial facilities. It uses superlative language ("biggest," "most sophisticated," "best") and makes broad claims about the scale and qua
+
+gold=0 orig=0.40(ok) reord=0.60(WRONG)
+  claim: But we have to stop our jobs from being stolen from us.
+  reord justification: This statement expresses a concern about economic displacement, which could potentially have broad societal implications if widespread. However, it’s a generalized claim about ‘jobs being stolen’ with
+
+gold=0 orig=0.20(ok) reord=0.85(WRONG)
+  claim: Our country's in deep trouble.
+  reord justification: This statement expresses a broad, high-stakes concern about the state of a nation, representing a societal-level claim. It's a declarative statement asserting a negative condition, making it highly ch
+
+gold=0 orig=0.30(ok) reord=0.75(WRONG)
+  claim: How do you make them bring the jobs back?
+  reord justification: This statement poses a question about a complex socio-economic issue – job relocation. It’s a broad policy concern, specifically regarding economic activity and employment, making it highly check-wort
+
+gold=0 orig=0.30(ok) reord=0.60(WRONG)
+  claim: Well, the first thing you do is don't let the jobs leave.
+  reord justification: This statement is a general piece of advice regarding job retention, which could have broad implications for economic stability and workforce dynamics. While not a specific, quantifiable claim, it tou
