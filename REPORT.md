@@ -57,11 +57,64 @@ Split-conformal calibration 및 5가지 변형(ESS 분산 위 conformal, k 재�
 
 LLM 원점수가 13~14개의 이산값으로 군집화되어(few-shot 예시 앵커링으로 추정), temperature/Platt scaling 같은 단조 변환 기반 보정기법은 **어떠한 분류 결정도 바꾸지 못함**(예측 변화 0건, 실측 확인). Brier score 기준 NN-PPI 계열이 표준 기법 대비 20~32% 우수.
 
+## 4.6 채널 용량 진단 — 왜 사후보정에 천장이 있는가
+
+`experiments/prompt-reorder-ablation/channel_capacity.py`로 원점수 채널이 실어 나르는 정보량을 직접 측정했다. **CLEF에서 오라클 상한(원점수의 13개 값을 라벨에 최적으로 매핑했을 때 달성 가능한 최댓값)이 실제 임계값 0.5 정확도(0.780)와 완전히 동일했다** — 상호정보량 0.258/0.924 bits(27.9%). 즉 이 원점수만으로는 **어떤 사후보정 기법도 78%를 넘을 수 없다는 수학적 상한**이 존재하며, §4.4의 conformal류 실패와 표준 보정기법 무력화(§4.5)가 전부 이 천장 아래에서 일어난 현상이었다. ClaimBuster는 더 극단적으로, claim 372개(13.6%)가 전부 `score=0.70`이라는 동일 심볼로 뭉개지고 그 안에서 `P(gold=1)=0.500`(완전한 동전던지기)이다 — 입력이 문자 그대로 같으므로 어떤 후처리로도 구별 불가능하다.
+
+같은 50개 CLEF claim을 Gemma 3 4B와 Claude Sonnet 5(프론티어 대리)에 동일 프롬프트로 채점시켜 비교하면, Gemma는 라벨 엔트로피의 48%만, Sonnet은 94%를 점수에 실어 보낸다(오라클 상한 0.840 대 0.980). **프론티어와의 격차는 상당 부분 판단력이 아니라 출력 채널의 해상도 문제다.**
+
+## 4.7 잔차식 자체의 개선 — 게이트+국소회귀 (오답률을 실제로 낮춘 유일한 사후보정)
+
+원 잔차식(Eq.1, 균등평균+무제약 가산)을 두 가지로 대체했다(leakage-free, calib를 pool/tune으로 분리해 임계값 선정 후 test 평가):
+
+- **신뢰도 게이트**: 이웃 라벨 순도(purity)·최대 유사도가 낮으면 보정 강도 λ∈[0,1]를 수축
+- **국소 선형회귀(ridge=2.0)**: 이웃 15개로 $Y \approx a + b\hat c$ 국소 보정선을 학습(상수 가산이 아닌 구간별 보정), ridge로 과적합 방지
+
+3시드 평균 결과: CLEF 오답률 19.2%→17.1%(-10.9%), 필요 폭 -6.4%; ClaimBuster 24.3%→22.4%(-7.7%), 필요 폭 -11.2%. **통계적으로 유의(McNemar CLEF p=0.0145, ClaimBuster p<0.0001)하지만 효과 크기는 작다**(부트스트랩 95% CI: CLEF [+1.3, +10.7]pp, ClaimBuster [+1.9, +4.0]pp).
+
+## 4.8 프롬프트 필드 순서 — 원저자의 선행 연구(knowing-doing gap)와 동일 구조
+
+원 프롬프트(Fig.2)는 JSON에서 `confidence_score`를 `justification`보다 먼저 요구한다. 자기회귀 생성상 점수가 근거보다 먼저 확정되므로, 근거가 점수를 교정할 기회가 구조적으로 없다 — 저자의 선행 연구("TicToc" KICS 제출본)가 보고한 knowing-doing gap(모델이 스스로 판단해놓고 그 판단대로 행동하지 않는 분리, 0.578→0.806 판단 상한 대비 실제 행동 일치율 52.2%)과 동일 구조다. 필드 순서를 `justification`→`confidence_score`로 뒤집어 재실험한 결과는 **데이터셋 의존적이었다**: CLEF는 가설대로 개선(22.0%→19.5% 오답, NN-PPI 결합 시 17.0%)됐으나, ClaimBuster는 악화(25.6%→29.4%)됐다. 원인 분석 결과 ClaimBuster(2016 대선토론 발화, 수사적 표현 밀도 높음)에서는 근거를 먼저 쓰게 하면 "~일 수도 있다"는 가정법으로 스스로를 설득해 체크가치를 과대평가하는 방향으로 체계적 편향(broke 사례의 94.7%가 상향 이동)이 생겼다. 원본·재정렬 점수의 불일치(|diff|) 자체를 신호로 쓰는 로지스틱 앙상블은 **두 데이터셋 모두에서 원본 단일 프롬프트를 이겼다**(22.0%→21.1%, 25.5%→24.5%; McNemar CLEF p=0.0088, ClaimBuster p<0.0001).
+
+## 4.9 출력 채널 양자화 해제 (logprobs)
+
+§4.6의 진단에 따라 verbalized score 대신 토큰 logprobs에서 직접 연속값을 복원(yesno: P(Yes)/(P(Yes)+P(No)), digit: 0-9 분포의 기대값)했다. 오라클 상한은 두 데이터셋 모두 상승했으나(CLEF 0.780→0.818, ClaimBuster 0.775→0.784) 효과는 작고 데이터셋 의존적이며, yesno는 확률이 두 극단(~1e-5, ~1-1e-7)에 포화돼 순진한 임계값 적합이 오히려 원점수보다 나쁜 정확도(0.748)를 낼 수 있음을 확인했다(logit 스케일로 읽어야 함).
+
+## 4.10 헤드라인 — calib set을 직접 지도학습 신호로 사용 (가장 큰 개선)
+
+문헌 검토 결과("100 Labelled Samples to Achieve Break-Even Performance", arXiv:2402.12819; "Fine-Tuned Small LLMs (Still) Significantly Outperform Zero-Shot GenAI Models", arXiv:2406.08660 — 후자는 ChatGPT·Claude Opus를 직접 비교 대상으로 포함), 라벨 100개 안팎이면 학습된 소형 분류기가 훨씬 큰 모델의 제로샷/퓨샷을 능가한다는 결과가 여러 독립 연구에서 재현됐다. 본 연구의 calib set(CLEF 2,406 / ClaimBuster 1,308)은 그 기준의 13~24배임에도, §3의 kNN 이웃 검색 용도로만 사용됐다.
+
+이미 계산된 문장 임베딩(all-MiniLM-L6-v2) 위에 calib set으로 SVM(rbf)을 직접 학습(GPU·추가 LLM 호출 불필요, CPU 수 초)시켜 완전히 분리된 test set에서 평가한 결과:
+
+| | LLM 원점수 | 임베딩 SVM | 상대 개선 |
+|---|---|---|---|
+| CLEF | 22.0% 오답 | 14.2~14.8% 오답 (AUC 0.928) | **-32~-35%** |
+| ClaimBuster | 25.5% 오답 | 20.2% 오답 (AUC 0.830) | **-21%** |
+
+SVM 확률 + 원본/재정렬 LLM 점수를 로지스틱 메타러너로 스택하면 CLEF 12.9%, ClaimBuster 19.9%까지 추가 개선. **검증**: calib를 8회 부트스트랩 재추출해도 오답률이 좁은 범위(CLEF 14.8~16.7%, ClaimBuster 21.5~23.3%, 표준편차 0.6~0.8pp)에서 안정적이며, McNemar 검정은 두 데이터셋 모두 강한 유의성을 보인다(CLEF p=0.0088, ClaimBuster p=5.4×10⁻⁸). 다수결 기준선(34.0%/73.5% 오답)보다 압도적으로 낫다.
+
+**§4.7의 게이트+국소회귀·NN-PPI·logprob 채널을 이 SVM 확률에 추가로 스택해도 통계적으로 유의한 추가 개선은 없었다**(McNemar SVM-단독 대 전체결합: CLEF p=0.180, ClaimBuster p=0.460; 메타러너 계수는 SVM이 8~9인 반면 나머지 신호는 모두 3 미만). 이는 임베딩 분류기가 §3의 이웃 잔차보정 계열이 포착하던 정보를 이미 상위 집합으로 포함함을 시사한다.
+
+**한계**: 이 방법은 더 이상 NN-PPI의 "재학습 없는 냉동결 LLM 후보정"이라는 전제 위에 있지 않다 — 별도의 지도학습 단계가 필요하다(다만 GPU·라벨링 비용 추가 없이 이미 보유한 calib 라벨로 수 초 내 완료됨). calib 크기에 비례해 개선폭이 커지는 경향(CLEF 2,406개 > ClaimBuster 1,308개)이 관측됐다.
+
+### 4.10.1 프론티어(Sonnet) 대비 — 격차의 몇 %를 좁혔나
+
+같은 50개 CLEF claim에 원 논문 프롬프트를 그대로 적용해 Claude Sonnet 5(프론티어 대리, GPT-5.2/Claude Opus 4.6 자체는 아님)로 채점한 소규모(n=50) 비교:
+
+| | 오답 | F1 |
+|---|---|---|
+| Gemma 3 4B 원점수 | 10/50 (20.0%) | 0.800 |
+| Gemma + 임베딩 SVM | 8/50 (16.0%) | 0.840 |
+| Claude Sonnet 5 | 4/50 (8.0%) | 0.919 |
+
+오답 개수 기준 Gemma-Sonnet 격차(6개)의 **33%**를 SVM이 회수했다(6→4). 전체 test set(318개, §4.10 본문)에서는 상대개선폭이 더 크지만(22.0%→12.9~14.8%) Sonnet 점수를 그 규모로는 확보하지 못해 직접 비교는 n=50 표본에 한정된다.
+
 ## 5. 한계
 
 - Few-shot 예시 6개는 원 논문 비공개로 자체 제작 (재현 시 불가피한 차이)
 - 단일 SLM(Gemma 3 4B)만 검증
-- 이산화 현상의 근본 원인은 미분석 (향후 과제)
+- 프론티어 비교(§4.10.1)는 GPT-5.2/Claude Opus 4.6이 아닌 Claude Sonnet 5 대리 채점, n=50 소표본
+- §4.10 임베딩 분류기는 원 논문의 "재학습 없는 냉동결 LLM" 전제를 벗어난 별도 방법론
 - ClaimBuster는 연도 기반 분할을 재현했으나 원 논문과 소수 건수 차이 존재(전처리 방식 차이로 추정)
 
 ## 6. 재현 방법
@@ -78,5 +131,9 @@ python src/nnppi/run_experiment.py --dataset claimbuster --embed-model BAAI/bge-
 
 ## 7. 산출물
 
-- 코드: 이 저장소 (`nnppi-reproduction` 브랜치)
+- 코드(핵심 재현): `nnppi-reproduction` 브랜치
+- 코드(§4.6~4.10 후속 실험): `prompt-reorder-ablation` 브랜치
+  - `experiments/prompt-reorder-ablation/` — 채널 용량 진단, 게이트+국소회귀, 프롬프트 필드순서 앙상블
+  - `experiments/logprob-channel/` — logprob 기반 채널 양자화 해제
+  - `experiments/embedding-classifier/` — §4.10 헤드라인(임베딩 직접학습 분류기), kitchen-sink 결합 검증
 - 논문 초안: `artifacts/nnppi-paper/nnppi_kics_draft.docx` (OpenResearch 프로젝트 아티팩트, 저자정보·표 삽입만 남음)
