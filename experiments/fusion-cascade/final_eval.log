@@ -1,5 +1,5 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2606.67it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2015.35it/s]
 
 ===== clef: test n=318, frontier-scored calib n=2405, seeds=5
   CALIB OOF curve: {'sonnet_thr_oof': np.float64(0.845), 'svm_oof': np.float64(0.792), 'fuse_0': np.float64(0.792), 'fuse_0.05': np.float64(0.803), 'fuse_0.1': np.float64(0.812), 'fuse_0.2': np.float64(0.823), 'fuse_0.3': np.float64(0.831), 'fuse_0.4': np.float64(0.837), 'fuse_0.5': np.float64(0.839), 'fuse_0.6': np.float64(0.839), 'fuse_0.7': np.float64(0.839), 'fuse_0.8': np.float64(0.839), 'fuse_0.9': np.float64(0.839), 'fuse_1.0': np.float64(0.839)}
@@ -36,6 +36,11 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   fuse_0.5_vs_replace_0.5          diff=+0.019 CI[-0.009,+0.044] McNemar p=0.2632
   fuse_1.0_vs_sonnet_thr           diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
   fuse_1.0_vs_replace_1.0          diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
+  fuse_0.5_vs_fuse_1.0_seed0       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
+  fuse_0.5_vs_fuse_1.0_seed1       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
+  fuse_0.5_vs_fuse_1.0_seed2       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
+  fuse_0.5_vs_fuse_1.0_seed3       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
+  fuse_0.5_vs_fuse_1.0_seed4       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
   fuse_sel_vs_sonnet_thr           diff=+0.022 CI[-0.013,+0.053] McNemar p=0.2649
   svm_vs_gemma_nnppi_sel           diff=+0.016 CI[-0.035,+0.066] McNemar p=0.6305
   svm_vs_best_gemma_nnppi          diff=+0.009 CI[-0.041,+0.060] McNemar p=0.8013
@@ -75,6 +80,11 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   fuse_0.5_vs_replace_0.5          diff=+0.019 CI[+0.004,+0.034] McNemar p=0.0237
   fuse_1.0_vs_sonnet_thr           diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
   fuse_1.0_vs_replace_1.0          diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
+  fuse_0.5_vs_fuse_1.0_seed0       diff=-0.005 CI[-0.011,+0.001] McNemar p=0.2891
+  fuse_0.5_vs_fuse_1.0_seed1       diff=-0.004 CI[-0.011,+0.004] McNemar p=0.5078
+  fuse_0.5_vs_fuse_1.0_seed2       diff=-0.008 CI[-0.014,-0.002] McNemar p=0.0312
+  fuse_0.5_vs_fuse_1.0_seed3       diff=-0.002 CI[-0.007,+0.002] McNemar p=0.6250
+  fuse_0.5_vs_fuse_1.0_seed4       diff=-0.003 CI[-0.009,+0.005] McNemar p=0.7266
   fuse_sel_vs_sonnet_thr           diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
   svm_vs_gemma_nnppi_sel           diff=-0.007 CI[-0.036,+0.021] McNemar p=0.6660
   svm_vs_best_gemma_nnppi          diff=-0.007 CI[-0.036,+0.021] McNemar p=0.6660

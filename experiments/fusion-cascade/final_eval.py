@@ -174,6 +174,8 @@ for k, ck, cal, test in [('clef', 'clefcal', 'clef_calib_scores', 'clef_test_sco
     for b in (.2, .3, .4, .5, 1.0):
         contrasts[f'fuse_{b}_vs_sonnet_thr'] = boot(preds[f'fuse_{b}'][0], preds['sonnet_thr'][0])
         contrasts[f'fuse_{b}_vs_replace_{b}'] = boot(preds[f'fuse_{b}'][0], preds[f'replace_{b}'][0])
+    for sd in range(SEEDS):
+        contrasts[f'fuse_0.5_vs_fuse_1.0_seed{sd}'] = boot(preds['fuse_0.5'][sd], preds['fuse_1.0'][sd])
     contrasts['fuse_sel_vs_sonnet_thr'] = boot(preds['fuse_sel'][0], preds['sonnet_thr'][0])
     contrasts['svm_vs_gemma_nnppi_sel'] = boot(preds['svm'][0], preds['gemma_nnppi_sel'][0])
     contrasts['svm_vs_best_gemma_nnppi'] = boot(preds['svm'][0], max((preds[f'gemma_nnppi_k{kk}'][0] for kk in (3, 5, 10)), key=lambda p: np.mean(p == y)))
