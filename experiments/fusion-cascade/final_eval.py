@@ -90,7 +90,17 @@ for k, ck, cal, test in [('clef', 'clefcal', 'clef_calib_scores', 'clef_test_sco
     preds = {'gemma_raw': [(gst >= .5).astype(int)]}
     for kk in (3, 5, 10):
         preds[f'gemma_nnppi_k{kk}'] = [(nn_ppi_apply(gst, Xt, gsc, gXc, gyc, NNPPIConfig(k=kk)).theta >= .5).astype(int)]
+    # k chosen WITHOUT the test set: 70/30 split of the Gemma calib set (pool = neighbours, tune = scoring)
+    gperm = np.random.default_rng(0).permutation(len(GC)); gcut = int(0.7 * len(GC))
+    gpool, gtune = gperm[:gcut], gperm[gcut:]
+    tune_acc = {kk: float(np.mean((nn_ppi_apply(gsc[gtune], gXc[gtune], gsc[gpool], gXc[gpool], gyc[gpool], NNPPIConfig(k=kk)).theta >= .5) == gyc[gtune]))
+                for kk in (3, 5, 10)}
+    k_sel = max(tune_acc, key=tune_acc.get)
+    preds['gemma_nnppi_sel'] = [preds[f'gemma_nnppi_k{k_sel}'][0]]
     preds['sonnet_raw'] = [(st >= .5).astype(int)]
+    preds['fuse_sel'] = []
+    rho_sel = []
+    calib_curve = {}
     preds['svm'] = []
     preds['sonnet_thr'] = []
     for b in BUDGETS:
@@ -114,6 +124,31 @@ for k, ck, cal, test in [('clef', 'clefcal', 'clef_calib_scores', 'clef_test_sco
         preds['svm'].append(p_svm)
         preds['sonnet_thr'].append(p_son)
         order = np.argsort(np.abs(dt))
+        # budget chosen WITHOUT the test set: smallest rho whose out-of-fold calib accuracy
+        # reaches the calib accuracy of the frontier LLM on all claims (+threshold)
+        p_fuse_cal = cross_val_predict(LogisticRegression(class_weight='balanced'), np.c_[dcal, ss], ys, cv=5)
+        p_svm_cal = (dcal > 0).astype(int); order_cal = np.argsort(np.abs(dcal))
+        target = np.mean((ss >= thr) == ys)
+        rho = 1.0
+        for b in BUDGETS:
+            pc = p_svm_cal.copy(); sc_ = order_cal[:int(round(b * len(ys)))]; pc[sc_] = p_fuse_cal[sc_]
+            if np.mean(pc == ys) >= target:
+                rho = b
+                break
+        rho_sel.append(rho)
+        # full out-of-fold calib curve (fused) and OOF-threshold frontier reference, for reporting
+        from sklearn.model_selection import StratifiedKFold
+        son_oof = np.zeros(len(ys), int)
+        for tr, te in StratifiedKFold(5, shuffle=True, random_state=seed).split(Xs, ys):
+            son_oof[te] = (ss[te] >= best_thr(ss[tr], ys[tr])).astype(int)
+        calib_curve.setdefault('sonnet_thr_oof', []).append(float(np.mean(son_oof == ys)))
+        calib_curve.setdefault('svm_oof', []).append(float(np.mean(p_svm_cal == ys)))
+        for b in BUDGETS:
+            pc = p_svm_cal.copy(); sc_ = order_cal[:int(round(b * len(ys)))]; pc[sc_] = p_fuse_cal[sc_]
+            calib_curve.setdefault(f'fuse_{b}', []).append(float(np.mean(pc == ys)))
+        sel = order[:int(round(rho * len(y)))]
+        pf = p_svm.copy(); pf[sel] = p_fuse_all[sel]
+        preds['fuse_sel'].append(pf)
         for b in BUDGETS:
             sel = order[:int(round(b * len(y)))]
             pf = p_svm.copy(); pf[sel] = p_fuse_all[sel]
@@ -139,11 +174,15 @@ for k, ck, cal, test in [('clef', 'clefcal', 'clef_calib_scores', 'clef_test_sco
     for b in (.2, .3, .4, .5, 1.0):
         contrasts[f'fuse_{b}_vs_sonnet_thr'] = boot(preds[f'fuse_{b}'][0], preds['sonnet_thr'][0])
         contrasts[f'fuse_{b}_vs_replace_{b}'] = boot(preds[f'fuse_{b}'][0], preds[f'replace_{b}'][0])
+    contrasts['fuse_sel_vs_sonnet_thr'] = boot(preds['fuse_sel'][0], preds['sonnet_thr'][0])
+    contrasts['svm_vs_gemma_nnppi_sel'] = boot(preds['svm'][0], preds['gemma_nnppi_sel'][0])
     contrasts['svm_vs_best_gemma_nnppi'] = boot(preds['svm'][0], max((preds[f'gemma_nnppi_k{kk}'][0] for kk in (3, 5, 10)), key=lambda p: np.mean(p == y)))
-    results[k] = dict(n_test=len(y), n_calib_frontier=len(C), n_calib_gemma=len(GC), metrics=R, contrasts=contrasts)
+    results[k] = dict(calib_curve={n: (float(np.mean(v)), float(np.std(v))) for n, v in calib_curve.items()}, k_sel=k_sel, nnppi_tune_acc=tune_acc, rho_sel=rho_sel, n_test=len(y), n_calib_frontier=len(C), n_calib_gemma=len(GC), metrics=R, contrasts=contrasts)
 
     print(f"\n===== {k}: test n={len(y)}, frontier-scored calib n={len(C)}, seeds={SEEDS}")
-    for name in ['gemma_raw', 'gemma_nnppi_k3', 'gemma_nnppi_k5', 'gemma_nnppi_k10', 'svm', 'sonnet_raw', 'sonnet_thr']:
+    print('  CALIB OOF curve:', {n: round(v[0], 3) for n, v in {n: (np.mean(v), 0) for n, v in calib_curve.items()}.items()})
+    print(f"  NN-PPI k selected on calib holdout: k={k_sel} (tune acc {tune_acc});  rho selected on calib per seed: {rho_sel}")
+    for name in ['gemma_raw', 'gemma_nnppi_k3', 'gemma_nnppi_k5', 'gemma_nnppi_k10', 'gemma_nnppi_sel', 'svm', 'sonnet_raw', 'sonnet_thr', 'fuse_sel']:
         r = R[name]
         print(f"  {name:18s} acc={r['acc'][0]:.3f}±{r['acc'][1]:.3f}  wF1={r['wf1'][0]:.3f}  F1c1={r['f1c1'][0]:.3f}")
     print("  budget   FUSE acc (±sd)     REPLACE acc (±sd)")
