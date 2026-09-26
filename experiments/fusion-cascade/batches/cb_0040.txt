@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	You know, right out of law school, I went to work for the Children's Defense Fund.
+41	And people, Chris, will again go back to work and they'll make a lot of money.
+42	So that is not the way our democracy works.
+43	So we now know what Donald thinks and what he says and how he acts toward women.
+44	I also have a much better temperament than she has, you know?
+45	I said she doesn't have the stamina.
+46	We need to make it very clear -- whether it's Russia, China, Iran or anybody else -- the United States has much greater capacity.
+47	I am a very strong supporter of the Second Amendment.
+48	I hope you will give me a chance to serve as your president.
+49	That's what I intend to do.
+50	She's done a terrible job for the African-Americans.
+51	But I think we can take back Mosul, and then we can move on into Syria and take back Raqqa.
+52	Russia is new in terms of nuclear.
+53	Right now, a lot of those nations are hearing what Donald says and wondering, why should we cooperate with the Americans?
+54	We haven't seen anything like this, the carnage all over the world.
+55	All I said was, they may have to defend themselves or they have to help us out.
+56	I am not quoting myself.
+57	If he's going to criticize a deal that has been very successful in giving us access to Iranian facilities that we never had before, then he should tell us what his alternative would be.
+58	If you think that was good, then you do.
+59	And honestly, that starts with Secretary Clinton.
+60	Secretary Clinton also fought it.
+61	That's part of my commitment to raise taxes on the wealthy.
+62	When my husband was president, we went from a $300 billion deficit to a $200 billion surplus and we were actually on the path to eliminating the national debt.
+63	I did not support the war in Iraq.
+64	... is if your -- if your main claim to be president of the United States is your business, then I think we should talk about that.
+65	But I will tell you what isn't fictionalized are her e-mails, where she destroyed 33,000 e-mails criminally, criminally, after getting a subpoena from the United States Congress.
+66	All of the things that she's talking about could have been taken care of during the last 10 years, let's say, while she had great power.
+67	But I said they have to focus on terror, also.
+68	And I will tell you, we are cutting them big league for the middle class.
+69	And it's a tremendously successful club.
+70	They are great scholars in all cases, and they're people of tremendous respect.
+71	So I will have in my race more than $100 million put in -- of my money, meaning I'm not taking all of this big money from all of these different corporations like she's doing.
+72	And it becomes particularly threatening if terrorists ever get their hands on any nuclear material.
+73	Now we have natural gas and so many other things because of technology.
+74	But that was something that happened.
+75	Broad-based, inclusive growth is what we need in America, not more advantages for people at the very top.
+76	... extremely rough to Hillary, to her family, and I said to myself, "I can't do it.
+77	Well, let me translate that, if I can, Chris, because...
+78	We cannot be the policemen of the world.
+79	Well, maybe we'll give three or three or four or five or something.

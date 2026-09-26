@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	And as for the surest way to threaten our prosperity, having a $1.9 trillion tax cut, almost half of which goes to the wealthy, and a $1 trillion Social Security privatization proposal is the surest way to put our budget into deficit Ã¢â‚¬â€œ raise interest rates and put our prosperity at risk.
+481	I'm going to keep my word to the American people.
+482	But even before then the problem hits because the money contributed to Social Security this year is an entitlement.
+483	So when Senator McCain proposes a $300 billion tax cut, a continuation not only of the Bush tax cuts, but an additional $200 billion that he's going to give to big corporations, including big oil companies, $4 billion worth, that's money out of the system.
+484	I want us to heal our country and bring it together because that's, I think, the best way for us to get the future that our children and our grandchildren deserve.
+485	Now there are other places where the executive can lead, but let me just sum up by saying this: why do I talk every time I'm in the South on civil rights?
+486	They're not left or right.
+487	Only 95 percent of them -- 95 percent come in today uninspected.
+488	But I must say I'm a little offended by this word "scheme."
+489	have leased only 2% of the possible.
+490	I've always been against them.
+491	Let me remind you it was a Democratic tax increase, and I didn't want to do it and I went along with it.
+492	But I have worked hard for things like the Family and Medical Leave Law, the Brady Bill, the assault weapons ban, the program to put 100,000 police on the street.
+493	I think under those circumstances they would refrain from pushing us to our knees as they did in 1973 with their previous oil embargo.
+494	I have one difference with Mr. Perot on that because I don't think we need to touch Social Security.
+495	As a matter of fact, I read in the "New York Times" where he said he co-sponsored the McCain-Feingold Campaign Fundraising Bill.
+496	There is a tax loophole right now.
+497	You know, they responded so quickly, so professionally to the attacks that occurred by Rahami.
+498	We got a big philosophical difference here tonight between one who thinks the government can do all these things through tax and spend, and one who thinks it ought to go the other way.
+499	In Iraq, we saw a threat, and we realized that after September the 11th, we must take threats seriously, before they fully materialize.
+500	But Senator Dole has consistently opposed Federal help to education.
+501	When it comes to corporate taxes, Governor Romney has said he wants to, in a revenue neutral way, close loopholes, deductions -- he hasn't identified which ones they are -- but that thereby bring down the corporate rate.
+502	This is a man whose plan excludes 50 million Americans.
+503	That's why exports have significantly increased under my presidency.
+504	And let me just say that budget that you passed that I vetoed would have cut 50,000 kids out of Headstart.
+505	But we have to be cognizant of the fact that they've had foreign fighters coming to volunteer for them, foreign money, foreign weapons, so we have to make this the top priority.
+506	And he wrote out another letter, and that was a letter of resignation from the United States Army for the failure of the landings at Normandy.
+507	There are some advantages to experience, and knowledge, and judgment.
+508	But very specifically the key thing is to turn the government back to the people and take it away from the special interests and have people go to Washington to serve.
+509	Now you tell me who stands on the side of the fence.
+510	Keep in mind that I and Americans took leadership in organizing an international coalition that made sure that we were able to, without putting troops on the ground at the cost of less than what we spent in two weeks in Iraq, liberate a country that had been under the yoke of dictatorship for 40 years.
+511	We're getting rid of regulations which goes hand in hand with the lowering of the taxes.
+512	What it says is that gays and lesbians can't be fired from their job because they're gay or lesbian.
+513	Of course, I've talked to people like Joe the plumber and tell him that I'm not going to spread his wealth around.
+514	I've heard them explain - try to explain - how they tell their children how they can go into a store and buy a loaf of bread but then can't go into that store and sit at the counter and get a Coca Cola.
+515	He says on the one hand I am for it and on the other hand I may be against it.
+516	And Social Security is not enough for a lot of people to live on, or at least is not enough for them to maintain anything like their previous lifestyle.
+517	But in late '89 the president signed a secret policy saying we were going to continue to try to improve relations with him, and we sent him some sort of communication on the eve of his invasion of Kuwait that we still wanted better relations.
+518	Well, I'd say the first homeless bill in the Senate was the Dole-Byrd Byrd-Dole bill, I can't remember who was in control then.
+519	Our country now has no comprehensive energy program or policy.

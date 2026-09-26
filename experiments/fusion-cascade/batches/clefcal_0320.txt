@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	Do you know that he voted for every increase in spending that I saw come across the floor of the United States Senate while we were working to eliminate these pork barrel earmarks?
+321	And that is the result of this president taking his eye off of Osama bin Laden.
+322	We believe that we had also promised that we would make our country more secure.
+323	But if we snatch defeat from the jaws of victory and adopt Senator Obama's plan, then we will have a wider war and it will make things more complicated throughout the region, including in Afghanistan.
+324	What's happened to our jobs and our country and our economy generally is -- look, we owe $20 trillion.
+325	So, my formula says grow at the rate of inflation.
+326	And secondly, in terms of the cutting of the Coast Guard, the Democratic controlled Congress, so please help us with that, who cut $70 million from the Coast Guard out of the interdiction effort on narcotics.
+327	You even at one time suggested that you would try to negotiate down the national debt of the United States.
+328	When we have $20 trillion in debt, and our country's a mess, you know, it's one thing to have $20 trillion in debt and our roads are good and our bridges are good and everything's in great shape, our airports.
+329	Indeed, he was on that side virtually throughout all his years in the Senate.
+330	If the United States had not moved when we did in southern Africa, there's no doubt there would have been an acceleration of bloodshed in that tragic part of the world.
+331	Not necessarily be in power, but here's what I'll say about the $87 billion.
+332	And the president supports taking $716 billion out of that program.
+333	That was the wrong judgment, and it's been costly to us.
+334	And it's not the fact -- it's not the fact that Senator Obama chooses to associate with a guy who in 2001 said that he wished he had have bombed more, and he had a long association with him.
+335	Almost half of all the tax cut benefits, as I said under Governor Bush's plan, go to the wealthiest 1%.
+336	I was just going to -- --
+337	But I'm concerned that that will get overturned.
+338	That was in an ad, Jim, that was knocked down by the journalists who analyzed the ad and said it was misleading.
+339	You were after him, you were trying to -- you even sent out or your campaign sent out pictures of him in a certain garb, very famous pictures.
+340	Now, you're -- and the way it would happen is that under his plan, if a school was designated as failing, the kids would be trapped there for another three years and then some of them would get federal vouchers and the state would be forced to match those, that money.
+341	I'd like to say to Mr. Bush, even though I've got profound differences with him, I do honor his service to our country.
+342	I don't think that's extreme at all; and yet nearly two-thirds to three-fourths of the Republicans in the House of Representatives voted against that proposal.
+343	But you've also got to show that you are prepared to bring the rest of the world in and share the stakes.
+344	That would mean, of course, that for a family of four that that family would have a thousand dollars more personal exemption - money that they could spend for their own purposes, money that the government wouldn't have to spend.
+345	The average income in some of those countries is twenty-five dollars a year.
+346	I would be willing as president to meet with Mr. Khrushchev or any other world leader if it would serve the cause of peace.
+347	And I would hope that we would give to women in this country the right to make that decision, and to make it in the exercise of their conscience and religious beliefs.
+348	Now, another big difference is Governor Bush is proposing to open up some of our most precious environmental treasures, like the Arctic National Wildlife Refuge for the big oil companies to go in and start producing oil there.
+349	So I think it is a case of pay scale, of recognizing that if we're going to have young men and women responsible for our security, dealing with this sophisticated equipment, then for heaven's sakes, let's go out and have a pay scale that is commensurate with the sacrifice that we're asking of them.
+350	But second, in addition to that, if we do get into a recessionary period we should move on that part of the economy which is represented by the private sector, and I mean stimulate that part of the economy that can create jobs - the private sector of the economy.
+351	7.7 million elderly citizens who were living in the lowest 20 percent of earnings -- 7.7 million have moved up into another bracket since our administration took over, leaving only 5 million of the elderly in that bracket when there had been more than 13 million.
+352	And I can only tell him that we reduced, in proportion of other states, the per capita spending, the per capita size of Government - we only increased the size of Government one-twelfth what it had increased in the preceding eight years.
+353	But this deal that we're doing with BAC and US Air and KLM and Northwest, guess who's on the president's campaign big time: a guy from Northwest.
+354	I - I accomplished this with s - substantial reductions in employees in some departments.
+355	Not only has an innocent person been executed, but the real perpetrator of the crime has not been held accountable for it.
+356	So he's got the oil and gas part, but he doesn't have the clean energy part.
+357	Two hundred years ago, Tom Paine, when the 13 tiny colonies were trying to become a nation, said, we have it in our power to begin the world over again.
+358	You are robbing the American people of their savings.
+359	Right from the bottom up, the American people have got to say they want it.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1080	...I indicated that you failed to put in place a status...
+1081	We've had an increase in taxes paid by individuals, payroll taxes, from14 Percent up to 20 percent.
+1082	And it's a plan that lowers cost for everybody, covers all children.
+1083	I also understand that an administration is not one person, but an administration is dedicated citizens who are called by the president to serve the country, to serve a cause greater than self, and so I've thought about an administration of people who represent all America, but people who understand my compassionate and conservative philosophy.
+1084	But I don't think that we can ignore the role played by guns.
+1085	We really need to nail down the big intercontinental ballistic missiles, the ones that can hit us from Russia.
+1086	Then Exxon Mobil, which made $12 billion, record profits, over the last several quarters, they can afford to pay a little more so that ordinary families who are hurting out there -- they're trying to figure out how they're going to afford food, how they're going to save for their kids' college education, they need a break.
+1087	And I say that those of us who stand against surrender of territory - this or any others - in the face of blackmail, in the s- face of force by the Communists are standing for the course that will lead to peace.
+1088	If there's a fairer way, I'm all ears (laughter) --aah.
+1089	They hack into our computers.
+1090	I'd make sure that Ahmadinejad is indicted under the Genocide Convention.
+1091	And I also have to disagree on Senator McCain's record when it comes to college accessibility and affordability.
+1092	Number one, we are going to have North American energy independence.
+1093	Now, what can I bring to that challenge?
+1094	I would say, too, that when Senator Kennedy refers to the action of the House Rules Committee, there are eight Democrats on that committee and four Republicans.
+1095	We have to make sure this program is there for the long term.
+1096	You go into the inner cities and -- you see it's 45 percent poverty.
+1097	In the budget that I submitted to the Congress in January this year, I re- recommended a 50 percent cutback in the rate of growth of federal spending.
+1098	And she was in the hospital, and I went in to talk to her and tell her what I was thinking of doing.
+1099	We've got to control that growth to inflation and population increase, but not raise taxes on the American people now.
+1100	So, yes, this is who Donald Trump is.
+1101	But let me say to you, Mr. Vice President, we're happy with our laws on our books.
+1102	Well, 67 percent of the people voted to re-elect me when I ran for my second term, and I was very proud and very humbled by that.
+1103	As a matter of fact, uh - I've never advocated any cut of $15 billion in our defense budget.
+1104	There are a good many able men who could be secretary of state.
+1105	When the president ran for office, he said if you build a coal plant, you can go ahead, but you'll go bankrupt.
+1106	I happened to believe strong accountability encourages parental involvement, though.
+1107	I believe parents ought to be able to make more choices need more public and charter school choice to send their kids always to a safe school.
+1108	The president of the US was told officially it was a $20-billion problem.
+1109	They're not able to do it and our future depends upon it.
+1110	This isn't the beginning of the end of this crisis.
+1111	Unless the president speaks, then of course uh - the country doesn't speak, and Franklin Roosevelt said: "The pre - uh - the presidency of the United States is above all a place of moral leadership."
+1112	And as soon as we have an investigation and find out where any blame lies for the few that did not get excised or changed, we certainly are going to do something about that.
+1113	We're doing it faster than any other state our size, comparable state.
+1114	Which is -- which is my experience as a governor is if I come in and -- and lay down a piece of legislation and say, "It's my way or the highway," I don't get a lot done.
+1115	The other thing, I'm extremely underleveraged.
+1116	Let's say, this isn't Democrat or Republican, and it isn't liberal or conservative.
+1117	These kinds of things have hurt us very much.
+1118	I ran one of the largest district attorney's offices in America, one of the ten largest.
+1119	It's not accidental that the presidents of Latvia, Estonia, Lithuania, Poland, and Ukraine flew to Georgia, flew to Tbilisi, where I have spent significant amount of time with a great young president, Misha Saakashvili.

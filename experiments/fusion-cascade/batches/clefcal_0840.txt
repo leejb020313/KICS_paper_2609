@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	I look around the world and I don't feel that you see North Korea, continuing to export their nuclear technology, Russia said they're not going to follow Nunn-Lugar any more.
+841	We've got the highest inflation we've had in twenty-five years right now, except under this administration, and that was fifty years ago.
+842	Civil rights - uh has been confirmed by the Burger Court, hasn't been uh - reversed, and I don't think there's any inclination to reverse those basic decisions.
+843	And so I don't know the man well, but I've been disappointed about how he and his administration have conducted the fundraising affairs.
+844	We're the leading donor in the world to help the suffering people there.
+845	You take a look at what's happening to steel and the cost of steel and China dumping vast amounts of steel all over the United States, which essentially is killing our steelworkers and our steel companies.
+846	I have suggested that the president should be given other weapons to protect the national interest in case of national emergency strikes beyond the injunction provision of the Taft-Hartley Act.
+847	And I think I know what he meant by that.
+848	We're down to 336 ships.
+849	Not in an election year, sir.
+850	Many people predicted what happened, and it was a disaster.
+851	But we went in in the interest of peace and to keep Israel and Syria from getting into the sixth war between them.
+852	When Mr. Carter became President, inflation was 4.8%, as you said.
+853	The Senate was right because they knew the lesson of history.
+854	... just a quick follow-up on this.
+855	The Kurds have been our best partners in Syria, as well as Iraq.
+856	But the key that we're going to have to pursue is a -- is a pathway to get the Muslim world to be able to reject extremism on its own.
+857	And that's exactly what I have proposed.
+858	Anybody can have deductions up to that amount.
+859	And I mean investing in education, health care, the environment, and middle-class tax cuts and retirement security.
+860	But I will tell you that, number one, I pay tremendous numbers of taxes.
+861	And three-quarters of them said it makes us less likely to hire people.
+862	But it compels nobody to have insurance who does not want it.
+863	The integration of Central and Eastern European democracies into a new partnership with NATO.
+864	You got a 265 billion dollar tax increase.
+865	Then you said we should.
+866	And also, I'm going to institute zero-based budgeting which I used four years in Georgia, which uh - assesses every program every year, and eliminates those programs that are obsolete or obsolescent.
+867	But apparently his position hasn't changed.
+868	And number three, I will not under any circumstances raise taxes on middle-income families.
+869	If we don't have it, we're not going to have a country.
+870	He had to pay an $850,000 fine to one of the women.
+871	So I will tell you this.
+872	That wouldn't have stopped if we hadn't been willing wouldn't have even started, the Soviets coming out, if we hadn't even been willing to support the freedom fighters there.
+873	I have had it in every single proposal I've sent to the Congress.
+874	And he just lifted martial law.
+875	That's right at the top of my agenda.
+876	I've been speaking out since day 1.
+877	They investigated every single one of my children.
+878	Because we talked about what we wanted to do.
+879	I would not let the Soviet Union get their hands on it at all.

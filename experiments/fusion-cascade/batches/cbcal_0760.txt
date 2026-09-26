@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	And, unfortunately, when -- when -- when you look at Obamacare, the Congressional Budget Office has said it will cost $2,500 a year more than traditional insurance.
+761	Which I think the American people would like to understand fully, it's been investigated to a degree, but -- but the administration has carried out executive privilege to prevent all of the information from coming out.
+762	I don't have a tax cut of a scale that you're talking about.
+763	What we have right now in Washington is a place that's gridlocked.
+764	My priority is making sure that we get more people hired.
+765	The opportunities for us in Latin America we have just not taken advantage of fully.
+766	Two-thirds of our jobs come from small businesses.
+767	When you add up all the loopholes and deductions that upper-income individuals can -- are currently taking advantage of, you take those all away, you don't come close to paying for $5 trillion in tax cuts and $2 trillion in additional military spending.
+768	You can't have an economy that over the last three years keeps slowing down its growth rate.
+769	... the irony is that we've seen this model work really well in Massachusetts, because Governor Romney did a good thing, working with Democrats in the state to set up what is essentially the identical model and as a consequence people are covered there.
+770	We are mobilizing humanitarian support, and support for the opposition.
+771	You're seeing it right now in the economy.
+772	And that is, in fact, I was wrong when I said the president isn't proposing any changes for current retirees.
+773	Not just to you, but to the entire nation.
+774	They're going to come rushing back in to Afghanistan when we go.
+775	Same thing with oil, same thing with natural gas.
+776	We then organized the strongest coalition and the strongest sanctions against Iran in history, and it is crippling their economy.
+777	You can make a lot of money and pay lower tax rates than somebody who makes a lot less.
+778	But let me -- let me not just stop there.
+779	Number three, we've got to control our own energy.
+780	Make up a number, $25,000, $50,000.
+781	America remains the one indispensable nation.
+782	And I -- I don't blame the administration for the fact that the relationship with Pakistan is strained.
+783	We have every two years tests that look at how well our kids are doing.
+784	And now suddenly you're a big champion of coal.
+785	The first thing we did was to streamline the legal immigration system, to reduce the backlog, make it easier, simpler and cheaper for people who are waiting in line, obeying the law to make sure that they can come here and contribute to our country and that's good for our economic growth.
+786	On day one, I will label China a currency manipulator, which will allow me as president to be able to put in place, if necessary, tariffs where I believe that they are taking unfair advantage of our manufacturers.
+787	I'm going to make sure that we get people off of food stamps, not by cutting the program, but by getting them good jobs.
+788	And we are on pace to double our exports, one of the commitments I made when I was president.
+789	If you're getting interest from a bank, if you're getting a statement from a mutual fund or any other kind of investment you have, you don't have to worry about filing taxes on that, because there'll be no taxes for anybody making $200,000.00 per year and less, on your interest, dividends and capital gains.
+790	I'm not going to wear rose-colored glasses when it comes to Russia, or Mr. Putin.
+791	Keep in mind that I and Americans took leadership in organizing an international coalition that made sure that we were able to, without putting troops on the ground at the cost of less than what we spent in two weeks in Iraq, liberate a country that had been under the yoke of dictatorship for 40 years.
+792	The problem is that because the voucher wouldn't necessarily keep up with health care inflation, it was estimated that this would cost the average senior about $6,000 a year.
+793	An economy with 50 percent of kids graduating from college that can't finds a job, or a college level job, that's not what we have to have.
+794	The presidents would -- president would prefer raising taxes.
+795	That's exactly the philosophy that we've seen in place for the last decade.
+796	The surge has been successful and the training program is proceeding apace.
+797	And what we've said is let's change those certifications.
+798	And the plans that I talked about will create even more.
+799	We -- we had to go into Pakistan.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	Let's get back to Medicare.
+281	Can we -- can we stay on Medicare?
+282	We've brought twice as many cases against unfair trading practices than the previous administration and we've won every single one that's been decided.
+283	And that plan is to make sure that folks at the top play by a different set of rules.
+284	That's been his philosophy in the private sector, that's been his philosophy as governor, that's been his philosophy as a presidential candidate.
+285	You keep your own doctor.
+286	The president said he would.
+287	But our training programs right now, we've got 47 of them, housed in the federal government, reporting to eight different agencies.
+288	And three-quarters of them said it makes us less likely to hire people.
+289	First, we've got to improve our education system and we've made enormous progress drawing on ideas both from Democrats and Republicans that are already starting to show gains in some of the toughest to deal with schools.
+290	I can run this more efficiently than the federal government and states, by the way, are proving it.
+291	They look at the fact that we owe 'em a trillion dollars and owe other people $16 trillion in total, including that.
+292	You also have investments in Chinese companies.
+293	I mean, the president received a letter from 38 Democrat senators saying the tensions with Israel were a real problem.
+294	This is a president who has not been able to do what he said he'd do.
+295	You don't have to have the government mandate that for that to occur.
+296	That's wonderful, except we have a record to look at.
+297	If we don't have the best education system in the world, if we don't continue to put money into research and technology that will allow us to create great businesses here in the United States, that's how we lose the competition.
+298	When he talks about getting tough on China, keep in mind that Governor Romney invested in companies that were pioneers of outsourcing to China, and is currently investing in countries -- in companies that are building surveillance equipment for China to spy on its own folks.
+299	And what we've seen over the last four years is something I don't want to see over the next four years.
+300	Our Navy is old -- excuse me, our Navy is smaller now than at any time since 1917.
+301	The problem is they'll be in china.
+302	And what we've done when it comes to trade is not only sign three trade deals to open up new markets, but we've also set up a task force for trade that goes after anybody who is taking advantage of American workers or businesses and not creating a level playing field.
+303	Now, it wasn't just on Wall Street.
+304	One way, for instance, would be to have a single number.
+305	And she was fiercely independent.
+306	And in that process, they can get government help and government guarantees, but they need to go through bankruptcy to get rid of excess cost and the debt burden that they'd -- they'd built up.
+307	The auto workers that you meet in Toledo or Detroit take such pride in building the best cars in the world, not just because of a paycheck, but because it gives them that sense of pride, that they're helping to build America.
+308	That's the kind of leadership that we need to show.
+309	His top adviser on immigration is the guy who designed the Arizona law, the entirety of it; not E-Verify, the whole thing.
+310	I did not say that the Arizona law was a model for the nation in that aspect.
+311	And our eighth graders number one in English and also in math.
+312	And the kinds of budget proposals that you've put forward, when we don't ask either you or me to pay a dime more in terms of reducing the deficit, but instead we slash support for education, that's undermining our long-term competitiveness.
+313	We've opened up public lands.
+314	He now says he's going to replace Obamacare and ensure that all the good things that are in it are going to be in there and you don't have to worry.
+315	We've expanded Pell Grants for millions of people, including millions of young women, all across the country.
+316	Now, that's not my analysis.
+317	You said that they could get it in the private marketplace.
+318	Today, 47 million people are on food stamps.
+319	And they can look at my track record, whether it's Iran sanctions, whether it's dealing with counterterrorism, whether it's supporting democracy, whether it's supporting women's rights, whether it's supporting religious minorities.

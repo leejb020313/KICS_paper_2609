@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2040	This Administration and this country last year had the lowest rate of economic growth - which means jobs - of any major industrialized society in the world in 1959.
+2041	It's a matter of leadership or no leadership.
+2042	We're now working on the communications industry.
+2043	The Surgeon General is doing a good job in encouraging the proper kind of education.
+2044	Not one of them selected a Communist government.
+2045	The facts are -- I did say I hoped it would be a good deal, but when it was negotiated...
+2046	And if we do that, we can have an impact.
+2047	About a thousand raised their hands.
+2048	This weakens the chances of civilization to survive.
+2049	We're now at under 285.
+2050	He said that there could be secretary-level and lower level meetings.
+2051	The governor wants to divert 1 out of every $6 off into the stock market, which means that he would drain a trillion dollars out of the Social Security Trust Fund in this generation over the next ten years, and Social Security under that approach would go bankrupt within this generation.
+2052	He's got over $100 billion of tax cuts and incentives.
+2053	I pass factories that were thriving 20, 25 years ago, and because of the bill that her husband signed and she blessed 100 percent, it is just horrible what's happened to these people in these communities.
+2054	My plan says that we want to raise marginal incomes on family incomes above $200,000 from 31 to 36 percent, that we want to ask foreign corporations simply to pay the same percentage of taxes on their income that American corporations play (sic) in America, that we want to use that money to provide over $100 billion in tax cuts for investment in new plant and equipment, for small business, for new technologies, and for middle class tax relief.
+2055	One of his big ideas when it comes to corporate tax reform would be to say, if you invest overseas, you make profits overseas, you don't have to pay U.S. taxes.
+2056	But you make a very good point, which is that the place you put your money just makes a pretty clear indication of where your heart is.
+2057	I've had to make thousands of decisions, and each one of those decisions has been a learning process.
+2058	Because the trillion dollars that has been promised to young people has also been promised to older people.
+2059	I'm sure you probably have heard that.
+2060	Social Security is a trust fund that pays the checks this year with the money that is paid into Social Security this year.
+2061	They're not as stupid as Washington thinks they are.
+2062	They recruit them, leaving the older, sicker seniors in Medicare.
+2063	Trickle-down government has never worked here, has never worked anywhere.
+2064	What we do in this country, the kind of society that we build, that will tell whether freedom will be sustained around the world.
+2065	Barbara, reluctant as I am to say anything critical about Governor Reagan, I will try to answer your question.
+2066	They thought they were going to have peace - it brought war.
+2067	Now, I'm all for alternative forms of energy, including wind, including solar, et cetera.
+2068	These high interest rates -- real rates that have doubled under this administration -- have had the same effect on Mexico and so on, and the cost of repaying those debts is so enormous that it results in massive unemployment, hardship, and heartache.
+2069	He talks about being a fiscal conservative, or fiscally sound, but he voted over -- he voted 277 times to waive the budget caps, which would have cost the taxpayers $4.2 trillion.
+2070	And you can take it out on charts, you look at all the studies the different groups have done, you go out 4, 5, 6 years, we're still drifting along with a huge deficit.
+2071	We can't have the industries of tomorrow unless we have the best educated workforce.
+2072	But I feel that it's absolutely important that we uphold, because of the fact that it is under such trauma.
+2073	That's the kind of economy I want us to see again.
+2074	That was precisely what I recommended and ultimately what happened.
+2075	They'll have at least two plans.
+2076	A $25 billion giveaway to the biggest corporations in America, including a $254 million refund check to Enron.
+2077	Number four, if you're under 26, and your parents have a policy, you can be on that policy until the age of 26, something that didn't happen before.
+2078	Mr. Nixon earlier indicated that he would defend Quemoy and Matsu even if the attack on these islands, two miles off the coast of China, were not part of a general attack an Formosa and the Pescadores.
+2079	We've changed for the first time since FDR -- since FDR we had the -- we've always had the strategy of saying we could fight in two conflicts at once.

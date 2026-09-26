@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	Now, Governor Romney has said he wants to repeal Dodd-Frank.
+441	We'll also make sure that we have trade relations with China that work for us.
+442	But those businesses that are in the last 3 percent of businesses happen to employ half -- half of all the people who work in small business.
+443	It wasn't just that this was the biggest driver of our federal deficit, our overall health care costs, but it was families who were worried about going bankrupt if they got sick, millions of families, all across the country.
+444	If you're re-elected, we'll get to a trillion-dollar debt.
+445	Well, the economy is still growing slow.
+446	But we also have to recognize that, you know, for us to get more entangled militarily in Syria is a serious step, and we have to do so making absolutely certain that we know who we are helping; that we're not putting arms in the hands of folks who eventually could turn them against us or allies in the region.
+447	And what we've also done is engaged these governments in the kind of reforms that are actually going to make a difference in people's lives day to day, to make sure that their governments aren't corrupt, to make sure that they're treating women with the kind of respect and dignity that every nation that succeeds has shown and to make sure that they've got a free market system that works.
+448	I served as governor and showed I could get them done.
+449	But I think Governor Romney maybe hasn't spent enough time looking at how our military works.
+450	But, number one, preexisting conditions are covered under my plan.
+451	They hack into our computers.
+452	In my health care bill, I said insurance companies need to provide contraceptive coverage to everybody who is insured.
+453	I have no idea what you're talking about.
+454	But just a few weeks ago, you said you think we should have more troops in Iraq right now.
+455	Right now, the CBO says up to 20 million people will lose their insurance as Obamacare goes into effect next year.
+456	Let me just say one final example.
+457	Of course we see in Syria, 30,000 civilians having been killed by the military there.
+458	The federal government can get local and -- and state schools to do a better job.
+459	I mean for instance, we can now, by virtue of new technology actually get all the energy we need in North America without having to go to the -- the Arabs or the Venezuelans or anyone else.
+460	Let's get back to Medicare.
+461	She never got a college education, even though she was smart as a whip.
+462	If the -- the unemployment rate was 7.8 percent when he took office, it's 7.8 percent now.
+463	And we need to make sure they have the arms they need to carry out the very important role which is getting rid of Assad.
+464	And I want to help people in the middle-class.
+465	In my view that's going to mean a whole different way of life for people who counted on the insurance plan they had in the past.
+466	You said that, first, we should not have a timeline in Afghanistan.
+467	In fact, it's estimated that by repealing Obamacare, you're looking at 50 million people losing health insurance...
+468	Well, my strategy is pretty straightforward, which is to go after the bad guys, to make sure we do our very best to interrupt them, to -- to kill them, to take them out of the picture.
+469	First of all, I don't have a $5 trillion tax cut.
+470	But it's good that we have them.
+471	And they don't have the same capacities to attack the U.S. homeland and our allies as they did four years ago.
+472	We didn't put in place a board that can tell people ultimately what treatments they're going to receive.
+473	But they're not creative enough to make up for 30 percent of revenue on something like Medicaid.
+474	I served as a pastor in my congregation for about 10 years.
+475	That's the largest cut in the discretionary domestic budget since Dwight Eisenhower.
+476	And as a consequence we'll have a better trained workforce and that will create jobs because companies want to locate in places where we've got a skilled workforce.
+477	When he took office, 32 million people were on food stamps.
+478	The right course for us is to make sure that we go after the -- the people who are leaders of these various anti-American groups and these -- these jihadists, but also help the Muslim world.
+479	I know what it takes to make sure that you have the kind of opportunity you deserve.

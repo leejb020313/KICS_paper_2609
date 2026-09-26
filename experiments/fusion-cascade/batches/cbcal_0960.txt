@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	He had a Democrat House, a Democrat Senate, super majority in both Houses.
+961	States like Arizona, Rhode Island have taken these -- these Medicaid dollars; have shown they can run these programs more cost-effectively.
+962	That's total over the last four years.
+963	And as a consequence, you had 46 states around the country who have made a real difference.
+964	The truth, though, is that Al Qaeda is much weaker than it was when I came into office.
+965	Now, what he says is he's going to make sure that this doesn't add to the deficit and he's going to cut middleclass taxes.
+966	But first of all, this is a nation of immigrants.
+967	By the way, number one I get rid of is Obamacare.
+968	I mean we're just a few miles away from Ellis Island.
+969	They were counterfeit products being made overseas with the same serial number as a U.S. company, the same packaging, these were being sold into our market and around the world as if they were made by the U.S. competitor.
+970	Middle- income Americans have seen their income come down by $4,300.
+971	I met a couple in Appleton, Wisconsin, and they said, we're thinking of dropping our insurance, we can't afford it.
+972	Number three, I'll make government more efficient and to cut back the number of employees, combine some agencies and departments.
+973	As you hear from intelligence sources even today, the -- the insurgents are highly disparate.
+974	No, it's not time to divorce a nation on Earth that has 100 nuclear weapons and is on the way to double that at some point, a nation that has serious threats from terrorist groups within its nation, as I indicated before, the Taliban, Haqqani Network.
+975	What we've done is organize the international community, saying Assad has to go.
+976	If the president's energy policies are working, you're going to see the cost of energy come down.
+977	Because China, Germany, they're making these investments.
+978	So you may keep referring to it as a $5 trillion tax cut, but that's not my plan.
+979	I've watched year in and year out as companies have shut down and people have lost their jobs because China has not played by the same rules, in part by holding down artificially the value of their currency.
+980	And -- and that kind of top -- top-down economics, where folks at the top are doing well, so the average person making $3 million is getting a $250,000 tax break, while middle-class families are burdened further, that's not what I believe is a recipe for economic growth.
+981	That's not how America was built.
+982	On energy, Governor Romney and I, we both agree that we've got to boost American energy production, and oil and natural gas production are higher than they've been in years.
+983	And the last conversation she had with her father was him calling from the twin towers, saying "Peyton (ph), I love you and I will always watch over you."
+984	Bill and that allowed him to go to college, that wasn't a handout.
+985	I laid out seven steps, crippling sanctions were number one.
+986	So, it's conceivable that Governor Romney could bring down gas prices because with his policies, we might be back in that same mess.
+987	And I want to fight for them.
+988	The -- the fact that he only has to pay 14 percent on his taxes when a lot of you are paying much higher.
+989	We're now spending 42 percent of our economy on government.
+990	For me, this is about jobs.
+991	And with respect to our attitude about the Iranian revolution, I was very clear about the murderous activities that had taken place and that was contrary to international law and everything that civilized people stand for.
+992	I mentioned 31/2 million women, more now in poverty than four years ago.
+993	And as a consequence, we've seen millions of young people be able to afford college, and that's going to make sure that young women are going to be able to compete in that marketplace.
+994	And I said, let's fix this system.
+995	The reason incomes are down is because unemployment is so high.
+996	And for the next decade, she was haunted by that conversation.
+997	But it does say insurance companies can't jerk you around.
+998	Look, the cost of lowering rates for everybody across the board, 20 percent.
+999	I'd rather be able to have an insurance company.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	This would not be done just on the first day.
+161	And we can do so in an environmentally friendly way.
+162	And as a consequence, we lost legitimacy in Pakistan.
+163	To be president of this country, you need tremendous stamina.
+164	And that's why I'll be a better commander in chief.
+165	And they'll have to undergo the same scrutiny that all projects should in competition with others.
+166	We're well ahead and we can stay ahead, provided we have confidence in America and don't run her down in order to build her up.
+167	I've said to the extent we spend federal money on disadvantaged children, we want the schools to show us whether or not the children are learning.
+168	And drilling offshore and nuclear power are two vital elements of that.
+169	It will come from the pockets of the people who are living in those very areas.
+170	We can't have any more instances like what happened when Mr. Bush went to Japan and the Japanese prime minister said he felt sympathy for our country.
+171	and the military that liked it better the way it used to be.
+172	Just today, policemen was shot, two killed.
+173	People listening out there know the benefits of the tax cuts we passed.
+174	They do not pay us.
+175	He said, back in 2006, "Gee, I hope it does collapse, because then I can go in and buy some and make some money."
+176	You picked up a $500-billion bill because of the dumb way the federal government deregulated it.
+177	That means we've got to work more closely with our allies, and that's something that Donald has been very dismissive of.
+178	And since we did that, in the areas where we concluded, trade agreements or exports to Japan have gone up by 85 percent in the last four years and our trade deficit with Japan has gone down.
+179	And then after the Republican dirty tricks group got through with me I'm another person, which I consider an absolutely sick operation.
+180	States like Florida, Colorado, Virginia, and other states.
+181	We also, though, need to have a tax system that rewards work and not just financial transactions.
+182	They must continue to get those checks, and I believe that the system can be put on a sound actuarial basis.
+183	And that's why we've got to make some investments and I've called for investments in solar, wind, geothermal.
+184	Because America must be able to grow enough not only to take care of our needs at home for better education and housing and health - all these things we want.
+185	At the present time we're spending roughly three billion five hundred million dollars.
+186	And a recent book that just came out by perhaps the Nation's most respected author in this field, Strobe Talbott, called "Deadly Gambits,'' concludes that this President has failed to master the essential details needed to command and lead us, both in terms of security and terms of arms control.
+187	Would fathers and mothers feel proud of themselves if they loaded their children with debts like this nation is now -- over a trillion dollars on the shoulders of our children?
+188	I thought it was in our strategic interests to keep Milosevic in check because of our relations in NATO, and that's why I took the position I took.
+189	What the Western allies did decide to do is to stop all air flights - commercial air flights - to any nation involved in terrorism or the hijacking of air planes, or the harboring of hijackers.
+190	For example, we have reduced the size of the Federal government to its smallest size in 30 years.
+191	And as a consequence, we now have a system in which we have the opportunity to start bringing down costs, as opposed to just leaving millions of people out in the cold.
+192	I do not add a penny to the national debt.
+193	That gets rid of the third biggest intrusion of the federal government in our economy.
+194	Our country is losing so much in terms of energy, in terms of paying off our debt.
+195	We have to make it possible.
+196	That happened when I was president.
+197	It is so sad when you see what's happened.
+198	The CBO said very clearly that if you were to adopt the president's plan, there would be a $2 trillion hole in Social Security, because today's workers pay in to the system for today's retirees.
+199	I thought during his debate with Senator Bradley saying he authored the EITC when it didn't happen.

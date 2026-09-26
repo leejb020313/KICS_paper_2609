@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2160	It only whets their appetite; and then the question comes, when do you stop them?
+2161	And the answer is neither the president nor I are proposing any changes for any current retirees or near retirees, either to Social Security or Medicare.
+2162	And the way I view it is there's a lot of entrenched special interests there, people who are, you know, on one side of the issue or another and they spend enormous sums of money and they convince different senators to taut their way or different congressmen to talk about their issue, and they dig in.
+2163	Well, I'm not for photo licensing.
+2164	Tonight, as Americans, you have a choice.
+2165	But absolutely we can be secure in the long run.
+2166	And her son had been shot through the head.
+2167	I believe if we find poor children trapped in schools that won't teach, we need to free the parents.
+2168	A testimony to you, Jim.
+2169	What I criticized were the policies that made it necessary to go to Korea.
+2170	Our initial military success, we went in to Baghdad and everybody celebrated.
+2171	And in 12 years as governor I guess I've taken on every interest group there was in my state at one time or another to fight for change.
+2172	There were several off-the-subject quaffers in that litany.
+2173	Now there are some 10,000 centrifuges spinning uranium, preparing to create a nuclear threat to the United States and to the world.
+2174	We -- we had to go into Pakistan.
+2175	I can't say it any more plainly.
+2176	I ran the -- the state of Massachusetts as a governor, to the extent any governor does, and balanced the budget all four years.
+2177	What's he say to Tony Blair?
+2178	We had the biggest drop in income inequality in 27 years in 1995.
+2179	At the same time, in our Judeo-Christian tradition, we recognize the right of taking a human life in self-defense.
+2180	I demanded an apology from Vice President Bush because I had, instead, honored these young men, grieved for their families, and think they were wonderful Americans that honored us all.
+2181	We have demanded that the American people sacrifice, and they have done very well.
+2182	Uh - what we're doing is saying that there are opportunities, business opportunities, educational opportunities, responsibilities uh - where people with talent, black or any other minority, can fully qualify.
+2183	This has been their primary focus.
+2184	Our country has cut the welfare rolls in half.
+2185	And a feature that allows parents to automatically check with one click what sites your kids have visited lately.
+2186	If we had done what Senator Obama wanted done in Iraq, and that was set a date for withdrawal, which General Petraeus, our chief -- chairman of our Joint Chiefs of Staff said would be a very dangerous course to take for America, then we would have had a wider war, we would have been back, Iranian influence would have increased, al Qaeda would have re- established a base.
+2187	The mistake that both parties made in Washington with the S&L business was deregulating them without proper capital requirements, proper oversight and regulation, proper training of the executives.
+2188	They're almost at the bottom on every single category.
+2189	And they're starting to finally make progress.
+2190	Well, if it's in our vital national interests, and that means whether our territory is threatened or people could be harmed, whether or not the alliances are -- our defense alliances are threatened, whether or not our friends in the Middle East are threatened.
+2191	You may not be one of them, you're just not one of the right people.
+2192	You know, half of all immigrants -- undocumented immigrants in our country -- actually pay federal income tax.
+2193	Our education system can be improved.
+2194	I believe we need to be strong, and I will keep us strong.
+2195	When Mr. Nitze, a good negotiator, returned, he was rebuked, and his boss was fired.
+2196	And we can enforce law.
+2197	We told him that we wouldn't get involved with his border dispute, and we've never revealed those papers that were given to Ambassador Glaspie on July the 25th.
+2198	I know what thatÃ¢â‚¬â„¢s like when an army is defeated.
+2199	We ought to pursue strategies with each of them, economic and the rest, that help them pull away from their dependence upon the Soviet Union.

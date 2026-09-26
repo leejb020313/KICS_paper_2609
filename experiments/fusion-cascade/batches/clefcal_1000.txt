@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	We wanted to tie it to Social Security.
+1001	And I think where I differ with the Governor of Massachusetts, because I am optimistic.
+1002	Mr. President, all of the increase in natural gas and oil has happened on private land, not on government land.
+1003	The problem, Mr. Bush, is that you've cut back by 90 percent on our commitment to affordable housing for families of low and moderate income.
+1004	There are no magic answers to do it.
+1005	And so everything we're doing, we're doing in consultation with our partners in the region, including Israel which obviously has a huge interest in seeing what happens in Syria; coordinating with Turkey and other countries in the region that have a great interest in this.
+1006	One was a bill for a dollar twenty-five cents an hour for anyone who works in a store or company that has a million dollars a year business.
+1007	Those programs you cannot afford and give tax relief.
+1008	He inherited the worst financial crisis since the Great Depression.
+1009	As a matter of fact, the statement that Senator Kennedy made was that - to the effect that there were trigger-happy Republicans, that my stand on Quemoy and Matsu was an indication of trigger-happy Republicans.
+1010	But I find more troubling than this, that on -- on the day following the assassination of the United States ambassador, the first time that's happened since 1979, when -- when we have four Americans killed there, when apparently we didn't know what happened, that the president, the day after that happened, flies to Las Vegas for a political fund-raiser, then the next day to Colorado for another event, other political event.
+1011	I remember when Alf Landon was against Social Security and uh - later President Nixon, sixteen years ago, was telling the public that John Kennedy's proposals would bankrupt the country and would double the cost.
+1012	And I believe that's very, very important.
+1013	Bill of Rights - the fact that, by serving in the military, they could provide for a future college education.
+1014	Secretary Clinton also fought it.
+1015	I immediately said that this was illegal and objectionable.
+1016	Im- most importantly, consumer confidence as surveyed by the reputable organization at the University of Michigan is at the highest since 1972.
+1017	Co-payments go up, costs go up, skyrocketing costs, which make people less and less able to afford health insurance in America.
+1018	Under the Medicare prescription drug proposal I'm making, here is how it works, you go to your own doctor.
+1019	I think we've got to be very careful when we commit our troops.
+1020	You know, like hair transplants, I might need one of those myself.
+1021	One, a lot of folks are still waiting for that 1992 middle-class tax cut.
+1022	I'd like to change that.
+1023	And I lower the cost of health care in the way that I described to you.
+1024	You've been through the roughest weeks anybody could imagine.
+1025	Four hundred billion, approximately, is a result of what individuals do.
+1026	I think if I were a senior citizen I would be a little fed up with all these ads scaring seniors, scaring veterans and scaring students about education.
+1027	You know, it's hard work to try to love her as best as I can, knowing full well that the decision I made caused her loved one to be in harm's way.
+1028	The proposal advanced by you and by Mr. Javits would have cost six hundred millions of dollars - Mr. Rockefeller rejected it in New York, said he didn't agree with the financing at all, said it ought to be on Social Security.
+1029	Look at the record and make your decision.
+1030	India under a free society has been making some progress.
+1031	But the president has underfunded it by $28 billion.
+1032	In other states, we've done it.
+1033	You have to make choices.
+1034	It basically protected states from the action of one state to another.
+1035	It's to make sure our troops are well-housed and well-equipped.
+1036	In my opinion, the people that have been long-term workers at the FBI are furious.
+1037	On the third time we sent welfare reform to the president he signed it but announced he would change it next year, and the vice president said they were going to do something else through the line item veto which I've never understood, but that's sort of inside baseball.
+1038	Maybe we will have another debate on the economy.
+1039	That's the way we're going to provide basic health security for all of the citizens of this country of ours.

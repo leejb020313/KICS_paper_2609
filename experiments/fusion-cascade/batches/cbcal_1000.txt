@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	This is obviously an area of great concern to the entire world, and to America in particular, which is to see a -- a complete change in the -- the structure and the -- the environment in the Middle East.
+1001	I want to do those two things and get this -- get this to a balanced budget with eight -- eight to 10 years.
+1002	He was on 60 Minutes just two weeks ago and he was asked: Is it fair for somebody like you, making $20 million a year, to pay a lower tax rate than a nurse or a bus driver, somebody making $50,000 year?
+1003	We haven't heard from the governor any specifics beyond Big Bird and eliminating funding for Planned Parenthood in terms of how he pays for that.
+1004	In the -- in the last women have lost 580,000 jobs.
+1005	In order to bring the cost of health care down, we don't need to have a board of 15 people telling us what kinds of treatments we should have.
+1006	What your plan does is to duplicate what's already the law, which says if you are out of health insurance for three months, then you can end up getting continuous coverage and an insurance company can't deny you if you've -- if it's been under 90 days.
+1007	His main strategy during the Republican primary was to say, "We're going to encourage self-deportation."
+1008	That's the strategy you need, an all-of-the-above strategy, and that's what we're going to do in the next four years.
+1009	And now, five weeks before the election, he's saying that his big, bold idea is, "Never mind."
+1010	There've been 122 community and small banks have closed since Dodd- Frank.
+1011	But what I've also said is let's hire another 100,000 math and science teachers to make sure we maintain our technological lead and our people are skilled and able to succeed.
+1012	And I said that at that time.
+1013	My plan was to have the company go through bankruptcy like 7-Eleven did and Macy's and Condell (ph) Airlines and come out stronger.
+1014	Number four, get to us a balanced budget.
+1015	Some 15 percent of hospitals and nursing homes say they won't take anymore Medicare patients under that scenario.
+1016	And when it comes to tightening sanctions, look, as I said before, we've put in the toughest, most crippling sanctions ever.
+1017	I'd be happy to have you take a look.
+1018	We were able to drive our schools to be number one in the nation in my state.
+1019	Let's come back to what the president was speaking about, which is what's happening in the world and the president's statement that things are going so well.
+1020	What I will do is I'll put in place an employment verification system and make sure that employers that hire people who have come here illegally are sanctioned for doing so.
+1021	He said that by now middle-income families would have a reduction in their health insurance premiums by $2,500 a year.
+1022	Making sure that we are controlling our own energy, but not only the energy of today, but also the energy of the future.
+1023	And finally, number five, we've got to champion small business.
+1024	As a matter of fact, when Massachusetts did something quite extraordinary -- elected a Republican senator to stop Obamacare, you pushed it through anyway.
+1025	And let's take the money that we've been spending on war over the last decade to rebuild America, roads, bridges schools.
+1026	The federal government taking over health care for the entire nation and whisking aside the 10th Amendment, which gives states the rights for these kinds of things, is not the course for America to have a stronger, more vibrant economy.
+1027	I will make sure we don't hurt the functioning of our -- of our marketplace and our business, because I want to bring back housing and get good jobs.
+1028	So what I've said is, your first $250,000.00 worth of income, no change.
+1029	And the reason we did this is because a nuclear Iran is a threat to our national security, and it is a threat to Israel's national security.
+1030	They don't want to see the world break out into -- into various forms of chaos, because they have to -- they have to manufacture goods and put people to work and they have about 20,000 -- 20 million, rather, people coming out of the farms every year coming into the cities, needing jobs.
+1031	Energy is critical, and the president pointed out correctly that production of oil and gas in the U.S. is up.
+1032	But next door, of course, we have Egypt.
+1033	So he's got the oil and gas part, but he doesn't have the clean energy part.
+1034	And likewise, a study by McKinsey and Company of American businesses said 30 percent of them are anticipating dropping people from coverage.
+1035	That's not the way we're going to create jobs here.
+1036	Their oil production has plunged to the lowest level since they were fighting a war with Iraq 20 years ago.
+1037	What I was saying is, we're not going to round up 12 million people, undocumented illegals, and take them out of the nation.
+1038	You just gave a speech a few weeks ago in which you said we should still have troops in Iraq.
+1039	We have in -- in Egypt, a Muslim Brotherhood president.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1600	9 Nobel Prize-winning economists and 500 others, including numerous Republican and Democratic business executives, have endorsed this approach because it offers the best hope to put America back to work and get our incomes rising instead of falling.
+1601	... right now, our country is dying at 1 percent GDP.
+1602	And I had 5 small children, and my family and I decided we would stay the course, and we lived with that problem for 3 years.
+1603	I heard them when they were running for the Senate in New York, where Hillary was going to bring back jobs to upstate New York and she failed.
+1604	How can we extend freedom - extend it without war?
+1605	In fact, this week we'll be carrying out the largest military exercise with Israel in history, this very week.
+1606	I think we ought to raise the age at which juveniles can have a gun.
+1607	His children are incredibly able and devoted, and I think that says a lot about Donald.
+1608	Uh - I uh - agreed to give the interview uh - to Playboy Other people have done it who are notable - uh - Governor Jerry Brown, uh - Walter Cronkite, uh - Albert Schweitzer, Mr. Ford's own secretary of the treasury, Mr. Simon, uh - William Buckley - many other people.
+1609	We have -- as I said, we've let government get completely out of control.
+1610	And the fact that you're going to college is great, but I want everybody to get a great education and we've worked hard to make sure that student loans are available for folks like you, but I also want to make sure that community colleges are offering slots for workers to get retrained for the jobs that are out there right now and the jobs of the future.
+1611	But it's less than 1 percent of the total cost of health care.
+1612	Do not go to the extreme.
+1613	If you take a patient into the hospital that's bleeding arterially, step one is to stop the bleeding.
+1614	Bob, we relied upon a company out of England to provide about half of the flu vaccines for the United States citizen, and it turned out that the vaccine they were producing was contaminated.
+1615	And it's just a fact that if you're a young African-American man and you do the same thing as a young white man, you are more likely to be arrested, charged, convicted, and incarcerated.
+1616	We expected one at the time of the Vietnam War, but it was used up before we ever ended the war and taxpayers never got the adequate relief they deserved.
+1617	For the first four years -- it takes a year to pass it and for the first four years only the poor are covered.
+1618	I do not for a moment think I'm entitled to all the credit for all the good things that have happened in America.
+1619	Now, maybe I'm expected to ask that same question again.
+1620	And they're going to do that.
+1621	We've done it in Arkansas.
+1622	And they're showing up in Iraq for the same reason.
+1623	And she could have done this years ago, by the way.
+1624	So, you know, she shouldn't be talking about that.
+1625	Brady Bill, I agree that it's a timid step in the right direction but it won't fix it.
+1626	You had a surgeon -- or before General McCaffrey (ph) you had a lady who said we ought to consider legalizing drugs.
+1627	Ninety percent are on the honor role.
+1628	Now, Senator Obama didn't mention that, along with his tax cuts, he is also proposing some $800 billion in new spending on new programs.
+1629	It's a part of the Social Security system.
+1630	So we're going to make sure that people we trade with around the world play by the rules.
+1631	The average family's income has gone up over $1600 just since our economic plan passed.
+1632	Now, we also have people sicker because they don't have health insurance.
+1633	That's the height of silliness...
+1634	We passed family and medical leave.
+1635	That's why in my speech to the Congress I said: There's an "Axis of Evil," Iraq, Iran and North Korea, and we're paying attention to it.
+1636	Well, Sander, that's a good question, and the answer is: for 40-some years we kept the peace.
+1637	And if we want to talk about oil company profits, under your tax plan, John -- this is undeniable -- oil companies would get an additional $4 billion in tax breaks.
+1638	I think it's a matter that we should continue to uh - give uh - great care and attention to.
+1639	I don't want to see the deportation force that Donald has talked about in action in our country.

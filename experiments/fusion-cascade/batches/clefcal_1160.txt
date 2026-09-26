@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1160	Because as we're here tonight in this debate, we are seeing, for the first time in a long time, Republicans and Democrats together, sitting down, trying to work out a solution to this fiscal crisis that we're in.
+1161	That's a hatchet, and then I would get out a scalpel, OK?
+1162	And they're going now because of the policies of this administration.
+1163	So our troops will come home at that point.
+1164	This president thought it was more important to give the wealthiest people in America a tax cut rather than invest in homeland security.
+1165	The money goes 100 percent -- 100 percent goes to different charities, including a lot of military.
+1166	And that's why we've got a country with ten and a half million more jobs, and record numbers of new businesses, and rising incomes, and falling crime rates, and welfare roll rates.
+1167	It's all happening in this administration because they cut funding and they cut interdiction.
+1168	I -- I find it ironic that he's raising nuclear weapons.
+1169	Those are the people who ought to be in jail.
+1170	You know, NATO as a military alliance has something called Article 5, and basically it says this: An attack on one is an attack on all.
+1171	We need to call upon Syria to release the three Israeli soldiers who have been captured.
+1172	You know, for a while he was a strong supporter of getting rid of Saddam Hussein.
+1173	Von Fremd, it would be completely irresponsible for a candidate for the presidency, or for a president himself, to indicate the course of action and the weapons he would use in the event of such an attack.
+1174	I think it's going to be difficult; but I'm confident that this country can meet its responsibilities.
+1175	You can't engage in some of this risky behavior that is putting Main Street at risk.
+1176	We have a delicate, tight-wire walk that we must go through at the present time to make sure that we do not cozy up to tyrants, to make sure that they don't get the impression that they can suppress their people.
+1177	And I think that's great.
+1178	We've got to do something about this.
+1179	I don't have any PAC money in my campaign.
+1180	And the Congress by overriding the bills that I did veto, the Congress has added some $13 billion to the federal expenditures and to the federal deficit.
+1181	And I think they looked and thought, well, that's an unusual honor to receive from the President of the United States.
+1182	Uh - we'll have uh - a safety version built in with complete reorganization of the executive branch of government which I am pledged to do.
+1183	And like I say, 20 million people now have health insurance.
+1184	The - the check on the quality of health care is in a different one.
+1185	And as a matter of fact, the system that the administration is now talking about is very different from the one that was originally proposed in 1983.
+1186	In the first place, never go back to that Democratic grain embargo, that liberal Democrat grain embargo that knocked the markets right out from under us and made Mr. Gorbachev say to me when I was here, how do I know you're reliable suppliers?
+1187	It hasn't been undone since I was there.
+1188	That meant immediately 46% of your people that were signing up had no reason for signing up.
+1189	And if you really look, it's not a tax -- it's really not a great thing for the wealthy.
+1190	All of these are programs that Senator Dole opposed that I supported, because I felt they were a legitimate effort to help people make the most of their own lives.
+1191	Seniors now understand that the promise made will be a promise kept, but younger workers now understand we better have a government that trusts them and that's exactly what I'm going to do.
+1192	We need to shift from oil to coal.
+1193	The choices were not good then.
+1194	Has made him a part of our foreign policy and has been funneling aid to Contras through convicted drug dealers.Ã¢â€°Â¤
+1195	And in fact, employers are looking for skilled workers.
+1196	Their idea was a budget that the that the American Hospital Association said could close 700 hospitals.
+1197	I'm sure he believes just as deeply that his will move that way.
+1198	Remains to be seen, however, whether or not there's going to be a political settlement in Kosovo, and I certainly hope there is one.
+1199	My request for this year was $4.9 billion for AIDS -- ten times as much per AIDS victim as per cancer victim.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1120	But if somebody wanted to be a cardiologist, ten years from now, you'd have to be certain you complied with some of the rules in this extreme medical plan the government was going to take over for all Americans.
+1121	But I do think this, that the next president, even within a relatively stable budget and that's what we are going to have for the foreseeable future will have to make those tough choices that I was talking about and that Mr. Bush doesn't seem to want to make.
+1122	Not reducing the interest -
+1123	or we passed one bill, just a couple of weeks ago in the House of Representatives for $500 million - a half a billion dollars.
+1124	The wages of Americans have gone down.
+1125	On this, as on so many other issues, I have a fundamental difference from the present administration.
+1126	And it was terminated by current mayor.
+1127	Let's go back in terms of accepting responsibility for your actions.
+1128	... talked about Medicaid and how we could send it back to the states, but effectively this means a 30 percent cut in the primary program we help for seniors who are in nursing homes, for kids who are with disabilities.
+1129	We are a country of laws.
+1130	We had a legitimate difference, and I absolutely understand the difference between tactics and strategy.
+1131	Seven administrations were dealing with Mr. Noriega.
+1132	Nineteen fifty-three we tried to put an appropriation of five billion dollars for our defenses.
+1133	Nobody should have any doubt about that, least of all our adversaries or potential adversaries.
+1134	It was personal e-mails, not official.
+1135	This is a difficult and sensitive matter.
+1136	I know what a hate crime statute pending at the national level is all about in the aftermath of James Byrd's death.
+1137	Bob, I think it's going to be important to just -- I'll respond to these two particular allegations that Senator McCain has made and that have gotten a lot of attention.
+1138	As a matter of fact, Mexico, itself, is one of our biggest agricultural customers, so in the sense that we can work to help Mexico rebuild and expand and deal with these very serious economic problems we help our farmers at the same time.
+1139	I believe we should have a stronger military force.
+1140	And, above all, I want a nation that's strong.
+1141	Of course, I listen to our generals.
+1142	We've got to try to have talks, understanding that we're not taking military options off the table.
+1143	There is not a simple answer.
+1144	Some of it was excised, but the part dealing with political terrorism was continued.
+1145	There were three Democratic presidents who led us into war.
+1146	I did give about six months before the effective date of the act before lawsuits can actually be filed, even though they're effective now, and can be legally binding, because I want to change Cuba.
+1147	It's a geopolitical foe, and I said in the same -- in the same paragraph I said, and Iran is the greatest national security threat we face.
+1148	Just to uh - correct the record, Mr. Nixon said on depletion that his record was the opposite of mine.
+1149	It's very bad, very bad health insurance.
+1150	We have lost over 4,000 lives.
+1151	And we've spent $6 trillion in the Middle East, according to a report that I just saw.
+1152	This affects human beings, and - and his insensitivity in providing those people a chance to work has made this a welfare administration, and not a work administration.
+1153	It's a state tax relief.
+1154	It's about the government, as I said before, pinching its pennies for a change instead of the poor taxpayer.
+1155	But let's sort of keep this out of politics because it's pretty dicey right now.
+1156	And I have long ago said I supported the president on this other matter.
+1157	They are members of NATO.
+1158	That's a 30 percent reduction in the portion that the federal government contributes to education in just eight years.
+1159	Since I've been President, I've appointed, for instance, more than twice as many black Federal judges as all previous presidents in the history of this country.

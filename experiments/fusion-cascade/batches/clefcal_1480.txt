@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1480	So we have announcements coming out of Washington and coming out of Iraq, we will be attacking Mosul in three weeks or four weeks.
+1481	We will kill bin Laden; we will crush Al Qaida.
+1482	He said he was going to lower tax rates.
+1483	I've been in Washington, D.C., three and a half years and led the Congress to reform Medicare so our seniors have got a modern health care system.
+1484	She talks in favor of the rebels.
+1485	Instead of squabbling and finger pointing, he gets immediate help.
+1486	There are sanctions in place on Iran.
+1487	Now, we're going to have to make sure that as we trade with other nations that they play by the rules.
+1488	And local -- it's not enough to leave it up to the local school districts.
+1489	And they're proving today, every state, that they can manage them adequately.
+1490	I said, do you get audited?
+1491	It is going to be important for the president to be credible with Congress, important for the president to be credible with foreign nations.
+1492	The biggest crime increase in history, the biggest drug increase in history in Arkansas.
+1493	And I don't want historians, ten years from now, to say, these were the years when the tide ran out for the United States.
+1494	And they want an American foreign policy that leads toward a safer world.
+1495	And that is, I wouldn't join the International Criminal Court.
+1496	Now, somebody has to bear the responsibility for this.
+1497	We've got to be tough on international terrorism.
+1498	And that's where the President has opposed practically every arms control agreement, by every President, of both political parties, since the bomb went off.
+1499	Right now, because of previous agreements, some made by President Clinton, the goods and products that we send to Colombia, which is our largest agricultural importer of our products, is -- there's a billion dollars that we -- our businesses have paid so far in order to get our goods in there.
+1500	I want to have an education system that sets high standards, local control of schools and strong accountability.
+1501	And that's why the Congress, including the Republicans, have not gone along with the President's recommendations.
+1502	And what I have to say about this is, many times -- and this has to do with the Philippines, also, I know there are things there in the Philippines that do not look good to us from the standpoint right now of democratic rights, but what is the alternative?
+1503	Well, I believe in the town hall meetings; they started with my campaign in New Hampshire.
+1504	On foreign affairs, some think it's irrelevant.
+1505	And so I'm proud of my choice.
+1506	Don't have the federal government tell everybody what kind of training programs they have to have and what kind of Medicaid they have to have.
+1507	And it is a fact that through most of these last twenty-five years the Republican leadership has opposed federal aid for education, medical care for the aged, development of the Tennessee Valley, development of our natural resources.
+1508	Some of the states that have the toughest anti-gun laws have the highest levels of crime.
+1509	The vice president has a long resume.
+1510	That is not how we grow the economy.
+1511	I broke with my party in order to balance the budget, and Ronald Reagan signed into law the tax cut that we voted for.
+1512	And the prosecutions are up by about 68 percent -- I believe -- is the number.
+1513	And I do advocate a pardon for - for draft evaders.
+1514	I talked to him about how best to expedite the exploration of natural gas in Mexico and transport it up to the United States so we become less dependent on foreign sources of crude oil.
+1515	We don't know -- there are no inspectors now in Iraq, the coalition that was in place isn't as strong as it used to be.
+1516	He has asked for $932 million of earmark pork-barrel spending, nearly a million dollars for every day that he's been in the United States Senate.
+1517	The president inherited growth of over 5 percent.
+1518	We'll produce more coal this year than any year in history.
+1519	There are 100,000 troops trained, police, guard, special units, border patrol.

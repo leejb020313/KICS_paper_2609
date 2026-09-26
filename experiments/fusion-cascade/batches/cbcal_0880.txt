@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	An economy that has 23 million people looking for work is not a strong economy.
+881	And so if we take a balanced approach, what that then allows us to do is also to help young people, the way we already have during my administration, make sure that they can afford to go to college.
+882	That will not help us compete with China.
+883	That's what reporters called it.
+884	Let -- let me just finish their point, because you're looking for contrast.
+885	Number one, we are going to have North American energy independence.
+886	And the fact is that if you are lowering the rates the way you described, Governor, then it is not possible to come up with enough deductions and loopholes that only affect high-income individuals to avoid either raising the deficit or burdening the middle class.
+887	But, of course, if you're a small business or a mom-and-pop business or a big business starting up here, you've got to pay even the reduced rate that Governor Romney's talking about.
+888	But, you know, if we get that tax rate from 35 percent down to 25 percent, why that $2.8 billion is on the table.
+889	One is it designates a number of banks as too big to fail, and they're effectively guaranteed by the federal government.
+890	That's how we built the world's greatest middle class.
+891	They want to make sure that they have a roof over their heads and that they have the prospects of a better life in the future.
+892	They're using text books that are 10 years old.
+893	Number two, we've got to make sure that we have the best education system in the world.
+894	Now that's estimated to create 800,000 jobs, the problem is they won't be here, they'll be in places like China.
+895	A number of them happened to be owned by people who were contributors to your campaigns.
+896	Thank you, and that's an opportunity for me, and I appreciate it.
+897	We ended the war in Iraq, refocused our attention on Afghanistan, and we did deliver a surge of troops.
+898	Fourth graders and eighth graders are tested in English and math.
+899	They're now going to have to be paying copays for basic checkups that can keep them healthier.
+900	If we had taken your advice Governor Romney about our auto industry, we'd be buying cars from China instead of selling cars to China.
+901	Benefits were not affected at all.
+902	And the choices we've made have been ones that ultimately are benefiting middle-class families all across the country.
+903	And I -- and I went to my staff, and I said, "How come all the people for these jobs are -- are all men."
+904	But under Governor Romney's definition, there are a whole bunch of millionaires and billionaires who are small businesses.
+905	And by the way, you skipped Israel, our closest friend in the region, but you went to the other nations.
+906	You couldn't have people opening up banks in their -- in their garage and making loans.
+907	'Cause I'm going to bring rates down across the board for everybody, but I'm going to limit deductions and exemptions and credits, particularly for people at the high end, because I am not going to have people at the high end pay less than they're paying now.
+908	We've seen progress over the past several years.
+909	Is that a -- is that a separate topic?
+910	But don't forget, you put $90 billion, like 50 years' worth of breaks, into -- into solar and wind, to Solyndra and Fisker and Tester and Ener1.
+911	Well, they sell us about this much stuff every year, and we sell them about this much stuff every year.
+912	Now, it's $4.00 a gallon.
+913	This is part of the choice in this election.
+914	Bringing down our deficit by adding $7 trillion of tax cuts and military spending that our military is not asking for, before we even get to the debt that we currently have, that is not going to make us more competitive.
+915	The president's put it in place as much public debt -- almost as much debt held by the public as al prior presidents combined.
+916	But for us to be able to promote those principles of peace requires us to be strong.
+917	If the president were to be reelected you're going to see a $716 billion cut to Medicare.
+918	And we're retaining our workers for the jobs of tomorrow.
+919	Mr. President, have you looked at your pension?

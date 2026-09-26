@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	And that's what I've done administratively.
+121	It's growing more slowly this year than last year, and more slowly last year than the year before.
+122	And it's a bad policy.
+123	And if we do that, if we do what I'm planning on doing, which is getting us energy independent, North America energy independence within eight years, you're going to see manufacturing jobs come back.
+124	So what we have to do is two things.
+125	I want to make sure that regulators see their job as encouraging small business, not crushing it.
+126	And that we do those things that make America the most attractive place in the world for entrepreneurs, innovators, businesses to grow.
+127	It means that the teacher that I met in Las Vegas, a wonderful young lady, who describes to me -- she's got 42 kids in her class.
+128	Well, President, you're -- Mr. President, you're absolutely right, which is that, with regards to 97 percent of the businesses are not -- not taxed at the 35 percent tax rate, they're taxed at a lower rate.
+129	It's absolutely the right thing to do, to have crippling sanctions.
+130	We created 23 million new jobs.
+131	The president's path means 20 million people out of work struggling for a good job.
+132	George Bush didn't propose turning Medicare into a voucher.
+133	You indicated that we shouldn't be passing nuclear treaties with Russia despite the fact that 71 senators, Democrats and Republicans, voted for it.
+134	Because we've got to make sure that our economy is strong at home so that we can project military power overseas.
+135	Making sure that we've got the best education system in the world, including retraining our workers for the jobs of tomorrow.
+136	And that was -- that was -- that was what allowed us to become the number one state in the nation.
+137	They can buy a computer for their kid who's going off to college, which means they're spending more money, businesses have more customers, businesses make more profits, and then hire more workers.
+138	We had a tire case in which they were flooding us with cheap domestic tires -- or -- or cheap Chinese tires.
+139	And the principles that we put in place, we also gave kids not just a graduation exam that determined whether they were up to the skills needed to -- to be able compete, but also if they graduated the quarter of their class, they got a four-year tuition- free ride at any Massachusetts public institution of higher learning.
+140	When you come out in 2014, I presume I'm going to be president.
+141	I see the Middle East with a rising tide of violence, chaos, tumult.
+142	A woman came to me and she said, look, I can't afford insurance for myself or my son.
+143	Now, he says by not overpaying hospitals and providers.
+144	But in order for us not to lose revenue, have the government run out of money, I also lower deductions and credits and exemptions, so that we keep taking in the same money when you also account for growth.
+145	One is a path represented by the president, which at the end of four years would mean we'd have $20 trillion in debt heading towards Greece.
+146	He's lost his most recent job and we've now just lost our home.
+147	It's a nation that's not like -- like others and it does not have a civilian leadership that is calling the shots there.
+148	And as a consequence, Al Qaeda's core leadership has been decimated.
+149	Getting us to a balanced budget.
+150	The proof of that is 1 out of 6 people in poverty.
+151	Governor Romney doesn't have a five-point plan.
+152	And, you know, that's -- you're right.
+153	And so we decimated Al Qaida's core leadership in the border regions between Afghanistan and Pakistan.
+154	Well, in fact we saved 1,000 jobs.
+155	Number one, beef up our security and procedures, not just in Libya, but at every embassy and consulate in the region.
+156	Well, think about what the governor -- think about what the governor just said.
+157	There are 4 million people who are waiting in line to get here legally.
+158	In fact, he doubled it.
+159	Well, the president took Detroit bankrupt.

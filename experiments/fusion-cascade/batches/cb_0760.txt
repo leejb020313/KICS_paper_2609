@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	I'm sure you probably have heard that.
+761	So, first and foremost, I will do everything I can to reach out to everybody.
+762	Yeah, yeah, we've heard -- we've heard this before, Hillary.
+763	But in -- oh, but I do.
+764	But when I started this campaign, I started it very strongly.
+765	But as far as other elements of what she was saying, I don't know Putin.
+766	So I will tell you this.
+767	I'm not looking at anything now.
+768	In fact, I think just the opposite.
+769	So we are going to have the wealthy pay their fair share.
+770	I want us to heal our country and bring it together because that's, I think, the best way for us to get the future that our children and our grandchildren deserve.
+771	He said as recently as a few weeks ago in Phoenix that every undocumented person would be subject to deportation.
+772	The report that said $650 -- which, by the way, a lot of friends of mine that know my business say, boy, that's really not a lot of money.
+773	We will have secure borders, but we'll also have reform.
+774	We have never in the history of our country been in a situation where an adversary, a foreign power, is working so hard to influence the outcome of the election.
+775	Well, that's because he'd rather have a puppet as president of the United States.
+776	... of what we heard Donald say has been about nuclear weapons.
+777	African-American incomes went up 33 percent.
+778	Well, if you went on to read the rest of the sentence, I was talking about energy.
+779	How do you make them bring the jobs back?
+780	And so we need to do a better job of working, again, with the communities, faith communities, business communities, as well as the police to try to deal with this problem.
+781	I would say the only way -- because those stories are all totally false, I have to say that.
+782	I think that is an idea that is not in keeping with who we are as a nation.
+783	And you wouldn't pay what the man needed to be paid, what he was charging you to do...
+784	It's terrible what's going on in Chicago.
+785	You take a look at the kind of numbers that that will cost us in the year '17, it is a disaster.
+786	You know, I've heard Hillary complaining about so many different things over the years.
+787	I believe in having other people pay for them, as an example, the Gulf states, who are not carrying their weight, but they have nothing but money, and take care of people.
+788	My Social Security payroll contribution will go up, as will Donald's, assuming he can't figure out how to get out of it.
+789	He actually was sued twice by the Justice Department.
+790	First of all, she was there as secretary of state with the so-called line in the sand, which...
+791	Just like when you ran the State Department, $6 billion was missing.
+792	Last time at the first debate, we had millions of people fact checking, so I expect we'll have millions more fact checking, because, you know, it is -- it's just awfully good that someone with the temperament of Donald Trump is not in charge of the law in our country.
+793	But we're going to do it in a way that tries to save some of these 33,000 lives that we lose every year.
+794	And I think it's time that the wealthy and corporations paid their fair share to support this country.
+795	And I'm pretty good at it.
+796	And we have General Flynn.
+797	And I will tell you this, Lester: It's not nice.
+798	Maybe he didn't do a good job and I was unsatisfied with his work...
+799	There's no doubt now that Russia has used cyber attacks against all kinds of organizations in our country, and I am deeply concerned about this.

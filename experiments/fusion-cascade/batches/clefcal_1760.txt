@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1760	I want to thank Arizona State as well.
+1761	It turned out to be a disaster.
+1762	I simply don't want to see the ratings on movies.
+1763	How we pay for that, reduce the deficit, and make the investments that we need to make, without dumping those costs onto middle-class Americans, I think is one of the central questions of this campaign.
+1764	Twenty-three million Americans still struggling to find a good job.
+1765	We have a higher unemployment rate in this country than Great Britain, and West Germany.
+1766	We have a coal supply that is equal to 50% of the world's coal supply, good for centuries, in this country.
+1767	And the president said never, never, never would he raise taxes in New Jersey, and within a day Marlin Fitzwater, his spokesman, said now, that's not a promise.
+1768	And when I hear Governor Romney say he's a big coal guy, I mean, keep in mind, when -- Governor, when you were governor of Massachusetts, you stood in front of a coal plant and pointed at it and said, "This plant kills," and took great pride in shutting it down.
+1769	Making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas.
+1770	Everything comes out of your pocket and my pocket.
+1771	Jim, I hope that we can come back to the subject of education because the governor made an extensive statement on it and I have a very different view than the one he expressed.
+1772	You know, we have 17,000 men and women today wearing our uniform that receive food stamps.
+1773	I'd like to see a balanced budget amendment for America, to protect the American taxpayers, and then that would discipline not only the executive branch but the spending Congress, the Congress that's been in control of one party, his party, for 38 years.
+1774	It costs $20-25 billion a year, and I want to see those outrageous claims capped.
+1775	A brown field is an abandoned industrial site that just sits idle in some of our urban centers.
+1776	My balanced budget plan puts ten years on the Medicare.
+1777	I want to make college debt-free and for families making less than $125,000, you will not get a tuition bill from a public college or university if the plan that I worked on with Bernie Sanders is enacted.
+1778	Mr. President, once again, I happen to be against the amendment, because I think the amendment will take this problem out of the hands of elected legislators and put it in the hands f unelected judges.
+1779	But these were statements that should never, ever have been made.
+1780	You pick your own doctor, and nobody can take that away from you.
+1781	Some people say that's a hatchet.
+1782	They concluded there was no case; he said the FBI was rigged.
+1783	Let me just give you one tiny example.
+1784	With that kind of limitation, on federal spending, we can fully justify the tax reductions that I have proposed.
+1785	I first proposed a long time ago that we would have to examine every agency and every bureaucracy of government.
+1786	Then we went in with the multinational force to help remove, and did remove, more than 13,000 of those terrorists from Lebanon.
+1787	Part of that is because we've stood still here at home, because we haven't met our problems in the United States, because we haven't had a moving economy.
+1788	And the proof is our oil imports are down to the lowest levels in 20 years.
+1789	He'll claim credit now for crime going down, but it happens because mayors and governors and others have brought crime down.
+1790	Those words mean something to me, as somebody who has been in combat.
+1791	If you've got health insurance through your employer, you can keep your health insurance, keep your choice of doctor, keep your plan.
+1792	That's-at least that's what I read.
+1793	But I don't agree with a lot of - most of the positions of the ACLU.
+1794	They put a plan out.
+1795	I can't think of any.
+1796	I thought it was a good program.
+1797	Well, Mr. Ford is - is uh changing uh considerably his previous philosophy.
+1798	General Ridgway said - who was Chief of Staff: "To go to war for Quemoy and Matsu to me would seem an unwarranted and tragic course to take.
+1799	We just have a big difference on where this country should be led, and in what direction it ought to go.

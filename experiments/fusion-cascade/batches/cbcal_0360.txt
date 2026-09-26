@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	I -- I served as a missionary for my church.
+361	Now, the math doesn't work, but he continues to claim that he's going to do it.
+362	That's the reason why we have brought more cases against China for violating trade rules than the other -- the previous administration had done in two terms.
+363	But what we also have been able to do is position ourselves so we can start rebuilding America, and that's what my plan does.
+364	We don't have to settle for, how many months, 43 months with unemployment above 8 percent, 23 million Americans struggling to find a good job right now.
+365	Well, that's how the commission -- bipartisan commission that talked about how we should move forward suggested we have to do it, in a balanced way with some revenue and some spending cuts.
+366	It also means we're helping them and small businesses to export all around the world to new markets.
+367	You know, four years ago we went through the worst financial crisis since the Great Depression.
+368	But what I've also says is for above $250,000, we can go back to the tax rates we had when Bill Clinton was president.
+369	So that's on the record.
+370	And I will not cut our military budget by a trillion dollars, which is a combination of the budget cuts the president has, as well as the sequestration cuts.
+371	But it's very hard for Republican's in Congress to support comprehensive immigration reform, if their standard bearer has said that, this is not something I'm interested in supporting.
+372	And as a consequence, veterans' unemployment is actually now lower than general population.
+373	Attacking me is not talking about how we're going to deal with the challenges that exist in the Middle East, and take advantage of the opportunity there, and stem the tide of this violence.
+374	And I've put forward a plan to make sure that we're bringing manufacturing jobs back to our shores by rewarding companies and small businesses that are investing here, not overseas.
+375	I do want to make sure that...
+376	There's no doubt about it.
+377	And to the governor's credit, you supported us going into Libya and the coalition that we organized.
+378	He said when I took office, the price of gasoline was $1.80, $1.86.
+379	You took General Motors bankrupt.
+380	With half of college kids graduating this year without a college -- excuse me, without a job.
+381	I've been -- Ann was with someone just the other day that was just weeping about not being able to get work.
+382	So at Cleveland Clinic, one of the best health care systems in the world, they actually provide great care cheaper than average.
+383	We've got a program called Race to the Top that has prompted reforms in 46 states around the country, raising standards, improving how we train teachers.
+384	And the fact of the matter is that, when Obamacare is fully implemented, we're going to be in a position to show that costs are going down.
+385	My plan has five basic parts.
+386	It was higher when I came into office.
+387	... talked about Medicaid and how we could send it back to the states, but effectively this means a 30 percent cut in the primary program we help for seniors who are in nursing homes, for kids who are with disabilities.
+388	It just reminds me of, you know, he says that he's going to close deductions and loopholes for his tax plan.
+389	And so what I've done throughout my presidency and will continue to do is, number one, make sure that these countries are supporting our counterterrorism efforts.
+390	Along with what he also wants to do in terms of eliminating the estate tax, along what he wants to do in terms of corporates, changes in the tax code, it costs about $5 trillion.
+391	The idea, which was originally presented by Congressman Ryan, your running mate, is that we would give a voucher to seniors and they could go out in the private marketplace and buy their own health insurance.
+392	In fact we've seen layoffs of hundreds of thousands of teachers over the last several years, and Governor Romney doesn't think we need more teachers.
+393	The price of electricity is up.
+394	So now I want to hire another 100,000 new math and science teachers, and create 2 million more slots in our community colleges so that people can get trained for the jobs that are out there right now.
+395	But in the past, Governor Romney has said he just want to repeal Dodd- Frank, roll it back.
+396	The president said by now we'd be a 5.4 percent unemployment.
+397	The only reason it's not happening is because Governor Romney's allies in Congress have held the 98 percent hostage because they want tax breaks for the top 2 percent.
+398	So, I don't think vouchers are the right way to go.
+399	I said that we would put in place health care reform to make sure that insurance companies can't jerk you around and if you don't have health insurance, that you'd have a chance to get affordable insurance, and I have.

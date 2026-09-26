@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	We've got them all out there.
+561	This is something that we can do; the Congress failed to do it, and we intend to do it.
+562	Now we've increased that amount 25 percent.
+563	Well, look, I understand your frustration and your cynicism, because while you've been carrying out your responsibilities -- most of the people here, you've got a family budget.
+564	I've been involved myself in negotiating and helping to move along the negotiations with the Internet service providers to get a parents' protection page every time 95% of the pages come up.
+565	What you did instead was to push through a plan without a single Republican vote.
+566	Look, we've got the biggest surpluses in all of American history.
+567	Fourth graders and eighth graders are tested in English and math.
+568	I have met with the President when he made the great decisions with regard to Lebanon, Quemoy and Matsu, other matters.
+569	Ross had his hand up.
+570	These are just ideas of what I would think of if I were in that position and had access to the information, and which I would know all the options that were open to me.
+571	But I can guarantee it will not come if Gerald Ford is reelected and this present policy is continued; it will come if I'm elected.
+572	He put forward No Child Left Behind.
+573	The record does not show that.
+574	I think the experience of the twenties has shown what a free market could do to agriculture.
+575	One of my disagreements with the present Administration has been that I don't feel a real effort has been made an this very sensitive subject, not only of nuclear controls, but also of general disarmament.
+576	In Chicago, they've had thousands of shootings, thousands since January 1st.
+577	That wasn't proven when Ronald Reagan said we would do SDI, which is missile defense.
+578	One of the uh - most embarrassing uh - failures of the Ford administration, and one that touches specifically on human rights, is his refusal to appoint a presidential commission to go to Vietnam, to go to Laos, to go to Cambodia and try to trade for the release of information about those who are missing in action in those wars.
+579	The Commander-in-Chief was organizing demonstrations halfway around the world during another era.
+580	And I know he keeps saying, you want to take Detroit bankrupt.
+581	And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards.
+582	We should give a tax cut, targeted to child rearing and education, to buying a first home and paying for health care.
+583	Three, a Gallup Poll taken in February asked people in ten countries which country they thought would be first in 1970, both scientifically and militarily.
+584	Senator Dole led the fight against the Brady Bill.
+585	Now, $18 billion is important; $300 billion is really important.
+586	That's what Speaker Gingrich and Senator Dole did, not me.
+587	Mine for foreign affairs is democracy and freedom, and look at the dramatic changes around the world.
+588	We're living in an interconnected world.
+589	It is true that earlier, working with some very prominent economists, I had come up, during the campaign, with an economic program that I thought could rectify the great problems confronting us -- the double-digit inflation, the high tax rates that I think were hurting the economy, the stagflation that we were undergoing.
+590	That's something that all of us have to be involved with and that requires some leadership from Washington.
+591	This is the first administration since the bomb went off that made no progress.
+592	There may be some moments when we use our troops as peacekeepers, but not often.
+593	It's obvious that there are certain things that have to be done and there are 50 or 60 different options, and a bipartisan commission to take it out of politics, will make recommendations and build support for the people.
+594	I would only suggest that while we do not take the credit for it - I would not presume to - that since that committee has been formed the price line has been held very well within the United States.
+595	I can -- and thanks, Washington U. as well.
+596	The year that he decided we had lost our way was the year that John F. Kennedy was running against Richard Nixon.
+597	That was more than we had offered to all of Africa before from the federal government.
+598	The jobs that are being created in Arizona right now are paying about $13,700 less than the jobs that we're losing.
+599	There is a huge difference in this campaign.

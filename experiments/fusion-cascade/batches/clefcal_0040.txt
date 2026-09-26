@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	He has consistently denied what is...
+41	There's a sense of American occupation.
+42	We didn't have access to their markets.
+43	And what we can now do is free up some resources, to, for example, put Americans back to work, especially our veterans, rebuilding our roads, our bridges, our schools, making sure that, you know, our veterans are getting the care that they need when it comes to post-traumatic stress disorder and traumatic brain injury, making sure that the certifications that they need for good jobs of the future are in place.
+44	But we're not there yet.
+45	That is the accepted procedure between nations; and my judgment is that we should follow the advice of Theodore Roosevelt: Be strong; maintain a strong position; but also speak softly.
+46	We had to go in when they came in.
+47	He said it was a mistake.
+48	Well, I think there are many uh - tests, Mr. Drummond, of prestige.
+49	Senator Obama's secret that you don't know is that his tax increases will increase taxes on 50 percent of small business revenue.
+50	That's $1 -- that's $1 for every $15 you've cut.
+51	And that's why it's essential that we have strong alliances, and we do.
+52	He needed to be disarmed.
+53	Uh - Mr. Ford has vetoed, as I said earlier, four times as many bills per year as Mr. Nixon.
+54	Women work for 76 cents on the dollar for the same work that men do.
+55	Again it's important to put the situation in perspective.
+56	They've been talking about it in Washington, D.C.
+57	And when people vote, I think you're going to see a very strong verdict by the American people that they favor the approach that I'm talking about.
+58	And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero.
+59	We used to have 18.
+60	It is naive and dangerous to take a policy that he suggested the other day, which is to have bilateral relations with North Korea.
+61	We're continuing to increase manpower and equipment.
+62	And what my worry is is that, you know, it looks like it's from Canada, and it might be from a third world.
+63	And then that number disappears for high-income people.
+64	We can put the Communists on the defensive.
+65	Well, these special kinds of programs have - have robbed the average taxpayer and have benefited those who are powerful, and who can employ lobbyists, and who can have their CPAs and their lawyers to help them benefit from the roughly uh - eight thousand pages of the tax code.
+66	Also, I want to thank the people of Cleveland and Ohio for being such hospitable hosts during these last few hours in my life.
+67	There's been a lot of talk about family values in this campaign.
+68	Russia has decided that it's all in, in Syria.
+69	The auto worker in Toledo who was unemployed when I was elected and now has a great job because we're number one in auto production again.
+70	We've got fundamental problems in the system.
+71	As a matter of fact, based on the announcement this week, there will be at an annual rate of a million, eight hundred and some thousand new houses built, which is a tremendous increase over last year and a substantial increase over the earlier part of this year.
+72	And every fact checker and every reporter who's looked at it, Governor, has said this is not true.
+73	So that's how I've used my travels, when I travel to Israel and when I travel to the region.
+74	And he said that the reason he changed his mind was, in part, because he was seeking the endorsement of the National Rifle Association.
+75	Absolutely we can win, because it's your country.
+76	Our nation is involved in two wars, and we are going through the worst financial crisis since the Great Depression.
+77	Keep the trust with the older men and women of this country.
+78	I support the death penalty.
+79	They'll be able to compete.

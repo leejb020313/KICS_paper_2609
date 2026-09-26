@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	And using that money, we were actually able to lower prescription drug costs for seniors by an average of $600, and we were also able to make a -- make a significant dent in providing them the kind of preventive care that will ultimately save money through the -- throughout the system.
+601	And he is saying that he is going to pay for it by closing loopholes and deductions.
+602	And by the way, they noticed that you skipped Israel.
+603	And the way we do it is $2.50 for every cut, we ask for $1 of additional revenue, paid for, as I indicated earlier, by asking those of us who have done very well in this country to contribute a little bit more to reduce the deficit.
+604	And people -- not everybody agrees with some of the decisions I've made.
+605	When you came to office, just over $10 trillion in debt, now $16 trillion in debt.
+606	But the policies he's put in place from Obamacare to Dodd-Frank to his tax policies to his regulatory policies, these policies combined have not let this economy take off and grow like it could have.
+607	And one of the things I suspect Governor Romney and I probably agree on is getting businesses to work with community colleges so that they're setting up their training programs...
+608	This -- what we're seeing taking place in Syria is heartbreaking, and that's why we are going to do everything we can to make sure that we are helping the opposition.
+609	And they're starting to finally make progress.
+610	And the fact is, while we were coordinating an international coalition to make sure these sanctions were effective, you were still invested in a Chinese state oil company that was doing business with the Iranian oil sector.
+611	First of all, the Department of Energy has said the tax break for oil companies is $2.8 billion a year.
+612	Now there are some 10,000 centrifuges spinning uranium, preparing to create a nuclear threat to the United States and to the world.
+613	Today, 47 million people on food stamps.
+614	$90 billion, that would have -- that would have hired 2 million teachers.
+615	Well, let's step back and talk about what's happening in Syria and how important it is.
+616	And we are making sure that those we help are those who will be friends of ours in the long term and friends of our allies in the region over the long term.
+617	You were very clear that you would not provide, government assistance to the U.S. auto companies, even if they went through bankruptcy.
+618	So I want to make sure that we make -- we make America more competitive.
+619	So for me, I look at this as both a need to help move Pakistan in the right direction, and also to get Afghanistan to be ready, and they will be ready by the end of 2014.
+620	And they have said that they want to see Israel wiped off the map.
+621	I want to make sure that we have the ships that are required by our Navy.
+622	And we want to shrink those groups and those networks and we can do that.
+623	So it's pretty clear who doesn't want a trade war.
+624	Now, four years ago, when I stood on this stage, I said that I would cut taxes for middle-class families.
+625	People in the coal industry feel like it's getting crushed by your policies.
+626	People can look it up, you're right.
+627	That wasn't true in his time, that's why my policy starts with a very robust policy to get all that energy in North America -- become energy secure.
+628	That's exactly what our budget does, and it also then allows us to reduce our deficit, which is a significant national security concern.
+629	I mean, you have said before you'd cut the deficit in half.
+630	I've had the occasion over the last couple of years of meeting people across the country.
+631	We were losing 800,000 jobs a month when I started.
+632	Now, we've seen 30 consecutive -- 31 consecutive months of job growth; 5.2 million new jobs created.
+633	Because our energy is low cost, that are already beginning to come back because of our abundant energy.
+634	But the federal government also can play a very important role.
+635	And housing has begun to rise.
+636	When the president took office, the price of gasoline here in Nassau County was about $1.86 a gallon.
+637	Simpson-Bowles, the president should have grabbed that.
+638	What we did in a legislature 87 percent Democrat, we worked together; 200 legislators in my legislature, only two voted against the plan by the time we were finished.
+639	But number two, because I recognized that if you're going to have women in the workforce that sometimes you need to be more flexible.

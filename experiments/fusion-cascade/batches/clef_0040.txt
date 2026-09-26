@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	Many of your Democrat Governors said, \President Trump did a phenomenal job.\""
+41	Far fewer people are dying.
+42	We've done a great job.
+43	But I'll tell you, Joe, you could never have done the job that we did.
+44	How many of you got up this morning and had an empty chair at the kitchen table because someone died of COVID?
+45	How many of you are in a situation where you lost your mom or dad and you couldn't even speak to them, you had a nurse holding a phone up so you could in fact say goodbye?
+46	It could also be after that.
+47	No more than the question you just asked him.
+48	They're the people... And by the way-
+49	Did you use the word smart?
+50	I look forward to talking about it.
+51	Tell that to Nancy Pelosi.
+52	He sits in his golf course.
+53	He wants to shut down the country.
+54	More people will be hurt by continuing.
+55	I got to respond to that.
+56	No, I think masks are okay.
+57	Dr. Fauci said the opposite.
+58	He's been totally irresponsible the way in which he has handled the social distancing and people wearing masks, basically encouraged them not to.
+59	If you could get the crowds, you would have done the same thing.
+60	One person is too much.
+61	And you look at what's going on with divorce, look at what's going on with alcoholism and drugs.
+62	This guy paid a total of $750 in taxes.
+63	The fact is that he has in fact, worked on this in a way that he's going to be the first president of the United States to leave office, having fewer jobs in his administration than when he became president.
+64	Because it costs a lot of money to open them safely.
+65	Excuse me, he made a statement.
+66	They want to get back to their lives.
+67	I paid millions of dollars in taxes, millions of dollars of income tax.
+68	I paid $38 million one year, I paid $27 million one year.
+69	Chris, let me just say something, that it was the tax laws.
+70	I don't want to pay tax.
+71	And I'm going to eliminate those tax cuts.
+72	And make sure that we invest in the people who in fact need the help.
+73	But why didn't you do it over the last 25 years?
+74	We've done things that you never even thought of doing.
+75	And under my proposal, we're going to make sure that every penny of that has to be made by a company-
+76	By the way, I'm going to eliminate a significant number of the taxes.
+77	I'm going to make the corporate tax 28%.
+78	They had the slowest economic recovery since 1929.
+79	If you got in, if you ever became president with your ideas, you want to terminate my taxes.

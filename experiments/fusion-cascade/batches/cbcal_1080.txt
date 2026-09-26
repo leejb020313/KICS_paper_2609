@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1080	Now, we've got to make sure that we do it in a smart way and a comprehensive way, and we make the legal system better.
+1081	He's great as a -- as a -- as a speaker and describing his plans and his vision.
+1082	You had people who were borrowing money to buy a house that they couldn't afford.
+1083	All of those things will make a difference, so the point is the commitments I've made, I've kept.
+1084	Well -- well, I need to speak a moment...
+1085	We, of course, don't want to have automatic weapons, and that's already illegal in this country to have automatic weapons.
+1086	And -- and -- we should not have wasted these four years to the extent they -- they continue to be able to spin these centrifuges and get that much closer.
+1087	... but -- but -- but overall.
+1088	It's not driven by members of Congress, and what they would like to see.
+1089	I want to make sure we get that for the record because it took the president 14 days before he called the attack in Benghazi an act of terror.
+1090	We want to end those conflicts to the extent humanly possible.
+1091	President Obama was right, he said that that was outrageous to have deficits as high as half a trillion dollars under the Bush years.
+1092	In Libya we stood on the side of the people.
+1093	Because the economy was on the verge of collapse, because we were about to go through the worst recession since the Great Depression, as a consequence of some of the same policies that Governor Romney's now promoting.
+1094	The Navy said they needed 313 ships to carry out their mission.
+1095	Are we going to double on top-down economic policies that helped to get us into this mess or do we embrace a new economic patriotism that says America does best when the middle class does best?
+1096	Production on government land of oil is down 14 percent.
+1097	That's how we signed three trade deals into law that are helping us to double our exports and sell more American products around the world.
+1098	So banks are reluctant to make loans, mortgages.
+1099	But, what you can't do is spend $2 trillion in additional military spending that the military is not asking for, $5 trillion on tax cuts.
+1100	He said he and his son calculated how much they pay in taxes, federal income tax, federal payroll tax, state income tax, state sales tax, state property tax, gasoline tax.
+1101	20 or 25 birds were killed and brought out a migratory bird act to go after them on a criminal basis.
+1102	I believe he will go.
+1103	And there's no question but that Obamacare has been an extraordinary deterrent to enterprises of all kinds hiring people.
+1104	Natural gas production is the highest it's been in decades.
+1105	There are more people in poverty, one out of six people in poverty.
+1106	Loves his family, cares about his faith.
+1107	We're talk about those two paths.
+1108	This is the kind of thing that would have been discussed and thoroughly evaluated well before that kind of --
+1109	We can work with them, we can collaborate with them, if they're willing to be responsible.
+1110	The president's path will mean continuing declining in take-home pay.
+1111	We still have trillion-dollar deficits.
+1112	We don't have to be an adversary in any way, shape or form.
+1113	AARP thinks that the -- the savings that we obtained from Medicare bolster the system, lengthen the Medicare trust fund by eight years.
+1114	So there was no risk for the banks or the lenders, but they were taking billions out of the system.
+1115	Because if there's a two parent family, the prospect of living in poverty goes down dramatically.
+1116	It was a terrorist attack and it took a long time for that to be told to the American people.
+1117	You can take a look at the op-ed...
+1118	But it's important for us to recognize that we can't just walk away from Pakistan.
+1119	But when -- when Governor Romney says that he'll replace it with something, but can't detail how it will be in fact replaced and the reason he set up the system he did in Massachusetts was because there isn't a better way of dealing with the preexisting conditions problem.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1640	Let me go back to the main point, Sandy.
+1641	As president I have to be sure that those waivers, which we're approving all over the place, are covered under the law.
+1642	This doesn't have to be.
+1643	Gosh, I just don't think I ever said I'm not worried about Osama bin Laden.
+1644	I noted, for example, in reading a - uh - a - a particular discussion that Senator Kennedy had with Dave Garroway shortly after the uh - his statement about regrets, that uh - he made the statement that he felt that these particular flights uh - were ones that shouldn't have occurred right at that time, and the indication was how would Mr. Khrushchev had felt if we had uh - had a flight over the uni- how would we have felt if Mr. Khrushchev ha - uh - had a flight over the United States while uh - he was visiting here.
+1645	We have this incredible prosperity, but a lot of people have been left behind.
+1646	Now, she talks tough, she talks really tough against Putin and against Assad.
+1647	I'm sure there are hundreds of others.
+1648	Six increases in the payroll tax -- that means people with incomes of $51,000 a year or less pay a disproportionally high share of the federal tax burden, which is why I want some middle-class tax relief.
+1649	The enemy understands a free Iraq will be a major defeat in their ideology of hatred.
+1650	She gave us ISIS as sure as you are sitting there.
+1651	I mean, we've cut defense spending too much in the first place.
+1652	We ought to insist on access.
+1653	But taking that one no from the Soviet Union, we then went back into negotiations on their terms, because Mr. Carter had canceled the B-I bomber, delayed the MX, delayed the Trident submarine, delayed the cruise missile, shut down the Missile Man - the three - the Minuteman missile production line, and whatever other things that might have been done.
+1654	For the last eight years I have had the challenge of running the streamlining program called Reinventing Government.
+1655	And I think that when the president said he was going to create daylight between ourselves and Israel, that they noticed that as well.
+1656	I mean, Senator McCain has been talking tough about earmarks, and that's good, but earmarks account for about $18 billion of our budget.
+1657	Then you have the military and then you have the civilian government.
+1658	And that's where the President's failure to master, in my opinion, the essential elements of arms control has cost us dearly.
+1659	We have a situation where we have our inner cities, African- Americans, Hispanics are living in he'll because it's so dangerous.
+1660	You know, I started off as a young lawyer working against discrimination against African-American children in schools and in the criminal justice system.
+1661	I'm not going to do that, because I think the jury is still out on the Soviet experiment.
+1662	I did think we ought to extend the assault weapons ban, and was told the fact that the bill was never going to move, because Republicans and Democrats were against the assault weapon ban, people of both parties.
+1663	Robin, I'm going to answer your question.
+1664	With interest rates down and inflation down, the cruelest tax of all, caught up in a global slowdown right now, that that will change if you go with the programs I've talked about and if you help with job retraining and education.
+1665	That's a -- that's -- go to the -- please, fact checkers, get to work.
+1666	Then you didn't read it.
+1667	Right now, the CBO says up to 20 million people will lose their insurance as Obamacare goes into effect next year.
+1668	Colin Powell, our secretary of state, announced one day that we were going to continue the dialog of working with the North Koreans.
+1669	We told him he could take the northern part of Kuwait, and when he took the whole thing, we went nuts.
+1670	And we are winning in Iraq.
+1671	And I have no reason to believe that he's ever going to release his tax returns, because there's something he's hiding.
+1672	And the question is if you surrender or indicate in advance that you're not going to defend any part of the free world, and you figure that's going to satisfy them, it doesn't satisfy them.
+1673	Our Justice Department, where our husband goes on to the back of a airplane for 39 minutes, talks to the attorney general days before a ruling is going to be made on her case.
+1674	And most important, let's make education our highest priority so that every eight-year-old will be able to read, every 12-year-old can log onto the Internet, every 18-year-old can go to college.
+1675	I want to hear only arguments as to whether it is good or bad for the people -- is it morally right?
+1676	We have, to one-third of what it was.
+1677	We need the things in it that coordinate the FBI and the CIA.
+1678	But we are putting our energy companies out of business.
+1679	It is the strongest, best prepared, best equipped it has ever been.

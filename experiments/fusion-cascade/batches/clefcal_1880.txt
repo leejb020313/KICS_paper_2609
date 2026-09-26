@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1880	This is, with all due respect, Governor, that's a red herring.
+1881	I think they saw weakness where they had expected to find American strength.
+1882	And the reason it's that important is that all of the other issues, whether prescription drugs for all seniors that are opposed by the drug companies or the patient's bill of rights to take the decisions away from the HMOs and give them to the doctors and nurses, opposed by the HMOs and insurance companies, all these other proposals are going to be a lot easier to get passed for the American people if we limit the influence of special interest money and give democracy back to the American people.
+1883	I think one of the problems we have, particularly for seniors, is there is no prescription drug coverage in Medicare.
+1884	But again, I want to come back to, notice every time Senator Obama says, "We need to spend more, we need to spend more, that's the answer" -- why do we always have to spend more?
+1885	He was trying to get rid of sanctions for a reason: He wanted to restart his weapons programs.
+1886	If you have extraordinarily high cost, then they pay all over $4,000 out-of-pocket.
+1887	First of all, when we and our allies -- the Italians, the French, and the United Kingdom -- went into Lebanon, we went in there at the request of what was left of the Lebanese Government to be a stabilizing force while they tried to establish a government.
+1888	When -- when we were fighting about whether or not we were going to make sure that Americans had more security with their health insurance and they said no, yes, that was a fight that we needed to have.
+1889	One of them happened just the other day, when a man I admire and respect -- I've written about him -- Congressman John Lewis, an American hero, made allegations that Sarah Palin and I were somehow associated with the worst chapter in American history, segregation, deaths of children in church bombings, George Wallace.
+1890	You're 150 -- excuse me, I think it's a little more, about $100 million shy of what you ought to be under the No Child Left Behind Act to help your education system here.
+1891	That is, I want to bring down rates.
+1892	It means that the American buyer is getting a better bargain today because inflation is less.
+1893	In effect, what Senator Kennedy recommends is that the United States government should give help to the exiles and to those within Cuba who oppose the Castro regime - provided they are anti-Batista.
+1894	And I'll bring new competition to bring the price down.
+1895	But we are clearly better off than we were four years ago, as Senator Dole acknowledged this year.
+1896	Now, I voted for the Patriot Act.
+1897	But I will say, we are not doing the job we should be doing.
+1898	There were eleven dictators when we came into power in 1953 in Latin America.
+1899	In fact we've seen layoffs of hundreds of thousands of teachers over the last several years, and Governor Romney doesn't think we need more teachers.
+1900	But when I was in that little church across the river from Washington and saw our grandchild christened in our faith, I was very pleased indeed that the mother had not aborted that child, and put the child up for adoption.
+1901	We get nothing for it.
+1902	We just had a pretty serious dispute with China because they were copying our CDs, and costing thousands of jobs in places like California.
+1903	I was opposed to the war.
+1904	Well, President, you're -- Mr. President, you're absolutely right, which is that, with regards to 97 percent of the businesses are not -- not taxed at the 35 percent tax rate, they're taxed at a lower rate.
+1905	We're spending $10 billion a month in Iraq at a time when the Iraqis have a $79 billion surplus, $79 billion.
+1906	I don't think we should spend tax money on private schools.
+1907	Well, again, the president didn't answer the question.
+1908	(Applause) And so I'm still a little unclear as to whether he's for or against the tax increase.
+1909	I just -- I think that racial profiling is a serious problem.
+1910	For the first time in the 20th century the President has done that in all four years and that's why I don't want to see us blow a big hole in the deficit with a tax program we can't pay for, so your interest rates will go up, and you'll have to pay back in higher interest rates what you allegedly will get in a tax cut, so I say keep working on expanding the markets.
+1911	And then to let people save in an IRA and withdraw from it without a tax penalty for education, home buying or medical expenses, that's the right way to go into the 21st Century, balance the budget and cut taxes, not balloon with this $550 billion tax scheme.
+1912	And we ought to go back to a little bit of Ronald Reagan's "trust, but verify," and certainly not sit down across the table from -- without precondition, as Senator Obama said he did twice, I mean, it's just dangerous.
+1913	For example, as I have said, we have added some four million jobs in the last seventeen months.
+1914	So, my heritage as a Southerner, my experience in the Oval Office, convinces me that what I have just described is a proper course for the future.
+1915	And the last point I wanna make is this: Mr. Ford, Mr. Kissinger have uh - continued on with the policies and failures of Richard Nixon.
+1916	Well, we, the living Americans, have gone through four wars.
+1917	I have fought against excessive spending and outrages.
+1918	What we all saw and heard on Friday was Donald talking about women, what he thinks about women, what he does to women.
+1919	If he'd let the inspectors do their job and go on, we wouldn't have 10 times the numbers of forces in Iraq that we have in Afghanistan chasing Osama bin Laden.

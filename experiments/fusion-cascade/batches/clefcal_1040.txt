@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1040	I think of the man who grabbed me by the shoulder once with tears in his eyes and said his daughter was dying of cancer and he thanked me for giving him a chance to spend some time with her without losing his job because of the Family and Medical Leave Act.
+1041	The average senior citizen is spending a higher percentage of income on health care today than they were in 1965, before Medicare came in.
+1042	Well, I try to articulate my positions as clearly as possible, tell people what I stand for and let them decide whether they're going to support me or not.
+1043	And we have proven, I think very conclusively, that you can reduce the rate of inflation and increase jobs.
+1044	Got four more years, I've got more to do to continue to raise standards, to continue to reward teachers and school districts that are working, to emphasize math and science in the classrooms, to continue to expand Pell Grants to make sure that people have an opportunity to start their career with a college diploma.
+1045	So if we just rip it up and throw it away, what Donald's not telling you is we just turn it back to the insurance companies the way it used to be, and that means the insurance companies...
+1046	And I didn't even apologize to my wife, who's sitting right here, because I didn't do anything.
+1047	Well, I wasn't the one having trouble explaining it.
+1048	If we could stop, right now, the testing and the deployment of these space weapons -- and the President's proposals go clear beyond research; if it was just research we wouldn't have any argument, because maybe someday, somebody will think of something -- but to commit this nation to a buildup of antisatellite and space weapons at this time, in their crude state, would bring about an arms race that's very dangerous indeed.
+1049	Governor Carter in his acceptance speech called for more and more programs, which means more and more government.
+1050	And none of these things happened.
+1051	It's going to be hard to punish them any worse after they get put to death.
+1052	You said you'd cut the deficit in half.
+1053	And most importantly, we give small business a 50 percent tax credit so that after we lower the costs of health care, they also get, whether they're self-employed or a small business, a lower cost to be able to cover their employees.
+1054	I don't know -- starting after 4 years.
+1055	Congressman Jim Sensenbrenner, he is the chairman of the House Judiciary Committee, said over his dead body before it gets renewed without being thoroughly rechecked.
+1056	There are six countries in Africa that are members of the United Nations.
+1057	The current system today has meant a lot for a lot of seniors, and I really appreciate the intentions of the current system as I mentioned.
+1058	He said a while back that the big problem with energy is that for 30 years, politicians in Washington haven't done anything.
+1059	Governor Reagan's proposal, the Reagan-Kemp-Roth proposal, is one of the most highly inflationary ideas that ever has been presented to the American public.
+1060	I think it's a very clear contrast.
+1061	And that's why I have made it a number one priority in my budget, not a tax cut for the wealthy.
+1062	I don't think it should be used as a piggy bank for other programs.
+1063	And Governor Romney wants to take us back to those policies, a foreign policy that's wrong and reckless, economic policies that won't create jobs, won't reduce our deficit, but will make sure that folks at the very top don't have to play by the same rules that you do.
+1064	Now the Republican platform will cost more too.
+1065	And whether this House and Senate, in the next session is Democratic or Republican, if the country will have voted for the candidate for the presidency and for the proposals that he has made, I believe that you will find that the president, if it were a Republican, as it would be in my case, would be able to get his program through that Congress.
+1066	And when it comes to education what I've said is we've got to reform schools that are not working.
+1067	This is a president who hasn't met with the Black Congressional Caucus.
+1068	And thank you for tuning in this evening.
+1069	That's got to be changed.
+1070	Mr. Benson, testifying on the food stamp plan in 1957, said there were twenty-five million Americans who could not afford a elementary low-cost diet.
+1071	And if I were to ever say, "This is the wrong war at the wrong time at the wrong place," the troops would wonder, how can I follow this guy?
+1072	We have to guard our energy companies.
+1073	He's been in some other country.
+1074	The captains are leaving the service.
+1075	She complains that Donald Trump took advantage of the tax code.
+1076	But to the issue of Iran, as long as I'm president of the United States Iran will not get a nuclear weapon.
+1077	Again, it may not work, but if it doesn't work, then we have strengthened our ability to form alliances to impose the tough sanctions that Senator McCain just mentioned.
+1078	But I pledge this to you, America: I will do it in the way that Franklin Roosevelt and Ronald Reagan and John Kennedy and others did, where we build the strongest alliances, where the world joins together, where we have the best intelligence and where we are able, ultimately, to be more safe and secure.
+1079	He went after a federal judge, born in Indiana, but who Donald said couldn't be trusted to try the fraud and racketeering case against Trump University because his parents were Mexican.

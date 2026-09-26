@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	We can get this economy going again.
+481	And I know he keeps saying, you want to take Detroit bankrupt.
+482	But I also believe that we've got to look at the energy sources of the future, like wind and solar and biofuels, and make those investments.
+483	The ambassador of the United Nations went on the Sunday television shows and spoke about how --
+484	You said you'd cut the deficit in half.
+485	I can't begin to pay back my student loans."
+486	So at the same time that my tax plan has already lowered taxes for 98 percent of families, I also lowered taxes for small businesses 18 times.
+487	What we do have right now is a setting where I'd like to bring money from overseas back to this country.
+488	And why do I want to bring rates down, and at the same time lower exemptions and deductions, particularly for people at the high end?
+489	It's because we got everybody to agree that Iran is seeing so much pressure.
+490	And when you move to a voucher system, you are putting seniors at the mercy of those insurance companies.
+491	So I want to get some relief to middle-income families.
+492	Under -- under my plan, 97 percent of small businesses would not see their income taxes go up.
+493	We cut taxes 19 times and balanced our budget.
+494	We had to go in there to get Osama bin Laden.
+495	So I get the last question -- last answer --
+496	And, of course, Iran on the path to a nuclear weapon, we've got real (inaudible).
+497	We've got potentially 600,000 jobs and 100 years worth of energy right beneath our feet with natural gas.
+498	I spent my life in the private sector, not in government.
+499	And as governor of my state, I was able to get 100 percent of my people insured, all my kids, about 98 percent of the adults.
+500	And if Obamacare is passed, or implemented -- it's already been passed -- if it's implemented fully, it'll be another $2,500 on top.
+501	And when it comes to education what I've said is we've got to reform schools that are not working.
+502	This was an attack by terrorists.
+503	Look, the revenue I get is by more people working, getting higher pay, paying more taxes.
+504	I don't want to cut our commitment to education.
+505	But there's still a problem, because what happens is, those insurance companies are pretty clever at figuring out who are the younger and healthier seniors.
+506	We have seen increases in coal production and coal employment.
+507	And every health care economist that looks at it says, over time, what'll happen is the traditional Medicare system will collapse.
+508	And now you've got a choice.
+509	And manufacturers here in the U.S. making the same products can't compete.
+510	And with regards to young people coming along, I've got proposals to make sure Medicare and Social Security are there for them without any question.
+511	And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon.
+512	And this is where there's a difference, because Governor Romney's central economic plan calls for a $5 trillion tax cut -- on top of the extension of the Bush tax cuts -- that's another trillion dollars -- and $2 trillion in additional military spending that the military hasn't asked for.
+513	I think you know better.
+514	Now, it is absolutely true that we cannot just meet these challenges militarily.
+515	That was something I concurred with...
+516	I see our influence receding, in part because of the failure of the president to deal with our economic challenges at home; in part because of our withdrawal from our commitment to our military in the way I think it ought to be; in part because of the -- the -- the turmoil with Israel.
+517	But let's come back to something the president and I agree on, which is the key task we have in health care is to get the cost down so it's more affordable for families.
+518	Now, Governor Romney will say he's got an all-of-the-above plan, but basically his plan is to let the oil companies write the energy policies.
+519	But your rate comes down and the burden also comes down on you for one more reason, and that is every middle-income taxpayer no longer will pay any tax on interest, dividends or capital gains.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2080	The fa- the farmer who grows wheat gets about two and a half cents out of a twenty-five-cent loaf of bread.
+2081	I think of people in the law enforcement community who are taking their lives in their hands everyday, when they go up to one of those doors and kick it down and try to stop this flow of drugs into our communities and into our kids.
+2082	I never criticized the U-2 flights in general, however.
+2083	That happens to be a fact.
+2084	What would you do if you were the Israelis and the president of a country says that they are -- they are determined to wipe you off the map, calls your country a stinking corpse?
+2085	Well, he held a number of big rallies where he said that he could not possibly have done those things to those women because they were not attractive enough for them to be assaulted.
+2086	We have ten and a half million more jobs, a faster job growth rate than under any Republican administration since the 1920s.
+2087	Now, my balanced budget plan adds ten years to the life of the Medicare trust fund, ten years.
+2088	Well, let me just correct something very quickly.
+2089	If you create Saddam Hussein, over a 10-year period, using billions of dollars of US taxpayer money, step up to the plate and say it was a mistake.
+2090	And there is a determined effort by the Russian air force to destroy Aleppo in order to eliminate the last of the Syrian rebels who are really holding out against the Assad regime.
+2091	But Pakistan is important to the region, to the world and to us, because Pakistan has 100 nuclear warheads and they're rushing to build a lot more.
+2092	I would like to have had a big, organized summit, but those people were killing each other, rapidly, innocent Arab children, innocent Israeli people, they were dying.
+2093	My word is my bond.
+2094	But I'm going to be respectful for people, I'll tolerate people, and I support equal rights but not special rights for people.
+2095	But this president didn't try to fix it.
+2096	We have presided over the largest increase in government since the Great Society.
+2097	Even though it's true that, perhaps, between now and the end of the decade, our total consumption of oil may not increase by more than, perhaps, a million or 2 million barrels of oil a day.
+2098	That's true of any family.
+2099	The claim that it would have put hundred and forty thousand miners out of work is uh - hard to believe, when at the time Mr. Ford vetoed it, the United Mine Workers was uh - supporting the bill.
+2100	And we kicked this man out of Kuwait.
+2101	Embryonic stem-cell research requires the destruction of life to create a stem cell.
+2102	... but those other charges, as she knows, are false.
+2103	The auto workers that you meet in Toledo or Detroit take such pride in building the best cars in the world, not just because of a paycheck, but because it gives them that sense of pride, that they're helping to build America.
+2104	This is uh - not compatible with the purpose of our nation.
+2105	We sent it to the Clinton Administration for implementation, and they waited three and a half years.
+2106	A 1% increase in interest rates in that $2.8 trillion is $28 billion a year.
+2107	If we take your advice with respect to how we change our tax codes so that companies that earn profits overseas don't pay U.S. taxes compared to companies here that are paying taxes.
+2108	Our thoughts and prayers go out to the lion of the Senate.
+2109	I was just recently endorsed -- 16,500 Border Patrol agents.
+2110	For one thing, let me just follow up here.
+2111	We'll do everything we can to improve adoption in this country.
+2112	It is a plan that will have 200 new programs -- expanded programs and creates 20,000 new bureaucrats.
+2113	If our view prevails that we have to do more, that we have to make a greater national and international effort, that we have lost prestige in Latin America - the President of Brazil - the new incumbent running for office called on Castro during his campaign because he thought it was important to get the vote of those who were supporting Castro in Latin America.
+2114	I support it for the middle class, not that part of it that goes to people earning more than $200,000 a year.
+2115	Well, everything you've heard just now from Donald is not true.
+2116	But the important thing is -- the important thing is I visited Afghanistan and I traveled to Waziristan and I traveled to these places and I know what our security requirements are.
+2117	And recently the Federal Trade Commission pointed out that some of these entertainment companies have warned parents that the material is inappropriate for children, and then they've turned around behind the backs of the parents and advertised that same adult material directly to children.
+2118	That's why I believe there are going to be millions of Democrats that are going to vote with us this time around, because they too want that promise kept.
+2119	There are three fundamental challenges.

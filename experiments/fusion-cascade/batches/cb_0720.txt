@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	But we don't use those people.
+721	She talks about health care.
+722	And Donald never tells you what he would do.
+723	He is denigrating -- he's talking down our democracy.
+724	Can they rely on us?
+725	I pay hundreds of millions of dollars in taxes.
+726	And I'll tell you what, in particular in Chicago, people were hurt and people could have been killed in that riot.
+727	He owes the president an apology, he owes our country an apology, and he needs to take responsibility for his actions and his words.
+728	I have a great company.
+729	And take a look at mine, also, and you'll see.
+730	We buy products for our military and they come in at costs that are so far above what they were supposed to be, because we don't have people that know what they're doing.
+731	But we have some bad hombres here, and we're going to get them out.
+732	We are -- right now, we're getting the drugs, they're getting the cash.
+733	I don't want to rip families apart.
+734	Well, Aleppo is a disaster.
+735	And it just seems to me that this is something that the American people deserve to see.
+736	So I have very clear views about what I want to see to kind of change the balance on the Supreme Court.
+737	As far as my tax returns, you don't learn that much from tax returns.
+738	ISIS happened a number of years ago in a vacuum that was left because of bad judgment.
+739	... get to do pretty much whatever they want, including saying, look, I'm sorry, you've got diabetes, you had cancer, your child has asthma...
+740	Because what I have proposed...
+741	And those three have now lined up because of our weak foreign policy.
+742	How do you do that?
+743	She adopted him from Ethiopia when he was a toddler.
+744	... would not add a penny to the debt, and your plans would add $5 trillion to the debt.
+745	These women -- the woman on the plane, the -- I think they want either fame or her campaign did it.
+746	You know, back in 1987, he took out a $100,000 ad in the New York Times, during the time when President Reagan was president, and basically said exactly what he just said now, that we were the laughingstock of the world.
+747	I hope by the time I am president that we will have pushed ISIS out of Iraq.
+748	I cannot believe I'm saying that about myself, but I guess I have been a politician.
+749	We'll keep guessing at what it might be that he's hiding.
+750	This is just another lie.
+751	So if repeals it, our Medicare problem gets worse.
+752	We're a country of laws.
+753	But here's what I don't want people to forget when we're talking about reining in the costs, which has to be the highest priority of the next president, when the Affordable Care Act passed, it wasn't just that 20 million got insurance who didn't have it before.
+754	They're interested in keeping Assad in power.
+755	Donald supported the invasion of Iraq.
+756	And Sean Hannity said -- and he called me the other day -- and I spoke to him about it -- he said you were totally against the war, because he was for the war.
+757	And I think I did a great job and a great service not only for the country, but even for the president, in getting him to produce his birth certificate.
+758	You would have a disaster on trade, and you will have a disaster with your open borders.
+759	They'll respect the Second Amendment and what it stands for, what it represents.

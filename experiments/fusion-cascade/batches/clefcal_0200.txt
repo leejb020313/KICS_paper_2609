@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	I've done a lot of them, and I'll continue to do them as president.
+201	She has been outsmarted and outplayed worse than anybody I've ever seen in any government whatsoever.
+202	The goals ought to be an education system that leaves no child behind, Medicare for our seniors, a Social Security system that's safe and secure, foreign policy that's in our nation's interest, and a strong military, and then bring people together to achieve those goals.
+203	You tried it last time you ran.
+204	He has not indicated his support of an attempt to provide fair employment practices around the country, so that everyone can get a job regardless of their race or color.
+205	What were her written instructions?
+206	Energy is going to be key in dealing with Russia.
+207	That's more than it's had a lot of the time in the last years.
+208	Margaret, may I go back and just say to the vice president that I didn't raid the pension fund of Massachusetts you are dead wrong, George, we didn't do that.
+209	And people who are going through them know that there's a job waiting for them if they complete it.
+210	One of the things we've done is we've taken the -- we're beginning to transform our military.
+211	We have to work more closely with our allies.
+212	I want to keep their taxes down on small business.
+213	The individual who wants to start a business or expand his business as a black businessman is able to borrow, either directly or with guaranteed loans.
+214	He's a dear and beloved friend to all of us.
+215	The individual worker in the plants throughout the United States should not be a small cog in a big machine.
+216	We welcome legal immigrants into this country.
+217	We have 35 million people without any insurance at all -- and I see them all the time.
+218	They're much better protected today than they were when I was the governor of Texas.
+219	The average family is paying an additional $900 a year in higher premiums because of the uninsured.
+220	And it's gotten worse under President Bush over the course of the last years.
+221	It's not an opinion; it's a fact.
+222	Thank you, Jim, and Mr. President.
+223	And if he should ever become uh - the president of the United States, with his vast experience as member the House and a member of the Senate, as well as a vice president, I think he would do an outstanding job as president of the United States.
+224	Those investments are what's going to help to make sure that we continue to lead this world economy, not just next year, but 10 years from now, 50 years from now, 100 years from now.
+225	And Governor Romney's says he's got a five-point plan?
+226	We've allocated $7 billion over the next months for reconstruction efforts.
+227	And I've been a careful steward of your tax dollars.
+228	We're using the military more now in terms of interdiction.
+229	And now with this risky $550 billion tax scheme of Senator Dole's, even his own friends, his campaign co-chair, Senator D'Amato, says that they can't possibly pay for it without cutting Medicare more and cutting Social Security as well, according to him.
+230	Not until again in 1996 -- I don't want anybody to smoke.
+231	So let me just tell you very quickly, we're entitled because of the laws that people like her passed to take massive amounts of depreciation on other charges, and we do it.
+232	And it wasn't me that let the polluters actually come into the halls of Congress, into the rooms, and rewrite the environmental laws.
+233	That was, of course, out-of-bounds by the Democrats.
+234	Seven out of eight years, the budget commitments for defense went down, 37% in all.
+235	We have an architect in the audience who designed one of your clubhouses at one of your golf courses.
+236	We have - may have made more shots but the size of their rocket thrust and all the rest - you yourself said to Khrushchev, "You may be ahead of us in rocket thrust but we're ahead of you in color television" in your famous discussion in the kitchen.
+237	You pay $500 for a $5 hammer, you're not buying strength.
+238	People will look it up.
+239	Apparently you can't pass any test under his vision of the world.

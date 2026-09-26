@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	They don't want you to help them anymore.
+401	And we're going to work hard to make sure that it is, because we are going to go where the money is.
+402	I wrote about that in my book...
+403	We have enough worries over there without having to worry about that.
+404	But I don't want to have, with all the problems this country has and all of the problems that you see going on, hundreds of thousands of people coming in from Syria when we know nothing about them.
+405	So we have taken the home page of my website, HillaryClinton.com, and we've turned it into a fact-checker.
+406	Going to be more deaths that they thought.
+407	Very unfair that somebody runs across the border, becomes a citizen, under her plan, you have open borders.
+408	Because I settled that lawsuit with no admission of guilt, but that was a lawsuit brought against many real estate firms, and it's just one of those things.
+409	Hillary Clinton wants to allow hundreds of thousands -- excuse me.
+410	And I will tell you that I'm going to make our country safe.
+411	We have a situation where we have our inner cities, African- Americans, Hispanics are living in he'll because it's so dangerous.
+412	It was just take a look at the person that she built up to be this wonderful Girl Scout who was no Girl Scout.
+413	This Janet Yellen of the Fed.
+414	They'll pay off our tremendous budget deficits, which are tremendous.
+415	He never apologizes or says he's sorry for anything.
+416	And you will see the dozens of sources which verify that he was for the invasion of Iraq.
+417	This conspiracy theory, which he's been spewing out for quite some time.
+418	And we don't have the money, because it's been squandered on so many of your ideas.
+419	You know, with prior Republican nominees for president, I disagreed with them on politics, policies, principles, but I never questioned their fitness to serve.
+420	Our airports are like from a third world country.
+421	It has to be helped, has to be fixed.
+422	It's also important I intend to defeat ISIS, to do so in a coalition with majority Muslim nations.
+423	Nothing will ever top NAFTA.
+424	There's a lot that we should be proud of and we should be supporting and lifting up.
+425	And certainly, I'm not proud of it.
+426	You are going to drive business out.
+427	Now, to solve a problem, you have to be able to state what the problem is or at least say the name.
+428	And you have to understand, I'm a businessperson.
+429	I mean, I sat in my apartment today on a very beautiful hotel down the street known as Trump...
+430	They don't want ISIS, but they have other things, because we're backing -- we're backing rebels.
+431	We gave them $1.7 billion.
+432	Well, one thing I'd do is get rid of carried interest.
+433	... advocated more countries getting them, Japan, Korea, even Saudi Arabia.
+434	I think we need comprehensive background checks, need to close the online loophole, close the gun show loophole.
+435	There was absolutely no evidence for it, but he persisted, he persisted year after year, because some of his supporters, people that he was trying to bring into his fold, apparently believed it or wanted to believe it.
+436	Now, here's what that means.
+437	... which I was not responsible for, I concluded it wasn't.
+438	But we've got to get costs down.
+439	So sad when she talks about violence at my rallies, and she caused the violence.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	They must not develop nuclear capability.
+801	And with regards to health care, you had remarkable details with regards to my pre-existing condition plan.
+802	Number two, trade -- I'll crack down on China, President Bush didn't.
+803	Spain -- Spain spends 42 percent of their total economy on government.
+804	You know, there are some things where Governor Romney is different from George Bush.
+805	When he came home and he wanted to become a nurse, he had to start from scratch.
+806	They also have the Haqqani Network and the Taliban existent within their country.
+807	We -- as president, I will sit on day one -- actually, the day after I get elected -- I'll sit down with leaders -- the Democratic leaders, as well as Republican leaders, and continue -- as we did in my state -- we met every Monday for a couple hours, talked about the issues and the challenges in the -- in the -- in our state in that case.
+808	And we face -- this deficit could crush the future generations.
+809	We're also going to have to have a farm more effective and comprehensive strategy to help move the world away from terror and Islamic extremism.
+810	But what I've also said is we can't just produce traditional source of energy.
+811	But that was 10 years before you took office.
+812	That doesn't get the job done.
+813	Yeah, I'm not in favor of new pieces of legislation on -- on guns and taking guns away or making certain guns illegal.
+814	Now, let me mention one other thing, and that is self-deportation says let people make their own choice.
+815	Because I'm offsetting some of the reductions with holding down some of the deductions.
+816	And let me tell you exactly what Obamacare did.
+817	That was precisely what I recommended and ultimately what happened.
+818	That is not good for America's position in the world, and the world notices.
+819	And that's exactly the kind of top-down economics that is not going to work if we want a strong middle class and an economy that's striving for everybody.
+820	I think that grows the economy.
+821	George Bush never suggested that we eliminate funding for Planned Parenthood, so there are differences between Governor Romney and George Bush, but they're not on economic policy.
+822	But on Medicare, for current retirees, he's cutting $716 billion from the program.
+823	We've had 43 straight months with unemployment above 8 percent.
+824	Now, I'm concerned that the path that we're on has just been unsuccessful.
+825	And then what you've got is folks like my grandmother at the mercy of the private insurance system precisely at the time when they are most in need of decent health care.
+826	Doing everything we can to control our own energy.
+827	And that's because we've become weaker in each of those four...
+828	When Governor Romney was asked whether teachers, hiring more teachers was important to growing our economy, Governor Romney said that doesn't grow our economy.
+829	And so one of the things that we've been doing is, is, for example, organizing entrepreneurship conferences with these Egyptians to give them a sense of how they can start rebuilding their economy in a way that's noncorrupt, that's transparent.
+830	The place where we've seen manufacturing go has been China.
+831	I was able also to get our schools ranked number one in the nation, so 100 percent of our kids would have a bright opportunity for a future.
+832	And -- and that is part of what's at stake in this election.
+833	And, Candy, we haven't had a chance to talk about education much, but I think it is very important to understand that the reforms we've put in place, working with 46 governors around the country, are seeing schools that are some of the ones that are the toughest for kids starting to succeed.
+834	Now, Governor Romney has ruled out revenue.
+835	Governor Romney, you keep on trying to, you know airbrush history here.
+836	We're not going to allow Iran to perpetually engage in negotiations that lead nowhere.
+837	The private market and individual responsibility always work best.
+838	Trade grows about 12 percent year.
+839	In the 2000 debates, there was no mention of terrorism, for instance.

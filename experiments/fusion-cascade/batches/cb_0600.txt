@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	And that's against -- my lawyers, they say, "Don't do it."
+601	Saudi Arabia, nothing but money.
+602	Nine million people lost their jobs.
+603	She's raising the money from the people she wants to control.
+604	But he also went after a disabled reporter, mocked and mimicked him on national television.
+605	I have a feeling how they came.
+606	You look at what China is doing to our country in terms of making our product.
+607	You've proposed an approach that has a...
+608	I can't take anything off the table.
+609	We will have created a tremendous economic machine once again.
+610	Now, maybe because he has praised Putin, maybe because he says he agrees with a lot of what Putin wants to do, maybe because he wants to do business in Moscow, I don't know the reasons.
+611	I'm lowering taxes actually, because I think it's so important for corporations, because we have corporations leaving -- massive corporations and little ones, little ones can't form.
+612	He said nice things about me.
+613	She talks in favor of the rebels.
+614	And those are the people that I will appoint.
+615	Well, I was upset because, unfortunately, dozens of toddlers injure themselves, even kill people with guns, because, unfortunately, not everyone who has loaded guns in their homes takes appropriate precautions.
+616	Because the fact is, almost everything she's done in foreign policy has been a mistake and it's been a disaster.
+617	We have a depleted military.
+618	Donald has consistently insulted Muslims abroad, Muslims at home, when we need to be cooperating with Muslim nations and with the American Muslim community.
+619	You have provisions in the tax code that, frankly, we could change.
+620	Those people -- I don't know those people.
+621	We have the greatest businesspeople in the world.
+622	Those words, I've been hearing them for many years.
+623	And we're bringing GDP from, really, 1 percent, which is what it is now, and if she got in, it will be less than zero.
+624	There's other matters that I think are sensible that are the kind of reforms that would make a difference that are not in any way conflicting with the Second Amendment.
+625	They write me, and one woman wrote me about her son, Felix.
+626	We're going to speed up the process, big league, because it's very inefficient.
+627	You know, I started off as a young lawyer working against discrimination against African-American children in schools and in the criminal justice system.
+628	Well, I actually agree with that.
+629	You were after him, you were trying to -- you even sent out or your campaign sent out pictures of him in a certain garb, very famous pictures.
+630	We don't want to engage in a different kind of warfare.
+631	And I have been given great credit for what I did.
+632	I want a Supreme Court that understands because you're wealthy and you can give more money to something doesn't mean you have any more rights or should have any more rights than anybody else.
+633	Well, I'm talking about taking guns away from gangs and people that use them.
+634	By contrast, Donald's plan has been analyzed to conclude it might lose 3.5 million jobs.
+635	I'll give you an example.
+636	And we're going lower, in my opinion.
+637	We're exhausted in terms of nuclear.
+638	So this is who Donald Trump is.
+639	You know, children listen to what is being said.

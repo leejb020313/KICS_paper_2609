@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1920	So that's one of the things that I think makes a big difference between us.
+1921	American airplanes are helping today on humanitarian relief for Sarajevo.
+1922	When he took office, 32 million people were on food stamps.
+1923	It says if youÃ¢â‚¬â„¢ve got a complaint with your insurance company, you can take your complaint to an objective body.
+1924	We'll continue to try to get things that we didn't get in a program that has already brought the rate of spending of government down from 17 percent to 6.1 percent, a program of returning authority and autonomy to the local and State governments that has been unjustly seized by the Federal Government.
+1925	This is a serious issue, and I think we ought to understand completely if we disagree, and if so, where.
+1926	Can I comment on that?
+1927	We have to protect our inner cities, because African-American communities are being decimated by crime, decimated.
+1928	The same country that's helping us try to stop the flow of drugs into our country that's killing young Americans.
+1929	And I wish Governor Bush would join me this evening in endorsing the McCain-Feingold Campaign Finance Reform Bill.
+1930	But I suggest that we understand that those are going to be additional costs on senior citizens across this country.
+1931	And the reason he didn't is, he said -- he wrote in his book -- because there was no viable exit strategy.
+1932	And he will not advise me in the White House.
+1933	And as president, I am committed to changing that.
+1934	the air pollution standard laws that were passed in California were passed over the objections of Governor Reagan, and this is a very well-known fact.
+1935	That's why we opposed the government take over health care plan that President Clinton tried and tried and tried to get through Congress.
+1936	Reduce the capital gains rate.
+1937	So I don't want you to read my lips and I sure don't want you to read his.
+1938	As far as our other issues that he brought up are concerned, I know the veterans.
+1939	We settled the suit with zero -- with no admission of guilt.
+1940	I like those ratings systems.
+1941	Now, she can say that her husband did well, but, boy, did they suffer as NAFTA kicked in, because it didn't really kick in very much, but it kicked in after they left.
+1942	The point that is always left out is the fact that we expressed regrets to Castro this winter; that we expressed regrets - the Eisenhower Administration expressed regrets - for a flight over Southern Russia in 1958.
+1943	We're giving them lots of money, lots of everything.
+1944	And that's an image of strength -- except that if he had had his way when the Nimitz was being planned, he would have been deep in the water out there because there wouldn't have been any Nimitz to stand on -- he was against it.
+1945	That's math that doesn't add up.
+1946	Secondly, there have been statements made that uh - the Democratic platform would cost a good deal of money and that I am in favor of unbalancing the budget.
+1947	94% comes from the local level.
+1948	We held to account a terrorist regime in Saddam Hussein.
+1949	Hundreds of thousands of National Guard and Reserve members have health care because of work that I did, and children have safer medicines because I was able to pass a law that required the dosing to be more carefully done.
+1950	We've got to provide moral support to the Poles and Estonia and Latvia and all of the nations that were former Soviet satellites.
+1951	He voted to increase taxes 98 times and to bust the budget 277 times.
+1952	And that was, we had adequate warning that there was a threat to our embassy, and we could have done what other embassies did - either strengthen our security there, or remove our personnel before the kidnap and the takeover took place.
+1953	The State Department has said that.
+1954	That story reported several times that I would lower taxes for low and middle-income families and uh - that correction was delivered to the White House and I am sure that the president knows about this uh - correction, but he still insists uh - on repeating an erroneous statement.
+1955	The t- man who grows tomatoes - it costs less for those tomatoes than it does for the label on the can.
+1956	We have low interest rates today.
+1957	And actually -- well, that was very interesting.
+1958	The most heavily directed, decorated solder in uniform when he retired.
+1959	Therein is the best answer to her.

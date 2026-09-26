@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1960	I'm not going to go around the country saying he didn't tell the truth, when he looked at the same intelligence I did.
+1961	Our dollar's at an all time low against some foreign currencies.
+1962	Well, two leading national news networks have both said the president's characterization of my health-care plan is incorrect.
+1963	But the important thing is, if we suffer defeat in Iraq, which General Petraeus predicts we will, if we adopted Senator Obama's set date for withdrawal, then that will have a calamitous effect in Afghanistan and American national security interests in the region.
+1964	And my opponent has got a plan of retreat and defeat in Iraq.
+1965	And that fact is just not right.
+1966	And hopefully in the next segment you could lay that to rest.
+1967	And that's why he wants to veto it, just like he vetoed an earlier bill this year.
+1968	We have a duty to protect our children and grandchildren.
+1969	Next year they're going to go up over 100 percent.
+1970	Now, just back on this -- on this tax, you know, again, it's back to our first question here about rhetoric and record.
+1971	I want to cut that business tax.
+1972	I supported that route for some time and again I think it gets back to experience.
+1973	Because it's the cornerstone of reform in the State of Texas.
+1974	There was absolutely no evidence for it, but he persisted, he persisted year after year, because some of his supporters, people that he was trying to bring into his fold, apparently believed it or wanted to believe it.
+1975	It's not about President Clinton.
+1976	We can get this economy going again.
+1977	I'm looking at our economic plan because I'm concerned about the future for young people.
+1978	Were ready to go to work at the state and local level, all of us.
+1979	After he left the senate, we abandoned that.
+1980	Governor Clinton has to operate under a balanced budget amendment -- he has to do it, that is the law.
+1981	But, also, I have the ability, and the knowledge, and the background to make the right judgments, to keep this country safe and secure.
+1982	Wasn't this the George Bush that supported Mr. Meese?
+1983	Because she takes a tremendous amount of money.
+1984	I've been a member of the Senate Foreign Relations Committee; I run for the presidency with full knowledge that his great responsibility, really, given to him by the Constitution and by the force of events, is in the field of foreign affairs.
+1985	Then the President sent a mission, composed of Admiral Radford and Mr. Robertson, to persuade Chiang Kai-shek in the spring of fifty-five to withdraw from the two islands, because they were exposed.
+1986	We saved an auto industry that was on the brink of collapse.
+1987	The president said he'd cut the deficit in half.
+1988	And a lot of it has to do with the fact that our taxes are so high, just about the highest in the world.
+1989	They are a new weapons system that has a great potential, both conventional and nuclear armed.
+1990	We need a $2,000 credit, rebate for people, working people that don't have insurance, they can get in the marketplace and start purchasing insurance.
+1991	I'll have millions of people at my shoulder, shoulder to shoulder with me, and we will see it done work speed -- because it's wrong.
+1992	My opponent at one time said, "Well, get me elected, I'll have them out of there in six months."
+1993	That's my big difference with him on the draft.
+1994	So, once again, go to HillaryClinton.com.
+1995	Keep in mind in 1960, when our schools were the envy of the world, we were spending $16 billion on them; now we spend more than any other nation in the world -- 199 billion a year -- and rank at the bottom of the industrialized world in terms of education achievement.
+1996	The safety net is there, and we're taking care of more people than has ever been taken care of before by any administration in this country.
+1997	I think that, obviously, she's a capable politician who has, I think, excited the -- a base in the Republican Party.
+1998	We have the highest rating from the watchdogs that follow foundations.
+1999	The single greatest problem the world has is nuclear armament, nuclear weapons, not global warming, like you think and your -- your president thinks.

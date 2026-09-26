@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1440	For example, this Congress, very shortly, will spend a billion dollars a year for its housekeeping, its salaries, its expenses and the like.
+1441	I know how these people think.
+1442	Lock your wallet because he's coming right after you just like Jimmy Carter did and just like you're going to get -- you're going to end up with interest rates at 21%, and you're going to have inflation going through the roof.
+1443	It's three times bigger than what President Clinton proposed.
+1444	First of all, Russia I indicated is a geopolitical foe.
+1445	We've shipped millions of jobs overseas and we have a strange situation because we have a process in Washington where after you've served for a while you cash in, become a foreign lobbyist, make $30,000 a month, then take a leave, work on presidential campaigns, make sure you've got good contacts and then go back out.
+1446	I met a young woman in -- in Philadelphia who's coming out of -- out of college, can't find work.
+1447	Two years ago, I warned that, because of the subprime lending mess, because of the lax regulation, that we were potentially going to have a problem and tried to stop some of the abuses in mortgages that were taking place at the time.
+1448	...I would liquidate the industry.
+1449	There's been millions and millions of dollars of negative advertising spent distorting my views.
+1450	And I think, as a part of that process, what I am trying to say will come across, and that is that we must lead, we must command, we must direct, and a President must see it like it is.
+1451	You know, some parents are worried about those filters, that you will have to ask your kids how to put them on there.
+1452	And by the way, you skipped Israel, our closest friend in the region, but you went to the other nations.
+1453	Small businesses across America will have to cut jobs and will have their taxes increase and won't be able to hire because of Senator Obama's tax policies.
+1454	But I want to answer as specifically as I can the question that you have just put to me.
+1455	I believe that -- and when I became Governor of California, I started this, and I continue it in this office -- that any issue that comes before me, I have instructed Cabinet members and staff they are not to bring up any of the political ramifications that might surround the issue.
+1456	The connection that's been made again between the deficit and the interest rates -- there is no connection between them.
+1457	Now he is trying to not release the votes and then go straight to a so-called runoff election without even announcing the results of the first vote.
+1458	And we're hoping that within the year we'll be able to push ISIS out of Iraq and then, you know, really squeeze them in Syria.
+1459	And then we noticed that there was more than one with that same serial number.
+1460	We've just seen those two tragic examples in both Tulsa and Charlotte.
+1461	They're seeing their premiums, their co-pays go up.
+1462	This is the kind of leadership that we've had in this administration on the most deadly issue of our times.
+1463	We announce we're going after Mosul.
+1464	They were at 21.5% under Jimmy Carter, and inflation was 15.
+1465	I put my wallet on the table for you and your children.
+1466	But there, again, we found people that there under the previous administration, families that had no limit to income were still eligible for low-interest college loans.
+1467	And some of the cuts, just to give you an example, we spend $15 billion a year on subsidies to insurance companies.
+1468	... of what we heard Donald say has been about nuclear weapons.
+1469	It's because I care about education for all of our kids.
+1470	You had loan officers were -- that were giving loans and mortgages that really shouldn't have been given, because the folks didn't qualify.
+1471	But tell her it's not all that gloomy; we're the US, we faced tough problems before.
+1472	I say that the American people don't want to go back to those policies.
+1473	The reason why Prime Minister Allawi said they're coming across the border is because he recognizes that this is a central part of the war on terror.
+1474	Maybe we need to do a better job in mental clinics to help them.
+1475	We're the richest country on the face of the planet, the only industrialized nation in the world not to do it.
+1476	I remember working with Senator Ribicoff from Connecticut on the Hospice program.
+1477	The Governor talks about limits, what we can't do, opposes these two modernization systems, talks now about well, we'll develop some new kind of a missile.
+1478	And the shipment of Spruance-class destroyers to Iran are much more highly sophisticated than the Spruance-class destroyers that are present being delivered to our own Navy.
+1479	The way to make sure that we succeed is to send consistent, sound messages to the Iraqi people that when we give our word, we will keep our word, that we stand with you, that we believe you want to be free.

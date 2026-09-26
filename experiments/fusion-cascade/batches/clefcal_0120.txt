@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	And so it's important to understand that the -- I think the American people are hungry for the kind of leadership that is going to tackle these problems not just in government, but outside of government.
+121	Do you think that our political institutions are working the way they should when literally only half of our citizens vote?
+122	And that's where we're going right now unless we finally get off this spending and borrowing binge.
+123	We submitted the biggest drug budget ever.
+124	But the more immediate answer is to do what this lady was suggesting we do, and that is to get this deficit down and get on without adding to the woes, and then restructure.
+125	You take these big companies, these trade deals are far bigger than these companies, and yet we don't use our great leaders, many of whom back me and many of whom back Hillary, I must say.
+126	You just heard the president say that young people ought to be able to take money out of Social Security and put it in their own accounts.
+127	I consider myself in the mainstream even of the bipartisan list of Presidents who served before me.
+128	You haven't heard me mention this before, but we're getting close now and I think it's about time I start putting things in perspective.
+129	I just think trying to be popular, kind of, in the global sense, if it's not in our best interest makes no sense.
+130	When Governor Romney was asked whether teachers, hiring more teachers was important to growing our economy, Governor Romney said that doesn't grow our economy.
+131	I personally don't think that's the right kind of future for America, and I think we ought to take a different tack.
+132	I think it's the Republican Party and my concern to bring it down.
+133	50 million Americans get no tax relief under his plan.
+134	Now, we need a tight budget, but there's no question that this administration has singled out things that affect the most vulnerable in American life, and they're hurting.
+135	And now we're fighting them now.
+136	It's being fought primarily in Asia, in Africa, and in Latin America.
+137	I trust women to make the decisions that affect their lives, their destinies and their bodies.
+138	The American people want this environment protected.
+139	We need to insist that Arafat send out instructions to halt some of the provocative acts of violence that have been going on.
+140	That's 16 million jobs in America.
+141	But when the tables get turned, I ought to do my share.
+142	And I'm paying for all that for those guys.
+143	And he's doing a very effective job of that, in his way.
+144	As well, help is on the way, but it's certainly hard to tell it when he voted against the $87-billion supplemental to provide equipment for our troops, and then said he actually did vote for it before he voted against it.
+145	And he drew up this manual.
+146	I happen to think she's a key person.
+147	But I feel strongly that marriage should be between a man and a woman.
+148	We have endorsements from, I think, almost every police group, very -- I mean, a large percentage of them in the United States.
+149	And the reason is was so important -- and this is a testament to how we've restored American credibility and strength around the world -- is we had to make sure that all the countries participated, even countries like Russia and China.
+150	We have twenty different agencies in the federal government responsible for the production, the regulation, the uh - information about energy, the conservation of energy, spread all over government.
+151	Number three, we've got to deal with Pakistan, because Al Qaida and the Taliban have safe havens in Pakistan, across the border in the northwest regions, and although, you know, under George Bush, with the support of Senator McCain, we've been giving them $10 billion over the last seven years, they have not done what needs to be done to get rid of those safe havens.
+152	In the last debate, my opponent said those lawsuits only caused the cost to go up by 1 percent.
+153	We're going to have to prioritize, just like a family has to prioritize.
+154	I've seen the family values of all these people in America who are out there killing themselves working harder for less in a country that's had the worst economic years in 50 years and the first decline in industrial production ever.
+155	That tax bill does not entirely meet the criteria that I established.
+156	Recently on a television program, he said it exceed our wildest expectations.
+157	But I also want to be sure that we don't leave people behind.
+158	I know Donald's very praiseworthy of Vladimir Putin, but Putin is playing a really...
+159	I wouldn't want to be a liberal either, Mr. President, but you're stuck with it because that's your record, that's your record in Arkansas: The biggest tax increase in history.

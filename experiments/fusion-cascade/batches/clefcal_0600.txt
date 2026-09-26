@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	Since we debated 2 weeks ago, the United States and the Soviet Union have built a hundred more warheads, enough to kill millions of Americans and millions of Soviet citizens.
+601	I prepared to be president.
+602	We have seen on Capitol Hill, in the Congress, uh - a great many uh - allegations of wrong-doing, of uh - alleged immorality, uh - those are very disturbing to the American people.
+603	And I never promoted Fannie Mae.
+604	I'm not running for the Presidency because I believe that I can solve the problems we've discussed tonight.
+605	My friends, some of this $700 billion ends up in the hands of terrorist organizations.
+606	I mean, her and Obama, whether you like it or not, the way they got out of Iraq, the vacuum they've left, that's why ISIS formed in the first place.
+607	John, nobody is denying that $18 billion is important.
+608	In San Diego where we had some defense cutbacks, we funded a project for the University of California San Diego to use airplane composite materials to build lighter, stronger bridges, a little project in a program that Senator Dole opposed.
+609	A good family is a place where love and discipline and good values are transmuted (sic) from the elders to the children, a place where people turn for refuge, and where they know they're the most important people in the world.
+610	We can be once again.
+611	But just like she can't bring back jobs, she can't produce.
+612	He says he's not going to raise taxes, though he has broken that pledge repeatedly.
+613	And the reason is crack babies being born, babies in the hospital 42 days.
+614	Right now, other nations are taking our jobs and they're taking our wealth.
+615	There was a big story I think in U.S.A. Today of the millions of people who have now registered because of it.
+616	When Mr. Nixon made his famous uh speech on Operation Independence we were importing about 35 percent of our oil.
+617	It had several tax increases phased in over a period of time -- there are two more yet to come between now and 1989.
+618	Will a woman's right to choose be protected?
+619	And most of that tax cut went to the wealthiest people in the country.
+620	Bob, anybody can play with these votes.
+621	If you're from Washington, you want to pick and choose winners.
+622	He also wants to continue the Bush tax cuts for the wealthiest Americans.
+623	So this is a show me state.
+624	If you make $200,000 a year or less, your taxes will go down.
+625	Since I became president, 43, 44 countries have gone democratic, no longer totalitarian, no longer living under dictatorship or communist rule.
+626	And of course, a military action is the last resort.
+627	I don't think American troops should be holding territory, which is what they would have to do as an occupying force.
+628	Thirdly, Arthur Gardner, a Republican Ambassador, Earl Smith, a Republican Ambassador, in succession - both have indicated in the past six weeks that they reported to Washington that Castro was a Marxist, that Raul Castro was a Communist, and that they got no effective results.
+629	I just described the coalition.
+630	Now, as far as my position then is concerned, it is exactly opposite to the Senator's.
+631	By 1980 that same person was $500 below the poverty line.
+632	He is right that I'm not in favor of energy taxes.
+633	Now, just a comment on Senator Kennedy's last answer.
+634	And as I said: You can run but you can't hide the reality.
+635	That's what the election's about.
+636	We're number one in autos again, record numbers of new small businesses.
+637	I'm not satisfied when the United States had last year the lowest rate of economic growth of any major industrialized society in the world.
+638	Over the last 5 years our income has grown more rapidly than the national average.
+639	And we won the nomination by going out into the streets - barbershops, beauty parlors, restaurants, stores, in factory shift lines also in farmers' markets and livestock sale barns - and we talked a lot and we listened a lot and we learned from the American people.

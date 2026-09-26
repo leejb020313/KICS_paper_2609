@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1280	We can do that, we as Americans, because we're the best innovators, we're the best producers, and 95 percent of the people who are our market live outside of the United States of America.
+1281	The future will be the greatest time in this country's history if we can beat this division that is bedeviling the whole rest of the world.
+1282	Of course we see in Syria, 30,000 civilians having been killed by the military there.
+1283	There are more deductions in the tax code for shutting plants down and moving overseas than there are for modernizing plant and equipment here.
+1284	With regard to the great progress that has been made with this Government spending, the rate of black unemployment in Detroit, Michigan, is 56%.
+1285	And in return, get one-fifth of the benefits, because most of the tax reductions go to the people at the bottom end of the economic ladder.
+1286	They had thirty of them; we had seven of them.
+1287	But I'm not going to make any excuses.
+1288	I said I had no recollection whatsoever of talking with any of the White House legislative liaison people.
+1289	Well, I think the national debt affects everybody.
+1290	Well, there are a range of things that are probably going to have to be delayed.
+1291	I fought for, and the Congress finally went along with a general revenue sharing program, whereby cities and uh - states, uh - the cities two-thirds and the states one-third, get over six billion dollars a year in cash through which they can uh - provide many, many services, whatever they really want.
+1292	If we don't repeal and replace -- now, it's probably going to die of its own weight.
+1293	It's an honor to be here with you, and I appreciate the chance to be with the president.
+1294	Let me just give you some examples.
+1295	I'll restore that $716 billion to Medicare.
+1296	I've met with a group of very distinguished, experienced police chiefs a few weeks ago.
+1297	Tell you what I hear.
+1298	Now, I want to build on that.
+1299	The whole problem came up in 1984.
+1300	President Obama said you keep your doctor, you keep your plan.
+1301	You have a lot of it.
+1302	When we terminated 400,000 desperate, hopeless, defenseless Americans who were on disability -- confused and unable to defend themselves, and just laid them out on the street, as we did for 4 years, I don't think that's what America is all about.
+1303	I can tell you, it's rife.
+1304	So sad when she talks about violence at my rallies, and she caused the violence.
+1305	And so call off all those pickets out there that are trying to tear down seven different administrations.
+1306	I don't think it's a fair price to pay to destroy precious parts of America's environment.
+1307	He complains about secrecy and yet he is quoted as saying that in the attempt to find a solution in the Middle East that he would hold unpublicized meetings with the Soviet Union - I presume for the purpose of an - imposing a settlement on Israel and the Arab nations.
+1308	And yet think about where we are: Added 1.9 million new jobs over the past 13 months.
+1309	We ought to agree that somebody else should do it.
+1310	You know, last year up to this time, we've lost 700,000 jobs in America.
+1311	We've increased money for ammunition and weapons and pay and homeland security.
+1312	And 95 percent of working families, 95 percent of you out there, will get a tax cut.
+1313	We have preserved the safety net for the people with true need in this country, and it has been pure demagoguery that we have in some way shut off all the charitable programs or many of them for the people who have real need.
+1314	Now, I can only say this.
+1315	And -- and that is part of what's at stake in this election.
+1316	And I'm going to continue to push for a no-fly zone and safe havens within Syria not only to help protect the Syrians and prevent the constant outflow of refugees, but to, frankly, gain some leverage on both the Syrian government and the Russians so that perhaps we can have the kind of serious negotiation necessary to bring the conflict to an end and go forward on a political track.
+1317	But this president hasn't even held the kind of statesman-like summits that pull people together and get them to invest in those states.
+1318	What tools do we need to fight us?
+1319	And his answer was, "With a viable exit strategy and only with enough forces to get the job done."

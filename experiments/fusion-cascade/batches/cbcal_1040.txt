@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1040	And it's time for them to get serious on it.
+1041	We have not made the progress we need to make to put people back to work.
+1042	I will not let that happen.
+1043	Our military is second to none in the world.
+1044	Bob, let me -- let me respond.
+1045	That's the kind of leadership that we'll continue to show.
+1046	When it comes to corporate taxes, Governor Romney has said he wants to, in a revenue neutral way, close loopholes, deductions -- he hasn't identified which ones they are -- but that thereby bring down the corporate rate.
+1047	That's why I put out a five-point plan that gets America 12 million new jobs in four years and rising take-home pay.
+1048	We're four years closer to a nuclear Iran.
+1049	He also wants to continue the Bush tax cuts for the wealthiest Americans.
+1050	But you make a very good point, which is that the place you put your money just makes a pretty clear indication of where your heart is.
+1051	If -- if we're serious, we've got to take a balanced, responsible approach.
+1052	I'd like to understand who it was that did this, what the idea was behind it, why it led to the violence, thousands of guns going to Mexican drug lords.
+1053	That's in America's national interest and that will be the case so long as I'm president.
+1054	Yeah, in the Reagan recession where unemployment hit 10.8 percent, between that period -- the end of that recession and the equivalent of time to today, Ronald Reagan's recovery created twice as many jobs as this president's recovery.
+1055	As I said, we have made sure that millions of young people are able to get an education that they weren't able to get before.
+1056	We cut taxes 19 times.
+1057	I would tighten those sanctions further.
+1058	And that's why they were supportive of the approach that we took.
+1059	This seems to be a trend.
+1060	And so budgets reflect choices.
+1061	You're going to be paying for it.
+1062	So my approach is to say, how do we strengthen the system over the long term?
+1063	The president's path will mean continuing declining in take-home pay.
+1064	Boy, great question and important question, because you're absolutely right.
+1065	But four years ago, I told the American people and I told you I would cut taxes for middle class families.
+1066	But I also believe that when he said behind closed doors that 47 percent of the country considered themselves victims who refuse personal responsibility, think about who he was talking about.
+1067	This -- we have weakened our economy.
+1068	It's why Republicans said, do not do this, and the Republicans had -- had the plan.
+1069	And we are now reletting them so that we can actually make a profit.
+1070	This is a group that is now involved in 10 or 12 countries, and it presents an enormous threat to our friends, to the world, to America, long term, and we must have a comprehensive strategy to help reject this kind of extremism.
+1071	They look at America's commitments around the world and they see what's happening, and they say, well, OK. Is America going to be strong?
+1072	Number three, I'm going to get us to a balanced budget.
+1073	As a matter of fact, oil production is down 14 percent this year on federal land, and gas production was down 9 percent.
+1074	And -- and that is not a right strategy for us to move forward.
+1075	That, in my view, is making -- is making our future less certain and less secure.
+1076	And I just described -- I just described to you, Mr. President -- I just described to you precisely how I'd do it which is with a single number that people can put -- and they can put they're -- they're deductions and credits...
+1077	And those teachers can make a difference.
+1078	We've mobilized sanctions against that government.
+1079	Because they have the opportunity to reenter the community of nations, and we would welcome that.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	The disagreement I have with Governor Romney is that, during the course of this campaign, he's often talked as if we should take premature military action.
+841	Mr. President, all of the increase in natural gas and oil has happened on private land, not on government land.
+842	We have to be competitive if we're going to create more jobs here.
+843	Now, Governor Romney's proposal that he has been promoting for 18 months calls for a $5 trillion tax cut, on top of $2 trillion of additional spending for our military.
+844	I believe in self-reliance and individual initiative and risk takers being rewarded.
+845	Part of it is seeing if we can get automatic weapons that kill folks in amazing numbers out of the hands of criminals and the mentally ill.
+846	Folks on Social Security who've worked all their lives.
+847	When you've got thousands of people right now in Iowa, right now in Colorado, who are working, creating wind power with good-paying manufacturing jobs, and the Republican senator in that -- in Iowa is all for it, providing tax breaks (ph) to help this work and Governor Romney says I'm opposed.
+848	No, it can become out of date.
+849	So -- so let's state -- one of the magnificent things about this country is the whole idea that states are the laboratories of democracy.
+850	Now, they look at us and say, Is it a good idea to be with America?
+851	Health insurance premiums, up $2,500.
+852	And then that number disappears for high-income people.
+853	I want it to be streamlined.
+854	This was just a few weeks ago that you indicated that we should still have troops in Iraq.
+855	And these businesses, many of them have gone out of business, I think about half of them, of the ones have been invested in have gone out of business.
+856	It also allowed us to refocus on alliances and relationships that had been neglected for a decade.
+857	The budget that we are talking about is not reducing our military spending.
+858	We cut taxes for middle-class families by about $3,600.
+859	We have freed other nations from dictators.
+860	And there really are two very different paths that we began speaking about this evening, and over the course of this month we're going to have two more presidential debates and a vice presidential debate.
+861	They can't impose arbitrary lifetime limits.
+862	But I also believe that government has the capacity, the federal government has the capacity to help open up opportunity and create ladders of opportunity and to create frameworks where the American people can succeed.
+863	But Pakistan is important to the region, to the world and to us, because Pakistan has 100 nuclear warheads and they're rushing to build a lot more.
+864	But my strategy is broader than that.
+865	When it comes to going after Osama bin Laden, you said, well, any president would make that call.
+866	The answer was we got...
+867	I think it's important for us to develop new sources of energy here in America, that we change our tax code to make sure that we're helping small businesses and companies that are investing here in the United States, that we take some of the money that we're saving as we wind down two wars to rebuild America and that we reduce our deficit in a balanced way that allows us to make these critical investments.
+868	But over time, what they can do is regain credibility.
+869	We need to be talking about space.
+870	Any investments I have over the last eight years have been managed by a blind trust.
+871	And it turns out that the work involved in setting up these crippling sanctions is painstaking.
+872	With respect to something like coal, we made the largest investment in clean coal technology, to make sure that even as we're producing more coal, we're producing it cleaner and smarter.
+873	I think what grows the economy is when you get that tax credit that we put in place for your kids going to college.
+874	You'll have 4 million people who will lose Medicare Advantage.
+875	And what's happened over the last four years has been very, very hard for America's young people.
+876	So what I've said is we need to fix a broken immigration system and I've done everything that I can on my own and sought cooperation from Congress to make sure that we fix the system.
+877	Why don't I want to raise taxes on people?
+878	It's not driven by politics.
+879	I just don't know how the president could have come into office, facing 23 million people out of work, rising unemployment, an economic crisis at the -- at the kitchen table, and spend his energy and passion for two years fighting for Obamacare instead of fighting for jobs for the American people.

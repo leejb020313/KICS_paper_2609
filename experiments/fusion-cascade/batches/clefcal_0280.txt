@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	We just read on the front pages of America's papers that there are over 100,000 hours of tapes, unlistened to.
+281	But I've had my anxious moments in my life.
+282	And today, there are four to seven nuclear weapons in the hands of North Korea.
+283	Well, it starts with enforcing law.
+284	I agree with my opponent that we shouldn't be committing troops.
+285	It is being blocked by the Republican leadership in the Congress.
+286	Help us prioritize those who need to get the flu shot, the elderly and the young.
+287	And that's one of the reasons why my state has cut crime by more than any other industrial state in America.
+288	As a matter of fact, when Massachusetts did something quite extraordinary -- elected a Republican senator to stop Obamacare, you pushed it through anyway.
+289	That's something that I fought against as a senator and that I would have a trade prosecutor to make sure that we don't get taken advantage of by China on steel or anything else.
+290	There is no doubt about it.
+291	And there we would give statutory authority to the Committee on Government Contracts, which is an effective way of getting real progress made in this area, since about one out of every four jobs is held by and is allotted by people who have government contracts.
+292	Of the 3 of us, I have balanced a government budget 12 times, I have offered and passed campaign finance reform, offered, pushed for and passed in public referendum lobbyist restrictions, done the kinds of things you have to do to get legislators together not only to establish consensus but to challenge them to change.
+293	We've increased Pell Grants by a million students.
+294	We have no energy policy.
+295	When she was the head of their energy and natural resources board, she saw corruption, she resigned and said, "This can't go on."
+296	I don't have any experience in creating the worst public school system in the industrialized world, the most violent crime-ridden society in the industrialized world.
+297	Governor -- here -- here's -- here's one thing...
+298	If you don't get a two-thirds, then your resolution doesn't pass.
+299	He is for registration of guns.
+300	I mean, this guy, this is too much.
+301	Right now all the president is providing is humanitarian support.
+302	Now remember, Social Security revenue exceeds expenses up until 2015.
+303	That's after losing 5 million jobs.
+304	And to this day, not one of its decisions or rulings has ever been challenged.
+305	Employers would cover their employees, government would cover the unemployed.
+306	Well, I am encouraged that there is an effort led by the Iraqi army, supported by Kurdish forces, and also given the help and advice from the number of special forces and other Americans on the ground.
+307	There are many of the points that he has made that I would like to comment upon.
+308	It's all those businesses that employ one-quarter of the workers in America; these small businesses that are taxed as individuals.
+309	I'm glad to hear tonight that he does suggest that I have had some experience.
+310	So it's pretty clear who doesn't want a trade war.
+311	We will strengthen our intelligence-gathering services.
+312	The fact is that there was already a law on the books in Illinois that required providing lifesaving treatment, which is why not only myself but pro-choice Republicans and Democrats voted against it.
+313	And I just want to make one thing very clear.
+314	He cut if off, sort of arbitrarily.
+315	Obviously, we've poured billions of dollars into airport security.
+316	I cannot be more precise than that, because until we see what Mr. Khrushchev does and what he says uh - we cannot indicate what our plans will be.
+317	And I challenge you tonight to deny that the Administration has sent at least several missions to persuade Chiang Kai-shek's withdrawal from these islands.
+318	I think that we ought to make all schools gun free.
+319	What I want the voters to do is to make a decision.

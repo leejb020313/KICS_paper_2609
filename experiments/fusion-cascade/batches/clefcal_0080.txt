@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	Now, we have a big difference on this.
+81	We've got to start also holding people accountable, and we've got to reward people who succeed.
+82	And this particular bill, it allows patients to choose a doctor, their own doctor if they want to.
+83	I prefer to take the overall percentage record of the last twenty years of the Democrats and the eight years of the Republicans to show an overall period of growth.
+84	It's like having a blueprint for a house you never built.
+85	Early childhood education, which closes the achievement gap, so that every child is prepared for school, every dollar we invest in that, we end up getting huge benefits with improved reading scores, reduced dropout rates, reduced delinquency rates.
+86	What I'm referring to there is the mutual self-defense provisions that exist in the Inter-American treaty, the so-called Rio Pact, that permits the nations, our friends in that region, to combine to take steps -- diplomatic and otherwise -- to prevent Nicaragua, when she acts irresponsibly in asserting power in other parts outside of her border, to take those steps, whatever they might be, to stop it.
+87	We can be better if we face our future, rejoice in our strengths, face our problems, and by solving them, build a better society for our children.
+88	Well let me make one thing clear.
+89	Well, every time Donald is pushed on something which is obviously uncomfortable, like what these women are saying, he immediately goes to denying responsibility.
+90	In fact he is on Medicare.
+91	And thank you for agreeing to moderate this debate this evening.
+92	And we're going to make sure that nobody, no corporation, and no individual can get away without paying his fair share to support our country.
+93	That's -- that's a big topic.
+94	There's nothing -- the most efficient unit of government the world will ever know is a strong loving family unit.
+95	So we're making progress but until we get that one done, we're not going to solve the neighborhood crime problem.
+96	It's small business that creates the jobs in America, and over the last four years, small business people have decided that America may not be the place to open a new business because new business startups are down to a 30-year low.
+97	Before Senator Dole left the Senate, he and Mr. Gingrich also were recommending that we pass these tax cuts only insofar as we could pay for them.
+98	So we're distributing in our State of Texas for free.
+99	And I believe that instead of talking about Soviet progress, we can talk about American successes.
+100	Well, I think Governor Clinton is committed.
+101	Meanwhile, we started the -- also in '93 to look into whether cigarettes were addictive enough for the Federal Food and Drug Administration to ban the ability of cigarette companies to advertise, market and distribute their products to our kids.
+102	Trying to frighten people in the voting booth.
+103	South Korea faces a very delicate situation.
+104	I know what it means to see people who are unemployed.
+105	The NAFTA deal signed by her husband is one of the worst deals ever made of any kind, signed by anybody.
+106	We supported a a crime bill that had 60 death penalties including, including the death penalty for drug kingpins.
+107	It's not much fun sometimes.
+108	It was turned over to the agency head of the CIA in Nicaragua to be printed.
+109	And I recommended that to the Congress with a budget ceiling of three hundred and ninety-five billion dollars, and that would have permitted us to have a $25 billion tax reduction.
+110	Social Security is structurally sound.
+111	We've seen in the Nicaraguan example a policy that has actually hurt us, strengthened our opposition, and undermined the moral authority of our country in that region.
+112	He is -- listen, they went through a horrible situation in Beslan, where these terrorists gunned down young school kids.
+113	Number three, we'd open the doors to college education to high school graduates without regard to income.
+114	We had an 18 percent increase in housing starts.
+115	I sit on the Veterans Affairs Committee, and we've got -- I meet veterans all across the country who are trying to figure out, "How can I get disability payments?
+116	And I believe the answer to the agricultural economy is not to get the government further involved, but to do what I'm suggesting.
+117	The governor has declined to endorse that idea even though the Republican as well as Democratic leaders in Congress have endorsed it.
+118	One thing about insurance, that's a Washington term.
+119	I was over running records in west Texas, and I got a call from her, come home; went to the doctor; the doctor said, beautiful child, your child has a few weeks to live.

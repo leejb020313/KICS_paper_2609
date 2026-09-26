@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	You did not say that you would provide government help.
+681	I want to add more free trade agreements so we'll have more trade.
+682	And all these things have contributed to us lowering our oil imports to the lowest levels in 16 years.
+683	The answer is very straightforward.
+684	And we put a stop to it and as a consequence saved jobs throughout America.
+685	But once it exploded, I felt the same as the president did, which is these freedom voices and the streets of Egypt, where the people who were speaking of our principles and the President Mubarak had done things which were unimaginable and the idea of him crushing his people was not something that we could possibly support.
+686	That's why we doubled clean -- clean energy production like wind and solar and biofuels.
+687	In the last four years, you cut permits and licenses on federal land and federal waters in half.
+688	What we've said is to states, we'll give you more money if you initiate reforms.
+689	That happened before you came into office.
+690	And that one doesn't sound good and it's not affordable.
+691	Now Governor Romney had a very different response.
+692	Number two, by stealing our intellectual property; our designs, our patents, our technology.
+693	We want -- we want to make sure that we're seeing progress throughout the Middle East.
+694	I said that we'd go after al-Qaeda and bin Laden, we have.
+695	But we also believe in maintaining for individuals the right to pursue their dreams and not to have the government substitute itself for the rights of free individuals.
+696	And every fact checker and every reporter who's looked at it, Governor, has said this is not true.
+697	Governor Romney, here's what we did.
+698	You've raised them by $1 trillion under Obamacare.
+699	I'll call it the economy tax.
+700	Massachusetts, our schools are ranked number one of all 50 states.
+701	And she ended up living alone by choice.
+702	That's one of the unintended consequences of Dodd-Frank.
+703	And we would have lost a million jobs.
+704	And the president supports taking $716 billion out of that program.
+705	Well, Candy, actually, in my state, the pro-gun folks and the anti-gun folks came together and put together a piece of legislation.
+706	I'm going to make sure --
+707	The secretary of defense has said these would be even devastating.
+708	People grabbed my arms and said, "Please save my job."
+709	This is not research, Mr President, these are the government investing in companies.
+710	Number three, we're going to have to have training programs that work for our workers and schools that finally put the parents and the teachers and the kids first, and the teachers' unions going to have to go behind.
+711	So all federal funds, instead of going to the -- to the state or to the school district, I'd have go, if you will, follow the child and let the parent and the child decide where to send their -- their -- their student.
+712	And part of that is bringing in a pipeline of oil from Canada, taking advantage of the oil and coal we have here, drilling offshore in Alaska, drilling offshore in Virginia where the people want it.
+713	That's part of my health care plan.
+714	And as far as currency manipulation, the currency has actually gone up 11 percent since I've been president because we have pushed them hard.
+715	Those are the businesses that employ one-quarter of all the workers in America.
+716	If you wanted to make some adjustments to it, take it, go to Congress, fight for it.
+717	We've created five million jobs, and gone from 800 jobs a month being lost, and we are making progress.
+718	It's how we're going to grow this economy over the long term.
+719	And then the president began what I have called an apology tour, of going to various nations in the Middle East and criticizing America.

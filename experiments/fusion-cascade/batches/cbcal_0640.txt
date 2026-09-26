@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	We've gone from $10 trillion of national debt, to $16 trillion of national debt.
+641	But what's been happening over the last couple of years is, as we've watched this tumult in the Middle East, this rising tide of chaos occur, you see Al Qaida rushing in, you see other jihadist groups rushing in.
+642	Their currency has dropped 80 percent.
+643	The entire record is such that the unemployment has not been reduced in this country.
+644	I said that we would provide guarantees, and -- and that was what was able to allow these companies to go through bankruptcy, to come out of bankruptcy.
+645	That's not an energy strategy for the future.
+646	They're just barely enough to pay for my food and pay for an apartment.
+647	One thing I think Americans should be proud of, when Tunisians began to protest, this nation -- me, my administration -- stood with them earlier than just about any country.
+648	Former chief of the -- Joint Chiefs of Staff said that -- Admiral Mullen said that our debt is the biggest national security threat we face.
+649	I want to see peace.
+650	As a matter of fact, Latin America's economy is almost as big as the economy of China.
+651	So the work that we've done with respect to sanctions now offers Iran a choice.
+652	And I make that point because that's the kind of clarity of leadership, and those decisions are not always popular.
+653	But we had been digging our way out of policies that were misplaced and focused on the top doing very well and middle class folks not doing well.
+654	And when I went to Israel as a candidate, I didn't take donors.
+655	That's why I'd have regulation.
+656	Consider the distance between ourselves and -- and Israel, the president said that -- that he was going to put daylight between us and Israel.
+657	And I'm certainly not going to say to him, I'll give you more flexibility after the election.
+658	This was the president's plan.
+659	You know, one of the challenges over the last decade is we've done experiments in nation building in places like Iraq and Afghanistan and we've neglected, for example, developing our own economy, our own energy sectors, our own education system.
+660	That's why we doubled fuel efficiency standards on cars.
+661	My own view, by the way, is I've added to that.
+662	Cutting our education budget, that's not a smart choice.
+663	Four years ago you said in your first year you would file legislation.
+664	A recent study has shown the people in the middle-class will see $4,000.00 per year in higher taxes as a result of the spending and borrowing of this administration.
+665	... the damage in his -- in his own party.
+666	And -- and they're throughout many nations in the Middle East.
+667	When the -- when the president of Iraq -- excuse me, of Iran, Ahmadinejad, says that our debt makes us not a great country, that's a frightening thing.
+668	That's what took us from surplus to deficit.
+669	And we are now in a position where we have met many of the objectives that got us there in the first place.
+670	When you came to office 32 million people on food stamps.
+671	We have an opportunity to have real leadership.
+672	I will not cut our military budget.
+673	That's what I've been doing for the last four years.
+674	But let's go back to what Governor Romney indicated, that under his plan, he would be able to cover people with preexisting conditions.
+675	They'll have more than Great Britain sometime in the -- in the relatively near future.
+676	And number three, I will not under any circumstances raise taxes on middle-income families.
+677	But I'm not in favor of rounding up people and -- and -- and taking them out of this country.
+678	So if you're 60 or around 60 or older, you don't need to listen any further.
+679	So for instance, I would not give driver's licenses to those that have come here illegally as the president would.

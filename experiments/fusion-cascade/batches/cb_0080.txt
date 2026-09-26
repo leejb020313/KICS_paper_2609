@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	We have a very divided nation.
+81	I will go very quickly.
+82	But I was the one that got him to produce the birth certificate.
+83	You can't bring back jobs.
+84	But I want to -- on behalf of myself, and I think on behalf of a majority of the American people, say that, you know, our word is good.
+85	I was just endorsed by ICE.
+86	I think maybe there's a political reason why you can't say it, but I really don't believe -- in New York City, stop-and-frisk, we had 2,200 murders, and stop-and-frisk brought it down to 500 murders.
+87	She does not have a...
+88	I don't mind releasing -- I'm under a routine audit.
+89	The Trump International is way under budget and way ahead of schedule.
+90	All you have to do is take a look at her Senate run.
+91	So when I talk about how we're going to pay for education, how we're going to invest in infrastructure, how we're going to get the cost of prescription drugs down, and a lot of the other issues that people talk to me about all the time, I've made it very clear we are going where the money is.
+92	But she wanted to look good for the election.
+93	So we have announcements coming out of Washington and coming out of Iraq, we will be attacking Mosul in three weeks or four weeks.
+94	Now, with that being said, she talks tough against Russia.
+95	I want to enhance benefits for low-income workers and for women who have been disadvantaged by the current Social Security system.
+96	Well, I'm just quoting you when you were asked...
+97	Why aren't the NATO questioned -- why aren't they paying?
+98	Hillary Clinton wanted the wall.
+99	And that is what must be expected of anyone standing on a debate stage during a general election.
+100	A lot of my -- excuse me, Anderson -- a lot of my write- off was depreciation and other things that Hillary as a senator allowed.
+101	We're bringing our jobs back.
+102	If you look -- excuse me, Chris -- if you look at your voter rolls, you will see millions of people that are registered to vote -- millions, this isn't coming from me -- this is coming from Pew Report and other places -- millions of people that are registered to vote that shouldn't be registered to vote.
+103	We have a divided nation.
+104	Now, in all fairness to Secretary Clinton -- yes, is that OK?
+105	Well, first of all, Secretary Clinton doesn't want to use a couple of words, and that's law and order.
+106	We learned that Bernie Sanders was taken advantage of by your people, by Debbie Wasserman Schultz.
+107	It's all about the Constitution of -- of -- and so important, the Constitution the way it was meant to be.
+108	And I think it's important that we grip this and deal with it, both at home and abroad.
+109	We're going to be able to.
+110	But -- but as soon as my routine audit is finished, I'll release my returns.
+111	Hundreds of thousands of kids now have a chance to be adopted because I worked to change our adoption and foster care system.
+112	The gun epidemic is the leading cause of death of young African- American men, more than the next nine causes put together.
+113	She had a chance to do something with Syria.
+114	I have been for border security for years.
+115	So it's not one thing.
+116	I would be a president for all of the people, African- Americans, the inner cities.
+117	I do not add a penny to the national debt.
+118	Mosul is on the border of Syria.
+119	Which is a big mistake.

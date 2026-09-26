@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	She worked her way up, only had a high school education, started as a secretary, ended up being the vice president of a local bank.
+561	It's their route to the sea.
+562	But the military -- let's get back to the military, though.
+563	That creates about 4 million jobs.
+564	The CBO says we'll have a trillion-dollar deficit each of the next four years.
+565	They're using cheap hand guns.
+566	...I would liquidate the industry.
+567	This was a bipartisan idea.
+568	You look at how we get to a balanced budget within eight to 10 years.
+569	My priority is putting people back to work in America.
+570	While I was governor, I was proud that our fourth graders came out number one of all 50 states in English, and then also in math.
+571	He said he would have by now put forward a plan to reform Medicare and Social Security, because he pointed out they're on the road to bankruptcy.
+572	Basically, they get deductions that those small businesses that Governor Romney refers to, they don't get.
+573	Fifty-four percent of America's workers work in businesses that are taxed as individuals.
+574	But just a few years ago you said that's something you'd never do.
+575	And as a matter of fact, when the president ran for office, he said that, by this year, he would have brought down the cost of insurance for each family by $2,500 a family.
+576	And we can do it in an environmentally sound way.
+577	In the same way that you say you would have ended the war in Iraq, but recently gave a speech saying that we should have 20,000 more folks in there.
+578	We see in -- in Libya, an attack apparently by, I think we know now, by terrorists of some kind against -- against our people there, four people dead.
+579	When it comes to making college affordable, whether it's two-year or four-year, one of the things that I did as president was we were sending $60 billion to banks and lenders as middlemen for the student loan program, even though the loans were guaranteed.
+580	Which is why as president, we funded an Iron Dome program to stop those missiles.
+581	Secondly, I'd take on diplomatic isolation efforts.
+582	Number two, make sure that they are standing by our interests in Israel's security, because it is a true friend and our greatest ally in the region.
+583	Governor Romney said this has to be done on a bipartisan basis.
+584	You'll get your chance in a moment.
+585	It's driven by, what are we going to need to keep the American people safe?
+586	I would have put them in place earlier.
+587	But let me also note that as I said earlier, we're going to have to do more than just going after leaders and -- and killing bad guys, important as that is.
+588	But unfortunately, in -- nowhere in the world is America's influence greater today than it was four years ago.
+589	And that allows us also to rebuild alliances and make friends around the world to combat future threats.
+590	You can ship jobs overseas and get tax breaks for it.
+591	Those are the kinds of choices that the American people face right now.
+592	And -- and attacking me is not an agenda.
+593	And I think that would be a mistake.
+594	But when you were a candidate in 2008, as I was, and I said if I got bin Laden in our sights I would take that shot, you said we shouldn't move heaven and earth to get one man.
+595	So we're going to make sure that people we trade with around the world play by the rules.
+596	Well, I'll -- I'll be very quick.
+597	They put out a plan, a bipartisan plan.
+598	That's the height of silliness...
+599	And I -- and to do that, that also means I cannot reduce the burden paid by high-income Americans.

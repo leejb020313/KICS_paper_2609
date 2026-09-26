@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	You have -- wait a minute.
+201	Did you ask me a question?
+202	When the audit's complete, I'll do it.
+203	I think that would be a very serious mistake.
+204	We're going to make America great again, but we're going to make America safe again.
+205	Now, Donald has put forth the names of some people that he would consider.
+206	In a lot of places, our police are outgunned.
+207	We have to bring back law and order.
+208	Some of the greatest assets anywhere in the world, real estate assets anywhere in the world, beyond the United States, in Europe, lots of different places.
+209	And not go to things that sound good that really did not have the kind of impact that we would want.
+210	Look, I've been under audit almost for 15 years.
+211	And I'm a big fan of NATO.
+212	I think that would be a terrible mistake and would take us backwards.
+213	But we went from 2,200 to 500.
+214	They can provide information to us that we might not get anywhere else.
+215	When we have $20 trillion in debt, and our country's a mess, you know, it's one thing to have $20 trillion in debt and our roads are good and our bridges are good and everything's in great shape, our airports.
+216	He is so good with these computers, it's unbelievable.
+217	And I want to reassure our allies in Japan and South Korea and elsewhere that we have mutual defense treaties and we will honor them.
+218	And there's a lot of fear -- in fact, teachers and parents are calling it the Trump effect.
+219	I don't think General Douglas MacArthur would like that too much.
+220	But just like she can't bring back jobs, she can't produce.
+221	Now, look, I'm a great believer in all forms of energy, but we're putting a lot of people out of work.
+222	She won't even mention the words, and neither will President Obama.
+223	I was at a little Haiti the other day in Florida.
+224	First, we have to build an economy that works for everyone, not just those at the top.
+225	But we will defend the citizens of this country.
+226	So that's why I hope that we will come together in this campaign.
+227	Well, I consider her statement about my children to be a very nice compliment.
+228	I've said things that, frankly, you hear these things I said.
+229	But I am happy, in fact I'm thrilled to talk about the Clinton Foundation, because it is a world-renowned charity and I am so proud of the work that it does.
+230	That means we've got to work more closely with our allies, and that's something that Donald has been very dismissive of.
+231	So many states are putting very stringent regulations on women that block them from exercising that choice to the extent that they are defunding Planned Parenthood, which, of course, provides all kinds of cancer screenings and other benefits for women in our country.
+232	If they don't do that, it's a very difficult situation for our country, because you look at Orlando and you look at San Bernardino and you look at the World Trade Center.
+233	I've gotten to know the people of the country over the last year-and-a-half that I've been doing this as a politician.
+234	Our jobs are being sucked out of our economy.
+235	I looked the other night.
+236	And I think it -- you know, it's a difference that affects how we see the world and what we want to do with the economy.
+237	And now you want to approve Trans-Pacific Partnership.
+238	Kathy Shelton, that young woman is here with us tonight.
+239	I worked to make sure that kids with disabilities could get a public education, something that I care very much about.

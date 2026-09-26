@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	That means that in the middle of the next decade, any car you buy, you're going to end up going twice as far on a gallon of gas.
+81	Now we're changing to one conflict.
+82	We're now at under 285.
+83	And what I want to do is continue the tax rates -- the tax cuts that we put into place for small businesses and families.
+84	So it's adding to cost.
+85	The financial system had frozen up.
+86	What I would not have had done was left 10,000 troops in Iraq that would tie us down.
+87	And if we're not making investments in education and basic research, which is not something that the private sector is doing at a sufficient pace right now and has never done, then we will lose the (inaudible) in things like clean energy technology.
+88	We have to have the benefits high for those that are low income, but for higher income people, we're going to have to lower some of the benefits.
+89	And the fact that you're going to college is great, but I want everybody to get a great education and we've worked hard to make sure that student loans are available for folks like you, but I also want to make sure that community colleges are offering slots for workers to get retrained for the jobs that are out there right now and the jobs of the future.
+90	Well, let me talk specifically about what I think we need to do.
+91	He keeps saying, "Look, I've created 5 million jobs."
+92	And we've cut them 18 times.
+93	That's part of what took us from deficits to surplus.
+94	In the same way that you initially opposed a timetable in Afghanistan, now you're for it, although it depends.
+95	You can invest in a company, bankrupt it, lay off the workers, strip away their pensions, and you still make money.
+96	We -- we have, with our partners in the region, we have sufficient resources to support those groups.
+97	And as a consequence, we now have a system in which we have the opportunity to start bringing down costs, as opposed to just leaving millions of people out in the cold.
+98	First of all, 30,000 people being killed by their government is a humanitarian disaster.
+99	Iran is at its weakest point, economically, strategically, militarily, then since -- then in many years.
+100	The first role of the federal government is to keep the American people safe.
+101	And kids across this country are going to recognize, we're bringing back an economy.
+102	And what's happened with some of the legislation that's been passed during the president's term, you've seen regulation become excessive, and it's hurt -- it's hurt the economy.
+103	That's not just going after places where there's abuse.
+104	You said that we should still have troops in Iraq to this day.
+105	Making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas.
+106	$716 billion we were able to save from the Medicare program by no longer overpaying insurance companies by making sure that we weren't overpaying providers.
+107	Well, of course I don't concur with what the president said about my own record and the things that I've said.
+108	I'm not looking for a $5 trillion tax cut.
+109	We saved an auto industry that was on the brink of collapse.
+110	You know, this is where budgets matter, because budgets reflect choices.
+111	Of course the greatest threat of all is Iran, four years closer to a nuclear weapon.
+112	That's how we repealed "don't ask/don't tell."
+113	That's the analysis of economists who have looked at this.
+114	But there were a lot of families who didn't have that good fortune and whose sons or daughters or husbands didn't survive.
+115	So I'd get rid of that one from day one.
+116	And the thing I find the most troubling about Obama Care, well it's a long list, but one of the things I find most troubling is that when you go out and talk to small businesses and ask them what they think about it, they tell you it keeps them from hiring more people.
+117	Well, let's come back and talk about the military, but all the way -- all the way through.
+118	Well a lot of it came from the Bakken Range in North Dakota.
+119	I have clear eyes on this.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	There is a connection between interest rates and inflation, but I would call to your attention that in 1981 while we were operating still on the Carter-Mondale budget that we inherited -- that the interest rates came down from 211/2, down toward the 12 or 13 figure.
+921	It'd be fine with me.
+922	Actually, this $2.8 billion goes largely to small companies, to drilling operators and so forth.
+923	But the military -- let's get back to the military, though.
+924	I believe in having other people pay for them, as an example, the Gulf states, who are not carrying their weight, but they have nothing but money, and take care of people.
+925	There are things we can do like the Kassebaum bill.
+926	I made a good selection.
+927	so I think we will wait, see what they present, take a look at it.
+928	We've got chemical warfare being conducted against our children on the streets in this country all day every day, and we don't have the will to stamp it out.
+929	But the first -- pardon me -- the first time we went in, we went in at their request because the war was going on right in Beirut between Israel and the PLO terrorists.
+930	And I don't deserve that.
+931	We have spent $4 trillion worth.
+932	We estimate that those programs would add a hundred billion dollars minimum and probably two hundred billion dollars - uhh maximum each year to the federal budget.
+933	And that begins with a strong economy here at home.
+934	Our jobs are being sucked out of our economy.
+935	And we -- we are spending billions of dollars on missile defense.
+936	Which was a program under this administration, and how it worked exactly I think we don't know precisely, where thousands of automatic, and AK-47 type weapons were -- were given to people that ultimately gave them to -- to drug lords.
+937	But the point is that -- you see, I hear this all the time.
+938	Senator Kennedy has indicated on several occasions in this program tonight that I have been misstating his record and his figures.
+939	Our jobs have fled to Mexico and other places.
+940	Let me mention another regulation in Dodd-Frank.
+941	The answer is very straightforward.
+942	meeting a condemnation of Russian infiltration of Cuba.
+943	It was locker room talk, as I told you.
+944	You know, we spent $3 million to study the DNA of bears in Montana.
+945	If they don't do that, it's a very difficult situation for our country, because you look at Orlando and you look at San Bernardino and you look at the World Trade Center.
+946	What I said was the same thing that the audience here today heard me say, which is, if Pakistan is unable or unwilling to hunt down bin Laden and take him out, then we should.
+947	You know, the President reminds me sometimes of my brother Kenny, who is no longer alive.
+948	Health-care costs are on the rise because the consumers are not involved in the decision-making process.
+949	I believe that the American people, if given the leadership that I would expect to give, would be willing to give this thrust to preserve the peace and the necessary restraint at home to hold the lid on spending so that we could, I think, have a long overdue and totally justified tax decrease for the middle-income people.
+950	But four years ago, I told the American people and I told you I would cut taxes for middle class families.
+951	He says that he voted for the resolution.
+952	But I hope tonight you will get a better feel of who Bob Dole is and what he's all about.
+953	The 9/11 Commission put out a report that said America is safer but not yet safe.
+954	I'm also against the pipeline embargo, which you folks attempted to impose.
+955	I opposed the grain embargo in my administration.
+956	Well, I think we have to go to work on the problem of Third World debt and we've got to assist those Third World countries in dealing with this massive debt which they currently-which they have incurred and which is burdening them and which if we don't do something about it and assist them along with other nations around the world, we'll destroy their economies, destroy their future.
+957	Now this tax bill - that hasn't reached the White House yet, but is expected in a day or two - it's about fifteen hundred pages.
+958	These are people that kill women and treat women horribly.
+959	I'm totally opposed to diverting one out of every six dollars out of the Social Security trust fund, as the Governor has proposed, into the stock market.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	And, honestly, nobody has business doing what I just said, doing that, as late as one or two or three or four days prior to birth.
+561	They feel we have to have strong borders.
+562	And we've got to do several things at the same time.
+563	And women have respect for me.
+564	One of the greatest provisions for people like me, to be honest with you, I give up a lot when I run, because I knock out the tax code.
+565	And now they're going to be actually probably a major power at some point pretty soon, the way they're going.
+566	We're up to $20 trillion.
+567	They started from that little area, and now they're in 32 different nations, Hillary.
+568	If we don't have it, we're not going to have a country.
+569	I mean, you know -- now, everybody in mainstream is going to say, oh, that's not true.
+570	I have met with women who toward the end of their pregnancy get the worst news one could get, that their health is in jeopardy if they continue to carry to term or that something terrible has happened or just been discovered about the pregnancy.
+571	Well, President Obama and Secretary Clinton created a vacuum the way they got out of Iraq, because they got out -- what, they shouldn't have been in, but once they got in, the way they got out was a disaster.
+572	That was more than a mistake.
+573	We've had millions of people leave Syria and those millions of people inside Syria who have been dislocated.
+574	And I feel that they really wanted me to come to that conclusion.
+575	First of all, I got to watch in preparing for this some of your debates against Barack Obama.
+576	He says it's a secret plan, but the only secret is that he has no plan.
+577	... about a potential nuclear -- nuclear competition in Asia, you said, you know, go ahead, enjoy yourselves, folks.
+578	Well, I have much better judgment than she does.
+579	... right now, our country is dying at 1 percent GDP.
+580	Whether it's 6 or 5, but it looks like it's 6, $6 trillion in the Middle East, we could have rebuilt our country twice.
+581	Instead of that, they're leaving our country to get their money, because they can't bring their money back into our country, because of bureaucratic red tape, because they can't get together.
+582	We're just opening up on Pennsylvania Avenue right next to the White House, so if I don't get there one way, I'm going to get to Pennsylvania Avenue another.
+583	He never apologized to the reporter that he mimicked and mocked on national television and our children were watching.
+584	But Obamacare has to go.
+585	Well, it's also fair to say, if we're going to talk about mayors, that under the current mayor, crime has continued to drop, including murders.
+586	Is this a war-torn country?
+587	You were very much involved in every aspect of this country.
+588	Our country is so, so -- it's just so imperative that we have the right justices.
+589	And when I look at what's going on in Charlotte, a city I love, a city where I have investments, when I look at what's going on throughout various parts of our country, whether it's -- I mean, I can just keep naming them all day long -- we need law and order in our country.
+590	But let's talk about the question you asked, Lester.
+591	People have been -- their lives have been destroyed for doing one-fifth of what you've done.
+592	And I think we need to go after Baghdadi, as well, make that one of our organizing principles.
+593	In fact, Donald was one of the people who rooted for the housing crisis.
+594	Ronald Reagan was the last president...
+595	The plan he has will cost us jobs and possibly lead to another Great Recession.
+596	Our military is assisting in Iraq.
+597	And my successor, John Kerry, and President Obama got a deal that put a lid on Iran's nuclear program without firing a single shot.
+598	Last week, as you know, the end of last week, they came out with an anemic jobs report.
+599	You can pick it up tomorrow at a bookstore...

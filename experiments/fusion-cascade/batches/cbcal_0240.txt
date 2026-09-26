@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	We have provided humanitarian assistance and we are helping the opposition organize, and we're particularly interested in making sure that we're mobilizing the moderate forces inside of Syria.
+241	And then we have his own record, which is we have four consecutive years where he said when he was running for office, he would cut the deficit in half.
+242	We need to increase pressure time, and time again on Iran because anything other than a -- a -- a solution to this, which says -- which stops this -- this nuclear folly of theirs, is unacceptable to America.
+243	Number two, seeing a -- a replacement government being responsible people is critical for us.
+244	And we're now in a position where we can transition out, because there's no reason why Americans should die when Afghans are perfectly capable of defending their own country.
+245	There's a reason why Governor Romney set up the plan that he did in Massachusetts.
+246	Why wouldn't we eliminate tax breaks for corporate jets?
+247	This is what I have done.
+248	And Assad -- excuse me, Kofi Annan came in and said we're going to try to have a ceasefire.
+249	If you're paying less than you paid a year or two ago, why, then, the strategy is working.
+250	And the reason is because of its people, because of the woman I met in North Carolina who decided at 55 to go back to school because she wanted to inspire her daughter and now has a job from that new training that she's gotten; because a company in Minnesota who was willing to give up salaries and perks for their executives to make sure that they didn't lay off workers during a recession.
+251	It wasn't a government takeover of health care.
+252	I'm going to stop other things.
+253	Jim, if I -- if I can just respond very quickly, first of all, every study has shown that Medicare has lower administrative costs than private insurance does, which is why seniors are generally pretty happy with it.
+254	Because there -- there are two ways of dealing with our health care crisis.
+255	But that's already the law and that doesn't help the millions of people out there with preexisting conditions.
+256	We should key our foreign aid, our direct foreign investment, and that of our friends, we should coordinate it to make sure that we -- we push back and give them more economic development.
+257	On Social Security he's not.
+258	He says that he's going to replace Dodd-Frank, Wall Street reform, but we don't know exactly which ones.
+259	I look around the world and I don't feel that you see North Korea, continuing to export their nuclear technology, Russia said they're not going to follow Nunn-Lugar any more.
+260	Candy, there's no doubt that world demand's gone up, but our production is going up, and we're using oil more efficiently.
+261	The problem with raising taxes is that it slows down the rate of growth.
+262	You can't have kids coming out of college, half of them can't find a job today, or a job that's commensurate with their college degree.
+263	We also have 50 percent of doctors who say they won't take more Medicare patients.
+264	Governor Romney says, well, those top 3 percent, they're the job creators, they'd be burdened.
+265	But number five, the other thing that we have to do is recognize that we can't continue to do nation building in these regions.
+266	That's what's been squeezing middle class families.
+267	Millions of jobs were lost, the auto industry was on the brink of collapse.
+268	And for that to happen, we have to strengthen our economy here at home.
+269	In fact, this week we'll be carrying out the largest military exercise with Israel in history, this very week.
+270	There are alternatives to accomplish the objective I have, which is to bring down rates, broaden the base, simplify the code, and create incentives for growth.
+271	That's the kind of leadership we've shown in the region.
+272	Innermountain Healthcare does it superbly well, Mayo Clinic is doing it superbly well, Cleveland Clinic, others.
+273	There has to be revenue in addition to cuts.
+274	Let me just point out first of all this board that we're talking about can't make decisions about what treatments are given.
+275	That is, I want to bring down rates.
+276	I do not believe in cutting our military.
+277	But what we can't do is to simply suggest that, as Governor Romney at times has suggested, that giving heavy weapons, for example, to the Syrian opposition is a simple proposition that would lead us to be safer over the long term.
+278	And the primary beneficiary of that repeal are insurance companies that are estimated to gain billions of dollars back when they aren't making seniors any healthier.
+279	What you did instead was to push through a plan without a single Republican vote.

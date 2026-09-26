@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	I want to say just a couple of things.
+241	And believe me: We're in a bubble right now.
+242	And I will tell you that when Hillary brings up a point like that and she talks about words that I said 11 years ago, I think it's disgraceful, and I think she should be ashamed of herself, if you want to know the truth.
+243	We'll find out on November 8th.
+244	I mean, can you imagine, we're defending Saudi Arabia?
+245	Number two -- and that bothers me, because we should be asking -- we're defending them, and they should at least be paying us what they're supposed to be paying by treaty and contract.
+246	African- Americans now 45 percent poverty in the inner cities.
+247	Does it create jobs, raise incomes, and further our national security?
+248	Well, first of all, what he just said about the State Department is not only untrue, it's been debunked numerous times.
+249	We need some leverage with the Russians, because they are not going to come to the negotiating table for a diplomatic resolution, unless there is some leverage over them.
+250	And the money is with people who have taken advantage of every single break in the tax code.
+251	And Hillary Clinton, when she was secretary of state, said that's OK, we can't force it into their country.
+252	You ran the State Department, $6 billion was either stolen.
+253	She didn't even know what that word -- what that letter meant.
+254	And so what I believe is the more we can do for the middle class, the more we can invest in you, your education, your skills, your future, the better we will be off and the better we'll grow.
+255	Well, I think cyber security, cyber warfare will be one of the biggest challenges facing the next president, because clearly we're facing at this point two different kinds of adversaries.
+256	We are going to appoint justices -- this is the best way to help the Second Amendment.
+257	And I think when you look at the letters that I get, a lot of people are worried that maybe they wouldn't have a place in Donald Trump's America.
+258	Secretary, is it President Obama's fault?
+259	And if you think that going into Mosul after we let the world know we're going in, and all of the people that we really wanted -- the leaders -- they're all gone.
+260	When I speak, I go out and speak, the people of this country are furious.
+261	Right now, Syria is fighting ISIS.
+262	And if you look at CNN this past week, Patti Solis Doyle was on Wolf Blitzer saying that this happened.
+263	It's not about us so much as it is about you and your families and the kind of country and future you want.
+264	And you're going to stop them?
+265	I personally believe that the steps that President Obama took saved the economy.
+266	And -- as soon as the audit's finished, it will be released.
+267	We're going to have a lot of free trade.
+268	And you know, Bernie Sanders, he said you have bad judgment.
+269	Well, I think there are a number of issues that we should be addressing.
+270	She campaigned where the primary part of her campaign...
+271	Well, let me -- let me start by saying, words matter.
+272	But we do always have to make sure we keep people safe.
+273	And you want to increase the regulations and make them even worse.
+274	When I got involved, I didn't fail.
+275	We need law and order, but we need justice, too.
+276	And I watched the way you talk now about how lovely everything is and how wonderful you are.
+277	And what that's going to do is a disaster for the country.
+278	There are a lot of very important planning going on, and some of it is to signal to the Sunnis in the area, as well as Kurdish Peshmerga fighters, that we all need to be in this.
+279	There are an estimated several thousand fighters in Mosul.

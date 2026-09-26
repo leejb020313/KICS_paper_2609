@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2120	There has never been a weapon invented in the history of man that has not led to a defensive, a counterweapon.
+2121	I remember sitting in the White House looking at those generals, saying, "Do you have what you need in this war?
+2122	But this is a very liberal administration.
+2123	We have ideas in the Dole-Kemp campaign and we will rescue Medicare as we did Social Security.
+2124	Under Vice President Gore's plan, he is going to grow the federal government in the largest increase since Lyndon Baines Johnson in 1965.
+2125	That does not solve our internal challenges with ISIS and our need to stop radicalization, to work with American Muslim communities who are on the front lines to identify and prevent attacks.
+2126	I want to quote somebody a little closer to home, Harry Truman.
+2127	The President wants to increase spending 20 percent over the next six years.
+2128	-- and Glaspie's papers have been presented to the US Senate.
+2129	I cannot still understand why this Administration and Mr. Nixon oppose putting medical care for the aged under Social Security to give them some security.
+2130	A lot of these election-year conversions, the President talks about the drug money, and all the other things, all this antismoking campaign all happened in 1996.
+2131	So I have a comprehensive energy policy, but it really does include fighting climate change, because I think that is a serious problem.
+2132	It's a lot more than $18 billion in pork-barrel spending.
+2133	In 1975 he wanted to cut the budget $15 billion.
+2134	There are an estimated several thousand fighters in Mosul.
+2135	Innermountain Healthcare does it superbly well, Mayo Clinic is doing it superbly well, Cleveland Clinic, others.
+2136	And that is another way to help deal with the threats that we face in the 21st century.
+2137	Now in the last Congress - the special session of the Congress - there was a bill: one by the President, one by Senator Kennedy and members of his party.
+2138	He went after John McCain, a prisoner of war, said he prefers "people who aren't captured."
+2139	If the United States had stronger prestige and influence in Latin America it could persuade - as Franklin Roosevelt did in 1940 - the countries of Latin America to join in an economic quarantine of Castro.
+2140	If China has a GDP of 7 percent, it's like a national catastrophe.
+2141	You've raised them by $1 trillion under Obamacare.
+2142	We're going to go right back to what we had under Mr. Truman when he had political control of the Federal Reserve Board.
+2143	One of the good things we've gone in Texas is we have strong accountability because you can't cure unless you know.
+2144	Now, I think that it's a matter of fundamental right that if we raise the minimum wage, 15 million Americans would be positively affected.
+2145	And what they want is the ability to just focus on some really big challenges that we face right now, and that's what I have been trying to focus on this entire campaign.
+2146	Under Governor Bush's tax cut proposal, he would spend more money on tax cuts for the wealthiest 1% than all of the new spending that he proposes for education, health care, prescription drugs and national defense all combined.
+2147	When it comes to the wall that Donald talks about building, he went to Mexico, he had a meeting with the Mexican president.
+2148	But it will cover preexisting conditions.
+2149	I found that was rather difficult to do.
+2150	We didn't go in until right before the election, similar to what was taking place in 1972, when Mr. Kissinger announced peace is at hand just before the election at that time.
+2151	An I don't think that is going to be an effective tool to make the -- keep our society safe.
+2152	I, I still remember a woman that I met ten years ago who said she wanted to get off welfare so her kids could tell, give an answer when they say, "What does your mother do for a job?"
+2153	We did the right thing.
+2154	We've opened up public lands.
+2155	And on the day when I was in the Situation Room, monitoring the raid that brought Osama bin Laden to justice, he was hosting the "Celebrity Apprentice."
+2156	First time they've ever endorsed a candidate.
+2157	They will have a conservative bent.
+2158	So we've got to figure out how are we going to have more people with pension plans, and pension coverage has been declining as more and more people work for small businesses and fewer people work for big businesses.
+2159	No one is suggesting that.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	The problem I have with the Perot prescription is that almost all economists who've looked at it say that if you cut the deficit this much this quick it will increase unemployment, it will slow down the economy.
+881	Our recession was one of the shallowest in modern history.
+882	I just don't believe we ought to do that.
+883	I think that is an idea that is not in keeping with who we are as a nation.
+884	It's kind of one of those exaggerations.
+885	I'm sorry that we couldn't persuade the bringing in of the third candidate, so that he could have been seen also in these debates.
+886	You know, I was having lunch with some -- a veteran in Minnesota who had been a medic dealing with the most extreme circumstances.
+887	The Reagan-Bush administration was right.
+888	I would pick somebody who would not allow their personal opinion to get in the way of the law.
+889	Because we've had tough aggressive trade policies, and because we've got interest rates down.
+890	I hope some day it will rise; but I don't think it will rise if we continue the same policies toward Cuba that we did in recent years, and in fact towards all of Latin America - when we've almost ignored the needs of Latin America; we've beamed not a single Voice of America program in Spanish to all of Latin America in the last eight years, except for the three months of the Hungarian uh - revolution.
+891	And we can't do it unless we do have adequate funds for, for example, information which has been cut by the Congress, adequate funds for technical assistance.
+892	I know I'm ready for it.
+893	I want to address my remarks to the young people of America, because they're the ones that are going to spend most of their life in the 21st Century.
+894	It will come from the pockets of the people.
+895	We're not going to go alone like this president did.
+896	All of those are legally deductions, deductible in computing your tax, and it was a 1-year thing with him.
+897	And from those five, I always chose the first one or second one.
+898	I want to thank Governor Romney and the University of Denver for your hospitality.
+899	It will cost a minimum of four billion dollars a year more, a maximum of four and nine-tenths billion dollar a year more than we're presently spending.
+900	Donald Trump is a small business.
+901	I like Meg Whitman, she knows what it's like to be out there in the marketplace.
+902	Now that the President gets millions of dollars from the trial lawyers, he probably doesn't like this provision.
+903	Employers of under 50 are exempted.
+904	We, of course, don't want to have automatic weapons, and that's already illegal in this country to have automatic weapons.
+905	I think this election has to be geared toward the future.
+906	... $200 million is spent, and I'm either winning or tied, and I've spent practically nothing.
+907	Now, both of us are kind of, I guess, stating the other's position in a maximalist extreme way, but I think there is a difference here.
+908	And only the US could do this.
+909	And I don't hold it against him that he said grave threat.
+910	Well, let me just said that that this is -- he -- Senator Obama doesn't want a free trade agreement with our best ally in the region but wants to sit down across the table without precondition to -- with Hugo Chavez, the guy who has been helping FARC, the terrorist organization.
+911	I have a long record on that, on a long series of reforms.
+912	In 1988 when the war between Iraq and Iran ended, we knew Saddam Hussein was a tyrant, we had dealt with him because he was against Iran -- the enemy of my enemy maybe is my friend.
+913	I believe we can meet the problems within the cities of this country and still uh - give a tax reduction.
+914	My average in two years is twenty-six.
+915	You get more money, you keep more of your taxes by going abroad.
+916	Whereas I have proposed we ought to take.
+917	Medicaid's in one agency; Medicare is in a different one.
+918	It always works that way.
+919	And there is no evidence whatsoever that that will slow down or diminish our growth.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	I'm going to continue to push on this issue for the next four years.
+1	We have enormous trade imbalance with China, and it's worse this year than last year, and it's worse last year than the year before.
+2	First of all, I'm going through from the very beginning -- we're going to cut about 5 percent of the discretionary budget, excluding military.
+3	They're still number one today.
+4	So there's no economist that can say Mitt Romney's tax plan adds $5 trillion if I say I will not add to the deficit with my tax plan.
+5	And that begins with a strong economy here at home.
+6	Well, Governor, we also have fewer horses and bayonets, because the nature of our military's changed.
+7	I think first of all, let me -- let me repeat -- let me repeat what I said.
+8	We're starting to see gains in math and science.
+9	But I'm not going to reduce the share of taxes paid by high-income people.
+10	Number two is to cut spending.
+11	As a matter of fact, it's growing much more slowly now than when you made that statement.
+12	But the idea of a trillion dollar in cuts through sequestration and budget cuts to the military would change that.
+13	And what I want to do, is build on the five million jobs that we've created over the last 30 months in the private sector alone.
+14	And if we're strong in each of those things, American influence will grow.
+15	And so as a consequence, they're paying their premiums, somebody gets really sick, lo and behold, they don't have enough money to pay the bills, because the insurance companies say that they've hit the limit.
+16	But it's an honor that we have it.
+17	I know Americans had seen jobs being shipped overseas; businesses and workers not getting a level playing field when it came to trade.
+18	And the reason is because small business pays that individual rate; 54 percent of America's workers work in businesses that are taxed not at the corporate tax rate, but at the individual tax rate.
+19	If the president were reelected, we'd go to almost $20 trillion of national debt.
+20	No tax on your savings.
+21	We recognize that there are places of conflict in the world.
+22	The National Federation of Independent Businesses has said that will cost 700,000 jobs.
+23	What I believe is we have to do, as the president mentioned towards the end of his remarks there, which is to make enormous efforts to enforce the gun laws that we have, and to change the culture of violence that we have.
+24	And the proof of that is 23 million people out of work.
+25	Governor Romney then also wants to spend $2 trillion on additional military programs even though the military's not asking for them.
+26	Good, I look forward to it.
+27	And I say that because from the very beginning, the president in his campaign four years ago, said he would meet with all the world's worst actors in his first year, he'd sit down with Chavez and Kim Jong-il, with Castro and President Ahmadinejad of Iran.
+28	If I'm elected we won't have Obama.
+29	When the president ran for office, he said if you build a coal plant, you can go ahead, but you'll go bankrupt.
+30	You know when members of the Republican Congress say, "We're going to sign a no tax pledge, so that we don't ask a dime for millionaires and billionaires to reduce our deficit so we can still invest in education, and helping kids go to college.
+31	But look, this has been going on for a year.
+32	I said that I'd end the war in Iraq, and I did.
+33	I'd make sure that Ahmadinejad is indicted under the Genocide Convention.
+34	I know what it takes to create good jobs again.
+35	And what I'm afraid of is we've watched over the past year or so, first the president saying, well we'll let the U.N. deal with it.
+36	What I've also said is if we're going to go after folks who are here illegally, we should do it smartly and go after folks who are criminals, gang bangers, people who are hurting the community, not after students, not after folks who are here just because they're trying to figure out how to feed their families.
+37	He's already taken that off the board, capital gains are going to continue to be at a low rate so we -- we're not going to get money that way.
+38	I said I'd end the war in Libya -- in -- in Iraq, and I did.
+39	It's just -- it's -- we've got -- when the president took office, 32 million people on food stamps; 47 million on food stamps today; economic growth this year slower than last year, and last year slower than the year before.

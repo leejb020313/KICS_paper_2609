@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	Look at the mess that we're in.
+161	I'm going to help the African-Americans.
+162	She said the 33,000 e-mails had to do with her daughter's wedding, number one, and a yoga class.
+163	These people have all left.
+164	He choked and then got into a Twitter war because the Mexican president said we're not paying for that wall.
+165	And the only one she talked to was Sidney Blumenthal, who's her friend and not a good guy, by the way.
+166	We are spending a fortune doing it.
+167	This is what we have to do.
+168	I mean, it could be Russia, but it could also be China.
+169	You didn't hear what I said.
+170	We're working with NATO, the longest military alliance in the history of the world, to really turn our attention to terrorism.
+171	We are going to start the engine rolling again, because...
+172	She's got bad judgment, and honestly, so bad that she should never be president of the United States.
+173	President Obama has moved millions of people out.
+174	It is such a great question and it's maybe the question I get almost more than anything else, outside of defense.
+175	She's got tremendous -- she's got tremendous hatred.
+176	I have no loans from Russia.
+177	But they always blame Russia.
+178	I'll keep you in suspense.
+179	The New York Times actually wrote an article about it, but they don't even care.
+180	You get shot walking to the store.
+181	But I have common sense.
+182	He inherited the worst financial crisis since the Great Depression.
+183	I assume she had nothing to do with it.
+184	In Chicago, which has the toughest gun laws in the United States, probably you could say by far, they have more gun violence than any other city.
+185	Of course I -- I don't know Putin.
+186	We have literally Trump -- you can fact check him in real time.
+187	Would he have started a war?
+188	And we have to be very vigilant.
+189	Race remains a significant challenge in our country.
+190	We've seen him embarrass women on TV and on Twitter.
+191	And that's what I do.
+192	And what happened is now ISIS is in 32 countries.
+193	You say who's making these deals?
+194	Well, every time Donald is pushed on something which is obviously uncomfortable, like what these women are saying, he immediately goes to denying responsibility.
+195	We need a Supreme Court that in my opinion is going to uphold the Second Amendment, and all amendments, but the Second Amendment, which is under absolute siege.
+196	She failed to get the birth certificate.
+197	Why can't they do the attack, make it a sneak attack, and after the attack is made, inform the American public that we've knocked out the leaders, we've had a tremendous success?
+198	And I look very, very much forward to doing it.
+199	As far as Japan and other countries, we are being ripped off by everybody in the -- we're defending other countries.

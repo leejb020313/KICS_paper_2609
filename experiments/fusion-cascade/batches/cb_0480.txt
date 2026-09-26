@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	And before he rushes and says, "You know, before you and President Obama were there," I think it's important to recognize that he has been criticizing our government for decades.
+481	I'm going to cut regulations.
+482	What you did -- and this is after getting a subpoena from the United States Congress.
+483	I ask Hillary, why doesn't -- she made $250 million by being in office.
+484	That's why I want more technical education in high schools and in community colleges, real apprenticeships to prepare young people for the jobs of the future.
+485	The border -- as you know, the Border Patrol agents, 16,500-plus ICE last week, endorsed me.
+486	You said it's the finest deal you've ever seen.
+487	It was very easy to do.
+488	And what you do is you say, fine, you want to go to Mexico or some other country, good luck.
+489	Her donors took massive tax write-offs.
+490	We have a divided nation, because people like her -- and believe me, she has tremendous hate in her heart.
+491	And she doesn't say that, because she's got no business ability.
+492	It's just going to be talk.
+493	We're going to cut business taxes massively.
+494	And the only gratifying thing is, I saw the polls come in today, and with all of that money...
+495	And we have to work more closely with our partners and allies on the ground.
+496	I want us to have the biggest jobs program since World War II, jobs in infrastructure and advanced manufacturing.
+497	The Muslim ban is something that in some form has morphed into a extreme vetting from certain areas of the world.
+498	I'm very proud of it.
+499	But I feel that it's absolutely important that we uphold, because of the fact that it is under such trauma.
+500	And the reason they blame Russia because they think they're trying to tarnish me with Russia.
+501	I've taken on Putin and others, and I would do that as president.
+502	And we're going to have to make it clear that we don't want to use the kinds of tools that we have.
+503	I was going to say something...
+504	In the 1990s, I went to Beijing and I said women's rights are human rights.
+505	We know the IRS has made clear there is no prohibition on releasing it when you're under audit.
+506	And if we do, you don't have to bother asking your question, because we have a tremendous machine.
+507	Hillary Clinton wants to put all the miners out of business.
+508	No, it's going to totally help you.
+509	So we have to bring communities together in order to begin working on that as a mutual goal.
+510	That was the slot that the Obamacare approach was to take.
+511	And when he -- excuse me.
+512	Now, you can say that that's OK and Hillary can say that that's OK.
+513	He printed drapery fabrics on long tables, where he pulled out those fabrics and he went down with a silkscreen and dumped the paint in and took the squeegee and kept going.
+514	And the final thing I would say, this is the 10th or 12th time that he's denied being for the war in Iraq.
+515	So he goes around with crocodile tears about how terrible it is, but he has given jobs to Chinese steelworkers, not American steelworkers.
+516	And they actually fact checked, and they said I was right.
+517	Bad health care at the most expensive price.
+518	You know, the vibrancy of the black church, the black businesses that employ so many people, the opportunities that so many families are working to provide for their kids.
+519	No wonder you've been fighting -- no wonder you've been fighting ISIS your entire adult life.

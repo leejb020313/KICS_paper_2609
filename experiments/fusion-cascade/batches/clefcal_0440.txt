@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	I mean, these aren't make-up figures.
+441	What I want America to do is to trade more but to compete and win by investing in competitive ways.
+442	But I just find it fascinating that while we sit here tonight we will go into debt an additional $50 million in an hour and a half.
+443	We did try to bring Saddam Hussein into the family of nations; he did have the 4th largest army.
+444	We take care of illegal immigrants, people that come into the country illegally, better than we take care of our vets.
+445	If you notice that in all of this proposal, Senator -- government wants -- Senator Obama wants government to do the job.
+446	I'm shocked to hear that.
+447	That's the problem with our system.
+448	That's an example of, I think, the kind of use of the scalpel that we want to make sure that we're funding some of those programs.
+449	Paul Tsongas, a liberal senator from Massachusetts said the dumbest thing I did was to oppose the capital gains cut.
+450	You remember we increased that child credit by $1,000, reduced the marriage penalty, created a 10 percent tax bracket for the lower-income Americans.
+451	The federal government didn't hire our teachers.
+452	Georgia in particular is now on the brink of enormous economic challenges.
+453	We want to work with them and build a new relationship, and they with us.
+454	And, Jim, I -- I've been not feeling too great about a lot of things lately.
+455	But we have not had the kind of leadership we should have had.
+456	And, of course, Iran on the path to a nuclear weapon, we've got real (inaudible).
+457	In addition to that, I believe that this element of discrimination is something that the South has seen so vividly as a blight on our region of the country which has now been corrected - not only racial discrimination but discrimination against people that have to work for a living - because we have been trying to pick ourselves up by our bootstraps, since the long depression years, and lead a full and useful life in the affairs of this country.
+458	Say, "I made a terrible mistake."
+459	We later said no, that's not true.
+460	4th in manufacturing jobs, 4th in the reduction of poverty, 4th in income increase.
+461	In fact, just recently steelworkers in Ohio and throughout the Midwest -- Pennsylvania -- are in a position now to sell steel to China because we won that case.
+462	I think there are things to do in this regard.
+463	Her papers went out to all her friends at the banks, Goldman Sachs and everybody else, and she said things -- WikiLeaks that just came out.
+464	Not only -- Even if we get all $700 billion back, let's assume the markets recover, we're holding assets long enough that eventually taxpayers get it back and that happened during the Great Depression when Roosevelt purchased a whole bunch of homes, over time, home values went back up and in fact government made a profit.
+465	The president wants to do well.
+466	If these young Americans don't have the skills that make them attractive to employees, they're not going to get jobs.
+467	We've had the Central Accounting.
+468	They used those weapons against -- against their own citizens and killed Americans with them.
+469	Guinea and Ghana, two independent countries within the last three years - Guinea in fifty-seven, Ghana within the last eighteen months - both now are supporting the Soviet foreign policy at the U.N. Mr. Herter said so himself.
+470	I believe what you need to do is some of what Ross is talking about: control the growth of mandatory spending and get taxes down.
+471	And this area on the border has not been governed since the days of Alexander the Great.
+472	I think people understand what she's saying.
+473	And yes, farmers are the first environmentalists.
+474	You know, because of the intelligence coordination that we do with a range of countries, including Israel, we have a sense of when they would get breakout capacity, which means that we would not be able to intervene in time to stop their nuclear program.
+475	Number two, we take some programs that we are doing to keep, like Medicaid, which is a program for the poor; we'll take that healthcare program for the poor and we give it to the states to run because states run these programs more efficiently.
+476	Now, Japanese couldn't unload the cars in this country if they had the same restrictions we had, and on and on and on and on and on.
+477	Only the last few days with the election approaching, has Mr. Ford taken any interest in a nonproliferation movement.
+478	There are companies that wanted to petition the administration.
+479	And that would relieve an enormous amount of pressure.

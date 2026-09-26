@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2200	And what we've done during the Bush administration, the Kurds were at the State Department, negotiating, trying to work their differences out.
+2201	The interests of the American people must be at stake.
+2202	And as for singling people out because of race, you know, James Byrd was singled out because of his race in Texas.
+2203	I would have to see what they wanted to do, but I don't believe that will be the request.
+2204	And it is to that great task, if we're successful, that we will address ourselves.
+2205	And I was reminded of what that would mean if those were my kids.
+2206	Mr. Perot, with all respect, I think it is highly relevant, and I think that a 4-billion dollar budget of state and federal funds is not all that small, and I think the fact that I took a state that was one of the poorest states in the country and had been for 153 years and tried my best to modernize its economy and to make the kind of changes that have generated support from people like the presidents of Apple Computer and Hewlett-Packard and some of the biggest companies in this country, 24 retired generals and admirals and hundreds of business executives, are highly relevant.
+2207	My opponent calls it a mistake.
+2208	You go upstate New York.
+2209	They didn't volunteer the information.
+2210	There will be a job-sucking sound going south.
+2211	And what about the mining of the harbors in Nicaragua which violated international law?
+2212	We cut taxes 19 times.
+2213	They have to remove themselves from South Ossetia and Abkhazia.
+2214	You know, as governor, one of the things you have to deal with is catastrophe.
+2215	Well, I don't know in the case of the trial lawyers.
+2216	You know what he did?
+2217	When Senator McCain was cheerleading the president to go into Iraq, he suggested it was going to be quick and easy, we'd be greeted as liberators.
+2218	The trial lawyers and I don't -- you know, my wife's a lawyer.
+2219	They left -- fired 1,400 people.
+2220	So the work that we've done with respect to sanctions now offers Iran a choice.
+2221	Well, that bill has not yet come down to the Oval Office, so I am not in a position to make any judgment on it tonight.
+2222	If you got the Government down to the lowest level, that you yourself could say it could not go any lower and still perform the services for the people, and if the recovery was so complete that you knew you were getting the ultimate amount of revenues that you could get through that growth, and there was still some slight difference there between those two lines, then I had said once that, yes, you would have to then look to see if taxes should not be adjusted.
+2223	Number two, by stealing our intellectual property; our designs, our patents, our technology.
+2224	But the president mentioned the auto industry and that somehow I would be in favor of jobs being elsewhere.
+2225	Now I understand it's been extended 'til some time next year.
+2226	And they went out and bought up these mortgages.
+2227	But the president just arbitrarily brought the hammer down and said, "Nope.
+2228	I did not support the war in Iraq.
+2229	That's twice the amount that my predecessor increased VA funding.
+2230	The budget was more grossly out of balance last year than ever before in the history of our country - $65 billion - primarily because our people are not at work.
+2231	I don't believe it is fair to slap a 50-cent-a-gallon tax over whatever many years on the people that have to drive for a living, people that go long distances.
+2232	I think of classroom teachers, classroom teachers that I have had, classroom teachers that youngsters have today who are real heroes to our young people.
+2233	I have no hesitancy in saying so.
+2234	She gets a small pension, but in order to pay for her prescription drug benefits, she has to go out seven days a week several hours a day picking up cans.
+2235	And we don't have enough troops there.
+2236	Those are the businesses that employ one-quarter of all the workers in America.
+2237	I don't have a free reserved parking place at Natl Airport, why should my servants?
+2238	But I'm going to create a -- the kind of a country that we were from the standpoint of industry.
+2239	We have the biggest drop in the number of people in poverty in 27 years.

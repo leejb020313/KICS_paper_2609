@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	Let me just talk to you about one of the short-term fixes.
+961	But I think marriage is a sacred institution.
+962	Now, Joe, Senator Obama's plan, if you're a small business and you are able -- and your -- the guy that sells to you will not have his capital gains tax increase, which Senator Obama wants, if you're out there, my friend, and you've got employees, and you've got kids, if you don't get -- adopt the health care plan that Senator Obama mandates, he's going to fine you.
+963	We haven't got 12 days, folks.
+964	Then at the end of the war, when they had to go testify about it, their stories are a total disconnect from what they said in August, September and October.
+965	On the other hand, uh when you have a bill of that magnitude, with - tho- those many provisions, a president has to sit and decide if there's more good than bad.
+966	Mr. Perot wants to do the same thing.
+967	I know the governor is against it, and I know that I'm for it.
+968	First of all, it's a balanced budget amendment to the Constitution which President Clinton defeated.
+969	If I lose this election, I will continue in the Senate to try to build a stronger country.
+970	As a matter of reality, Fm going to have to because we have had not one but two detailed studies which indicate that there are billions and billions of dollars to be collected that are not being paid these are not taxes owed by average Americans.
+971	He said, we will look at offshore drilling.
+972	Iran is bordered very extensively by the Soviet Union.
+973	We're low spending, low tax burden.
+974	If Tom DeLay or someone in the House said to me, "Sorry, we don't have the votes," I'd have said, "Then we're going to have a fight. "
+975	This year the Republican Congress, as far as student loans went from 24 billion to 36 billion over the next six years.
+976	We've done a lot to give the people more powers to make their own decisions over their own lives.
+977	Not only that, he said, "I think that's what grows the economy."
+978	So you cannot compare unemployment, as you sought to, uh - with the present time with the 1950s, because the then administration had people in the military - they were at war, they were fighting overseas, and this administration has reduced the size of the military by a million four hundred thousand.
+979	I want to bring down the tax burden on middle-income families.
+980	As you all know, I've been buying 30-minute segments to talk about issues.
+981	Let's just talk about the CAFE standards -- that's the fuel efficiency standards.
+982	And we shifted people out of administrative jobs into the field to deliver better services.
+983	But I certainly would not impose any litmus test.
+984	Senator Obama talks about the budgets I voted for.
+985	In regard to uh - price stability uh - I'm not aware that that committee did produce recommendations that ever were certainly before the Congress from the point of view of legislation in regard to controlling prices.
+986	I will release my tax returns -- against my lawyer's wishes -- when she releases her 33,000 e-mails that have been deleted.
+987	And our enemies are strengthened from all of this.
+988	The National Federation of Independent Businesses has said that will cost 700,000 jobs.
+989	They're moving very rapidly because they know that it is a fast-growing world market.
+990	In regard to the exchange of students and labor unions, I am chairman of the subcommittee on Africa and I think that one of the most unfortunate phases of our policy towards that country was the very minute number of exchanges that we had.
+991	But I also share your belief that weapons that were designed for soldiers in war theaters don't belong on our streets.
+992	The most important crucial difference in this election campaign, in my judgment, is the approach to the control of nuclear weaponry and the inclination to control or not to control the spread of atomic weapons to other nations who don't presently have it, particularly terrorist nations.
+993	That means that in the middle of the next decade, any car you buy, you're going to end up going twice as far on a gallon of gas.
+994	John, you want to give oil companies another $4 billion.
+995	Laura and I are proud parents of teenage girls, twin daughters, and I know what you're saying.
+996	Why I'll win is I think I have the best plan of the 3 of us up here to do something about it.
+997	And I'll tell you this, I will fight for a clean environment in ways that strengthen our economy.
+998	It would have eliminated the AmeriCorps plan and it would have cut back on student loans and scholarships.
+999	I think that we've had something to do with that, just as we have with the drug problem nationwide.

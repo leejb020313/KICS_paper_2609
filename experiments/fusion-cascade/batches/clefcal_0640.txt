@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	But my job is to ask two questions, sir.
+641	You were trying to defend your cut which was not a cut either, Reduction in the growth of spending.
+642	Every dollar that I've proposed, I've proposed an additional cut so that it matches.
+643	And we're going to have to make it clear that we don't want to use the kinds of tools that we have.
+644	I'd like to be that leader with your support.
+645	I've worked on these things for 12 years and I'm the only person up here who hasn't been part of Washington in any way for the last 20 years.
+646	That's having a government from the people.
+647	And, as I say, we've had tough economic times, and it's exports that have saved us, exports that have built.
+648	When I watch the deals being made, when I watch what's happening with some horrible things like Obamacare, where your health insurance and health care is going up by numbers that are astronomical, 68 percent, 59 percent, 71 percent, when I look at the Iran deal and how bad a deal it is for us, it's a one-sided transaction where we're giving back $150 billion to a terrorist state, really, the number one terror state, we've made them a strong country from really a very weak country just three years ago.
+649	And when I went to Israel as a candidate, I didn't take donors.
+650	In the Far East I think we need to continue to be uh - strong and uh - I would certainly uh - pursue the uh - normalization of uh - relationships with the People's Republic of China.
+651	I want to see asymmetrical reductions in conventional forces.
+652	The Wall Street Journal said 96 percent of small businesses are not affected at all by my plan.
+653	Governor Carter has embraced the record of the present Congress, dominated by his political party.
+654	We now have five nations that have atomic bombs that we know about.
+655	And, you know, we can't be -- we can't allow ourselves to get overextended.
+656	Before I campaigned as a Democrat for a Republican candidate for President, I had already voted for Dwight Eisenhower to be President of the United States.
+657	Governor, we have actually produced more oil --
+658	But more importantly, let the people in our own country realize that we still live in the greatest nation on earth.
+659	You must be tough and smart.
+660	I also had a program starting last year.
+661	In Lebanon, this President exercised American power, all right, but the management of it was such that our marines were killed, we had to leave in humiliation, the Soviet Union became stronger, terrorists became emboldened.
+662	It's also important that we look at the entire global situation.
+663	It shouldn't be that way.
+664	No, Bob, regrettably, we have not moved far enough along.
+665	As for offshore oiling, only 2% now is so leased and is producing oil.
+666	Because I settled that lawsuit with no admission of guilt, but that was a lawsuit brought against many real estate firms, and it's just one of those things.
+667	Now, I think that's the right strategy; I think that's the right policy.
+668	But they should be paying us, because we are providing tremendous service and we're losing a fortune.
+669	President Clinton ran for governor in 1990 and said he's going to fill out his term, but he didn't.
+670	And the promise of the revolution was democracy, human rights, free labor unions, free press.
+671	Look at that horrible -- these are radical Islamic terrorists.
+672	It finally gets to 50 cents at the end of the 5th year.
+673	But what's been happening over the last couple of years is, as we've watched this tumult in the Middle East, this rising tide of chaos occur, you see Al Qaida rushing in, you see other jihadist groups rushing in.
+674	We've achieved an arms control agreement that our critics thought was never possible and I want to build on it.
+675	He voted against student loans; he voted against my improved student loan plan; he voted against the National Service bill, against the HeadStart bill; he voted against our efforts in safe and drug-free schools.
+676	In California - I'm surprised Governor Reagan brought this up - he had the three largest tax increases in the history of that state under his administration.
+677	Even though I have consistently opposed the legalization of drugs all my public life and worked hard against them.
+678	But you heard the president just say to you that we've added money.
+679	And everybody says they take responsibility.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	They will pay a price if I'm elected.
+201	We are in a situation where we have foreign countries trying to interfere in the outcome of our election.
+202	He's being fed information that is Russian, that is not true.
+203	Joe got three and a half million dollars from Russia.
+204	You got three and a half million dollars.
+205	Your family got three and a half million dollars and you know someday, you're gonna have to explain - why did you get three and a half?
+206	I never got any money from Russia.
+207	I sold - while he was selling pillows and sheets - I sold tank busters to Ukraine.
+208	And I'll tell you, they were so bad.
+209	They took over the, the submarine port.
+210	They were paying you a lot of money and they probably still are, but now, with what came out today, it's even worse.
+211	We learn that this President paid 50 times the tax in China, has a secret bank account with China, does business in China, and in fact, is talking about me taking money?
+212	I have not taken a single penny from any country whatsoever, ever, number one.
+213	The foreign countries are paying you a lot.
+214	I want to do it, and it will show how successful, how great this company is.
+215	So, I already prepaid it.
+216	Number two, I don't make money from China, you do.
+217	I don't know, maybe you're not.
+218	Your son said we have to give 10% to the big man.
+219	I get treated worse than the Tea Party got treated.
+220	Come on, come on, folks.
+221	I was put through a phony witch hunt for three years.
+222	His son didn't have a job for a long time, was sadly no longer in the military service, I won't get into that.
+223	Everybody investigated that, no one said anything he did was wrong in Ukraine.
+224	Excuse me, and then unlike him, where he's Vice President, and he does business, I then decided to run for president after that.
+225	What I'd make China do is play by the international rules, not like he has done.
+226	We need to be having the rest of our friends with us, saying to China, these are the rules.
+227	His son walked out with a billion and a half dollars from China -
+228	First of all, China is paying.
+229	You're sitting at the kitchen table this morning deciding, well, we can't get new tires, they're bald, because we have to wait another month or so.
+230	Let's get off the subject of China, let's talk around sitting around the table.
+231	So, when I met with Barack Obama, we sat in the White House, right at the beginning had a great conversation, was supposed to be 15 minutes and it was well over an hour.
+232	On the condition that he would agree that he would be drawing down his nuclear capacity to get -- the Korean Peninsula should be a nuclear free zone.
+233	Remember the first two or three months.
+234	Through the legislature, I terminated the individual mandate.
+235	The individual mandate -- where you have to pay a fortune for the privilege of not having to pay for bad health insurance.
+236	I terminated it; it's gone.
+237	I could have gone the other route and made everybody very unhappy.
+238	I don't know that it's going to work.
+239	What I would like to do is a much better health care, much better.

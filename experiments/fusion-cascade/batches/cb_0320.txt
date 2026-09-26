@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	It's with him and with the hateful and divisive campaign that he has run, and the inciting of violence at his rallies, and the very brutal kinds of comments about not just women, but all Americans, all kinds of Americans.
+321	Nine million people -- nine million people lost their jobs.
+322	That's a big, big difference.
+323	You've made a lot of it because of the fact that you've been in office.
+324	So I believe that this election has become in part so -- so conflict-oriented, so intense because there's a lot at stake.
+325	And, in fact, violent crime is one-half of what it was in 1991.
+326	It may be because of our experiences.
+327	We're going to do it by having the wealthy pay their fair share and close the corporate loopholes.
+328	And I think it's going down.
+329	That's the kind of economy I want us to see again.
+330	We are going to cut taxes massively.
+331	But we have to stop our jobs from being stolen from us.
+332	But we have no leadership.
+333	But he never apologizes for anything to anyone.
+334	If you go with what Hillary is saying, in the ninth month, you can take the baby and rip the baby out of the womb of the mother just prior to the birth of the baby.
+335	We can build a new modern electric grid.
+336	First time they've ever endorsed a candidate.
+337	After 9/11, when the 28 nations of NATO said that they would go to Afghanistan with us to fight terrorism, something that they still are doing by our side.
+338	They'll pay off our national debt.
+339	As an example, in San Bernardino, many people saw the bombs all over the apartment of the two people that killed 14 and wounded many, many people.
+340	Whether it's Syria, you name it.
+341	The Russians have said, according to many, many reports, I can't believe they allowed us to do this.
+342	Now, you're talking about taking out ISIS.
+343	And with all of the money they have, we're defending them, and they're not paying?
+344	They've never endorsed anybody before on immigration.
+345	I am going to help the inner cities.
+346	So I'm happy to compare my 30 years of experience, what I've done for this country, trying to help in every way I could, especially kids and families get ahead and stay ahead, with your 30 years, and I'll let the American people make that decision.
+347	I'm getting rid of the carried interest provision.
+348	It's really -- it's really very interesting.
+349	I'm just amazed that he seems to think that the Iraqi government and our allies and everybody else launched the attack on Mosul to help me in this election, but that's how Donald thinks.
+350	The president nominates, and then the Senate advises and consents, or not, but they go forward with the process.
+351	You know, Hillary is hitting me with tremendous commercials.
+352	We should be better than anybody else, and perhaps we're not.
+353	You should meet with some of the women that I have met with, women I have known over the course of my life.
+354	If we set those goals and we go together to try to achieve them, there's nothing in my opinion that America can't do.
+355	Well, I'll tell you what it means.
+356	So I think we could strike a deal and make it very clear to the Russians and the Syrians that this was something that we believe was in the best interests of the people on the ground in Syria, it would help us with our fight against ISIS.
+357	I know -- I know about Russia, but I know nothing about the inner workings of Russia.
+358	All I said, that it's very possible that if they don't pay a fair share, because this isn't 40 years ago where we could do what we're doing.
+359	That line's getting a little bit old, I must say.

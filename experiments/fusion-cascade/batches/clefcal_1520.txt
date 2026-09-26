@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1520	One of the women, who is a wonderful woman, at 12 years old, was raped at 12.
+1521	I have a clear record of reaching across the aisle, whether it be Joe Lieberman or Russ Feingold or Ted Kennedy or others.
+1522	They didn't have the right body armor.
+1523	Some of it's said -- somebody who's been very vicious to me, Rosie O'Donnell, I said very tough things to her, and I think everybody would agree that she deserves it and nobody feels sorry for her.
+1524	We're not going to spend billions on MX's on railroad cars, which is a weapons system we don't need, can't afford and won't help our defense posture at all.
+1525	If you have a child, you got a $1,000 child credit.
+1526	Virginia's in the lead in this, as Governor Clinton properly said, on this identification system for firearms.
+1527	It's now 121/4, and I predict it'll be coming down a little more shortly.
+1528	Yes, we shouldn't trade arms for hostages.
+1529	When I was in the senate before I became vice president I was pushing for stronger action against Milosevic.
+1530	And we need to promote maternity group homes, which my administration has done.
+1531	I voted for every sanction against Iran when I was in the Senate, but it wasn't enough.
+1532	In fact, independent studies have looked at our respective plans and have concluded that I provide three times the amount of tax relief to middle-class families than Senator McCain does.
+1533	It is -- our country has the slowest growth and jobs are a disaster.
+1534	Because you got a big tax increase.
+1535	And the way to do that is to increase our exports.
+1536	It may be a long period, but we must - we must get started immediately.
+1537	One of the great giveaways of all time, of all time, including $400 million in cash.
+1538	Before even the election day, something that none of those economists had even predicted had happened, that the economy was so worsened that I was openly saying that what we had thought on the basis of our plan could have brought a balanced budget -- no, that was no longer possible.
+1539	The other party gives them lip service.
+1540	Businesses can contribute, employees can contribute on a contractual basis.
+1541	And there are a number of things.
+1542	The President says he wants to eliminate or reduce the number of nuclear weapons.
+1543	The reason Medicare and Medicaid are a mess is we froze them.
+1544	Governor Rockefeller says five per cent.
+1545	My opponent says he hadn't changed his position on it.
+1546	And again I know Senator D'Amato I think may have had a hearing or two on Whitewater, I can't remember, but he's not my general chairman, he's a friend of mine.
+1547	I spend a lot of time in hospitals.
+1548	I've uh - been one who's loved my nation as many Americans do, and I believe that there's no limit placed on what we can be in the future, if we can harness the tremendous resources - militarily, economically, and the stature of our people, the meaning of the Constitution, in the future.
+1549	They're stronger now than at any time since 2001.
+1550	Now, the problem is that they didn't think these things through properly.
+1551	That's one of the unintended consequences of Dodd-Frank.
+1552	The answer is to invest and grow this economy.
+1553	I think there was a good opportunity to bring Republicans and Democrats together to reform the Social Security system so seniors will never go without.
+1554	Sorry, time for diplomacy is over.
+1555	And then you heard what I said about it, and all of a sudden you were against it.
+1556	Do you really think that our armed forces are really acceptably strong in those areas of conventional capability where they should be?
+1557	The farmers were the victims of the double-digit inflation and the 211/2-percent interest rates of the Carter-Mondale administration and the grain embargo, which destroyed our reliability nationwide as a supplier.
+1558	The people I talked to their spirits were high.
+1559	In other words, we were down to 18% of them were making -- 18- to 24-year- olds were making less than $12,000.

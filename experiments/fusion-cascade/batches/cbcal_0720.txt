@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	The second topic, which is you said you get a deduction for taking a plant overseas.
+721	Now when the president ran for office, he said that he'd put in place, in his first year, a piece of legislation -- he'd file a bill in his first year that would reform our -- our immigration system, protect legal immigration, stop illegal immigration.
+722	This puts us on a road to Greece.
+723	You mentioned the Navy, for example, and that we have fewer ships than we did in 1916.
+724	It's not my term, it's the president's own Secretary of Defense, called them devastating.
+725	And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards.
+726	I met a young woman in -- in Philadelphia who's coming out of -- out of college, can't find work.
+727	Now, Governor Romney actually wants to expand those tax breaks.
+728	I will fight to create more energy in this country, to get America energy secure.
+729	We went because there were people who were responsible for 3,000 American deaths.
+730	And yet my faith and confidence in the American future is undiminished.
+731	We should have taken a leading role, not militarily, but a leading role organizationally, governmentally to bring together the parties; to find responsible parties.
+732	So we did work on this, alongside working on jobs, because this is part of making sure that middle-class families are secure in this country.
+733	And you could never quite get the job done.
+734	Instead, it's gone up by that amount.
+735	I made that clear when I came into office.
+736	But let me mention another thing.
+737	Which was a program under this administration, and how it worked exactly I think we don't know precisely, where thousands of automatic, and AK-47 type weapons were -- were given to people that ultimately gave them to -- to drug lords.
+738	Oil production is up, natural gas production is up, and, most importantly, we're also starting to build cars that are more efficient.
+739	But to the issue of Iran, as long as I'm president of the United States Iran will not get a nuclear weapon.
+740	That makes a big difference, but that requires some federal support.
+741	So for those reasons, for the tax, for Medicare, for this board, and for people losing their insurance, this is why the American people don't want Medicare -- don't want Obamacare.
+742	We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas.
+743	And this is one of the reasons why one of the first -- the first bill I signed was something called the Lily Ledbetter bill.
+744	And then we noticed that there was more than one with that same serial number.
+745	We're still down 580,000 jobs.
+746	So as soon as we found out that the Benghazi consulate was being overrun, I was on the phone with my national security team and I gave them three instructions.
+747	The president's policies have been exercised over the last four years and they haven't put Americans back to work.
+748	And that means 98 percent of American families, 97 percent of small businesses, they will not see a tax increase.
+749	You know, his -- his running mate, Congressman Ryan, put forward a budget that reflects many of the principles that Governor Romney's talked about.
+750	Number two, I'll take programs that are currently good programs but I think could be run more efficiently at the state level and send them to the state.
+751	But I believe -- we want to make sure that we have the relationships of friendship with the people that take his place, steps that in the years to come we see Syria as a -- as a friend, and Syria as a responsible party in the Middle East.
+752	You also have investments outside the United States.
+753	But I have said that for incomes over $250,000 a year, that we should go back to the rates that we had when Bill Clinton was president, when we created 23 million new jobs, went from deficit to surplus, and created a whole lot of millionaires to boot.
+754	I'm all for oil production.
+755	People around the world with accredited degrees in science and math get a green card stapled to their diploma, come to the U.S. of A.
+756	But I'm going to make an important point here, Jim.
+757	When they said, "We're going to cut Planned Parenthood funding."
+758	Number two, we do have to deal with our border so we put more border patrol on the -- any time in history and the flow of undocumented works across the border is actually lower than it's been in 40 years.
+759	Not the one we've been on, not the one the president describes as a top-down, cut taxes for the rich.

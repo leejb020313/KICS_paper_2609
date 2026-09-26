@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	We are once again reliable suppliers and I would never use food as a political tool like our predecessors did.
+241	I believe that we have uh - negotiated with the Soviet Union since I've been president from a position of strength.
+242	My obligation right now is to do well for myself, my family, my employees, for my companies.
+243	Until about five months ago the Japanese economy was in a deep recession.
+244	I want to finally get something done on Social Security.
+245	The Fed is being more political than Secretary Clinton.
+246	Look at Lynn Martin, who's fighting against this glass ceiling and doing a first-class job on it.
+247	Number two, that strip-mining bill would've severely set back our need for more coal, and Governor Carter has said repeatedly that coal is the resource that we need to use more in the effort to become independent of the uh - Arab oil supply.
+248	And I think the federal government could be in a position where we would offer and provide that.
+249	I've reached across the aisle.
+250	I commend you for supporting that.
+251	What will be the leadership of the president in these areas to provide equality of opportunity for employment?
+252	And that state we controlled spending.
+253	What kind of rights will Americans have?
+254	I should make it very clear that I do not think we're doing enough, that I am not satisfied as an American with the progress that we're making.
+255	Therefore I support the Brady bill which would impose a national waiting period unless and until a state did what only Virginia has done now, which is to automate its records.
+256	I went to Yad Beshef (ph), the Holocaust museum there, to remind myself the nature of evil and why our bond with Israel will be unbreakable.
+257	Well, the Massachusetts furlough program was unique.
+258	It's a haven for drug smugglers and we don't have a firm policy when it comes to Fidel Castro.
+259	If I have anything in politics, it's my word.
+260	And the kinds of budget proposals that you've put forward, when we don't ask either you or me to pay a dime more in terms of reducing the deficit, but instead we slash support for education, that's undermining our long-term competitiveness.
+261	And the notion that we would sit with Ahmadinejad and not say anything while he's spewing his nonsense and his vile comments is ridiculous.
+262	That's the kind of leadership we've shown.
+263	And it was major -- a major factor in bringing about the end of the Cold War.
+264	If you look at his record in the Senate, he voted to break the caps -- the spending caps -- over 200 times.
+265	Well, let's admit it then.
+266	Donald thinks that climate change is a hoax perpetrated by the Chinese.
+267	Let me just point out first of all this board that we're talking about can't make decisions about what treatments are given.
+268	I referred to the Dingle-Norwood bill.
+269	His top adviser on immigration is the guy who designed the Arizona law, the entirety of it; not E-Verify, the whole thing.
+270	Right now, we are at 90 percent health insurance coverage.
+271	Well again, if you're somebody thinking about the future, I think it's fair to say that it'll be -- we'll work it out.
+272	I think Mr. Perot put his finger on something there.
+273	So we always had a rule, we divided by six.
+274	So banks are reluctant to make loans, mortgages.
+275	It puts a heavy burden on a states like California.
+276	And I think that's a good thing.
+277	My opponent says J. Danforth Quayle.
+278	When we're talking about math that doesn't add up, how about $4 trillion of deficits over the last four years, $5 trillion?
+279	And 3 days after the election in 1982, they came to us and said, Social Security, we know, is broke.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1720	I think it's interesting to point out that uh - in the uh - two years that I've been president I've vetoed fifty-six bills.
+1721	He knew these flights were going on long before and that wasn't the reason that he broke up the conference.
+1722	And now this economy is growing.
+1723	Is it true that, as far as this country is concerned, in the field of electric power, in all of the fields that he has mentioned, we have not been moving ahead.
+1724	That just happened, and many more are coming.
+1725	Our hearts and -- and minds go out to them.
+1726	I think I've addressed it.
+1727	And I want to honor that among his other achievements here.
+1728	I believe this economy is sound and that we're going to move up.
+1729	You were promised that Medicare would be reformed, and that Social Security would be reformed.
+1730	If the tax cut is your number one, two, three and four priority, you can't do education.
+1731	In California, we made 37 billion dollars' worth of telecommunications equipment eligible for export for the first time.
+1732	Four thousand people a day are coming across the border.
+1733	And to take a chance uh - now be - and not make every effort that we could make to provide for some control over these weapons, I think would be a great mistake.
+1734	But do not erode out of the system the thousand points of light.
+1735	Our military is second to none in the world.
+1736	But I believe it would have been much more unfair to have had John Anderson denied the right to participate in this debate.
+1737	They put out a plan, a bipartisan plan.
+1738	Same thing with oil, same thing with natural gas.
+1739	The average person wasn't benefitting.
+1740	We don't have to settle for 50 percent of kids coming out of college not able to get work.
+1741	We've had a 73% increase in the allotment of Federal funds for improved education.
+1742	They make $51,000 combined income, they pay about $3500 in taxes.
+1743	The disagreement I have with Governor Romney is that, during the course of this campaign, he's often talked as if we should take premature military action.
+1744	And I'm proposing a plan that will give tax credits and tax incentives for the rapid development of new kinds of cars and trucks and buses and factories and boilers and furnaces that don't have as much pollution, that don't burn as much energy, and that help us get out on the cutting edge of the new technologies that will create millions of new jobs.
+1745	That's the kind of leadership we'll continue to show.
+1746	That's how they do things.
+1747	And the last thing I wanna make is this.
+1748	If a local school district in Cleveland or anyplace else wants to have a private choice plan like Milwaukee did, let them have at it.
+1749	And finally, he said he's going to have a novel health care plan.
+1750	I think we have a real obligation, obviously public officials.
+1751	These are constitutional rights, and I want to make sure we have judges who interpret the Constitution of the United States according to the law.
+1752	-- me, or your own eyes?''
+1753	It means that the United States must have a strong diplomatic hand with our friends in NATO.
+1754	And it's a big fight.
+1755	We have devoted ourselves to our children and now our nearly one-and-a-half-year-old grandson.
+1756	One of the reasons why I think it's important for this nation to develop an anti-ballistic missile system that we can share with our allies in the Middle East if need be to keep the peace to be able to say to the Saddam HusseinÃ¢â‚¬â„¢s of the world or the Iranians, don't dare threaten our friends.
+1757	In the last few years government has gotten bigger and bigger; industry has gotten larger and larger; labor unions have gotten bigger and bigger; and our children have been the victims of mass education.
+1758	That's kind of a pre-September 10th mentality, the hope that somehow resolutions and failed inspections would make this world a more peaceful place.
+1759	He better not be or there's going to be a consequence should I be the president.

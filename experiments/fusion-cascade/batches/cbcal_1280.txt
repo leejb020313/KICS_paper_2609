@@ -1,0 +1,51 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1280	I think most Americans would say that doesn't make sense.
+1281	And your plan is to take the tax rate on successful small businesses from 35 percent to 40 percent.
+1282	Unfortunately, the economy is not stronger.
+1283	It's just a tragedy in a nation so prosperous as ours, that the last four years have been so hard.
+1284	And with respect to this pipeline that Governor Romney keeps on talking about, we've -- we've built enough pipeline to wrap around the entire earth once.
+1285	We have a responsibility to protect the lives and liberties of our people, and that means a military second to none.
+1286	And it's referred to as an assault weapon ban, but it had, at the signing of the bill, both the pro-gun and the anti-gun people came together, because it provided opportunities for both that both wanted.
+1287	There's a fundamentally different vision about how we move our country forward.
+1288	And so what we're seeing is a pretty dramatic reversal in the kind of hopes we had for that region.
+1289	You've seen, as middle-income people in this country, incomes go down $4,300 a family, even as gasoline prices have gone up $2,000.
+1290	We created 23 million new jobs.
+1291	But what I've also said is that now that you have a democratically elected government in Egypt, that they have to make sure that they take responsibility for protecting religious minorities.
+1292	That's not how we're going to move our economy forward.
+1293	The federal government didn't hire our teachers.
+1294	Well, I did with my first statement.
+1295	And you ask how -- how are we going to do that?
+1296	We created partnerships throughout the region to deal with extremism in Somalia, in Yemen, in Pakistan.
+1297	And what we're seeing right now is, in my view, a -- a trickle-down government approach, which has government thinking it can do a better job than free people pursuing their dreams.
+1298	Because if you bring rates down, it makes it easier for small business to keep more of their capital and hire people.
+1299	Look, I want to make sure we use our oil, our coal, our gas, our nuclear, our renewables.
+1300	And so I've put forward a specific $4 trillion deficit reduction plan.
+1301	And natural gas isn't just appearing magically.
+1302	And we do have a difference, though, when it comes to definitions of small business.
+1303	That means those cars can be exported, 'cause that's the demand around the world, and it also means that it'll save money in your pocketbook.
+1304	We're actually drilling more on public lands than in the previous administration and my -- the previous president was an oil man.
+1305	They look at our -- our decision to -- to cut back on our military capabilities.
+1306	You said we should have gone into Iraq, despite that fact that there were no weapons of mass destruction.
+1307	I ran the -- the state of Massachusetts as a governor, to the extent any governor does, and balanced the budget all four years.
+1308	We're a nation that believes in the Second Amendment, and I believe in the Second Amendment.
+1309	We need to have strong allies.
+1310	We have to get our economy going.
+1311	That is not the kind of leadership that you need, but you should expect that those are promises he's going to keep.
+1312	So any -- any language to the contrary is simply not accurate.
+1313	And we have fought back for four years to get out of that mess.

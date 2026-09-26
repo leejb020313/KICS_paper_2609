@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	He's been a professor for a long time at a great school.
+1	There's no way they would give it up.
+2	They're able to charge women more for the same exact procedure a man gets.
+3	As far as a say is concerned, the people already had their say.
+4	I am the Democratic Party right now.
+5	Well, there's seven million people that contracted COVID.
+6	So don't tell me about this.
+7	I'm happy to talk about this.
+8	You would have been much later, Joe, much later.
+9	And so the election is all-
+10	Why is it on the ballot?
+11	And we will protect people.
+12	I'll give you an example.
+13	Take a look at all of the drugs that what we're doing.
+14	On Super Tuesday, you got very lucky.
+15	And tonight I'm going to make sure.
+16	Because here's the deal, here's the deal.
+17	The fact is that everything he's saying so far is simply a lie.
+18	The wrong guy, the wrong night, at the wrong time.
+19	You agreed with Bernie Sanders on a plan that you absolutely agreed to and under that plan [crosstalk], they call it socialized medicine.
+20	He has never offered a plan.
+21	We took away the individual mandate.
+22	We guaranteed pre-existing conditions, but took away the individual mandate.
+23	If I run it badly, they'll probably blame him, but they'll blame me.
+24	But more importantly, I want to help people.
+25	So we do want to get rid of it.
+26	And the fact is this man doesn't know what he's talking about.
+27	Whatever position I take on that, that'll become the issue.
+28	The issue is the American people should speak.
+29	You want to put a lot of new Supreme Court Justices.
+30	Will you shut up, man?
+31	Listen, who is on your list, Joe?
+32	We, in fact, have 4% of the world's population, 20% of the deaths.
+33	40,000 people a day are contracting COVID.
+34	Well, it is what it is because you are who you are.
+35	In addition to that, what did he do?
+36	And what did he do then?
+37	I laid out back in March, exactly what we should be doing.
+38	And I laid out again in July, what we should be doing.
+39	We should be providing all the protective gear possible.

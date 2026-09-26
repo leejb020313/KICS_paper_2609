@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2280	And one of the reasons that's important is that Israel cannot have direct dialogue with some of the people on the other side of conflicts, especially during times of tension, unless that dialogue comes through us.
+2281	My plan -- you can read my plan.
+2282	And the result is interest costs that have never been seen before in terms of real charges, and it's attributable to the deficit.
+2283	And we now know that he was not out of the loop; he was in meeting after meeting listening to Secretary Shultz and Secretary Weinberger opposing that, and yet he supported it.
+2284	Over 50 percent - 53 to be exact - percent of the tax benefits go to the 14 percent richest people in this country, and we've had a 50 percent increase in payroll deductions since Mr. Nixon went in office eight years ago.
+2285	Well, I certainly hope not.
+2286	It's good for small businesses, good for owners.
+2287	It means that we are cracking down on CEOs and making sure that they're not getting bonuses or golden parachutes as a consequence of this package.
+2288	Now we can talk about Putin.
+2289	In the meantime, we've got challenges, for example, with China, where we are borrowing billions of dollars.
+2290	If you pay any tax at all, you got tax relief.
+2291	So in other words, it's pretty divided during the 1990s as well.
+2292	And it's going to take all the nations together, just as when we banded together we pretty much resolved the whole problem of skyjackings sometime ago.
+2293	Let me just quickly say, at the current pace, the president will not secure the loose material in the Soviet Union -- former Soviet Union for 13 years.
+2294	Maybe we can work that out.
+2295	In the past seven years, in President Eisenhower's Administration, this situation has been reversed.
+2296	But when it came time to making sure that Gadhafi did not stay in power, that he was captured, Governor, your suggestion was that this was mission creep, that this was mission muddle.
+2297	And the only thing that looks good is the stock market, but if you raise interest rates even a little bit, that's going to come crashing down.
+2298	There are 357, 000 good jobs -- manufacturing jobs, which are lost.
+2299	I support charter schools and pay for performance for teachers.
+2300	We're using every asset at our disposal to get Osama bin Laden.
+2301	It was the only one in the nation that furloughed murderers who had not served enough time to be eligible for parole.
+2302	I'm not sure I get -- help me with the question and I'll try to answer it.
+2303	This is an - a typical example, maybe of many others, where this administration overthrew an elected government and helped to establish a military dictatorship.
+2304	So I want to proceed carefully to cover more people.
+2305	But I do think we need to find out where racial profiling occurs and do something about it and say to the local folks, get it done.
+2306	If we make the right choices, we can have a prosperity that endures and enriches all of our people.
+2307	When you stop and think that we are only drilling on 2%.
+2308	And I'm very very proud of that choice.
+2309	No other state programs do that.
+2310	It went before a judge, who was a very against-police judge.
+2311	Well, I'm really calling for major jobs, because the wealthy are going create tremendous jobs.
+2312	But it started for me in the last eight years when I had the honor of casting the tie-breaking vote to end the old economic plan here at home and put into place a new economic plan that has helped us to make some progress, 22 million new jobs, the greatest prosperity ever.
+2313	And we're going to get the job of containing all of that nuclear material in Russia done in four years.
+2314	You asked me a question.
+2315	I think that in ten years, we can reduce our dependence so that we no longer have to import oil from the Middle East or Venezuela.
+2316	Well, let me just say quickly that I've had an extraordinary experience of watching up close and personal that transition in Russia, because I was there right after the transformation.
+2317	It is actually a disagreement between us, a national law that is pending on this, the Dingle-Norwood bill, a bipartisan bill, is one that I support and that the governor does not.
+2318	Already, we have a recovery that has been going on for about 21 months to the point that we can now call it an expansion.
+2319	But it's getting worse by the day.

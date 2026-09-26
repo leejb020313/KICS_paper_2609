@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	And plenty of companies that are already here, they'll leave for other places.
+81	Manufacturing went in a hole-
+82	I brought back 700,000 jobs.
+83	We have a higher deficit with China now than we did before.
+84	What did he do to deserve it?
+85	Some people don't do a good job.
+86	We want to talk about families and ethics.
+87	He came out of his bunker, had the military use tear gas on them so he could walk across to a church and hold up a Bible.
+88	And then what happened after that?
+89	The general who was with him said All he ever wants to do is divide people not unite people at all.
+90	And why aren't you saying those words, Joe?
+91	There's systemic injustice in this country, in education and work and in law enforcement and the way in which it's enforced.
+92	They have to be held accountable.
+93	When they run through the middle of the town-
+94	If you were a certain person, you had no status in life.
+95	And if you look at the people, we would pay people hundreds of thousands of dollars to teach very bad ideas and frankly, very sick ideas.
+96	We have to go back to the core values of this country.
+97	And I'm not going to allow that to happen.
+98	People have to be made aware of what other people feel like, uh, what insults them, what is demeaning to them.
+99	It's important that people know.
+100	It's a little bit like how this guy and, and his friends look down on so many people.
+101	There's nothing we cannot do, if we do it together.
+102	Look what happened in Baltimore.
+103	The places we had trouble were Democratic-run cities...
+104	I think it's a party issue.
+105	The numbers are going up a 100, 150, 200 percent, uh, crime, it is crazy what's going on ...
+106	I was raised in the suburbs.
+107	That's not what it ...
+108	And so here, here's the point.
+109	Instead of going in and talking to people and saying, \Let's get everybody together."
+110	You mean, I have to answer his stuff?
+111	I'll send in the National Guard, it would be over.
+112	Proud Boys, stand back and stand by.
+113	And we now got a 91% approval rating at the VA, our vets.
+114	We take care of our vets.
+115	Because President Obama and him left me 128 judges to fill.
+116	You can't be a good Vice President but I want to thank you because it gives us almost, it'll probably be above that number.
+117	With regard to being weaker, the fact is that I've gone head to head with Putin and made it clear to him we're not going to take any of his stuff.
+118	He still refuses to even say anything to Putin about the bounty on the heads of American soldiers.
+119	When we were in office there were 15% less violence in America than there is today.

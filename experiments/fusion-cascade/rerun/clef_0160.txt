@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	If it's not me, I'll support the outcome.
+161	You see the spikes in Europe and many other places right now.
+162	If you notice, the mortality rate is down, 85%.
+163	The excess mortality rate is way down, and much lower than almost any other country.
+164	I can tell you from personal experience that I was in the hospital, I had it.
+165	Whether it's four months or a lifetime, nobody's been able to say that, but I'm immune.
+166	If you hear nothing else I say tonight, hear this.
+167	Anyone who's responsible for not taking control - in fact, not saying, I take no responsibility, initially - anyone who is responsible for that many deaths should not remain as President of the United States of America.
+168	We're in a situation where there are thousands of deaths a day, a thousand deaths a day.
+169	Compared to what's going on in Europe, as the New England Medical Journal said, they're starting from a very low rate.
+170	And we're in a circumstance where the President, thus far, still has no plan.
+171	I would make sure we move in the direction of rapid testing, investing in rapid testing.
+172	No, it's not a guarantee but it will be by the end of the year, but I think it has a good chance.
+173	Make sure it's totally transparent.
+174	I don't think we're going to have a dark winter at all.
+175	When I closed and banned China from coming in heavily infected, and then ultimately Europe, but China was in January - months later he was saying I was xenophobic, I did it too soon.
+176	Look, his own person who ran that for him who, as you know was his chief of staff, said 'It was catastrophic, it was horrible, we didn't know what we were doing.'
+177	And he did it late, after 40 countries had already done that.
+178	I'd love to put myself in the basement or in a beautiful room in the White House and go away for a year and a half until it disappears.
+179	Can I respond to that?
+180	What should they do about the danger?
+181	They kept it from going into the rest of China, for the most part, but they didn't keep it from coming out to the world including Europe and ourselves.
+182	The fact is, that when we knew it was coming, when it hit - what happened?
+183	Well, I think we have to respond, if I might.
+184	And he supports all these people.
+185	Young people, I guess it's their immune system.
+186	There's depression, alcohol, drugs at a level that nobody's ever seen before.
+187	We're gonna be able to walk and chew gum at the same time.
+188	I mean, you're going to sit there in a cubicle wrapped around with plastic?
+189	For so many years, I loved it.
+190	The money's already been passed to do that.
+191	Kristen, New York has lost more than 40,000 people.
+192	We can't let that happen, Joe, you can't let that happen.
+193	We have to open up and we understand the disease, we have to protect our seniors, we have to protect our elderly, we have to protect, especially, our seniors with heart problems and diabetes problems, and we will protect them.
+194	But, guess what, in the meantime, we find out in the New York Times the other day that in fact, his folks went to Wall Street and said, 'this is a really dangerous thing,' and a memo out of that meeting - not from his administration, but from some of the brokers - said, 'sell short, because we gotta get moving.
+195	But I don't want to do that because it puts me in a bad position.
+196	You shouldn't be bringing up Wall Street.
+197	In fact, we beat Hillary Clinton with a tiny fraction of the money that she was able to get.
+198	Don't tell me about Wall Street.
+199	They will pay a price.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	You're the one that sent the pictures around your campaign, sent the pictures around with President Obama in a certain garb.
+281	But Russia has been expanding their -- they have a much newer capability than we do.
+282	Yeah, well, let's start the clock again, Lester.
+283	When you talk about healing, I think that I've developed very, very good relationships over the last little while with the African-American community.
+284	That's what we want America to be for our children and our grandchildren.
+285	Now, I'm all for alternative forms of energy, including wind, including solar, et cetera.
+286	I have 21 Congressional Medal of Honor recipients who endorsed me.
+287	I think it would be a great gesture.
+288	But you were in contact -- excuse me.
+289	I do think the use of special forces, which we're using, the use of enablers and trainers in Iraq, which has had some positive effects, are very much in our interests, and so I do support what is happening, but let me just...
+290	I want us to do more to help small business.
+291	Number one, the 28 countries of NATO, many of them aren't paying their fair share.
+292	You're going to have plans...
+293	Let me tell you, if she's president of the United States, nothing's going to happen.
+294	We know how to get control of the debt.
+295	We have 17 -- 17 intelligence agencies, civilian and military, who have all concluded that these espionage attacks, these cyberattacks, come from the highest levels of the Kremlin and they are designed to influence our election.
+296	I think that it basically has fallen.
+297	Because his whole plan is to cut taxes, to give the biggest tax breaks ever to the wealthy and to corporations, adding $20 trillion to our debt, and causing the kind of dislocation that we have seen before, because it truly will be trickle-down economics on steroids.
+298	I want to have a tax on people who are making a million dollars.
+299	We are killing -- absolutely killing our energy business in this country.
+300	I think it is a part of it, and I've said what I'm going to do.
+301	They want support, they want more training, they want more assistance.
+302	It's how we got the sanctions on Iran that put a lid on the Iranian nuclear program without firing a single shot.
+303	Some of it's said -- somebody who's been very vicious to me, Rosie O'Donnell, I said very tough things to her, and I think everybody would agree that she deserves it and nobody feels sorry for her.
+304	He now also aligned with Iran, who we made very powerful.
+305	You have to be able to negotiate, that's right, with Japan, with Saudi Arabia.
+306	Very interesting why she's leaving carried interest.
+307	There are a lot of great businesspeople that have never taken bankruptcy once.
+308	It's a good one, though.
+309	So what I'm saying is, we can stop them from leaving.
+310	Who gave it that name?
+311	And that's why 10 people who have had that awesome responsibility have come out and, in an unprecedented way, said they would not trust Donald Trump with the nuclear codes or to have his finger on the nuclear button.
+312	I -- I find it ironic that he's raising nuclear weapons.
+313	He's 10 years old now.
+314	You go to New England, you go to Ohio, Pennsylvania, you go anywhere you want, Secretary Clinton, and you will see devastation where manufacture is down 30, 40, sometimes 50 percent.
+315	First of all, I agree, and a lot of people even within my own party want to give certain rights to people on watch lists and no- fly lists.
+316	When we have a country that's doing so badly, that's being ripped off by every single country in the world, it's the kind of thinking that our country needs, because everybody -- Lester, we have a trade deficit with all of the countries that we do business with, of almost $800 billion a year.
+317	We have to stop them from leaving.
+318	We have people that want to fight both at the same time.
+319	It stripped us of manufacturing jobs.

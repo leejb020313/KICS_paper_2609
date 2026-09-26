@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1200	I propose we grade our schools so parents know which schools are succeeding and failing, so they can take their child to a -- to a school that he's being more successful.
+1201	Governor, the problem is, is that on a whole range of issues, whether it's the Middle East, whether it's Afghanistan, whether it's Iraq, whether it's now Iran, you've been all over the map.
+1202	In the meantime, folks out there with insurance, you're already getting a rebate.
+1203	It's wonderful that Libya seems to be making some progress, despite this terrible tragedy.
+1204	Syria is Iran's only ally in the Arab world.
+1205	My plan is not like anything that's been tried before.
+1206	I want high wage, high skill jobs.
+1207	But the Saudi's and the Qatari, and -- and the Turks are all very concerned about this.
+1208	It was very clear this was not a demonstration.
+1209	And so we have to understand that we can't just surrender and lose jobs year in and year out.
+1210	The average middle-class family with children would pay about $2,000 more.
+1211	And finally, we don't want to have military involvement there.
+1212	And unfortunately, that's the kind of opinions that you've offered throughout this campaign, and it is not a recipe for American strength, or keeping America safe over the long haul.
+1213	It's hurt the housing market because Dodd-Frank didn't anticipate putting in place the kinds of regulations you have to have.
+1214	Making life so miserable on folks that they'll leave.
+1215	But when it came time to making sure that Gadhafi did not stay in power, that he was captured, Governor, your suggestion was that this was mission creep, that this was mission muddle.
+1216	It's small business that creates the jobs in America, and over the last four years, small business people have decided that America may not be the place to open a new business because new business startups are down to a 30-year low.
+1217	I told you I'd cut taxes for small businesses, and I have.
+1218	You had credit agencies that were stamping these as A1 great investments when they weren't.
+1219	He said that by now we'd have unemployment at 5.4 percent.
+1220	Actually, this $2.8 billion goes largely to small companies, to drilling operators and so forth.
+1221	And this -- I love this idea of $4 trillion in cuts.
+1222	And, unfortunately, Governor Romney's budget and his proposals would not allow us to make those investments.
+1223	The proof of that is we've gone from 32 million on food stamps to 47 million on food stamps.
+1224	Number two, we're going to have to stop illegal immigration.
+1225	They're back away from a nuclear proliferation treaty that we had with them.
+1226	And those principles include human rights, human dignity, free enterprise, freedom of expression, elections.
+1227	You know, because of the intelligence coordination that we do with a range of countries, including Israel, we have a sense of when they would get breakout capacity, which means that we would not be able to intervene in time to stop their nuclear program.
+1228	We should be playing the leadership role there, not on the ground with military.
+1229	And then I went down to the border towns of Storok (ph), which had experienced missiles raining dowm from Hamas.
+1230	And he said that the reason he changed his mind was, in part, because he was seeking the endorsement of the National Rifle Association.
+1231	Governor Romney, that's not what you said...
+1232	The approach that Governor Romney's talking about is the same sales pitch that was made in 2001 and 2003, and we ended up with the slowest job growth in 50 years, we ended up moving from surplus to deficits, and it all culminated in the worst financial crisis since the Great Depression.
+1233	The commanders and the generals there are on track to do so.
+1234	When it comes to community colleges, we are setting up programs, including with Nassau Community College, to retrain workers, including young people who may have dropped out of school but now are getting another chance, training them for the jobs that exist right now.
+1235	When it comes to Social Security, as I said, you don't need a major structural change in order to make sure that Social Security is there for the future.
+1236	They said, "Well, these are the people that have the qualifications."
+1237	Well, but he gets the first word of that segment.
+1238	Because the president cut in half the number of licenses and permits for drilling on federal lands, and in federal waters.
+1239	And we know where it came from: two wars that were paid for on a credit card; two tax cuts that were not paid for; and a whole bunch of programs that were not paid for; and then a massive economic crisis.

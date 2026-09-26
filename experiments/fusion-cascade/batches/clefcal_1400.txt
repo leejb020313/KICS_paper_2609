@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1400	We're doing better than a lot of the countries in the world.
+1401	When FDR established Social Security, they didn't call them IOUs, they called it the full faith and credit of the United States.
+1402	And plus, we cut taxes for everybody.
+1403	It was not an extreme bill and yet we could not get one Republican to join, at least I think four of the eight Democrats voted to send it to the floor of the House - not one Republican - and they joined with those Democrats who were opposed to it.
+1404	I'm against quotas, they're illegal.
+1405	That is why I say that in this period of the sixties, America must move forward in every area.
+1406	That's part of what took us from deficits to surplus.
+1407	And it's referred to as an assault weapon ban, but it had, at the signing of the bill, both the pro-gun and the anti-gun people came together, because it provided opportunities for both that both wanted.
+1408	There is a tax gap.
+1409	The Soviet Union relationship with Syria is at a very low point.
+1410	Five million Americans have lost their health insurance in this country.
+1411	The national intelligence assessment that was given to the president in July said, best-case scenario, more of the same of what we see today; worst-case scenario, civil war.
+1412	We were succeeding, and that was why the terrorist acts began.
+1413	I think a hospitable society is a society where every being counts and every person matters.
+1414	We rank first in the country in job growth, we got the lowest spending, state and local, in the country, and the 2nd lowest tax burden.
+1415	You didn't even have tax cuts in your budget, Mr. President, the first two years you were president.
+1416	In addition, many of the countries around the world still keep restrictions against our goads, going all the way back to the days when there was a dollar shortage.
+1417	In fact, he doubled it.
+1418	And Texas ranks 49th out of the 50 states in health care -- in children with health care.
+1419	But it's also tremendously important to bear in mind that when you pour in money without pouring in technical assistance at w- as well, that you have a disastrous situation.
+1420	Ladies and gentlemen, the right war was Osama bin Laden and Afghanistan.
+1421	I think that what -- I think the point of that is that anybody would have a hard time trying to make a tax cut plan that is so large, that would put us into such big deficits, that gives almost half the benefits to the wealthiest of the wealthy.
+1422	But when you look at NATO, I was asked on a major show, what do you think of NATO?
+1423	If you're paying $12, $13, $14 an hour for a factory worker, and you can move your factory south of the border, pay $1 an hour for labor, hire a young -- let's assume you've been in business for a long time.
+1424	#NAME?
+1425	Now, I know that the only way he can win is to make everybody believe the economy's worse than it is.
+1426	When I came into office, we were still bogged down in Iraq and Afghanistan had been drifting for a decade.
+1427	What I'd also like to point out the Iranians are putting the most lethal IEDs into Iraq which are killing young Americans, there are special groups in Iran coming into Iraq and are being trained in Iran.
+1428	But to add one other feature, I don't control any of the tapes.
+1429	And, you know, we've heard a lot about -- from the governor about not much being done in the last eight years, as if the promises that I made eight years ago have not been kept.
+1430	The trillion comes from the surplus.
+1431	That is my position on SDI and it's never wavered a bit.
+1432	And we were talking about immigrants a few minutes ago, Chris.
+1433	Not at all, Mr. Trewhitt, and I want you to know that also I will not make age an issue of this campaign.
+1434	There are 200,000 people in California, for example, who have lost their defense related jobs.
+1435	And you will see the dozens of sources which verify that he was for the invasion of Iraq.
+1436	I know others disagree with it.
+1437	We had an even worse oil shock in 1979.
+1438	We must let them know that the great American ideals - of independence, of the right of people to be free, and of the right to progress - that these are ideals that belong not to ourselves alone, but they belong to everybody.
+1439	The second biggest surplus next to Japan.

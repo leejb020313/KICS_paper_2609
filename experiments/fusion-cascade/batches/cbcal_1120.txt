@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1120	And I am confident that Assad's days are numbered.
+1121	A half a million manufacturing jobs have been lost in the last four years.
+1122	This is for Governor Romney?
+1123	First time one state had been number one in all four measures.
+1124	It's been growing about 12 percent per year over a long period of time.
+1125	Or, alternatively, it's got to be paid for, not only by closing deductions for wealthy individuals, that -- that will pay for about 4 percent reduction in tax rates.
+1126	And we have to have a president who can reach across the aisle and fashion important legislation with the input from both parties.
+1127	I'm planning on (inaudible) to grow.
+1128	That's what we've done, made some adjustments to it, and we're putting it forward before Congress right now, a $4 trillion plan...
+1129	In the private sector, Governor Romney's company invested in what were called pioneers of outsourcing.
+1130	As I indicated, our objectives are to replace Assad and to have in place a new government which is friendly to us, a responsible government, if possible.
+1131	You got that fact wrong.
+1132	Why wouldn't we want to eliminate that?
+1133	We didn't ask for it.
+1134	The unemployment, the number of people who are still looking for work, is still 23 million Americans.
+1135	You've now heard three debates, months of campaigning and way too many TV commercials.
+1136	We're four years closer to a nuclear Iran.
+1137	And it's estimated that that will create 800,000 new jobs.
+1138	And so the right course for us, is working through our partners and with our own resources, to identify responsible parties within Syria, organize them, bring them together in a -- in a form of -- if not government, a form of -- of -- of council that can take the lead in Syria.
+1139	Now with respect to what we've done with China already, U.S. exports have doubled since I came into office, to China and actually currencies are at their most advantageous point for U.S. exporters since 1993.
+1140	So we're already beginning to see progress.
+1141	But the problem is, he hasn't described what exactly we'd replace it with, other than saying we're going to leave it to the states.
+1142	Number two, open up more trade, particularly in Latin America.
+1143	But -- but what it did do is to -- if you extrapolated how much money we're talking about, you'd look at cutting the education budget by up to 20 percent.
+1144	And I'll get us on track to a balanced budget.
+1145	But there are always going to be elements in these countries that potentially threaten the United States.
+1146	I was just at a coal facility, where some 1,200 people lost their jobs.
+1147	Well, Katherine, that's a great question.
+1148	When we're talking about math that doesn't add up, how about $4 trillion of deficits over the last four years, $5 trillion?
+1149	Because if they put their currency down low, that means their prices on their goods are low.
+1150	Russia does continue to battle us in the U.N. time and time again.
+1151	Well what you're seeing in this country is 23 million people struggling to find a job.
+1152	That's exactly what our budget does, but it's driven by strategy.
+1153	You'll virtually -- it's virtually impossible given our regulations."
+1154	But what I've also said is, if we're serious about reducing the deficit, if this is genuinely a moral obligation to the next generation, then in addition to some tough spending cuts, we've also got to make sure that the wealthy do a little bit more.
+1155	That's why we've got to make sure that we've got the best science and research in the world.
+1156	I mean, I had a friend who said you don't just pick the winners and losers, you pick the losers, all right?
+1157	But the president mentioned the auto industry and that somehow I would be in favor of jobs being elsewhere.
+1158	So that's the next area I'm different than President Bush.
+1159	What I do is the same way that Tip O'Neill and Ronald Reagan worked together some years ago.

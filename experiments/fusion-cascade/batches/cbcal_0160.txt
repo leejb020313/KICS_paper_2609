@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	I'm glad you raised that, and it's a -- it's a critical issue.
+161	And by the way, I've had that experience.
+162	You'll never balance the budget by raising taxes.
+163	Number two, with regards to Iran and the threat of Iran, there's no question but that a nuclear Iran, a nuclear-capable Iran is unacceptable to America.
+164	It was the largest expansion of private insurance.
+165	Because they are low wage, low skill jobs.
+166	I've sat across the table from people who were out of work and worked with them to try and find new work or to help them through tough times.
+167	But you've been -- but you've been president four years...
+168	This is a nation, which, if it falls apart, if it -- if it becomes a failed state, there are nuclear weapons there and you've got -- you've got terrorists there who could grab their -- their hands onto those nuclear weapons.
+169	I was proud of the fact that after I staffed my Cabinet and my senior staff, that the University of New York in Albany did a survey of all 50 states, and concluded that mine had more women in senior leadership positions than any other state in America.
+170	My path is designed in getting small businesses to grow and hire people.
+171	Let me just finish the point.
+172	And the answer is neither the president nor I are proposing any changes for any current retirees or near retirees, either to Social Security or Medicare.
+173	Not only that, he said, "I think that's what grows the economy."
+174	There are now a large number of Afghan Security Forces, 350,000 that are ready to step in to provide security and we're going to be able to make that transition by the end of 2014.
+175	Those investments are what's going to help to make sure that we continue to lead this world economy, not just next year, but 10 years from now, 50 years from now, 100 years from now.
+176	Under no circumstances would I do anything other than to help this industry get on its feet.
+177	I want to take that $716 billion you've cut and put it back into Medicare.
+178	And there was no demonstration involved.
+179	I see our trade deficit with China, larger than it's -- growing larger every year, as a matter of fact.
+180	Then when there were dissidents in the streets of Tehran, a Green Revolution, holding signs saying, is America with us, the president was silent.
+181	The middle-class has been crushed over the last four years, and jobs have been too scarce.
+182	...because the private sector's not going to invest in a...
+183	In the meantime, by the way, we also made sure that all the help that we provided those banks was paid back every single dime, with interest.
+184	There are six other studies that looked at the study you describe and say it's completely wrong.
+185	The president said he'd cut the deficit in half.
+186	That's already offered in the private marketplace.
+187	I see jihadists continuing to spread, whether they're rising or just about the same level, hard to precisely measure, but it's clear they're there.
+188	With Mali now having North Mali taken over by Al Qaida; with Syria having Assad continuing to -- to kill, to murder his own people, this is a region in tumult.
+189	Was -- Lorranna -- Lorraine -- we are a nation of immigrants.
+190	And Governor Romney, our alliances have never been stronger, in Asia, in Europe, in Africa, with Israel, where we have unprecedented military and intelligence cooperation, including dealing with the Iranian threat.
+191	So 77 government programs, everything from aircrafts that the Air Force had ordered but weren't working very well, 18 government -- 18 government programs for education that were well-intentioned, not weren't helping kids learn, we went after medical fraud in Medicare and Medicaid very aggressively, more aggressively than ever before, and have saved tens of billions of dollars, $50 billion of waste taken out of the system.
+192	And we -- we look for discovery and innovation, all these things desired out of the American heart to provide the pursuit of happiness for our citizens.
+193	We absolutely have to make more progress and that's why we're going to keep on pressing.
+194	One of the reasons -- or one of the ways they don't play by the rules is artificially holding down the value of their currency.
+195	And these aren't just representatives of the United States, they are my representatives.
+196	That's its most basic function.
+197	How strong is our economy?
+198	I want to get us on track to a balanced budget, and I'm going to reduce the tax burden on middle income families.
+199	You said, "Look, I'm going to extend the tax policies that we have now; I'm not going to raise taxes on anyone, because when the economy is growing slow like this, when we're in recession, you shouldn't raise taxes on anyone."

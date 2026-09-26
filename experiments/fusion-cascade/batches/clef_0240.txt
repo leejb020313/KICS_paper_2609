@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	We'll always protect people with pre-existing - so I'd like to terminate Obamacare, come up with a brand new beautiful health care.
+241	And I think we're going to win the House, okay?
+242	You'll see, but I think we're gonna win the House.
+243	We have 180 million people out there that have great private health care, far more than we're talking about with Obamacare.
+244	It's gotten endorsed by all the major labor unions as well as, as well as a whole range of other people who in fact, are concerned in the medical field.
+245	And this is going to give some people an opportunity, an opportunity to have health care for their children, how many of you home are worried and rolling around in bed at night wondering what in God's name are you going to do if you get sick?
+246	Excuse me, he was there for 47 years - he didn't do it.
+247	And they're going to have lower premiums, you can buy into the better plans, the cheaper plans, lower your premiums, deal with unexpected billing, and have your drug prices drop significantly.
+248	And this whole country will come down.
+249	And the idea that we're in a situation and are going to destroy Medicare - this is the guy that the actuary of Medicare said, 'If in fact' - and, social security - 'If, in fact, he continues to withhold his plan to withhold the tax on Social Security, Social Security will be bankrupt by 2023, with no way to make up for it.
+250	Go back and look at the records.
+251	What happens to the ordinary people out there?
+252	And he doesn't come from Scranton.
+253	And it's gone through, including the Democrats, in all fairness.
+254	And look at what's happening.
+255	What's the matter with these guys.
+256	We were going to take care of everything for them.
+257	If I get elected, I'm not gonna - I'm running as a proud Democrat, but I'm gonna be an American president.
+258	What I see is American, United States.
+259	They allowed the federal government to deficit spend to compensate for the United States of America.
+260	I do, because I think one of the things we're gonna have to do is we're gonna have to bail them out, too.
+261	They passed a package that allows us to be able to call PPP, money's supposed to go to help them do everything from organize how they could deal with their businesses being open safely.
+262	I think it should be a state option.
+263	We have to help, it's very important.
+264	And then they had a picture in a certain newspaper.
+265	But a lot of these kids come out without the parents, they come over through cartels and through coyotes and through gangs.
+266	Who built the cages, Joe?
+267	And now they cannot find over 500 sets of those parents and those kids are alone.
+268	I'd love you to ask that, who built the cages?
+269	And the fact is, I've made it very clear, within 100 days, I'm going to send to the United States Congress a pathway to citizenship for over 11 million undocumented people.
+270	The catch and release, you know what he's talking about there?
+271	That's never happened before in America.
+272	They're sitting in squalor on the other side of the river.
+273	Catch and release is a disaster.
+274	She has a graduate degree from the University of Pennsylvania in social work.
+275	All the things we can do.
+276	Ten-year, long term funding, and I gave them more money than they asked for, because I said, 'I think you need more'.
+277	The fact of the matter is, in 2000 though, after the crime bill had been in the law for a while, this is the guy who said, 'The problem with the crime bill, there's not enough people in jail.
+278	And secondly, we're in a situation here where we - the federal prison system was reduced by 38,000 people under our administration.
+279	No one should be going to jail because they have a drug problem.

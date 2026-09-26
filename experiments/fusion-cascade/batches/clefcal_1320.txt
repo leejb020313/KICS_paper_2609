@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1320	We are not a nation in decline.
+1321	The foreign policy of the United States meets the highest standards of morality.
+1322	You know, because it sounds like you're in the business or you're aware of people in the business -- you know that we are now for the first time ever energy-independent.
+1323	But I don't think it's just experience that makes the difference.
+1324	I think we ought to do plastic surgery on a lot of these guys so that they're all ears, too, and listen to you.
+1325	The Philippines -- we've got help -- we're helping them there to bring -- to bring Al Qaida affiliates to justice there.
+1326	And Main Street is paying a penalty for the excesses and greed in Washington, D.C., and in the Wall Street.
+1327	We've made progress in Northern Ireland, in the Middle East.
+1328	That's the largest cut in the discretionary domestic budget since Dwight Eisenhower.
+1329	I will pay down the national debt.
+1330	The Duelfer report confirmed that decision today, because what Saddam Hussein was doing was trying to get rid of sanctions so he could reconstitute a weapons program.
+1331	This is a Main Street tax cut, 15 percent across -- let's take a family making $30,000 a year, that's $1261.
+1332	I would like to make a change in the regulation that discriminates against a wife who works and finds that she then is faced with a choice between her father's or her husband's benefits, if he dies first, or what she has paid in; but it does not recognize that she has also been paying in herself, and she is entitled to more than she presently can get.
+1333	And people, Chris, will again go back to work and they'll make a lot of money.
+1334	And that for them is a catastrophically low number.
+1335	The president said by now we'd be a 5.4 percent unemployment.
+1336	That's why we included in the financial package a proposal to get homeowners in a position where they can renegotiate their mortgages.
+1337	Eleven other presidents -- six Democrats and five Republicans -- had wars, had recessions, had great difficulties; none of them lost jobs the way this president has.
+1338	And more importantly, that was after getting a subpoena.
+1339	I have a direct relationship with hundreds of people around - hundreds of thousands around the country who actively campaign for me.
+1340	And that law has died in committee also because of the same kind of opposition.
+1341	And those are the standards that I will use in nominating people to the Supreme Court of the United States.
+1342	Also, we'll never be strong again overseas, unless we're strong at home.
+1343	So the point is -- the point is that I have repudiated every time someone's been out of line, whether they've been part of my campaign or not, and I will continue to do that.
+1344	As a matter of fact, Latin America's economy is almost as big as the economy of China.
+1345	What about drugs that have increased, doubled in the last 44 months?
+1346	I want to correct, the all these things I voted against, they were probably part of some big package that had a lot of pork in it or a lot of things that we shouldn't have had and we probably voted no.
+1347	But if I look at the facts as a businessman, it's so tilted, the first thing you ought to do is just say, guys, if you like these deals so well, we'll give you the deal you gave us.
+1348	So my approach is to say, how do we strengthen the system over the long term?
+1349	And I think I did a good job.
+1350	And there's no market forces involved with health care.
+1351	Well, I told you, I will release them as soon as the audit.
+1352	Another thing that concerned me was what Mr. Ford said about unemployment, that - insinuating that under Johnson and Kennedy that unemployment could only be held down when this country is at war.
+1353	And if the Congress won't do it, if they can't get together and negotiate how to do that, then you'd have a sequester across the board.
+1354	I certainly didn't feel I should commit American troops to throw him out of where he had gone, and that was the only way to do that.
+1355	Well, Mr. Nixon uh- I'll just give you the testimony of Mr. George Aiken - Senator George Aiken, the ranking minority member - Republican member - and former chairman of the Senate Agricultural Committee testifying in 1959 - said there were twenty-six million Americans who did not have the income to afford a decent diet.
+1356	President Eisenhower, on the night before the Normandy invasion, went into his room, and he wrote out two letters.
+1357	The facts are after my plan, the wealthiest of Americans pay more taxes of the percentage of the whole than they do today.
+1358	I - I have to say that my campaign has been an open one.
+1359	To get the interest rates down.

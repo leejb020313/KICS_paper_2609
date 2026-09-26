@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1800	We now have 2500 hospices.
+1801	At one point, while you were focused on Iraq, you said well, we can "muddle through" Afghanistan.
+1802	We need to make it clear we're for human liberty.
+1803	As I understand it, we're building some 14 military bases there now, and some people say they've got a rather permanent concept to them.
+1804	The federal government taking over health care for the entire nation and whisking aside the 10th Amendment, which gives states the rights for these kinds of things, is not the course for America to have a stronger, more vibrant economy.
+1805	But I want to remind you, the number of uninsured in America during their watch has increased.
+1806	But it's not going to solve the problem.
+1807	And that's because we structured the plan so that six million additional American families pay no taxes.
+1808	Now, does this mean that his program is better than ours?
+1809	So Medicare, it's going to be a little tougher.
+1810	Teddy Roosevelt used to talk about the arena, you know, daring to fail greatly or succeed, no matter.
+1811	What I don't accept is demonstrating and organizing demonstrations in a foreign country when your country's at war.
+1812	It takes public money and gives it to families or individuals to choose the school they want.
+1813	But the dynamics of the economy - we cut the taxes and revenues are up by 25 percent in three years.
+1814	I don't look on it personally as relevant, and I consider it really a waste of time tonight, when you consider the issues that face our country right now.
+1815	That I can tell you.
+1816	Now, for four years that's what I worked on.
+1817	And the B - 1 is similarly to be opposed, because for 15 years the Soviet Union has been preparing to meet the B - 1.
+1818	Now, just because we don't want to get involved everywhere doesn't mean we should back off anywhere it comes up.
+1819	One of the major errors they made was the one that led to the Korean War.
+1820	And since then, for years, I have lived with the burden of the Middle East, where it's eye for an eye and tooth for a tooth country, in terms of their unhappiness with the fact that I was successful in that effort.
+1821	We've got to get after the users more.
+1822	So far, it is only a beginning.
+1823	You must say that if you receive money you must show us whether or not children are learning to read and write and add and subtract.
+1824	We have, as I said, cut the taxes, but we have reduced inflation, and for 2 years now it has stayed down there, not at double digit, but in the range of 4 or below.
+1825	I'm going to keep my word to you.
+1826	When I ran for president, I said we'd cut the deficit in half in four years; we cut it by 60 percent.
+1827	The Joint Chiefs urged the President not to put our troops in that barracks because they were indefensible.
+1828	When a person is on a watch list or a no-fly list, and I have the endorsement of the NRA, which I'm very proud of.
+1829	Look, the African-American community has been let down by our politicians.
+1830	The deal with Iran will lead to nuclear problems.
+1831	They want support, they want more training, they want more assistance.
+1832	I've been saying that for over a year now.
+1833	I have heard you say this time after time.
+1834	I think you're right that the polls show that the majority of Hispanics want that bill, so I'm not doing it for political reasons.
+1835	They're going to have to make the decision themselves.
+1836	And I do believe it would be inhibiting.
+1837	Now they have -- he has aligned with Russia and with Iran.
+1838	I want to have the military keeping the peace.
+1839	This is the kind of thing that would have been discussed and thoroughly evaluated well before that kind of --

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1560	And he now completes this term with no progress toward arms control at all, but with a very dangerous arms race underway instead.
+1561	But I don't think the IMF ought to be a stop loss for people who ought to be able to evaluate risks themselves.
+1562	You know, the vibrancy of the black church, the black businesses that employ so many people, the opportunities that so many families are working to provide for their kids.
+1563	That's already offered in the private marketplace.
+1564	And this is known oil reserves, known supplies.
+1565	They're using cheap hand guns.
+1566	You know, we have to be right 100 percent of the time.
+1567	We have came out of the recession and we're well on the road to real prosperity in this country again.
+1568	First of all, Governor Romney talks about small businesses.
+1569	Where there are no failing schools, where the classrooms are small enough in size, number of students, so that the teacher can spend enough one-on-one time with each student.
+1570	In fact, the Trump Hotel right here in Las Vegas was made with Chinese steel.
+1571	Should I be fortunate enough to become your president, when I put my hand on the Bible, I will swear to not only uphold the laws of the land, but I will also swear to uphold the honor and the dignity of the office to which I have been elected, so help me God.
+1572	...the choice in this election is going to be whose promises are going to be more likely to help you in your life?
+1573	It was a terrorist attack and it took a long time for that to be told to the American people.
+1574	They don't want to see the world break out into -- into various forms of chaos, because they have to -- they have to manufacture goods and put people to work and they have about 20,000 -- 20 million, rather, people coming out of the farms every year coming into the cities, needing jobs.
+1575	Very early in my administration I proposed -- and I think something that had never been proposed by any previous administration -- I proposed a total elimination of intermediate-range missiles, where the Soviets had better than a 10 -- and still have -- better than a 10-to-1 advantage over the allies in Europe.
+1576	I worked very hard and was very proud to be re-elected in New York by an even bigger margin than I had been elected the first time.
+1577	First of all, I like the way we did it in Massachusetts.
+1578	Mr. Bush said once again I was going to have $150 billion tax increase.
+1579	... including $3 million for an overhead projector in a planetarium in his hometown.
+1580	We had 7 billion this year and 10 billion more than the president.
+1581	I notice that the Governor did not mention any testing.
+1582	There has been five or six of them and if you wait long enough, there will probably be another one.
+1583	Ronald Reagan was the last president...
+1584	Well, it's awfully hard to get them to pay up when you have somebody saying we think how great they are.
+1585	The only involvement I've had with ACORN was I represented them alongside the U.S. Justice Department in making Illinois implement a motor voter law that helped people get registered at DMVs.
+1586	And so, today, we are 90 percent of the casualties and 90 percent of the cost: $200 billion -- $200 billion that could have been used for health care, for schools, for construction, for prescription drugs for seniors, and it's in Iraq.
+1587	After all, a lot of the energy is produced from the Middle East, and so I appreciate what the administration is doing.
+1588	He can't come here and tell you that he's created health care for Americans because, what, we've got 5 million Americans who have lost their health care, 96,000 of them right here in Missouri.
+1589	You know, regulations cost the average family right here, Democrat or Republican, about $7,000 a year.
+1590	I have been accused lately of having a secret plan with regard to the hostages.
+1591	When you have 900 files gathered up by some guy who is a bouncer in a bar and hired a security officer to collect files, in Watergate -- I know a person who went to jail for looking at one file, one FBI file.
+1592	But we have got to instill values in these young people.
+1593	On the tax cut, it's a big decision.
+1594	But that's already the law and that doesn't help the millions of people out there with preexisting conditions.
+1595	And then 5 days before the troops were killed, they went back to the President, through the Secretary of Defense, and said, "Please, Mr. President, take those troops out of there because we can't defend them.''
+1596	First, the Joint Chiefs of Staff went to the President, said, "Don't put those troops there.''
+1597	First of all, let me say that I've spent more of my time and life on this in the last 12 years than any other issue.
+1598	Energy we have to deal with today, because you're paying $3.80 here in Nashville for gasoline, and it could go up.
+1599	Now that's not a flip-flop.

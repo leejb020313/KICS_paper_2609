@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1200	We also have 50 percent of doctors who say they won't take more Medicare patients.
+1201	And in my state I'm proud to say we've organized a drug education and prevention program which the Federal Drug Enforcement Administration says is a model for the country.
+1202	Andrea, I don't know which George Bush I'm listening to.
+1203	Now, under Senator McCain's plan there is a strong risk that people would lose their employer-based health care.
+1204	I mean, you say we've done all these bad things, which isn't the case.
+1205	You add all the states that've used the instant check and how many weapons they keep, kept out of the hands of criminals.
+1206	He says, well, he's going to raise the taxes on the rich -- that's what he said -- the top two brackets.
+1207	But we were succeeding to the point that the Lebanese Government had been organized -- if you will remember, there were the meetings in Geneva in which they began to meet with the hostile factional forces and try to put together some kind of a peace plan.
+1208	Well, I definitely think there are differences.
+1209	They did it on the Medicaid prescription drug bill and we have to change the culture.
+1210	And so I've put forward a specific $4 trillion deficit reduction plan.
+1211	Slashing taxes on the wealthy hasn't worked.
+1212	We have restored much of our economy.
+1213	Here is the role of the federal government.
+1214	Those on Social Security today will have their promise made, but also to give younger workers the option at their choice of being able to manage some of their own money in the private sector to make sure there's a Social Security system around tomorrow.
+1215	It is a school full of so-called at-risk children.
+1216	We proposed and passed a healthy forest bill which was essential to working with -- particularly in Western states -- to make sure that our forests were protected.
+1217	We not only fixed Medicare and took it way out into the future, we did something that you don't know how to do: We balanced the budget.
+1218	So we did work on this, alongside working on jobs, because this is part of making sure that middle-class families are secure in this country.
+1219	Our home initiative -- our home ownership initiative -- HOPE -- that passed the Congress is a good start for having people own their own homes instead of living in these deadly tenements.
+1220	And it's going to be tough.
+1221	And in the term that I've been president - some two years - we have reduced federal employment by eleven thousand.
+1222	In September 2003, he supported amnesty for illegal aliens.
+1223	But I would fight for a line-item veto, and I would certainly veto every earmark pork-barrel bill.
+1224	Quite often Congress has passed laws in the past designed to help people with uh - the ownership of homes and with the control of crime and with adequate health care and education programs and so forth.
+1225	Is the person guilty of the crime?
+1226	And they actually fact checked, and they said I was right.
+1227	It's a $500 per child tax credit.
+1228	Look what's happening to McDonnell Douglas; even Boeing is losing market share -- because we let the Europeans spend $25-$40 billion on Airbus without an appropriate competitive response.
+1229	And you know, Bernie Sanders, he said you have bad judgment.
+1230	Is it easier for you to go and buy things in the stores than it was four years ago?
+1231	Thirdly, on medical care for the aged, this is the same fight that's been going on for twenty-five years in Social Security.
+1232	But we used that as a role model, the way he took understandable pride in his heritage, what his family means to him.
+1233	She had one of the greatest lines of all lines.
+1234	And so if Kim Jong Il decides again to not honor an agreement, he's not only doing injustice to America, he'd be doing injustice to China, as well.
+1235	As a matter of fact, that committee under Secretary Hills released about a seventy-five-page report with specific recommendations so we can do a better job uh - the weeks ahead.
+1236	If we pull back in some isolation and say we don't have to do our share, or more than our share, anymore, I believe you are going to just ask for conflagration that we'll get involved in the future.
+1237	I have talked of having zones in those cities that are run down, where there is a high percentage of people on welfare, and offer tax incentives.
+1238	If you don't grow the economy you can't get it done.
+1239	A free Iraq will help secure Israel.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1240	You know, four years ago, we were going through a major crisis.
+1241	Mr. President, I'm still speaking.
+1242	Trickle-down government has never worked here, has never worked anywhere.
+1243	Let me mention something else the president said.
+1244	It added up to well over 50 percent of what they earned.
+1245	Look, we have to have regulation on Wall Street.
+1246	You had loan officers were -- that were giving loans and mortgages that really shouldn't have been given, because the folks didn't qualify.
+1247	The top 5 percent of taxpayers will continue to pay 60 percent of the income tax the nation collects.
+1248	This is not just a women's issue, this is a family issue, this is a middle-class issue, and that's why we've got to fight for it.
+1249	But when Governor Romney says that he has a very different economic plan, the centerpiece of his economic plan are tax cuts.
+1250	This is the private market.
+1251	Now, that also means that you've got more customers.
+1252	And both Governor Romney and I agree actually that we should lower our corporate tax rate.
+1253	And I want to make sure that the next generation has those same opportunities.
+1254	And thank you for agreeing to moderate this debate this evening.
+1255	They're smart enough to know that's not a good trade.
+1256	And coal, coal production is not up; coal jobs are not up.
+1257	Second reason, it cuts $716 billion from Medicare to pay for it.
+1258	Well, actually Governor, that isn't what your plan does.
+1259	We've got 23 million people out of work or stopped looking for work in this country.
+1260	I -- I want to invest in research.
+1261	The difference between where it is and 5.4 percent is 9 million Americans without work.
+1262	And so what I do is I bring down the tax rates, lower deductions and exemptions, the same idea behind Bowles-Simpson, by the way, get the rates down, lower deductions and exemptions, to create more jobs, because there's nothing better for getting us to a balanced budget than having more people working, earning more money, paying more taxes.
+1263	And we have put significant pressure on them to make sure they're doing that; to recognize the rights of women, which is critical throughout the region.
+1264	And it makes a difference in terms of how well and effectively women are able to work.
+1265	And the only reason the unemployment rate seems a little lower today is because of all the people that have dropped out of the workforce.
+1266	Well, for 18 months he's been running on this tax plan.
+1267	But I find more troubling than this, that on -- on the day following the assassination of the United States ambassador, the first time that's happened since 1979, when -- when we have four Americans killed there, when apparently we didn't know what happened, that the president, the day after that happened, flies to Las Vegas for a political fund-raiser, then the next day to Colorado for another event, other political event.
+1268	I wasn't the one that said 5.4 percent.
+1269	First of all, Israel is a true friend.
+1270	And this was a -- this was a program of the government.
+1271	Let me give you an example.
+1272	We did it by taking $60 billion that was going to banks and lenders as middlemen for the student loan program, and we said, let's just cut out the middleman.
+1273	There are 3.5 million more women living in poverty today than when the president took office.
+1274	And today there's a memorial service for one of those that was lost in this tragedy.
+1275	I also want to make sure that we get this economy going.
+1276	I would indict him for it.
+1277	The proof of that is that 50 percent of college graduates this year can't find work.
+1278	And so, in terms of bringing down deductions, one way of doing that would be say everybody gets -- I'll pick a number -- $25,000 of deductions and credits, and you can decide which ones to use.
+1279	You know, after we killed bin Laden I was at ground zero for a memorial and talked to a young women who was four years old when 9/11 happened.

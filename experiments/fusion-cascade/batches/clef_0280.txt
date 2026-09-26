@@ -1,0 +1,55 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	That's exactly what - That's exactly what--
+281	I thought it was a terrible thing.
+282	I don't, I don't know what to say.
+283	I got criminal justice reform done, and prison reform, and opportunity zones.
+284	I don't know what to say.
+285	He's banned Muslims because they're Muslims.
+286	I didn't say 'I'm Abraham Lincoln'.
+287	One of the things is that in the '80s, we passed 100%, all 100 senators voted for it, a bill on drugs and how to deal with drugs.
+288	They should be going into treatment across the board.
+289	That's what we should be spending money on.
+290	You didn't get anything done.
+291	38,000 prisoners were released from federal prison.
+292	Why didn't you do it?
+293	You put tens of thousands of mostly Black young men in prison.
+294	You know why, Joe, because you're all talk and no action.
+295	Sometimes you gotta talk 'em into it.
+296	We have the best, lowest number in carbon emissions, which is a big standard that I noticed Obama goes with all the time.
+297	I will not sacrifice tens of millions of jobs, thousands and thousands of companies because of the Paris Accord.
+298	We have a moral obligation to deal with it.
+299	We're going to be in a position where we're going to see to it that we're going to take 4 million existing billion, buildings and 2 million existing homes and retrofit them so they don't leak as much energy, saving hundreds of millions of barrels of oil in the process and creating significant number of jobs.
+300	They came out and said very strongly, '$6,500 will be taken away from families under his plan', that his plan is an economic disaster.
+301	Look, their real plan costs $100 trillion.
+302	He thinks wind causes cancer, windmills.
+303	We are energy independent for the first time.
+304	Find me a scientist that says that.
+305	But if you want to kill the economy, get rid of your oil industry.
+306	You want -- and what about fracking?
+307	I have never said I oppose fracking.
+308	If you look at the kind of numbers that we produce for Hispanic, or Black, or Asian, it's nine times greater, the percentage gain than it was under - in three years - than it was under eight years of the two of them, to put it nicely.
+309	We saved our oil industry and now it's very vibrant and everybody has very inexpensive gasoline.
+310	And I'd stop giving to the oil industry - I'd stop giving them federal subsidies.
+311	You won't give federal subsidies to the gas and, excuse me, to solar and wind.
+312	We have to make our country totally successful, as it was prior to the plague coming in from China.
+313	We had the best Black unemployment numbers in the history of our country, Hispanic, women, Asian, people with diplomas, with no diplomas, MIT graduates, number one in the class - everybody had the best numbers.
+314	Success is going to bring us together.
+315	Your 401K's will go to hell and it'll be a very, very sad day for this country.
+316	We're going to choose to move forward because we have enormous opportunities, enormous opportunities to make things better.
+317	We can grow this economy.

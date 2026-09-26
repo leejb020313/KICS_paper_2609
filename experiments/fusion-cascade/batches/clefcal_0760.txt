@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	It also exists among minority groups.
+761	Or maybe he doesn't want the American people, all of you watching tonight, to know that he's paid nothing in federal taxes, because the only years that anybody's ever seen were a couple of years when he had to turn them over to state authorities when he was trying to get a casino license, and they showed he didn't pay any federal income tax.
+762	So, if he'd had his way, there wouldn't have been any housing project there at all.
+763	Now last week I guess it was Donna Shalala said well we'll cut Medicare a hundred billion and appoint a commission.
+764	To destroy life to save life is -- it's one of the real ethical dilemmas that we face.
+765	I think, habitually, Governor Reagan has advocated the injection of military forces into troubled areas, when I and my predecessors - both Democrats and Republicans - have advocated resolving those troubles in those difficult areas of the world peacefully, diplomatically, and through negotiation.
+766	The quality of the air is cleaner since I've been the president of the United States.
+767	Senator Obama has the most liberal voting record in the United States Senate.
+768	I think you know because you've covered these issues, that there's no way that we can build all of the weapons the Vice President says he wants to build within the defense budget.
+769	Now, he misled the American people in his speech when he said we will plan carefully.
+770	Our analysis indicates that something in the magnitude of about one hundred fifty to two hundred thousand jobs would uh - be made available.
+771	And so what I've done throughout my presidency and will continue to do is, number one, make sure that these countries are supporting our counterterrorism efforts.
+772	And therefore, wealthy people are going to get it.
+773	And that they are bad, and we ought to do something about them, and we ought to support housing legislation which this Administration has opposed.
+774	We're going to have to put in place a very comprehensive and robust strategy to help the -- the world of Islam and other parts of the world, reject this radical violent extremism, which is -- it's certainly not on the run.
+775	In the last 21 months, more than 6 million people have gotten jobs -- there have been created new jobs for those people to where there are now 105 million civilians working, where there were only 99 million before; 107, if you count the military.
+776	I just don't know how the president could have come into office, facing 23 million people out of work, rising unemployment, an economic crisis at the -- at the kitchen table, and spend his energy and passion for two years fighting for Obamacare instead of fighting for jobs for the American people.
+777	I think the General Motors thing is very relevant.
+778	And we had an initiative that we were working on to raise women's pay.
+779	It is America that's in the lead in helping with humanitarian relief for Somalia.
+780	Number one, we spend at least $60 billion a year on insurance, administrative cost, bureaucracy, and government regulation that wouldn't be spent in any other nation.
+781	It was taken away from her.
+782	I also think we should have frankly restrictions on assault weapons whose only purpose is to kill.
+783	But do we want a constitutional amendment adopted of the kind proposed by the President that gets the local politicians into the business of selecting prayers that our children must either recite in school or be embarrassed and asked to excuse themselves?
+784	I know it's not popular, and I understand the nature of your question.
+785	He was furious because he told me that it was the action of me, President Ford, that saved the lives of the crew of the Mayaguez.
+786	Let's get back to Medicare.
+787	Under budget, ahead of schedule, saved tremendous money.
+788	A lot of folks on Medicare are out there every day making the choice between food and medicine; not poor enough for Medicare-Medicaid, not wealthy enough to buy their medicine.
+789	Several government departments -- several -- had information that he was converting our aid to military purposes and trying to develop weapons of mass destruction.
+790	I mean, there are enormous opportunities out there to expand markets and to build a strong future for our farmers.
+791	Here is Ahmadinenene (ph), Ahmadinejad, who is, Ahmadinejad, who is now in New York, talking about the extermination of the State of Israel, of wiping Israel off the map, and we're going to sit down, without precondition, across the table, to legitimize and give a propaganda platform to a person that is espousing the extermination of the state of Israel, and therefore then giving them more credence in the world arena and therefore saying, they've probably been doing the right thing, because you will sit down across the table from them and that will legitimize their illegal behavior.
+792	It had all kinds of breaks for the oil companies, I mean, billions of dollars worth.
+793	You were promised a middle-class tax cut in 1992.
+794	Hillary Clinton, in terms of having people come into our country, we have many criminal illegal aliens.
+795	But Hillary Clinton wanted the wall.
+796	We saw him after the first debate spend nearly a week denigrating a former Miss Universe in the harshest, most personal terms.
+797	But the Middle East still controls a lot of the prices.
+798	So, under the circumstances, what do we do?
+799	The president -- 95 percent of the containers that come into the ports, right here in Florida, are not inspected.

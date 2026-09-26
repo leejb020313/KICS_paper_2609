@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	Term limits for members of the US Congress.
+401	The president just said that government-run health care results in poor quality.
+402	As a matter of fact, free people and free enterprises trying to find ways to do things better are able to be more effective in bringing down the cost than the government will ever be.
+403	Drug counselors out there in the street who are providing help to youngsters who come up to me and others who ask for help and want help, are doing the hard work, the heroic work, which it takes to provide that kind of leadership, that kind of counseling, that kind of support.
+404	We still have the strictest air control, or air pollution laws in the country.
+405	Then he called her "Miss Housekeeping," because she was Latina.
+406	This is the first time that I've - remember in the history of our country when we've let a foreign country circumvent or change our Bill of Rights.
+407	Governor Romney, that's not what you said...
+408	Wages are goings up for the first time in a decade.
+409	As you hear from intelligence sources even today, the -- the insurgents are highly disparate.
+410	We spend six hundred dollars per person in this country - every man, woman and child - for health care.
+411	How would it be resolved when those disputes occur?
+412	There are more people in poverty, one out of six people in poverty.
+413	But I also dropped the bottom rate from 15% to 10%.
+414	So one of the things that I have said from the start of this campaign is that we have a moral commitment as well as an economic imperative to do something about the health care crisis that so many families are facing.
+415	When a man and a women do the same amount of work, a man gets paid $1.00, a women only gets paid 59 cents.
+416	So I welcome that challenge, and just watch --
+417	Our health program - the one that Senator Javits and other Republican Senators, as well as I supported - is one that provides for all people over sixty-five who want health insurance, the opportunity to have it if they want it.
+418	We have very fundamental differences about human rights, democracy and our basic system, our basic view of human beings and of what life is all about.
+419	Now, in all fairness to Secretary Clinton -- yes, is that OK?
+420	We cut taxes for 15 million working Americans.
+421	The Muslim ban is something that in some form has morphed into a extreme vetting from certain areas of the world.
+422	And then, with the economy that would be generated from a restraint on spending, and a tax uh reduction primarily for the middle-income people, then I think the American people would be willing to make those sacrifices for peace and prosperity in the next uh - four years.
+423	We've had a uh - higher tax load from the Treasury for the farmer in the last few years with the lowest farm income in many years.
+424	Let the local entity, the city, declare this particular area, based on the standards of the percentage of people on welfare, unemployed, and so forth, in that area.
+425	And not one thing did I see, with respect, on your network about my views on agriculture, and not one did I read in any newspaper.
+426	I've had one position, one consistent position, that Saddam Hussein was a threat.
+427	The farmer produced these surpluses because the government asked him to through legislation during the war.
+428	Because if there's a two parent family, the prospect of living in poverty goes down dramatically.
+429	It's being used in 17 states right now.
+430	We're aligning facilities where the veterans live now.
+431	There is an issue with the uninsured, there sure is.
+432	The s- I believe the Soviet Union is first in outer space.
+433	I think everybody knows now we are in the worst financial crisis since the Great Depression.
+434	That's why I will never stop at anything to hunt down and kill the terrorists.
+435	And by giving them those tax cuts, they had a little more money in their pocket, and so maybe they can buy a new car.
+436	And in the meantime, we have to be strong enough to make certain that the Soviet Union never tempts us.
+437	A hundred thousand Americans a month have lost their health insurance just in the last 4 years.
+438	It would go into the Social Security Trust Fund.
+439	According to one study that was published a short time ago - the Harvard Business School study - indicated that just in the commercial sector alone of the economy, we could save between 30% and 40% of the energy that we consume in this country today.

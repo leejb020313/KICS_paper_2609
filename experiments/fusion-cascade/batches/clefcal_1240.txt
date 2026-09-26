@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1240	This was the president's plan.
+1241	If we got along well, that would be good.
+1242	How could we have not known?
+1243	That's not a grand coalition.
+1244	Including Senators previously who had supported it on the Republican side.
+1245	And the reason is because small business pays that individual rate; 54 percent of America's workers work in businesses that are taxed not at the corporate tax rate, but at the individual tax rate.
+1246	Secondly, my objection to present farm policy is that there are no effective controls to bring supply and demand into better balance.
+1247	You said we knew where the weapons of mass destruction were.
+1248	That's kind of pathetic I have to do it -- and nobody's called me yet to come up, I might mention.
+1249	What I do believe is that we can find good, common ground on issues of parental consent or parental notification.
+1250	That's why I want to continue the work we have done over partisan opposition, to work with communities to bring that crime rate down until our streets are all safe again.
+1251	But now I think there have been a couple of instances where the Burger Court has made technical rulings where an obviously guilty person was later found to be guilty.
+1252	Those who've come here illegally take their place.
+1253	That's a classic example of a strategy that's embarrassed us, strengthened our opposition, and undermined the moral authority of our people and our country in the region.
+1254	And even someone like Captain Khan, the young man who sacrificed himself defending our country in the United States Army, has been subject to attack by Donald.
+1255	Now, to -- I still -- I just have a minute here?
+1256	And when Secretary Clinton talks about people that didn't get paid, first of all, they did get paid a lot, but taken advantage of the laws of the nation.
+1257	By the way, number one I get rid of is Obamacare.
+1258	I talked in our first debate about the possibilities of helping millions and millions of welfare families to get off of welfare, and I'm proud to say that we finally have a welfare reform bill And the Ruby Samsons and Dan Lawsons, hundreds of thousands of welfare mothers in this country and in my state and across the country who today are working and earning are examples of what can happen when you provide training to those welfare mothers, some daycare for their children so that those mothers can go into a training program and get a decent job.
+1259	We're going to block grant into the states.
+1260	Washington, by itself, can't do it all.
+1261	One of those ideas was to repeal the minimum wage, and several times this year, Governor Reagan has said that the major cause of unemployment is the minimum wage.
+1262	And they have not got it done.
+1263	No, there wasn't check out a sex tape.
+1264	We have reduced inflation to about a third of what it was.
+1265	His chief education adviser is in jail He's in jail because he betrayed the public trust.
+1266	I asked: "Are you better off than you were 4 years before?''
+1267	One bank in uh - Washington, fo- for instance, gives lower interest loans for people who adequately insulate their homes or who buy efficient automobiles.
+1268	I think Mr. Perot has confronted this deficit issue, but I think it's important to point out that we really have 2 deficits in America, not one.
+1269	So I rolled the dice, I put my career on the line because I really believe the future of America is on the line.
+1270	If you're middle income, you're about where you were.
+1271	Our laws against murder are State laws.
+1272	That's what we've been doing over the last eight years and that has actually made us more safe.
+1273	And I was taking on discrimination against African-American kids in schools.
+1274	But that was something that happened.
+1275	In a recent 30-day period, 37 terrorist acts in 20 countries have been committed.
+1276	You can't change the dynamics on the ground if you've criticized the brave leader of Iraq.
+1277	Well, if you've got a kid that's extravagant, you can lecture him all you want to about his extravagance.
+1278	Iran is moving toward nuclear weapons and the world is more dangerous.
+1279	Indeed, we had to borrow $17 billion to pay the checks.

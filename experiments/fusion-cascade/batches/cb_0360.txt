@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	Four of them here tonight.
+361	And I have done a lot...
+362	And the reason I say that is not in a braggadocios way.
+363	I have major disagreements with my opponent about these issues and others that will be before the Supreme Court.
+364	And one thing I have to say.
+365	Five million homes were lost.
+366	And I was very strong.
+367	How are we going to do it?
+368	We can deploy a half a billion more solar panels.
+369	When I go around -- Lester, I tell you this, I've been all over.
+370	Hey, if she had a problem -- for 30 years she's been doing this, Anderson.
+371	She doesn't even know who the rebels are.
+372	Let's be sure we have affordable child care and debt-free college.
+373	We are a country of laws.
+374	I agree with everything she said.
+375	And I think there may be a couple of reasons.
+376	But that's the kind of thinking that our country needs.
+377	He is the first candidate ever to run for president in the last 40-plus years who has not released his tax returns, so everything he says about charity or anything else, we can't prove it.
+378	Why aren't you putting some money in?
+379	Because we talked about what we wanted to do.
+380	I was against the war in Iraq.
+381	With her, it's all talk and no action.
+382	In fact I said, is that the last jobs report before the election?
+383	You have regulations on top of regulations, and new companies cannot form and old companies are going out of business.
+384	But we're bringing the tax rate down from 35 percent to 15 percent.
+385	That's working with other nations.
+386	I believe in building safe zones.
+387	That's something that I fought against as a senator and that I would have a trade prosecutor to make sure that we don't get taken advantage of by China on steel or anything else.
+388	We're beginning to see some increase in incomes, and we certainly have had a long string of increasing jobs.
+389	And you look at our miners.
+390	And in a way, I should be complaining.
+391	And they cry when they see what's happened.
+392	People are going to pour into our country.
+393	We are so outplayed on missiles, on cease-fires.
+394	But I have a write-off, a lot of it's depreciation, which is a wonderful charge.
+395	Hillary has experience, but it's bad experience.
+396	And I know there's a lot of concern about that in some circles, but I think they should have the equipment they need so that Kurdish and Arab fighters on the ground are the principal way that we take Raqqa after pushing ISIS out of Iraq.
+397	And they've done a wonderful job, and they've been wonderful, wonderful kids.
+398	I mean, whether we like it or not, and we could be very politically correct, but whether we like it or not, there is a problem.
+399	I prepared to be president.

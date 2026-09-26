@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	And that's why I've tried to put forth specific policies and plans, trying to get it off of the personal and put it on to what it is I want to do as president.
+641	So I actually think the most important question of this evening, Chris, is, finally, will Donald Trump admit and condemn that the Russians are doing this and make it clear that he will not have the help of Putin in in this election, that he rejects Russian espionage against Americans, which he actually encouraged in the past?
+642	But I have no loans with Russia.
+643	We're not making things anymore, relatively speaking.
+644	The problem with Mosul and what they wanted to do is they wanted to get the leaders of ISIS who they felt were in Mosul.
+645	Next year they're going to go up over 100 percent.
+646	But you look at the Middle East, you started the Iran deal, that's another beauty where you have a country that was ready to fall, I mean, they were doing so badly.
+647	And I'm really glad that the premiums have started -- at least the people see what's happening, because she wants to keep Obamacare and she wants to make it even worse, and it can't get any worse.
+648	But I think it was a terrible thing to say.
+649	We cannot take four more years of Barack Obama, and that's what you get when you get her.
+650	We also have to make the economy fairer.
+651	We're going the make great deals.
+652	And look at her website.
+653	Because they're using our country as a piggy bank to rebuild China, and many other countries are doing the same thing.
+654	OK, so it hasn't fallen.
+655	Thank you very much, Chris.
+656	But I certainly will support the outcome of this election.
+657	He has cut the deficit by two-thirds.
+658	But I want to put our resources where I think they're most needed: Getting rid of any violent person.
+659	My vision of America is an America where everyone has a place, if you're willing to work hard, you do your part, you contribute to the community.
+660	The State Department has said that.
+661	So just to finish on the borders...
+662	But they were all totally -- it was all fiction.
+663	They left -- fired 1,400 people.
+664	And what I was saying that you referenced, Chris, was that I disagreed with the way the court applied the Second Amendment in that case, because what the District of Columbia was trying to do was to protect toddlers from guns and so they wanted people with guns to safely store them.
+665	President Obama, by keeping those lines, the boundary lines around each state, it was almost gone until just very toward the end of the passage of Obamacare, which, by the way, was a fraud.
+666	It's going to grow at a record rate of growth.
+667	And that's, like, no growth.
+668	Well, like everyone else, I've spent a lot of time thinking over the last 48 hours about what we heard and saw.
+669	Because what I saw what they did, which is a criminal act, by the way, where they're telling people to go out and start fist-fights and start violence.
+670	To go back to the very, very first question.
+671	So let's be clear about what the threat is and how we are best going to be able to meet it.
+672	And we were talking about immigrants a few minutes ago, Chris.
+673	Number one, insurance companies can't deny you coverage because of a pre-existing condition.
+674	... because your donors and your special interests are doing the same thing as I do, except even more so.
+675	I would specifically target Baghdadi, because I think our targeting of Al Qaida leaders -- and I was involved in a lot of those operations, highly classified ones -- made a difference.
+676	He goes after their dignity, their self-worth, and I don't think there is a woman anywhere who doesn't know what that feels like.
+677	I was so proud of law enforcement in New York, in Minnesota, in New Jersey.
+678	So I think that this is such an unprecedented situation.
+679	And when we talk about your business, you've taken business bankruptcy six times.

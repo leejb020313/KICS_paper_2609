@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1840	The drunk driver had no money.
+1841	Mr. George Allen, the head of our information service, said that a result of our being second in space, in the sputnik in 1957, and I quote him, I believe I paraphrase him accurately.
+1842	There are a million and a half people out there standing in line waiting to adopt children who can't have them any other way.
+1843	We set up a national ceiling on health care costs tied to inflation and population growth set by health care providers, not by the government.
+1844	Senator McCain mentioned Henry Kissinger, who's one of his advisers, who, along with five recent secretaries of state, just said that we should meet with Iran -- guess what -- without precondition.
+1845	And after that, a number of women have come forward saying that's exactly what he did to them.
+1846	That's where the vast majority of people get their health care.
+1847	That is why I think the Senate was right, including a majority of the Democrats, a majority of the Republicans, when they rejected Senator Kennedy's position in 1955.
+1848	Look, I've been under audit almost for 15 years.
+1849	We've cut it in half.
+1850	You can ship jobs overseas and get tax breaks for it.
+1851	Now we've been hurt in recent years in this country.
+1852	And one thing that the president said, which I want to make sure that we understand, he said that I said we should take Detroit bankrupt.
+1853	We've got to stop sending $700 billion a year to countries that don't want us very -- like us very much.
+1854	This is a relevant question here tonight.
+1855	The problem with a spending freeze is you're using a hatchet where you need a scalpel.
+1856	The last point I want to make on the issue of abortion.
+1857	He added the rate of unemployment and the rate of inflation, and it came, at that time, to 12.5% under President Ford.
+1858	And I want to make sure they get armed and they have the arms necessary to defend themselves, but also to remove -- to remove Assad.
+1859	Our military is assisting in Iraq.
+1860	Because it's God's will, whatever happens.
+1861	Just like when you ran the State Department, $6 billion was missing.
+1862	You did it in 1985.
+1863	In both cases where they've done so, there is no Soviet domination of Eastern Europe and there never will be under a Ford administration.
+1864	Both I and all my predecessors have had a deep commitment to controlling the proliferation of nuclear weapons.
+1865	It costs California taxpayers 3 billion dollars a year.
+1866	Now what greater admission is there, 16 months afterwards.
+1867	I can only say that I'm certainly relieved that my late father never did business with you.
+1868	I do disagree with her judgment in many cases.
+1869	In the Senate we passed the right of Americans to import drugs from Canada.
+1870	Their currency has dropped 80 percent.
+1871	My plan was to have the company go through bankruptcy like 7-Eleven did and Macy's and Condell (ph) Airlines and come out stronger.
+1872	If we're going to have a private voucher plan, that ought to be done at the local level or the state level.
+1873	The S & L crisis was over, they're starting to sell assets, all that money was coming in.
+1874	There are limits to this nation's ability to finance these weapons systems.
+1875	And so, not once, but twice - in 1971 - I voted on the floor of the House of Representatives against a Constitutional amendment that tried to bring prayer back into the public schools.
+1876	General Shinsheki, the Army chief of staff, said you're going to need several hundred thousand troops.
+1877	He actually got the first question.
+1878	Over the next four years, we'll continue to insist on excellence in every classroom in America so that our children have a chance to realize the great promise of America.
+1879	She didn't answer it, because when Ambassador Stevens...

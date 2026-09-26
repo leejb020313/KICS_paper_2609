@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2360	There is a woman named Winifred Skinner here tonight from Iowa.
+2361	So let me repeat, I do have respect for my opponent, for his family, for the justifiable pride he takes in his heritage.
+2362	Not if I didn't have a better idea.
+2363	Well, you know, once again, Donald is implying that he didn't support the invasion of Iraq.
+2364	Now, Governor Romney and I do share a deep interest in encouraging small-business growth.
+2365	I want to help those with disabilities fit into the mainstream.
+2366	After the United States took the initiative in working with Israel and with Egypt and achieving the Sinai II agreement - and I'm proud to say that not a single Egyptian or Israeli soldier has lost his life since the signing of the Sinai agreement.
+2367	The average working person can't - uh - can't take advantage of that, but the - the wealthier people - uh can.
+2368	Capital gains, investment tax allowance, credit for first- time homebuyers.
+2369	Now, let me say this, it is absolutely the case...
+2370	Now, he says by not overpaying hospitals and providers.
+2371	We are not going to spend the billions and trillions that Mr. Bush wants to spend on Star Wars.
+2372	There is much to be done.
+2373	The governor mentioned it earlier.
+2374	He's broken it three times in the past year already.
+2375	Because NAFTA, signed by her husband, is perhaps the greatest disaster trade deal in the history of the world.
+2376	I feel strongly about it because I don't want it to come out of my time.
+2377	We're getting rid of carried interest provisions.
+2378	I'm not sure what kind of view he's describing to me.
+2379	He believes only the right people ought to get tax relief.
+2380	When they sell in -- automatic, 16 percent, approximately.
+2381	Less than two hundred for all the countries of Africa and they need trained leadership more than anything.
+2382	And that's where there's been a great uh generation of despair, and ill health, and the lack of education, lack of purposefulness, and the lack of hope for the future.
+2383	There are extremists in all parts of the Middle East who want to kill that peace process.
+2384	They have to let you keep your kid on their insurance -- your insurance plan until you're 26 years old.
+2385	Now, look, we have the worst revival of an economy since the Great Depression.
+2386	There's a great passage of the Bible that says, "What does it mean, my brother, to say you have faith if there are no deeds?
+2387	He's extending the Administration's commitment.
+2388	Ukraine, right now, is in the sights of Vladimir Putin, those that want to reassemble the old Soviet Union.
+2389	It is our greatest ally in the region.
+2390	I am not quoting myself.
+2391	We find that your wages have gone up five times as much in the Eisenhower Administration as they did in the Truman Administration.
+2392	And I'll just make you one promise, my word is good.
+2393	Well, he's better off than he was four years ago.
+2394	They want to make sure that they have a roof over their heads and that they have the prospects of a better life in the future.
+2395	We have gone a long way toward correcting these problems, but we still have a long way to go.
+2396	The other point that I would make is this: this downgrading of how much things cost I think many of our people will understand better when they look at what happened when - during the Truman Administration when the government was spending more than it took in - we found savings over a lifetime eaten up by inflation.
+2397	It doesn't seem to me that it's needed or necessary to have legislation in this particular regard.
+2398	The mines are closed down; there are 22000 miners out of work.
+2399	Let me say first of all, I want to answer your specific question but first of all, we all agree that there should be a growing economy.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1680	They're running millions of dollars of ads against me.
+1681	Now, let's go back to Saddam Hussein.
+1682	I have increased, as president, by over 60 percent the funding for water treatment plants in the United States, the federal contribution.
+1683	So some of it is unfair.
+1684	And there is this pattern that has plagued him in the primaries and now about trying to have it both ways on all these issues.
+1685	And then, on the floor of the Illinois State Senate, he voted present.
+1686	As I indicated before, when you talk about shifting Medicaid to states, we're talking about potentially a 30 -- a 30 percent cut in Medicaid over time.
+1687	Massachusetts, our schools are ranked number one of all 50 states.
+1688	Senator Obama said the surge could not work, said it would increase sectarian violence, said it was doomed to failure.
+1689	But I'd say, if you had to separate out, I think it's experience at this level.
+1690	We're expanding veterans' health care throughout the country.
+1691	He said, no, she has leukemia, acute leukemia, a few weeks to live.
+1692	I would take the use of force very seriously.
+1693	This is the way we're going to create jobs in this country.
+1694	And when it comes to this issue, when I say that we are going to find out exactly what happened, everybody will be held accountable.
+1695	I'm here with a group of 13 people from around the country who helped me prepare.
+1696	And if we've got math teachers who are able to provide the kind of support that they need for our kids, that's what's going to determine whether or not the new businesses are created here.
+1697	I have a long record of reform and fighting through on the floor of the United States Senate.
+1698	I supported us going into Bosnia, when a number of my own party and colleagues was against that operation in Bosnia.
+1699	And I'll tell you what: We're in very serious trouble, because we have a country with tremendous numbers of nuclear warheads -- 1,800, by the way -- where they expanded and we didn't, 1,800 nuclear warheads.
+1700	It was killed in the Rules Committee.
+1701	I said she doesn't have the stamina.
+1702	Tom, wave like that and I'll look at you.
+1703	Now when the president ran for office, he said that he'd put in place, in his first year, a piece of legislation -- he'd file a bill in his first year that would reform our -- our immigration system, protect legal immigration, stop illegal immigration.
+1704	It will help you in whatever you're going to do in the next few years.
+1705	If the job were finished, I might have thought twice about seeking reelection for this job.
+1706	This kind of confusion and absence of leadership has let us drift now for two years with a constantly increasing threat of atomic weapons throughout the world.
+1707	Laos is moving in that direction.
+1708	And, number two, I said, and very strongly, NATO could be obsolete, because -- and I was very strong on this, and it was actually covered very accurately in the New York Times, which is unusual for the New York Times, to be honest -- but I said, they do not focus on terror.
+1709	But she is raising your taxes and I'm lowering your taxes.
+1710	I've been disturbed by the tone and the tenor of this campaign.
+1711	He said I want to take it from the rich, raise $150 billion from the rich.
+1712	But Saddam Hussein was a unique threat.
+1713	For a belief that law must be based on a higher law.
+1714	President Truman vetoed on the average, while he was president, about thirty-eight bills a year.
+1715	Go back to Jimmy Carter, and interest rates were 21%, inflation was 15%.
+1716	But just briefly, the Clinton Foundation made it possible for 11 million people around the world with HIV-AIDS to afford treatment, and that's about half all the people in the world who are getting treatment.
+1717	Yes, we have a $263 billion deficit.
+1718	We see in -- in Libya, an attack apparently by, I think we know now, by terrorists of some kind against -- against our people there, four people dead.
+1719	With Mali now having North Mali taken over by Al Qaida; with Syria having Assad continuing to -- to kill, to murder his own people, this is a region in tumult.

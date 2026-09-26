@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	Let's give the money directly to students.
+521	And I don't believe she does have the stamina.
+522	That's where we ought to go, and those are the programs we ought to review first.
+523	I think the president owes it to family values to show that he values America's families, whether they're people on welfare you're trying to move from welfare to work, the working poor whom I think deserve a tax break to lift them above poverty if they've got a child in the house and working 40 hours a week, working families who deserve a fair tax system and the opportunity for constant retraining; they deserve a strong economy.
+524	We still rank fifteenth among all the nations of the world in infant mortality.
+525	But when you keep star-warring it -- I never suggested where the weapons should be or what kind; I'm not a scientist.
+526	That lesson tells us two things: One, pick a President that you know will know if that tragic moment ever comes what he must know, because there'll be no time for staffing committees or advisers.
+527	And I try to do a lot of things that I think might be helpful to people.
+528	I call it trumped-up trickle-down, because that's exactly what it would be.
+529	We helped stabilize the situation with some troops, and when the African Union came, we moved them out.
+530	Well, let me just make a closing point.
+531	I was going to say something...
+532	I - I think it's accurate to say that Mr. Ford's position on gun control has changed.
+533	This is one instance where I agree with - with the Republican platform.
+534	But I have said that for incomes over $250,000 a year, that we should go back to the rates that we had when Bill Clinton was president, when we created 23 million new jobs, went from deficit to surplus, and created a whole lot of millionaires to boot.
+535	Thirty-five to forty countries in the world had a greater capability of making weapons at the moment the president invaded than Saddam Hussein.
+536	Mr. Ford, again, under pressure from the atomic energy lobby, has insisted that this reprocessing or rather re-en- enrichment be done by private industry and not by the existing uh - government uh - plants.
+537	And so, of course we want to bring international pressures to bear on Russia in hopes that that will modify and eventually change their behavior.
+538	What I cared about is could we work together.
+539	And I really want to just talk about something slightly different.
+540	And he is leaving office with a popularity at an all-time high, because American people
+541	Howard, I'm a Southerner, and I share the basic beliefs of my region that an excessive government intrusion into the private affairs of American citizens and also into the private affairs of the free enterprise system.
+542	But if you calculated that unemployment rate, taking back the people who dropped out of the workforce, it would be 10.7 percent.
+543	And $13 trillion in family wealth was wiped out.
+544	The reason Social Security -- he says it gets 2%.
+545	Look, the problem is that under Governor Bush's plan, $1.6 trillion tax cut, mostly to the wealthy, under his own budget numbers, he proposes spending more money for a tax cut just for the wealthiest 1% than all the new money he budgets for education, health care and national defense combined.
+546	That has been reinforced by direct commitments of the president of the United States; it's been reinforced by a number of other nations under NATO.
+547	With all due respect to President Ford, I think he ought to be ashamed of mentioning that statement, because we have the highest unemployment rate now than we had at any time between the Great Depression caused by Herbert Hoover and the time President Ford took office.
+548	I'm asking for your vote, and God bless.
+549	And I support the air launch cruise missile, the ground launch cruise missile, the Pershing missile, the Trident submarine, the D - 5 submarine, Stealth technology, the Midgetman -- we have a whole range of technology.
+550	My attitude is you take preemptive action in order to protect the American people, that you act in order to make this country secure.
+551	Well, tonight we had the first debate over the deficit.
+552	I don't think that's a proper way to describe aayuh- chairman of the Joint Chiefs of Staff who has fought for his country for thirty-five years, and I'm sure the governor would agree with me on that.
+553	And we have put significant pressure on them to make sure they're doing that; to recognize the rights of women, which is critical throughout the region.
+554	And that is a strategic mistake, because every intelligence agency will acknowledge that Al Qaida is the greatest threat against the United States and that Secretary of Defense Gates acknowledged the central front -- that the place where we have to deal with these folks is going to be in Afghanistan and in Pakistan.
+555	We've had millions of people leave Syria and those millions of people inside Syria who have been dislocated.
+556	But on occasion, four times, we used certain laws that are there.
+557	In the second century of our nation's history, our forefathers developed the most productive industrial nation in the history of the globe.
+558	Because I'm offsetting some of the reductions with holding down some of the deductions.
+559	Well, first of all, I admire Senator Kerry's service to our country.

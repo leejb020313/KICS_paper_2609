@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	The first thing you did when you came into office was set up the stimulus package, said we've got a little pork we want to scatter around America, $16 billion.
+361	You've got about a million right here in Arizona, just shy, 950,000, who have no health insurance at all.
+362	In Georgia alone, for instance, I got 84 percent of the vote, and I think there were fourteen people uh - in addition to myself on the ballot, and Governor Wallace had been very strong in Georgia.
+363	We've been dealing with him; he's been dealing drugs to our kids.
+364	They're going to expand their companies.
+365	The biggest disaster that could happen is that we not succeed in Iraq.
+366	If you become president, this country is going to be in some mess.
+367	In other words, I have seen his program costed out to the point where it would amount to more than $300 million a year, just for the military.
+368	And Detroit had dragged its feet too long in terms of getting that done.
+369	Could we do another round on it?
+370	That is the same Government that, in 1920, told us we only had enough oil left for 13 years, and 19 years later, told us we only had enough left for another 15 years.
+371	Most health-care costs are covered by third parties.
+372	As Governor of California, I took charge of passing the strictest air pollution laws in the United States - the strictest air quality law that has even been adopted in the United States.
+373	When I have sent the fleet into the Taiwan straits.
+374	The Rockefeller Brothers report, General Ridgway, General Gavin, the Gaither Report, various reports of Congressional committees all indicate that the relative strength of the p- United States both militarily, politically, psychologically, and scientifically and industrially - the relative strength of the so- of United States compared to that of the Soviet Union and the Chinese Communists together - has deteriorated in the last eight years and we should know it, and the American people should be told the facts.
+375	Now, the Federal Government is going to turn around and say, well you have this problem; we will now hand you the money to do it.
+376	First, we have to build an economy that works for everyone, not just those at the top.
+377	Not with the measure that leaves the majority of them without any real basic help until the next president's term of four years is over.
+378	Every time our interest rates go up one percent, that adds 28 billion dollars to the deficit or to the debt.
+379	But the fact of it is we're so far away from research that even comes close to that, that the Director of Engineering Research at the Defense Department said to get there we would have to solve eight problems, each of which are more difficult than the atomic bomb and the Manhattan project.
+380	I'm sorry, you actually -- there was a -- there was an effort on the part of the president to have a status of forces agreement, and I concurred in that, and said that we should have some number of troops that stayed on.
+381	Because it's so essential to our economic strength and to our future.
+382	If we make the use of a gun in the commission.
+383	It means our goods aren't as competitive and we lose jobs.
+384	This country uh - changed drastically in 1969 when the uh - terms of John Kennedy and Lyndon Johnson were over and Richard Nixon and - and Gerald Ford became the presidents.
+385	In Houston there's been a 15- percent drop in the crime rate in the last year because of the work the mayor did there in increasing the police force.
+386	I have not spent the last quarter century in pursuit of personal wealth.
+387	Every school district, every state should make that decision on their own.
+388	One of them was a letter congratulating the great members of the military and allies that had conducted and succeeded in the greatest invasion in history, still to this day, and forever.
+389	There's another, a similar issue out there that relates to your -- it is said, at least, that you were unaware that the Soviet retaliatory power was based on land-based missiles.
+390	Our CHIPS program got a late start because our government meets only four months out of every two years, Mr. Vice President.
+391	I don't think he was misleading when he called Iraq a grave threat in the fall of 2002.
+392	I've been heavily criticized because I called for the resignation of the chairman of the Securities and Exchange Commission.
+393	Now, when we have a presidential candidate, for example - Senator Kennedy - stating over and over again that the United States is second in space and the fact of the matter is that the space score today is twenty-eight to eight - we've had twenty-eight successful shots, they've had eight; when he states that we're second in education, and I have seen Soviet education and I've seen ours, and we're not; that we're second in science because they may be ahead in one area or another, when overall we're way ahead of the Soviet Union and all other countries in science; when he says as he did in January of this year that we have the worst slums, that we have the most crowded schools; when he says that seventeen million people go to bed hungry every night; when he makes statements like this, what does this do to American prestige?
+394	What I want to do is to send flexibility and authority to the local folks so you can choose what to do with the money.
+395	I think the Wall Street Journal uh reported not too long ago they have a hundred and twelve public relations experts working for the Federal Energy Agency to try to justify to the American people its own existence.
+396	That's what I thought we ought to do.
+397	I've also advocated that we stop the sale by Germany and France of - processing plants for Pakistan and Brazil.
+398	Let me say again, we've had over 200 separate trade agreements in the last four years.
+399	Now, the three things they try to say I've changed position on are the Patriot Act; I haven't.

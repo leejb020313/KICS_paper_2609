@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1160	All those things are designed to make sure that the American people, their genius, their grit, their determination, is -- is channeled and -- and they have an opportunity to succeed.
+1161	We're 9 million jobs short of that.
+1162	Actually it was a town hall, and I said I would cut taxes for middle- class families, and that's what I've done, by $3,600.00.
+1163	The -- look, I think anybody out there can check the record.
+1164	I talk to small businesses across the country.
+1165	And then you cut education spending when you came into office.
+1166	First thing I'm going to do," despite the fact that it's the same health care plan that he passed in Massachusetts and is working well.
+1167	I want to make sure take-home pay turns around and starts to grow.
+1168	Look what's happening in Syria, in Egypt, now in Libya.
+1169	I want you to be able to get a job.
+1170	He then wants to spend another $2 trillion on military spending that our military is not asking for.
+1171	Is it -- is it because that somehow middle-class families are going to benefit too much from them?
+1172	You said by now we'd be at 5.4 percent unemployment.
+1173	But -- but the right -- the right approach is one which relies on the brilliance of our people and states, not the federal government.
+1174	And I agree that the Democratic legislators in Massachusetts might have given some advice to Republicans in Congress about how to cooperate, but the fact of the matter is, we used the same advisers, and they say it's the same plan.
+1175	All of these things suggested, I think, to the Iranian mullahs that, hey, you know, we can keep on pushing along here, we can keep talks going on, we're just going to keep on spinning centrifuges.
+1176	We're 9 million jobs short of that.
+1177	It's what I look forward to doing and I know what it takes to make an economy work, and I know what a working economy looks like.
+1178	So, in the middle of the Civil War, Abraham Lincoln said, let's help to finance the Transcontinental Railroad, let's start the National Academy of Sciences, let's start land grant colleges, because we want to give these gateways of opportunity for all Americans, because if all Americans are getting opportunity, we're all going to be better off.
+1179	Number four, we do have to develop their economic -- their economic capabilities.
+1180	I won't put in place magnets for people coming here illegally.
+1181	Of course, we don't have Medicare, but we didn't cut Medicare by $716 billion.
+1182	They're willing to work with us.
+1183	I maybe need to get a new accountant.
+1184	So they don't have to pay additional money, no additional $6,000.
+1185	And I'm not going to cede those jobs of the future to those countries.
+1186	I care about 100 percent of the American people.
+1187	The first two weeks she's got them, some of them sitting on the floor until finally they get reassigned.
+1188	And there are some parts of Dodd-Frank that make all the sense in the world.
+1189	It's not my term, it's the president's own secretary of defense called these trillion dollars of cuts to our military devastating.
+1190	But, Governor, when you were in Massachusetts, small businesses development ranked about 48th, I think out of 50 states in Massachusetts, because the policies that you are promoting actually don't help small businesses.
+1191	We've got to do that in Washington.
+1192	Those things will get us the energy we need.
+1193	You know, Moammar Gadhafi had more American blood on his hands than any individual other than Osama bin Laden.
+1194	Ones that can support a family.
+1195	We've got to get those dollars back to the states and go to the workers so they can create their own pathways to get in the training they need for jobs that will really help them.
+1196	These are small -- these are enterprises competing with each other, learning how to do better and better jobs.
+1197	When Governor Romney says that we should eliminate funding for Planned Parenthood, there are millions of women all across the country, who rely on Planned Parenthood for, not just contraceptive care, they rely on it for mammograms, for cervical cancer screenings.
+1198	I was in a state where my legislature was 87 percent Democrat.
+1199	It wasn't thought through properly.

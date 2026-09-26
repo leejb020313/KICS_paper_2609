@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	Companies are going to locate here depending on whether we've got the most highly skilled workforce.
+201	And it wasn't just that small businesses were seeing costs skyrocket and they couldn't get affordable coverage even if they wanted to provide it to their employees.
+202	So I reject the idea that I don't believe in great teachers or more teachers.
+203	Now, you cite a study.
+204	One, of course, is to raise taxes.
+205	And they include you and me.
+206	Bob, let's not go into hypotheticals of that nature.
+207	We're the great nation that has allies, 42 allies and friends around the world.
+208	The role of government: Look behind us.
+209	Giving them access to higher education.
+210	One of his big ideas when it comes to corporate tax reform would be to say, if you invest overseas, you make profits overseas, you don't have to pay U.S. taxes.
+211	But I'll respond to a couple of things that you mentioned.
+212	This is an enormous boon for them.
+213	They recruit them, leaving the older, sicker seniors in Medicare.
+214	And the reason I want middle-income taxpayers to have lower taxes is because middle-income taxpayers have been buried over the past four years.
+215	That's why exports have significantly increased under my presidency.
+216	Now, we all know that we've got to do more.
+217	And we want to encourage that.
+218	That's not what I believe.
+219	And those that I haven't been able to keep, it's not for lack of trying and we're going to get it done in a second term.
+220	But you're investing in companies doesn't do that.
+221	So our troops will come home at that point.
+222	Look, there's no question but the people recognize that we have not produced more (inaudible) on federal lands and in federal waters.
+223	It's not government investments that makes businesses grow and hire people.
+224	I don't think the American people believe that.
+225	We welcome people coming to this country as immigrants.
+226	I don't like that idea.
+227	Health care costs have gone up by $2,500 a family.
+228	On government land, your administration has cut the number of permits and licenses in half.
+229	Social Security is structurally sound.
+230	And I think that's a mistake.
+231	So more debt and less jobs.
+232	In Egypt we stood on the side of democracy.
+233	These countries can't develop if young women are not given the kind of education that they need.
+234	Now, the last point I'd make before...
+235	And the president's right in terms of the additional oil production, but none of it came on federal land.
+236	Our Air Force is older and smaller than at any time since it was founded in 1947.
+237	I want to close loopholes that allow companies to deduct expenses when they move to China; that allow them to profit offshore and not have to get taxed, so they have tax advantages offshore.
+238	And so what I've tried to do as president is to apply those same principles.
+239	We went from deficit to surplus.

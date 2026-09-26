@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2320	Unless there was a severe recession - and after all the worst unbalanced budget in history was in 1958, twelve billion dollars - larger than in any Administration in the history of the United States.
+2321	These are reasonable ways to help promote a culture of life in America.
+2322	You've been all over the country repeating something that, I will admit, the press has also been repeating -- that I believed that nuclear missiles could be fired and then called back.
+2323	You know, my wife, Hillary, gave me a book about a year ago in which the author defined insanity as just doing the same old thing over and over again and expecting a different result.
+2324	So there's a great deal of cynicism out there.
+2325	They have been our friend since their inception as a nation.
+2326	Well, it was not one of my ads, either, Governor.
+2327	And yet let's just see what we've done for Poland, A half a billion dollars worth of aid has gone to Poland, primarily economic, primarily to go to the people of Poland.
+2328	And I don't think it's uh - the Congress is Mr. Ford's opponent; but if uh - if - if he insists that uh - that I be responsible for the Democratic Congress, of which I'm - have not been a part, then I think it's only fair that he be responsible for the Nixon administration in its entirety, of which he was a part.
+2329	And I said that I felt that rather than tell the lie which we told, rather than indicate that the flights would continue - in fact, I believe Mr. Nixon himself said on May fifteenth that the flights would continue even though Mr. Herter testified before the Senate Foreign Relations Committee that they had been canceled as of May twelfth - that it would have been far better that if we had expressed regrets, if that would have saved the summit, and if the summit is useful - and I believe it is.
+2330	You see, he's proposed $2.2 trillion of new spending.
+2331	But it's in part because those of us who have had the great privilege of seeing this job up close and know how difficult it is, and it's not just because I watched my husband take a $300 billion deficit and turn it into a $200 billion surplus, and 23 million new jobs were created, and incomes went up for everybody.
+2332	Do we remove dams that produce hydroelectric energy?
+2333	When we went in to Libya, and we were able to immediately stop the massacre there, because of the unique circumstances and the coalition that we had helped to organize.
+2334	You say we were giving mortgages to people who weren't qualified.
+2335	public reports not long ago about ships that could not leave American ports because of a lack of crews.
+2336	The Cold War is over.
+2337	I have fought to reduce the earmarks and eliminate them.
+2338	Ninety percent of the costs are coming out of your pockets.
+2339	But she is raising everybody's taxes massively.
+2340	Those plans are better than this $550 billion tax scheme.
+2341	That's explicitly prohibited in the law.
+2342	Well, I was upset because, unfortunately, dozens of toddlers injure themselves, even kill people with guns, because, unfortunately, not everyone who has loaded guns in their homes takes appropriate precautions.
+2343	No, you are the one that's unfit.
+2344	He founded authored, the job training partnership act.
+2345	I'm going to make sure we can continue to burn clean coal.
+2346	If you're a single mother making $22,000 a year today and you're trying to raise two children, for every additional dollar you earn you pay a higher marginal rate on that dollar than someone making $200,000, and that's not right.
+2347	We imported today 2 million barrels of oil less than we did the same date just a year ago.
+2348	And the way you define small businesses includes folks at the very top.
+2349	He didn't have weapons of mass destruction, Mr. President.
+2350	You have to put the money into it and the funding and the leadership.
+2351	Now we've had this pause, but most economists, regardless of their political philosophy, uh - indicate that this pause for a month or two was healthy, because we could not have honestly sustained a 9.2 percent rate of growth which we had in the first quarter of this year.
+2352	The proliferation of weapons of mass destruction, organized crime, and we have worked hard to expand America's economic presence around the world with the biggest increase in trade with the largest new number of trade agreements in history And that's one of the reasons America is number one in auto production again.
+2353	We gave them ample time.
+2354	That is not good for America's position in the world, and the world notices.
+2355	But I will tell you that Hillary will tell you to go to her website and read all about how to defeat ISIS, which she could have defeated by never having it, you know, get going in the first place.
+2356	And the last president of the United States that tried that was Herbert Hoover, and we went from a deep recession into a depression.
+2357	And what happened is now ISIS is in 32 countries.
+2358	I don't think so, Candy.
+2359	And for them to be able to provide nuclear technology to non-state actors, that's unacceptable.

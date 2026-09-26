@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	Candy, what Governor Romney said just isn't true.
+401	Then you have the military and then you have the civilian government.
+402	In fact, just recently steelworkers in Ohio and throughout the Midwest -- Pennsylvania -- are in a position now to sell steel to China because we won that case.
+403	You keep your own insurance.
+404	I also think that we should give visas to people -- green cards, rather, to people who graduate with skills that we need.
+405	We're not going to eliminate everybody who is mentally disturbed and we have got to make sure they don't get weapons.
+406	Well, we're going to be finished by 2014, and when I'm president, we'll make sure we bring our troops out by the end of 2014.
+407	I'm happy to have a longer conversation --
+408	His words amount to genocide incitation.
+409	I care about our kids.
+410	Don't forget, what's key to bringing back jobs here is not just finding someone else to punish, and I'm going to be strict with people who we trade with to make sure they -- they follow the law and play by the rules, but it's also to make America the most attractive place in the world for businesses of all kinds.
+411	New business formation is down to the lowest level in 30 years under this administration.
+412	I wish that, looking back at the beginning of the president's term and even further back than that, that we'd have recognized that there was a growing energy and passion for freedom in that part of the world, and that we would have worked more aggressively with our friend and with other friends in the region to have them make the transition towards a more representative form of government, such that it didn't explode in the way that it did.
+413	Actually just going to them and saying, "We're going to reduce the rates you get paid across the board, everybody's going to get a lower rate."
+414	And Governor Romney at the beginning of this debate wrote and said what we did in Massachusetts could be a model for the nation.
+415	It's time to end it.
+416	We can compete with anyone in the world as long as the playing field is level.
+417	All right, I'm not going to cut education funding.
+418	Mr. President, have you looked at your pension?
+419	And in one year, you provided $90 billion in breaks to the green energy world.
+420	Now, I like green energy as well, but that's about 50 years' worth of what oil and gas receives.
+421	Twenty-three million Americans still struggling to find a good job.
+422	I think what grows the economy is when we make sure small businesses are getting a tax credit for hiring veterans who fought for our country.
+423	We know that the path we're taking is not working.
+424	That's explicitly prohibited in the law.
+425	For -- so if you're -- if you're 54 or 55, you might want to listen 'cause this -- this will affect you.
+426	And very little of what Governor Romney just said is true.
+427	They're stealing our intellectual property, our patents, our designs, our technology, hacking into our computers, counterfeiting our goods.
+428	And I am ultimately responsible for what's taking place there because these are my folks, and I'm the one who has to greet those coffins when they come home.
+429	Now, it ultimately is going to be up to the voters -- to you -- which path we should take.
+430	It's one of the reasons for the great financial calamity we had.
+431	The -- first of all, I think Governor Romney was for an assault weapons ban before he was against it.
+432	And ironically, if you repeal Obamacare, and I have become fond of this term, "Obamacare," if you repeal it, what happens is those seniors right away are going to be paying $600 more in prescription care.
+433	While we were still dealing with our diplomats being threatened, Governor Romney put out a press release, trying to make political points, and that's not how a commander in chief operates.
+434	And we hope that their leadership takes the right decision, but the deal we'll accept is they end their nuclear program.
+435	Now, there are some other issues that have a bearing on how women succeed in the workplace.
+436	And it's Katherine Fenton, who has a question for you.
+437	And, you know, yes, have we had some fights between me and the Republicans when -- when they fought back against us reining in the excesses of Wall Street?
+438	When it comes to our tax code, Governor Romney and I both agree that our corporate tax rate is too high, so I want to lower it, particularly for manufacturing, taking it down to 25 percent.
+439	I believe that the free enterprise system is the greatest engine of prosperity the world's ever known.

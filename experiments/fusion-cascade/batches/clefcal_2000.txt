@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2000	It's estimated that 8 million people will go from private insurance to government insurance.
+2001	This is not mud slinging.
+2002	And we put up with that.
+2003	But my background, my experience, my knowledge of the people of this country, my commitment to our principles that don't change - those are the best bases to correct the horrible mistakes of this administration and restore our own country to a position of leadership in the world.
+2004	But you know, they're the ones that, with the encouragement of Senator Obama and his cronies and his friends in Washington, that went out and made all these risky loans, gave them to people that could never afford to pay back.
+2005	Former chief of the -- Joint Chiefs of Staff said that -- Admiral Mullen said that our debt is the biggest national security threat we face.
+2006	But I'm also a serious guy.
+2007	And I believe the people, therefore, should be asked to make up their minds not simply on the basis of, "Vote the way your grandfather did; vote the way your mother did."
+2008	The secretary of state has made better than fifty speeches all over the United States explaining American foreign policy.
+2009	I agree that we cannot commit ground forces to become involved in the quagmire of Bosnia or in the tribal wars of Somalia.
+2010	Mr. Ford hasn't moved on this.
+2011	Governor Carter in November of 1975 indicated that he wanted to cut the defense budget by $15 billion.
+2012	Because it's gotten a little ugly out there.
+2013	I know who I am, and I know where I'm from, and I know where I want to take America.
+2014	And I'll tell you exactly how.
+2015	I'm going to have a special prosecutor.
+2016	Secondly, that you get a $2,000 rebate from the government if you're a family of $30,000 or less -- it scales down as you get higher -- that you can use to purchase health care in the private markets.
+2017	We just recently ended those drive-by deliveries saying people can't be kicked out of the hospital by insurance companies when they've just had babies.
+2018	I vetoed that bill because it cut more Medicare and and basically ran the risk of breaking up the system.
+2019	It not only happened in California.
+2020	And now you want to approve Trans-Pacific Partnership.
+2021	Social Security is totally funded by the payroll tax levied on employer and employee.
+2022	And here I do have, on this particular question, a big difference with my opponent.
+2023	I know what it's like to see somebody you love nearly lose their lives, and I hate drugs, Senator.
+2024	What you did -- and this is after getting a subpoena from the United States Congress.
+2025	But that was 10 years before you took office.
+2026	If Russia and the United States got along well and went after ISIS, that would be good.
+2027	That was a command decision made by the commanders on the spot and based with what they thought was best for the men there.
+2028	The No Child Left Behind Act says, "We'll raise standards.
+2029	When I got involved, I didn't fail.
+2030	The President held it up.
+2031	I'm more optimistic today than I was when I began about this nation providing we have the kind of leadership in Washington that can work with you, that can build partnerships, that can build jobs in every part of this country, not certain parts of this country.
+2032	His influence is strong enough today to prevent us from joi- getting the other countries of Latin America to join with us in economic quarantine.
+2033	But I do make a pledge that in the next ten days when we're asking the American people to make one of the most important decisions in their lifetime, because I think this election is one of the mast vital in the history of America, that uh - we do together what we can to stimulate voter participation.
+2034	So he has a long record of engaging in racist behavior.
+2035	And when it comes to tightening sanctions, look, as I said before, we've put in the toughest, most crippling sanctions ever.
+2036	Barbara's sitting over here and I -- but what I have proposed, 10% cut, downsize the government, and we can get that done.
+2037	If they weren't willing to work a deal, then we could have put sanctions together.
+2038	When the Secretary General Kofi Annan offered the United Nations, he said, "No, no, we'll go do this alone."
+2039	Mr. Ford quite often puts forward a program just as a public relations stunt, and never tries to put it through the Congress by working with the Congress.

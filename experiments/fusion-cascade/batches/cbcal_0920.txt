@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	And there are a number of things.
+921	You have to have regulation.
+922	So their economy is in a shambles.
+923	The secretary of defense called these trillion dollars of cuts to our military devastating.
+924	Because frankly, in my home town of Chicago, there's an awful lot of violence and they're not using AK-47s.
+925	We have increased oil production to the highest levels in 16 years.
+926	You found $4 trillion of ways to reduce or to get closer to a balanced budget, except we still show trillion-dollar deficits every year.
+927	He said, "I'll get back to you."
+928	Let me just make this comment.
+929	Massachusetts schools are ranked number one in the nation.
+930	That's $1 -- that's $1 for every $15 you've cut.
+931	I was born in Detroit.
+932	It is also essential for us to understand what our mission is in Iran, and that is to dissuade Iran from having a nuclear weapon through peaceful and diplomatic means.
+933	I'm sorry, you actually -- there was a -- there was an effort on the part of the president to have a status of forces agreement, and I concurred in that, and said that we should have some number of troops that stayed on.
+934	In fact, it was a Republican idea.
+935	And in fact, employers are looking for skilled workers.
+936	I wanted to make it more effective and efficient.
+937	We -- we think of their families and care for them deeply.
+938	We continue to make it a priority for us to go after natural gas.
+939	The oil industry gets $4 billion a year in corporate welfare.
+940	Because inside Pakistan, you have a -- a large group of Pashtun that are -- that are Taliban.
+941	That's why we've kept on pushing trade deals, but trade deals that make sure that American workers and American businesses are getting a good deal.
+942	I'm going to be able to balance the budget.
+943	I learned how to get along on the other side of the aisle.
+944	The policies of the last four years have seen incomes in America decline every year for middle income families, now down $4,300 during your term.
+945	Our diplomatic isolation needs to be tougher.
+946	So we can make changes in the way our culture works to help bring people away from violence and give them opportunity, and bring them in the American system.
+947	It's gone up by $2,500 a year.
+948	We've changed for the first time since FDR -- since FDR we had the -- we've always had the strategy of saying we could fight in two conflicts at once.
+949	How did we do that?
+950	But unfortunately, in nowhere in the world is America's influence will grow.
+951	I saw a study that came out today that said you're going to raise taxes by $3,000 to $4,000 on middle-income families.
+952	And so Dodd-Frank correctly says we need to have qualified mortgages, and if you give a mortgage that's not qualified, there are big penalties, except they didn't ever go on and define what a qualified mortgage was.
+953	In fact he is on Medicare.
+954	I think it's, frankly, not moral for my generation to keep spending massively more than we take in, knowing those burdens are going to be passed on to the next generation and they're going to be paying the interest and the principal all their lives.
+955	Jim, I -- you may want to move onto another topic, but I -- I would just say this to the American people.
+956	I can't understand how you can cut Medicare $716 billion for current recipients of Medicare.
+957	Now with respect to Libya, as I indicated in the last debate, when we received that phone call, I immediately made sure that, number one, that we did everything we could to secure those Americans who were still in harm's way; number two, that we would investigate exactly what happened, and number three, most importantly, that we would go after those who killed Americans and we would bring them to justice.
+958	I use that term with all respect, by the way.
+959	After the election, he'll get more backbone.

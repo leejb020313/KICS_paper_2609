@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	He spent a year there.
+121	Are you talking Hunter, are you talking about Hunter.
+122	My son... like a lot of people.
+123	Why did he get it?
+124	If you look at the Paris Accord, it was a disaster from our standpoint.
+125	But I also think we have to do better management of our forests.
+126	I was with the head of a major country, it's a forest city.
+127	I spoke with the Governor about it.
+128	Now, so, and by the way, we're going to see how that turns out.
+129	And I'm okay with electric cars too.
+130	Making sure that we can do that, we're going to put 500,000 charging stations and all of the highways that we're going to be building in the future.
+131	And the first thing I will do, I will rejoin the Paris Accord.
+132	Brazil, the rainforests of Brazil are being torn down, are being ripped down.
+133	That is not, that is not...
+134	That is simply not the case...
+135	Yeah, you did say that.
+136	So why didn't he do it for 47 years?
+137	The Green New Deal is a hundred trillion dollars...
+138	The Green New Deal is not my plan...
+139	If you knew anything about...
+140	He made a statement about the military.
+141	They should go to iwillvote.com.
+142	And this is all about trying to dissuade people from voting because he's trying to conf--to scare people into thinking that it's not going to be legitimate.
+143	If you're able to vote in person, vote in person.
+144	Just make sure you understand, you have it in your control to determine what this country is gonna look like the next four years.
+145	Is it going to change, or are you going to get four more years of these lies?
+146	From the day I came down the escalator with our first lady, they were a disaster.
+147	Take a look at what happened in New Jersey.
+148	You do a solicited ballot, and that's okay...
+149	... like they used to in the old...
+150	Did you see what's going on?
+151	When you file-when you get a ballot and you fill it out, you're supposed to have an affidavit.
+152	... sent in and swamping the system...
+153	In Philadelphia, they went in to watch.
+154	I'll tell you what it means...
+155	It means you have a fraudulent election.
+156	Some of these ballots in some states can't even be opened until election day.
+157	And by the way, our military--they've been voting by ballots for since the end of the Civil War, in effect.
+158	Take a look at Carolyn Maloney's race...
+159	The fact is, I will accept it, and he will too.

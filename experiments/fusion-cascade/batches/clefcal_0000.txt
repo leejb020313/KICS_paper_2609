@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	And uh - with that uh - in that framework would befit the - any improvements in the programs.
+1	I have spent the last quarter century fighting for middle-class working men and women in the United States of America.
+2	This brings up the whole question of what Presidential leadership is all about.
+3	I got him to give the birth certificate.
+4	Under my tax plan that he continues to criticize, I set one-third.
+5	And what we did in Massachusetts is a model for the nation state by state.
+6	Then companies won't come here.
+7	And they are being slaughtered...
+8	We've spent more money on agriculture in the last eight years than the hundred years of the Agricultural Department before that.
+9	Our foreign competitors are doing it; we're not.
+10	It's going to help those families, and it's going to create incentives to start growing jobs again in this country.
+11	It was wrong for the country and calling it conservative won't make it right.
+12	That's where he was breaking the agreement.
+13	And I would institute the same kind of procedure as president, not only in judicial appointments, but also in diplomatic appointments.
+14	It's a system that cries out for accountability and transparency and the adequate funding.
+15	And that's why this enormous national debt, engineered by this administration, is harming these countries in fueling this immigration.
+16	Let me tell you what I feel.
+17	And when Senator McCain says that he wants to provide children health care, what he doesn't mention is he voted against the expansion of the Children's Health Insurance Program that is responsible for making sure that so many children who didn't have previously health insurance have it now.
+18	Yes, I voted for it, supported it.
+19	With all due respect, you already gave them to the oil companies.
+20	90% of our kids go to public schools.
+21	Well, we stand with Israel, but we have maintained the ability to serve as an honest broker.
+22	But let me just address what the president just said.
+23	I want to make America as great as it can be and I ask for your help in doing it.
+24	Nobody has more respect for women than I do.
+25	And with each one of those decisions that affect the future of my country, I have learned in the process.
+26	Now in addition, we had a very - some very good news in the reduction in the rate of inflation.
+27	I hope we can do it.
+28	Russia hasn't paid any attention to ISIS.
+29	That they're appointed for life and that they ought to look at the Constitution as sacred.
+30	The fact of the matter is it was a bill that was less than you recommended, Mr. Nixon, this morning in your proposal.
+31	Now they have the bombs and we're less safe.
+32	Number one, insurance companies can't deny you coverage because of a pre-existing condition.
+33	I have fought against it.
+34	On government land, your administration has cut the number of permits and licenses in half.
+35	So she wants to fight.
+36	We have to practice what we preach.
+37	They haven't said what's going to happen, whether they're going to have it declared addictive.
+38	I believe that until and unless someone can establish that the unborn child is not a living human being, then that child is already protected by the Constitution, which guarantees life, liberty, and the pursuit of happiness to all of us.
+39	And I shook hands with him on it and I appointed my members, and the commission never met.

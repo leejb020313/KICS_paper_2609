@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	But I do not believe that that line in case of war should be drawn on those islands but instead on the island of Formosa.
+721	And what I'm concerned about is that if we continue with the policies that Mr. Bush is talking about here this evening, the flexible freeze somebody described it the other day as a kind of economic slurpee he wants to spend billions on virtually every weapons system around.
+722	His targeted tax cut is so detailed, so much fine print that it is going to require numerous IRS agents.
+723	The president's path will mean continuing declining in take-home pay.
+724	But as we learned in the same report I quoted, Saddam Hussein was gaming the oil-for-food program to get rid of sanctions.
+725	First of all, Captain Khan is an American hero, and if I were president at that time, he would be alive today, because unlike her, who voted for the war without knowing what she was doing, I would not have had our people in Iraq.
+726	We have protected 25 million people through the passage of the Kennedy-Kassebaum bill that says you can use your health insurance if you change jobs or someone in your family has been sick.
+727	And we could be moving out to the human population a whole lot faster than we are on some of these new drugs.
+728	He voted for the energy bill that was full of goodies for the oil companies that I opposed.
+729	And everyone thought he was gone two years ago, three years ago.
+730	He has about uh - four times as much chance that he'll be out of work in his life as the white baby.
+731	Mr. Nixon would add a guarantee to islands five miles off the coast of the re- Republic of China when he's never really protested the Communists seizing Cuba, ninety miles off the coast of the United States.
+732	This is the person who, after we had -- we hadn't even finished Afghanistan, where he said, "Next up, Baghdad."
+733	We've given away whole industries.
+734	I don't mean to be critical of uh - Senator Mondale, but uh - I was uh - very, very surprised when I read that uh - Senator Mondale made a very derogatory, very personal comment about General Brown uh - after the news story that uh - broke about General Brown.
+735	It also means we're helping them and small businesses to export all around the world to new markets.
+736	You've got some pretty strong-willed guys up there that argue with you.
+737	For those of you making up your mind, I would be honored to have your support.
+738	This was an effort that was made by the attorney general and myself, working with the Congress.
+739	When I walked into the Oval Office, I had more than a trillion-dollar deficit greeting me.
+740	I have supported or voted for tax cuts over 600 times.
+741	We also want to say that insofar as is humanly possible the banking industry itself should pay for the cost of any bank failures; the taxpayers should not.
+742	Because in this critical year - period of the sixties we've got to move forward, all Americans must move forward together, and we have to get the greatest cooperation possible between labor and management.
+743	Nobody has that except a president who has served a long time or a secretary of state.
+744	This nation is the most religious nation on Earth -- more people go to church and synagogues than any other nation on Earth -- and it's because we kept the politicians and the state out of the personal exercise of our faith.
+745	We have a great many people, hundreds of thousands of people living on public assistance in this country.
+746	So I think that could help.
+747	If we're lucky and we do it right, that could potentially happen but in the short term there's an outlay and we may not see that money for a while.
+748	Senator McCain is proposing -- and this is a fundamental difference between us -- $300 billion in tax cuts to some of the wealthiest corporations and individuals in the country, $300 billion.
+749	The president reneged on his promise to fund No Child Left Behind.
+750	They need to have close working cooperation with law enforcement in these communities, not be alienated and pushed away as some of Donald's rhetoric, unfortunately, has led to.
+751	And we are seeing a major offensive taking place -- Al Qaida and Taliban crossing the border and attacking our troops in a brazen fashion.
+752	First of all, I would be fearful that I might say something that was presently under way or in negotiations, and thus expose it and endanger the hostages, and sometimes, I think some of my ideas might require quiet diplomacy where you don't say in advance, or say to anyone, what it is you're thinking of doing.
+753	We're one of the first states that said you can sue an HMO for denying you proper coverage.
+754	And therefore we passed an authorization - not an aid bill - which was the first time, really, since the Inter-American Bank which was founded a year ago was developed, that we really have looked at the needs of Latin America; that we have associated ourselves with those people.
+755	You know, Congress passed a law called DOMA, the Defense of Marriage Act.
+756	My plan is Social Security plus.
+757	But because Arab nations and the Israelis trust the United States, we were able to take the lead in the Sinai II Agreement.
+758	For most of my time as governor a woman was my chief of staff.
+759	Sometimes my advice has been taken.

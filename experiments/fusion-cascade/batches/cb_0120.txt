@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	They create warheads, and we can't.
+121	But I will tell you, she's all talk.
+122	In fact, the killer of the dozens of people at the nightclub in Orlando, the Pulse nightclub, was born in Queens, the same place Donald was born.
+123	We're going to have trade agreements that we enforce.
+124	A cease-fire, the United States, Russia, and Syria.
+125	She has no idea whether it's Russia, China, or anybody else.
+126	We've just seen those two tragic examples in both Tulsa and Charlotte.
+127	And, indeed, the way that he talks about his tax cuts would end up raising taxes on middle-class families, millions of middle-class families.
+128	But I'd like to start off where we left, because when I said Japan and Germany, and I'm -- not to single them out, but South Korea, these are very rich, powerful countries.
+129	The Affordable Care Act extended the solvency of the Medicare Trust Fund.
+130	NAFTA is the worst trade deal maybe ever signed anywhere, but certainly ever signed in this country.
+131	I mean, it's -- you know, and I've been saying at big speeches where I have 20,000 and 30,000 people, what do you have to lose?
+132	I think it would be great if we got along with Russia because we could fight ISIS together, as an example.
+133	One of my first acts will be to get all of the drug lords, all of the bad ones -- we have some bad, bad people in this country that have to go out.
+134	There are different views about what's good for our country, our economy, and our leadership in the world.
+135	It was a mistake, and I take responsibility for that.
+136	We shore up the border.
+137	I was against it once it was finally negotiated and the terms were laid out.
+138	Well, within hours I said that I was sorry about the way I talked about that, because my argument is not with his supporters.
+139	And we finally need to pass a prohibition on anyone who's on the terrorist watch list from being able to buy a gun in our country.
+140	The deal with Iran will lead to nuclear problems.
+141	New York -- New York has done an excellent job.
+142	And the only thing that looks good is the stock market, but if you raise interest rates even a little bit, that's going to come crashing down.
+143	They'll be able to compete.
+144	As far as the cyber, I agree to parts of what Secretary Clinton said.
+145	The AFL-CIO the other day, behind the blue screen, I don't know who you were talking to, Secretary Clinton, but you were totally out of control.
+146	And Iran is killing ISIS.
+147	Where did you find this?
+148	You even at one time suggested that you would try to negotiate down the national debt of the United States.
+149	But people that will respect the Constitution of the United States.
+150	That does not solve our internal challenges with ISIS and our need to stop radicalization, to work with American Muslim communities who are on the front lines to identify and prevent attacks.
+151	Since I did this -- this was a year ago -- all of a sudden, they're paying.
+152	Am I allowed to respond to that?
+153	And during the cease-fire, Russia took over vast swatches of land, and then they said we don't want the cease-fire anymore.
+154	I hope that they will see their way to doing it, but if I am so fortunate enough as to be president, I will immediately move to make sure that we fill that, we have nine justices that get to work on behalf of our people.
+155	I have fought against that as a senator.
+156	Well, 67 percent of the people voted to re-elect me when I ran for my second term, and I was very proud and very humbled by that.
+157	So there are things we can do, and we ought to do it in a bipartisan way.
+158	And I don't think -- I really don't think you disagree with me on this, if you want to know the truth.
+159	I did not say that.

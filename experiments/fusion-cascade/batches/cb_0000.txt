@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	And by the way, my tax cut is the biggest since Ronald Reagan.
+1	And the question for us, the question our country must answer is that this is not who we are.
+2	And just in that respect, I say it's rigged, because she should never...
+3	And we need to do our part.
+4	And not only expensive for the person that has it, unbelievably expensive for our country.
+5	Well, wait, but it's very important.
+6	That I can tell you.
+7	And I can tell you: The government has no business in the decisions that women make with their families in accordance with their faith, with medical advice.
+8	I want to appoint Supreme Court justices who understand the way the world really works, who have real-life experience, who have not just been in a big law firm and maybe clerked for a judge and then gotten on the bench, but, you know, maybe they tried some more cases, they actually understand what people are up against.
+9	Well, I think Donald was about to say he's going to solve it by repealing it and getting rid of the Affordable Care Act.
+10	It's not an accurate one.
+11	When a person is on a watch list or a no-fly list, and I have the endorsement of the NRA, which I'm very proud of.
+12	But by doing all the others' favors, she's doing me favors.
+13	... she's going to vote this November.
+14	I'm watching Hillary go over facts.
+15	Just to go down the list, we defend Japan, we defend Germany, we defend South Korea, we defend Saudi Arabia, we defend countries.
+16	The NAFTA deal signed by her husband is one of the worst deals ever made of any kind, signed by anybody.
+17	You look at the Middle East, it's a total mess.
+18	You know, every time we take rebels, whether it's in Iraq or anywhere else, we're arming people.
+19	But it's certainly not a nice thing that she's done.
+20	So I'm putting in more than -- by the time it's finished, I'll have more than $100 million invested.
+21	But they should be paying us, because we are providing tremendous service and we're losing a fortune.
+22	I think my husband did a pretty good job in the 1990s.
+23	He should have produced it a long time before.
+24	We have no country if we have no border.
+25	The facts are -- I did say I hoped it would be a good deal, but when it was negotiated...
+26	It is essential that America's word be good.
+27	And it shouldn't be allowed to happen.
+28	So what they're doing is they're leaving our country, and they're, believe it or not, leaving because taxes are too high and because some of them have lots of money outside of our country.
+29	And, Lester, they're taking our jobs, they're giving incentives, they're doing things that, frankly, we don't do.
+30	I will stand up for families against powerful interests, against corporations.
+31	She went over a minute over, and you don't stop her.
+32	And I don't deserve that.
+33	Because Roe v. Wade very clearly sets out that there can be regulations on abortion so long as the life and the health of the mother are taken into account.
+34	Well, but there is no -- but there is no evidence -- but there is...
+35	And let me say that when you inherit the level of economic catastrophe that President Obama inherited, it was a real touch-and-go situation.
+36	Why didn't you do it?
+37	She's not doing any me favors.
+38	Do the thousands of people that you have stiffed over the course of your business not deserve some kind of apology from someone who has taken their labor, taken the goods that they produced, and then refused to pay them?
+39	And you know the only time it's ever been invoked?

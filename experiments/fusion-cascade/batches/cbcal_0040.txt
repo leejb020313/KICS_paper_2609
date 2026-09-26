@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	Having a tax code that rewards companies that are shipping jobs overseas instead of companies that are investing here in the United States, that will not make us more competitive.
+41	...they would have gone through a...
+42	If you believe that we can cut taxes by $5 trillion and add $2 trillion in additional spending that the military is not asking for, $7 trillion -- just to give you a sense, over 10 years, that's more than our entire defense budget -- and you think that by closing loopholes and deductions for the well-to-do, somehow you will not end up picking up the tab, then Governor Romney's plan may work for you.
+43	That's why the National Federation of Independent Businesses said your plan will kill 700,000 jobs.
+44	Why did he fail to even promote legislation that would have provided an answer for those that want to come legally and for those that are here illegally today?
+45	And I -- look, I'm all in favor of green energy.
+46	And the essence of the plan is that you would turn Medicare into a voucher program.
+47	But it's one of the great tragedies related to violence in our society which has occurred during this administration.
+48	Iran is a state sponsor of terrorism.
+49	But when it comes to our national security, I mean what I say.
+50	But we have some work to do.
+51	You've said the same thing, you're going to simplify the tax code, broaden the base.
+52	Number two, with regards to Iraq, you and I agreed I believe that there should be a status of forces agreement.
+53	Well, let me give you some advice.
+54	I don't have any plan to cut education funding and -- and grants that go to people going to college.
+55	I know that you and your running mate keep saying that and I know it's a popular thing to say with a lot of people, but it's just not the case.
+56	And that's not the kind of advocacy that women need in any economy.
+57	As a governor, I thought please, give me this program.
+58	America's going to have that kind of leadership and continue to promote principles of peace to make a world a safer place and make people in this country more confident that their future is secure.
+59	We can do better than this.
+60	And, by the way the idea came not even from Paul Ryan or -- or Senator Wyden, who's the co-author of the bill with -- with Paul Ryan in the Senate, but also it came from Bill -- Bill Clinton's chief of staff.
+61	That's another trillion dollars -- that's $8 trillion.
+62	Syria -- Syria's not just a tragedy of 30,000 civilians being killed by a military, but also a strategic -- strategically significant player for America.
+63	And it includes within it a number of provisions that I think has some unintended consequences that are harmful to the economy.
+64	There's no question in my mind that if the president were to be reelected you'll continue to see a middle-class squeeze with incomes going down and prices going up.
+65	And this is the reason why, working with Israel, we have created the strongest military and intelligence cooperation between our two countries in history.
+66	That's after losing 5 million jobs.
+67	It doubles about every -- every five or so years.
+68	I know what it takes to get this to happen, and my plan will do that, and one part of it is to make sure that we keep China playing by the rules.
+69	Our party has been focused too long.
+70	I said we'd transition out of Afghanistan, and start making sure that Afghans are responsible for their own security, that's what I'm doing.
+71	This nation is the hope of the earth.
+72	And what I've also said is for young people who come here, brought here often times by their parents.
+73	You know, under my leadership, what we've done is reformed education, working with governors, 46 states.
+74	George Bush embraced comprehensive immigration reform.
+75	The math simply doesn't work.
+76	So entirely on a partisan basis, instead of bringing America together and having a discussion on this important topic, you pushed through something that you and Nancy Pelosi and Harry Reid thought was the best answer and drove it through.
+77	Look, the right course for America's government, we were talking about the role of government, is not to become the economic player, picking winners and losers, telling people what kind of health treatment they can receive, taking over the health care system that has existed in this country for a long, long time and has produced the best health records in the world.
+78	And the reason she could be independent was because of Social Security and Medicare.
+79	If the president's reelected, Obamacare will be fully installed.

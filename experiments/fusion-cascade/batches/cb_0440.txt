@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	Because I did disagree with Ronald Reagan very strongly on trade.
+441	And that was -- believe me -- I'm sure I'm not going to get credit for it -- but that was largely because of what I was saying and my criticism of NATO.
+442	She gave us ISIS as sure as you are sitting there.
+443	But if we repeal it, as Donald has proposed, and start over again, all of those benefits I just mentioned are lost to everybody, not just people who get their health insurance on the exchange.
+444	Her papers went out to all her friends at the banks, Goldman Sachs and everybody else, and she said things -- WikiLeaks that just came out.
+445	We're giving them lots of money, lots of everything.
+446	So a man who can be provoked by a tweet should not have his fingers anywhere near the nuclear codes, as far as I think anyone with any sense about this should be concerned.
+447	... go to HillaryClinton.com and you can see it.
+448	So we have a very robust set of plans.
+449	You know, I've been privileged to see the presidency up close.
+450	Because we've seen this throughout the campaign.
+451	Hillary Clinton has been after this for years.
+452	The bottom line on nuclear weapons is that when the president gives the order, it must be followed.
+453	And people have looked at both of our plans, have concluded that mine would create 10 million jobs and yours would lose us 3.5 million jobs, and explode the debt which would have a recession.
+454	... because it's an important part of the American experience.
+455	So I have said, look, we need to keep our eye on ISIS.
+456	In my opinion, the people that have been long-term workers at the FBI are furious.
+457	... or at an airport near you.
+458	We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment.
+459	They're going to many other countries.
+460	That was not a mistake.
+461	You called it the gold standard.
+462	When I watch the deals being made, when I watch what's happening with some horrible things like Obamacare, where your health insurance and health care is going up by numbers that are astronomical, 68 percent, 59 percent, 71 percent, when I look at the Iran deal and how bad a deal it is for us, it's a one-sided transaction where we're giving back $150 billion to a terrorist state, really, the number one terror state, we've made them a strong country from really a very weak country just three years ago.
+463	I think it's such a great question, because energy is under siege by the Obama administration.
+464	What about the other 15,000?
+465	And frankly, those stories have been largely debunked.
+466	I'm sorry I have to keep saying this, but he lives in an alternative reality.
+467	Just today, policemen was shot, two killed.
+468	So you really owe him an apology.
+469	Iran is taking over Iraq.
+470	And, number two, I said, and very strongly, NATO could be obsolete, because -- and I was very strong on this, and it was actually covered very accurately in the New York Times, which is unusual for the New York Times, to be honest -- but I said, they do not focus on terror.
+471	And Donald knows a lot about this.
+472	She's saying Russia, Russia, Russia, but I don't -- maybe it was.
+473	We're going to have corporations make a contribution greater than they are now to our country.
+474	It was laughed at all over the world what happened.
+475	And you see, we are going to stop radical Islamic terrorism in this country.
+476	When we look at the budget, the budget is bad to a large extent because we have people that have no idea as to what to do and how to buy.
+477	So I have a comprehensive energy policy, but it really does include fighting climate change, because I think that is a serious problem.
+478	We announce we're going after Mosul.
+479	Sidney Blumenthal works for the campaign and close -- very close friend of Secretary Clinton.

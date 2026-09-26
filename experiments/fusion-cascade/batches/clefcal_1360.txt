@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1360	... no troops through whatsoever.
+1361	One final point: President Reagan, as Governor of California, signed a bill which is perhaps the most liberal proabortion bill of any State in the Union.
+1362	They only added a little bit back this year because it's an election year.
+1363	We will not be a great country unless we have a strong family unit in every home.
+1364	But I have no loans with Russia.
+1365	Medicare is for seniors, who many of them are on fixed income, to lift them out of poverty.
+1366	It's hurt the housing market because Dodd-Frank didn't anticipate putting in place the kinds of regulations you have to have.
+1367	So it's not one thing.
+1368	I guess the Vice President two or three times, said I was coming from the left.
+1369	So I modified it, the largest tax increase in the history of the world.
+1370	Let me say there is only one uh - point I would add.
+1371	Now, my fellow Americans, that's an invitation to disaster.
+1372	We have a back-up paper to my economic speech of a couple of weeks ago in Chicago, that gives all of the figures.
+1373	Well, that just isn't true.
+1374	Making life so miserable on folks that they'll leave.
+1375	We have fewer people working today than we had when the president took office.
+1376	Could be wrong, but I think so.
+1377	In public education when we just move children through the schools.
+1378	Now today the Secretary of State is in the Middle East and they've started negotiations and all those leaders promised me they would not quit until they resolved the issues between them and got the peace process going forward again.
+1379	Free nations will help us achieve the peace we all want.
+1380	In fact, it would be deflationary; it would cause great unemployment; it would cause a real slowdown in our economy.
+1381	And sometimes those projects, not -- not the overhead projector that Senator Obama asked for, but some of them that are really good projects, will have -- will have to be eliminated, as well.
+1382	We have committed $200 million worth of aid.
+1383	You have to judge us, who can shoulder the immense, awesome responsibilities of the presidency, who can put into action the plans that will make your life better.
+1384	And you know, Hillary, what you should have done, you should have changed the law when you were a United States senator...
+1385	That's the only way we're going to be able to keep the peace.
+1386	The Democratic party in this century has stood for something.
+1387	We set up a simple structure of government that could be administrated fairly and it was a - a tremendous success.
+1388	The Soviet Union refused to agree to that, and we went to the summit and it was disastrous.
+1389	We have always been willing to go the extra mile to negotiate for disarmament or in any other area.
+1390	Senator McCain, this is the guy who sang, "Bomb, bomb, bomb Iran," who called for the annihilation of North Korea.
+1391	I'll never give a veto to any country over our security.
+1392	We've had 4 years where we've produced no private sector jobs.
+1393	Well, again, while you were on the board of the Woods Foundation, you and Mr. Ayers, together, you sent $230,000 to ACORN.
+1394	If you graduated in the top quarter of your airlines, we gave you a John and Abigail Adams scholarship, four years tuition free in the college of your choice in Massachusetts, it's a public institution.
+1395	We cannot protect countries all over the world...
+1396	I have -- was fought for a very strong title in the farm bill for the conservation reserve program to set aside millions of acres of land to help improve wildlife and the habitat.
+1397	I say nothing, because I was able to get him to produce it.
+1398	They have funded Hezbollah, they have funded Hamas, they have gone from zero centrifuges to 4,000 centrifuges to develop a nuclear weapon.
+1399	And he was a risk that -- and this is where we just have a difference of opinion.

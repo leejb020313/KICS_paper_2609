@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	So when Governor Romney indicates that he wants to cut taxes and potentially benefit folks like me and him, and to pay for it we're having to initiate significant cuts in federal support for education, that makes a difference.
+521	And -- and what's at stake here is one of two things, either Candy -- this blows up the deficit because keep in mind, this is just to pay for the additional spending that he's talking about, $7 trillion - $8 trillion before we even get to the deficit we already have.
+522	The president has a view very similar to the view he had when he ran four years, that a bigger government, spending more, taxing more, regulating more -- if you will, trickle-down government -- would work.
+523	She had worked all her life, put in this money, and understood that there was a basic guarantee, a floor under which she could not go.
+524	The first lady has done great work with an organization called Joining Forces putting our veterans back to work.
+525	Now, keep in mind that our military spending has gone up every single year that I've been in office.
+526	You also have investments through a Cayman's trust.
+527	Got rid of a despot who had killed Americans and as a consequence, despite this tragedy, you had tens of thousands of Libyans after the events in Benghazi marching and saying America is our friend.
+528	And finally, championing small business.
+529	He's praised George Bush as a good economic steward and Dick Cheney as somebody who's -- who shows great wisdom and judgment.
+530	He said he was going to lower tax rates.
+531	The top 5 percent will continue to pay 60 percent, as they do today.
+532	And crippling sanctions are something I called for five years ago, when I was in Israel, speaking at the Herzliya Conference.
+533	First of all, Governor Romney talks about small businesses.
+534	Now, Governor Romney, when you were asked by teachers whether or not this would help the economy grow, you said this isn't going to help the economy grow.
+535	We don't want to get drawn into a military conflict.
+536	This is about bringing good jobs back for the middle class of America, and that's what I'm going to do.
+537	And as a consequence, what we've been able to do is to provide millions more students assistance, lower or keep low interest rates on student loans.
+538	If you graduated in the top quarter of your airlines, we gave you a John and Abigail Adams scholarship, four years tuition free in the college of your choice in Massachusetts, it's a public institution.
+539	You thought it should have been 5,000 troops...
+540	You can't have a free market work if you don't have regulation.
+541	We've also got to look to the future.
+542	I want regulators to see their job as encouraging small enterprise, not crushing it.
+543	Median income is down $4,300 a family and 23 million Americans out of work.
+544	Over the last 30 months, we've seen 5 million jobs in the private sector created.
+545	But gosh to tell our kids that before they have babies, they ought to think about getting married to someone, that's a great idea.
+546	What we can do to help young women and women of all ages is to have a strong economy, so strong that employers that are looking to find good employees and bringing them into their workforce and adapting to a flexible work schedule that gives women opportunities that they would otherwise not be able to afford.
+547	And one thing that the president said, which I want to make sure that we understand, he said that I said we should take Detroit bankrupt.
+548	And it also says that you're going to have to get rebates if insurance companies are spending more on administrative costs and profits than they are on actual care.
+549	Part of the Arizona law said that law enforcement officers could stop folks because they suspected maybe they looked like they might be undocumented workers and check their papers.
+550	I'm excited about our prospects as a nation.
+551	In addition, we're now able to transition out of Afghanistan in a responsible way, making sure that Afghans take responsibility for their own security.
+552	When I walked into the Oval Office, I had more than a trillion-dollar deficit greeting me.
+553	That's how we cut a trillion dollars of spending that wasn't advancing that cause.
+554	But when he's asked, how are you going to do it, which deductions, which loopholes are you going to close?
+555	...the choice in this election is going to be whose promises are going to be more likely to help you in your life?
+556	And that's exactly what I did.
+557	But this will make a difference in terms of whether or not we can move this economy forward for these young people...
+558	If you didn't balance your budget, you went out of business.
+559	Earlier, Governor Romney talked about he wants to make Pell Grants and other education accessible for young people.

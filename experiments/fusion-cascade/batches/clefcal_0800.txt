@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	Let me tell you something.
+801	And that additional 15 million barrels is going to cause scarcity.
+802	A woman came to me and she said, look, I can't afford insurance for myself or my son.
+803	I'm going to stand by Israel.
+804	Well, I consider her statement about my children to be a very nice compliment.
+805	When they raise your taxes nobody runs around asking people where are you going to get the extra money.
+806	The initial cost is about $54 billion, and then when you add in the additional costs - not only the construction of the system, the missiles and the personnel, and so on - when you add in the additional costs over the lifecycle of that system, over $100 billion.
+807	Many inner-city kids just move through.
+808	Again, see, I didn't create this problem.
+809	I think it's important for us to develop new sources of energy here in America, that we change our tax code to make sure that we're helping small businesses and companies that are investing here in the United States, that we take some of the money that we're saving as we wind down two wars to rebuild America and that we reduce our deficit in a balanced way that allows us to make these critical investments.
+810	We can no longer afford to be second best.
+811	We've got seven and a half million people out of jobs.
+812	But in any event, I understand the problems.
+813	I merely say that the United States should meet its commitments to Que- to uh - Formosa and the Pescadores.
+814	And we got weapons of mass destruction crossing the border every single day, and they're blowing people up.
+815	It's a nation that's not like -- like others and it does not have a civilian leadership that is calling the shots there.
+816	And the president's right in terms of the additional oil production, but none of it came on federal land.
+817	We deliberately took figures that we, ourselves, believed were too conservative.
+818	They have to pay up.
+819	Rudy Giuliani, Mayor of New York, brought crime down 25 percent just in New York City.
+820	We know the IRS has made clear there is no prohibition on releasing it when you're under audit.
+821	We'd have that trouble all over America.
+822	But I also believe we need an agricultural policy which doesn't cost us 15 to 20 to 25 billion dollars a year that it's been costing us over the course of the past three or four years under this administration.
+823	Thank you, Jim; thank you, Mr. President; thank everyone for watching and listening.
+824	But every economist - liberal, conservative that I'm familiar with - recognizes that in the fourth quarter of this year and in the fifth quar- uh - the first quarter of next year that we'll have an increase in real GNP.
+825	They're working harder and higher and harder paying more taxes.
+826	Under the new bill, if I had signed it, a person like that could never have had any recovery.
+827	So I have a record.
+828	It's called bait and switch.
+829	I don't want the federal government paying teachers' salaries directly.
+830	The point I want to make to you is, a bipartisan commission reviewed my plan and the Bush plan and there were as many Republicans as Democratic health care experts on it.
+831	You had people who were borrowing money to buy a house that they couldn't afford.
+832	That's why we doubled fuel efficiency standards on cars.
+833	And abroad, we're at war.
+834	It's a $1 million loan.
+835	He said, you know, if they taunted our sailors, I'd blow them out of the water and start another war.
+836	That's what the election was about.
+837	Let me give you some advice.
+838	And I regret deeply that the Senate has not done its job and they have not permitted a vote on the person that President Obama, a highly qualified person, they've not given him a vote to be able to be have the full complement of nine Supreme Court justices.
+839	It's a great honor for me to be here standing here as the Republican nominee.

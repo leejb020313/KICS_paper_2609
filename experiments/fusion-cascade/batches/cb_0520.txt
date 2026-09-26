@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	All they have to do is sit back 10 years, and they don't have to do much.
+521	And it was continued on by Mayor Bloomberg.
+522	And my whole concept was to make America great again.
+523	I pass factories that were thriving 20, 25 years ago, and because of the bill that her husband signed and she blessed 100 percent, it is just horrible what's happened to these people in these communities.
+524	... million new jobs, a balanced budget...
+525	... 17 intelligence -- do you doubt 17 military and civilian...
+526	Oh, yeah, they're making -- I mean, they are outsmarting -- look, you're not there, you might be involved in that decision.
+527	That in itself is a big difference.
+528	And I think the federal government could be in a position where we would offer and provide that.
+529	This is not my best friend.
+530	It's been debunked, but it never stops him from saying whatever he wants to say.
+531	He lost the Wisconsin primary.
+532	We increased them to China 50 percent.
+533	Hillary Clinton attacked those same women and attacked them viciously.
+534	We just don't want to see it creep back up.
+535	But I take advantage of the laws of the nation because I'm running a company.
+536	And when it comes to stop-and-frisk, you know, you're talking about takes guns away.
+537	Nobody's ever seen that before.
+538	But she does fight hard, and she doesn't quit, and she doesn't give up.
+539	So you can say any way you want to say it, but Bill Clinton was abusive to women.
+540	But under Obama, millions of people have been moved out of this country.
+541	We probably disagree a little bit as to numbers and amounts and what we're going to do, but perhaps we'll be talking about that later.
+542	We can't defend Japan, a behemoth, selling us cars by the million...
+543	How stupid is our country?
+544	We've had free and fair elections.
+545	I would work with our allies in Asia, in Europe, in the Middle East, and elsewhere.
+546	They work hard, they do everything they can to give her a good life.
+547	And so do all of her donors, or most of her donors.
+548	This has been such an incredible education for me, Chris.
+549	In '17, it implodes by itself.
+550	But she wants to go to single payer, which means the government basically rules everything.
+551	And I have -- well, not quite that long.
+552	She comes out and said, we love our allies, we think our allies are great.
+553	We don't know who the rebels are.
+554	That's the way the Constitution fundamentally should operate.
+555	I am a person who has great respect for people, for my family, for the people of this country.
+556	And as far as Japan is concerned, I want to help all of our allies, but we are losing billions and billions of dollars.
+557	And I think we should get -- because we pay approximately 73 percent of the cost of NATO.
+558	Blumenthal sent McClatchy, highly respected reporter at McClatchy, to Kenya to find out about it.
+559	Many of her friends took bigger deductions.

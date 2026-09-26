@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	It's what are our capabilities.
+321	When we went in to Libya, and we were able to immediately stop the massacre there, because of the unique circumstances and the coalition that we had helped to organize.
+322	This -- we have 4 million people on Medicare Advantage that will lose Medicare Advantage because of those $716 billion in cuts.
+323	But we do need to make sure that as we -- as we send support for them, that this is tied to them making progress on -- on matters that would lead them to becoming a civil society.
+324	Well, I want to do the same thing, but I've actually identified how we can do that.
+325	Governor Romney has a perspective that says if we cut taxes, skewed towards the wealthy, and roll back regulations, that we'll be better off.
+326	It's a geopolitical foe, and I said in the same -- in the same paragraph I said, and Iran is the greatest national security threat we face.
+327	First of all, Russia I indicated is a geopolitical foe.
+328	The president hasn't balanced a budget yet.
+329	What was his participation there?
+330	And that record shows he just hasn't been able to cut the deficit, to put in place reforms for Medicare and Social Security to preserve them, to get us the rising incomes we need.
+331	At the same time, regulation can become excessive.
+332	It took them a long time to say this was a terrorist act by a terrorist group.
+333	And that makes them advantageous in the marketplace.
+334	Providing funding to universities and think tanks is great.
+335	You know a major difference in this campaign is that Governor Romney feels comfortable having politicians in Washington decide the health care choices that women are making.
+336	That's how we get growth and how we balance the budget.
+337	When I came into office, we were still bogged down in Iraq and Afghanistan had been drifting for a decade.
+338	We have fewer people working today than we had when the president took office.
+339	Number four, the rule of law.
+340	That's -- that's important, of course.
+341	You're going to see health premiums go up by some $2,500 per family.
+342	Over the last four years we've made real progress digging our way out of policies that gave us two prolonged wars, record deficits and the worst economic crisis since the Great Depression.
+343	Governor, we have actually produced more oil --
+344	And -- and the -- and the president's statement of my policy is completely and totally wrong.
+345	Well, Governor Romney's right, you are familiar with jobs being shipped overseas because you invested in companies that were shipping jobs overseas.
+346	China is now the largest manufacturer in the world.
+347	And what we did in Massachusetts is a model for the nation state by state.
+348	This is -- this is an important part of the world for us.
+349	Number one, if you've got health insurance, it doesn't mean a government takeover.
+350	The reason is, is because, when we reform Wall Street, when we tackle the problem of pre-existing conditions, then, you know, these are tough problems and we've got to make choices.
+351	Their aspirations are similar to young people's here.
+352	We stepped in and had the toughest reforms on Wall Street since the 1930s.
+353	That's not the kind of advocacy that women need.
+354	Libya's 6 million population; Egypt, 80 million population.
+355	The first -- the first -- the first -- and we kept our schools number one in the nation.
+356	Thank you for your question.
+357	And a year later, 9/11 happened.
+358	Mali has been taken over, the northern part of Mali by al-Qaeda type individuals.
+359	And over the last two years, health care premiums have gone up -- it's true -- but they've gone up slower than any time in the last 50 years.
