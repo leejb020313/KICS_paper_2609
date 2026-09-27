@@ -1,17 +1,20 @@
-"""Accuracy vs. fraction of claims sent to the frontier LLM (fused vs. replacement cascade).
+"""그림 1: 프런티어 LLM 호출률에 따른 테스트 정확도 (결합형 vs 교체형 캐스케이드).
 
-Reads results/final_results.json (written by final_eval.py) and writes figures/cascade_budget.{pdf,svg,png}.
+Reads results/final_results.json (written by final_eval.py) and writes figures/cascade_budget.{pdf,png}
+at the printed width of one KICS column (8.2 cm), so it is inserted without rescaling.
 """
 import json
 import os
 
+import matplotlib as mpl
 import numpy as np
-from figstyle import COLUMN, PALETTE, figure_grid, panel_labels, save, use_style
+from figstyle import PALETTE, figure_grid, panel_labels, save, use_style
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 R = json.load(open(os.path.join(ROOT, "results", "final_results.json"), encoding="utf-8"))
 BUDGETS = [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]
-NAMES = {"clef": "CLEF 2024", "cb": "ClaimBuster"}
+NAMES = {"clef": "CLEF 2024 (n=318)", "cb": "ClaimBuster (n=800)"}
+WIDTH_IN = 8.2 / 2.54  # one column of the KICS two-column layout
 
 
 def series(m, prefix):
@@ -22,31 +25,39 @@ def series(m, prefix):
 
 def main():
     use_style()
-    fig, axes = figure_grid(2, 1, width=COLUMN, ratio=1.02, sharex=True)
-    axes = list(np.ravel(axes))
+    mpl.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Malgun Gothic"],
+                         "axes.unicode_minus": False, "font.size": 8, "axes.labelsize": 8,
+                         "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5})
+    fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.64)
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]
-        for prefix, color, marker, label in [("fuse", "blue", "o", "Fused cascade (ours)"),
-                                              ("replace", "orange", "s", "Replacement cascade")]:
+        for prefix, color, marker, label in [("fuse", "blue", "o", "결합형 캐스케이드 (제안)"),
+                                              ("replace", "orange", "s", "교체형 캐스케이드")]:
             mu, sd = series(m, prefix)
-            ax.plot(x, mu, marker=marker, markersize=3, color=PALETTE[color], linewidth=1.1, label=label, zorder=3)
-            ax.fill_between(x, mu - sd, mu + sd, color=PALETTE[color], alpha=0.2, linewidth=0)
-        son, son_sd = m["sonnet_thr"]["acc"]
-        ax.axhline(son, color=PALETTE["black"], linestyle="--", linewidth=0.9, label="Frontier LLM, all claims")
-        ax.axhspan(son - son_sd, son + son_sd, color=PALETTE["black"], alpha=0.08, linewidth=0)
-        gem = m["gemma_nnppi_sel"]["acc"][0]  # k chosen on calib holdout, not test
-        ax.axhline(gem, color=PALETTE["green"], linestyle=":", linewidth=1.0, label="Gemma 3 4B + NN-PPI")
-        ax.text(0.98, {"clef": 0.22, "cb": 0.25}[key], f"{NAMES[key]} (n={R[key]['n_test']})", transform=ax.transAxes, ha="right", va="center")
-        ax.set_ylabel("Accuracy")
-        ax.set_xlim(-2, 102)
-        ax.grid(True, axis="y")
-    axes[1].set_xlabel("Claims sent to frontier LLM (%)")
-    panel_labels(axes)
+            ax.fill_between(x, mu - sd, mu + sd, color=PALETTE[color], alpha=0.15, linewidth=0)
+            ax.plot(x, mu, marker=marker, markersize=2.6, color=PALETTE[color], linewidth=1.2, label=label, zorder=3)
+        ax.axhline(m["sonnet_thr"]["acc"][0], color=PALETTE["black"], linestyle="--", linewidth=1.0,
+                   label="전량 호출 (임계값 조정)")
+        ax.axhline(m["gemma_nnppi_sel"]["acc"][0], color=PALETTE["green"], linestyle=":", linewidth=1.2,
+                   label="Gemma 3 4B + NN-PPI")
+        ax.axvline(50, color=PALETTE["black"], linewidth=0.6, alpha=0.25, zorder=0)
+        ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter("%.2f"))
+        ax.set_xlim(-4, 104)
+        ax.set_xticks([0, 50, 100])
+        ax.set_xlabel("LLM 호출률 (%)")
+        ax.grid(True, axis="y", linewidth=0.4, alpha=0.5)
+    axes[0].set_ylabel("정확도")
+    axes[0].set_ylim(0.825, 0.91)
+    axes[0].set_yticks([0.84, 0.86, 0.88, 0.90])
+    axes[1].set_ylim(0.79, 0.865)
+    axes[1].set_yticks([0.80, 0.82, 0.84, 0.86])
+    panel_labels(axes, labels=[f"(a) {NAMES['clef']}", f"(b) {NAMES['cb']}"], weight="normal")
     handles, labels = axes[0].get_legend_handles_labels()
     fig.set_layout_engine(None)
-    fig.subplots_adjust(left=0.17, right=0.97, top=0.95, bottom=0.20, hspace=0.14)
-    fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.55, -0.01))
+    fig.subplots_adjust(left=0.155, right=0.955, top=0.91, bottom=0.37, wspace=0.40)
+    fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.0), fontsize=7,
+               columnspacing=0.8, handlelength=1.8, handletextpad=0.4)
     save(fig, os.path.join(ROOT, "figures", "cascade_budget"), formats=("pdf", "png"))
 
 
