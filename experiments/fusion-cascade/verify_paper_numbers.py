@@ -24,6 +24,11 @@ checks += [("cb p fuse50 vs sonnet", f"p={pv('cb', 'fuse_0.5_vs_sonnet_thr'):.3f
            ("clef diff pp", f"{100 * (acc('clef', 'fuse_0.5') - acc('clef', 'sonnet_thr')):.1f}%p"),
            ("cb replace p max", f"p≤{max(pv('cb', f'fuse_{b}_vs_replace_{b}') for b in (0.3, 0.4, 0.5)):.3f}"),
            ("calib gap <=0.7pp", "0.7%p"), ("cb fuse50->100 pp", f"{100*(acc('cb','fuse_1.0')-acc('cb','fuse_0.5')):.1f}%p")]
+import os
+IMP = json.load(open(os.path.join(os.path.dirname(sys.argv[1]), "improve_results.json"), encoding="utf-8"))
+for d in ("clef", "cb"):
+    checks.append((f"{d} stream acc@50", f"{IMP[d]['acc']['stream_global_0.5'][0]:.3f}"))
+    checks.append((f"{d} stream rate@50", f"{100*IMP[d]['test_call_rate']['0.5'][0]:.0f}%"))
 gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 bad = 0
 for name, s in checks:
