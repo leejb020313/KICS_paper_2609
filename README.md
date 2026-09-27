@@ -71,6 +71,12 @@ results/
   frontier/rerun/          CLEF 테스트 2차 배치 채점 (안정성 점검용)
   *.json, *.log            평가 결과와 실행 로그
 figures/                   논문 그림
+paper/
+  cascade_kics_draft.{docx,pdf}  투고 원고 (소속 입력 전)
+  build_docx.py            results/*.json과 figures/에서 원고 docx 생성
+  equations/               식을 LaTeX로 렌더링한 이미지와 스크립트
+  references/              참고문헌 검증 자료: 인용 문장별 원문 발췌·쪽수(references.json,
+                           reference-dossier.md), 검증 스크립트, 원문 PDF 다운로드 스크립트
 ```
 
 ## 재현 방법
@@ -86,8 +92,13 @@ uv run --locked python scripts/streaming_eval.py
 uv run --locked python scripts/sanity_checks.py
 uv run --locked python scripts/make_figure.py
 
-# 2) 논문 수치 대조
-uv run --locked python scripts/verify_paper_numbers.py <논문.pdf>     # -> ALL MATCH
+# 2) 원고 생성 (docx; Word에서 PDF로 저장)
+uv run --isolated --no-project --with python-docx --with pymupdf python paper/build_docx.py
+
+# 3) 원고 검증: 본문 수치, 참고문헌 원문 대조
+uv run --locked python scripts/verify_paper_numbers.py paper/cascade_kics_draft.pdf          # -> ALL MATCH
+bash paper/references/fetch_sources.sh     # 인용 논문 PDF 다운로드 (저작권 때문에 레포에는 없음)
+uv run --no-project --with pymupdf python paper/references/verify_references.py paper/cascade_kics_draft.pdf --online   # -> ALL REFERENCES VERIFIED
 ```
 
 평가는 커밋된 LLM 점수(`results/gemma`, `results/frontier`)만 사용하므로 GPU나 API 키가 필요 없다. 같은 코드로 다시 실행하면 `results/final_results.json`이 동일하게 재생성되는 것을 확인하였다.
