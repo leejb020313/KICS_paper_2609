@@ -1,10 +1,7 @@
-"""Check-worthiness scoring prompt, reproduced from NN-PPI (arXiv 2608.30731) Figure 2.
+"""Check-worthiness scoring prompt, reproduced from NN-PPI (arXiv:2608.30731) Figure 2.
 
-The paper's six few-shot examples (one per tier) are not printed in the paper
-text -- only referenced as a {{examples}} placeholder -- so these are our own,
-built to match the paper's stated tier definitions and target score ranges.
-This is a known, unavoidable deviation from exact reproduction; note it in
-writeup.
+NN-PPI does not publish its six few-shot examples (only an {examples} placeholder), so
+FEW_SHOT_EXAMPLES below are our own, one per tier of the paper's criteria.
 """
 
 SYSTEM_PROMPT = """# YOUR ROLE

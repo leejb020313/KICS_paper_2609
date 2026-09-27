@@ -1,12 +1,18 @@
-"""Check every result number printed in the draft PDF against a freshly produced final_results.json."""
+"""Check that every result number printed in the paper PDF matches results/*.json.
+
+Usage: python scripts/verify_paper_numbers.py <paper.pdf>
+"""
 import json
+import os
 import re
 import sys
 
 import pymupdf
 
-R = json.load(open(sys.argv[1], encoding="utf-8"))
-text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[2])))
+RESULTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
+R = json.load(open(os.path.join(RESULTS, "final_results.json"), encoding="utf-8"))
+S = json.load(open(os.path.join(RESULTS, "streaming_results.json"), encoding="utf-8"))
+text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[1])))
 acc = lambda d, n: R[d]["metrics"][n]["acc"][0]
 f1 = lambda d, n: R[d]["metrics"][n]["f1c1"][0]
 cal = lambda d, n: R[d]["calib_curve"][n][0]
@@ -18,17 +24,14 @@ for d in ("clef", "cb"):
         checks.append((f"{d} table {n}", f"{acc(d, n):.3f}"))
     checks += [(f"{d} F1c1 sonnet_raw", f"{f1(d, 'sonnet_raw'):.3f}"), (f"{d} F1c1 sonnet_thr", f"{f1(d, 'sonnet_thr'):.3f}"),
                (f"{d} calib fuse_0.5", f"{cal(d, 'fuse_0.5'):.3f}"), (f"{d} calib sonnet_thr_oof", f"{cal(d, 'sonnet_thr_oof'):.3f}"),
-               (f"{d} p svm vs nnppi", f"p={pv(d, 'svm_vs_gemma_nnppi_sel'):.2f}"), (f"{d} k_sel", f"k={R[d]['k_sel']}")]
+               (f"{d} p svm vs nnppi", f"p={pv(d, 'svm_vs_gemma_nnppi_sel'):.2f}"), (f"{d} k_sel", f"k={R[d]['k_sel']}"),
+               (f"{d} stream acc@50", f"{S[d]['acc']['stream_global_0.5'][0]:.3f}"),
+               (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
 checks += [("cb p fuse50 vs sonnet", f"p={pv('cb', 'fuse_0.5_vs_sonnet_thr'):.3f}"),
            ("clef p fuse50 vs sonnet", f"p={pv('clef', 'fuse_0.5_vs_sonnet_thr'):.2f}"),
            ("clef diff pp", f"{100 * (acc('clef', 'fuse_0.5') - acc('clef', 'sonnet_thr')):.1f}%p"),
            ("cb replace p max", f"p≤{max(pv('cb', f'fuse_{b}_vs_replace_{b}') for b in (0.3, 0.4, 0.5)):.3f}"),
-           ("calib gap <=0.7pp", "0.7%p"), ("cb fuse50->100 pp", f"{100*(acc('cb','fuse_1.0')-acc('cb','fuse_0.5')):.1f}%p")]
-import os
-IMP = json.load(open(os.path.join(os.path.dirname(sys.argv[1]), "improve_results.json"), encoding="utf-8"))
-for d in ("clef", "cb"):
-    checks.append((f"{d} stream acc@50", f"{IMP[d]['acc']['stream_global_0.5'][0]:.3f}"))
-    checks.append((f"{d} stream rate@50", f"{100*IMP[d]['test_call_rate']['0.5'][0]:.0f}%"))
+           ("calib gap <=0.7pp", "0.7%p"), ("cb fuse50->100 pp", f"{100 * (acc('cb', 'fuse_1.0') - acc('cb', 'fuse_0.5')):.1f}%p")]
 gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 bad = 0
 for name, s in checks:
