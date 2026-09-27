@@ -112,10 +112,12 @@ cd results/frontier && ls batches/*.txt | xargs -P 6 -n 1 bash ../../scripts/run
 
 | 데이터셋 | 출처 | 라이선스 | 사용 분할 |
 |---|---|---|---|
-| CLEF 2024 CheckThat! Task 1 (영어) | [HF `iai-group/clef2024_checkthat_task1_en`](https://huggingface.co/datasets/iai-group/clef2024_checkthat_task1_en) | CC BY-SA 4.0 | 보정: train에서 클래스 균형 2,406문장(Gemma 파싱 성공 2,405) / 테스트: 공식 318문장 |
+| CLEF 2024 CheckThat! Task 1 (영어) | [HF `iai-group/clef2024_checkthat_task1_en`](https://huggingface.co/datasets/iai-group/clef2024_checkthat_task1_en) | CC BY-SA 4.0 | 보정: train에서 클래스 균형 2,406문장(Gemma 파싱 성공 2,405) / 테스트: dev-test 분할 318문장 (NN-PPI와 같은 분할; 공식 test는 341문장) |
 | ClaimBuster | [Zenodo 3836810](https://zenodo.org/records/3836810) | CC BY 4.0 | 보정: 2012년 토론 1,314문장 / 테스트: 2016년 토론 2,745문장 중 무작위 800문장 |
 
 `data/processed/`의 CSV는 위 원본에서 `data/build_datasets.py`로 만든 파생물이며 원본 라이선스를 따른다.
+
+CLEF 2024 영어 데이터는 ClaimBuster 말뭉치에서 가져왔다(Hasanain et al., CEUR-WS Vol. 3740, pp. 276–286). 실제로 확인해 보면 CLEF 보정 문장 2,406개 중 2,405개가 ClaimBuster에 있고, CLEF 테스트(dev-test) 318문장은 3개를 빼고 ClaimBuster에 없다(3개는 문장 ID가 다르고 텍스트만 같다). 즉 두 데이터셋의 출처는 독립적이지 않다. ClaimBuster 테스트 800문장 중 99문장은 CLEF 보정 세트에도 있지만, 각 데이터셋은 자기 보정 세트만으로 학습·보정하므로 평가 누수는 없다.
 
 ## 유의 사항
 
