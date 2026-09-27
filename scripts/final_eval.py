@@ -4,6 +4,7 @@ Methods, all on identical test items:
   gemma_raw / gemma_nnppi_k{3,5,10} / gemma_nnppi_sel   Gemma 3 4B, raw and + NN-PPI (k chosen on calib)
   svm                                                   embedding RBF-SVM trained on calib labels, no LLM
   sonnet_raw / sonnet_thr                               Claude Sonnet 5 on all claims, thr 0.5 / calib-tuned thr
+  sonnet_nnppi                                          Claude Sonnet 5 + NN-PPI on all claims (k chosen on calib)
   replace_{rho} / fuse_{rho}                            cascades that query the LLM on the rho most uncertain
                                                         claims and either replace the SVM decision with
                                                         sonnet_thr or fuse SVM margin + LLM score (Eq. 1)
@@ -21,12 +22,12 @@ import sys
 import numpy as np
 from scipy.stats import binomtest
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import f1_score
+from sklearn.metrics import f1_score, precision_score, recall_score
 from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import DATASETS, RESULTS, best_threshold, load_frontier, load_gemma  # noqa: E402
+from cwcascade.data import DATASETS, RESULTS, Split, best_threshold, load_frontier, load_gemma  # noqa: E402
 from cwcascade.nnppi import nn_ppi  # noqa: E402
 
 SEEDS = 5
@@ -36,7 +37,8 @@ BOOT = 2000
 
 
 def metrics(y, p):
-    return dict(acc=float(np.mean(p == y)), wf1=float(f1_score(y, p, average='weighted')), f1c1=float(f1_score(y, p)))
+    return dict(acc=float(np.mean(p == y)), wf1=float(f1_score(y, p, average='weighted')), f1c1=float(f1_score(y, p)),
+                prec1=float(precision_score(y, p, zero_division=0)), rec1=float(recall_score(y, p)))
 
 
 def route(base, alt, order, rho):
@@ -57,11 +59,10 @@ def compare(y, a, b):
                 mcnemar_p=float(binomtest(n01, n01 + n10).pvalue) if n01 + n10 else 1.0)
 
 
-def select_nnppi_k(gemma_cal):
-    """Choose k on a 70/30 split of the Gemma calib set (70% neighbours, 30% scored)."""
-    perm = np.random.default_rng(0).permutation(len(gemma_cal.y))
+def select_nnppi_k(c, seed=0):
+    """Choose k on a 70/30 split of a calib set (70% neighbours, 30% scored)."""
+    perm = np.random.default_rng(seed).permutation(len(c.y))
     pool, tune = perm[:int(0.7 * len(perm))], perm[int(0.7 * len(perm)):]
-    c = gemma_cal
     tune_acc = {k: float(np.mean((nn_ppi(c.s[tune], c.X[tune], c.s[pool], c.X[pool], c.y[pool], k) >= .5) == c.y[tune]))
                 for k in NNPPI_KS}
     return max(tune_acc, key=tune_acc.get), tune_acc
@@ -79,9 +80,9 @@ def evaluate(name):
     k_sel, tune_acc = select_nnppi_k(gemma_cal)
     preds['gemma_nnppi_sel'] = preds[f'gemma_nnppi_k{k_sel}']
     preds['sonnet_raw'] = [(test.s >= .5).astype(int)]
-    for key in ['fuse_sel', 'svm', 'sonnet_thr'] + [f'{v}_{b}' for b in BUDGETS for v in ('fuse', 'replace')]:
+    for key in ['fuse_sel', 'svm', 'sonnet_thr', 'sonnet_nnppi'] + [f'{v}_{b}' for b in BUDGETS for v in ('fuse', 'replace')]:
         preds[key] = []
-    rho_sel, calib_curve = [], {}
+    rho_sel, calib_curve, sonnet_k = [], {}, []
 
     for seed in range(SEEDS):
         idx = np.random.default_rng(seed).permutation(len(calib.y))[:int(0.8 * len(calib.y))]
@@ -100,9 +101,19 @@ def evaluate(name):
         order = np.argsort(np.abs(d_test))  # most uncertain first
         preds['svm'].append(p_svm)
         preds['sonnet_thr'].append(p_sonnet)
+        # the NN-PPI paper's strongest setting: frontier LLM + NN-PPI on all claims, decision at 0.5
+        k = select_nnppi_k(Split(Xs, ys, ss), seed)[0]
+        sonnet_k.append(k)
+        preds['sonnet_nnppi'].append((nn_ppi(test.s, test.X, ss, Xs, ys, k) >= .5).astype(int))
         for b in BUDGETS:
             preds[f'fuse_{b}'].append(route(p_svm, p_fuse, order, b))
             preds[f'replace_{b}'].append(route(p_svm, p_sonnet, order, b))
+        if seed == 0:
+            # on the half the SVM is most confident about: correct SVM decisions each cascade breaks / wrong ones it fixes
+            conf = order[len(y) // 2:]
+            ok = p_svm[conf] == y[conf]
+            flips = {v: dict(broke=int((ok & (p[conf] != y[conf])).sum()), fixed=int((~ok & (p[conf] == y[conf])).sum()))
+                     for v, p in (('replace', p_sonnet), ('fuse', p_fuse))}
 
         # calib-only view of the same curve: out-of-fold fused predictions routed by |d_cal|
         p_svm_cal = (d_cal > 0).astype(int)
@@ -135,13 +146,14 @@ def evaluate(name):
         contrasts[f'fuse_{b}_vs_replace_{b}'] = compare(y, first[f'fuse_{b}'], first[f'replace_{b}'])
     for sd in range(SEEDS):
         contrasts[f'fuse_0.5_vs_fuse_1.0_seed{sd}'] = compare(y, preds['fuse_0.5'][sd], preds['fuse_1.0'][sd])
+    contrasts['fuse_0.5_vs_sonnet_nnppi'] = compare(y, first['fuse_0.5'], first['sonnet_nnppi'])
     contrasts['fuse_sel_vs_sonnet_thr'] = compare(y, first['fuse_sel'], first['sonnet_thr'])
     contrasts['svm_vs_gemma_nnppi_sel'] = compare(y, first['svm'], first['gemma_nnppi_sel'])
     best_nnppi = max((first[f'gemma_nnppi_k{k}'] for k in NNPPI_KS), key=lambda p: np.mean(p == y))
     contrasts['svm_vs_best_gemma_nnppi'] = compare(y, first['svm'], best_nnppi)
 
     result = dict(calib_curve={n: (float(np.mean(v)), float(np.std(v))) for n, v in calib_curve.items()},
-                  k_sel=k_sel, nnppi_tune_acc=tune_acc, rho_sel=rho_sel, n_test=len(y),
+                  k_sel=k_sel, nnppi_tune_acc=tune_acc, sonnet_nnppi_k=sonnet_k, flips_confident_half_seed0=flips, rho_sel=rho_sel, n_test=len(y),
                   n_calib_frontier=len(calib.y), n_calib_gemma=len(gemma_cal.y), metrics=summary, contrasts=contrasts)
     report(name, result)
     return result
@@ -152,7 +164,7 @@ def report(name, r):
     print(f"\n===== {name}: test n={r['n_test']}, frontier-scored calib n={r['n_calib_frontier']}, seeds={SEEDS}")
     print('  calib OOF curve:', {n: round(v[0], 3) for n, v in r['calib_curve'].items()})
     print(f"  NN-PPI k selected on calib: k={r['k_sel']} (tune acc {r['nnppi_tune_acc']}); rho selected per seed: {r['rho_sel']}")
-    for key in ['gemma_raw', 'gemma_nnppi_k3', 'gemma_nnppi_k5', 'gemma_nnppi_k10', 'gemma_nnppi_sel', 'svm', 'sonnet_raw', 'sonnet_thr', 'fuse_sel']:
+    for key in ['gemma_raw', 'gemma_nnppi_k3', 'gemma_nnppi_k5', 'gemma_nnppi_k10', 'gemma_nnppi_sel', 'svm', 'sonnet_raw', 'sonnet_thr', 'sonnet_nnppi', 'fuse_sel']:
         print(f"  {key:18s} acc={m[key]['acc'][0]:.3f}±{m[key]['acc'][1]:.3f}  wF1={m[key]['wf1'][0]:.3f}  F1c1={m[key]['f1c1'][0]:.3f}")
     print("  budget   FUSE acc (±sd)     REPLACE acc (±sd)")
     for b in BUDGETS:
