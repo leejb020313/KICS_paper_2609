@@ -62,7 +62,7 @@
 
 - 근거 유형: direct
 
-**1i** (III. 실험 (데이터)) — 논문: CLEF 보정 2,405(2,406 중 Gemma 파싱 성공), 테스트 318문장 — NN-PPI와 같은 분할
+**1i** (III. 실험 (데이터)) — 논문: NN-PPI 재현 F1은 원 논문과 같은 CLEF dev-test 분할(318문장)에서 측정
 
 > "CLEF 2024 2,406 (of 22,501) 317 107 210" (p. 5)
 
@@ -80,6 +80,12 @@
 
 - 근거 유형: direct — Figure 2 caption. The six examples themselves are not printed anywhere in the paper.
 
+**1l** (III. 실험 (재현)) — 논문: 원 논문과 같은 ClaimBuster 2016년 분할 (원 논문 2,740문장, 본 논문 2,745문장)
+
+> "ClaimBuster 1,314 (of 2,487) 2,740 725 2,015" (p. 5)
+
+- 근거 유형: direct — NN-PPI Table 1: ClaimBuster test 2,740 (725 CW / 2,015 NCW). Our 2016 set built from the Zenodo release has 2,745 (728 CW); the 5-sentence difference is unexplained (likely de-duplication or parsing).
+
 ## [2] P. Amatya and V. Setty, "Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs," arXiv:2606.08605, 2026.
 
 - 식별자: arXiv:2606.08605 (v1 확인) · 공개일 2026-06-07 · arXiv preprint
@@ -91,12 +97,6 @@
 > "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs" (p. 1)
 
 - 근거 유형: direct
-
-**2b** (서론) — 논문: 관용적 표현에서는 LLM이 앞선다고 보고하고
-
-> "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps" (p. 7)
-
-- 근거 유형: direct — '관용적 표현' translates 'highly idiomatic English (memes, satire)'.
 
 **2c** (서론) — 논문: 인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].
 
@@ -146,7 +146,7 @@
 - 공식 저자: Maram Hasanain, Reem Suwaileh, Sanne Weering, Chengkai Li, Tommaso Caselli, Wajdi Zaghouani, Alberto Barrón-Cedeño, Preslav Nakov, Firoj Alam
 - 원문 PDF: `pdfs/clef2024_task1_overview.pdf`
 
-**5a** (III. 실험 (데이터)) — 논문: CLEF 2024 CheckThat! Task 1 영어 (dev-test 318문장)
+**5a** (III. 실험 (데이터)) — 논문: CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)
 
 > "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches." (p. 1)
 
@@ -156,13 +156,13 @@
 
 > "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates." (p. 2)
 
-- 근거 유형: direct — Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 99 of our 800 ClaimBuster test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set.
+- 근거 유형: direct — Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set.
 
-**5c** (III. 실험 (데이터)) — 논문: 테스트 318문장 = CLEF dev-test 분할 (108 Yes / 210 No)
+**5c** (III. 실험 (데이터)) — 논문: 테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장
 
-> "Dev-test 377 123 316 350 108 210 509 4,491" (p. 3)
+> "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253" (p. 3)
 
-- 근거 유형: direct — Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English dev-test = 108 + 210 = 318; English official test = 88 + 253 = 341.
+- 근거 유형: direct — Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only.
 
 **5d** (결론 (한계)) — 논문: 출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장
 

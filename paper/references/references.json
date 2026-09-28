@@ -78,7 +78,7 @@
         {
           "id": "1i",
           "where": "III. 실험 (데이터)",
-          "paper": "CLEF 보정 2,405(2,406 중 Gemma 파싱 성공), 테스트 318문장 — NN-PPI와 같은 분할",
+          "paper": "NN-PPI 재현 F1은 원 논문과 같은 CLEF dev-test 분할(318문장)에서 측정",
           "quote": "CLEF 2024 2,406 (of 22,501) 317 107 210",
           "support": "direct",
           "note": "NN-PPI's CLEF test = 317 (107 CW / 210 NCW); this is the CLEF dev-test partition (108/210, see 5c), not the official 341-sentence test. Our 318 = the same partition."
@@ -98,6 +98,14 @@
           "quote": "The {{examples}} placeholder is filled with 6 fixed few-shot examples, one per check-worthiness tier",
           "support": "direct",
           "note": "Figure 2 caption. The six examples themselves are not printed anywhere in the paper."
+        },
+        {
+          "id": "1l",
+          "where": "III. 실험 (재현)",
+          "paper": "원 논문과 같은 ClaimBuster 2016년 분할 (원 논문 2,740문장, 본 논문 2,745문장)",
+          "quote": "ClaimBuster 1,314 (of 2,487) 2,740 725 2,015",
+          "support": "direct",
+          "note": "NN-PPI Table 1: ClaimBuster test 2,740 (725 CW / 2,015 NCW). Our 2016 set built from the Zenodo release has 2,745 (728 CW); the 5-sentence difference is unexplained (likely de-duplication or parsing)."
         }
       ]
     },
@@ -121,14 +129,6 @@
           "paper": "같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나",
           "quote": "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs",
           "support": "direct"
-        },
-        {
-          "id": "2b",
-          "where": "서론",
-          "paper": "관용적 표현에서는 LLM이 앞선다고 보고하고",
-          "quote": "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps",
-          "support": "direct",
-          "note": "'관용적 표현' translates 'highly idiomatic English (memes, satire)'."
         },
         {
           "id": "2c",
@@ -226,7 +226,7 @@
         {
           "id": "5a",
           "where": "III. 실험 (데이터)",
-          "paper": "CLEF 2024 CheckThat! Task 1 영어 (dev-test 318문장)",
+          "paper": "CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)",
           "quote": "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches.",
           "support": "direct"
         },
@@ -236,15 +236,15 @@
           "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축",
           "quote": "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates.",
           "support": "direct",
-          "note": "Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 99 of our 800 ClaimBuster test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set."
+          "note": "Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set."
         },
         {
           "id": "5c",
           "where": "III. 실험 (데이터)",
-          "paper": "테스트 318문장 = CLEF dev-test 분할 (108 Yes / 210 No)",
-          "quote": "Dev-test 377 123 316 350 108 210 509 4,491",
+          "paper": "테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장",
+          "quote": "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253",
           "support": "direct",
-          "note": "Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English dev-test = 108 + 210 = 318; English official test = 88 + 253 = 341."
+          "note": "Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only."
         },
         {
           "id": "5d",
