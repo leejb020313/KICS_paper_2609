@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1640	Now, what was his response?
+1641	Well, he held a number of big rallies where he said that he could not possibly have done those things to those women because they were not attractive enough for them to be assaulted.
+1642	In fact, he went on to say... WALLACE: Her two minutes -- sir, her two minutes.
+1643	I did not say that.
+1644	He went on to say, "Look at her.
+1645	About another woman, he said, "That wouldn't be my first choice."
+1646	He attacked the woman reporter writing the story, called her "disgusting," as he has called a number of women during this campaign.
+1647	Donald thinks belittling women makes him bigger.
+1648	I think it's really up to all of us to demonstrate who we are and who our country is, and to stand up and be very clear about what we expect from our next president, how we want to bring our country together, where we don't want to have the kind of pitting of people one against the other, where instead we celebrate our diversity, we lift people up, and we make our country even greater.
+1649	America is great, because America is good.
+1650	And it really is up to all of us to make that true, now and in the future, and particularly for our children and our grandchildren.
+1651	Nobody has more respect for women than I do.
+1652	And I really want to just talk about something slightly different.
+1653	She mentions this, which is all fiction, all fictionalized, probably or possibly started by her and her very sleazy campaign.
+1654	What happened to the FBI, I don't know.
+1655	We have a great general, four-star general, today you read it in all of the papers, going to potentially serve five years in jail for lying to the FBI.
+1656	She's lied hundreds of times to the people, to Congress, and to the FBI.
+1657	He's going to probably go to jail.
+1658	This is a four-star general.
+1659	And she gets away with it, and she can run for the presidency of the United States?
+1660	That's really what you should be talking about, not fiction, where somebody wants fame or where they come out of her crooked campaign.
+1661	And it's not just about women.
+1662	So we know what he has said and what he's done to women.
+1663	He went after Mr. and Mrs. Khan, the parents of a young man who died serving our country, a Gold Star family, because of their religion.
+1664	He went after John McCain, a prisoner of war, said he prefers "people who aren't captured."
+1665	He went after a federal judge, born in Indiana, but who Donald said couldn't be trusted to try the fraud and racketeering case against Trump University because his parents were Mexican.
+1666	This is a pattern, a pattern of divisiveness, of a very dark and in many ways dangerous vision of our country, where he incites violence, where he applauds people who are pushing and pulling and punching at his rallies.
+1667	That is not who America is.
+1668	And I hope that as we move in the last weeks of this campaign, more and more people will understand what's at stake in this election.
+1669	It really does come down to what kind of country we are going to have.
+1670	The other things are false, but honestly, I'd love to talk about getting rid of ISIS, and I'd love to talk about other things...
+1671	... but those other charges, as she knows, are false.
+1672	Well, everything I did as secretary of state was in furtherance of our country's interests and our values.
+1673	I think that's been proven.
+1674	You know, I could talk for the rest of the debate -- I know I don't have the time to do that.
+1675	But just briefly, the Clinton Foundation made it possible for 11 million people around the world with HIV-AIDS to afford treatment, and that's about half all the people in the world who are getting treatment.
+1676	In partnership with the American Health Association...
+1677	... we have made environments in schools healthier for kids, including healthier lunches...
+1678	Well, it is an open discussion.
+1679	I think that it's been very well...

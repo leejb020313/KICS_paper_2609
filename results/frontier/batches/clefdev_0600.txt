@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	I don't think we agree on that.
+601	And I think that's a private matter.
+602	And therefore Congress passes the bill after our session in 1997 ended, we passed an enabling legislation in 1999.
+603	I believe there are 1.4 million children in Texas who do not have health insurance.
+604	We've spent $4.7 billion a year in the State of Texas for uninsured people.
+605	And Texas is number one in industrial pollution.
+606	That is why Senator wh- President Eisenhower was also correct in his policy in the Formosa Straits, where he declined, and refused to follow the recommendations - recommendations which Senator Kennedy voted for in 1955; again made in 1959; again repeated in his debates that you have heard - recommendations with regard to - again - slicing off a piece of free territory, and abandoning it, if - in effect, to the Communists.
+607	And so we need military strength, we need economic strength, we also need the right diplomatic policies.
+608	And you cannot fight a victory for Communism or a strategy of victory for Communism with the strategy, simply of holding the line.
+609	I voted for the Formosa resolution in 1955.
+610	In 1957 I was in Havana.
+611	And yet last year we gave them less than five percent of all the technical assistance funds that we distributed around the world.
+612	There isn't one country in the Middle East that now endorses the Eisenhower Doctrine.
+613	But are we doing enough in these areas?
+614	Are we doing enough in that area?
+615	I think we are today.
+616	Now, what can we do?
+617	He surely must be aware that most of the equipment and arms and resources for Castro came from the United States, flowed out of Florida and other parts of the United States to Castro in the mountains.
+618	So that is my answer to this question.
+619	Second, as far as this report is concerned, I would have no objection to having it made public.
+620	What I said was that ten years ago, we were producing twice as many scientists and engineers as the Soviet Union and today they're producing twice as many as we are, and that this affects our security around the world.
+621	I think we should go back to Geneva, who's ever elected president, Mr. Nixon or myself, and try once again.
+622	This means at the secretary of state level and at the ambassadorial level.
+623	I don't believe we should go to a summit conference unless we have such an agenda, unless we have some reasonable insur- assurance from Mr. Khrushchev that he intends seriously to negotiate on those points.
+624	We can make it move.
+625	If he says that, this issue will not be discussed in the campaign.
+626	Let's talk about civil rights.
+627	Anybody that says America has been standing still for the last seven and a half years hasn't been traveling in America.
+628	It is essential that we extend freedom, extend it to all the world.
+629	And this means more than what we've been doing.
+630	The whole th- the United States now has a treaty - which I voted for in the United States Senate in 1955 - to defend Formosa and the Pescadores Island.
+631	The treaty does not include these two islands.
+632	Then I believe that we should move full time on our missile production, particularly on Minuteman and on Polaris.
+633	There have been many wars in the history of mankind.
+634	Now, we may not succeed.
+635	What do we do then?
+636	But certainly we're not going to have peace by giving in and indicating in advance that we are not going to defend what has become a symbol of freedom.
+637	I would take any action necessary to defend the treaty, Formosa, and the Pescadores Island.
+638	I don't suggest that, I don't support it.
+639	On our last television debate, I pointed out that it was my position that Americans must choose the best man that either party could produce.

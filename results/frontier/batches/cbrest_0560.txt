@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	But you were there, and you were secretary of state when it was a little infant.
+561	Now it's in over 30 countries.
+562	That is a mainstream media nonsense put out by her, because she -- frankly, I think the best person in her campaign is mainstream media.
+563	Just -- would you like to hear...
+564	Just so you put it out.
+565	The record does not show that.
+566	The record shows that I'm right.
+567	When I did an interview with Howard Stern, very lightly, first time anyone's asked me that, I said, very lightly, I don't know, maybe, who knows?
+568	I then did an interview with Neil Cavuto.
+569	We talked about the economy is more important.
+570	I then spoke to Sean Hannity, which everybody refuses to call Sean Hannity.
+571	I had numerous conversations with Sean Hannity at Fox.
+572	And that was before the war started.
+573	Sean Hannity said very strongly to me and other people -- he's willing to say it, but nobody wants to call him.
+574	I was against the war.
+575	And I understand that side, also, not very much, because we should have never been there.
+576	But nobody called Sean Hannity.
+577	And then they did an article in a major magazine, shortly after the war started.
+578	But they did an article which had me totally against the war in Iraq.
+579	And one of your compatriots said, you know, whether it was before or right after, Trump was definitely -- because if you read this article, there's no doubt.
+580	But if somebody -- and I'll ask the press -- if somebody would call up Sean Hannity, this was before the war started.
+581	He and I used to have arguments about the war.
+582	I said, it's a terrible and a stupid thing.
+583	It's going to destabilize the Middle East.
+584	And that's exactly what it's done.
+585	There's no question about that.
+586	I have a much better -- she spent -- let me tell you -- she spent hundreds of millions of dollars on an advertising -- you know, they get Madison Avenue into a room, they put names -- oh, temperament, let's go after -- I think my strongest asset, maybe by far, is my temperament.
+587	I have a winning temperament.
+588	I know how to win.
+589	I said, there's a person with a temperament that's got a problem.
+590	Let's talk about two important issues that were briefly mentioned by Donald, first, NATO.
+591	You know, NATO as a military alliance has something called Article 5, and basically it says this: An attack on one is an attack on all.
+592	With respect to Iran, when I became secretary of state, Iran was weeks away from having enough nuclear material to form a bomb.
+593	They had mastered the nuclear fuel cycle under the Bush administration.
+594	They had built covert facilities.
+595	They had stocked them with centrifuges that were whirling away.
+596	And we had sanctioned them.
+597	I voted for every sanction against Iran when I was in the Senate, but it wasn't enough.
+598	So I spent a year-and-a-half putting together a coalition that included Russia and China to impose the toughest sanctions on Iran.
+599	And we did drive them to the negotiating table.

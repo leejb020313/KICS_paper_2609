@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	We have cut inflation by better than half.
+41	I love America just as all of you love America.
+42	I was a school board member, and a library board member.
+43	I was Governor of Georgia for four years.
+44	We don't have good health care.
+45	Now I don't know all the answers.
+46	We might have to do it slowly.
+47	I believe in the greatness of our country, and I believe the American people are ready for a change in Washington.
+48	I've got a different view.
+49	And I'm looking forward to having that debate.
+50	I was in Dayton, Ohio, and a woman grabbed my arm and she said, "I've been out of work since May.
+51	Crack down on China, if and when they cheat.
+52	Health care costs have gone up by $2,500 a family.
+53	What things would I cut from spending?
+54	The oil industry gets $4 billion a year in corporate welfare.
+55	My grandmother died three days before I was elected president.
+56	And using that money, we were actually able to lower prescription drug costs for seniors by an average of $600, and we were also able to make a -- make a significant dent in providing them the kind of preventive care that will ultimately save money through the -- throughout the system.
+57	But for younger people, we need to talk about what changes are going to be occurring.
+58	You know, I was in New Hampshire.
+59	And over the last two years, health care premiums have gone up -- it's true -- but they've gone up slower than any time in the last 50 years.
+60	The proof of that is 1 out of 6 people in poverty.
+61	And Republicans and Democrats both love America.
+62	I believe that the United States ha- had many successes in recent years, in recent months, as far as the Communist movement is concerned.
+63	We wanted to have majority rule with the full protection of the rights of the minority.
+64	And we have weakened our position in NATO because the other countries in Europe supported the democ- democratic forces in Portugal long before we did; we stuck to the Portugal dictatorships much longer than other democracies did in this world.
+65	I am a graduate of the U.S.
+66	Every time Mr. Ford speaks from a position of secrecy in negotiations, in secret - in secret treaties that've been uh - pursued and achieved, in supporting dictatorships, in ignoring human rights, we are weak and the rest of the world knows it.
+67	The Soviet Union is still jamming Radio Free Europe - Radio - uh- uh - Radio Free Europe is being jammed.
+68	One press conference he had without sound.
+69	As a matter of fact, Iran is gonna get eighty F-14s before we even meet our own Air Force orders for F-l4s.
+70	We have made available to the Israelis over 45 percent of the total economic and military aid since the establishment of Israel twenty-seven years ago.
+71	Iran has Iraq as one of its neighbors.
+72	I would uh - also like to point out that we, in this country, have let our economy go down the drain.
+73	Now, I can't say when this can come.
+74	In Puerto Rico this year, I met with six of the leading industrial nations' heads of state to meet the problem of inflation so we would be able to solve it before it got out of hand.
+75	I have met with the heads of government bilaterally as well as multilaterally.
+76	In the meantime, there has developed the problem of the Soviet Backfire - their high-performance aircraft which they say is not a long-range aircraft and which some of our people say is a intercontinental aircraft.
+77	I believe that the cruise missiles which we are now developing in research and development across the spectrum from air, from the sea, or from the land, uh - can be uh - included within a SALT II agreement.
+78	Now I would be willing to go ahead with negotiations.
+79	It may later be Catholics; it may be - later be Baptists who are threatened by some foreign country.

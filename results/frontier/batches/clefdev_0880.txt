@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	I want to rebuild our military to keep the peace.
+881	They ought to be engaged in making high speed rail.
+882	Thirty years ago there were three police officers on the street for every crime; today there are three crimes for every police officer.
+883	I was in the Lomax AME Church.
+884	Therefore, you don't know what's it like.
+885	I'd go crazy sitting up there slow dancing that one.
+886	And we paid down the debt of our nation for two years in a row, and we created 23 million new jobs at the same time.
+887	China and India are graduating more graduates in technology and science than we are.
+888	Plus, I want them all voting for me.
+889	I was an altar boy.
+890	Thanks for your questions tonight, very, very much.
+891	I believe America's best days are ahead of us.
+892	I was not put on the ballot by either of the 2 parties; I was not put on the ballot by any PAC money, by any foreign lobbyist money, by any special interest money.
+893	Over time we have developed a government that comes at the people, that comes from the top down, where the people are more or less treated as objects to be programmed during the campaign with commercials and media events and fear messages and personal attacks and things of that nature.
+894	I believe experience counts, but it's not everything.
+895	And we have to change in this country.
+896	In the last four years, there have been twice as many bankruptcies as new jobs created.
+897	We need a new approach.
+898	The same old experience is not relevant.
+899	If there's more time for gridlock and talk and finger pointing, I'm the wrong man.
+900	And I'm sorry, but demonstrating -- it's not a question of patriotism.
+901	It's a question of character and judgment.
+902	I want to give people permanent incentives on investment tax credit, like President Kennedy and the Congress inaugurated in the early '60s to get industry moving again; a research and development tax credit; a low-income housing tax credit; a long-term capital gains proposal for new business and business expansions.
+903	We've got to have no more trickle down.
+904	Governor Clinton says $200,000 but he also says he wants to raise $150 billion.
+905	And then when you add in his other spending proposals, regrettably you end up socking it to the working man.
+906	And that's about all I can say in a minute.
+907	If you look at the cost of not keeping the peace in Europe, it would be exorbitant.
+908	We have reduced the number of troops that are deployed and going to be deployed.
+909	I've seen what it is like to see a war, to see the burdens of a war, and I don't want to see us make reckless cuts.
+910	So it I think is very important for us to let them assume more and more of the burden and for us to bring that money back here and rebuild our infrastructure, because we can only be a superpower if we are an economic superpower; and we can only be an economic superpower if we have a growing, expanding job base.
+911	I agree with the general statement Mr. Bush made.
+912	Why do we have to do it?
+913	(Laughter and applause) But--but--see, let me make it very clear.
+914	If they do, then they will have heard the harsh reality of what we have to do.
+915	You see, I have a fundamental difference.
+916	But I do not want to go the tax-and-spend route.
+917	So her best help for short term is job retraining, if she was thrown out of work at a defense plant.
+918	No other nation would have cut defense as much as we already have without that.
+919	Well, obviously, my orientation is let's go do it.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1480	And all you have to do is look at the Middle East.
+1481	They've taken over the Middle East.
+1482	She has been outsmarted and outplayed worse than anybody I've ever seen in any government whatsoever.
+1483	And she always will be.
+1484	This is a person who has been very cavalier, even casual about the use of nuclear weapons.
+1485	He said, well, if we have them, why don't we use them, which I think is terrifying.
+1486	There's about four minutes between the order being given and the people responsible for launching nuclear weapons to do so.
+1487	... and admirals, 21 endorsing me, 21 congressional Medal of Honor recipients.
+1488	They have the bargain of the century.
+1489	All I said is, we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places.
+1490	We cannot continue to afford -- she took that as saying nuclear weapons.
+1491	Look, she's been proven to be a liar on so many different ways.
+1492	You're not going to find a quote from me.
+1493	The United States has kept the peace -- the United States has kept the peace through our alliances.
+1494	I think it makes the world safer and, frankly, it makes the United States safer.
+1495	That's the only way we're going to be able to keep the peace.
+1496	Well, I think when the middle class thrives, America thrives.
+1497	And so my plan is based on growing the economy, giving middle-class families many more opportunities.
+1498	I think we can compete with high-wage countries, and I believe we should.
+1499	New jobs and clean energy, not only to fight climate change, which is a serious problem, but to create new opportunities and new businesses.
+1500	That's where two- thirds of the new jobs are going to come from.
+1501	I want us to raise the national minimum wage, because people who live in poverty should not -- who work full-time should not still be in poverty.
+1502	And I sure do want to make sure women get equal pay for the work we do.
+1503	I feel strongly that we have to have an education system that starts with preschool and goes through college.
+1504	I want to make college debt-free and for families making less than $125,000, you will not get a tuition bill from a public college or university if the plan that I worked on with Bernie Sanders is enacted.
+1505	Most of the gains in the last years since the Great Recession have gone to the very top.
+1506	That is a plan that has been analyzed by independent experts which said that it could produce 10 million new jobs.
+1507	So the plan I have I think will actually produce greater opportunities.
+1508	Well, first of all, before I start on my plan, her plan is going to raise taxes and even double your taxes.
+1509	Her tax plan is a disaster.
+1510	And she can say all she wants about college tuition.
+1511	And I'm a big proponent.
+1512	We're going to do a lot of things for college tuition.
+1513	But the rest of the public's going to be paying for it.
+1514	We will have a massive, massive tax increase under Hillary Clinton's plan.
+1515	She immediately -- when she heard this, I questioned it, and I questioned NATO.
+1516	And I've been given a lot -- a lot of credit for it.
+1517	All of a sudden, they're starting to pay up.
+1518	They have to pay up.
+1519	We're protecting people, they have to pay up.

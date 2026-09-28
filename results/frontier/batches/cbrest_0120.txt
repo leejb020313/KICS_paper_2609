@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	I will bring -- excuse me.
+121	I will bring back jobs.
+122	Well, actually, I have thought about this quite a bit.
+123	I think a lot about what worked and how we can make it work again...
+124	He approved NAFTA, which is the single worst trade deal ever approved in this country.
+125	Incomes went up for everybody.
+126	Manufacturing jobs went up also in the 1990s, if we're actually going to look at the facts.
+127	When I was in the Senate, I had a number of trade deals that came before me, and I held them all to the same test.
+128	Will they create jobs in America?
+129	Will they raise incomes in America?
+130	And are they good for our national security?
+131	Some of them I voted for.
+132	The biggest one, a multinational one known as CAFTA, I voted against.
+133	And because I hold the same standards as I look at all of these trade deals.
+134	But let's not assume that trade is the only challenge we have in the economy.
+135	I'm going to have a special prosecutor.
+136	We're going to enforce the trade deals we have, and we're going to hold people accountable.
+137	When I was secretary of state, we actually increased American exports globally 30 percent.
+138	So I know how to really work to get new jobs and to get exports that helped to create more new jobs.
+139	But you haven't done it in 30 years or 26 years or any number you want to...
+140	Well, I've been a senator, Donald...
+141	And I have been a secretary of state...
+142	Your husband signed NAFTA, which was one of the worst things that ever happened to the manufacturing industry.
+143	You were totally in favor of it.
+144	Then you heard what I was saying, how bad it is, and you said, I can't win that debate.
+145	But you know that if you did win, you would approve that, and that will be almost as bad as NAFTA.
+146	Well, that is just not accurate.
+147	I wrote about that in...
+148	You called it the gold standard of trade deals.
+149	And then you heard what I said about it, and all of a sudden you were against it.
+150	Well, Donald, I know you live in your own reality, but that is not the facts.
+151	So is it President Obama's fault?
+152	Is it President Obama's fault?
+153	And I think it's important to look at what we need to do to get the economy going again.
+154	That's why I said new jobs with rising incomes, investments, not in more tax cuts that would add $5 trillion to the debt.
+155	But you have no plan.
+156	Secretary, you have no plan.
+157	In fact, I have written a book about it.
+158	But it's because I see this -- we need to have strong growth, fair growth, sustained growth.
+159	We also have to look at how we help families balance the responsibilities at home and the responsibilities at business.

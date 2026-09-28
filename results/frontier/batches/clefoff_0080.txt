@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	He could be speaking 200 feet away from him and he shows up with the biggest mask I've ever seen.
+81	Nobody shows up to his rallies.
+82	Fewer jobs than when he became president.
+83	They've done nothing to help small businesses.
+84	They don't want to be shut down.
+85	It's almost like a ghost town, and I'm not sure it can ever recover what they've done to New York.
+86	People want to be safe.
+87	And let me just tell you, there was a story in one of the papers that paid-
+88	Which by the way, was given to me by the Obama Administration, if you can believe that.
+89	And number two, it would create an additional $1 trillion in economic growth, because it would be about buying American.
+90	All you had to do is turn on the lights and you pick up a lot.
+91	Half of the companies that have poured in here will leave.
+92	They said it would take... No, you're on number two.
+93	I'm the guy that brought back the automobile industry.
+94	He totally gave up on manufacturing.
+95	We brought them back right here in the state of Ohio and Michigan.
+96	Ohio had the best year it's ever had last year.
+97	It was sort of a reversal.
+98	Many people don't want to hurt other people's feelings.
+99	Are you in favor of law and order?
+100	Oh, really, who do you have?
+101	Name one law enforcement group that came out in support of you.
+102	I sent in the US Marshals...
+103	Sure, I'm willing to do that.
+104	I would say almost everything I see is from the left-wing not from the right wing.
+105	Antifa is an idea not an organization...
+106	Oh you gotta be kidding.
+107	You know what, Antifa is a dangerous radical group.
+108	But despite going through all of these things where I had to fight, both flanks and behind me and above, there has never been an administration that's done what I've done.
+109	When you leave office, you don't leave any judges.
+110	I'm talking about my son, Beau Biden, you're talking about Hunter?
+111	Hunter got thrown out of the military.
+112	I'm proud of my son.
+113	If you look at our numbers right now, we are doing phenomenally.
+114	He said, "Sir, we have trees that are far more, they ignite much easier than California.
+115	Because it was driving energy prices through the sky.
+116	Well, not really because what's happening is the car is much less expensive, and it's a much safer car, and you're talking about a tiny difference.
+117	The car has gotten so expensive because they have computers all over the place for an extra little bit of gasoline.
+118	Creating millions of good-paying jobs.
+119	Well, he hadn't drawn a line.

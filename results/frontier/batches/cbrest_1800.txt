@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1800	And do you know who's going to be the beneficiary?
+1801	But you were there when you took everybody out of Mosul and out of Iraq.
+1802	You shouldn't have been in Iraq, but you did vote for it.
+1803	You shouldn't have been in Iraq, but once you were in Iraq, you should have never left the way.
+1804	The point is, the big winner is going to be Iran.
+1805	Well, you know, once again, Donald is implying that he didn't support the invasion of Iraq.
+1806	I said it was a mistake.
+1807	I've said that years ago.
+1808	He has consistently denied what is...
+1809	... a very clear fact that...
+1810	... before the invasion, he supported it.
+1811	And, you know, I just want everybody to go Google it.
+1812	And you can actually hear the audio of him saying that.
+1813	Well, it matters because he has not told the truth about that position.
+1814	I guess he believes it makes him look better now to contrast with me because I did vote for it.
+1815	But what's really important here is to understand all the interplay.
+1816	Mosul is a Sunni city.
+1817	And, yes, we do need to go after Baghdadi, and -- just like we went after bin Laden, while you were doing "Celebrity Apprentice," and we brought him to justice.
+1818	We need to go after the leadership.
+1819	But we need to get rid of them, get rid of their fighters.
+1820	They've been prepared to defend.
+1821	It's going to be tough fighting.
+1822	You know, he always is looking for some conspiracy.
+1823	Chris, we don't gain anything.
+1824	He has all the conspiracy theories...
+1825	Iran is taking over Iraq.
+1826	If they did it by surprise...
+1827	We could have gained if they did it by surprise.
+1828	... unfit, and he proves it every time he talks.
+1829	No, you are the one that's unfit.
+1830	You know, WikiLeaks just actually came out -- John Podesta said some horrible things about you, and, boy, was he right.
+1831	Now, John Podesta said you have terrible instincts.
+1832	Bernie Sanders said you have bad judgment.
+1833	Well, you should ask Bernie Sanders who he's supporting for president.
+1834	... as he has campaigned for me around the country, you are the most dangerous person to run for president in the modern history of America.
+1835	Have you seen what's happening to Aleppo?
+1836	Take a look at it.
+1837	And they are being slaughtered...
+1838	But it has fallen from the -- from any standpoint.
+1839	I mean, what do you need, a signed document?

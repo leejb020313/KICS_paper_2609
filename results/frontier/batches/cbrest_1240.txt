@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1240	I would like the Supreme Court to understand that voting rights are still a big problem in many parts of our country, that we don't always do everything we can to make it possible for people of color and older people and young people to be able to exercise their franchise.
+1241	I want a Supreme Court that will stick with Roe v. Wade and a woman's right to choose, and I want a Supreme Court that will stick with marriage equality.
+1242	And among the ones that he has suggested are people who would reverse Roe v. Wade and reverse marriage equality.
+1243	I want a Supreme Court that doesn't always side with corporate interests.
+1244	And I regret deeply that the Senate has not done its job and they have not permitted a vote on the person that President Obama, a highly qualified person, they've not given him a vote to be able to be have the full complement of nine Supreme Court justices.
+1245	I think that was a dereliction of duty.
+1246	Justice Scalia, great judge, died recently.
+1247	And we have a vacancy.
+1248	I am looking to appoint judges very much in the mold of Justice Scalia.
+1249	I'm looking for judges -- and I've actually picked 20 of them so that people would see, highly respected, highly thought of, and actually very beautifully reviewed by just about everybody.
+1250	And I think that this is so important.
+1251	Also, the Second Amendment, which is totally under siege by people like Hillary Clinton.
+1252	Now, Hillary mentioned something about contributions just so you understand.
+1253	What I ask is this.
+1254	We're raising money for the Republican Party, and we're doing tremendously on the small donations, $61 average or so.
+1255	She used the power of her office to make a lot of money.
+1256	Why isn't she funding, not for $100 million, but why don't you put $10 million or $20 million or $25 million or $30 million into your own campaign?
+1257	It's $30 million less for special interests that will tell you exactly what to do and it would really, I think, be a nice sign to the American public.
+1258	You have a lot of it.
+1259	Made a lot of it while you were secretary of state, actually.
+1260	So why aren't you putting money into your own campaign?
+1261	The question was about the Supreme Court.
+1262	And I just want to quickly say, I respect the Second Amendment.
+1263	But I believe there should be comprehensive background checks, and we should close the gun show loophole, and close the online loophole.
+1264	We have to save as many lives as we possibly can.
+1265	The EPA, Environmental Protection Agency, is killing these energy companies.
+1266	And foreign companies are now coming in buying our -- buying so many of our different plants and then re-jiggering the plant so that they can take care of their oil.
+1267	But we need much more than wind and solar.
+1268	There is a thing called clean coal.
+1269	Coal will last for 1,000 years in this country.
+1270	We have unbelievable -- we have found over the last seven years, we have found tremendous wealth right under our feet.
+1271	Especially when you have $20 trillion in debt.
+1272	I will bring our energy companies back.
+1273	But we are putting our energy companies out of business.
+1274	We have to bring back our workers.
+1275	You take a look at what's happening to steel and the cost of steel and China dumping vast amounts of steel all over the United States, which essentially is killing our steelworkers and our steel companies.
+1276	We have to guard our energy companies.
+1277	We have to make it possible.
+1278	The EPA is so restrictive that they are putting our energy companies out of business.
+1279	And all you have to do is go to a great place like West Virginia or places like Ohio, which is phenomenal, or places like Pennsylvania and you see what they're doing to the people, miners and others in the energy business.

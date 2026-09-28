@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	It's hard to believe, 500 is like supposed to be good?
+401	And it was terminated by current mayor.
+402	But stop-and- frisk had a tremendous impact on the safety of New York City.
+403	So when you say it has no impact, it really did.
+404	It had a very, very big impact.
+405	And I give credit -- I give credit across the board going back two mayors, two police chiefs, because it has worked.
+406	And other communities need to come together to do what will work, as well.
+407	Look, one murder is too many.
+408	But it is important that we learn about what has been effective.
+409	Who disagrees with keeping neighborhoods safe?
+410	But let's also add, no one should disagree about respecting the rights of young men who live in those neighborhoods.
+411	I'd like to just respond, if I might.
+412	I'd just like to respond.
+413	Look, the African-American community has been let down by our politicians.
+414	They talk good around election time, like right now, and after the election, they said, see ya later, I'll see you in four years.
+415	The African-American community -- because -- look, the community within the inner cities has been so badly treated.
+416	They've been abused and used in order to get votes by Democrat politicians, because that's what it is.
+417	They've controlled these communities for up to 100 years.
+418	Well, I -- I do think...
+419	And I will tell you, you look at the inner cities -- and I just left Detroit, and I just left Philadelphia, and I just -- you know, you've seen me, I've been all over the place.
+420	You decided to stay home, and that's OK.
+421	But I will tell you, I've been all over.
+422	And I've met some of the greatest people I'll ever meet within these communities.
+423	And they are very, very upset with what their politicians have told them and what their politicians have done.
+424	I think -- I think -- I think Donald just criticized me for preparing for this debate.
+425	And you know what else I prepared for?
+426	And I think that's a good thing.
+427	I'll tell you very -- well, just very simple to say.
+428	And her campaign manager, Patti Doyle, went to -- during the campaign, her campaign against President Obama, fought very hard.
+429	And you can go look it up, and you can check it out.
+430	They were pressing it very hard.
+431	I got him to give the birth certificate.
+432	So I'm satisfied with it.
+433	And I'll tell you why I'm satisfied with it.
+434	Because I want to get on to defeating ISIS, because I want to get on to creating jobs, because I want to get on to having a strong border, because I want to get on to things that are very important to me and that are very important to the country.
+435	Well, nobody was pressing it, nobody was caring much about it.
+436	I figured you'd ask the question tonight, of course.
+437	But nobody was caring much about it.
+438	And I think I did a good job.
+439	Sidney Blumenthal sent a reporter -- you just have to take a look at CNN, the last week, the interview with your former campaign manager.

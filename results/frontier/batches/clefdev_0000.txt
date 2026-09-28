@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	You know, I saw a movie - "Crocodile Dundee."
+1	We're consuming 50 percent of the world's cocaine.
+2	That answer was about as clear as Boston harbor.
+3	Let me help the governor.
+4	We've run up more debt in the last eight years than under all the presidents from George Washington to Jimmy Carter combined.
+5	I was in Houston on Tuesday meeting with a group of good citizens, working citizens.
+6	The last time the Vice President used that phrase, I suspect he remembers it, don't you?
+7	I think we have to demonstrate some flexibility and I think the FDA is attempting to do so now in trying to make it possible for new and experimental drugs to be available to people who are at risk at AIDS and I would hope that we could bring that kind of a policy to bear beginning in January.
+8	This isn't a question of a little charity for the homeless.
+9	Go out and take a look at St. Louis at some of that effort.
+10	I don't think it's a good thing.
+11	The federal government spends seven percent of the total on education, and the rest of the state governments and local governments and the thousand points of lightened I'm talking about private schools and private church schools and things of this nature--are putting up 93 percent.
+12	But I'll tell you what I was thinking of.
+13	I'm simply not going to do that.
+14	He's got to get this thing more clear.
+15	Yes, we should make every effort to try to help those hostages come home, but it can never be because we make concessions.
+16	And I think it's important to understand what happened here.
+17	You cannot make concessions to terrorists.
+18	I had hoped this had been a little friendlier evening.
+19	I don't want to go back to malaise and misery index.
+20	We can also have a- an end to the extremes.
+21	We now have one extreme for instance, of some welfare recipients, who by taking advantage of the welfare laws, the housing laws, the uh - Medicaid uh - laws, and the uh - food stamp laws, make over $10 thousand a year and uh - they don't have to pay any taxes on it.
+22	I don't believe it will happen.
+23	But no president of the United States, in my opinion, should signal in advance to a prospective enemy, what his uhh - decision might be or what option he might exercise.
+24	And I know that everybody uh - makes mistakes.
+25	Well, first, uh - let me set the record straight.
+26	I would do the opposite in every respect.
+27	A mayor of a city like New York, for instance, needs to know uh - eighteen months or two years ahead of time what responsibility the city will have in administration and in financing - in things like housing, uh - pollution control, uh - crime control, education, welfare and health.
+28	The last point is that the major - uh thrust has gotta be to put people back to work.
+29	And over a longer period of time, let the federal government begin to absorb part of it that's now paid by the state governments.
+30	Let me uh - speak out very strongly.
+31	I would not work hard to support any of those.
+32	Uh - Mr. Maynard, uh - the record of gun control, whether it's one city or another or in some states, does not show that the registration of a gun, handgun, or the registration of the gun owner, has in any way whatsoever decreased the crime rate or the use of that gun in the committing of a crime.
+33	Well, I think the answer uh - as to the kind of person that I would select uh - is obvious.
+34	Now, uh - I'd like to point out as well that the United States' economic recovery from the recession of a year ago is well ahead of the economic recovery of any major free industrial nation in the world today.
+35	In the last month, we've had a net loss of one hundred and sixty-three thousand jobs.
+36	The economic growth is less than half today what it was at the beginning of this year.
+37	That's an overwhelming support from my own people who know me best.
+38	We have reduced the number of people in the Army, Navy, Air Force and Marines from three million, one hundred - three million, five hundred thousand to two mil- lion one hundred thousand.
+39	That uh - situation called for me to first put the United States on a steady course and to keep our keel well balanced, because we had to face the difficult problems that had all of a sudden hit America.

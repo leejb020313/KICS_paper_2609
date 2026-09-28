@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	He was right, but then he put in place deficits twice that size for every one of his four years.
+441	I know how to make that happen.
+442	We were losing 800,000 jobs a month when I started.
+443	Now, we've seen 30 consecutive -- 31 consecutive months of job growth; 5.2 million new jobs created.
+444	We've brought twice as many cases against unfair trading practices than the previous administration and we've won every single one that's been decided.
+445	Well, in fact we saved 1,000 jobs.
+446	But the last point I want to make is this.
+447	He said that by now we'd have unemployment at 5.4 percent.
+448	The entire record is such that the unemployment has not been reduced in this country.
+449	The unemployment, the number of people who are still looking for work, is still 23 million Americans.
+450	Yeah, in the Reagan recession where unemployment hit 10.8 percent, between that period -- the end of that recession and the equivalent of time to today, Ronald Reagan's recovery created twice as many jobs as this president's recovery.
+451	And that record shows he just hasn't been able to cut the deficit, to put in place reforms for Medicare and Social Security to preserve them, to get us the rising incomes we need.
+452	Median income is down $4,300 a family and 23 million Americans out of work.
+453	Thank you for your question.
+454	But first of all, this is a nation of immigrants.
+455	I want it to be streamlined.
+456	I want it to be clearer.
+457	We should make sure our legal system works.
+458	There are 4 million people who are waiting in line to get here legally.
+459	So I will not grant amnesty to those who have come here illegally.
+460	I mean we're just a few miles away from Ellis Island.
+461	Number two, we do have to deal with our border so we put more border patrol on the -- any time in history and the flow of undocumented works across the border is actually lower than it's been in 40 years.
+462	He was asked this on Univision the other day.
+463	Mr. President, I'm still speaking.
+464	Mr. President, let me finish.
+465	I do want to make sure that -- I do want to make sure that we just understand something.
+466	And we want to encourage that.
+467	Thank you Kerry for your question, it's an important one.
+468	And today there's a memorial service for one of those that was lost in this tragedy.
+469	Syria -- Syria's not just a tragedy of 30,000 civilians being killed by a military, but also a strategic -- strategically significant player for America.
+470	Can you say that a little louder, Candy?
+471	The ambassador of the United Nations went on the Sunday television shows and spoke about how --
+472	I'm happy to have a longer conversation --
+473	But -- but it'll -- it'll -- it'll be...
+474	OK. We need to create jobs here.
+475	And both Governor Romney and I agree actually that we should lower our corporate tax rate.
+476	The way we're going to create jobs here is not just to change our tax code, but also to double our exports.
+477	And we are on pace to double our exports, one of the commitments I made when I was president.
+478	We can compete with anyone in the world as long as the playing field is level.
+479	We will have to have people play on a fair basis, that's number one.

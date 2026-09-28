@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1200	And he is supporting me 100 percent.
+1201	We might have had some differences, and we had a lot of debates...
+1202	... but we believed that we could make the country better.
+1203	And I was proud of that.
+1204	You look at the violence that's taking place in the inner cities, Chicago, you take a look at Washington, D.C.
+1205	We have an increase in murder within our cities, the biggest in 45 years.
+1206	And when she said deplorables, she meant it.
+1207	And when she said irredeemable, they're irredeemable, you didn't mention that, but when she said they're irredeemable, to me that might have been even worse.
+1208	And this country cannot take another four years of Barack Obama, and that's what you're getting with her.
+1209	No, there wasn't check out a sex tape.
+1210	By the way, just so you understand, when she said 3 o'clock in the morning, take a look at Benghazi.
+1211	She said who is going to answer the call at 3 o'clock in the morning?
+1212	She didn't answer it, because when Ambassador Stevens...
+1213	... 600 -- wait a minute, Anderson, 600 times.
+1214	Well, she said she was awake at 3 o'clock in the morning, and she also sent a tweet out at 3 o'clock in the morning, but I won't even mention that.
+1215	But she said she'll be awake.
+1216	Who's going -- the famous thing, we're going to answer our call at 3 o'clock in the morning.
+1217	Ambassador Stevens -- Ambassador Stevens sent 600 requests for help.
+1218	So, you know, she shouldn't be talking about that.
+1219	Now, tweeting happens to be a modern day form of communication.
+1220	I mean, you can like it or not like it.
+1221	I have, between Facebook and Twitter, I have almost 25 million people.
+1222	It's a very effective way of communication.
+1223	So you can put it down, but it is a very effective form of communication.
+1224	I'm not un-proud of it, to be honest with you.
+1225	I'm shocked to hear that.
+1226	Well, it's not only my opinion.
+1227	It's the opinion of many others, national security experts, Republicans, former Republican members of Congress.
+1228	But it's in part because those of us who have had the great privilege of seeing this job up close and know how difficult it is, and it's not just because I watched my husband take a $300 billion deficit and turn it into a $200 billion surplus, and 23 million new jobs were created, and incomes went up for everybody.
+1229	And it's not just because I worked with George W. Bush after 9/11, and I was very proud that when I told him what the city needed, what we needed to recover, he said you've got it, and he never wavered.
+1230	And I have worked and I admire President Obama.
+1231	That was a terrible time for our country.
+1232	And $13 trillion in family wealth was wiped out.
+1233	We are back on the right track.
+1234	He would send us back into recession with his tax plans that benefit the wealthiest of Americans.
+1235	It is -- our country has the slowest growth and jobs are a disaster.
+1236	This is one of the most important issues in this election.
+1237	Because I think the current court has gone in the wrong direction.
+1238	And so I would want to see the Supreme Court reverse Citizens United and get dark, unaccountable money out of our politics.
+1239	Donald doesn't agree with that.

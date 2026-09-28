@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	We've asked for only four people as witnesses.
+41	This is a patriotism check.
+42	Climate change has come to America from coast to coast.
+43	But I also know this, we're going to create millions of good-paying union jobs across this country.
+44	Well, first of all, I would note that I have 100 percent rating from the League of Conservation Voters.
+45	And when we put a tax on carbon, which we will do either through cap-and-trade or through a renewable electricity standard or through a fee on carbon...
+46	I've been fighting this for a long time.
+47	I headed up the Recovery Act, which put more money into moving away from fossil fuels to -- to solar and wind energy than ever has occurred in the history of America.
+48	It's because of the work that we have done facing some of the toughest issues that communities can, not from the luxury of -- of a debate or a television panel or a committee room but on the ground, issues from poverty to justice in policing.
+49	But I will be a president whose personal commitment is to continue doing this work.
+50	And what I'm going to say is this.
+51	But I am asking for your support because I know that if I'm -- if I'm going to be a good teammate to you and give you absolutely everything, without any compromise, I need the support of you on caucus night so I can turn around and together we can take back this country and together we can save the world.
+52	So much is broken in this country.
+53	We lead the world when we lead by example, not by our power.
+54	We have plenty of time.
+55	Now, what's at stake here is the President's made it clear, he wants to get rid of the Affordable Care Act.
+56	And that ended when we, in fact, passed the Affordable Care Act, and there's a hundred million people who have pre-existing conditions and they'll be taken away as well.
+57	If he wins the election and the Senate is Republican, then he goes forward.
+58	We're not elected for three years.
+59	We do not wipe any.
+60	You didn't want me to ban China, which was heavily infected.
+61	The point is that the President also is opposed to Roe V. Wade.
+62	Chris, that was the worst part of Obamacare.
+63	The individual mandate was the most unpopular aspect of Obamacare.
+64	You could have done it during your 47-year period in government, but you didn't do it.
+65	I'm getting it for so cheap it's like water, you want to know the truth.
+66	I'm here standing facing you, old buddy.
+67	I'm going to get very lucky tonight as well.
+68	Premiums are too high, that it doesn't work.
+69	He doesn't want to answer the question.
+70	He knew it was a deadly disease.
+71	You didn't think we should have closed our country because you thought it was terrible.
+72	Your own Chief of Staff said you were a disaster.
+73	14,000 people died, not 200,000.
+74	They can go faster than that by a lot.
+75	We have our military that delivers soldiers and they can do 200,000 a day.
+76	You can trust the scientist.
+77	Do you believe for a moment what he's telling you in light of all the lies he's told you about the whole issue relating to COVID?
+78	There's nothing smart about you, Joe.
+79	Let me shut you down for a second, Joe, just for one second.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	And we're going to make America wealthy again, because if you don't do that, it just -- it sounds harsh to say, but we have to build up the wealth of our nation.
+761	Right now, other nations are taking our jobs and they're taking our wealth.
+762	And that's what I want to talk about.
+763	I said starting back in June that he was not fit to be president and commander-in-chief.
+764	And many Republicans and independents have said the same thing.
+765	What we all saw and heard on Friday was Donald talking about women, what he thinks about women, what he does to women.
+766	And he has said that the video doesn't represent who he is.
+767	But I think it's clear to anyone who heard it that it represents exactly who he is.
+768	We have seen him insult women.
+769	We've seen him rate women on their appearance, ranking them from one to ten.
+770	We saw him after the first debate spend nearly a week denigrating a former Miss Universe in the harshest, most personal terms.
+771	So, yes, this is who Donald Trump is.
+772	But it's not only women, and it's not only this video that raises questions about his fitness to be our president, because he has also targeted immigrants, African- Americans, Latinos, people with disabilities, POWs, Muslims, and so many others.
+773	That's why -- to go back to your question -- I want to send a message -- we all should -- to every boy and girl and, indeed, to the entire world that America already is great, but we are great because we are good, and we will respect one another, and we will work with one another, and we will celebrate our diversity.
+774	These are very important values to me, because this is the America that I know and love.
+775	And I can pledge to you tonight that this is the America that I will serve if I'm so fortunate enough to become your president.
+776	I heard them when they were running for the Senate in New York, where Hillary was going to bring back jobs to upstate New York and she failed.
+777	I've heard them where Hillary is constantly talking about the inner cities of our country, which are a disaster education-wise, jobwise, safety-wise, in every way possible.
+778	I'm going to help the Latinos, Hispanics.
+779	She wants their vote, and she does nothing, and then she comes back four years later.
+780	We saw that firsthand when she was United States senator.
+781	So, she's allowed to do that, but I'm not allowed to respond?
+782	It was locker room talk, as I told you.
+783	That was locker room talk.
+784	I'm not proud of it.
+785	Mine are words, and his was action.
+786	His was what he's done to women.
+787	There's never been anybody in the history politics in this nation that's been so abusive to women.
+788	One of the women, who is a wonderful woman, at 12 years old, was raped at 12.
+789	Her client she represented got him off, and she's seen laughing on two separate occasions, laughing at the girl who was raped.
+790	So don't tell me about words.
+791	I am absolutely -- I apologize for those words.
+792	But it is things that people say.
+793	But what President Clinton did, he was impeached, he lost his license to practice law.
+794	He had to pay an $850,000 fine to one of the women.
+795	Paula Jones, who's also here tonight.
+796	Well, first, let me start by saying that so much of what he's just said is not right, but he gets to run his campaign any way he chooses.
+797	He gets to decide what he wants to talk about.
+798	Instead of answering people's questions, talking about our agenda, laying out the plans that we have that we think can make a better life and a better country, that's his choice.
+799	When I hear something like that, I am reminded of what my friend, Michelle Obama, advised us all: When they go low, you go high.

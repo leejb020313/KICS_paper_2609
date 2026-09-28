@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	The other day, I saw Donald saying that there were some Iranian sailors on a ship in the waters off of Iran, and they were taunting American sailors who were on a nearby ship.
+601	He said, you know, if they taunted our sailors, I'd blow them out of the water and start another war.
+602	That would not start a war.
+603	That is not the right temperament to be commander-in- chief, to be taunted.
+604	He has said repeatedly that he didn't care if other nations got nuclear weapons, Japan, South Korea, even Saudi Arabia.
+605	It has been the policy of the United States, Democrats and Republicans, to do everything we could to reduce the proliferation of nuclear weapons.
+606	He even said, well, you know, if there were nuclear war in East Asia, well, you know, that's fine...
+607	... have a good time, folks.
+608	And, in fact, his cavalier attitude about nuclear weapons is so deeply troubling.
+609	That is the number-one threat we face in the world.
+610	It well describes the problem.
+611	It's not an accurate one at all.
+612	So I just want to give a lot of things -- and just to respond.
+613	I agree with her on one thing.
+614	The single greatest problem the world has is nuclear armament, nuclear weapons, not global warming, like you think and your -- your president thinks.
+615	Nuclear is the single greatest threat.
+616	They do not pay us.
+617	That's why we're losing -- we're losing -- we lose on everything.
+618	I say, who makes these -- we lose on everything.
+619	We're a country that owes $20 trillion.
+620	They have to help us out.
+621	As far as the nuclear is concerned, I agree.
+622	It is the single greatest threat that this country has.
+623	Well, I have to say that, you know, for what Secretary Clinton was saying about nuclear with Russia, she's very cavalier in the way she talks about various countries.
+624	I was seeing B-52s, they're old enough that your father, your grandfather could be flying them.
+625	We are not -- we are not keeping up with other countries.
+626	I would like everybody to end it, just get rid of it.
+627	But I would certainly not do first strike.
+628	I think that once the nuclear alternative happens, it's over.
+629	At the same time, we have to be prepared.
+630	Because you look at some of these countries, you look at North Korea, we're doing nothing there.
+631	China should solve that problem for us.
+632	China should go into North Korea.
+633	China is totally powerful as it relates to North Korea.
+634	And by the way, another one powerful is the worst deal I think I've ever seen negotiated that you started is the Iran deal.
+635	Iran is one of their biggest trading partners.
+636	Iran has power over North Korea.
+637	And when they made that horrible deal with Iran, they should have included the fact that they do something with respect to North Korea.
+638	And they should have done something with respect to Yemen and all these other places.
+639	And when asked to Secretary Kerry, why didn't you do that?

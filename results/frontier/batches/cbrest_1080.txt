@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1080	Eight million kids every year have health insurance, because when I was first lady I worked with Democrats and Republicans to create the Children's Health Insurance Program.
+1081	After 9/11, I went to work with Republican mayor, governor and president to rebuild New York and to get health care for our first responders who were suffering because they had run toward danger and gotten sickened by it.
+1082	Hundreds of thousands of National Guard and Reserve members have health care because of work that I did, and children have safer medicines because I was able to pass a law that required the dosing to be more carefully done.
+1083	When I was secretary of state, I went around the world advocating for our country, but also advocating for women's rights, to make sure that women had a decent chance to have a better life and negotiated a treaty with Russia to lower nuclear weapons.
+1084	Four hundred pieces of legislation have my name on it as a sponsor or cosponsor when I was a senator for eight years.
+1085	I worked very hard and was very proud to be re-elected in New York by an even bigger margin than I had been elected the first time.
+1086	And as president, I will take that work, that bipartisan work, that finding common ground, because you have to be able to get along with people to get things done in Washington.
+1087	I've proven that I can, and for 30 years, I've produced results for people.
+1088	She said a lot of things that were false.
+1089	I mean, I think we should be allowed to maybe...
+1090	Because she has been a disaster as a senator.
+1091	Well, the situation in Syria is catastrophic.
+1092	And every day that goes by, we see the results of the regime by Assad in partnership with the Iranians on the ground, the Russians in the air, bombarding places, in particular Aleppo, where there are hundreds of thousands of people, probably about 250,000 still left.
+1093	And there is a determined effort by the Russian air force to destroy Aleppo in order to eliminate the last of the Syrian rebels who are really holding out against the Assad regime.
+1094	Russia hasn't paid any attention to ISIS.
+1095	So I, when I was secretary of state, advocated and I advocate today a no-fly zone and safe zones.
+1096	But I want to emphasize that what is at stake here is the ambitions and the aggressiveness of Russia.
+1097	Russia has decided that it's all in, in Syria.
+1098	And they've also decided who they want to see become president of the United States, too, and it's not me.
+1099	I've stood up to Russia.
+1100	I think wherever we can cooperate with Russia, that's fine.
+1101	And I did as secretary of state.
+1102	That's how we got a treaty reducing nuclear weapons.
+1103	So I would go to the negotiating table with more leverage than we have now.
+1104	But I do support the effort to investigate for crimes, war crimes committed by the Syrians and the Russians and try to hold them accountable.
+1105	I hate to interrupt you, but at some point...
+1106	At some point, we need to do some fact-checking here.
+1107	You were in total contact with the White House, and perhaps, sadly, Obama probably still listened to you.
+1108	I don't think he would be listening to you very much anymore.
+1109	Obama draws the line in the sand.
+1110	But our nuclear program has fallen way behind, and they've gone wild with their nuclear program.
+1111	Our government shouldn't have allowed that to happen.
+1112	Now, she talks tough, she talks really tough against Putin and against Assad.
+1113	And you know what happens?
+1114	They end up being worse than the people.
+1115	Look at what she did in Libya with Gadhafi.
+1116	And, by the way, ISIS has a good chunk of their oil.
+1117	But if you look at Russia, just take a look at Russia, and look at what they did this week, where I agree, she wasn't there, but possibly she's consulted.
+1118	We sign a peace treaty.
+1119	Well, what Russia did with Assad and, by the way, with Iran, who you made very powerful with the dumbest deal perhaps I've ever seen in the history of deal-making, the Iran deal, with the $150 billion, with the $1.7 billion in cash, which is enough to fill up this room.

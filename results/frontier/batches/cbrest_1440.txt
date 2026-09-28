@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1440	Now, you can come back in and you can become a citizen.
+1441	We have millions of people that did it the right way.
+1442	But they're on line and they're waiting to become citizens.
+1443	But what she doesn't say is that President Obama has deported millions and millions of people just the way it is.
+1444	We will not have open borders.
+1445	That is a rank mischaracterization.
+1446	And this used to be a bipartisan issue.
+1447	... to sign immigration reform, and George W. Bush supported it, as well.
+1448	Those are the questions we need answered.
+1449	We've never had anything like this happen in any of our elections before.
+1450	That was a great pivot off the fact that she wants open borders, OK?
+1451	How did we get on to Putin?
+1452	People are going to come in from Syria.
+1453	She wants 550 percent more people than Barack Obama, and he has thousands and thousands of people.
+1454	They have no idea where they come from.
+1455	So I just want to tell you, she wants open borders.
+1456	Now we can talk about Putin.
+1457	If we got along well, that would be good.
+1458	If Russia and the United States got along well and went after ISIS, that would be good.
+1459	He has no respect for her.
+1460	He has no respect for our president.
+1461	And I'll tell you what: We're in very serious trouble, because we have a country with tremendous numbers of nuclear warheads -- 1,800, by the way -- where they expanded and we didn't, 1,800 nuclear warheads.
+1462	... from everything I see, has no respect for this person.
+1463	It's pretty clear you won't admit...
+1464	... that the Russians have engaged in cyberattacks against the United States of America, that you encouraged espionage against our people, that you are willing to spout the Putin line, sign up for his wish list, break up NATO, do whatever he wants to do, and that you continue to get help from him, because he has a very clear favorite in this race.
+1465	We've never had a foreign government trying to interfere in our election.
+1466	I find that deeply disturbing.
+1467	And I think it's time you take a stand...
+1468	Hillary, you have no idea.
+1469	And our country has no idea.
+1470	Well, he'd rather believe Vladimir Putin than the military and civilian intelligence professionals who are sworn to protect us.
+1471	I find that just absolutely...
+1472	She doesn't like Putin because Putin has outsmarted her at every step of the way.
+1473	Putin has outsmarted her in Syria.
+1474	He's outsmarted her every step of the way.
+1475	By Russia or anybody else.
+1476	But if the United States got along with Russia, wouldn't be so bad.
+1477	Let me tell you, Putin has outsmarted her and Obama at every single step of the way.
+1478	Take a look at the "start up" that they signed.
+1479	The Russians can't believe it.

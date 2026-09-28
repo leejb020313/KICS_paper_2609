@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	But we also need well-equipped and well-trained and well-supported conventional forces.
+761	Let's get him working on Syria, their client state, and see if we can't get them to join Israel and other Arab nations, if at all possible, and Arab leaders, in finally bringing peace to that troubled region.
+762	And I think that's one reason why we need fresh leadership in the White House that can make progress now in bringing peace to the Middle East.
+763	Let's go to work and end this fiasco in Central America, a failed policy which has actually increased Cuban and Soviet influence.
+764	And we've got to work with them if we are going to create an environment for human rights and democracy for the people of this hemisphere, and go to work on our single most important problem, and that is the avalanche of drugs that is poring into our country and virtually destroying those countries.
+765	Maybe the Vice President has an answer.
+766	But I'm somebody who believes very strongly in taking care of the fundamentals first before you start new stuff.
+767	Maybe in Idaho, to take care of the requirements, nuclear material requirements, for our Defense Department?
+768	This sounds like real progress here, because we've had a big difference on the safe use of nuclear power for our energy base.
+769	I believe that we must use clean, safe nuclear power.
+770	So I am one who believes that we can
+771	I believe that public service is honorable.
+772	I will see that these standards apply to the United States Congress.
+773	Sometimes it does seem that a campaign generates more heat than light.
+774	I want to invest in our children.
+775	America stands tall again, and as a result, we are credible.
+776	And I ask for your support on November 8th.
+777	Working together, we can do wonderful things for the United States and the Free World.
+778	Those are the kind of specifics that I think we have to discuss on these uh - debates, and these are the kind of programs that I'll talk about on my time.
+779	When Mr. Ford first became president in - in August of 1974, the first thing he did in - in October was to ask for a $4.7 billion increase in taxes on our people in the midst of the heaviest recession, since uh - since the great depression of nineteen uh - of the 1940s.
+780	And this is why a tax reform is so important.
+781	I believe that it's accurate to say that - that the - that the committees to whom you refer with the - the employment that you uh - state, and with the 5 to 5 and a half percent growth rate in our economy, that the uh - projections would be a uh - a $60 billion increase in the amount of money that we'd have to spend in l981 compared to now.
+782	But I think that now is the time to heal our country after the Vietnam War and I think that what the people are concerned about is not the - uh pardon or the amnesty of uh - those who evaded the draft, but - but whether or not our crime system is - is fair.
+783	We need to put the responsibilities back on the cabinet members.
+784	The last year I was in office uh - our budget was - was actually less than it was a year before, uh which showed a great uh improvement.
+785	We uh - have got to do that at the federal government level.
+786	In the Georgia government we only had one agency responsible for drug treatment.
+787	We'll keep the lid on some of these programs that we can hold down as we have a little extra money to spend for those quality-of-life programs which I think are needed and necessary.
+788	The take-home pay of a worker in this country is actually less now than it was in 1968 - measured in real dollars.
+789	Well among my other experiences in the past, I've - I've been a nuclear engineer, and did graduate work in this field.
+790	Congress has sustained forty-two vetoes.
+791	Another thing is a system called DISC which was originally designed, proposed by Mr. Nixon, to encourage exports.
+792	So where else would you raise the revenue to provide this tax relief - would you, in fact, do away with all business deductions, and what other kinds of preferences would you do away with?
+793	I would never do anything that would increase the taxes for those who work for a living, or who are presently required to list all their income.
+794	And this is uh - the point of my first statistics that I gave you - that - that the present tax benefits that have been carved out over a long period of years - fifty years - by sharp tax lawyers and by lobbyists have benefited just the rich.
+795	Governor Carter's answer tonight does not coincide with the answer that he gave in an interview to the Associated Press a week or so ago.
+796	But I think the feeling is misplaced.
+797	That's where the problem is and I hope there'll be some corrective action taken so we can get some new leadership in the Congress of the United States.
+798	If we have a Democratic Congress next year, and a president who wants to spend an additional one hundred billion dollars a year, or maybe two hundred billion dollars a year, with more programs, we will have in my judgment, greater deficits with more spending, more dangers of inflation.
+799	I might go back to one other thing.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1400	We have to keep the drugs out of our country.
+1401	We need absolute -- we cannot give amnesty.
+1402	Now, I want to build the wall.
+1403	And the Border Patrol, ICE, they all want the wall.
+1404	We're going to get them out; we're going to secure the border.
+1405	And once the border is secured, at a later date, we'll make a determination as to the rest.
+1406	Well, as he was talking, I was thinking about a young girl I met here in Las Vegas, Carla, who is very worried that her parents might be deported, because she was born in this country but they were not.
+1407	I don't want to be sending parents away from children.
+1408	I don't want to see the deportation force that Donald has talked about in action in our country.
+1409	We have 11 million undocumented people.
+1410	They have 4 million American citizen children, 15 million people.
+1411	It means you would have to have a massive law enforcement presence, where law enforcement officers would be going school to school, home to home, business to business, rounding up people who are undocumented.
+1412	And we would then have to put them on trains, on buses to get them out of our country.
+1413	I think it's an idea that would rip our country apart.
+1414	I voted for border security in the United States Senate.
+1415	And my comprehensive immigration reform plan of course includes border security.
+1416	Anybody who should be deported, we should deport them.
+1417	When it comes to the wall that Donald talks about building, he went to Mexico, he had a meeting with the Mexican president.
+1418	So I think we are both a nation of immigrants and we are a nation of laws and that we can act accordingly.
+1419	And that's why I'm introducing comprehensive immigration reform within the first 100 days with the path to citizenship.
+1420	I think I should respond to that.
+1421	First of all, I had a very good meeting with the president of Mexico.
+1422	We will be doing very much better with Mexico on trade deals.
+1423	Hillary Clinton fought for the wall in 2006 or thereabouts.
+1424	Now, she never gets anything done, so naturally the wall wasn't built.
+1425	But Hillary Clinton wanted the wall.
+1426	We either have -- and by the way...
+1427	Well -- well, but she said one thing.
+1428	I voted for border security, and there are...
+1429	There are some limited places where that was appropriate.
+1430	There also is necessarily going to be new technology and how best to deploy that.
+1431	But it is clear, when you look at what Donald has been proposing, he started his campaign bashing immigrants, calling Mexican immigrants rapists and criminals and drug dealers, that he has a very different view about what we should do to deal with immigrants.
+1432	Now, what I am also arguing is that bringing undocumented immigrants out from the shadows, putting them into the formal economy will be good, because then employers can't exploit them and undercut Americans' wages.
+1433	He used undocumented labor to build the Trump Tower.
+1434	He underpaid undocumented workers, and when they complained, he basically said what a lot of employers do: "You complain, I'll get you deported."
+1435	I want to get everybody out of the shadows, get the economy working, and not let employers like Donald exploit undocumented workers, which hurts them, but also hurts American workers.
+1436	Nobody knows about it, nobody talks about it.
+1437	She doesn't want to say that, but that's what's happened, and that's what happened big league.
+1438	As far as moving these people out and moving -- we either have a country or we don't.
+1439	We either have a border or we don't.

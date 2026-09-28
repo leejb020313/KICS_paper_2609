@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	Thank you, and that's an opportunity for me, and I appreciate it.
+481	I want 100 percent of the American people to have a bright and prosperous future.
+482	I care about our kids.
+483	I will get us on track to a balanced budget.
+484	I believe that the free enterprise system is the greatest engine of prosperity the world's ever known.
+485	And I want to fight for them.
+486	Well, Alan (ph), thank you very much for the question.
+487	And, in fact, we just found out that AIG, a company that got a bailout, just a week after they got help went on a $400,000 junket.
+488	The middle-class need a rescue package.
+489	And then long-term we've got to fix our health care system, we've got to fix our energy system that is putting such an enormous burden on families.
+490	And, Alan (ph), thank you for your question.
+491	You go to the heart of America's worries tonight.
+492	It's our job to fix the problem.
+493	Now, I have a plan to fix this problem and it has got to do with energy independence.
+494	We have to keep Americans' taxes low.
+495	Let's not raise taxes on anybody today.
+496	We've got to have a package of reforms and it has got to lead to reform prosperity and peace in the world.
+497	And we've got to give some trust and confidence back to America.
+498	But I think the first criteria, Tom, would have to be somebody who immediately Americans identify with, immediately say, we can trust that individual.
+499	She knows how to create jobs.
+500	Prosperity is not just going to trickle down.
+501	And that's why, for example, on tax policy, what I want to do is provide a middle class tax cut to 95 percent of working Americans, those who are working two jobs, people who are not spending enough time with their kids, because they are struggling to make ends meet.
+502	Senator McCain is right that we've got to stabilize housing prices.
+503	Now, with respect to Fannie Mae, what Senator McCain didn't mention is the fact that this bill that he talked about wasn't his own bill.
+504	I think it depends on what we do.
+505	Americans' workers are the best in the world.
+506	And we've got to give them a chance.
+507	They've got -- we've got to give them a chance to do their best again.
+508	Maybe you don't go out to dinner as much.
+509	When George Bush came into office, our debt -- national debt was around $5 trillion.
+510	And so while it's true that nobody's completely innocent here, we have had over the last eight years the biggest increases in deficit spending and national debt in our history.
+511	So here's what I would do.
+512	We are mortgaging our children's future.
+513	Senator Obama has never taken on his leaders of his party on a single issue.
+514	And we need to reform.
+515	I don't expect you to watch every vote.
+516	I think it's very important that we reform our entitlement programs.
+517	So we've got to deal with that right away.
+518	And we can do it.
+519	So that would be priority number one.

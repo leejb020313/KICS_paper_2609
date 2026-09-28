@@ -1,0 +1,42 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1920	I will not cut benefits.
+1921	But what Donald is proposing with these massive tax cuts will result in a $20 trillion additional national debt.
+1922	That will have dire consequences for Social Security and Medicare.
+1923	And I'll say something about the Affordable Care Act, which he wants to repeal.
+1924	What we need to do is go after...
+1925	Your husband disagrees with you.
+1926	... the long-term health care drivers.
+1927	We've got to get costs down, increase value, emphasize wellness.
+1928	I have a plan for doing that.
+1929	And I think that we will be able to get entitlement spending under control by with more resources and harder decisions.
+1930	Well, I would like to say to everyone watching tonight that I'm reaching out to all Americans -- Democrats, Republicans, and independents -- because we need everybody to help make our country what it should be, to grow the economy, to make it fairer, to make it work for everyone.
+1931	We need your talents, your skills, your commitments, your energy, your ambition.
+1932	And I know the awesome responsibility of protecting our country and the incredible opportunity of working to try to make life better for all of you.
+1933	I have made the cause of children and families really my life's work.
+1934	That's what my mission will be in the presidency.
+1935	I will do everything that I can to make sure that you have good jobs, with rising incomes, that your kids have good educations from preschool through college.
+1936	It's called "Make America Great Again."
+1937	We're going to make America great.
+1938	We have the greatest people on Earth in our military.
+1939	We don't take care of our veterans.
+1940	We take care of illegal immigrants, people that come into the country illegally, better than we take care of our vets.
+1941	Our policemen and women are disrespected.
+1942	Our inner cities are a disaster.
+1943	I will do more for African-Americans and Latinos than she can ever do in 10 lifetimes.
+1944	All she's done is talk to the African-Americans and to the Latinos, but they get the vote, and then they come back, they say, we'll see you in four years.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	You are going to approve one of the biggest tax cuts in history.
+161	You are going to approve one of the biggest tax increases in history.
+162	Your regulations are a disaster, and you're going to increase regulations all over the place.
+163	It will create tremendous numbers of new jobs.
+164	But regulations, you are going to regulate these businesses out of existence.
+165	And when I go around, despite the tax cut, the thing -- the things that business as in people like the most is the fact that I'm cutting regulation.
+166	I'm going to cut taxes big league, and you're going to raise taxes big league, end of story.
+167	That can't -- that can't be left to stand.
+168	I kind of assumed that there would be a lot of these charges and claims, and so...
+169	So if you want to see in real-time what the facts are, please go and take a look.
+170	What I have proposed would cut regulations and streamline them for small businesses.
+171	What I have proposed would be paid for by raising taxes on the wealthy, because they have made all the gains in the economy.
+172	Well, could I just finish -- I think I...
+173	I think I should -- you go to her website, and you take a look at her website.
+174	She's going to raise taxes $1.3 trillion.
+175	It's no difference than this.
+176	She's telling us how to fight ISIS.
+177	Just go to her website.
+178	She tells you how to fight ISIS on her website.
+179	Well, at least I have a plan to fight ISIS.
+180	No, no, you're telling the enemy everything you want to do.
+181	See, you're telling the enemy everything you want to do.
+182	That's a -- that's -- go to the -- please, fact checkers, get to work.
+183	Well, I'm really calling for major jobs, because the wealthy are going create tremendous jobs.
+184	They're going to expand their companies.
+185	They're going to do a tremendous job.
+186	And if you really look, it's not a tax -- it's really not a great thing for the wealthy.
+187	It's a great thing for the middle class.
+188	It's a great thing for companies to expand.
+189	And when these people are going to put billions and billions of dollars into companies, and when they're going to bring $2.5 trillion back from overseas, where they can't bring the money back, because politicians like Secretary Clinton won't allow them to bring the money back, because the taxes are so onerous, and the bureaucratic red tape, so what -- is so bad.
+190	And instead of bringing it back and putting the money to work, because they can't work out a deal to -- and everybody agrees it should be brought back.
+191	Because we have -- we have a president that can't sit them around a table and get them to approve something.
+192	Republicans and Democrats agree that this should be done, $2.5 trillion.
+193	I happen to think it's double that.
+194	It's probably $5 trillion that we can't bring into our country, Lester.
+195	And with a little leadership, you'd get it in here very quickly, and it could be put to use on the inner cities and lots of other things, and it would be beautiful.
+196	I have a feeling that by, the end of this evening, I'm going to be blamed for everything that's ever happened.
+197	You know, just join the debate by saying more crazy things.
+198	Now, let me say this, it is absolutely the case...
+199	There's nothing crazy about not letting our companies bring their money back into their country.

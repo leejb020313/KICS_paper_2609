@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	And we are not going to sit idly by and permit state actors to go after our information, our private-sector information or our public-sector information.
+481	And the Russians need to understand that.
+482	I think they've been treating it as almost a probing, how far would we go, how much would we do.
+483	And that's why I was so -- I was so shocked when Donald publicly invited Putin to hack into Americans.
+484	It's one of the reasons why 50 national security officials who served in Republican information -- in administrations...
+485	... have said that Donald is unfit to be the commander- in-chief.
+486	It's comments like that that really worry people who understand the threats that we face.
+487	I do want to say that I was just endorsed -- and more are coming next week -- it will be over 200 admirals, many of them here -- admirals and generals endorsed me to lead this country.
+488	That just happened, and many more are coming.
+489	And I'm very proud of it.
+490	In addition, I was just endorsed by ICE.
+491	I was just recently endorsed -- 16,500 Border Patrol agents.
+492	So when Secretary Clinton talks about this, I mean, I'll take the admirals and I'll take the generals any day over the political hacks that I see that have led our country so brilliantly over the last 10 years with their knowledge.
+493	Because look at the mess that we're in.
+494	I don't think anybody knows it was Russia that broke into the DNC.
+495	It could also be lots of other people.
+496	It also could be somebody sitting on their bed that weighs 400 pounds, OK?
+497	You don't know who broke in to DNC.
+498	But what did we learn with DNC?
+499	Look what happened to her.
+500	But Bernie Sanders was taken advantage of.
+501	Now, whether that was Russia, whether that was China, whether it was another country, we don't know, because the truth is, under President Obama we've lost control of things that we used to have control over.
+502	We came in with the Internet, we came up with the Internet, and I think Secretary Clinton and myself would agree very much, when you look at what ISIS is doing with the Internet, they're beating us at our own game.
+503	So we have to get very, very tough on cyber and cyber warfare.
+504	It is -- it is a huge problem.
+505	The security aspect of cyber is very, very tough.
+506	And maybe it's hardly doable.
+507	But I will say, we are not doing the job we should be doing.
+508	But that's true throughout our whole governmental society.
+509	We have so many things that we have to do better, Lester, and certainly cyber is one of them.
+510	I have put forth a plan to defeat ISIS.
+511	It does involve going after them online.
+512	But we also have to intensify our air strikes against ISIS and eventually support our Arab and Kurdish partners to be able to actually take out ISIS in Raqqa, end their claim of being a Caliphate.
+513	And we're hoping that within the year we'll be able to push ISIS out of Iraq and then, you know, really squeeze them in Syria.
+514	But we have to be cognizant of the fact that they've had foreign fighters coming to volunteer for them, foreign money, foreign weapons, so we have to make this the top priority.
+515	And I would also do everything possible to take out their leadership.
+516	I was involved in a number of efforts to take out Al Qaida leadership when I was secretary of state, including, of course, taking out bin Laden.
+517	Because we've got to defeat ISIS, and we've got to do everything we can to disrupt their propaganda efforts online.
+518	We will take out ISIS.
+519	So she talks about taking them out.

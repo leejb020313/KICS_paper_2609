@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	But I think it's time to talk about the future.
+801	It's a time to draw ourselves together: to have a president and a Congress that can work together with mutual respect for a change, cooperating for a change, in the open for a change, so the people can understand their own government.
+802	I believe in our country.
+803	In addition to that, we've suffered because we haven't had leadership in this administration.
+804	I owe everything to you, the people of this country.
+805	We must make this next century the century of the individual.
+806	At the same time, if we can have a 4-percent recovery continue through that same period of time, that will mean -- without an increase in tax rates -- that will mean $400 billion more in government revenues.
+807	And so, I think that the lines can meet.
+808	As a matter of fact, over 4 years, they've missed the mark by nearly $600 billion.
+809	I think this is a test of leadership, and I think the American people know the difference.
+810	Absolutely, and I proposed over a hundred billion dollars in cuts in Federal spending over 4 years, but I am not going to cut it out of Social Security and Medicare and student assistance and things -- [applause] -- that people need.
+811	Everybody remembers that; people know what happened.
+812	We are today subsidizing housing for more than 10 million people, and we're going to continue along that line.
+813	We all know the possibility of terrorism.
+814	I am a son of a Methodist minister.
+815	I think our faith tells us, instructs us, about the moral life that we should lead.
+816	When the Republican platform says that from here on out, we're going to have a religious test for judges before they're selected for the Federal court, and then Jerry Falwell announces that that means they get at least two Justices of the Supreme Court, I think that's an abuse of faith in our country.
+817	It seems to me that a moment's reflection tells you why the United States Senate turned that amendment down, because it will undermine the practice of honest faith in our country by politicizing it.
+818	The American people want to keep opening doors.
+819	I said that we would create jobs for our people, and we did -- 6 million in the last 20 or 21 months.
+820	All of the things that I said we would do, from inflation being down, interest rates being down, unemployment falling, all of those things we have done.
+821	It's now the largest peacetime government ever in terms of the take from the total economy.
+822	As a matter of fact, there has been less than one-quarter of 1 percent of foreclosures of the 270,000 loans from government that the farmers have.
+823	This is one of the most emotional and difficult issues that could possibly be debated.
+824	But there are some things that government can do and some things they cannot do.
+825	You've got another life involved.
+826	Does every woman in America have to present herself before some judge picked by Jerry Falwell to clear her personal judgment?
+827	But in this great society of ours, wouldn't it make a lot more sense, in this gentle and kind society, if we had a program that made it possible for when incidents come along in which someone feels they must do away with that unborn child, that instead we make it available for the adoption?
+828	In my opinion, as we deal with this deficit, people from about $70,000 a year on down have to be dealt with very, very carefully, because they are the ones who didn't get any relief the first time around.
+829	I'm not going to increase taxes.
+830	You remember the last time you said that?
+831	You can't wish it away.
+832	On the other hand, women heads of household -- single women heads of household have -- for the first time there's been a turndown in the rate of poverty for them.
+833	We are spending now 37 percent more on food for the hungry in all the various types of programs than was spent in 1980.
+834	Half -- one out of two of the full-time college students in the United States are receiving some form of Federal aid.
+835	That had nothing to do with the other thing of talking about their needs or anything.
+836	Certainly education and training is crucial.
+837	I think the President genuinely believes that they're better off.
+838	We are now $120 billion of imports, 3 million jobs lost, and farmers are having their worst year.
+839	I think the American people want to make certain that that dollar is wisely spent.

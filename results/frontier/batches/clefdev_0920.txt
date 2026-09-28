@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	But first we must have an aggressive jobs program.
+921	Well, let me say that I think that we might ought to review the terms, the way it works.
+922	I don't think the Fed ought to be put under the Executive Branch.
+923	In terms of vetoing tax bills, you're darn right.
+924	I am going to protect the American taxpayer against the spend and tax Congress.
+925	That's pennies on the dollar compared to renewing the cold war.
+926	So, in terms of priorities, we've got to be financially strong.
+927	Mr Bush sent two people in secret to toast the Chinese leaders and basically tell them not to worry about it.
+928	And recently the Chinese have announced they are going to lower some barriers to our products, which they ought to do since they have a 15 billion dollar trade surplus with the United States under Mr. Bush.
+929	If we can stand up for our economics, we ought to be able to preserve the democratic interests of the people of China.
+930	I am not going to commit US forces until I know what the mission is, till the military tell me that it can be completed, and till I know how they can come out.
+931	But I must stop short of using American force until I know how those young men and women are going to get out of there as well as get in, know what the mission is, and define it.
+932	We cannot send our people all over the world to solve every problem that comes up.
+933	But it is inappropriate for us, just because there's a problem somewhere around the world, to take the sons and daughters of working people--and make no mistake about it, our all- volunteer armed force is not made up of the sons and daughters of the beautiful people; it's the working folks who send their sons and daughters to war, with a few exceptions.
+934	It's a different world now.
+935	I was born to a widowed mother who gave me family values, and grandparents.
+936	I believe that discipline and respect for the law -- all of these things should be taught to children, not in our schools, but families have to do that.
+937	But it's gotten too much.
+938	And I think, my gosh, wouldn't it be wonderful if every child had that love and support.
+939	The use of cocaine, for example, by teenagers is dramatically down.
+940	But we've got to keep fighting on this war against drugs.
+941	Anytime you think you want to legalize drugs, go to a neonatal unit -- if you can get in.
+942	And these old boys are not going to quit easy.
+943	I'm very proud of him.
+944	Thirty years ago, there were three policemen for every crime.
+945	That crime bill is going to be one of my highest priorities next January if I become president.
+946	We are all in this together.
+947	We ought to love one another because united teams win and divided teams lose.
+948	Our diversity is a strength.
+949	I think whoever is in the White House should just make it absolutely unconscionable and inexcusable, and if anybody's in the middle of a speech at, you know, one of these conventions, I would expect the candidate to go out and lift him off the stage if he starts preaching hate -- because we don't have time for it.
+950	We have got to pull together.
+951	We are being murdered economically because we have too many drop-outs, we have too many low birthweight babies, we have too many drug addicts as kids, we have too much violence, we are too divided by race, by income, by region.
+952	I do think it's fair to note -- he can rebut it -- but Arkansas is one of the few states that doesn't have any civil rights legislation.
+953	Call me, let me know."
+954	Let me go back a minute to racial divisiveness.
+955	Well over a million and a quarter Americans are HIV-positive.
+956	This is a town where the White House says, Congress did it; Congress says, the White House did it.
+957	I mean, look at the facts.
+958	Both parties in Washington, the president and the Congress, have cut Medicare.
+959	What we do need to do, though, is control the growth of these mandatory programs.

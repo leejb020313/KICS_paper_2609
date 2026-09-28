@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	And even someone like Captain Khan, the young man who sacrificed himself defending our country in the United States Army, has been subject to attack by Donald.
+921	First, we've had Muslims in America since George Washington.
+922	And we've had many successful Muslims.
+923	We just lost a particular well-known one with Muhammad Ali.
+924	It's also very short-sighted and even dangerous to be engaging in the kind of demagogic rhetoric that Donald has about Muslims.
+925	We need American Muslims to be part of our eyes and ears on our front lines.
+926	I've worked with a lot of different Muslim groups around America.
+927	I've met with a lot of them, and I've heard how important it is for them to feel that they are wanted and included and part of our country, part of our homeland security, and that's what I want to see.
+928	And this is a gift to ISIS and the terrorists, violent jihadist terrorists.
+929	We are not at war with Islam.
+930	And it is a mistake and it plays into the hands of the terrorists to act as though we are.
+931	So I want a country where citizens like you and your family are just as welcome as anyone else.
+932	First of all, Captain Khan is an American hero, and if I were president at that time, he would be alive today, because unlike her, who voted for the war without knowing what she was doing, I would not have had our people in Iraq.
+933	So he would have been alive today.
+934	Why don't you interrupt her?
+935	We are going to areas like Syria where they're coming in by the tens of thousands because of Barack Obama.
+936	People are coming into our country like we have no idea who they are, where they are from, what their feelings about our country is, and she wants 550 percent more.
+937	This is going to be the great Trojan horse of all time.
+938	We have enough problems in this country.
+939	We know nothing about their values and we know nothing about their love for our country.
+940	Well, first of all, I will not let anyone into our country that I think poses a risk to us.
+941	But there are a lot of refugees, women and children -- think of that picture we all saw of that 4-year-old boy with the blood on his forehead because he'd been bombed by the Russian and Syrian air forces.
+942	There are children suffering in this catastrophic war, largely, I believe, because of Russian aggression.
+943	We by no means are carrying anywhere near the load that Europe and others are.
+944	But we will have vetting that is as tough as it needs to be from our professionals, our intelligence experts and others.
+945	But it is important for us as a policy, you know, not to say, as Donald has said, we're going to ban people based on a religion.
+946	We are a country founded on religious freedom and liberty.
+947	How do we do what he has advocated without causing great distress within our own county?
+948	Are we going to have religious tests when people fly into our country?
+949	And how do we expect to be able to implement those?
+950	So I thought that what he said was extremely unwise and even dangerous.
+951	And indeed, you can look at the propaganda on a lot of the terrorists sites, and what Donald Trump says about Muslims is used to recruit fighters, because they want to create a war between us.
+952	We have it on tape.
+953	That has not been debunked.
+954	I was against -- I was against the war in Iraq.
+955	And you voted for it.
+956	Well, I just want to say...
+957	She just went about 25 seconds over her time.
+958	Could I just respond to this, please?
+959	Hillary Clinton, in terms of having people come into our country, we have many criminal illegal aliens.

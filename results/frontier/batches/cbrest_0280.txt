@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	So the worst of all things has happened.
+281	We owe $20 trillion, and we're a mess.
+282	And we've spent $6 trillion in the Middle East, according to a report that I just saw.
+283	And it's really a shame.
+284	And it's politicians like Secretary Clinton that have caused this problem.
+285	Our country has tremendous problems.
+286	We're a serious debtor nation.
+287	And we have a country that needs new roads, new tunnels, new bridges, new airports, new schools, new hospitals.
+288	And the other thing I think is important...
+289	It would be squandered, too, believe me.
+290	You know, your campaign manager said that you built a lot of businesses on the backs of little guys.
+291	And, indeed, I have met a lot of the people who were stiffed by you and your businesses, Donald.
+292	I've met dishwashers, painters, architects, glass installers, marble installers, drapery installers, like my dad was, who you refused to pay when they finished the work that you asked them to do.
+293	We have an architect in the audience who designed one of your clubhouses at one of your golf courses.
+294	It immediately was put to use.
+295	Which our country should do, too.
+296	I can only say that I'm certainly relieved that my late father never did business with you.
+297	He provided a good middle-class life for us, but the people he worked for, he expected the bargain to be kept on both sides.
+298	You call yourself the King of Debt.
+299	Well, sometimes there's not a direct transfer of skills from business to government, but sometimes what happened in business would be really bad for government.
+300	And we need to be very clear about that.
+301	So, yeah, I think -- I do think it's time.
+302	Look, it's all words, it's all sound bites.
+303	I built an unbelievable company.
+304	But on occasion, four times, we used certain laws that are there.
+305	And when Secretary Clinton talks about people that didn't get paid, first of all, they did get paid a lot, but taken advantage of the laws of the nation.
+306	Now, if you want to change the laws, you've been there a long time, change the laws.
+307	My obligation right now is to do well for myself, my family, my employees, for my companies.
+308	But what she doesn't say is that tens of thousands of people that are unbelievably happy and that love me.
+309	But we're opening the Old Post Office.
+310	Under budget, ahead of schedule, saved tremendous money.
+311	I'm a year ahead of schedule.
+312	And that's what this country should be doing.
+313	We build roads and they cost two and three and four times what they're supposed to cost.
+314	And we should be able to do that for our country.
+315	Unfortunately, race still determines too much, often determines where people live, determines what kind of education in their public schools they can get, and, yes, it determines how they're treated in the criminal justice system.
+316	We have to restore trust between communities and the police.
+317	We have to work to make sure that our police are using the best training, the best techniques, that they're well prepared to use force only when necessary.
+318	Right now, that's not the case in a lot of our neighborhoods.
+319	So I have, ever since the first day of my campaign, called for criminal justice reform.

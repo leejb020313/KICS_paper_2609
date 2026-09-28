@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	When we want to send them back to their country, their country says we don't want them.
+961	In some cases, they're murderers, drug lords, drug problems.
+962	And they don't want them.
+963	Let me tell you, I'm going to force them right back into their country.
+964	And I will tell you very strongly, when Bernie Sanders said she had bad judgment, she has really bad judgment, because we are letting people into this country that are going to cause problems and crime like you've never seen.
+965	We're also letting drugs pour through our southern border at a record clip.
+966	They've never endorsed a presidential candidate.
+967	The Border Patrol agents, 16,500, just recently endorsed me, and they endorsed me because I understand the border.
+968	She wants amnesty for everybody.
+969	It's a horrible thing she's doing.
+970	That I can tell you.
+971	As I recall, that was something I said about Abraham Lincoln after having seen the wonderful Steven Spielberg movie called "Lincoln."
+972	It was a master class watching President Lincoln get the Congress to approve the 13th Amendment.
+973	It was principled, and it was strategic.
+974	And I was making the point that it is hard sometimes to get the Congress to do what you want to do and you have to keep working at it.
+975	And, yes, President Lincoln was trying to convince some people, he used some arguments, convincing other people, he used other arguments.
+976	That was a great -- I thought a great display of presidential leadership.
+977	But, you know, let's talk about what's really going on here, Martha, because our intelligence community just came out and said in the last few days that the Kremlin, meaning Putin and the Russian government, are directing the attacks, the hacking on American accounts to influence our election.
+978	And WikiLeaks is part of that, as are other sites where the Russians hack information, we don't even know if it's accurate information, and then they put it out.
+979	And believe me, they're not doing it to get me elected.
+980	They're doing it to try to influence the election for Donald Trump.
+981	And we should demand that Donald release all of his tax returns so that people can see what are the entanglements and the financial relationships that he has...
+982	... with the Russians and other foreign powers.
+983	Well, I think I should respond, because -- so ridiculous.
+984	Look, now she's blaming -- she got caught in a total lie.
+985	Now she's blaming the lie on the late, great Abraham Lincoln.
+986	That's one that I haven't...
+987	OK, Honest Abe, Honest Abe never lied.
+988	That's the big difference between Abraham Lincoln and you.
+989	We're talking about some difference.
+990	But I don't know Putin.
+991	But I notice, anytime anything wrong happens, they like to say the Russians are -- she doesn't know if it's the Russians doing the hacking.
+992	Maybe there is no hacking.
+993	I know nothing about Russia.
+994	I have no businesses there.
+995	I have a very, very great balance sheet, so great that when I did the Old Post Office on Pennsylvania Avenue, the United States government, because of my balance sheet, which they actually know very well, chose me to do the Old Post Office, between the White House and Congress, chose me to do the Old Post Office.
+996	One of the primary area things, in fact, perhaps the primary thing was balance sheet.
+997	You could go to the United States government, and they would probably tell you that, because they know my sheet very well in order to get that development I had to have.
+998	Now, the taxes are a very simple thing.
+999	As soon as I have -- first of all, I pay hundreds of millions of dollars in taxes.

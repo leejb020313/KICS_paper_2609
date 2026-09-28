@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	We wish you a lot of luck.
+81	But if you think you're going to make your air conditioners or your cars or your cookies or whatever you make and bring them into our country without a tax, you're wrong.
+82	And once you say you're going to have to tax them coming in, and our politicians never do this, because they have special interests and the special interests want those companies to leave, because in many cases, they own the companies.
+83	And that's a big, big factor.
+84	Well, let's stop for a second and remember where we were eight years ago.
+85	We had the worst financial crisis, the Great Recession, the worst since the 1930s.
+86	That was in large part because of tax policies that slashed taxes on the wealthy, failed to invest in the middle class, took their eyes off of Wall Street, and created a perfect storm.
+87	He said, back in 2006, "Gee, I hope it does collapse, because then I can go in and buy some and make some money."
+88	That's called business, by the way.
+89	Five million people lost their homes.
+90	And $13 trillion in family wealth was wiped out.
+91	Now, we have come back from that abyss.
+92	And it has not been easy.
+93	So we're now on the precipice of having a potentially much better economy, but the last thing we need to do is to go back to the policies that failed us in the first place.
+94	Independent experts have looked at what I've proposed and looked at what Donald's proposed, and basically they've said this, that if his tax plan, which would blow up the debt by over $5 trillion and would in some instances disadvantage middle-class families compared to the wealthy, were to go into effect, we would lose 3.5 million jobs and maybe have another recession.
+95	They've looked at my plans and they've said, OK, if we can do this, and I intend to get it done, we will have 10 million more new jobs, because we will be making investments where we can grow the economy.
+96	Some country is going to be the clean- energy superpower of the 21st century.
+97	Donald thinks that climate change is a hoax perpetrated by the Chinese.
+98	I do not say that.
+99	I think science is real.
+100	I do not say that.
+101	And here's what we can do.
+102	We can have enough clean energy to power every home.
+103	That's a lot of jobs; that's a lot of new economic activity.
+104	So I've tried to be very specific about what we can and should do, and I am determined that we're going to get the economy really moving again, building on the progress we've made over the last eight years, but never going back to what got us in trouble in the first place.
+105	She talks about solar panels.
+106	We invested in a solar company, our country.
+107	They lost plenty of money on that one.
+108	Our energy policies are a disaster.
+109	Our country is losing so much in terms of energy, in terms of paying off our debt.
+110	You can't do what you're looking to do with $20 trillion in debt.
+111	The Obama administration, from the time they've come in, is over 230 years' worth of debt, and he's topped it.
+112	He's doubled it in a course of almost eight years, seven-and-a-half years, to be semi- exact.
+113	We have to do a much better job at keeping our jobs.
+114	And we have to do a much better job at giving companies incentives to build new companies or to expand, because they're not doing it.
+115	And all you have to do is look at Michigan and look at Ohio and look at all of these places where so many of their jobs and their companies are just leaving, they're gone.
+116	And, Hillary, I'd just ask you this.
+117	You've been doing this for 30 years.
+118	Why are you just thinking about these solutions right now?
+119	For 30 years, you've been doing it, and now you're just starting to think of solutions.

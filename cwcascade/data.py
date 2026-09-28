@@ -66,16 +66,30 @@ class Split:
     s: np.ndarray       # LLM score in [0, 1]
 
 
-def load_frontier(name):
-    """Test and calibration splits with Claude Sonnet 5 scores for dataset `name`."""
+# full held-out test sets: the paper's test set followed by the parts in data/frontier/full_set.json
+FULL_PARTS = {"clef": ("clefdev", "clefoff"), "cb": ("cbrest",)}
+
+
+def load_frontier(name, full=False):
+    """Test and calibration splits with Claude Sonnet 5 scores for dataset `name`.
+
+    With full=True the test split is the whole held-out set (FULL_PARTS appended); each test
+    item then carries a "part" key naming the set it came from.
+    """
     calib_key = DATASETS[name][0]
-    test_items = read_json(os.path.join(DATA, "frontier", "eval_set.json"))[name]
+    test_items = [dict(r, part=name) for r in read_json(os.path.join(DATA, "frontier", "eval_set.json"))[name]]
     calib_items = read_json(os.path.join(DATA, "frontier", "calib_set.json"))[calib_key]
     fs = read_frontier_scores()
+    test_s = [fs[name][i] for i in range(len(test_items))]
+    if full:
+        extra = read_json(os.path.join(DATA, "frontier", "full_set.json"))
+        for part in FULL_PARTS[name]:
+            test_items += [dict(r, part=part) for r in extra[part]]
+            test_s += [fs[part][i] for i in range(len(extra[part]))]
     have = sorted(fs[calib_key])
     calib_items = [calib_items[i] for i in have]
     test = Split(embed([r["text"] for r in test_items]), np.array([r["label"] for r in test_items]),
-                 np.array([fs[name][i] for i in range(len(test_items))]))
+                 np.array(test_s))
     calib = Split(embed([r["text"] for r in calib_items]), np.array([r["label"] for r in calib_items]),
                   np.array([fs[calib_key][i] for i in have]))
     return test, calib, test_items
@@ -84,11 +98,17 @@ def load_frontier(name):
 def load_gemma(name, test_items):
     """Gemma 3 4B scores: the full parsed calibration set, and the same test items as the frontier set.
 
-    Test sentences whose response could not be parsed get score 0.
+    Test sentences whose response could not be parsed get score 0. Returns test scores None
+    when some test sentence has not been scored by Gemma at all.
     """
     _, calib_file, test_file = DATASETS[name]
     calib_rows = [r for r in read_jsonl(os.path.join(RESULTS, "gemma", calib_file + ".jsonl")) if r.get("parse_ok")]
-    by_id = {str(r["Sentence_id"]): r for r in read_jsonl(os.path.join(RESULTS, "gemma", test_file + ".jsonl"))}
+    by_id = {}
+    for f in (test_file, test_file + "_full"):  # *_full: Gemma scores of the extra full-set items
+        if os.path.exists(path := os.path.join(RESULTS, "gemma", f + ".jsonl")):
+            by_id.update({str(r["Sentence_id"]): r for r in read_jsonl(path)})
+    if any(r["Sentence_id"] not in by_id for r in test_items):
+        return None, None
     test_s = np.array([by_id[r["Sentence_id"]]["confidence_score"] if by_id[r["Sentence_id"]].get("parse_ok") else 0.0
                        for r in test_items], float)
     calib = Split(embed([r["text"] for r in calib_rows]), np.array([r["label"] for r in calib_rows]),

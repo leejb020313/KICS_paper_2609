@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	I've laid out a platform that I think would begin to remedy some of the problems we have in the criminal justice system.
+321	But we also have to recognize, in addition to the challenges that we face with policing, there are so many good, brave police officers who equally want reform.
+322	And we've got to get guns out of the hands of people who should not have them.
+323	So we have to do two things, as I said.
+324	We have to restore trust.
+325	We have to work with the police.
+326	We have to make sure they respect the communities and the communities respect them.
+327	And we have to tackle the plague of gun violence, which is a big contributor to a lot of the problems that we're seeing today.
+328	I just got today the, as you know, the endorsement of the Fraternal Order of Police, we just -- just came in.
+329	We have endorsements from, I think, almost every police group, very -- I mean, a large percentage of them in the United States.
+330	You walk down the street, you get shot.
+331	In Chicago, they've had thousands of shootings, thousands since January 1st.
+332	And I'm saying, where is this?
+333	And we have to stop the violence.
+334	We have to bring back law and order.
+335	In a place like Chicago, where thousands of people have been killed, thousands over the last number of years, in fact, almost 4,000 have been killed since Barack Obama became president, over -- almost 4,000 people in Chicago have been killed.
+336	Now, whether or not in a place like Chicago you do stop and frisk, which worked very well, Mayor Giuliani is here, worked very well in New York.
+337	It brought the crime rate way down.
+338	But you take the gun away from criminals that shouldn't be having it.
+339	We have gangs roaming the street.
+340	And in many cases, they're illegally here, illegal immigrants.
+341	And we have to be very strong.
+342	We have to be -- we have to know what we're doing.
+343	Right now, our police, in many cases, are afraid to do anything.
+344	We have to protect our inner cities, because African-American communities are being decimated by crime, decimated.
+345	It went before a judge, who was a very against-police judge.
+346	It was taken away from her.
+347	And our mayor, our new mayor, refused to go forward with the case.
+348	They would have won an appeal.
+349	If you look at it, throughout the country, there are many places where it's allowed.
+350	No, the argument is that we have to take the guns away from these people that have them and they are bad people that shouldn't have them.
+351	These are people that are bad people that shouldn't be -- when you have 3,000 shootings in Chicago from January 1st, when you have 4,000 people killed in Chicago by guns, from the beginning of the presidency of Barack Obama, his hometown, you have to have stop-and-frisk.
+352	You need a better community, you know, relation.
+353	You don't have good community relations in Chicago.
+354	But when you look -- and Chicago's not the only -- you go to Ferguson, you go to so many different places.
+355	I agree with Secretary Clinton on this.
+356	You need better relationships between the communities and the police, because in some cases, it's not good.
+357	But you look at Dallas, where the relationships were really studied, the relationships were really a beautiful thing, and then five police officers were killed one night very violently.
+358	So there's some bad things going on.
+359	But we need -- Lester, we need law and order.

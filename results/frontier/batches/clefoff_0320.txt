@@ -1,0 +1,38 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	I would give block grants to schools, but I'd give them on merit based on who's doing the most innovative -- I just got done holding the seventh annual Governors Conference on Innovation and Education.
+321	And we can talk about all of these things, and there's a lot of crazy, woke things happening in schools, but we have got to get these kids reading.
+322	Let's teach our kids to build things again.
+323	When we do that, and we allow that innovation, that's when it'll get back.
+324	Thirty-second quick answer to that.
+325	I built computer science education.
+326	I think it should be voluntary.
+327	Our cities are less safe because of the fentanyl pouring into this country, our economy is being crushed by Biden's energy policies, which are raising the cost of every product you buy, not just the gasoline at the pump.
+328	We've got to cut the red tape.
+329	That's exactly what I bring.
+330	Join in this fight, asa2024.com.
+331	We will put transparency in the classroom.
+332	We will have the backs of our law enforcement.
+333	And, once again, we will make sure we have an America that is strong and proud.
+334	It's an honor to be here.
+335	But I know we can bring it back.
+336	And I grew up into a generation where we were taught to celebrate our diversity and our differences so much that we forgot all of the ways we are really just the same as Americans, bound by a common set of ideals that set this nation into motion in 1776.
+337	And the US Constitution, it is the strongest guarantor of freedom in human history.
+338	That is what will win us the revolution of 2024.
+339	I understand the importance of the American dream.
+340	I'm also a dad and a husband to a 6-, 5-, and 3-year-old.

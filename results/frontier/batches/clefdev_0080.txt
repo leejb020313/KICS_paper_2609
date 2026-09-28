@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	But we ought to stand staunch.
+81	But not until they have given us the full accounting of our MIAs.
+82	I remember the world with NATO, and the world of Point Four, and the world of the Marshall Plan, and the world of the Peace Corps.
+83	Not a single young American today is fighting or dying on any foreign battlefield.
+84	America is at peace and with freedom.
+85	Well, thank you very much, Jim, and thanks to the commission and the University of Mississippi, Ole Miss, for hosting us tonight.
+86	How's it going to affect my job?
+87	Number three, we've got to make sure that none of that money is going to pad CEO bank accounts or to promote golden parachutes.
+88	And I think that the fundamentals of the economy have to be measured by whether or not the middle class is getting a fair shake.
+89	That's why I'm running for president, and that's what I hope we're going to be talking about tonight.
+90	Are you afraid I couldn't hear him?
+91	And I still believe, under the right leadership, our best days are ahead of us.
+92	It's gone -- we have now presided over the largest increase in the size of government since the Great Society.
+93	I've got a pen, and I'm going to veto every single spending bill that comes across my desk.
+94	Maybe to Senator Obama it's not a lot of money.
+95	Do you know that it's gone completely out of control to the point where it corrupts people?
+96	The worst thing we could do in this economic climate is to raise people's taxes.
+97	I know we have to, but this is a classic example of walking the walk and talking the talk.
+98	We've got to make sure that our children are keeping pace in math and in science.
+99	And one of the things I think we have to do is make sure that college is affordable for every young person in America.
+100	So there are some -- some things that we've got to do structurally to make sure that we can compete in this global economy.
+101	Look, we are sending $700 billion a year overseas to countries that don't like us very much.
+102	Senator McCain cut -- Senator McCain opposed funding for troops in legislation that had a timetable, because he didn't believe in a timetable.
+103	But we have to get the cooperation of the people in those areas.
+104	But we have to have a president who is clear that you don't deal with Russia based on staring into his eyes and seeing his soul.
+105	The second point I want to make is -- is the issue of energy.
+106	So I want to say that, with the Nunn-Lugar thing...
+107	The other thing that we have to focus on, though, is Al Qaida.
+108	That sense is something that I want to restore.
+109	And I -- and I honestly don't believe that Senator Obama has the knowledge or experience and has made the wrong judgments in a number of areas, including his initial reaction to Russian invasion -- aggression in Georgia, to his -- you know, we've seen this stubbornness before in this administration to cling to a belief that somehow the surge has not succeeded and failing to acknowledge that he was wrong about the surge is -- shows to me that we -- that -- that we need more flexibility in a president of the United States than that.
+110	And I know that they know that I'll take care of them.
+111	And that's going to be my job.
+112	I don't think I need any on-the-job training.
+113	Well, let -- let me say, Bob, thank you.
+114	Americans are hurting right now, and they're angry.
+115	They're innocent victims of greed and excess on Wall Street and as well as Washington, D.C. And they're angry, and they have every reason to be angry.
+116	But we also have to have a short-term fix, in my view, and long- term fixes.
+117	The catalyst for this housing crisis was the Fannie and Freddie Mae that caused subprime lending situation that now caused the housing market in America to collapse.
+118	Now, I know the criticism of this.
+119	Well, what about the citizen that stayed in their homes?

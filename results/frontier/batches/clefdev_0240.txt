@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	Yes, let me respond to this.
+241	We should try to reduce these circumstances.
+242	Just again, the example of the eloquence of Senator Obama.
+243	If we do those things, then I believe that we can create a better school system.
+244	Parents are going to have to show more responsibility.
+245	Now, throwing money at the problem is not the answer.
+246	So I believe that we need to reward these good teachers.
+247	Look, we must improve education in this country.
+248	As far as college education is concerned, we need to make those student loans available.
+249	I think it's important to foster competition inside the public schools.
+250	And we need to fix a lot of the problems.
+251	I think the Head Start program is a great program.
+252	We need to have transparency.
+253	And we'll care for these young children.
+254	I'll just make a quick comment about vouchers in D.C.
+255	And that's why the biggest risk we could take right now is to adopt the same failed policies and the same failed politics that we've seen over the last eight years and somehow expect a different result.
+256	In businesses that can create the new energy economy of the future.
+257	And these are the policies I want to bring to the White House.
+258	But it's not going to be easy.
+259	I'm absolutely convinced we can do it.
+260	Well, first of all, Bob, thank you for moderating tonight.
+261	Freedom is on the march.
+262	We're going to make it affordable and accessible.
+263	I'm going to stand up and fight for the American worker.
+264	When they tried to reduce taxes, he voted against that 127 times.
+265	I've had shop stewards stand up and say, "Will you promise me you're going to stop all this outsourcing?
+266	I don't want American workers subsidizing the loss of their own job.
+267	And we're going to have a manufacturing jobs credit and a job hiring credit so we actually help people be able to hire here.
+268	I believe the role of government is to stand side by side with our citizens to help them realize their dreams, not tell citizens how to live their lives.
+269	When they voted -- when they proposed reducing taxes, you voted against it 126 times.
+270	He voted to violate the budget cap 277 times.
+271	You know, Bob, I don't know.
+272	But I also believe that because we are the United States of America, we're a country with a great, unbelievable Constitution, with rights that we afford people, that you can't discriminate in the workplace.
+273	It's between a woman, God and her doctor.
+274	I was an altar boy.
+275	Result: $139 billion windfall profit to the drug companies coming out of your pockets.
+276	I've actually passed 56 individual bills that I've personally written and, in addition to that, and not always under my name, there is amendments on certain bills.
+277	But more importantly, with respect to the question of no record, I helped write -- I did write, I was one of the original authors of the early childhood health care and the expansion of health care that we did in the middle of the 1990s.
+278	And I'm very proud of that.
+279	But I got a better plan.

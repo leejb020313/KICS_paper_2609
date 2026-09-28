@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	There's no way of glossing around that.
+841	But now we need both that kind of discipline and the resources and the consistent leadership that allows this country to catch up in education and science and training.
+842	Will you finally touch that defense budget?
+843	I'll tell you what I think has been the most outrageous thing in political dialog, both in this campaign and the one in '82.
+844	I did support the '76 measure that he told about, because we were in a deep recession and we needed some stimulation.
+845	Is America better off than it was 4 years ago?
+846	But we now have an economy that, for the first time -- well, let's put it this way: In the first half of 1980, gross national product was down a minus 3.7 percent.
+847	Today it is up a plus 4 percent.
+848	I want to thank President Reagan for agreeing to debate.
+849	Are we better off when we load our children with this fantastic debt?
+850	This president has left them in shatters across the globe, and we're now 90 percent of the casualties in Iraq and 90 percent of the costs.
+851	People out there listening know what I believe.
+852	It's the hardest decision a president makes.
+853	He believes in the freedom of the Iraqi people.
+854	They just need the help to be trained.
+855	This president just -- I don't know if he sees what's really happened over there.
+856	But, again, I want to tell the American people, we're doing everything we can at home, but you better have a president who chases these terrorists down and bring them to justice before they hurt us again.
+857	I understand how hard it is.
+858	I get the casualty reports every day.
+859	It's what leadership is based on.
+860	I have nothing but respect for the British, Tony Blair, and for what they've been willing to do.
+861	So you say, "Was it worth it?"
+862	He's a brave, brave man.
+863	But a president must always be willing to use troops.
+864	The minute we have bilateral talks, the six-party talks will unwind.
+865	And I have great respect and admiration for his wife.
+866	I think she's a terrific person...
+867	Actually, we've increased funding for dealing with nuclear proliferation about 35 percent since I've been the president.
+868	My opponent opposed the missile defenses.
+869	The issue is what you do about it.
+870	I appreciate your listening tonight.
+871	And may God continue to bless our great land.
+872	But Senator Dole's plans are not good for the country.
+873	And I hope we can do better.
+874	And everybody knows, including the Wall Street Journal, hardly a friend of the Democratic party of this administration, that the '82 tax increase he sponsored in inflation-adjusted dollars was the biggest tax increase in American history.
+875	Here's the record: We cut deficit four years in a row for the first time before the Civil War -- I mean, before World War II, and maybe before the Civil War, too.
+876	Governor Engler of Michigan cut taxes 21 times, created a lot of new jobs.
+877	I was in coal country in West Virginia yesterday.
+878	When I was in the United States Senate I worked with former President Bush, your father.
+879	Two days ago we ate lunch at a restaurant.

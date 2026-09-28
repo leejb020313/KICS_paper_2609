@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	We cut the cost - the increased cost of government - in half over the eight years.
+681	And I want to call a hemispheric summit just as soon after the 20th of January as possible to fight that war.
+682	You know, the American people are fair.
+683	They want to judge it on the record itself.
+684	And I don't want to do that, and I won't do that.
+685	And it's going to take discipline of the executive branch; it's going to take discipline of the congressional branch.
+686	The American people are pretty smart: they know who writes out the checks.
+687	And they know who appropriates the money.
+688	And those pessimists who say it can't be done, I'm sorry, I just have a fundamental disagreement with them
+689	He says he wants to give the wealthiest one percent of the people in this country a five-year $40 billion tax break, and we're going to pay for it.
+690	will go out and do the job that we expect of him and do it with the Congress of the United States.
+691	We can do all of those things, and at the same time build a future in which we are standing on a good strong fiscal foundation.
+692	The Governor has to balance the budget in his state he is required to by law.
+693	I'm not going to do that; I won't do that.
+694	As a matter of fact, I'm the first governor in the history of my state to fund that pension system, and I'm very proud of that.
+695	I think the presidency of the United States is a very serious office, and I think we have to address these issues in a very serious way.
+696	So I hope and expect that I will be liked by the people of this country as president of the United States; I certainly hope I will be liked by them on the 8th of November.
+697	So that pledge isn't realistic, and I think the vice president knows it; I think the people of this country know it.
+698	And I am going to be a president who is serious, I hope and expect will be liked by the American people.
+699	But more than that, to do the kind of job that I'm elected to do, will do it with as much good humor as I can, but at the same time will do it in a way which will achieve the goals we want for ourselves and our people.
+700	I think it's whether you share the broad dreams of the American people, whether you have confidence in the people's ability to get things done or whether you think it all should be turned over, as many of the liberals do, to Washington, D.C. You see, I think it's a question of values, not likability or loveability, it's a question in foreign affairs in experience, knowing world leaders, knowing how to build on a superb record of this administration in arms control, because you'd know exactly how to begin.
+701	You have to learn from experience that making unilateral cuts in defense system is not the way that you enhance peace.
+702	It is, though, trying to understand the heartbeat of the country.
+703	It's our vision of America.
+704	I think this is a great country, because we've always wanted to do better, to make our country better, to make our lives better.
+705	That's the kind of leadership I want to provide.
+706	But I don't think these labels mean a thing and I would hope that tonight in the course of the rest of this campaign, we can have good solid disagreements on issues.
+707	They continue to modernize and we can't simply we've got enough nuclear weapons, let's freeze.
+708	Now, my defense secretary is going to have a lot to do with those decisions, but it's going to be the President who's going to have to ultimately decide before that budget goes to the Congress what weapons systems are going to go and what are going to stay.
+709	Those are decisions that the chief executive has to make.
+710	Yes, we're going to have a strong and credible and effective nuclear deterrent.
+711	So military security and economic security go hand in hand.
+712	And we will have a strong and effective and credible nuclear deterrent.
+713	Can we start the clock over?
+714	Some of my fellow governors who are real heroes to me.
+715	We were proud of them.
+716	But more than that, they are role models.
+717	These are people that give of themselves everyday and every week and every month.
+718	And there's nothing corny about having sports heroes, young people that are clean and honorable and out there setting the pace.
+719	I had something very nice to say in there.

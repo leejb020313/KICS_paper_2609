@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1040	Yes, Warren Buffett is the one who's gone out and said somebody like him should not be paying a lower tax rate than his secretary.
+1041	I want to have a surcharge on incomes above $5 million.
+1042	We have to make up for lost times, because I want to invest in you.
+1043	I want to invest in hard-working families.
+1044	And I think it's been unfortunate, but it's happened, that since the Great Recession, the gains have all gone to the top.
+1045	And we need to reverse that.
+1046	People like Donald, who paid zero in taxes, zero for our vets, zero for our military, zero for health and education, that is wrong.
+1047	And we're going to make sure that nobody, no corporation, and no individual can get away without paying his fair share to support our country.
+1048	I know many of her donors.
+1049	And she'll always allow it, because the people that give her all this money, they want it.
+1050	See, I understand the tax code better than anybody that's ever run for president.
+1051	Hillary Clinton -- and it's extremely complex -- Hillary Clinton has friends that want all of these provisions, including they want the carried interest provision, which is very important to Wall Street people.
+1052	But they really want the carried interest provision, which I believe Hillary's leaving.
+1053	But I will tell you that, number one, I pay tremendous numbers of taxes.
+1054	And so did Warren Buffett and so did George Soros and so did many of the other people that Hillary is getting money from.
+1055	Now, I won't mention their names, because they're rich, but they're not famous.
+1056	So we won't make them famous.
+1057	No, but I pay tax, and I pay federal tax, too.
+1058	You know, she's given it to us.
+1059	I say it all the time.
+1060	Why didn't she do something about it?
+1061	Why didn't she do something about it?
+1062	She doesn't do anything about anything other than talk.
+1063	And, again, Bernie Sanders, it's really bad judgment.
+1064	She has made bad judgment not only on taxes.
+1065	She's made bad judgments on Libya, on Syria, on Iraq.
+1066	I mean, her and Obama, whether you like it or not, the way they got out of Iraq, the vacuum they've left, that's why ISIS formed in the first place.
+1067	Well, here we go again.
+1068	I've been in favor of getting rid of carried interest for years, starting when I was a senator from New York.
+1069	But that's not the point here.
+1070	Why didn't you do it?
+1071	Because I was a senator with a Republican president.
+1072	I will be the president and we will get it done.
+1073	You could have done it, if you were an effective -- if you were an effective senator, you could have done it.
+1074	If you were an effective senator, you could have done it.
+1075	But you were not an effective senator.
+1076	You know, under our Constitution, presidents have something called veto power.
+1077	Look, he has now said repeatedly, "30 years this and 30 years that."
+1078	So let me talk about my 30 years in public service.
+1079	I'm very glad to do so.

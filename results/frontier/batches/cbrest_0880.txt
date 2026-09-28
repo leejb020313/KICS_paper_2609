@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	Obamacare is a total disaster.
+881	And not only are your rates going up by numbers that nobody's ever believed, but your deductibles are going up, so that unless you get hit by a truck, you're never going to be able to use it.
+882	It is a disastrous plan, and it has to be repealed and replaced.
+883	No, I mean, he clarified what he meant.
+884	Look, we are in a situation in our country where if we were to start all over again, we might come up with a different system.
+885	But we have an employer-based system.
+886	That's where the vast majority of people get their health care.
+887	And the Affordable Care Act was meant to try to fill the gap between people who were too poor and couldn't put together any resources to afford health care, namely people on Medicaid.
+888	Obviously, Medicare, which is a single-payer system, which takes care of our elderly and does a great job doing it, by the way, and then all of the people who were employed, but people who were working but didn't have the money to afford insurance and didn't have anybody, an employer or anybody else, to help them.
+889	And like I say, 20 million people now have health insurance.
+890	So if we just rip it up and throw it away, what Donald's not telling you is we just turn it back to the insurance companies the way it used to be, and that means the insurance companies...
+891	... you may not be able to have insurance because you can't afford it.
+892	So let's fix what's broken about it, but let's not throw it away and give it all back to the insurance companies and the drug companies.
+893	That's not going to work.
+894	You're going to have plans that are so good, because we're going to have so much competition in the insurance industry.
+895	Once we break out -- once we break out the lines and allow the competition to come...
+896	President Obama -- Anderson, excuse me.
+897	You know that, because Jonathan Gruber, the architect of Obamacare, was said -- he said it was a great lie, it was a big lie.
+898	President Obama said you keep your doctor, you keep your plan.
+899	The whole thing was a fraud, and it doesn't work.
+900	But when we get rid of those lines, you will have competition, and we will be able to keep pre-existing, we'll also be able to help people that can't get -- don't have money because we are going to have people protected.
+901	And Republicans feel this way, believe it or not, and strongly this way.
+902	We're going to block grant into the states.
+903	We're going to block grant into Medicaid into the states...
+904	... so that we will be able to take care of people without the necessary funds to take care of themselves.
+905	Well, you're right about Islamophobia, and that's a shame.
+906	But one thing we have to do is we have to make sure that -- because there is a problem.
+907	And we have to be sure that Muslims come in and report when they see something going on.
+908	When they see hatred going on, they have to report it.
+909	They'll never be the same.
+910	Muslims have to report the problems when they see them.
+911	And, you know, there's always a reason for everything.
+912	Look at that horrible -- these are radical Islamic terrorists.
+913	And she won't even mention the word and nor will President Obama.
+914	He won't use the term "radical Islamic terrorism."
+915	She won't say the name and President Obama won't say the name.
+916	But the name is there.
+917	And before you solve it, you have to say the name.
+918	Well, thank you for asking your question.
+919	And I've heard this question from a lot of Muslim-Americans across our country, because, unfortunately, there's been a lot of very divisive, dark things said about Muslims.

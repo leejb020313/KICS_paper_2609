@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	The Oregon plan is a good start if the federal government is going to continue to abandon its responsibilities.
+961	We can do better, and we must.
+962	We got the most expensive health care system in the world; it ranks behind 15 other nations when we come to life expectancy, and 22 other nations when we come to infant mortality.
+963	I don't like to see the people in a deteriorating economy in a deteriorating country because our government has lost touch with the people.
+964	It's time to do it because we have run up so much debt that time is no longer our friend.
+965	Think of your dreams as a child and ask yourself, isn't it time to stop talking about it?
+966	And I'd like to thank those of you who are watching.
+967	I'd like to thank the computer executives and the electronics executives in Silicon Valley, two-thirds of whom are Republicans who said they wanted to sign on to a change in America.
+968	He was president for 3 years before he proposed a health care plan that still hasn't been sent to Congress in total; three years before an economic plan, and he still didn't say tonight that that tax bill he vetoed raised taxes only on the rich and gave the rest of you a break -- but he vetoed it anyway.
+969	On the domestic side, what we must do is have change that empowers people -- not change for the sake of change, tax and spend.
+970	We don't need to do that any more.
+971	And I ask for your support for 4 more years to finish this job.
+972	What did we get for it?
+973	I would like to see their elimination.
+974	Marijuana use is up 141percent.
+975	American seniors have the highest life expectancy in the world.
+976	We reduced the welfare rolls by 2 million already.
+977	We need to get the economy going.
+978	But we have to prove we can pay for them.
+979	We've opened 260,000 new jobs in the military to women since I've been president.
+980	Well, 88 percent of the people -- the President claims 11 million are already covered and only 5 percent -- keep in mind only 5 percent of the employers are affected by the Family Leave Act.
+981	Those are my best ideas about it.
+982	All the people who may still be watching or viewing.
+983	We're going to have a good economic package.
+984	But I'll respond to a couple of things that you mentioned.
+985	We should be playing the leadership role there, not on the ground with military.
+986	And we are making sure that those we help are those who will be friends of ours in the long term and friends of our allies in the region over the long term.
+987	Imagine if we had pulled out at that point.
+988	You know, Moammar Gadhafi had more American blood on his hands than any individual other than Osama bin Laden.
+989	I felt that -- I wish we'd have had a better vision of the future.
+990	When the -- when the president of Iraq -- excuse me, of Iran, Ahmadinejad, says that our debt makes us not a great country, that's a frightening thing.
+991	And, finally, we have to stand by our principles.
+992	Our Navy is old -- excuse me, our Navy is smaller now than at any time since 1917.
+993	Our Air Force is older and smaller than at any time since it was founded in 1947.
+994	But I think Governor Romney maybe hasn't spent enough time looking at how our military works.
+995	And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary to make sure they don't have a nuclear weapon.
+996	And the way to make sure they understand that is by having, from the very beginning, the tightest sanctions possible.
+997	They're going to come rushing back in to Afghanistan when we go.
+998	Well I believe we should use any and all means necessary to take out people who pose a threat to us and our friends around the world.
+999	We have to remain vigilant, as I just said.

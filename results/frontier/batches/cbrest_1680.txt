@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1680	There is a lot of evidence about the very good work...
+1681	... and it's a criminal enterprise, and so many people know it.
+1682	Saudi Arabia giving $25 million, Qatar, all of these countries.
+1683	You talk about women and women's rights?
+1684	So these are people that push gays off business -- off buildings.
+1685	These are people that kill women and treat women horribly.
+1686	And yet you take their money.
+1687	So I'd like to ask you right now, why don't you give back the money that you've taken from certain countries that treat certain groups of people so horribly?
+1688	Why don't you give back the money?
+1689	Because she takes a tremendous amount of money.
+1690	And you take a look at the people of Haiti.
+1691	And I want to tell you, they hate the Clintons, because what's happened in Haiti with the Clinton Foundation is a disgrace.
+1692	And you know it, and they know it, and everybody knows it.
+1693	Well, very quickly, we at the Clinton Foundation spend 90 percent -- 90 percent of all the money that is donated on behalf of programs of people around the world and in our own country.
+1694	I'm very proud of that.
+1695	We have the highest rating from the watchdogs that follow foundations.
+1696	And I'd be happy to compare what we do with the Trump Foundation, which took money from other people and bought a six- foot portrait of Donald.
+1697	I mean, who does that?
+1698	But when it comes to Haiti, Haiti is the poorest country in our hemisphere.
+1699	The earthquake and the hurricanes, it has devastated Haiti.
+1700	Bill and I have been involved in trying to help Haiti for many years.
+1701	The Clinton Foundation raised $30 million to help Haiti after the catastrophic earthquake and all of the terrible problems the people there had.
+1702	We have done things to help small businesses, agriculture, and so much else.
+1703	And we're going to keep working to help Haiti...
+1704	I'd like to mention one thing.
+1705	The money goes 100 percent -- 100 percent goes to different charities, including a lot of military.
+1706	What happens -- the money goes to them.
+1707	No, it was -- we put up the American flag.
+1708	They put up the American flag.
+1709	We fought for the right in Palm Beach to put up the American flag.
+1710	... the money -- the money went to Fisher House, where they build houses -- the money that you're talking about went to Fisher House, where they build houses for veterans and disabled vets.
+1711	But, of course, there's no way we can know whether any of that is true, because he hasn't released his tax returns.
+1712	You can look at our tax returns.
+1713	We've got them all out there.
+1714	But what is really troubling is that we learned in the last debate he has not paid a penny in federal income tax.
+1715	You know, half of all immigrants -- undocumented immigrants in our country -- actually pay federal income tax.
+1716	So we have undocumented immigrants in America who are paying more federal income tax than a billionaire.
+1717	I find that just astonishing.
+1718	So let me just tell you very quickly, we're entitled because of the laws that people like her passed to take massive amounts of depreciation on other charges, and we do it.
+1719	And all of her donors -- just about all of them -- I know Buffett took hundreds of millions of dollars, Soros, George Soros, took hundreds of millions of dollars...

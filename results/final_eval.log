@@ -1,42 +1,46 @@
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ| 103/103 [00:00<00:00, 3445.99it/s]
 
 ===== clef: test n=318, frontier-scored calib n=2405, seeds=5
   calib OOF curve: {'sonnet_thr_oof': 0.845, 'svm_oof': 0.792, 'fuse_0': 0.792, 'fuse_0.05': 0.803, 'fuse_0.1': 0.812, 'fuse_0.2': 0.823, 'fuse_0.3': 0.831, 'fuse_0.4': 0.837, 'fuse_0.5': 0.839, 'fuse_0.6': 0.839, 'fuse_0.7': 0.839, 'fuse_0.8': 0.839, 'fuse_0.9': 0.839, 'fuse_1.0': 0.839}
   NN-PPI k selected on calib: k=10 (tune acc {3: 0.7465373961218836, 5: 0.7631578947368421, 10: 0.7853185595567868}); rho selected per seed: [0.4, 1.0, 1.0, 1.0, 1.0]
-  gemma_raw          acc=0.780Â±0.000  wF1=0.781  F1c1=0.682
-  gemma_nnppi_k3     acc=0.805Â±0.000  wF1=0.806  F1c1=0.718
-  gemma_nnppi_k5     acc=0.840Â±0.000  wF1=0.841  F1c1=0.771
-  gemma_nnppi_k10    acc=0.833Â±0.000  wF1=0.835  F1c1=0.764
-  gemma_nnppi_sel    acc=0.833Â±0.000  wF1=0.835  F1c1=0.764
-  svm                acc=0.851Â±0.007  wF1=0.851  F1c1=0.782
-  sonnet_raw         acc=0.821Â±0.000  wF1=0.803  F1c1=0.655
-  sonnet_thr         acc=0.877Â±0.000  wF1=0.879  F1c1=0.833
-  sonnet_nnppi       acc=0.874Â±0.010  wF1=0.876  F1c1=0.828
-  fuse_sel           acc=0.899Â±0.004  wF1=0.899  F1c1=0.851
-  budget   FUSE acc (Â±sd)     REPLACE acc (Â±sd)
-     0%    0.851Â±0.007      0.851Â±0.007
-     5%    0.862Â±0.008      0.858Â±0.009
-    10%    0.871Â±0.008      0.867Â±0.009
-    20%    0.888Â±0.003      0.883Â±0.005
-    30%    0.890Â±0.005      0.881Â±0.008
-    40%    0.897Â±0.005      0.885Â±0.008
-    50%    0.900Â±0.005      0.891Â±0.006
-    60%    0.900Â±0.005      0.886Â±0.005
-    70%    0.900Â±0.005      0.882Â±0.002
-    80%    0.900Â±0.005      0.881Â±0.000
-    90%    0.900Â±0.005      0.877Â±0.000
-   100%    0.900Â±0.005      0.877Â±0.000
+  gemma_raw          acc=0.780¡¾0.000  wF1=0.781  F1c1=0.682
+  gemma_nnppi_k3     acc=0.805¡¾0.000  wF1=0.806  F1c1=0.718
+  gemma_nnppi_k5     acc=0.840¡¾0.000  wF1=0.841  F1c1=0.771
+  gemma_nnppi_k10    acc=0.833¡¾0.000  wF1=0.835  F1c1=0.764
+  gemma_nnppi_sel    acc=0.833¡¾0.000  wF1=0.835  F1c1=0.764
+  svm                acc=0.851¡¾0.007  wF1=0.851  F1c1=0.782
+  sonnet_raw         acc=0.821¡¾0.000  wF1=0.803  F1c1=0.655
+  sonnet_thr         acc=0.877¡¾0.000  wF1=0.879  F1c1=0.833
+  sonnet_nnppi       acc=0.874¡¾0.010  wF1=0.876  F1c1=0.828
+  fuse_sel           acc=0.899¡¾0.004  wF1=0.899  F1c1=0.851
+  budget   FUSE acc (¡¾sd)     REPLACE acc (¡¾sd)   NNPPI-cascade acc (¡¾sd)
+     0%    0.851¡¾0.007      0.851¡¾0.007      0.851¡¾0.007
+     5%    0.862¡¾0.008      0.858¡¾0.009      0.858¡¾0.007
+    10%    0.871¡¾0.008      0.867¡¾0.009      0.869¡¾0.009
+    20%    0.888¡¾0.003      0.883¡¾0.005      0.875¡¾0.006
+    30%    0.890¡¾0.005      0.881¡¾0.008      0.872¡¾0.007
+    40%    0.897¡¾0.005      0.885¡¾0.008      0.876¡¾0.007
+    50%    0.900¡¾0.005      0.891¡¾0.006      0.881¡¾0.007
+    60%    0.900¡¾0.005      0.886¡¾0.005      0.876¡¾0.009
+    70%    0.900¡¾0.005      0.882¡¾0.002      0.875¡¾0.010
+    80%    0.900¡¾0.005      0.881¡¾0.000      0.875¡¾0.010
+    90%    0.900¡¾0.005      0.877¡¾0.000      0.874¡¾0.010
+   100%    0.900¡¾0.005      0.877¡¾0.000      0.874¡¾0.010
+  flips on SVM-confident half (seed 0): {'replace': {'broke': 5, 'fixed': 2}, 'fuse': {'broke': 0, 'fixed': 0}, 'nnppi': {'broke': 2, 'fixed': 0}}
   fuse_0.2_vs_sonnet_thr           diff=+0.013 CI[-0.022,+0.047] McNemar p=0.6076
   fuse_0.2_vs_replace_0.2          diff=+0.009 CI[+0.000,+0.022] McNemar p=0.2500
+  fuse_0.2_vs_nnppi_0.2            diff=+0.022 CI[+0.000,+0.047] McNemar p=0.1185
   fuse_0.3_vs_sonnet_thr           diff=+0.016 CI[-0.019,+0.047] McNemar p=0.4731
   fuse_0.3_vs_replace_0.3          diff=+0.019 CI[+0.006,+0.035] McNemar p=0.0312
+  fuse_0.3_vs_nnppi_0.3            diff=+0.035 CI[+0.006,+0.063] McNemar p=0.0266
   fuse_0.4_vs_sonnet_thr           diff=+0.022 CI[-0.013,+0.053] McNemar p=0.2649
   fuse_0.4_vs_replace_0.4          diff=+0.016 CI[-0.009,+0.038] McNemar p=0.3018
+  fuse_0.4_vs_nnppi_0.4            diff=+0.031 CI[+0.000,+0.063] McNemar p=0.0755
   fuse_0.5_vs_sonnet_thr           diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
   fuse_0.5_vs_replace_0.5          diff=+0.019 CI[-0.009,+0.044] McNemar p=0.2632
+  fuse_0.5_vs_nnppi_0.5            diff=+0.028 CI[-0.006,+0.060] McNemar p=0.1360
   fuse_1.0_vs_sonnet_thr           diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
   fuse_1.0_vs_replace_1.0          diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
+  fuse_1.0_vs_nnppi_1.0            diff=+0.035 CI[+0.000,+0.069] McNemar p=0.0708
   fuse_0.5_vs_fuse_1.0_seed0       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
   fuse_0.5_vs_fuse_1.0_seed1       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
   fuse_0.5_vs_fuse_1.0_seed2       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
@@ -44,45 +48,52 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   fuse_0.5_vs_fuse_1.0_seed4       diff=+0.000 CI[+0.000,+0.000] McNemar p=1.0000
   fuse_0.5_vs_sonnet_nnppi         diff=+0.035 CI[+0.000,+0.069] McNemar p=0.0708
   fuse_sel_vs_sonnet_thr           diff=+0.022 CI[-0.013,+0.053] McNemar p=0.2649
+  nnppi_0.5_vs_sonnet_nnppi        diff=+0.006 CI[+0.000,+0.016] McNemar p=0.5000
   svm_vs_gemma_nnppi_sel           diff=+0.016 CI[-0.035,+0.066] McNemar p=0.6305
   svm_vs_best_gemma_nnppi          diff=+0.009 CI[-0.041,+0.060] McNemar p=0.8013
 
 ===== cb: test n=800, frontier-scored calib n=1314, seeds=5
   calib OOF curve: {'sonnet_thr_oof': 0.837, 'svm_oof': 0.78, 'fuse_0': 0.78, 'fuse_0.05': 0.793, 'fuse_0.1': 0.804, 'fuse_0.2': 0.82, 'fuse_0.3': 0.827, 'fuse_0.4': 0.833, 'fuse_0.5': 0.837, 'fuse_0.6': 0.838, 'fuse_0.7': 0.838, 'fuse_0.8': 0.839, 'fuse_0.9': 0.839, 'fuse_1.0': 0.839}
   NN-PPI k selected on calib: k=10 (tune acc {3: 0.7772151898734178, 5: 0.7620253164556962, 10: 0.779746835443038}); rho selected per seed: [1.0, 1.0, 1.0, 1.0, 1.0]
-  gemma_raw          acc=0.744Â±0.000  wF1=0.751  F1c1=0.584
-  gemma_nnppi_k3     acc=0.762Â±0.000  wF1=0.762  F1c1=0.568
-  gemma_nnppi_k5     acc=0.784Â±0.000  wF1=0.782  F1c1=0.599
-  gemma_nnppi_k10    acc=0.799Â±0.000  wF1=0.796  F1c1=0.621
-  gemma_nnppi_sel    acc=0.799Â±0.000  wF1=0.796  F1c1=0.621
-  svm                acc=0.796Â±0.006  wF1=0.795  F1c1=0.621
-  sonnet_raw         acc=0.807Â±0.000  wF1=0.772  F1c1=0.487
-  sonnet_thr         acc=0.830Â±0.014  wF1=0.835  F1c1=0.727
-  sonnet_nnppi       acc=0.836Â±0.005  wF1=0.837  F1c1=0.710
-  fuse_sel           acc=0.855Â±0.004  wF1=0.855  F1c1=0.738
-  budget   FUSE acc (Â±sd)     REPLACE acc (Â±sd)
-     0%    0.796Â±0.006      0.796Â±0.006
-     5%    0.807Â±0.006      0.805Â±0.007
-    10%    0.818Â±0.006      0.814Â±0.007
-    20%    0.831Â±0.008      0.822Â±0.006
-    30%    0.840Â±0.005      0.829Â±0.005
-    40%    0.847Â±0.006      0.834Â±0.008
-    50%    0.851Â±0.004      0.836Â±0.007
-    60%    0.854Â±0.004      0.839Â±0.008
-    70%    0.855Â±0.004      0.839Â±0.012
-    80%    0.855Â±0.004      0.835Â±0.014
-    90%    0.855Â±0.004      0.830Â±0.015
-   100%    0.855Â±0.004      0.830Â±0.014
+  gemma_raw          acc=0.744¡¾0.000  wF1=0.751  F1c1=0.584
+  gemma_nnppi_k3     acc=0.762¡¾0.000  wF1=0.762  F1c1=0.568
+  gemma_nnppi_k5     acc=0.784¡¾0.000  wF1=0.782  F1c1=0.599
+  gemma_nnppi_k10    acc=0.799¡¾0.000  wF1=0.796  F1c1=0.621
+  gemma_nnppi_sel    acc=0.799¡¾0.000  wF1=0.796  F1c1=0.621
+  svm                acc=0.796¡¾0.006  wF1=0.795  F1c1=0.621
+  sonnet_raw         acc=0.807¡¾0.000  wF1=0.772  F1c1=0.487
+  sonnet_thr         acc=0.830¡¾0.014  wF1=0.835  F1c1=0.727
+  sonnet_nnppi       acc=0.836¡¾0.005  wF1=0.837  F1c1=0.710
+  fuse_sel           acc=0.855¡¾0.004  wF1=0.855  F1c1=0.738
+  budget   FUSE acc (¡¾sd)     REPLACE acc (¡¾sd)   NNPPI-cascade acc (¡¾sd)
+     0%    0.796¡¾0.006      0.796¡¾0.006      0.796¡¾0.006
+     5%    0.807¡¾0.006      0.805¡¾0.007      0.804¡¾0.007
+    10%    0.818¡¾0.006      0.814¡¾0.007      0.811¡¾0.007
+    20%    0.831¡¾0.008      0.822¡¾0.006      0.820¡¾0.009
+    30%    0.840¡¾0.005      0.829¡¾0.005      0.824¡¾0.008
+    40%    0.847¡¾0.006      0.834¡¾0.008      0.828¡¾0.005
+    50%    0.851¡¾0.004      0.836¡¾0.007      0.831¡¾0.006
+    60%    0.854¡¾0.004      0.839¡¾0.008      0.835¡¾0.005
+    70%    0.855¡¾0.004      0.839¡¾0.012      0.836¡¾0.005
+    80%    0.855¡¾0.004      0.835¡¾0.014      0.837¡¾0.005
+    90%    0.855¡¾0.004      0.830¡¾0.015      0.836¡¾0.005
+   100%    0.855¡¾0.004      0.830¡¾0.014      0.836¡¾0.005
+  flips on SVM-confident half (seed 0): {'replace': {'broke': 28, 'fixed': 16}, 'fuse': {'broke': 2, 'fixed': 6}, 'nnppi': {'broke': 4, 'fixed': 9}}
   fuse_0.2_vs_sonnet_thr           diff=+0.001 CI[-0.026,+0.029] McNemar p=1.0000
   fuse_0.2_vs_replace_0.2          diff=+0.009 CI[+0.001,+0.017] McNemar p=0.0654
+  fuse_0.2_vs_nnppi_0.2            diff=+0.004 CI[-0.007,+0.015] McNemar p=0.6636
   fuse_0.3_vs_sonnet_thr           diff=+0.015 CI[-0.010,+0.039] McNemar p=0.2807
   fuse_0.3_vs_replace_0.3          diff=+0.014 CI[+0.004,+0.025] McNemar p=0.0127
+  fuse_0.3_vs_nnppi_0.3            diff=+0.014 CI[-0.001,+0.028] McNemar p=0.0895
   fuse_0.4_vs_sonnet_thr           diff=+0.027 CI[+0.005,+0.050] McNemar p=0.0298
   fuse_0.4_vs_replace_0.4          diff=+0.019 CI[+0.006,+0.031] McNemar p=0.0059
+  fuse_0.4_vs_nnppi_0.4            diff=+0.024 CI[+0.008,+0.040] McNemar p=0.0054
   fuse_0.5_vs_sonnet_thr           diff=+0.034 CI[+0.011,+0.055] McNemar p=0.0040
   fuse_0.5_vs_replace_0.5          diff=+0.019 CI[+0.004,+0.034] McNemar p=0.0237
+  fuse_0.5_vs_nnppi_0.5            diff=+0.026 CI[+0.009,+0.044] McNemar p=0.0046
   fuse_1.0_vs_sonnet_thr           diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
   fuse_1.0_vs_replace_1.0          diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
+  fuse_1.0_vs_nnppi_1.0            diff=+0.025 CI[+0.006,+0.044] McNemar p=0.0135
   fuse_0.5_vs_fuse_1.0_seed0       diff=-0.005 CI[-0.011,+0.001] McNemar p=0.2891
   fuse_0.5_vs_fuse_1.0_seed1       diff=-0.004 CI[-0.011,+0.004] McNemar p=0.5078
   fuse_0.5_vs_fuse_1.0_seed2       diff=-0.008 CI[-0.014,-0.002] McNemar p=0.0312
@@ -90,5 +101,6 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
   fuse_0.5_vs_fuse_1.0_seed4       diff=-0.003 CI[-0.009,+0.005] McNemar p=0.7266
   fuse_0.5_vs_sonnet_nnppi         diff=+0.020 CI[+0.000,+0.039] McNemar p=0.0599
   fuse_sel_vs_sonnet_thr           diff=+0.039 CI[+0.018,+0.059] McNemar p=0.0004
+  nnppi_0.5_vs_sonnet_nnppi        diff=-0.006 CI[-0.016,+0.003] McNemar p=0.2668
   svm_vs_gemma_nnppi_sel           diff=-0.007 CI[-0.036,+0.021] McNemar p=0.6660
   svm_vs_best_gemma_nnppi          diff=-0.007 CI[-0.036,+0.021] McNemar p=0.6660

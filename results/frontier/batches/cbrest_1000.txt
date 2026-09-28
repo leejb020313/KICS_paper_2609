@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	Warren Buffett took a massive deduction.
+1001	Soros, who's a friend of hers, took a massive deduction.
+1002	Many of the people that are giving her all this money that she can do many more commercials than me gave her -- took massive deductions.
+1003	I'll be very proud to.
+1004	And she could have done this years ago, by the way.
+1005	She's a United States -- she was a United States senator.
+1006	She complains that Donald Trump took advantage of the tax code.
+1007	Well, why didn't she change it?
+1008	Why didn't you change it when you were a senator?
+1009	The reason you didn't is that all your friends take the same advantage that I do.
+1010	But you wouldn't change it, because all of these people gave you the money so you can take negative ads on Donald Trump.
+1011	But -- and I say that about a lot of things.
+1012	I wish you would have done this.
+1013	But she's been there for 30 years she's been doing this stuff.
+1014	And she never will change.
+1015	We're getting rid of carried interest provisions.
+1016	We're getting rid of regulations which goes hand in hand with the lowering of the taxes.
+1017	We're cutting taxes for the middle class.
+1018	And I will tell you, Hillary Clinton is raising your taxes, folks.
+1019	You can look at me.
+1020	She's raising your taxes really high.
+1021	But she is raising your taxes and I'm lowering your taxes.
+1022	We are going to be thriving again.
+1023	We have no growth in this country.
+1024	If China has a GDP of 7 percent, it's like a national catastrophe.
+1025	We're down at 1 percent.
+1026	And a lot of it has to do with the fact that our taxes are so high, just about the highest in the world.
+1027	And I'm bringing them down to one of the lower in the world.
+1028	And I think it's so important -- one of the most important things we can do.
+1029	But she is raising everybody's taxes massively.
+1030	Well, everything you've heard just now from Donald is not true.
+1031	And it is sort of amusing to hear somebody who hasn't paid federal income taxes in maybe 20 years talking about what he's going to do.
+1032	But I'll tell you what he's going to do.
+1033	His plan will give the wealthy and corporations the biggest tax cuts they've ever had, more than the Bush tax cuts by at least a factor of two.
+1034	Donald always takes care of Donald and people like Donald, and this would be a massive gift.
+1035	Now, here's what I want to do.
+1036	I have said nobody who makes less than $250,000 a year -- and that's the vast majority of Americans as you know -- will have their taxes raised, because I think we've got to go where the money is.
+1037	And, yes, when I was a senator, I did vote to close corporate loopholes.
+1038	I voted to close, I think, one of the loopholes he took advantage of when he claimed a billion-dollar loss that enabled him to avoid paying taxes.
+1039	It's called the Buffett rule.

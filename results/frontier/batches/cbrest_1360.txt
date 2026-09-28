@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1360	And it's the earliest endorsement they've ever given to anybody who ran for president.
+1361	So I'm very honored by all of that.
+1362	Well, if that would happen, because I am pro-life, and I will be appointing pro-life judges, I would think that that will go back to the individual states.
+1363	If they overturned it, it will go back to the states.
+1364	Well, if we put another two or perhaps three justice on, that's really what's going to be -- that will happen.
+1365	And that'll happen automatically, in my opinion, because I am putting pro-life justices on the court.
+1366	I will say this: It will go back to the states, and the states will then make a determination.
+1367	Well, I strongly support Roe v. Wade, which guarantees a constitutional right to a woman to make the most intimate, most difficult, in many cases, decisions about her health care that one can imagine.
+1368	And in this case, it's not only about Roe v. Wade.
+1369	It is about what's happening right now in America.
+1370	Donald has said he's in favor of defunding Planned Parenthood.
+1371	He even supported shutting the government down to defund Planned Parenthood.
+1372	I will defend Planned Parenthood.
+1373	I will defend Roe v. Wade, and I will defend women's rights to make their own health care decisions.
+1374	And when I voted as a senator, I did not think that that was the case.
+1375	The kinds of cases that fall at the end of pregnancy are often the most heartbreaking, painful decisions for families to make.
+1376	I do not think the United States government should be stepping in and making those most personal of decisions.
+1377	So you can regulate if you are doing so with the life and the health of the mother taken into account.
+1378	But it's not OK with me, because based on what she's saying, and based on where she's going, and where she's been, you can take the baby and rip the baby out of the womb in the ninth month on the final day.
+1379	And using that kind of scare rhetoric is just terribly unfortunate.
+1380	This is one of the worst possible choices that any woman and her family has to make.
+1381	And I do not believe the government should be making it.
+1382	You know, I've had the great honor of traveling across the world on behalf of our country.
+1383	I've been to countries where governments either forced women to have abortions, like they used to do in China, or forced women to bear children, like they used to do in Romania.
+1384	And I will stand up for that right.
+1385	Well, first of all, she wants to give amnesty, which is a disaster and very unfair to all of the people that are waiting on line for many, many years.
+1386	In the audience tonight, we have four mothers of -- I mean, these are unbelievable people that I've gotten to know over a period of years whose children have been killed, brutally killed by people that came into the country illegally.
+1387	You have thousands of mothers and fathers and relatives all over the country.
+1388	Drugs are pouring in through the border.
+1389	Hillary wants to give amnesty.
+1390	She wants to have open borders.
+1391	It means their job is tougher.
+1392	But they know what's going on.
+1393	They know it better than anybody.
+1394	I was up in New Hampshire the other day.
+1395	The biggest complaint they have -- it's with all of the problems going on in the world, many of the problems caused by Hillary Clinton and by Barack Obama.
+1396	All of the problems -- the single biggest problem is heroin that pours across our southern border.
+1397	It's just pouring and destroying their youth.
+1398	It's poisoning the blood of their youth and plenty of other people.
+1399	We have to have strong borders.

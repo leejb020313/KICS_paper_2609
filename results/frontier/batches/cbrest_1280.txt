@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1280	And actually -- well, that was very interesting.
+1281	First of all, China is illegally dumping steel in the United States and Donald Trump is buying it to build his buildings, putting steelworkers and American steel plants out of business.
+1282	You know, because it sounds like you're in the business or you're aware of people in the business -- you know that we are now for the first time ever energy-independent.
+1283	We are not dependent upon the Middle East.
+1284	But the Middle East still controls a lot of the prices.
+1285	So the price of oil has been way down.
+1286	And that has had a damaging effect on a lot of the oil companies, right?
+1287	We are, however, producing a lot of natural gas, which serves as a bridge to more renewable fuels.
+1288	And I think that's an important transition.
+1289	We've got to remain energy-independent.
+1290	It gives us much more power and freedom than to be worried about what goes on in the Middle East.
+1291	And I support moving toward more clean, renewable energy as quickly as we can, because I think we can be the 21st century clean energy superpower and create millions of new jobs and businesses.
+1292	But I also want to be sure that we don't leave people behind.
+1293	That's why I'm the only candidate from the very beginning of this campaign who had a plan to help us revitalize coal country, because those coal miners and their fathers and their grandfathers, they dug that coal out.
+1294	A lot of them lost their lives.
+1295	They were injured, but they turned the lights on and they powered their factories.
+1296	I don't want to walk away from them.
+1297	So we've got to do something for them.
+1298	But the price of coal is down worldwide.
+1299	So we have to look at this comprehensively.
+1300	And that's exactly what I have proposed.
+1301	I hope you will go to HillaryClinton.com and look at my entire policy.
+1302	Well, I certainly will, because I think that's a very fair and important question.
+1303	Look, I respect his children.
+1304	His children are incredibly able and devoted, and I think that says a lot about Donald.
+1305	I don't agree with nearly anything else he says or does, but I do respect that.
+1306	And I think that is something that as a mother and a grandmother is very important to me.
+1307	This is not an ordinary time, and this is not an ordinary election.
+1308	We are going to be choosing a president who will set policy for not just four or eight years, but because of some of the important decisions we have to make here at home and around the world, from the Supreme Court to energy and so much else, and so there is a lot at stake.
+1309	It's one of the most consequential elections that we've had.
+1310	And that's why I hope people will check on that for themselves so that they can see that, yes, I've spent 30 years, actually maybe a little more, working to help kids and families.
+1311	And I want to take all that experience to the White House and do that every single day.
+1312	I don't know if it was meant to be a compliment, but it is a great -- I'm very proud of my children.
+1313	So I consider that a compliment.
+1314	I tell it like it is.
+1315	I disagree with much of what she's fighting for.
+1316	I do disagree with her judgment in many cases.
+1317	And I consider that to be a very good trait.
+1318	And thanks to UNLV for hosting us.
+1319	You know, I think when we talk about the Supreme Court, it really raises the central issue in this election, namely, what kind of country are we going to be?

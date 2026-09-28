@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	That's what we've been trying to do.
+201	See, it's all talk, no action with these politicians.
+202	We have - there were over 1000 people who were given clemency.
+203	I'm going to do this.'
+204	You had eight years with Obama?
+205	And we have the best carbon emission numbers that we've had in 35 years.
+206	We're going to pass the point of no return within the next eight to 10 years.
+207	Because what it does, it will create millions of new, good-paying jobs.
+208	This from Wall Street and I'll create $1 trillion more in economic growth than his proposal does, not on climate just on the economy.
+209	If you look at what he wants to do, you know the, if you look at his plan, his environmental plan, you know who developed it?
+210	If we had the best year in the history of our country for 100 years, we would not even come close to a number like that.
+211	Because they know the future lies, the future lies in us being able to breathe.
+212	We can grow and we can be cleaner, if we go the route I'm proposing.
+213	I know more about wind than you do.
+214	And the fumes coming up - if you're a believer in carbon emission, the fumes coming up to make - make these massive windmills is more than anything that we're talking about with natural gas, which is very clean.
+215	It's not powerful enough yet to - to really run our big beautiful factories that we need to compete with the world -
+216	So, it's all a pipe dream, but you know what we'll do?
+217	We're gonna have the greatest economy in the world.
+218	We actually do give it to solar and wind--
+219	Will you remember that Pennsylvania?
+220	But, I will tell you, go back before the plague came in, just before, I was getting calls from people that were not normally people that would call me.
+221	The other side wanted to get together.
+222	We're going to choose science over fiction.
+223	We're going to choose hope over fear.
+224	We can deal with systemic racism.
+225	At the same time, we can make sure that our economy is being run, and moved, and motivated by clean energy, creating millions of new jobs.
+226	We need to send Joe Biden back to his basement and reverse American decline.
+227	We -- we also cannot succeed when the Congress spends trillions and trillions of dollars.
+228	And, finally, we need to lower your gas prices.
+229	We're going to open up all energy production.
+230	And we still, through hard, strong decision-making, brought them around to our point of view.
+231	It was over 10 percent when I became governor in 2010.
+232	So, I don't know if I get a chance to respond.
+233	I have gone on to found multibillion dollar companies.
+234	I did it while I married my wife Apoorva, raising our two sons, following our faith in God.
+235	What I care about the fact is that no one is telling the American people the truth.
+236	Now, Martha, you asked earlier who is the most best prepared for this job?
+237	But, I'll let you all parse that out.
+238	Now is not the time for on-the-job training.
+239	Do you want a super PAC puppet, or do you want a patriot who speaks the truth?

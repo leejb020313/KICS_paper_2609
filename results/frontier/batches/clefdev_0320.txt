@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	I ask you for your trust.
+321	And God bless the United States of America.
+322	It's the side to see the day that is coming, not to see the day that is gone. "
+323	I love the optimism in that painting, because that's how I feel about America.
+324	I want to thank you for listening tonight.
+325	I'm asking for your vote.
+326	Now Senator Kennedy has made some very strong criticisms of my part - or alleged part - in what has happened in Cuba.
+327	There were eleven dictators in South America and in Central America when we came in, in 1953.
+328	There isn't any question but that we will defend Guantanamo if it's attacked.
+329	In the first place I've never suggested that Cuba was lost except for the present.
+330	But when the president of the United States is doing something that's right, something that is for the purpose of defending the security of this country against surprise attack, he can never express regrets or apologize to anybody, including Mr. Khrushchev.
+331	I think we have to make progress first in the field of employment.
+332	Second, in the field of schools, we believe that there should be provisions whereby the federal government would give assistance to those districts who do want to integrate their schools.
+333	Here we have a situation which causes all of us concern - causes us concern because of the denial of the rights of people to the equality which we think belongs to everybody.
+334	We are a goldfish bowl before the world.
+335	Let me s- look also at what I did.
+336	There were seventy votes for our position and none for theirs.
+337	Now looking to what we ought to do in the future.
+338	We tried to provide an appropriation of a billion and a half for five years, on a long-term loan basis, which this Administration opposed.
+339	Well Mr. Nixon has stated the record inaccurately in regard to the depressed area bill.
+340	I was the floor manager.
+341	Third, I believe we should step up the use of our surplus foods in these areas until we're able to get the people back to work.
+342	I think in many ways this election is more important than any since 1932, or certainly almost any in this century.
+343	On the question of the summit, I agree with the position of Mr. Nixon.
+344	Now, many of the programs that I'm talking about - economic growth, care for the aged, development of our natural resources - build the strength of the United States.
+345	We're using our steel capacity fifty-five per cent today.
+346	But the thing that is right about the United States, it should be emphasized, is that less people go to bed hungry in the United States than in any major country in the world.
+347	You can't tell me that a surplus food distribution of five cents po- per person - and that n- nearly six million Americans receiving that - is adequate.
+348	We have never said flatly that we will defend Quemoy and Matsu if it's attacked.
+349	I believe that when you get into a w- if you're going to get into war for the defense of Formosa, it ought to be on a clearly defined line.
+350	This is a great country, but I think it could be a greater country; and this is a powerful country, but I think it could be a more powerful country.
+351	I'm not satisfied to have fifty percent of our steel-mill capacity unused.
+352	I'm not satisfied until every American enjoys his full constitutional rights.
+353	That is the obligation upon our generation.
+354	Is the United States standing still?
+355	What kind of programs are we for?
+356	I think that the means that I advocate will reach that goal better than the means that he advocates.
+357	Because it isn't a question of how much the federal government spends; it isn't a question of which government does the most.
+358	Well, the Vice President and I came to the Congress together 1946; we both served in the Labor Committee.
+359	In my judgment the only policy that will work will be for effective supply and demand to be in balance.

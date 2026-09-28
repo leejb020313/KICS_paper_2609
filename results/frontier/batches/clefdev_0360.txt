@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	I of course disagree with Senator Kennedy insofar as his suggestions as to what should be done uh - with re- on the farm program.
+361	Uh - I can only say that my experience is there for the people to consider; Senator Kennedy's is there for the people to consider.
+362	As far as aid for school construction is concerned, I favor that, as Senator Kennedy did, in January of this year, when he said he favored that rather than aid to s- teacher salaries.
+363	Why did Senator Kennedy take that position then?
+364	My objection here is not the cost in dollars.
+365	And I might say that two-thirds of the Republicans in the House voted against a dollar twenty-five cent minimum wage and a majority of the Democrats sustained it - nearly two-thirds of them voted for the dollar twenty-five.
+366	Every Republican on the Rules Committee voted against sending that bill to be considered by the members of the House of Representatives.
+367	That's why we have to continue to be alert.
+368	Now that isn't the test of whether America moves.
+369	Now, the reason the Eisenhower Administration has moved, the reason that we've had the funds, for example, locally to build the schools, and the hospitals, and the highways, to make the progress that we have, is because this Administration has encouraged individual enterprise; and it has resulted in the greatest expansion of the private sector of the economy that has ever been witnessed in an eight-year period.
+370	I think that's the big assignment, the big task, the big function of the federal government.
+371	And I stand for programs that will mean growth and progress.
+372	But it is also essential that he not allow a dollar spent that could be better spent by the people themselves.
+373	The Kerr bill provided assistance to all those who were not on Social Security.
+374	The means are at issue.
+375	What I would propose, and I proposed it way back in March when I was a candidate in my own state of Illinois, I proposed $11.3 billion, specifically, in cuts in the Federal budget.
+376	Why not leave it with them?
+377	Well, I believe that conservation, at course, is worthy in and of itself.
+378	When you have a report, as we did recently, that six out of 10 CONUS Divisions in this country - Continental United States Army Divisions - simply could not pass a readiness test: that two out of three divisions that were to be allocated to the so-called Rapid Deployment Force could not meet a readiness test.
+379	That is just a downpayment, in my opinion.
+380	But I am not in favor of the plan that is so costly.
+381	We have also provided in our program for a $4 billion Community Trust Fund, and we've told you where the money is coming from.
+382	And the problem is, with Governments - Federal, State and Local - taking $.44 out of every dollar earned, that the Federal Government has pre-empted too many of the tax sources, and that the cities.
+383	And one is going to give you $122 more if you happen to be in that range of about a $20,000-a-year income.
+384	This is 1980 and not 1966.
+385	Now also, with regard to the figures about California.
+386	Now, whether it is rightful, on a single issue, for anyone to advocate that someone should not be elected or not, I won't take a position on that.
+387	Now, Governor Reagan is running on a platform that calls for a Constitutional amendment banning abortion.
+388	On the Amendment that you mentioned, I abandoned it 15 years ago.
+389	With regard to the freedom of the individual for choice with regard to abortion, there's one individual who's not being considered at all.
+390	I believe the people of this country can, and together, we can begin the world over again.
+391	A great historian, Henry Steele Commager, said that in their lust for victory, neither traditional party is looking beyond November.
+392	Thank you, Mr. President, also for being part of this -- this debate.
+393	I was in Pennsylvania with someone who had just graduated -- this was in Philadelphia -- and she said, "I've got my degree.
+394	We have to make sure that we make it easier for kids to afford college.
+395	I know what it takes to get this economy going.
+396	I'm going to change that.
+397	Jeremy, first of all, your future is bright.
+398	And what I want to do, is build on the five million jobs that we've created over the last 30 months in the private sector alone.
+399	Well what you're seeing in this country is 23 million people struggling to find a job.

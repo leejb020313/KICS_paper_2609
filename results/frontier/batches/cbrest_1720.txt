@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1720	Most of her donors have done the same thing as I do.
+1721	You know what she should have done?
+1722	And you know, Hillary, what you should have done, you should have changed the law when you were a United States senator...
+1723	You should have changed the law.
+1724	But you won't change the law, because you take in so much money.
+1725	But I will tell you, I sat there...
+1726	I sat there watching ad after ad after ad, false ad.
+1727	All paid for by your friends on Wall Street that gave so much money because they know you're going to protect them.
+1728	And, frankly, you should have changed the laws.
+1729	If you don't like what I did, you should have changed the laws.
+1730	I will look at it at the time.
+1731	I'll look at it at the time.
+1732	What I've seen -- what I've seen is so bad.
+1733	First of all, the media is so dishonest and so corrupt, and the pile-on is so amazing.
+1734	And they've poisoned the mind of the voters.
+1735	But unfortunately for them, I think the voters are seeing through it.
+1736	I think they're going to see through it.
+1737	But I think they're going to see through it.
+1738	So let me just give you one other thing.
+1739	So I talk about the corrupt media.
+1740	I talk about the millions of people -- tell you one other thing.
+1741	She shouldn't be allowed to run.
+1742	It's crooked -- she's -- she's guilty of a very, very serious crime.
+1743	She should not be allowed to run.
+1744	Chris, she should never have been allowed to run for the presidency based on what she did with e-mails and so many other things.
+1745	Well, Chris, let me respond to that, because that's horrifying.
+1746	You know, every time Donald thinks things are not going in his direction, he claims whatever it is, is rigged against him.
+1747	The FBI conducted a year-long investigation into my e-mails.
+1748	They concluded there was no case; he said the FBI was rigged.
+1749	He lost the Iowa caucus.
+1750	He said the Republican primary was rigged against him.
+1751	Then Trump University gets sued for fraud and racketeering; he claims the court system and the federal judge is rigged against him.
+1752	There was even a time when he didn't get an Emmy for his TV program three years in a row and he started tweeting that the Emmys were rigged against him.
+1753	This is -- this is a mindset.
+1754	This is how Donald thinks.
+1755	And it's funny, but it's also really troubling.
+1756	We've been around for 240 years.
+1757	We've accepted the outcomes when we may not have liked them.
+1758	You know, President Obama said the other day when you're whining before the game is even finished...
+1759	... it just shows you're not up to doing the job.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1840	Take a look at Aleppo.
+1841	It is so sad when you see what's happened.
+1842	And a lot of this is because of Hillary Clinton, because what's happened is, by fighting Assad, who turned out to be a lot tougher than she thought, and now she's going to say, oh, he loves Assad, she's -- he's just much tougher and much smarter than her and Obama.
+1843	And everyone thought he was gone two years ago, three years ago.
+1844	He -- he aligned with Russia.
+1845	We gave them $150 billion back.
+1846	We give them $1.7 billion in cash.
+1847	Bundles of cash as big as this stage.
+1848	Now they have -- he has aligned with Russia and with Iran.
+1849	We don't know who the rebels are.
+1850	And when and if -- and it's not going to happen, because you have Russia and you have Iran now.
+1851	But if they ever did overthrow Assad, you might end up with -- as bad as Assad is, and he's a bad guy, but you may very well end up with worse than Assad.
+1852	If she did nothing, we'd be in much better shape.
+1853	And this is what's caused the great migration, where she's taking in tens of thousands of Syrian refugees, who probably in many cases -- not probably, who are definitely...
+1854	... in many cases, ISIS-aligned, and we now have them in our country, and wait until you see -- this is going to be the great Trojan horse.
+1855	And wait until you see what happens in the coming years.
+1856	Thanks a lot for doing a great job.
+1857	Well, Chris, first of all, I think a no-fly zone could save lives and could hasten the end of the conflict.
+1858	I'm well aware of the really legitimate concerns that you have expressed from both the president and the general.
+1859	This would not be done just on the first day.
+1860	This would take a lot of negotiation.
+1861	And it would also take making it clear to the Russians and the Syrians that our purpose here was to provide safe zones on the ground.
+1862	But I want to respond to what Donald said about refugees.
+1863	He's made these claims repeatedly.
+1864	I am not going to let anyone into this country who is not vetted, who we do not have confidence in.
+1865	But I am not going to slam the door on women and children.
+1866	That picture of that little 4-year-old boy in Aleppo, with the blood coming down his face while he sat in an ambulance, is haunting.
+1867	And so we are going to do very careful, thorough vetting.
+1868	And, yes, some of that threat emanates from over in Syria and Iraq, and we've got to keep fighting, and I will defeat ISIS, and some of it is we have to up our game and be much smarter here at home.
+1869	But I just have to...
+1870	It's so ridiculous what she -- she will defeat ISIS.
+1871	We should have never let ISIS happen in the first place.
+1872	We should have -- wait one second.
+1873	They had a cease-fire three weeks ago.
+1874	But our country is so outplayed by Putin and Assad, and by the way -- and by Iran.
+1875	Nobody can believe how stupid our leadership is.
+1876	Well, I say they're wrong, because I'm going to create tremendous jobs.
+1877	But we're bringing it from 1 percent up to 4 percent.
+1878	And I actually think we can go higher than 4 percent.
+1879	I think you can go to 5 percent or 6 percent.

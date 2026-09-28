@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1560	So I just left some high representatives of India.
+1561	They're growing at 8 percent.
+1562	China is growing at 7 percent.
+1563	And that for them is a catastrophically low number.
+1564	We are growing -- our last report came out -- and it's right around the 1 percent level.
+1565	Because if it is, I should win easily, it was so bad.
+1566	The report was so bad.
+1567	Look, our country is stagnant.
+1568	Our product is pouring in from China, pouring in from Vietnam, pouring in from all over the world.
+1569	I've visited so many communities.
+1570	I've gotten to know so many -- I've developed so many friends over the last year.
+1571	Now, she can say that her husband did well, but, boy, did they suffer as NAFTA kicked in, because it didn't really kick in very much, but it kicked in after they left.
+1572	That was one of the worst things that's ever been signed by our country.
+1573	Now she wants to sign Trans-Pacific Partnership.
+1574	She lied when she said she didn't call it the gold standard in one of the debates.
+1575	She did call it the gold standard.
+1576	And that will be as bad as NAFTA.
+1577	Well, first, let me say, number one, when I saw the final agreement for TPP, I said I was against it.
+1578	It didn't meet my test.
+1579	I've had the same test.
+1580	I'll be against it after the election.
+1581	I'll be against it when I'm president.
+1582	There's only one of us on this stage who's actually shipped jobs to Mexico, because that's Donald.
+1583	He's shipped jobs to 12 countries, including Mexico.
+1584	And, you know, one of the biggest problems we have with China is the illegal dumping of steel and aluminum into our markets.
+1585	I've stood up against it as secretary of state.
+1586	Donald has bought Chinese steel and aluminum.
+1587	In fact, the Trump Hotel right here in Las Vegas was made with Chinese steel.
+1588	That's the kind of approach that is just not going to work.
+1589	Well, let me just say -- let me just say.
+1590	We're going to pull the country together.
+1591	That's why I'm going to have a trade prosecutor for the first time in history.
+1592	And we're going to enforce those agreements, and we're going to look for businesses to help us by buying American products.
+1593	Let me ask a simple question.
+1594	She's been doing this for 30 years.
+1595	Why the hell didn't you do it over the last 15, 20 years?
+1596	You were very much involved -- excuse me.
+1597	And you do have experience.
+1598	I say the one thing you have over me is experience, but it's bad experience, because what you've done has turned out badly.
+1599	For 30 years, you've been in a position to help, and if you say that I use steel or I use something else, I -- make it impossible for me to do that.

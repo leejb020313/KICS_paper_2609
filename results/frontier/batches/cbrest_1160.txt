@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1160	So I think that could help.
+1161	I would also consider arming the Kurds.
+1162	The Kurds have been our best partners in Syria, as well as Iraq.
+1163	When I go one second over, it's like a big deal.
+1164	I mean, she calls our people deplorable, a large group, and irredeemable.
+1165	I will be a president for all of our people.
+1166	And I'll be a president that will turn our inner cities around and will give strength to people and will give economics to people and will bring jobs back.
+1167	Because NAFTA, signed by her husband, is perhaps the greatest disaster trade deal in the history of the world.
+1168	And now she wants to sign TPP, even though she says now she's for it.
+1169	She called it the gold standard.
+1170	And by the way, at the last debate, she lied, because it turned out that she did say the gold standard and she said she didn't say it.
+1171	They actually said that she lied.
+1172	But she's lied about a lot of things.
+1173	Devastating what's happening to our inner cities.
+1174	She's been talking about it for years.
+1175	As usual, she talks about it, nothing happens.
+1176	Same with the Latino Americans, the Hispanic Americans.
+1177	They talk, they don't get it done.
+1178	You go into the inner cities and -- you see it's 45 percent poverty.
+1179	The education is a disaster.
+1180	It can't get any worse.
+1181	And she's been talking about the inner cities for 25 years.
+1182	Nothing's going to ever happen.
+1183	And all of her friends, the taxes we were talking about, and I would just get it by osmosis.
+1184	Take a look at upstate New York.
+1185	It turned out to be a disaster.
+1186	Mr. Carter, I have tried my entire life to do what I can to support children and families.
+1187	And Donald talks a lot about, you know, the 30 years I've been in public service.
+1188	I have worked with Latinos -- one of my first jobs in politics was down in south Texas registering Latino citizens to be able to vote.
+1189	So I have a deep devotion, to use your absolutely correct word, to making sure that an every American feels like he or she has a place in our country.
+1190	This is the only one country he's ever known.
+1191	And he listens to Donald on TV and he said to his mother one day, will he send me back to Ethiopia if he gets elected?
+1192	A lot of people are feeling, you know, uneasy.
+1193	A lot of kids are expressing their concerns.
+1194	Democrats, Republicans, independents, people across our country.
+1195	If you don't vote for me, I still want to be your president.
+1196	I want to be the best president I can be for every American.
+1197	And what he has said about African-Americans and Latinos, about Muslims, about POWs, about immigrants, about people with disabilities, he's never apologized for.
+1198	And so I do think that a lot of the tone and tenor that he has said -- I'm proud of the campaign that Bernie Sanders and I ran.
+1199	We ran a campaign based on issues, not insults.

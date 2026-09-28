@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	If it's good enough for us, it's good enough for every American.
+281	Now, what happens is when you begin to get people covered like that -- for instance in diabetes, if you diagnose diabetes early, you could save $50 billion in the health care system of America by avoiding surgery and dialysis.
+282	Americans ought to have it too.
+283	There is a problem for our youngsters, a real problem.
+284	The fact is that the president is driving the largest deficits in American history.
+285	And that's what we're going to do.
+286	We're going to protect Social Security.
+287	And this is the first president in 72 years to preside over an economy in America that has lost jobs, 1.6 million jobs.
+288	I have a plan to put America back to work.
+289	Twenty percent of the upper-income people pay about 80 percent of the taxes in America today because of how we structured the tax cuts.
+290	But the way to make sure our economy grows is not to raise taxes on small-business owners.
+291	We've got 1,000 more Border Patrol agents on the southern border.
+292	And so in order to take pressure off the borders, in order to make the borders more secure, I believe there ought to be a temporary worker card that allows a willing worker and a willing employer to mate up, so long as there's not an American willing to do that job, to join up in order to be able to fulfill the employers' needs.
+293	I don't think we ought to reward illegal behavior.
+294	The fact is, we haven't done what we need to do to toughen up our borders, and I will.
+295	Well, I'm glad you raised that question.
+296	One percent of America got $89 billion last year in a tax cut, but people working hard, playing by the rules, trying to take care of their kids, family values, that we're supposed to value so much in America -- I'm tired of politicians who talk about family values and don't value families.
+297	What we need to do is raise the minimum wage.
+298	We also need to hold on to equal pay.
+299	That's not right in America.
+300	You cannot solve a problem unless you diagnose the problem.
+301	Is that a new question or a 30-second question?
+302	Five hundred thousand kids lost after-school programs because of your budget.
+303	There's much we can do with them with respect to homeland security.
+304	But I think it makes sense, I think most Americans in their guts know, that we ought to pass a sort of truth standard.
+305	In 1990, there was a vast coalition put together to run Saddam Hussein out of Kuwait.
+306	I've been a hunter since I was a kid, 12, 13 years old.
+307	Now I'm the senior Democrat on it.
+308	Now, let me just share something.
+309	If a president doesn't reach out and bring people in and be inclusive, then how are we going to get over those barriers?
+310	I agree, we shouldn't have quotas.
+311	Do you realize today in America, we spend $73 billion to help 10 million low- and middle-income families better afford college?
+312	I believe the best way to help our small businesses is not only through small-business loans, which we have increased since I've been the president of the United States, but to unbundle government contracts so people have a chance to be able to bid and receive a contract to help get their business going.
+313	Well, I respect everything that the president has said and certainly respect his faith.
+314	And people all find their ways to express it.
+315	And frankly, I think we have a lot more loving of our neighbor to do in this country and on this planet.
+316	I love the strong women around me.
+317	I can't tell you how much I love my wife and our daughters.
+318	And not only did she interest me, I guess you would say it was love at first sight.
+319	I think the greatest possibilities of our country, our dreams and our hopes, are out there just waiting for us to grab onto them.

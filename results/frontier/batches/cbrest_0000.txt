@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	Well, thank you, Lester, and thanks to Hofstra for hosting us.
+1	The central question in this election is really what kind of country we want to be and what kind of future we'll build together.
+2	Today is my granddaughter's second birthday, so I think about this a lot.
+3	That means we need new jobs, good jobs, with rising incomes.
+4	I want us to invest in you.
+5	I want us to invest in your future.
+6	That means jobs in infrastructure, in advanced manufacturing, innovation and technology, clean, renewable energy, and small business, because most of the new jobs will come from small business.
+7	That starts with raising the national minimum wage and also guarantee, finally, equal pay for women's work.
+8	I also want to see more companies do profit-sharing.
+9	If you help create the profits, you should be able to share in them, not just the executives at the top.
+10	And I want us to do more to support people who are struggling to balance family and work.
+11	I've heard from so many of you about the difficult choices you face and the stresses that you're under.
+12	So let's have paid family leave, earned sick days.
+13	Finally, we tonight are on the stage together, Donald Trump and I. Donald, it's good to be with you.
+14	We're going to have a debate where we are talking about the important issues facing our country.
+15	You have to judge us, who can shoulder the immense, awesome responsibilities of the presidency, who can put into action the plans that will make your life better.
+16	I hope that I will be able to earn your vote on November 8th.
+17	Our jobs are fleeing the country.
+18	They're devaluing their currency, and there's nobody in our government to fight them.
+19	And we have a very good fight.
+20	And we have a winning fight.
+21	So we're losing our good jobs, so many of them.
+22	When you look at what's happening in Mexico, a friend of mine who builds plants said it's the eighth wonder of the world.
+23	They're building some of the biggest plants anywhere in the world, some of the most sophisticated, some of the best plants.
+24	With the United States, as he said, not so much.
+25	You see that, their small car division leaving.
+26	Thousands of jobs leaving Michigan, leaving Ohio.
+27	And we can't allow it to happen anymore.
+28	As far as child care is concerned and so many other things, I think Hillary and I agree on that.
+29	We have to stop our companies from leaving the United States and, with it, firing all of their people.
+30	All you have to do is take a look at Carrier air conditioning in Indianapolis.
+31	So many hundreds and hundreds of companies are doing this.
+32	We cannot let it happen.
+33	Under my plan, I'll be reducing taxes tremendously, from 35 percent to 15 percent for companies, small and big businesses.
+34	That's going to be a job creator like we haven't seen since Ronald Reagan.
+35	It's going to be a beautiful thing to watch.
+36	We have to renegotiate our trade deals, and we have to stop these countries from stealing our companies and our jobs.
+37	Well, I think that trade is an important issue.
+38	Of course, we are 5 percent of the world's population; we have to trade with the other 95 percent.
+39	And we need to have smart, fair trade deals.

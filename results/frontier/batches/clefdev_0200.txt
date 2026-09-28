@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	Well, you know, I admire so much Senator Obama's eloquence.
+201	Now, on the subject of free trade agreements.
+202	But let me give you another example of a free trade agreement that Senator Obama opposes.
+203	So Senator Obama, who has never traveled south of our border, opposes the Colombia Free Trade Agreement.
+204	Look, as I travel around the country, this is the issue that will break your heart over and over again.
+205	Just yesterday, I was in Toledo shaking some hands in a line.
+206	The only thing we're going to try to do is lower costs so that those cost savings are passed onto you.
+207	We've got to put more money into preventive care.
+208	And I am convinced we need to do a lot of things.
+209	We need to put health care records online.
+210	The rise of obesity amongst young Americans is one of the most alarming statistics that there is.
+211	We should have physical fitness programs and nutrition programs in schools.
+212	Now, Senator Obama, I'd like -- still like to know what that fine is going to be, and I don't think that Joe right now wants to pay a fine when he is seeing such difficult times in America's economy.
+213	So here's what we do.
+214	For the first time in history, you will be taxing people's health care benefits.
+215	By the way, the average policy costs about $12,000.
+216	The average cost of a health care insurance plan in America today is $5,800.
+217	I'm going to give them $5,000 to take with them wherever they want to go, and this will give them affordability.
+218	This will give them availability.
+219	This really gets down to the fundamental difference in our philosophies.
+220	I want, Joe, you to do the job.
+221	I want to leave money in your pocket.
+222	That's what I'm all about.
+223	And don't take my word for it.
+224	All I want to do, if you've already got health care, is lower your costs.
+225	That's not appropriate to do.
+226	I think that decisions should rest in the hands of the states.
+227	Not because I agreed with their ideology, but because I thought they were qualified and that elections have consequences when presidents are nominated.
+228	This is a very important issue we're talking about.
+229	Senator Obama voted against Justice Breyer and Justice Roberts on the grounds that they didn't meet his ideological standards.
+230	And so that's what I will do.
+231	I would consider anyone in their qualifications.
+232	And it is true that this is going to be, I think, one of the most consequential decisions of the next president.
+233	Now I would not provide a litmus test.
+234	I think that abortion is a very difficult issue and it is a moral issue and one that I think good people on both sides can disagree on.
+235	We have to change the culture of America.
+236	Those of us who are proudly pro-life understand that.
+237	And it's got to be courage and compassion that we show to a young woman who's facing this terribly difficult decision.
+238	Senator Obama, as a member of the Illinois State Senate, voted in the Judiciary Committee against a law that would provide immediate medical attention to a child born of a failed abortion.
+239	Then there was another bill before the Senate Judiciary Committee in the state of Illinois not that long ago, where he voted against a ban on partial-birth abortion, one of the late-term abortion, a really -- one of the bad procedures, a terrible.

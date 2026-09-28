@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	She's been doing it a long time.
+521	She's been trying to take them out for a long time.
+522	But they wouldn't have even been formed if they left some troops behind, like 10,000 or maybe something more than that.
+523	And then you wouldn't have had them.
+524	Or, as I've been saying for a long time, and I think you'll agree, because I said it to you once, had we taken the oil -- and we should have taken the oil -- ISIS would not have been able to form either, because the oil was their primary source of income.
+525	And now they have the oil all over the place, including the oil -- a lot of the oil in Libya, which was another one of her disasters.
+526	Well, I hope the fact-checkers are turning up the volume and really working hard.
+527	That is absolutely proved over and over again.
+528	He actually advocated for the actions we took in Libya and urged that Gadhafi be taken out, after actually doing some business with him one time.
+529	But the larger point -- and he says this constantly -- is George W. Bush made the agreement about when American troops would leave Iraq, not Barack Obama.
+530	And the only way that American troops could have stayed in Iraq is to get an agreement from the then-Iraqi government that would have protected our troops, and the Iraqi government would not give that.
+531	That's the most important part of this.
+532	How do we prevent attacks?
+533	How do we protect our people?
+534	And I think we've got to have an intelligence surge, where we are looking for every scrap of information.
+535	You know, they responded so quickly, so professionally to the attacks that occurred by Rahami.
+536	And they brought him down.
+537	And we may find out more information because he is still alive, which may prove to be an intelligence benefit.
+538	So we've got to do everything we can to vacuum up intelligence from Europe, from the Middle East.
+539	We're working with our friends in the Middle East, many of which, as you know, are Muslim majority nations.
+540	They're on the front lines.
+541	They need to have close working cooperation with law enforcement in these communities, not be alienated and pushed away as some of Donald's rhetoric, unfortunately, has led to.
+542	The secretary said very strongly about working with -- we've been working with them for many years, and we have the greatest mess anyone's ever seen.
+543	Under your direction, to a large extent.
+544	They were choking on the sanctions.
+545	But when you look at NATO, I was asked on a major show, what do you think of NATO?
+546	And I said, well, I'll tell you.
+547	I haven't given lots of thought to NATO.
+548	And I said it numerous times.
+549	And about four months ago, I read on the front page of the Wall Street Journal that NATO is opening up a major terror division.
+550	And I think that's great.
+551	It's a lot of money to protect other people.
+552	But I'm all for NATO.
+553	And they're going to do that.
+554	I think we have to get NATO to go into the Middle East with us, in addition to surrounding nations, and we have to knock the hell out of ISIS, and we have to do it fast, when ISIS formed in this vacuum created by Barack Obama and Secretary Clinton.
+555	And believe me, you were the ones that took out the troops.
+556	Not only that, you named the day.
+557	They sat back probably and said, I can't believe it.
+558	When they formed, when they formed, this is something that never should have happened.
+559	It should have never happened.

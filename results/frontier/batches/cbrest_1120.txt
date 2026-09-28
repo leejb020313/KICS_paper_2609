@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1120	But look at that deal.
+1121	Iran now and Russia are now against us.
+1122	So she wants to fight.
+1123	She wants to fight for rebels.
+1124	You don't even know who the rebels are.
+1125	I don't like Assad at all, but Assad is killing ISIS.
+1126	He and I haven't spoken, and I disagree.
+1127	I think you have to knock out ISIS.
+1128	But Syria is no longer Syria.
+1129	Syria is Russia and it's Iran, who she made strong and Kerry and Obama made into a very powerful nation and a very rich nation, very, very quickly, very, very quickly.
+1130	I believe we have to get ISIS.
+1131	We have to worry about ISIS before we can get too much more involved.
+1132	And that was the line.
+1133	I think Aleppo is a disaster, humanitarian-wise.
+1134	Let me tell you something.
+1135	You take a look at Mosul.
+1136	They think a lot of the ISIS leaders are in Mosul.
+1137	Well, all of these bad leaders from ISIS are leaving Mosul.
+1138	Why can't they do it quietly?
+1139	Why do they have to say we're going to be attacking Mosul within the next four to six weeks, which is what they're saying?
+1140	I can't think of any.
+1141	I can't think of any.
+1142	And we have -- look, I have 200 generals and admirals who endorsed me.
+1143	We talk about it all the time.
+1144	They understand, why can't they do something secretively, where they go in and they knock out the leadership?
+1145	How -- why would these people stay there?
+1146	... for weeks -- I've been reading now for weeks about Mosul, that it's the harbor of where -- you know, between Raqqa and Mosul, this is where they think the ISIS leaders are.
+1147	Why would they be saying -- they're not staying there anymore.
+1148	Because everybody's talking about how Iraq, which is us with our leadership, goes in to fight Mosul.
+1149	Now, with these 200 admirals and generals, they can't believe it.
+1150	All I say is this.
+1151	General George Patton, General Douglas MacArthur are spinning in their grave at the stupidity of what we're doing in the Middle East.
+1152	I would not use American ground forces in Syria.
+1153	I don't think American troops should be holding territory, which is what they would have to do as an occupying force.
+1154	I don't think that is a smart strategy.
+1155	Well, Martha, I hope that by the time I -- if I'm fortunate...
+1156	I do think that there is a good chance that we can take Mosul.
+1157	And, you know, Donald says he knows more about ISIS than the generals.
+1158	And that takes a lot of planning and preparation.
+1159	I would go after Baghdadi.

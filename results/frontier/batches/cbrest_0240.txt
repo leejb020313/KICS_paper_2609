@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	I will tell you this.
+241	No -- in fact, watching shows, they're reading the papers.
+242	Almost every lawyer says, you don't release your returns until the audit's complete.
+243	But I would go against them if she releases her e-mails.
+244	Let her release the e-mails.
+245	Why did she delete 33,000...
+246	Well, I think you've seen another example of bait-and- switch here.
+247	For 40 years, everyone running for president has released their tax returns.
+248	You can go and see nearly, I think, 39, 40 years of our tax returns, but everyone has done it.
+249	So you've got to ask yourself, why won't he release his tax returns?
+250	First, maybe he's not as rich as he says he is.
+251	Second, maybe he's not as charitable as he claims to be.
+252	Third, we don't know all of his business dealings, but we have been told through investigative reporting that he owes about $650 million to Wall Street and foreign banks.
+253	Or maybe he doesn't want the American people, all of you watching tonight, to know that he's paid nothing in federal taxes, because the only years that anybody's ever seen were a couple of years when he had to turn them over to state authorities when he was trying to get a casino license, and they showed he didn't pay any federal income tax.
+254	So if he's paid zero, that means zero for troops, zero for vets, zero for schools or health.
+255	And I think probably he's not all that enthusiastic about having the rest of our country see what the real reasons are, because it must be something really important, even terrible, that he's trying to hide.
+256	And the financial disclosure statements, they don't give you the tax rate.
+257	They don't give you all the details that tax returns would.
+258	And I have no reason to believe that he's ever going to release his tax returns, because there's something he's hiding.
+259	But I think the question is, were he ever to get near the White House, what would be those conflicts?
+260	Who does he owe money to?
+261	Well, he owes you the answers to that, and he should provide them.
+262	You know, I made a mistake using a private e- mail.
+263	And if I had to do it over again, I would, obviously, do it differently.
+264	But I'm not going to make any excuses.
+265	When you have your staff taking the Fifth Amendment, taking the Fifth so they're not prosecuted, when you have the man that set up the illegal server taking the Fifth, I think it's disgraceful.
+266	And believe me, this country thinks it's -- really thinks it's disgraceful, also.
+267	You learn a lot from financial disclosure.
+268	And you should go down and take a look at that.
+269	The other thing, I'm extremely underleveraged.
+270	It's not a lot of money relative to what I had.
+271	The buildings that were in question, they said in the same report, which was -- actually, it wasn't even a bad story, to be honest with you, but the buildings are worth $3.9 billion.
+272	And the $650 isn't even on that.
+273	It's much less than that.
+274	But I could give you a list of banks, I would -- if that would help you, I would give you a list of banks.
+275	These are very fine institutions, very fine banks.
+276	I could do that very quickly.
+277	I have a tremendous income.
+278	It's because it's about time that this country had somebody running it that has an idea about money.
+279	You land at LaGuardia, you land at Kennedy, you land at LAX, you land at Newark, and you come in from Dubai and Qatar and you see these incredible -- you come in from China, you see these incredible airports, and you land -- we've become a third world country.

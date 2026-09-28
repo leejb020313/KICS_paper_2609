@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	Why didn't you add other things into the deal?
+641	One of the great giveaways of all time, of all time, including $400 million in cash.
+642	That turned out to be wrong.
+643	It was actually $1.7 billion in cash, obviously, I guess for the hostages.
+644	It certainly looks that way.
+645	So you say to yourself, why didn't they make the right deal?
+646	This is one of the worst deals ever made by any country in history.
+647	And they're going to end up getting nuclear.
+648	I met with Bibi Netanyahu the other day.
+649	Believe me, he's not a happy camper.
+650	Words matter when you run for president.
+651	And they really matter when you are president.
+652	And so I know that this campaign has caused some questioning and worries on the part of many leaders across the globe.
+653	I've talked with a number of them.
+654	It's also important that we look at the entire global situation.
+655	There's no doubt that we have other problems with Iran.
+656	But personally, I'd rather deal with the other problems having put that lid on their nuclear program than still to be facing that.
+657	Would he have bombed Iran?
+658	But it's like his plan to defeat ISIS.
+659	So we need to be more precise in how we talk about these issues.
+660	People around the word follow our presidential campaigns so closely, trying to get hints about what we will do.
+661	Are we going to lead the world with strength and in accordance with our values?
+662	I intend to be a leader of our country that people can count on, both here at home and around the world, to make decisions that will further peace and prosperity, but also stand up to bullies, whether they're abroad or at home.
+663	We cannot let those who would try to destabilize the world to interfere with American interests and security...
+664	... to be given any opportunities at all.
+665	Lester, one thing I'd like to say.
+666	But I will tell you that Hillary will tell you to go to her website and read all about how to defeat ISIS, which she could have defeated by never having it, you know, get going in the first place.
+667	Right now, it's getting tougher and tougher to defeat them, because they're in more and more places, more and more states, more and more nations.
+668	And it's a big problem.
+669	We cannot protect countries all over the world...
+670	... where they're not paying us what we need.
+671	We need a lot of things.
+672	But you have to have some basic ability.
+673	And sadly, she doesn't have that.
+674	But they weren't taken care of.
+675	And if she ever wins this race, they won't be taken care of.
+676	She doesn't have the look.
+677	She doesn't have the stamina.
+678	And I don't believe she does have the stamina.
+679	To be president of this country, you need tremendous stamina.

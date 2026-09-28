@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	Well, you know, Senator McCain, in the last debate and today, again, suggested that I don't understand.
+561	We've spent, so far, close to $700 billion and if we continue on the path that we're on, as Senator McCain is suggesting, it's going to go well over $1 trillion.
+562	Well, we may not always have national security issues at stake, but we have moral issues at stake.
+563	If we could have intervened effectively in the Holocaust, who among us would say that we had a moral obligation not to go in?
+564	And so I do believe that we have to consider it as part of our interests, our national interests, in intervening where possible.
+565	Right now there's a peacekeeping force that has been set up and we have African Union troops in Darfur to stop a genocide that has killed hundreds of thousands of people.
+566	And that's what I intend to do when I'm president.
+567	Well, let me just follow up, my friends.
+568	And we must do whatever we can to prevent genocide, whatever we can to prevent these terrible calamities that we have said never again.
+569	But it also has to be tempered with our ability to beneficially affect the situation.
+570	And I understand that we have to say never again to a Holocaust and never again to Rwanda.
+571	And if we have Osama bin Laden in our sights and the Pakistani government is unable or unwilling to take them out, then I think that we have to act and we will take them out.
+572	And that is to get the support of the people.
+573	And by working and coordinating our efforts together, not threatening to attack them, but working with them, and where necessary use force, but talk softly, but carry a big stick.
+574	It'd be fine with me.
+575	We are going to have to make the Iraqi government start taking more responsibility, withdraw our troops in a responsible way over time, because we're going to have to put some additional troops in Afghanistan.
+576	And we want a democracy in Afghanistan.
+577	And I've had conversations with him.
+578	We have to have a streamlined NATO command structure.
+579	We have to do a lot of things.
+580	We will succeed and we will bring our troops home with honor and victory and not in defeat.
+581	But the Russians must understand that these kinds of actions and activities are not acceptable and hopefully we will use the leverage, economic, diplomatic and others united with our allies, with our allies and friends in Europe who are equally disturbed as we are about their recent behaviors.
+582	And for the most part I agree with Senator McCain on many of the steps that have to be taken.
+583	But we can't just provide moral support.
+584	The other thing we have to do, though, is we've got to see around the corners.
+585	And Georgia and Ukraine are both major gateways of energy into Europe.
+586	Well, thank you, Terry (ph).
+587	And thank you for your service to the country.
+588	And I think we can do that.
+589	But, at the end of the day, my friend, I have to tell you again, and you know what it's like to serve, and you know what it's like to sacrifice, but we can never allow a second Holocaust to take place.
+590	It would be a game-changer in the region.
+591	And I will do everything that's required to prevent it.
+592	Iran went from zero centrifuges to develop nuclear weapons to 4,000.
+593	But here's what I do know.
+594	And the question in this election is: are we going to pass on that same American dream to the next generation?
+595	That's what's at stake in this election.
+596	There are challenges around the world that are new and different and there will be different -- we will be talking about countries sometime in the future that we hardly know where they are on the map, some Americans.
+597	I grew up in a family where my father was gone most of the time because he was at sea and doing our country's business.
+598	I know what it's like to have to fight to keep one's hope going through difficult times.
+599	I thought that was a good model.

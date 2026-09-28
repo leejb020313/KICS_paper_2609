@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	Excuse me, no, I have to respond to this.
+161	He doesn't want to talk about the substantive issues.
+162	They're the decisions you're making in the middle class families like I grew up in Scranton and Claymont.
+163	That's a typical political statement.
+164	We have a different kind of a relationship.
+165	Because he's not going to do that.'
+166	If not, it's going to continue.'
+167	But then I made a decision, 'Run it as well as you can' - to my people, great people - 'Run it as well as you can.'
+168	No matter how well you run it, it's no good.
+169	What I'm going to do is pass Obamacare with a public option - become Bidencare.
+170	And it's not like it was 25 years ago, it was three and three quarters.
+171	Less than four years ago.
+172	It's the same thing with socialized medicine.
+173	My response is people deserve to have affordable health care - period.
+174	- it was impossible to work, it doesn't work -
+175	Joe Biden, he's running against.
+176	This HEROES Act has been sitting there.
+177	It was a way of getting a lot of money, billions and billions of dollars to these cities.
+178	But what that does, everybody all over the world will start pouring into our country.
+179	They're going to start laying off, whether they're red or blue.
+180	Let me just tell you.
+181	I can imagine you're five years old, your parents are taking you across the Rio Grande River and it's and it's illegal.
+182	You say 'Oh, no, Mom, leave me here.
+183	And I've changed without having a specific - we got rid of catch and release, we got rid of a lot of horrible things that they put in and that they lived with.
+184	So we don't have to worry about it.
+185	And she's written a lot about this.
+186	But a Black parent, no matter how wealthy or how poor they are, has to teach their child, when you're walking down the street, don't have a hoodie on when you go across the street, making sure that you, in fact, if you get pulled over, yes sir, no sir, hands on top of the wheel.
+187	It's about accumulating the ability to have wealth, as well as it is to be free from violence.
+188	And again, he's been in government 47 years.
+189	There's not enough people in jail,' and go on my website, get the quote, the date when he said it, 'not enough people'.
+190	This is a guy who when the Central Park five, five innocent Black kids, he continued to push for making sure that they got the death penalty.
+191	And one of these things we should be doing is there should be no, no minimum mandatories in the law.
+192	I am anxious to have this race.
+193	I am - the character of the country is on the ballot.
+194	If this stuff is true about Russia, Ukraine, China, other countries, Iraq - If this is true, then he's a corrupt politician.
+195	Look, there are 50 former national intelligence folks who said that what this, he's accusing me of is a Russian plan.
+196	You have to be kidding.
+197	I mean, they can say anything.
+198	I can't even see the audience because it's so dark, but I don't care who's in the audience.
+199	He started off his campaign coming down the escalator saying he's gonna get rid of those Mexican rapists.

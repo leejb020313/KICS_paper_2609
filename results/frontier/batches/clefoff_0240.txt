@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	Can I address the COVID issues the Governor brought up?
+241	So, if you buy a battery in this country, you buy a solar panel, it's being produced in a plant in China powered by coal where it's being powered by oil and gas at 20 percent off.
+242	We have 14 percent fewer state employees in Arkansas after I left the government than when I took over as governor eight years ago.
+243	And I pledge to reduce it by 10 percent our federal nondefense workforce.
+244	But let me tell you, I've been a federal prosecutor.
+245	Let's just answer the question.
+246	No, I didn't -- I didn't raise my hand.
+247	And the right way is first of all, yes, is climate change real?
+248	And so, that's not helping the environment.
+249	I came to the conclusion that America can do for anyone what she's done for me if we focus on restoring hope, creating opportunities and protecting America.
+250	And can't we all agree that we are not going to put a woman in jail or give her the death penalty if she gets an abortion?
+251	I know a lady in Florida named Penny, she survived multiple abortion attempts.
+252	I understand Iowa and New Hampshire are going to do different.
+253	But I will support the cause of life as governor and as president.
+254	It's supported by 70 percent of the American people.
+255	We haven't had 45 pro-life senators in over 100 years.
+256	So no Republican president can ban abortions, any more than a Democrat president could ban all those state laws.
+257	And this issue is, of course, very important.
+258	And it is the most important issue for women and for the unborn child and for our country that we get this right.
+259	How we have to enhance maternal care.
+260	I mean, it's extraordinary to think about the violence that's claiming innocent lives literally every week in every major city in this country.
+261	What we need is -- is strong commitment to law enforcement.
+262	We will bring our cities back.
+263	So, what a President Christie would do is appoint an Attorney General who would instruct each of the 93 US attorneys that they are to take over the prosecution of violent crime in every one of those cities that are failing to do so.
+264	Secondly, what we need to make sure that each and every one of these criminals understand is that the laws apply to everybody, and when Hunter Biden fills out a fake application, a false application, for a gun permit, and then is facing a 10-year mandatory minimum, which was mandated by legislation sponsored by his father, and then you have a Justice Department that walks away from those charges.
+265	So, the reality is, we have a crime wave in this country, and we know how to fix it.
+266	Do we have the spine to bring them back?
+267	We don't have an identity crisis, Vivek.
+268	We're not looking for a new national identity.
+269	We just need government as good as our people.
+270	Bret and Martha, I just thought it's interesting, you asked your question about the problems we're having in big cities.
+271	One, enforce the law when it comes to crime.
+272	And so, we have to have respect for our justice system and the rule of law.
+273	Here's the -- here's the bottom line.
+274	We're skating on thin ice and we cannot set a precedent where the party in power uses police force to indict its political opponents.
+275	I will always stand up for our Constitution, regardless of the political pressure.
+276	Seventeen percent of Republicans have confidence in our Department of Justice.
+277	You have to shut down the FBI, actually have the courage to get it right.
+278	Here -- I know, but here's the thing.
+279	This election is not about January 6 of 2021.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1320	What kind of opportunities will we provide for our citizens?
+1321	What kind of rights will Americans have?
+1322	And I feel strongly that the Supreme Court needs to stand on the side of the American people, not on the side of the powerful corporations and the wealthy.
+1323	But I feel that at this point in our country's history, it is important that we not reverse marriage equality, that we not reverse Roe v. Wade, that we stand up against Citizens United, we stand up for the rights of people in the workplace, that we stand up and basically say: The Supreme Court should represent all of us.
+1324	That's how I see the court, and the kind of people that I would be looking to nominate to the court would be in the great tradition of standing up to the powerful, standing up on behalf of our rights as Americans.
+1325	And I look forward to having that opportunity.
+1326	I would hope that the Senate would do its job and confirm the nominee that President Obama has sent to them.
+1327	Well, first of all, it's great to be with you, and thank you, everybody.
+1328	The Supreme Court: It's what it's all about.
+1329	Something happened recently where Justice Ginsburg made some very, very inappropriate statements toward me and toward a tremendous number of people, many, many millions of people that I represent.
+1330	And she was forced to apologize.
+1331	But these were statements that should never, ever have been made.
+1332	I believe if my opponent should win this race, which I truly don't think will happen, we will have a Second Amendment which will be a very, very small replica of what it is right now.
+1333	I feel that the justices that I am going to appoint -- and I've named 20 of them -- the justices that I'm going to appoint will be pro-life.
+1334	They will have a conservative bent.
+1335	They will be protecting the Second Amendment.
+1336	They will interpret the Constitution the way the founders wanted it interpreted.
+1337	And I believe that's very, very important.
+1338	I don't think we should have justices appointed that decide what they want to hear.
+1339	Well, first of all, I support the Second Amendment.
+1340	I lived in Arkansas for 18 wonderful years.
+1341	I represented upstate New York.
+1342	I understand and respect the tradition of gun ownership.
+1343	It goes back to the founding of our country.
+1344	But I also believe that there can be and must be reasonable regulation.
+1345	Because I support the Second Amendment doesn't mean that I want people who shouldn't have guns to be able to threaten you, kill you or members of your family.
+1346	And so when I think about what we need to do, we have 33,000 people a year who die from guns.
+1347	You mentioned the Heller decision.
+1348	And the court didn't accept that reasonable regulation, but they've accepted many others.
+1349	So I see no conflict between saving people's lives and defending the Second Amendment.
+1350	Well, the D.C. vs. Heller decision was very strongly -- and she was extremely angry about it.
+1351	But there's no doubt that I respect the Second Amendment, that I also believe there's an individual right to bear arms.
+1352	That is not in conflict with sensible, commonsense regulation.
+1353	And, you know, look, I understand that Donald's been strongly supported by the NRA.
+1354	The gun lobby's on his side.
+1355	They're running millions of dollars of ads against me.
+1356	And I regret that, because what I would like to see is for people to come together and say: Of course we're going to protect and defend the Second Amendment.
+1357	Well, let me just tell you before we go any further.
+1358	So we have the toughest laws, and you have tremendous gun violence.
+1359	And I am -- I don't know if Hillary was saying it in a sarcastic manner, but I'm very proud to have the endorsement of the NRA.

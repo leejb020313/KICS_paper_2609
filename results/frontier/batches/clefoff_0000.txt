@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	They said they were just going to get inspectors in.
+1	And from that point on, I've voted to -- I moved to bring those troops home.
+2	I sit on the Senate Armed Services Committee.
+3	We need to depend on all of our tools -- diplomatic, economic, working with our allies -- and not let the defense industry call the shots.
+4	And that is -- and I don't know if my colleagues here will agree with me or not.
+5	We have got to undo what Trump did, bring that coalition together, and make sure that Iran never gets a nuclear weapon.
+6	The very president who said he was going to end endless war, who pretended to have been against the war in Iraq all along -- although we know that's not true -- now has more troops going to the Middle East.
+7	And with regard to this idea that we can walk away and not have any troops anywhere, including special forces, we -- there's no way you negotiate or have been able to negotiate with terrorists.
+8	And when I am president, anytime -- which I hope will never happen -- but anytime I am compelled to use force and seek that authorization, we will have a three-year sunset, so that the American people are included ...
+9	But unfortunately, President Trump has made it much harder for the next president to achieve that goal.
+10	My issue is that, because of the actions of Donald Trump, we are in a situation where they are now starting -- Iran is starting to enrich uranium again in violation of the original agreement.
+11	I would be putting what I did as vice president -- I met with Xi Jinping more than anyone else.
+12	But I would not, I would not meet with -- absent preconditions, I would not meet with the, quote, Supreme Leader, who said Joe Biden is a rabid dog, he should be beaten to death with a stick.
+13	The heart and soul of our disastrous trade agreements -- and I'm the guy who voted against NAFTA and against permanent normal trade relations with China -- is that we have forced American workers to compete against people in Mexico, in China, elsewhere, who earn starvation wages, $1 or $2 an hour.
+14	Well, they are the same in this issue.
+15	I am sick and tired and will not tolerate, and we will use the power of the federal contracting system.
+16	There's a video of me 30 years ago talking about how a woman could become president of the United States.
+17	I thought it was such an open-end -- I wasn't at the meeting, so I can't comment, but I was going to say...
+18	And her name is -- I'm very proud to know her, and her name is Governor Kelly.
+19	Third, I would add to this, you have to be competent to win and you have to know what you're doing.
+20	Of -- Hillary Clinton got 3 million votes, more votes than Trump.
+21	Look, don't deny that the question is there.
+22	The answer is -- the real debate we should be having is how do we make it easier for people to get coverage for addiction and mental health.
+23	It takes on the pharmaceutical industry, which in some cases charges us 10 times more for the same prescription drugs sold abroad as sold here.
+24	What we will do through a Medicare for all single-payer program is substantially lower the cost of health care for employers and workers, because we end the $100 billion a year that the health care industry makes and the $500 billion a year we spend in administrative -- the administrative nightmare of dealing with thousands of separate insurance plans.
+25	So I think the answer is to build on it.
+26	I am the one person up here who has on her website in her plan a plan to actually start taking on the deficit, by taking part of that money from that corporate tax cut that they put in there and putting it in a fund to pay back the deficit.
+27	Now, we've got a dramatically better track record on it than Republicans do.
+28	And it's why everything I've put forward -- from Medicare for all who want it to the historic investments we're going to make in infrastructure to dealing with climate change -- is fully paid for.
+29	We all talk about plans, health care plans that we have, and these plans are paid for.
+30	Those giant corporations like Chevron and Amazon who paid nothing in taxes, we can have them pay.
+31	They come in every month.
+32	It makes no sense, and it must change, and we shouldn't be afraid to put federal dollars into making that a reality.
+33	We can raise the wages of every childcare worker and preschool teacher in America.
+34	We should not be one of a few countries that does not have universal high-quality affordable childcare.
+35	I just hadn't been sworn in yet.
+36	It was beyond my reach to be able to do it.
+37	There's no -- there's no choice but to -- for Nancy Pelosi and the House to move.
+38	I can't hold a grudge.
+39	And as president of the United States, that's what I will attempt to do, notwithstanding that -- we're going to be more division after he's defeated by me this next time.

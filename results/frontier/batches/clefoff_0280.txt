@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	We have answered this so many times, is the thing.
+281	More people are understanding the importance of that, including conservative legal scholars, who says he may be disqualified under the 14th Amendment from being President, again, as a result of the insurrection.
+282	OK, I'd like to answer.
+283	And he deserves not grudging credit.
+284	And I do think that we need to give him credit for that.
+285	But what I will also tell you is, look, I mean, when it comes to whether President Trump should serve or not, I trust the American people let them vote, let them decide.
+286	We have to look at the fact that three quarters of Americans don't want a rematch between Trump and Biden.
+287	We can't win a general election that way.
+288	Well, Mike, why don't you say this?
+289	That is how we move our nation forward.
+290	If I'm president in the United States, we'll get fair consideration of any pardon request.
+291	And it ended with a prayer, so help me God.
+292	I mean, I would have Europe step up and do their job.
+293	And I find it offensive, that we have professional politicians on the stage that will make a pilgrimage to Kyiv, to their Pope, Zelenskyy, without doing the same thing for people in Maui or the Southside of Chicago or Kensington.
+294	And I went to Ukraine, because I wanted to see for myself, what Vladimir Putin's army was doing to the free Ukrainian people.
+295	They have gouged out people's eyes, cut off their ears and shot people in the back of the head, men, and then gone into those homes and raped the -- the daughters and the wives who were left as widows and orphans.
+296	Vivek, if we do the giveaway that you want to give to Putin to give him his land, is not going to be too long for he rolls across a NATO border.
+297	And frankly, our men and women of our armed forces are going to have to go and fight him.
+298	You've -- you've made your point, Vice President.
+299	And we are driving Russia further into China's arms.
+300	And I think that the same people that took us into Iraq War, the same people who took us into the Vietnam War, you cannot end -- you not start another no-win war.
+301	That will be my top priority...
+302	When I was at the U.N., the Russian ambassador suddenly died.
+303	Do you want to go and give Ukraine to Russia?
+304	And you know what friends do?
+305	Friends help each other stand on their own two feet.
+306	I will partner with Israel to make sure Iran never is nuclear-armed.
+307	And we can do both at the same time.
+308	We're going to use force and we're going to leave them stone-cold dead.
+309	And we act like that letting Russia win in the Ukraine is like a gimme, as opposed to a gift to China.
+310	But the Biden administration sends Blinken, Yellen over there.
+311	And what we need to do is not meetings, not press releases, because something that would send a lot more than a press release is actually harpoon missiles.
+312	And, as the next president of the United States, I will make that border wall complete.
+313	We cannot be successful going against the cartel unless we bring in Mexico as a partner.
+314	I have met Angel Moms throughout this country.
+315	So, as president, would I use force?
+316	And then revive our national identity where every high school senior should have to pass the same civics test that, frankly, every immigrant, including my mother, had to pass in order to become a citizen of this country.
+317	I didn't grow up in money.
+318	And, as governor, well, education is one of the biggest part of a state budget.
+319	I don't sit and lecture school districts how to do it.

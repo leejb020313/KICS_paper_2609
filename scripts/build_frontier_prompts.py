@@ -3,6 +3,7 @@
 The prompt keeps NN-PPI's check-worthiness criteria (cwcascade/prompt.py) and replaces the
 single-statement task with a numbered list scored in one JSON object. Ids are positions in
 data/frontier/{eval,calib}_set.json. Score the files with scripts/run_frontier_batch.sh.
+Usage: build_frontier_prompts.py [comma-separated set files] [out dir]
 """
 import os
 import sys
@@ -18,10 +19,9 @@ TASK = ("\n# YOUR TASK\nBelow are numbered statements (id<TAB>statement). For EA
         "object mapping id (as string) to score, e.g. {\"0\":0.9,\"1\":0.1}. Include every id.\n\n")
 
 
-def main(out_dir=os.path.join(RESULTS, "frontier", "batches")):
+def main(set_files="eval_set.json,calib_set.json", out_dir=os.path.join(RESULTS, "frontier", "batches")):
     os.makedirs(out_dir, exist_ok=True)
-    sets = {**read_json(os.path.join(DATA, "frontier", "eval_set.json")),
-            **read_json(os.path.join(DATA, "frontier", "calib_set.json"))}
+    sets = {k: v for fn in set_files.split(",") for k, v in read_json(os.path.join(DATA, "frontier", fn)).items()}
     for key, items in sets.items():
         for start in range(0, len(items), BATCH):
             lines = [f"{i}\t{items[i]['text']}" for i in range(start, min(start + BATCH, len(items)))]

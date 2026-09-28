@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1880	To do that, we're taking back jobs.
+1881	We're not going to let our companies be raided by other countries where we lose all our jobs, we don't make our product anymore.
+1882	But I'm going to create a -- the kind of a country that we were from the standpoint of industry.
+1883	We used to be there.
+1884	We've become very, very sloppy.
+1885	We've had people that are political hacks making the biggest deals in the world, bigger than companies.
+1886	You take these big companies, these trade deals are far bigger than these companies, and yet we don't use our great leaders, many of whom back me and many of whom back Hillary, I must say.
+1887	Those are the people -- these are the greatest negotiators in the world.
+1888	We have to use them to negotiate our trade deals.
+1889	We use people that get the position because they gave -- they made a campaign contribution and they're dealing with China and people that are very much smarter than they are.
+1890	So we have to use our great people.
+1891	But that being said, we will create an economic machine the likes of which we haven't seen in many decades.
+1892	And we'll have companies that will grow and expand and start from new.
+1893	Well, first, when I hear Donald talk like that and know that his slogan is "Make America Great Again," I wonder when he thought America was great.
+1894	He was criticizing President Reagan.
+1895	This is the way Donald thinks about himself, puts himself into, you know, the middle and says, "You know, I alone can fix it," as he said on the convention stage.
+1896	But if you look at the debt, which is the issue you asked about, Chris, I pay for everything I'm proposing.
+1897	I take that very seriously, because I do think it's one of the issues we've got to come to grips with.
+1898	We are going to ask the wealthy and corporations to pay their fair share.
+1899	And there is no evidence whatsoever that that will slow down or diminish our growth.
+1900	We'll have what economists call middle-out growth.
+1901	We've got to get back to rebuilding the middle class, the families of America.
+1902	That's where growth will come from.
+1903	That's why I want to invest in you.
+1904	I want to invest in your family.
+1905	And I think that's the smartest way to grow the economy, to make the economy fairer.
+1906	You know, he started off with his dad as a millionaire...
+1907	I started off with -- my dad was a small-business man.
+1908	We should have been much tougher on trade even then.
+1909	I've been waiting for years.
+1910	And frankly, now we're going to do it right.
+1911	We're going to grow the economy.
+1912	And one thing we have to do: Repeal and replace the disaster known as Obamacare.
+1913	We have to repeal and replace Obamacare.
+1914	If we don't repeal and replace -- now, it's probably going to die of its own weight.
+1915	It's -- the premiums are going up 60 percent, 70 percent, 80 percent.
+1916	We have to repeal and replace Obamacare.
+1917	Well, Chris, I am on record as saying that we need to put more money into the Social Security Trust Fund.
+1918	But what we want to do is to replenish the Social Security Trust Fund...
+1919	... by making sure that we have sufficient resources, and that will come from either raising the cap and/or finding other ways to get more money into it.

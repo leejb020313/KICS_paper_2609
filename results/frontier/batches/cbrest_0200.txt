@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	We've looked at your tax proposals.
+201	I don't see changes in the corporate tax rates or the kinds of proposals you're referring to that would cause the repatriation, bringing back of money that's stranded overseas.
+202	I happen to support that.
+203	Then you didn't read it.
+204	I happen to -- I happen to support that in a way that will actually work to our benefit.
+205	But when I look at what you have proposed, you have what is called now the Trump loophole, because it would so advantage you and the business you do.
+206	The first I've -- who gave it that name?
+207	... $4 billion tax benefit for your family.
+208	And when you look at what you are proposing...
+209	... as I said, trumped-up trickle-down.
+210	It got us into the mess we were in, in 2008 and 2009.
+211	Slashing taxes on the wealthy hasn't worked.
+212	And a lot of really smart, wealthy people know that.
+213	I don't think top-down works in America.
+214	I think building the middle class, investing in the middle class, making college debt-free so more young people can get their education, helping people refinance their -- their debt from college at a lower rate.
+215	Those are the kinds of things that will really boost the economy.
+216	Our country is suffering because people like Secretary Clinton have made such bad decisions in terms of our jobs and in terms of what's going on.
+217	Now, look, we have the worst revival of an economy since the Great Depression.
+218	We are in a big, fat, ugly bubble.
+219	And we better be awfully careful.
+220	And we have a Fed that's doing political things.
+221	The Fed is doing political -- by keeping the interest rates at this level.
+222	And believe me: The day Obama goes off, and he leaves, and goes out to the golf course for the rest of his life to play golf, when they raise interest rates, you're going to see some very bad things happen, because the Fed is not doing their job.
+223	The Fed is being more political than Secretary Clinton.
+224	But you will learn more about Donald Trump by going down to the federal elections, where I filed a 104-page essentially financial statement of sorts, the forms that they have.
+225	It shows income -- in fact, the income -- I just looked today -- the income is filed at $694 million for this past year, $694 million.
+226	If you would have told me I was going to make that 15 or 20 years ago, I would have been very surprised.
+227	You know what that is?
+228	That means, who's negotiating these trade deals?
+229	We have people that are political hacks negotiating our trade deals.
+230	Well, I told you, I will release them as soon as the audit.
+231	I know a lot of wealthy people that have never been audited.
+232	I said, do you get audited?
+233	I get audited almost every year.
+234	It's almost become a way of life.
+235	I get audited by the IRS.
+236	We have a situation in this country that has to be taken care of.
+237	I will release my tax returns -- against my lawyer's wishes -- when she releases her 33,000 e-mails that have been deleted.
+238	As soon as she releases them, I will release.
+239	I will release my tax returns.

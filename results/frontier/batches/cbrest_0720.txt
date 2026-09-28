@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	That's why the slogan of my campaign is "Stronger Together," because I think if we work together, if we overcome the divisiveness that sometimes sets Americans against one another, and instead we make some big goals -- and I've set forth some big goals, getting the economy to work for everyone, not just those at the top, making sure that we have the best education system from preschool through college and making it affordable, and so much else.
+721	Obviously, I'm hoping to earn your vote, I'm hoping to be elected in November, and I can promise you, I will work with every American.
+722	I began this campaign because I was so tired of seeing such foolish things happen to our country.
+723	This is a great country.
+724	This is a great land.
+725	When I look at all of the things that I see and all of the potential that our country has, we have such tremendous potential, whether it's in business and trade, where we're doing so badly.
+726	Last year, we had almost $800 billion trade deficit.
+727	In other words, trading with other countries.
+728	We had an $800 billion deficit.
+729	We're going to have a strong border.
+730	We're going to bring back law and order.
+731	And this is happening on a weekly basis.
+732	We have to bring back respect to law enforcement.
+733	At the same time, we have to take care of people on all sides.
+734	But I want to do things that haven't been done, including fixing and making our inner cities better for the African-American citizens that are so great, and for the Latinos, Hispanics, and I look forward to doing it.
+735	It's called make America great again.
+736	No, I didn't say that at all.
+737	I don't think you understood what was -- this was locker room talk.
+738	I'm not proud of it.
+739	I apologize to my family.
+740	I apologize to the American people.
+741	Certainly I'm not proud of it.
+742	But this is locker room talk.
+743	And they look and they see.
+744	Can you imagine the people that are, frankly, doing so well against us with ISIS?
+745	And they look at our country and they see what's going on.
+746	Yes, I'm very embarrassed by it.
+747	But it's locker room talk, and it's one of those things.
+748	I will knock the hell out of ISIS.
+749	We're going to defeat ISIS.
+750	And I will tell you, I will take care of ISIS.
+751	And we should get on to much more important things and much bigger things.
+752	I have great respect for women.
+753	Nobody has more respect for women than I do.
+754	And I was embarrassed by it.
+755	But I have tremendous respect for women.
+756	And I will tell you: No, I have not.
+757	We're going to have borders in our country, which we don't have now.
+758	People are pouring into our country, and they're coming in from the Middle East and other places.
+759	We're going to make America safe again.

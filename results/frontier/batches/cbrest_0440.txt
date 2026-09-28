@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	Well, it was very -- I say nothing.
+441	I say nothing, because I was able to get him to produce it.
+442	But let me just tell you.
+443	I think you can see that.
+444	Well, just listen to what you heard.
+445	And clearly, as Donald just admitted, he knew he was going to stand on this debate stage, and Lester Holt was going to be asking us questions, so he tried to put the whole racist birther lie to bed.
+446	But it can't be dismissed that easily.
+447	He has really started his political activity based on this racist lie that our first black president was not an American citizen.
+448	But, remember, Donald started his career back in 1973 being sued by the Justice Department for racial discrimination because he would not rent apartments in one of his developments to African-Americans, and he made sure that the people who worked for him understood that was the policy.
+449	So he has a long record of engaging in racist behavior.
+450	And the birther lie was a very hurtful one.
+451	You know, Barack Obama is a man of great dignity.
+452	And I could tell how much it bothered him and annoyed him that this was being touted and used against him.
+453	But I like to remember what Michelle Obama said in her amazing speech at our Democratic National Convention: When they go low, we go high.
+454	And Barack Obama went high, despite Donald Trump's best efforts to bring him down.
+455	I would love to respond.
+456	You treated him with terrible disrespect.
+457	It doesn't work that way.
+458	I don't think you can deny that.
+459	But just last week, your campaign manager said it was true.
+460	So when you tried to act holier than thou, it really doesn't work.
+461	Now, as far as the lawsuit, yes, when I was very young, I went into my father's company, had a real estate company in Brooklyn and Queens, and we, along with many, many other companies throughout the country -- it was a federal lawsuit -- were sued.
+462	We settled the suit with zero -- with no admission of guilt.
+463	I notice you bring that up a lot.
+464	And, you know, I also notice the very nasty commercials that you do on me in so many different ways, which I don't do on you.
+465	Maybe I'm trying to save the money.
+466	But, frankly, I look -- I look at that, and I say, isn't that amazing?
+467	I'll go one step further.
+468	In Palm Beach, Florida, tough community, a brilliant community, a wealthy community, probably the wealthiest community there is in the world, I opened a club, and really got great credit for it.
+469	No discrimination against African- Americans, against Muslims, against anybody.
+470	And I'm so glad I did it.
+471	And I'm very, very proud of it.
+472	And that's the way I feel.
+473	That is the true way I feel.
+474	There are the independent hacking groups that do it mostly for commercial reasons to try to steal information that they can use to make money.
+475	But increasingly, we are seeing cyber attacks coming from states, organs of states.
+476	The most recent and troubling of these has been Russia.
+477	I know Donald's very praiseworthy of Vladimir Putin, but Putin is playing a really...
+478	And one of the things he's done is to let loose cyber attackers to hack into government files, to hack into personal files, hack into the Democratic National Committee.
+479	And we recently have learned that, you know, that this is one of their preferred methods of trying to wreak havoc and collect information.

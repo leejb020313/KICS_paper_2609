@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1600	The problem is, you talk, but you don't get anything done, Hillary.
+1601	How do you miss $6 billion?
+1602	If you become president, this country is going to be in some mess.
+1603	But I think it's really an important issue.
+1604	He raised the 30 years of experience, so let me just talk briefly about that.
+1605	You know, back in the 1970s, I worked for the Children's Defense Fund.
+1606	And I was taking on discrimination against African-American kids in schools.
+1607	He was getting sued by the Justice Department for racial discrimination in his apartment buildings.
+1608	In the 1980s, I was working to reform the schools in Arkansas.
+1609	He was borrowing $14 million from his father to start his businesses.
+1610	He insulted a former Miss Universe, Alicia Machado, called her an eating machine.
+1611	And on the day when I was in the Situation Room, monitoring the raid that brought Osama bin Laden to justice, he was hosting the "Celebrity Apprentice."
+1612	Well, I think I did a much better job.
+1613	I built a massive company, a great company, some of the greatest assets anywhere in the world, worth many, many billions of dollars.
+1614	I started with a $1 million loan.
+1615	It's a $1 million loan.
+1616	But I built a phenomenal company.
+1617	And if we could run our country the way I've run my company, we would have a country that you would be so proud of.
+1618	You would even be proud of it.
+1619	And frankly, when you look at her real record, take a look at Syria.
+1620	Take a look at the migration.
+1621	Take a look at Libya.
+1622	Take a look at Iraq.
+1623	She gave us ISIS, because her and Obama created this huge vacuum, and a small group came out of that huge vacuum because when -- we should never have been in Iraq, but once we were there, we should have never got out the way they wanted to get out.
+1624	And now I listen how she's going to get rid of ISIS.
+1625	She's going to get rid of nobody.
+1626	Well, first of all, those stories have been largely debunked.
+1627	I believe it was her campaign that did it.
+1628	Just like if you look at what came out today on the clips where I was wondering what happened with my rally in Chicago and other rallies where we had such violence?
+1629	She's the one and Obama that caused the violence.
+1630	They hired people -- they paid them $1,500, and they're on tape saying be violent, cause fights, do bad things.
+1631	And I didn't even apologize to my wife, who's sitting right here, because I didn't do anything.
+1632	I didn't know any of these -- I didn't see these women.
+1633	And I think it's her campaign.
+1634	And that was now all on tape, started by her.
+1635	I believe, Chris, that she got these people to step forward.
+1636	If it wasn't, they get their 10 minutes of fame.
+1637	It was lies, and it was fiction.
+1638	At the last debate, we heard Donald talking about what he did to women.
+1639	And after that, a number of women have come forward saying that's exactly what he did to them.

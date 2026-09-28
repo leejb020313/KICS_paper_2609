@@ -1,0 +1,49 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	I was born in Detroit.
+1001	My dad was head of a car company.
+1002	You can take a look at the op-ed...
+1003	Yes, I want to reduce our deficit by cutting spending that we don't need but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st century economy.
+1004	And we've been through tough times but we always bounce back because of our character, because we pull together and if I have the privilege of being your president for another four years, I promise you I will always listen to your voices.
+1005	I'm optimistic about the future.
+1006	I was in a state where my legislature was 87 percent Democrat.
+1007	I propose a real prescription drug benefit under Medicare for all seniors, all seniors, and here's how it works.
+1008	If you want to do a voucher program in Missouri, fine.
+1009	More than 90% of America's children go to public schools.
+1010	I will pay down the debt every single year until it is eliminated early in the next decade.
+1011	The Senate Budget Committee --
+1012	I don't think that's the role of the president to pick you're right and you're not right.
+1013	This is a fair plan.
+1014	I've been a person who has to set a clear vision and convince people to follow.
+1015	Now, many here who are not involved in farming don't -- won't follow this, so just forgive me.
+1016	I know this, 100% will get it if I'm the president.
+1017	I don't want to embarrass our oldest daughter.
+1018	We're America, and we believe in our future and we know we have the ability to shape our future.
+1019	I don't believe that's a fair measure.
+1020	He is the chairman of the health committee.
+1021	Quotas are bad for America.
+1022	How do you do it?
+1023	I think that speaks for itself.
+1024	And if you think I was proud of it, I think you misread me, I do.
+1025	But I'm not proud of any record, sir, I'm not.
+1026	I promise you I will keep mine.
+1027	He has promised a trillion dollars out of the Social Security Trust Fund for young working adults to invest and save on their own.
+1028	(LAUGHTER) I -- there's an old high school debating trick, which is to answer something and then attack your opponent at the end.
+1029	Well, can I answer that?
+1030	I look forward to the final weeks of this campaign.
+1031	For those of you for me, thanks for your help.

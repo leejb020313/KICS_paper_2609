@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	And so we've got to reverse this.
+121	I think everybody understands at this point that we are experiencing the worst financial crisis since the Great Depression.
+122	And we've got to get the financial package working much quicker than it has been working.
+123	Last point I want to make, though.
+124	Joe, I want to tell you, I'll not only help you buy that business that you worked your whole life for and be able -- and I'll keep your taxes low and I'll provide available and affordable health care for you and your employees.
+125	And I will not have -- I will not stand for a tax increase on small business income.
+126	Fifty percent of small business income taxes are paid by small businesses.
+127	Exxon Mobil, and other oil companies, for example, would get an additional $4 billion in tax breaks.
+128	What I've said is I want to provide a tax cut for 95 percent of working Americans, 95 percent.
+129	And what I want to do is to make sure that the plumber, the nurse, the firefighter, the teacher, the young entrepreneur who doesn't yet have money, I want to give them a tax break now.
+130	Not only do 98 percent of small businesses make less than $250,000, but I also want to give them additional tax breaks, because they are the drivers of the economy.
+131	In other words, we're going to take Joe's money, give it to Senator Obama, and let him spread the wealth around.
+132	Who -- why would you want to increase anybody's taxes right now?
+133	Why would you want to do that, anyone, anyone in America, when we have such a tough time, when these small business people, like Joe the plumber, are going to create jobs, unless you take that money from him and spread the wealth around.
+134	Now, it is true that my friend and supporter, Warren Buffett, for example, could afford to pay a little more in taxes in order...
+135	I would prefer that none of us had to pay taxes, including myself.
+136	But ultimately, we've got to pay for the core investments that make this economy strong and somebody's got to do it.
+137	Well, I don't mind paying a little more.
+138	Our tax rate for business in America is 35 percent.
+139	We need to cut the business tax rate in America.
+140	Now, of all times in America, we need to cut people's taxes.
+141	We need to encourage business, create jobs, not spread the wealth around.
+142	Well, first of all, I think it's important for the American public to understand that the $750 billion rescue package, if it's structured properly, and, as president, I will make sure it's structured properly, means that ultimately taxpayers get their money back, and that's important to understand.
+143	But there is no doubt that we've been living beyond our means and we're going to have to make some adjustments.
+144	So let me get to that.
+145	And I want to go through the federal budget line by line, page by page, programs that don't work, we should cut.
+146	I mentioned health care earlier.
+147	And we're going to have to embrace a culture and an ethic of responsibility, all of us, corporations, the federal government, and individuals out there who may be living beyond their means.
+148	During the Depression era, we had a thing called the home ownership loan corporation.
+149	But -- OK. All right.
+150	Energy -- well, first -- second of all, energy independence.
+151	We have to have nuclear power.
+152	OK, what -- what would I cut?
+153	Government spending has gone completely out of control; $10 trillion dollar debt we're giving to our kids, a half-a-trillion dollars we owe China.
+154	I know how to save billions of dollars in defense spending.
+155	Senator Obama has asked for nearly $1 billion in pork-barrel earmark projects...
+156	And I want to make sure that we are focused on those programs that work.
+157	When President Bush came into office, we had a budget surplus and the national debt was a little over $5 trillion.
+158	And we are now looking at a deficit of well over half a trillion dollars.
+159	And let me tell you...

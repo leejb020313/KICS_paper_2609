@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1520	But they have to pay up.
+1521	Well, it's awfully hard to get them to pay up when you have somebody saying we think how great they are.
+1522	We have to tell Japan in a very nice way, we have to tell Germany, all of these countries, South Korea, we have to say, you have to help us out.
+1523	We have, during his regime, during President Obama's regime, we've doubled our national debt.
+1524	So my plan -- we're going to renegotiate trade deals.
+1525	We're going to have free trade, more free trade than we have right now.
+1526	But we have horrible deals.
+1527	Our jobs are being taken out by the deal that her husband signed, NAFTA, one of the worst deals ever.
+1528	You look at all of the places that I just left, you go to Pennsylvania, you go to Ohio, you go to Florida, you go to any of them.
+1529	You go upstate New York.
+1530	Our jobs have fled to Mexico and other places.
+1531	I am going to renegotiate NAFTA.
+1532	And if I can't make a great deal -- then we're going to terminate NAFTA and we're going to create new deals.
+1533	We're going to have trade, but we're going -- we're going to terminate it, we're going to make a great trade deal.
+1534	And if we can't, we're going to do it -- we're going to go a separate way, because it has been a disaster.
+1535	They're going to start hiring people.
+1536	We're going to bring the $2.5 trillion...
+1537	... that's offshore back into the country.
+1538	... the fact is, he's going to advocate for the largest tax cuts we've ever seen, three times more than the tax cuts under the Bush administration.
+1539	I have said repeatedly throughout this campaign: I will not raise taxes on anyone making $250,000 or less.
+1540	I also will not add a penny to the debt.
+1541	I have costed out what I'm going to do.
+1542	He will, through his massive tax cuts, add $20 trillion to the debt.
+1543	Well, he mentioned the debt.
+1544	When President Obama came into office, he inherited the worst economic disaster since the Great Depression.
+1545	So, yes, one of the ways you go after the debt, one of the ways you create jobs is by investing in people.
+1546	So I do have investments, investments in new jobs, investments in education, skill training, and the opportunities for people to get ahead and stay ahead.
+1547	That's the kind of approach that will work.
+1548	Cutting taxes on the wealthy, we've tried that.
+1549	It has not worked the way that it has been promised.
+1550	Well, it's a combination, Chris.
+1551	I was in the Senate before I became secretary of state.
+1552	I've never seen people as physically distraught as the Bush administration team was because of what was happening to the economy.
+1553	He doesn't get the credit he deserves for taking some very hard positions.
+1554	But it was a terrible recession.
+1555	So now we've dug ourselves out of it, we're standing, but we're not yet running.
+1556	So what I am proposing is that we invest from the middle out and the ground up, not the top down.
+1557	That is not going to work.
+1558	That's why what I have put forward doesn't add a penny to the debt, but it is the kind of approach that will enable more people to take those new jobs, higher-paying jobs.
+1559	We've got to do more to get the whole economy moving, and that's what I believe I will be able to do.

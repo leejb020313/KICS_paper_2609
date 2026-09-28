@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	And so I would say that the concept of the Dukakis family has my great respect.
+721	I salute those who participate in the political process.
+722	We may have different approaches.
+723	the tone we've just heard might just be the tone we have for the rest of the campaign.
+724	But that's the way I, George Bush, feel about it.
+725	It's not going to happen overnight; it certainly will have to happen on a step-by-step basis as we make progress in arms negotiation and arms control and arms reduction.
+726	The defense budget today takes far less percentage of the gross national product than it did in President Kennedy's time, for example moved tremendously.
+727	See, I don't believe any other country can pick up the mantel.
+728	I served at the UN.
+729	I don't think we can turn over these kinds of decisions of the collective defense to the United Nations or anything else.
+730	We don't give away our hand before we sit down at the head table.
+731	The Congress is doing a better job of it.
+732	But they don't work if you go raise taxes and then the Congress spends it continues to spend that.
+733	And there are several there's a good political reason because it's just about this time of year that the Democrats start saying the Republicans are going to take away your Social Security.
+734	I learned that the hard way and the Governor and I both supported slipping the COLAs for one year.
+735	He supported it at the National Governors Conference and I supported it in breaking a tie in a major compromise package and we got assailed by the Democrats in the election over that.
+736	We do not have to do it.
+737	I won't support judges like that.
+738	But I will go out there and find men and women to interpret.
+739	And I don't have a list, but I think the appointments that the President has made to the Bench have been outstanding, outstanding appointments.
+740	Now, two-thirds of the people in this country who receive Social Security checks live entirely on that check; they have no other income.
+741	But I do think there are flexible ways to solve some of the pressing problems, particularly that affect our children.
+742	We're going to tell you how to do it all.
+743	You ought to go out and see around this country what's happening in the volunteer section: Americans helping America.
+744	I just have to correct the record.
+745	But as we look at the decisions that the next president of the United States is going to have to make, I just don't believe the place you go first is those programs, those so-called entitlements, which provide a basic floor of income and a modest amount of medical care for the elderly, the disabled, for people who can't make their way on their own, and in many cases, have given a great deal to this country.
+746	It's a contract between generations.
+747	We ought to move forward swiftly on my ideas of ethanol which would use more corn, and therefore, create a bigger market for our agricultural products.
+748	So I'll just keep saying, I am one.
+749	I'm not going to do that.
+750	That boo was excessively loud.
+751	I believe in our parks.
+752	I will not agree to another debate.
+753	In terms of negative campaigning, you know, I don't want to sound like a kid in the schoolyard: he started it.
+754	But I'll try harder to keep it on a high plane.
+755	But it's not getting out because there are too few debates.
+756	(Laughter, applause) Isn't that the point?
+757	Most Americans believe in basic values.
+758	We have differences about how to achieve them.
+759	But those are the issues on which we ought to be debating and if we can just put away the flag factories and the balloons and those kinds of thing and get on to a real discussion of these issues, I think we will have a good success.

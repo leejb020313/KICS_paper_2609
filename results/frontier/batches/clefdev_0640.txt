@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	Uh - Also, so that we can get the uh - opportunity for the questioners to question me, it will be before the next television debate.
+641	The difficulty now is the president's course is quite limited.
+642	My judgment is that the program the Vice President put forward, which is an extension of Mr. Benson's program, will cost a billion dollars more than the present program, which costs about six billion dollars a year, the most expensive in history.
+643	I don't believe we ought to pay our bills through inflation, through a phony interest rate.
+644	We've got to grow enough to maintain the forces that we have abroad and to wage the non-military battle for the war - uh - for the world in Asia, in Africa and Latin America.
+645	We have to move into those areas with programs so that we make adequate use of the resources of those areas.
+646	And so he would be doing exactly the wrong thing.
+647	I oppose it because I want us to have more oil exploration and not less.
+648	I believe that we must be able to compete in the market - steel and in all the basic commodities abroad - we must be able to compete against them because we always did because of our technological lead.
+649	Every other ca- African country either abstained or voted against us.
+650	I thought you'd forgotten I was here.
+651	So I have to stand up for myself.
+652	I don't think we're a declining nation.
+653	Then the question is, can we govern?
+654	In 1974, we had the worst recession, the deepest and most penetrating recession since the Second World War.
+655	In addition, we've brought down inflation.
+656	And Business Week, which is not a Democratic publication, said that this Reagan-Kemp-Roth proposal - and I quote them, I think - was completely irresponsible and would result in inflationary pressures which would destroy this nation.
+657	We've had a 25% reduction since the first year I was in office.
+658	It had been cut in two by President Gerald Ford.
+659	It is now running at 12.7%.
+660	Mr. Carter had also promised that he would not use unemployment as a tool to fight against inflation.
+661	We don't have inflation because the people are living too well.
+662	I'll have to get this out very fast.
+663	He more than doubled state spending while he was Governor - 122% increase - and had between a 20% and 30% increase in the number of employees
+664	I have brought into the top level, top levels of government, into the White House, into administrative offices of the Executive branch, into the judicial system, highly qualified black and Spanish citizens and women who in the past had been excluded.
+665	That's been a consistent policy, one I intend to carry out.
+666	I have no quarrel whatsoever with the things that have been done, because I believe it is high time that the civilized countries of the world made it plain that there is no room worldwide for terrorism; there will be no negotiation with terrorists of any kind.
+667	Now, I have not blocked the SALT II treaty, as Mr. Carter and Mr. Mondale suggest I have.
+668	Every President who has served in the Oval Office since Harry Truman has been dedicated to the proposition of controlling nuclear weapons.
+669	To negotiate with the Soviet Union a balanced, controlled, observable, and then reducing levels of atomic weaponry, there is a disturbing pattern in the attitude of Governor Reagan.
+670	We've now reduced the importing of foreign oil in the last year alone by one-third.
+671	I just happen to believe that free enterprise can do a better job of producing the things that people need than government can.
+672	Six predecessors of mine who served in the Oval Office called for this guarantee of women's rights.
+673	I thought that was the subject we were supposed to be on.
+674	I've been President now for almost four years.
+675	I've seen the strength of my nation, and I've seen the crises it approached in a tentative way.
+676	I consider myself in the mainstream of my party.
+677	And we must extend the benefits of our own commitment to peace, to create a peaceful world.
+678	Next Tuesday is Election Day.
+679	I know that the economic program that I have proposed for this nation in the next few years can resolve many of the problems that trouble us today.

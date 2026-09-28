@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	We also, though, need to have a tax system that rewards work and not just financial transactions.
+41	And the kind of plan that Donald has put forth would be trickle-down economics all over again.
+42	In fact, it would be the most extreme version, the biggest tax cuts for the top percent of the people in this country than we've ever had.
+43	I call it trumped-up trickle-down, because that's exactly what it would be.
+44	That is not how we grow the economy.
+45	We just have a different view about what's best for growing the economy, how we make investments that will actually produce jobs and rising incomes.
+46	I think we come at it from somewhat different perspectives.
+47	You know, Donald was very fortunate in his life, and that's all to his benefit.
+48	He started his business with $14 million, borrowed from his father, and he really believes that the more you help wealthy people, the better off we'll be and that everything will work out from there.
+49	I have a different experience.
+50	My father was a small-businessman.
+51	Well, for one thing -- and before we start on that -- my father gave me a very small loan in 1975, and I built it into a company that's worth many, many billions of dollars, with some of the greatest assets in the world, and I say that only because that's the kind of thinking that our country needs.
+52	Our country's in deep trouble.
+53	We don't know what we're doing when it comes to devaluations and all of these countries all over the world, especially China.
+54	They're the best, the best ever at it.
+55	What they're doing to us is a very, very sad thing.
+56	So we have to do that.
+57	We have to renegotiate our trade deals.
+58	Let me give you the example of Mexico.
+59	They have a VAT tax.
+60	We're on a different system.
+61	When we sell into Mexico, there's a tax.
+62	When they sell in -- automatic, 16 percent, approximately.
+63	When they sell into us, there's no tax.
+64	It's been defective for a long time, many years, but the politicians haven't done anything about it.
+65	I want you to be very happy.
+66	It's very important to me.
+67	But in all fairness to Secretary Clinton, when she started talking about this, it was really very recently.
+68	She's been doing this for 30 years.
+69	And why hasn't she made the agreements better?
+70	The NAFTA agreement is defective.
+71	Just because of the tax and many other reasons, but just because of the fact...
+72	Secretary Clinton and others, politicians, should have been doing this for years, not right now, because of the fact that we've created a movement.
+73	They should have been doing this for years.
+74	What's happened to our jobs and our country and our economy generally is -- look, we owe $20 trillion.
+75	We cannot do it any longer, Lester.
+76	How do you bring back -- specifically bring back jobs, American manufacturers?
+77	Well, the first thing you do is don't let the jobs leave.
+78	I could name, I mean, there are thousands of them.
+79	They're leaving, and they're leaving in bigger numbers than ever.

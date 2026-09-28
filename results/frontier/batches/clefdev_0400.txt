@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	We have increased oil production to the highest levels in 16 years.
+401	Natural gas production is the highest it's been in decades.
+402	We've also got to look to the future.
+403	We've got potentially 600,000 jobs and 100 years worth of energy right beneath our feet with natural gas.
+404	So where'd the increase come from?
+405	I was in coal country.
+406	I'll get America and North America energy independent.
+407	We're going to bring that pipeline in from Canada.
+408	How much did you cut them by?
+409	I'm happy to answer the question.
+410	Production on government land of oil is down 14 percent.
+411	And production on gas --
+412	And coal, coal production is not up; coal jobs are not up.
+413	I don't think the American people believe that.
+414	And we need to win that future.
+415	And I intend to win it as President of the United States.
+416	Why am I lowering taxes on the middle-class?
+417	And I will not, under any circumstances increase taxes on the middle-class.
+418	A recent study has shown the people in the middle-class will see $4,000.00 per year in higher taxes as a result of the spending and borrowing of this administration.
+419	Actually it was a town hall, and I said I would cut taxes for middle- class families, and that's what I've done, by $3,600.00.
+420	It will be good for our economy and it will be good for job creation.
+421	I think that grows the economy.
+422	I think what grows the economy is when we make sure small businesses are getting a tax credit for hiring veterans who fought for our country.
+423	The top 5 percent will continue to pay 60 percent, as they do today.
+424	We don't have to live like this.
+425	Along with what he also wants to do in terms of eliminating the estate tax, along what he wants to do in terms of corporates, changes in the tax code, it costs about $5 trillion.
+426	Well, Katherine, that's a great question.
+427	And, you know, I was raised by a single mom who had to put herself through school while looking after two kids.
+428	I was proud of the fact that after I staffed my Cabinet and my senior staff, that the University of New York in Albany did a survey of all 50 states, and concluded that mine had more women in senior leadership positions than any other state in America.
+429	She said, I can't be here until 7 or 8 o'clock at night.
+430	Let's have a flexible schedule so you can have hours that work for you.
+431	In the -- in the last women have lost 580,000 jobs.
+432	I mentioned 31/2 million women, more now in poverty than four years ago.
+433	An economy that has 23 million people looking for work is not a strong economy.
+434	Governor Romney not only opposed it, he suggested that in fact employers should be able to make the decision as to whether or not a woman gets contraception through her insurance coverage.
+435	And I've got two daughters and I want to make sure that they have the same opportunities that anybody's sons have.
+436	And I appreciate that question.
+437	The time -- the time...
+438	Let me come back and -- and answer your question.
+439	President Bush and I are -- are different people and these are different times and that's why my five point plan is so different than what he would have done.

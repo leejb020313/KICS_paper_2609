@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	It was personal e-mails, not official.
+841	Not -- well, we turned over 35,000, so...
+842	Yes, that's true, I didn't.
+843	Because you have nothing to say.
+844	I didn't in the first debate, and I'm going to try not to in this debate, because I'd like to get to the questions that the people have brought here tonight to talk to us about.
+845	I know you're into big diversion tonight, anything to avoid talking about your campaign and the way it's exploding and the way Republicans are leaving you.
+846	But let's at least focus...
+847	... on some of the issues that people care about tonight.
+848	Let's get to their questions.
+849	I'd like to know, Anderson, why aren't you bringing up the e-mails?
+850	It's nice to -- one on three.
+851	If he wants to start, he can start.
+852	No, I'm a gentlemen, Hillary.
+853	And I'm going to fix it, because I agree with you.
+854	Premiums have gotten too high.
+855	Copays, deductibles, prescription drug costs, and I've laid out a series of actions that we can take to try to get those costs down.
+856	But that in and of itself was a good thing.
+857	I meet these people all the time, and they tell me what a difference having that insurance meant to them and their families.
+858	But everybody else, the 170 million of us who get health insurance through our employees got big benefits.
+859	Number two, no lifetime limits, which is a big deal if you have serious health problems.
+860	Number four, if you're under 26, and your parents have a policy, you can be on that policy until the age of 26, something that didn't happen before.
+861	So I want very much to save what works and is good about the Affordable Care Act.
+862	We've got to provide additional help to small businesses so that they can afford to provide health insurance.
+863	And then we would have to start all over again.
+864	Right now, we are at 90 percent health insurance coverage.
+865	That's the highest we've ever been in our country.
+866	So I want us to get to 100 percent, but get costs down and keep quality up.
+867	It's going up at numbers that nobody's ever seen worldwide.
+868	Nobody's ever seen numbers like this for health care.
+869	Their method of fixing it is to go back and ask Congress for more money, more and more money.
+870	We have right now almost $20 trillion in debt.
+871	It's very bad, very bad health insurance.
+872	It's going to be one of the biggest line items very shortly.
+873	We have to repeal it and replace it with something absolutely much less expensive and something that works, where your plan can actually be tailored.
+874	We have to get rid of the lines around the state, artificial lines, where we stop insurance companies from coming in and competing, because they want -- and President Obama and whoever was working on it -- they want to leave those lines, because that gives the insurance companies essentially monopolies.
+875	You will have the finest health care plan there is.
+876	She wants to go to a single-payer plan, which would be a disaster, somewhat similar to Canada.
+877	And if you haven't noticed the Canadians, when they need a big operation, when something happens, they come into the United States in many cases because their system is so slow.
+878	It's catastrophic in certain ways.
+879	Obamacare was the first step.

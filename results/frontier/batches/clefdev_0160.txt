@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	He voted twice for a budget resolution that increases the taxes on individuals making $42,000 a year.
+161	He voted for the last two budgets that had that $24 billion more in spending than the budget that the Bush administration proposed.
+162	So the fact is, let's look at our records, Senator Obama.
+163	We need to move in a new direction.
+164	Let me just say, Bob.
+165	So I think the tone of this campaign could have been very different.
+166	So I want to tell you, we will run a truthful campaign.
+167	This is a tough campaign.
+168	And when you looked into the camera in a debate with Senator Clinton and said, "I will sit down and negotiate with John McCain about public financing before I make a decision," you didn't tell the American people the truth because you didn't.
+169	And that's -- that's -- that's an unfortunate part.
+170	Now we have the highest spending by Senator Obama's campaign than any time since Watergate.
+171	Well, look, you know, I think that we expect presidential campaigns to be tough.
+172	I think that, if you look at the record and the impressions of the American people -- Bob, your network just did a poll, showing that two-thirds of the American people think that Senator McCain is running a negative campaign versus one-third of mine.
+173	And, now, I think the American people are less interested in our hurt feelings during the course of the campaign than addressing the issues that matter to them so deeply.
+174	You've got to read what he said...
+175	The important point here is, though, the American people have become so cynical about our politics, because all they see is a tit- for-tat and back-and-forth.
+176	We do and I hope...
+177	But when people suggest that I pal around with terrorists, then we're not talking about issues.
+178	I mean, we can have a debate back and forth about the merits of each other's campaigns.
+179	Mr. Ayers, I don't care about an old washed-up terrorist.
+180	The same front outfit organization that your campaign gave $832,000 for "lighting and site selection."
+181	So all of these things need to be examined, of course.
+182	Bill Ayers is a professor of education in Chicago.
+183	Let me tell you who I associate with.
+184	And the facts are facts and records are records.
+185	Well, Joe Biden, I think, is one of the finest public servants that has served in this country.
+186	Her husband's a pretty tough guy, by the way, too.
+187	I agree with that, John.
+188	I do want to just point out that autism, for example, or other special needs will require some additional funding, if we're going to get serious in terms of research.
+189	I think that Joe Biden is qualified in many respects.
+190	But I do point out that he's been wrong on many foreign policy and national security issues, which is supposed to be his strength.
+191	He voted against the first Gulf War.
+192	Senator Obama will tell you, in the -- as the extreme environmentalists do, it has to be safe.
+193	Look, we've sailed Navy ships around the world for 60 years with nuclear power plants on them.
+194	But understand, we only have three to four percent of the world's oil reserves and we use 25 percent of the world's oil, which means that we can't drill our way out of the problem.
+195	We invented the auto industry and the fact that we have fallen so far behind is something that we have to work on.
+196	But I also believe that for far too long, certainly during the course of the Bush administration with the support of Senator McCain, the attitude has been that any trade agreement is a good trade agreement.
+197	And when it comes to South Korea, we've got a trade agreement up right now, they are sending hundreds of thousands of South Korean cars into the United States.
+198	We can only get 4,000 to 5,000 into South Korea.
+199	We've got to have a president who is going to be advocating on behalf of American businesses and American workers and I make no apology for that.

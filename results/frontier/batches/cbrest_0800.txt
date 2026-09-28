@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	(APPLAUSE) And, look, if this were just about one video, maybe what he's saying tonight would be understandable, but everyone can draw their own conclusions at this point about whether or not the man in the video or the man on the stage respects women.
+801	He never apologized to Mr. and Mrs. Khan, the Gold Star family whose son, Captain Khan, died in the line of duty in Iraq.
+802	And Donald insulted and attacked them for weeks over their religion.
+803	He never apologized to the distinguished federal judge who was born in Indiana, but Donald said he couldn't be trusted to be a judge because his parents were, quote, "Mexican."
+804	And he never apologized for the racist lie that President Obama was not born in the United States of America.
+805	Well, you owe the president an apology, because as you know very well, your campaign, Sidney Blumenthal -- he's another real winner that you have -- and he's the one that got this started, along with your campaign manager, and they were on television just two weeks ago, she was, saying exactly that.
+806	That was long before I was ever involved, so you actually owe an apology.
+807	I've gotten to see the commercials that they did on you.
+808	And I've gotten to see some of the most vicious commercials I've ever seen of Michelle Obama talking about you, Hillary.
+809	So, you talk about friend?
+810	Go back and take a look at those commercials, a race where you lost fair and square, unlike the Bernie Sanders race, where you won, but not fair and square, in my opinion.
+811	And all you have to do is take a look at WikiLeaks and just see what they say about Bernie Sanders and see what Deborah Wasserman Schultz had in mind, because Bernie Sanders, between super-delegates and Deborah Wasserman Schultz, he never had a chance.
+812	And I was so surprised to see him sign on with the devil.
+813	But when you talk about apology, I think the one that you should really be apologizing for and the thing that you should be apologizing for are the 33,000 e-mails that you deleted, and that you acid washed, and then the two boxes of e-mails and other things last week that were taken from an office and are now missing.
+814	And I'll tell you what.
+815	I didn't think I'd say this, but I'm going to say it, and I hate to say it.
+816	But if I win, I am going to instruct my attorney general to get a special prosecutor to look into your situation, because there has never been so many lies, so much deception.
+817	There has never been anything like it, and we're going to have a special prosecutor.
+818	There has never been anything like this, where e-mails -- and you get a subpoena, you get a subpoena, and after getting the subpoena, you delete 33,000 e-mails, and then you acid wash them or bleach them, as you would say, very expensive process.
+819	So we're going to get a special prosecutor, and we're going to look into it, because you know what?
+820	And honestly, you ought to be ashamed of yourself.
+821	... because everything he just said is absolutely false, but I'm not surprised.
+822	I told people that it would be impossible to be fact-checking Donald all the time.
+823	I'd never get to talk about anything I want to do and how we're going to really make lives better for people.
+824	So, once again, go to HillaryClinton.com.
+825	Because you'd be in jail.
+826	Well, Martha, first, let me say -- and I've said before, but I'll repeat it, because I want everyone to hear it -- that was a mistake, and I take responsibility for using a personal e-mail account.
+827	And yet she didn't know the word -- the letter C on a document.
+828	And she's going after fact after fact, and she's lying again, because she said she -- you know, what she did with the e-mail was fine.
+829	You think it was fine to delete 33,000 e-mails?
+830	33,000 e-mails deleted, and now she's saying there wasn't anything wrong.
+831	And more importantly, that was after getting a subpoena.
+832	She got it from the United States Congress.
+833	And I'll be honest, I am so disappointed in congressmen, including Republicans, for allowing this to happen.
+834	Our Justice Department, where our husband goes on to the back of a airplane for 39 minutes, talks to the attorney general days before a ruling is going to be made on her case.
+835	But for you to say that there was nothing wrong with you deleting 39,000 e-mails, again, you should be ashamed of yourself.
+836	If you did that in the private sector, you'd be put in jail, let alone after getting a subpoena from the United States Congress.
+837	Look, it's just not true.
+838	And so please, go to...
+839	Oh, you didn't delete them?

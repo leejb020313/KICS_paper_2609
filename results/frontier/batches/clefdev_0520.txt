@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	We do need to look at our records.
+521	That's what I'm going to do as president of the United States.
+522	Well, Fiora (ph), I'm going to ask the American people to understand that there are some programs that we may have to eliminate.
+523	I believe that we have to eliminate the earmarks.
+524	And, by the way, I want to go back a second.
+525	Look, we can attack health care and energy at the same time.
+526	We can, with the participation of all Americans, work together and solve these problems together.
+527	That wasn't the kind of call to service that I think the American people were looking for.
+528	We're going to have to develop clean coal technology and safe ways to store nuclear energy.
+529	But each and every one of us can start thinking about how can we save energy in our homes, in our buildings.
+530	Now, when Senator McCain is proposing tax cuts that would give the average Fortune 500 CEO an additional $700,000 in tax cuts, that's not sharing a burden.
+531	Well, you know, nailing down Senator Obama's various tax proposals is like nailing Jell-O to the wall.
+532	I've got some news, Senator Obama, the news is bad.
+533	So let's be clear about my tax plan and Senator McCain's, because we're not going to be able to deal with entitlements unless we understand the revenues coming in.
+534	Only a few percent of small businesses make more than $250,000 a year.
+535	Now, in contrast, Senator McCain wants to give a $300 billion tax cut, $200 billion of it to the largest corporations and a hundred thousand of it -- a hundred billion of it going to people like CEOs on Wall Street.
+536	I want to get to Medicare in a second.
+537	Senator Obama has never taken on his party leaders on a single major issue.
+538	When he ran for the United States Senate from Illinois, he said he would have a middle-income tax cut.
+539	And our best days are ahead of us.
+540	Now, how -- what's -- what's the best way of fixing it?
+541	Nuclear power is safe, and it's clean, and it creates hundreds of thousands of jobs.
+542	And we can do it, but we're going to have to make an investment.
+543	And during that time, he voted 23 times against alternative fuels, 23 times.
+544	We've got to make sure that we're giving them the energy that they need or helping them to create the energy that they need.
+545	I'm just trying to keep up with John.
+546	I think pure research and development investment on the part of the United States government is certainly appropriate.
+547	By the way, my friends, I know you grow a little weary with this back-and-forth.
+548	If you've got health insurance, most of you have seen your premiums double over the last eight years.
+549	Well, thank you for the question.
+550	And we need to do all of the things that are necessary to make it more efficient.
+551	Let's do a lot of things to impose efficiencies.
+552	I want to give every American a $5,000 refundable tax credit.
+553	Don't we go across state lines when we purchase other things in America?
+554	But the point is that we have got to give people choice in America and not mandate things on them and give them the ability.
+555	We've got to give them the wherewithal to do it.
+556	So let me -- let me just talk about this fundamental difference.
+557	All I'm going to do is help you to lower the premiums on it.
+558	Well, I thank you for that question, because there's no doubt that history shows us that nations that are strong militarily over time have to have a strong economy, as well.
+559	And that is one of the challenges that America faces.
