@@ -1,7 +1,12 @@
 
 ===== clef: test n=1691, frontier-scored calib n=2405, seeds=5
   calib OOF curve: {'sonnet_thr_oof': 0.845, 'svm_oof': 0.792, 'fuse_0': 0.792, 'fuse_0.05': 0.803, 'fuse_0.1': 0.812, 'fuse_0.2': 0.823, 'fuse_0.3': 0.831, 'fuse_0.4': 0.837, 'fuse_0.5': 0.839, 'fuse_0.6': 0.839, 'fuse_0.7': 0.839, 'fuse_0.8': 0.839, 'fuse_0.9': 0.839, 'fuse_1.0': 0.839}
-  NN-PPI k selected on calib: k=None (tune acc None); rho selected per seed: [0.4, 1.0, 1.0, 1.0, 1.0]
+  NN-PPI k selected on calib: k=10 (tune acc {3: 0.7465373961218836, 5: 0.7631578947368421, 10: 0.7853185595567868}); rho selected per seed: [0.4, 1.0, 1.0, 1.0, 1.0]
+  gemma_raw          acc=0.778¡¾0.000  wF1=0.790  F1c1=0.655
+  gemma_nnppi_k3     acc=0.808¡¾0.000  wF1=0.817  F1c1=0.686
+  gemma_nnppi_k5     acc=0.827¡¾0.000  wF1=0.835  F1c1=0.715
+  gemma_nnppi_k10    acc=0.834¡¾0.000  wF1=0.841  F1c1=0.726
+  gemma_nnppi_sel    acc=0.834¡¾0.000  wF1=0.841  F1c1=0.726
   svm                acc=0.859¡¾0.003  wF1=0.863  F1c1=0.755
   sonnet_raw         acc=0.896¡¾0.000  wF1=0.887  F1c1=0.750
   sonnet_thr         acc=0.915¡¾0.000  wF1=0.918  F1c1=0.851
@@ -44,6 +49,8 @@
   fuse_0.5_vs_sonnet_nnppi         diff=+0.022 CI[+0.009,+0.034] McNemar p=0.0006
   fuse_sel_vs_sonnet_thr           diff=+0.004 CI[-0.007,+0.015] McNemar p=0.5203
   nnppi_0.5_vs_sonnet_nnppi        diff=-0.001 CI[-0.005,+0.004] McNemar p=1.0000
+  svm_vs_gemma_nnppi_sel           diff=+0.025 CI[+0.006,+0.045] McNemar p=0.0130
+  svm_vs_best_gemma_nnppi          diff=+0.025 CI[+0.006,+0.045] McNemar p=0.0130
   -- part clef: n=318 (pos 108)  svm=0.851  sonnet_thr=0.877  sonnet_nnppi=0.874  replace_0.5=0.889  nnppi_0.5=0.879  fuse_0.5=0.900  fuse_1.0=0.900
      fuse_0.5_vs_sonnet_thr       diff=+0.028 CI[-0.003,+0.060] McNemar p=0.1221
      fuse_0.5_vs_sonnet_nnppi     diff=+0.035 CI[+0.000,+0.069] McNemar p=0.0708
