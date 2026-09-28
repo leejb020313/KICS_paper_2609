@@ -6,7 +6,7 @@ needs the batch in advance. A deployable router decides per sentence: fix a thre
 for a test sentence iff |d(x)| < tau. The realised test call rate no longer equals rho exactly,
 so it is reported alongside accuracy. Uses the same 5 calib subsamples as final_eval.py.
 
-Writes results/streaming_results.json.
+Writes results/streaming_results.json (with --full: the full held-out sets, results/streaming_results_full.json).
 """
 import json
 import os
@@ -31,8 +31,8 @@ def mcnemar(y, a, b):
     return float(binomtest(n01, n01 + n10).pvalue) if n01 + n10 else 1.0
 
 
-def evaluate(name):
-    test, calib, _ = load_frontier(name)
+def evaluate(name, full=False):
+    test, calib, _ = load_frontier(name, full)
     y = test.y
     acc = {f'{v}_{b}': [] for v in ('batch_global', 'stream_global') for b in BUDGETS}
     rate = {b: [] for b in BUDGETS}
@@ -78,6 +78,7 @@ def evaluate(name):
 
 
 if __name__ == '__main__':
-    results = {name: evaluate(name) for name in DATASETS}
-    with open(os.path.join(RESULTS, 'streaming_results.json'), 'w') as f:
+    full = '--full' in sys.argv
+    results = {name: evaluate(name, full) for name in DATASETS}
+    with open(os.path.join(RESULTS, 'streaming_results_full.json' if full else 'streaming_results.json'), 'w') as f:
         json.dump(results, f, indent=1)
