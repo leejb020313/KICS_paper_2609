@@ -157,6 +157,9 @@ def evaluate(name, full=False):
     contrasts['fuse_0.5_vs_sonnet_nnppi'] = compare(y, first['fuse_0.5'], first['sonnet_nnppi'])
     contrasts['fuse_sel_vs_sonnet_thr'] = compare(y, first['fuse_sel'], first['sonnet_thr'])
     contrasts['nnppi_0.5_vs_sonnet_nnppi'] = compare(y, first['nnppi_0.5'], first['sonnet_nnppi'])
+    for b in (.3, .5):
+        contrasts[f'fuse_{b}_vs_sonnet_raw'] = compare(y, first[f'fuse_{b}'], first['sonnet_raw'])
+        contrasts[f'fuse_{b}_vs_sonnet_nnppi'] = compare(y, first[f'fuse_{b}'], first['sonnet_nnppi'])
     if 'gemma_raw' in preds:
         contrasts['svm_vs_gemma_nnppi_sel'] = compare(y, first['svm'], first['gemma_nnppi_sel'])
         best_nnppi = max((first[f'gemma_nnppi_k{k}'] for k in NNPPI_KS), key=lambda p: np.mean(p == y))
