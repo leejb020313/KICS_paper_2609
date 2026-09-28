@@ -154,10 +154,10 @@ body(doc, (
     "모든 문장에 호출하면 비용과 지연이 크다. 선행 연구 NN-PPI는 소형 LLM 점수를 이웃 문장의 잔차로 보정하였다. "
     "본 논문은 CLEF 2024와 ClaimBuster에서 NN-PPI를 재현하고, 같은 라벨과 문장 "
     "임베딩으로 분류기를 직접 학습하면 LLM 없이도 NN-PPI와 같거나 높은 정확도를 얻음을 보인다. 이어 저비용 분류기가 모든 "
-    "문장을 판정하고 불확실한 문장만 LLM에 질의하되, LLM의 판정으로 교체하지 않고 두 점수를 결합하는 결합형 "
+    "문장을 판정하고 불확실한 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 점수를 결합하는 결합형 "
     "캐스케이드를 제안한다. 보정 세트에서 정확도가 포화되는 호출률 50%에서 테스트 정확도는 "
     f"CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {ro(f3(acc(cb,'fuse_0.5')))}, LLM 전량 호출 중 더 높은 설정"
-    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})과 유의한 차이가 없었고 NN-PPI를 적용한 전량 호출"
+    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})과 유의한 차이가 없었고 NN-PPI 적용 전량 호출"
     f"({f3(acc(cl,'sonnet_nnppi'))}, {f3(acc(cb,'sonnet_nnppi'))})보다 유의하게 높았다. 결합형은 모든 호출률에서 "
     "교체형 캐스케이드보다 평균 정확도가 높아, 라벨에 담긴 판정 기준과 LLM의 일반 지식이 상호 보완적임을 시사한다."
 ), size=9, indent=0.5)
@@ -192,8 +192,8 @@ body(doc, (
     "6 ms이다."
 ))
 body(doc, (
-    "결합형 캐스케이드는 |d(x)|가 작은 순서, 즉 분류기가 가장 불확실한 문장부터 전체의 ρ 비율만큼 LLM에 질의하여 "
-    "점수 s(x)∈[0,1]을 얻는다. 질의한 문장은 식 (1)로, 나머지는 d(x)>0 여부로 판정한다."
+    "결합형 캐스케이드(이하 결합형)는 |d(x)|가 작은 순서, 즉 분류기가 가장 불확실한 문장부터 전체의 ρ 비율만큼 LLM을 호출하여 "
+    "점수 s(x)∈[0,1]을 얻는다. 호출한 문장은 식 (1)로, 나머지는 d(x)>0 여부로 판정한다."
 ))
 eq = doc.add_paragraph()
 eq.paragraph_format.space_before = Pt(2)
@@ -208,7 +208,7 @@ p = body(doc, "(a, b, c)는 L에서 5겹 교차적합으로 얻은 d와 LLM 점�
              "σ는 시그모이드 함수, ")
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
-    "은 조건이 참이면 1인 지시함수이다. 비교 대상인 교체형 캐스케이드는 같은 문장을 선택하되, LLM 점수에 L에서 "
+    "은 조건이 참이면 1인 지시함수이다. 비교 대상인 교체형 캐스케이드(이하 교체형)는 같은 문장을 선택하되, LLM 점수에 L에서 "
     "고른 임계값만 적용하여 판정한다."), BODY_FONT, 9)
 
 # ---------------- III. 실험 ----------------
@@ -229,7 +229,7 @@ body(doc, (
 rows = [
     ("Gemma 3 4B + NN-PPI [1]", "0%", acc(cl, "gemma_nnppi_sel"), acc(cb, "gemma_nnppi_sel")),
     ("임베딩 SVM", "0%", acc(cl, "svm"), acc(cb, "svm")),
-    ("Sonnet 5 전량 호출", "100%", acc(cl, "sonnet_raw"), acc(cb, "sonnet_raw")),
+    ("LLM 전량 호출", "100%", acc(cl, "sonnet_raw"), acc(cb, "sonnet_raw")),
     ("  + 임계값 조정", "100%", acc(cl, "sonnet_thr"), acc(cb, "sonnet_thr")),
     ("  + NN-PPI [1]", "100%", acc(cl, "sonnet_nnppi"), acc(cb, "sonnet_nnppi")),
     ("교체형 캐스케이드", "50%", acc(cl, "replace_0.5"), acc(cb, "replace_0.5")),
@@ -239,7 +239,7 @@ cap = doc.add_paragraph()
 cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
 cap.paragraph_format.space_before = Pt(4)
 cap.paragraph_format.space_after = Pt(2)
-set_font(cap.add_run("표 1. 방법별 테스트 정확도 (5회 평균, 호출률 = LLM에 질의한 문장 비율)"), BODY_FONT, 8.5, bold=True)
+set_font(cap.add_run("표 1. 방법별 테스트 정확도 (5회 평균, 호출률 = LLM을 호출한 문장 비율)"), BODY_FONT, 8.5, bold=True)
 t = doc.add_table(rows=1 + len(rows), cols=4)
 t.style = "Table Grid"
 t.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -267,7 +267,7 @@ body(doc, (
     f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
     f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f})에 그쳤고, 라벨로 임계값을 조정하자 각각 "
     f"{R[cl]['metrics']['sonnet_thr']['rec1'][0]:.2f}, {ro(f"{R[cb]['metrics']['sonnet_thr']['rec1'][0]:.2f}")} 개선되었다. 이는 LLM의 판정 기준과 데이터셋 라벨 사이에 "
-    "차이가 있음을 시사한다. 한편 ClaimBuster에서는 클래스 균형인 보정 세트와 달리 테스트의 팩트체크 필요 문장이 "
+    "차이가 있음을 시사한다. 한편 ClaimBuster에서는 클래스 균형인 보정 세트와 달리 테스트의 팩트체크가 필요한 문장이 "
     f"{100*sum(v['n_pos'] for v in R[cb]['by_part'].values())/R[cb]['n_test']:.0f}%여서, 임계값 조정 후 정확도는 오히려 {pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다."
 ), after=3)
 
@@ -298,12 +298,12 @@ body(doc, (
     f"{pp(cl,'fuse_1.0','fuse_0.5')}%p, {pp(cb,'fuse_1.0','fuse_0.5')}%p 더 올랐고, ClaimBuster에서는 이 차이가 "
     f"유의하였다({pfmt(pval(cb,'fuse_0.5_vs_fuse_1.0_seed0'))}). 테스트 문장을 모으지 않고 보정 세트의 |d| 임계값으로 문장마다 라우팅해도 "
     f"정확도는 {IMP['clef']['acc']['stream_global_0.5'][0]:.3f}, {IMP['cb']['acc']['stream_global_0.5'][0]:.3f}"
-    f"(실제 호출 {100*IMP['clef']['test_call_rate']['0.5'][0]:.0f}%, {100*IMP['cb']['test_call_rate']['0.5'][0]:.0f}%)였다. 교체형은 호출률이 높아질수록 분류기가 확신하는 문장까지 바꾸어, "
+    f"(실제 호출 {100*IMP['clef']['test_call_rate']['0.5'][0]:.0f}%, {100*IMP['cb']['test_call_rate']['0.5'][0]:.0f}%)였다. 교체형은 호출률이 높아질수록 임베딩 SVM이 확신하는 문장까지 바꾸어, "
     "확신도 상위 절반에서 옳은 판정 "
     f"{FL['replace']['broke']}건을 틀리게, 틀린 판정 {FL['replace']['fixed']}건을 옳게 바꾸었으나 결합형은 각각 "
     f"{FL['fuse']['broke']}건, {FL['fuse']['fixed']}건이었다(ClaimBuster 1회차). 이는 교체가 옳은 답을 해칠 수 있다는 "
     "보고[7]와 일치한다. 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았고(ClaimBuster 30~50%, "
-    f"CLEF 20~30%에서 유의, {p_upper_multi([(cb, f'fuse_{b}_vs_replace_{b}') for b in (0.3,0.4,0.5)] + [(cl, f'fuse_{b}_vs_replace_{b}') for b in (0.2,0.3)])}), 같은 문장을 질의하고 NN-PPI로 판정하는 "
+    f"CLEF 20~30%에서 유의, {p_upper_multi([(cb, f'fuse_{b}_vs_replace_{b}') for b in (0.3,0.4,0.5)] + [(cl, f'fuse_{b}_vs_replace_{b}') for b in (0.2,0.3)])}), 같은 문장에 LLM을 호출하고 NN-PPI로 판정하는 "
     f"캐스케이드({f3(acc(cl,'nnppi_0.5'))}, {f3(acc(cb,'nnppi_0.5'))})보다도 유의하게 높아"
     f"({pfmt(max(pval(d,'fuse_0.5_vs_nnppi_0.5') for d in (cl,cb)))}) 차이는 판정 방식에서 온다."
 ))
@@ -352,8 +352,28 @@ def no_autospace(paragraph):
             anchor.addprevious(el)
 
 
+def no_break_hyphens(paragraph):
+    """Replace '-' in text runs by Word's non-breaking hyphen so NN-PPI, RBF-SVM, dev-test never split across lines."""
+    for t in list(paragraph._p.iter(qn("w:t"))):
+        if "-" not in (t.text or ""):
+            continue
+        parts, parent, anchor = t.text.split("-"), t.getparent(), t
+        t.text = parts[0]
+        t.set(qn("xml:space"), "preserve")
+        for part in parts[1:]:
+            hyph = OxmlElement("w:noBreakHyphen")
+            anchor.addnext(hyph)
+            nt = OxmlElement("w:t")
+            nt.set(qn("xml:space"), "preserve")
+            nt.text = part
+            hyph.addnext(nt)
+            anchor = nt
+
+
 for para in doc.paragraphs + [q for tbl in doc.tables for row in tbl.rows for cell in row.cells for q in cell.paragraphs]:
     no_autospace(para)
+    if not para.text.startswith("["):  # reference entries may break at hyphens
+        no_break_hyphens(para)
 
 out = os.path.join(HERE, "cascade_kics_draft.docx")
 doc.save(out)
