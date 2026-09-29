@@ -26,7 +26,7 @@
 
 - 근거 유형: direct
 
-**1c** (서론 1문단) — 논문: NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 잔차로 보정한다.
+**1c** (Ⅱ. 본론 2.1 선행 연구) — 논문: NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 잔차로 보정한다.
 
 > "For each test claim, we retrieve the k nearest neighbors to form a localized calibration set. The baseline LLM prediction is then adjusted using this set" (p. 5)
 
@@ -116,13 +116,13 @@
 - 공식 저자: Michael Schlee, Christoph Weisser, Timo Kivimäki, Melchizedek Mashiku, Benjamin Saefken
 - 원문 PDF: `pdfs/2512.10793.pdf`
 
-**3a** (서론) — 논문: LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만
+**3a** (Ⅱ. 본론 2.1 선행 연구) — 논문: LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만
 
 > "combines the output of a prompt-engineered LLM with contextual embeddings produced by a fine-tuned RoBERTa encoder through a lightweight Multilayer Perceptron" (p. 1)
 
 - 근거 유형: direct
 
-**3b** (서론) — 논문: 모든 입력에 LLM을 호출한다.
+**3b** (Ⅱ. 본론 2.1 선행 연구) — 논문: 모든 입력에 LLM을 호출한다.
 
 > "LabelFusion combines two complementary components" (p. 2)
 
@@ -206,19 +206,19 @@
 - 공식 저자: Yilin Zhang, Han Jiang, Cai Xu, Ying Liu, Wei Zhao
 - 원문 PDF: `pdfs/2609.11446.pdf`
 
-**8a** (서론) — 논문: 위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].
+**8a** (Ⅱ. 본론 2.1 선행 연구) — 논문: 위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].
 
 > "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary." (p. 1)
 
 - 근거 유형: direct
 
-**8b** (서론 (관계 설정)) — 논문: (CAUC 결과: 호출 약 절반 절감, 강한 모델 단독보다 정확도 향상 — 우리 결과와 같은 방향)
+**8b** (Ⅱ. 본론 2.1 선행 연구) — 논문: (CAUC 결과: 호출 약 절반 절감, 강한 모델 단독보다 정확도 향상 — 우리 결과와 같은 방향)
 
 > "CAUC achieves an average relative accuracy improvement of 1.9% over strong-model-only inference while avoiding approximately 47% of strong-model calls" (p. 1)
 
 - 근거 유형: direct
 
-**8c** (서론 (차별점)) — 논문: 본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.
+**8c** (Ⅱ. 본론 2.1 선행 연구) — 논문: 본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.
 
 > "This sign test is performed once on the calibration set and introduces no learned decision network." (p. 4)
 

@@ -48,7 +48,6 @@ for d in ("clef", "cb"):
     checks += [(f"{d} p svm vs nnppi", pf(pv(d, 'svm_vs_gemma_nnppi_sel'))),
                (f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
                (f"{d} recall sonnet_thr", f"{m(d, 'sonnet_thr', 'rec1'):.2f}"),
-               (f"{d} p fuse50 vs best full", ("CLEF " if d == "clef" else "ClaimBuster ") + pf(pv(d, f'fuse_0.5_vs_{best[d]}'))),
                (f"{d} diff fuse100 - fuse50", ("CLEF " if d == "clef" else "ClaimBuster ") + pp(d, 'fuse_1.0', 'fuse_0.5')),
                (f"{d} stream acc@50", f"{S[d]['acc']['stream_global_0.5'][0]:.3f}"),
                (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
@@ -63,12 +62,13 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("batch vs single AUC", "0.991 대 0.990"),
            ("example text (quoted prefix)", "I'm going to give them $5,000 to take with them …"), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
-           ("example bar", f"기준이 {EX['example']['bar']:.2f}로 올라가"),
-           ("example counts", f"결합형만 옳은 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳은 문장은 "
+           ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
+           ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
                               f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
+checks.append(("p fuse50 vs best full (CLEF, CB)", f"{pf(pv('clef', 'fuse_0.5_vs_' + best['clef']))}, {pf(pv('cb', 'fuse_0.5_vs_' + best['cb']))[2:]}"))
 checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
 # Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher (McNemar p<0.05, seed 0)
 DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
