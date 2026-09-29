@@ -29,7 +29,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 R = json.load(open(os.path.join(ROOT, "results", "final_results_full.json"), encoding="utf-8"))
 R_ORIG = json.load(open(os.path.join(ROOT, "results", "final_results.json"), encoding="utf-8"))
-BODY_FONT = "함초롬바탕"
+BODY_FONT = "HY신명조"  # the KICS template's 한양신명조 (installed as HY신명조, H2MJSM.TTF)
+# layout of the official KICS Word template (paper/template/kics_sample_word.doc, conf.kics.or.kr/2026f):
+# title block 1.5 cm margins; two-column body T/B/L 2 cm, R 1.5 cm, column gap 0.75 cm; body and references 9 pt
 
 
 def acc(ds, name):
@@ -68,11 +70,14 @@ def best_full(ds):
     return max(("sonnet_raw", "sonnet_thr"), key=lambda n: acc(ds, n))
 
 
+LATIN_FONT = "Times New Roman"  # Latin letters and digits; HY신명조's hyphen is drawn as a long dash
+
+
 def set_font(run, name=BODY_FONT, size=9.5, bold=False, italic=False):
     run.font.size = Pt(size)
     run.font.bold = bold
     run.font.italic = italic
-    run.font.name = name
+    run.font.name = LATIN_FONT if name == BODY_FONT else name
     rPr = run._element.get_or_add_rPr()
     rFonts = rPr.find(qn("w:rFonts"))
     if rFonts is None:
@@ -89,10 +94,10 @@ def centered(doc, text, size=10, bold=False, font=BODY_FONT, after=4):
     return p
 
 
-def heading(doc, text, size=10.5):
+def heading(doc, text, size=9):
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(5)
-    p.paragraph_format.space_after = Pt(2)
+    p.paragraph_format.space_before = Pt(6)
+    p.paragraph_format.space_after = Pt(4.75)
     p.paragraph_format.keep_with_next = True  # never leave a heading alone at the bottom of a column
     set_font(p.add_run(text), BODY_FONT, size, bold=True)
 
@@ -102,7 +107,7 @@ def subheading(doc, text):
     p.paragraph_format.space_before = Pt(3)
     p.paragraph_format.space_after = Pt(1.5)
     p.paragraph_format.keep_with_next = True
-    set_font(p.add_run(text), BODY_FONT, 9.5, bold=True)
+    set_font(p.add_run(text), BODY_FONT, 9, bold=True)
 
 
 def figure(doc, png, width_cm, caption):
@@ -118,7 +123,7 @@ def figure(doc, png, width_cm, caption):
     set_font(cap.add_run(caption), BODY_FONT, 8, bold=True)
 
 
-def body(doc, text, size=9, indent=0.35, after=2.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY):
+def body(doc, text, size=9, indent=0.3175, after=2.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY):
     p = doc.add_paragraph()
     p.alignment = align
     pf = p.paragraph_format
@@ -130,8 +135,8 @@ def body(doc, text, size=9, indent=0.35, after=2.5, align=WD_ALIGN_PARAGRAPH.JUS
     return p
 
 
-def add_math(run, name, scale=0.95):
-    """Insert equations/<name>.png at the natural size of its LaTeX PDF (10pt math scaled to the 9.5pt body)."""
+def add_math(run, name, scale=0.9):
+    """Insert equations/<name>.png at the natural size of its LaTeX PDF (10pt math scaled to the 9pt body)."""
     rect = pymupdf.open(os.path.join(HERE, "equations", name + ".pdf"))[0].rect
     run.add_picture(os.path.join(HERE, "equations", name + ".png"), width=Pt(rect.width * scale))
     # w:position is in half-points: drop the image by the depth below the LaTeX baseline (~1/4 of its height)
@@ -146,29 +151,28 @@ def columns(doc, num):
         cols = OxmlElement("w:cols")
         sectPr.append(cols)
     cols.set(qn("w:num"), str(num))
-    cols.set(qn("w:space"), str(int(0.6 * 567)))
+    cols.set(qn("w:space"), str(int(0.75 * 567)))
 
 
 doc = Document()
 for s in doc.sections:
     s.page_width, s.page_height = Cm(21.0), Cm(29.7)
-    s.top_margin, s.bottom_margin = Cm(2.2), Cm(2.0)
-    s.left_margin = s.right_margin = Cm(1.8)
+    s.top_margin = s.bottom_margin = s.left_margin = s.right_margin = Cm(1.5)
 
 # ---------------- title block ----------------
-centered(doc, "저비용 분류기와 대형 언어 모델의 선택적 결합을 통한", 15, True, after=0)
-centered(doc, "팩트체크 필요성 탐지", 15, True, after=8)
-centered(doc, "이정빈", 11, after=1)
-centered(doc, "(소속 입력 필요)", 10, after=1)
-centered(doc, "leejb020313@gmail.com", 9.5, after=8)
+centered(doc, "저비용 분류기와 대형 언어 모델의 선택적 결합을 통한", 13, True, after=0)
+centered(doc, "팩트체크 필요성 탐지", 13, True, after=0)
+centered(doc, "이정빈", 11, after=0).paragraph_format.space_before = Pt(7.6)
+centered(doc, "(소속 입력 필요)", 11, after=0)
+centered(doc, "leejb020313@gmail.com", 11, after=7.6)
 centered(doc, "Cost-Efficient Check-Worthy Claim Detection via Selective Fusion\nof a Low-Cost Classifier and a Large Language Model",
-         12.5, True, font="Times New Roman", after=5)
-centered(doc, "Jeongbin Lee", 11, font="Times New Roman", after=1)
-centered(doc, "(Affiliation)", 10, font="Times New Roman", after=8)
+         13, True, after=0)
+centered(doc, "Jeongbin Lee", 11, after=0).paragraph_format.space_before = Pt(14.2)
+centered(doc, "(Affiliation)", 11, after=14.2)
 
 cb, cl = "cb", "clef"
 FL = R["cb"]["flips_confident_half_seed0"]
-centered(doc, "요 약", 10.5, True, after=3)
+centered(doc, "요 약", 11, False, after=3)
 body(doc, (
     "팩트체크 필요성 탐지(check-worthiness detection)는 유입되는 모든 문장에 적용되므로, 대형 언어 모델(LLM)을 "
     "모든 문장에 호출하면 비용과 지연이 크다. 본 논문은 소형 LLM 점수를 이웃 문장의 잔차로 보정하는 선행 연구 NN-PPI를 "
@@ -183,6 +187,9 @@ body(doc, (
 ), size=9, indent=0.5)
 
 doc.add_section(0)
+_body = doc.sections[-1]
+_body.top_margin = _body.bottom_margin = _body.left_margin = Cm(2.0)
+_body.right_margin = Cm(1.5)
 columns(doc, 2)
 
 # ---------------- I. 서론 ----------------
@@ -223,7 +230,7 @@ figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 
 eq = doc.add_paragraph()
 eq.paragraph_format.space_before = Pt(2)
 eq.paragraph_format.space_after = Pt(3)
-col_w = (21.0 - 2 * 1.8 - 0.6) / 2  # one text column (cm)
+col_w = (21.0 - 2.0 - 1.5 - 0.75) / 2  # one text column (cm)
 eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w / 2), WD_TAB_ALIGNMENT.CENTER)
 eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w), WD_TAB_ALIGNMENT.RIGHT)
 eq.add_run("\t")
@@ -292,10 +299,15 @@ for i, (name, rate, a1, a2) in enumerate(rows, start=1):
         c.text = ""
         set_font(c.paragraphs[0].add_run(v), BODY_FONT, 8, bold=bold)
         c.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT if j == 0 else WD_ALIGN_PARAGRAPH.CENTER
-widths = [Cm(3.9), Cm(1.3), Cm(1.3), Cm(1.7)]
+widths = [Cm(4.3), Cm(1.15), Cm(1.2), Cm(1.7)]  # 8.35 cm: one template column
 for row in t.rows:
     for c, w in zip(row.cells, widths):
         c.width = w
+# keep caption and every row of Table 1 on one page/column
+cap.paragraph_format.keep_with_next = True
+for row in t.rows[:-1]:
+    for c in row.cells:
+        c.paragraphs[0].paragraph_format.keep_with_next = True
 
 body(doc, (
     f"표 1에서 임베딩 SVM은 LLM 없이 NN-PPI보다 CLEF에서 유의하게 높았고({pfmt(pval(cl,'svm_vs_gemma_nnppi_sel'))}) "
@@ -341,7 +353,7 @@ body(doc, (
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
 
-heading(doc, "참 고 문 헌", size=9.5)
+heading(doc, "참 고 문 헌")
 refs = [
     "[1] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
     "[2] P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
@@ -353,7 +365,8 @@ refs = [
     "[8] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
 ]
 for r in refs:
-    body(doc, r, size=7, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format.line_spacing = Pt(8.4)
+    ref = body(doc, r, size=9, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format
+    ref.left_indent, ref.first_line_indent = Pt(12.3), Pt(-12.3)  # hanging indent as in the template
 
 # Word inserts a gap between Hangul and Latin/digits by default ("LLM을" rendered as "LLM 을");
 # switch it off everywhere. pPr children must follow the OOXML schema order, so insert before the
