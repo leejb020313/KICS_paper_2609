@@ -21,12 +21,16 @@
     gate/.style={draw=ink, diamond, aspect=1.9, align=center, line width=0.45pt, inner sep=0.6pt},
     flow/.style={-{Stealth[length=1.5mm,width=1.2mm]}, draw=ink, line width=0.45pt},
     lbl/.style={font=\fontsize{6.5}{7.5}\selectfont, text=ink!80, inner sep=1pt},
+    base/.style={box, draw=ink!55, dashed, text=ink!70},
+    baseflow/.style={flow, draw=ink!55, dashed},
   ]
   \node[box]                       (svm)  {Embedding SVM\\[0.3mm]$d(x)$};
   \node[gate, right=of svm]        (gate) {Uncertain?};
   \node[box, right=of gate]        (keep) {SVM label\\[0.3mm]$d(x)>0$};
   \node[llm, below=4.2mm of gate]  (llm)  {LLM score\\[0.3mm]$s(x)$};
   \node[ours] at (llm -| svm)      (fuse) {Fused label (Eq.\,1)\\[0.3mm]$\sigma(ad+bs+c)\geq 0.5$};
+  % the baseline it is compared with, drawn as the road not taken: the replacement cascade drops d
+  \node[base] at (llm -| keep)     (repl) {Replacement\\[0.3mm]$s(x)\geq t$};
 
   \coordinate[left=4.5mm of svm] (in);
   \draw[flow] (in) -- node[lbl, above] {$x$} (svm);
@@ -35,5 +39,6 @@
   \draw[flow] (gate) -- node[lbl, right] {yes} (llm);
   \draw[flow] (llm) -- node[lbl, above] {$s$} (fuse);
   \draw[flow] (svm) -- node[lbl, right] {$d$} (fuse);
+  \draw[baseflow] (llm) -- node[lbl, above] {$s$} (repl);
 \end{tikzpicture}
 \end{document}

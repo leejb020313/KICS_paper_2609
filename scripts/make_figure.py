@@ -33,7 +33,7 @@ def series(m, prefix):
 
 
 # figure text: English in the full-set figure (matches the English method diagram), Korean in the original one
-T = dict(fuse="Fused cascade (ours)", replace="Replacement cascade", thr="All-call LLM (tuned threshold)",
+T = dict(fuse="Fused cascade (ours)", replace="Replacement cascade", thr="All-call LLM (stronger setting)",
          nnppi="All-call LLM + NN-PPI", x="LLM call rate (%)", y="Accuracy", font="Arial") if FULL else     dict(fuse="결합형 캐스케이드 (제안)", replace="교체형 캐스케이드", thr="전량 호출 (임계값 조정)",
          x="LLM 호출률 (%)", y="정확도", font="Malgun Gothic")
 
@@ -52,8 +52,10 @@ def main():
             mu, sd = series(m, prefix)
             ax.fill_between(x, mu - sd, mu + sd, color=PALETTE[color], alpha=0.15, linewidth=0)
             ax.plot(x, mu, marker=marker, markersize=2.6, color=PALETTE[color], linewidth=1.2, label=label, zorder=3)
-        ax.axhline(m["sonnet_thr"]["acc"][0], color=PALETTE["black"], linestyle="--", linewidth=1.0,
-                   label=T["thr"])
+        # the stronger of the two all-call settings on this dataset (tuned threshold on CLEF, raw 0.5 cut-off on
+        # ClaimBuster), i.e. the baseline the text claims parity with; the weaker one would flatter the cascade
+        best = max(("sonnet_raw", "sonnet_thr"), key=lambda n: m[n]["acc"][0]) if FULL else "sonnet_thr"
+        ax.axhline(m[best]["acc"][0], color=PALETTE["black"], linestyle="--", linewidth=1.0, label=T["thr"])
         if FULL:
             ax.axhline(m["sonnet_nnppi"]["acc"][0], color=PALETTE["green"], linestyle="-.", linewidth=1.1,
                        label=T["nnppi"])
@@ -61,6 +63,9 @@ def main():
             ax.axhline(m["gemma_nnppi_sel"]["acc"][0], color=PALETTE["green"], linestyle=":", linewidth=1.2,
                        label="Gemma 3 4B + NN-PPI")
         ax.axvline(50, color=PALETTE["black"], linewidth=0.6, alpha=0.25, zorder=0)
+        # the operating point chosen on the calibration set
+        ax.plot([50], [m["fuse_0.5"]["acc"][0]], marker="o", markersize=6.5, markerfacecolor="none",
+                markeredgecolor=PALETTE["blue"], markeredgewidth=1.1, zorder=4)
         ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter("%.2f"))
         ax.set_xlim(-4, 104)
         ax.set_xticks([0, 50, 100])

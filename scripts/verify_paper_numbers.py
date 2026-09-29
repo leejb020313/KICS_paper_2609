@@ -61,9 +61,9 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("fuse vs replace p bound", pup([("cb", f"fuse_{b}_vs_replace_{b}") for b in (0.3, 0.4, 0.5)] +
                                            [("clef", f"fuse_{b}_vs_replace_{b}") for b in (0.2, 0.3)])),
            ("batch vs single AUC", "0.991 대 0.990"),
-           ("example text", EX["example"]["text"]), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
-           ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"{EX['llm_threshold']:.2f}"),
-           ("example bar", f"{EX['example']['bar']:.2f} 이상"),
+           ("example text (quoted prefix)", "I'm going to give them $5,000 to take with them …"), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
+           ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
+           ("example bar", f"기준이 {EX['example']['bar']:.2f}로 올라가"),
            ("example counts", f"결합형만 옳은 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳은 문장은 "
                               f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p")]
@@ -91,6 +91,7 @@ directional = {
     "svm > nnppi significant on CLEF only": pv("clef", "svm_vs_gemma_nnppi_sel") < 0.05 <= pv("cb", "svm_vs_gemma_nnppi_sel")
                                             and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
+    "quoted pledge text is a prefix of the example": EX["example"]["text"].startswith("I'm going to give them $5,000 to take with them"),
 }
 bad = 0
 for name, s in checks:
