@@ -1,451 +1,451 @@
 {
- "_about": "Evidence dossier for every reference in cascade_kics_draft. Each claim pairs a sentence of the draft with a verbatim quote from the cited source. verify_references.py locates every quote in the cached PDF (pdfs/) and fills in its page; a quote that cannot be found is a failure. 'support' = direct: the quote states the claim; inference: the claim is our reading of the source (explained in 'note').",
- "references": [
-  {
-   "n": 1,
-   "key": "amatya2026nnppi",
-   "bib": "P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
-   "arxiv": "2608.30731",
-   "version_read": "v2",
-   "authors_official": [
-    "Pratuat Amatya",
-    "V Venktesh",
-    "Vinay Setty"
-   ],
-   "published": "2026-08-31",
-   "venue": "arXiv preprint (anonymised ARR code link: likely under ACL Rolling Review)",
-   "pdf": "2608.30731.pdf",
-   "claims": [
+  "_about": "Evidence dossier for every reference in cascade_kics_draft. Each claim pairs a sentence of the draft with a verbatim quote from the cited source. verify_references.py locates every quote in the cached PDF (pdfs/) and fills in its page; a quote that cannot be found is a failure. 'support' = direct: the quote states the claim; inference: the claim is our reading of the source (explained in 'note').",
+  "references": [
     {
-     "id": "1a",
-     "where": "서론 1문단",
-     "paper": "실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1].",
-     "quote": "invoking large LLMs on every incoming claim is prohibitive at production volumes",
-     "support": "direct"
+      "n": 1,
+      "key": "amatya2026nnppi",
+      "bib": "P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
+      "arxiv": "2608.30731",
+      "version_read": "v2",
+      "authors_official": [
+        "Pratuat Amatya",
+        "V Venktesh",
+        "Vinay Setty"
+      ],
+      "published": "2026-08-31",
+      "venue": "arXiv preprint (anonymised ARR code link: likely under ACL Rolling Review)",
+      "pdf": "2608.30731.pdf",
+      "claims": [
+        {
+          "id": "1a",
+          "where": "서론 1문단",
+          "paper": "실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1].",
+          "quote": "invoking large LLMs on every incoming claim is prohibitive at production volumes",
+          "support": "direct"
+        },
+        {
+          "id": "1b",
+          "where": "서론 1문단",
+          "paper": "(운영사) — 저자들이 실제 서비스 운영 맥락에서 쓴 논문이라는 근거",
+          "quote": "This work is motivated by the practical demands of operating a commercial fact-checking service at an early-stage startup.",
+          "support": "direct"
+        },
+        {
+          "id": "1c",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 잔차로 보정한다.",
+          "quote": "For each test claim, we retrieve the k nearest neighbors to form a localized calibration set. The baseline LLM prediction is then adjusted using this set",
+          "support": "direct"
+        },
+        {
+          "id": "1d",
+          "where": "II. 제안 기법",
+          "paper": "NN-PPI가 이웃 검색에 쓰는 문장 임베딩(all-MiniLM-L6-v2)",
+          "quote": "indexed in a ChromaDB vector store using all-MiniLM-L6-v2 sentence embeddings (Reimers and Gurevych, 2019) with cosine similarity",
+          "support": "direct"
+        },
+        {
+          "id": "1e",
+          "where": "III. 실험 (설정)",
+          "paper": "NN-PPI는 원 논문의 Gemma 3 4B 설정으로 재현 — 샘플링 T=1.0, top-k=64, top-p=0.95 (scripts/score_gemma.py 기본값)",
+          "quote": "Gemma 3 4B 1.0 64 0.95",
+          "support": "direct",
+          "note": "Appendix C sampling table (model, temperature, top-k, top-p)."
+        },
+        {
+          "id": "1f",
+          "where": "III. 실험 (재현 수준)",
+          "paper": "원 논문 0.827, 0.760 (Gemma 3 4B + NN-PPI, k=10의 가중 F1; CLEF, ClaimBuster)",
+          "quote": "10 0.568 0.707 0.760",
+          "support": "direct",
+          "note": "Table 2, ClaimBuster block, Gemma 3 4B row k=10: Baseline 0.568, KNN 0.707, NN-PPI 0.760. CLEF block: see 1g."
+        },
+        {
+          "id": "1g",
+          "where": "III. 실험 (재현 수준)",
+          "paper": "원 논문 0.827 (CLEF, Gemma 3 4B + NN-PPI, k=10)",
+          "quote": "10 0.688 0.807 0.827",
+          "support": "direct",
+          "note": "Table 2, CLEF 2024 block, Gemma 3 4B row k=10."
+        },
+        {
+          "id": "1h",
+          "where": "III. 실험 (데이터)",
+          "paper": "ClaimBuster(2012년 토론 보정 1,314문장, 2016년 토론 테스트)",
+          "quote": "We use 2012 election data for calibration and 2016 data for testing.",
+          "support": "direct"
+        },
+        {
+          "id": "1i",
+          "where": "III. 실험 (데이터)",
+          "paper": "NN-PPI 재현 F1은 원 논문과 같은 CLEF dev-test 분할(318문장)에서 측정",
+          "quote": "CLEF 2024 2,406 (of 22,501) 317 107 210",
+          "support": "direct",
+          "note": "NN-PPI's CLEF test = 317 (107 CW / 210 NCW); this is the CLEF dev-test partition (108/210, see 5c), not the official 341-sentence test. Our 318 = the same partition."
+        },
+        {
+          "id": "1j",
+          "where": "표 1 'Sonnet 5 + NN-PPI [1]' 행",
+          "paper": "프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정",
+          "quote": "5 0.855 0.801 0.899",
+          "support": "inference",
+          "note": "Table 2, CLEF block, Claude Opus 4.6 k=5: NN-PPI weighted F1 0.899 (0.925 class-0 F1) - the highest CLEF rows are frontier LLM + NN-PPI. That this is the 'strongest setting' is our reading of Table 2, not the authors' wording."
+        },
+        {
+          "id": "1k",
+          "where": "III. 실험 (프롬프트)",
+          "paper": "NN-PPI의 판정 기준 프롬프트로 채점; few-shot 예시 6개는 원 논문에 공개되지 않아 직접 작성",
+          "quote": "The {{examples}} placeholder is filled with 6 fixed few-shot examples, one per check-worthiness tier",
+          "support": "direct",
+          "note": "Figure 2 caption. The six examples themselves are not printed anywhere in the paper."
+        },
+        {
+          "id": "1l",
+          "where": "III. 실험 (재현)",
+          "paper": "원 논문과 같은 ClaimBuster 2016년 분할 (원 논문 2,740문장, 본 논문 2,745문장)",
+          "quote": "ClaimBuster 1,314 (of 2,487) 2,740 725 2,015",
+          "support": "direct",
+          "note": "NN-PPI Table 1: ClaimBuster test 2,740 (725 CW / 2,015 NCW). Our 2016 set built from the Zenodo release has 2,745 (728 CW); the 5-sentence difference is unexplained (likely de-duplication or parsing)."
+        }
+      ]
     },
     {
-     "id": "1b",
-     "where": "서론 1문단",
-     "paper": "(운영사) — 저자들이 실제 서비스 운영 맥락에서 쓴 논문이라는 근거",
-     "quote": "This work is motivated by the practical demands of operating a commercial fact-checking service at an early-stage startup.",
-     "support": "direct"
+      "n": 2,
+      "key": "amatya2026multilingual",
+      "bib": "P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
+      "arxiv": "2606.08605",
+      "version_read": "v1",
+      "authors_official": [
+        "Pratuat Amatya",
+        "Vinay Setty"
+      ],
+      "published": "2026-06-07",
+      "venue": "arXiv preprint",
+      "pdf": "2606.08605.pdf",
+      "claims": [
+        {
+          "id": "2a",
+          "where": "서론",
+          "paper": "같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나",
+          "quote": "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs",
+          "support": "direct"
+        },
+        {
+          "id": "2b",
+          "where": "서론",
+          "paper": "관용적 표현에서는 LLM이 앞선다고 보고하고",
+          "quote": "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps",
+          "support": "direct",
+          "note": "'관용적 표현' translates 'highly idiomatic English (memes, satire)'."
+        },
+        {
+          "id": "2c",
+          "where": "서론",
+          "paper": "인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].",
+          "quote": "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low",
+          "support": "direct",
+          "note": "Stated in the conclusion as 'Future work will focus on ...'."
+        }
+      ]
     },
     {
-     "id": "1c",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 잔차로 보정한다.",
-     "quote": "For each test claim, we retrieve the k nearest neighbors to form a localized calibration set. The baseline LLM prediction is then adjusted using this set",
-     "support": "direct"
+      "n": 3,
+      "key": "schlee2025labelfusion",
+      "bib": "M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
+      "arxiv": "2512.10793",
+      "version_read": "v2",
+      "authors_official": [
+        "Michael Schlee",
+        "Christoph Weisser",
+        "Timo Kivimäki",
+        "Melchizedek Mashiku",
+        "Benjamin Saefken"
+      ],
+      "published": "2025-12-11",
+      "venue": "arXiv preprint",
+      "pdf": "2512.10793.pdf",
+      "claims": [
+        {
+          "id": "3a",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만",
+          "quote": "combines the output of a prompt-engineered LLM with contextual embeddings produced by a fine-tuned RoBERTa encoder through a lightweight Multilayer Perceptron",
+          "support": "direct"
+        },
+        {
+          "id": "3b",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "모든 입력에 LLM을 호출한다.",
+          "quote": "LabelFusion combines two complementary components",
+          "support": "inference",
+          "note": "The method feeds every input text x to both components and fuses them (Sec. 3); no selective/gated LLM invocation is described anywhere in the paper. 'Calls the LLM for every input' is our reading of the architecture, not a sentence the authors wrote."
+        }
+      ]
     },
     {
-     "id": "1d",
-     "where": "II. 제안 기법",
-     "paper": "NN-PPI가 이웃 검색에 쓰는 문장 임베딩(all-MiniLM-L6-v2)",
-     "quote": "indexed in a ChromaDB vector store using all-MiniLM-L6-v2 sentence embeddings (Reimers and Gurevych, 2019) with cosine similarity",
-     "support": "direct"
+      "n": 4,
+      "key": "burleigh2026cascade",
+      "bib": "T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
+      "arxiv": "2604.19781",
+      "version_read": "v1",
+      "authors_official": [
+        "Tyler Burleigh"
+      ],
+      "published": "2026-03-29",
+      "venue": "arXiv preprint; comment: 'Accepted at NCME 2026'",
+      "pdf": "2604.19781.pdf",
+      "claims": [
+        {
+          "id": "4a",
+          "where": "서론",
+          "paper": "일반적인 캐스케이드[4]는 불확실한 입력을 큰 모델에 넘기되",
+          "quote": "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs",
+          "support": "direct"
+        },
+        {
+          "id": "4b",
+          "where": "서론",
+          "paper": "그 답으로 교체하고",
+          "quote": "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score",
+          "support": "direct"
+        }
+      ]
     },
     {
-     "id": "1e",
-     "where": "III. 실험 (설정)",
-     "paper": "NN-PPI는 원 논문의 Gemma 3 4B 설정으로 재현 — 샘플링 T=1.0, top-k=64, top-p=0.95 (scripts/score_gemma.py 기본값)",
-     "quote": "Gemma 3 4B 1.0 64 0.95",
-     "support": "direct",
-     "note": "Appendix C sampling table (model, temperature, top-k, top-p)."
+      "n": 5,
+      "key": "hasanain2024task1",
+      "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
+      "url": "https://ceur-ws.org/Vol-3740/paper-24.pdf",
+      "authors_official": [
+        "Maram Hasanain",
+        "Reem Suwaileh",
+        "Sanne Weering",
+        "Chengkai Li",
+        "Tommaso Caselli",
+        "Wajdi Zaghouani",
+        "Alberto Barrón-Cedeño",
+        "Preslav Nakov",
+        "Firoj Alam"
+      ],
+      "published": "2024",
+      "venue": "CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)",
+      "pdf": "clef2024_task1_overview.pdf",
+      "claims": [
+        {
+          "id": "5a",
+          "where": "III. 실험 (데이터)",
+          "paper": "CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)",
+          "quote": "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches.",
+          "support": "direct"
+        },
+        {
+          "id": "5b",
+          "where": "결론 (한계)",
+          "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축",
+          "quote": "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates.",
+          "support": "direct",
+          "note": "Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set."
+        },
+        {
+          "id": "5c",
+          "where": "III. 실험 (데이터)",
+          "paper": "테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장",
+          "quote": "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253",
+          "support": "direct",
+          "note": "Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only."
+        },
+        {
+          "id": "5d",
+          "where": "결론 (한계)",
+          "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장",
+          "quote": "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4].",
+          "support": "direct"
+        }
+      ]
     },
     {
-     "id": "1f",
-     "where": "III. 실험 (재현 수준)",
-     "paper": "원 논문 0.827, 0.760 (Gemma 3 4B + NN-PPI, k=10의 가중 F1; CLEF, ClaimBuster)",
-     "quote": "10 0.568 0.707 0.760",
-     "support": "direct",
-     "note": "Table 2, ClaimBuster block, Gemma 3 4B row k=10: Baseline 0.568, KNN 0.707, NN-PPI 0.760. CLEF block: see 1g."
+      "n": 6,
+      "key": "arslan2020claimbuster",
+      "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+      "doi": "10.1609/icwsm.v14i1.7346",
+      "authors_official": [
+        "Fatma Arslan",
+        "Naeemul Hassan",
+        "Chengkai Li",
+        "Mark Tremayne"
+      ],
+      "published": "2020-05-26",
+      "venue": "Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)",
+      "pdf": "icwsm2020_claimbuster.pdf",
+      "claims": [
+        {
+          "id": "6a",
+          "where": "III. 실험 (데이터)",
+          "paper": "ClaimBuster (미국 대선 토론 문장)",
+          "quote": "we present the ClaimBuster dataset of 23,533 statements extracted from all U.S. general election presidential debates and annotated by human coders",
+          "support": "direct",
+          "note": "We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501."
+        }
+      ]
     },
     {
-     "id": "1g",
-     "where": "III. 실험 (재현 수준)",
-     "paper": "원 논문 0.827 (CLEF, Gemma 3 4B + NN-PPI, k=10)",
-     "quote": "10 0.688 0.807 0.827",
-     "support": "direct",
-     "note": "Table 2, CLEF 2024 block, Gemma 3 4B row k=10."
+      "n": 7,
+      "key": "wang2026srr",
+      "bib": "Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
+      "arxiv": "2609.07786",
+      "version_read": "v1",
+      "authors_official": [
+        "Zheyuan Wang",
+        "Siyu Li",
+        "Peiqiao Song",
+        "Sijia Chen",
+        "Qianqian Song",
+        "Qian Liu"
+      ],
+      "published": "2026-09-07",
+      "venue": "arXiv preprint",
+      "pdf": "2609.07786.pdf",
+      "claims": [
+        {
+          "id": "7a",
+          "where": "서론 2문단",
+          "paper": "교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].",
+          "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
+          "support": "direct",
+          "note": "SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting."
+        }
+      ]
     },
     {
-     "id": "1h",
-     "where": "III. 실험 (데이터)",
-     "paper": "ClaimBuster(2012년 토론 보정 1,314문장, 2016년 토론 테스트)",
-     "quote": "We use 2012 election data for calibration and 2016 data for testing.",
-     "support": "direct"
-    },
-    {
-     "id": "1i",
-     "where": "III. 실험 (데이터)",
-     "paper": "NN-PPI 재현 F1은 원 논문과 같은 CLEF dev-test 분할(318문장)에서 측정",
-     "quote": "CLEF 2024 2,406 (of 22,501) 317 107 210",
-     "support": "direct",
-     "note": "NN-PPI's CLEF test = 317 (107 CW / 210 NCW); this is the CLEF dev-test partition (108/210, see 5c), not the official 341-sentence test. Our 318 = the same partition."
-    },
-    {
-     "id": "1j",
-     "where": "표 1 'Sonnet 5 + NN-PPI [1]' 행",
-     "paper": "프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정",
-     "quote": "5 0.855 0.801 0.899",
-     "support": "inference",
-     "note": "Table 2, CLEF block, Claude Opus 4.6 k=5: NN-PPI weighted F1 0.899 (0.925 class-0 F1) - the highest CLEF rows are frontier LLM + NN-PPI. That this is the 'strongest setting' is our reading of Table 2, not the authors' wording."
-    },
-    {
-     "id": "1k",
-     "where": "III. 실험 (프롬프트)",
-     "paper": "NN-PPI의 판정 기준 프롬프트로 채점; few-shot 예시 6개는 원 논문에 공개되지 않아 직접 작성",
-     "quote": "The {{examples}} placeholder is filled with 6 fixed few-shot examples, one per check-worthiness tier",
-     "support": "direct",
-     "note": "Figure 2 caption. The six examples themselves are not printed anywhere in the paper."
-    },
-    {
-     "id": "1l",
-     "where": "III. 실험 (재현)",
-     "paper": "원 논문과 같은 ClaimBuster 2016년 분할 (원 논문 2,740문장, 본 논문 2,745문장)",
-     "quote": "ClaimBuster 1,314 (of 2,487) 2,740 725 2,015",
-     "support": "direct",
-     "note": "NN-PPI Table 1: ClaimBuster test 2,740 (725 CW / 2,015 NCW). Our 2016 set built from the Zenodo release has 2,745 (728 CW); the 5-sentence difference is unexplained (likely de-duplication or parsing)."
+      "n": 8,
+      "key": "zhang2026cauc",
+      "bib": "Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
+      "arxiv": "2609.11446",
+      "version_read": "v1",
+      "authors_official": [
+        "Yilin Zhang",
+        "Han Jiang",
+        "Cai Xu",
+        "Ying Liu",
+        "Wei Zhao"
+      ],
+      "published": "2026-09-10",
+      "venue": "arXiv preprint; comment: 'Under review'",
+      "pdf": "2609.11446.pdf",
+      "claims": [
+        {
+          "id": "8a",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].",
+          "quote": "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary.",
+          "support": "direct"
+        },
+        {
+          "id": "8b",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "(CAUC 결과: 호출 약 절반 절감, 강한 모델 단독보다 정확도 향상 — 우리 결과와 같은 방향)",
+          "quote": "CAUC achieves an average relative accuracy improvement of 1.9% over strong-model-only inference while avoiding approximately 47% of strong-model calls",
+          "support": "direct"
+        },
+        {
+          "id": "8c",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.",
+          "quote": "This sign test is performed once on the calibration set and introduces no learned decision network.",
+          "support": "inference",
+          "note": "CAUC fuses standardized, temperature-calibrated logits weighted by each model's calibrated confidence (Eq. 6: z_fuse = (p_s q_s + p_l q_l)/(p_s + p_l)) and enables fusion only if a calibration-set sign test is positive. No fusion coefficient is fitted to labels. Our Eq. (1) fits (a, b, c) by logistic regression on labelled calibration data, so the fused score can re-weight an LLM whose decision criterion differs from the labels. The 'difference' sentence is our characterization based on these passages."
+        }
+      ]
     }
-   ]
-  },
-  {
-   "n": 2,
-   "key": "amatya2026multilingual",
-   "bib": "P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
-   "arxiv": "2606.08605",
-   "version_read": "v1",
-   "authors_official": [
-    "Pratuat Amatya",
-    "Vinay Setty"
-   ],
-   "published": "2026-06-07",
-   "venue": "arXiv preprint",
-   "pdf": "2606.08605.pdf",
-   "claims": [
+  ],
+  "screened_not_cited": [
     {
-     "id": "2a",
-     "where": "서론",
-     "paper": "같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나",
-     "quote": "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs",
-     "support": "direct"
+      "arxiv": "DOI 10.1007/978-3-031-71908-0_2",
+      "title": "Overview of the CLEF-2024 CheckThat! Lab (Barrón-Cedeño et al., LNCS, pp. 28-52)",
+      "depth": "public Springer abstract (paywalled)",
+      "verdict": "Was [5] until 2026-09-27; replaced by the Task 1 overview, which the dataset card of iai-group/clef2024_checkthat_task1_en asks users to cite and which documents the English data provenance and split sizes."
     },
     {
-     "id": "2b",
-     "where": "서론",
-     "paper": "관용적 표현에서는 LLM이 앞선다고 보고하고",
-     "quote": "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps",
-     "support": "direct",
-     "note": "'관용적 표현' translates 'highly idiomatic English (memes, satire)'."
+      "arxiv": "2609.26913",
+      "title": "COMED: The Missing Middle Between Routing and Collaboration in Multi-LLM Inference",
+      "depth": "full text read",
+      "verdict": "Was [7] in an earlier draft; removed. Concerns LLM-LLM collaboration ('a correct model may also be swayed by noisy or misleading peer outputs'), only an analogy for classifier-to-LLM replacement. Replaced by SRR [7] plus our own flip counts."
     },
     {
-     "id": "2c",
-     "where": "서론",
-     "paper": "인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].",
-     "quote": "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low",
-     "support": "direct",
-     "note": "Stated in the conclusion as 'Future work will focus on ...'."
+      "arxiv": "2603.25269",
+      "title": "When Hate Meets Facts: LLMs-in-the-Loop for Check-worthiness Detection in Hate Speech",
+      "depth": "keyword scan of full text",
+      "verdict": "Check-worthiness + LLM annotation in hate speech; no cascade or selective LLM invocation found. Not overlapping."
+    },
+    {
+      "arxiv": "2603.03752",
+      "title": "Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning",
+      "depth": "keyword scan of full text",
+      "verdict": "SLM-to-LLM escalation for reasoning; the LLM response 'serves as the final answer' (replacement). Same family as [4]; not overlapping with fusion."
+    },
+    {
+      "arxiv": "2608.22879",
+      "title": "Large-Small Model Collaboration for Zero-Shot Surgical Phase Recognition",
+      "depth": "keyword scan of full text",
+      "verdict": "Ensembling for pseudo-label training in surgical video; unrelated."
+    },
+    {
+      "arxiv": "2605.18796",
+      "title": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing",
+      "depth": "title only - NOT verified",
+      "verdict": "Routing criterion paper by title; method not read. Re-check if a reviewer raises routing criteria."
+    },
+    {
+      "arxiv": "2607.25018",
+      "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+      "depth": "title only - NOT verified",
+      "verdict": "Deferral guarantees by title; method not read."
+    },
+    {
+      "arxiv": "2606.27457",
+      "title": "Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving",
+      "depth": "title only - NOT verified",
+      "verdict": "Serving-side cascade by title; method not read."
+    },
+    {
+      "arxiv": "2608.17711",
+      "title": "Accuracy and Robustness of Model Cascades Under Data Perturbations",
+      "depth": "title only - NOT verified",
+      "verdict": "Cascade robustness by title; method not read."
+    },
+    {
+      "arxiv": "2603.14828",
+      "title": "The CLEF-2025 CheckThat! Lab",
+      "depth": "title only",
+      "verdict": "Later CheckThat! edition; not the data we use."
     }
-   ]
-  },
-  {
-   "n": 3,
-   "key": "schlee2025labelfusion",
-   "bib": "M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
-   "arxiv": "2512.10793",
-   "version_read": "v2",
-   "authors_official": [
-    "Michael Schlee",
-    "Christoph Weisser",
-    "Timo Kivimäki",
-    "Melchizedek Mashiku",
-    "Benjamin Saefken"
-   ],
-   "published": "2025-12-11",
-   "venue": "arXiv preprint",
-   "pdf": "2512.10793.pdf",
-   "claims": [
+  ],
+  "search_log": [
     {
-     "id": "3a",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만",
-     "quote": "combines the output of a prompt-engineered LLM with contextual embeddings produced by a fine-tuned RoBERTa encoder through a lightweight Multilayer Perceptron",
-     "support": "direct"
+      "date": "2026-09-27",
+      "source": "alphaXiv embedding",
+      "query": "cascade that sends only uncertain inputs from a small classifier to a large language model and combines both scores instead of replacing"
     },
     {
-     "id": "3b",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "모든 입력에 LLM을 호출한다.",
-     "quote": "LabelFusion combines two complementary components",
-     "support": "inference",
-     "note": "The method feeds every input text x to both components and fuses them (Sec. 3); no selective/gated LLM invocation is described anywhere in the paper. 'Calls the LLM for every input' is our reading of the architecture, not a sentence the authors wrote."
+      "date": "2026-09-27",
+      "source": "alphaXiv keyword",
+      "query": "check-worthiness cascade LLM"
+    },
+    {
+      "date": "2026-09-27",
+      "source": "alphaXiv keyword",
+      "query": "deferral ensemble cascade combine small model large model predictions"
+    },
+    {
+      "date": "2026-09-27",
+      "source": "OpenAlex",
+      "query": "model cascade deferral combining small and large model predictions",
+      "result": "failed (HTTP 429), not retried"
+    },
+    {
+      "date": "2026-09-27",
+      "source": "alphaXiv keyword",
+      "query": "CheckThat! 2024 overview check-worthiness subjectivity persuasion"
     }
-   ]
-  },
-  {
-   "n": 4,
-   "key": "burleigh2026cascade",
-   "bib": "T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
-   "arxiv": "2604.19781",
-   "version_read": "v1",
-   "authors_official": [
-    "Tyler Burleigh"
-   ],
-   "published": "2026-03-29",
-   "venue": "arXiv preprint; comment: 'Accepted at NCME 2026'",
-   "pdf": "2604.19781.pdf",
-   "claims": [
-    {
-     "id": "4a",
-     "where": "서론",
-     "paper": "일반적인 캐스케이드[4]는 불확실한 입력을 큰 모델에 넘기되",
-     "quote": "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs",
-     "support": "direct"
-    },
-    {
-     "id": "4b",
-     "where": "서론",
-     "paper": "그 답으로 교체하고",
-     "quote": "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score",
-     "support": "direct"
-    }
-   ]
-  },
-  {
-   "n": 5,
-   "key": "hasanain2024task1",
-   "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
-   "url": "https://ceur-ws.org/Vol-3740/paper-24.pdf",
-   "authors_official": [
-    "Maram Hasanain",
-    "Reem Suwaileh",
-    "Sanne Weering",
-    "Chengkai Li",
-    "Tommaso Caselli",
-    "Wajdi Zaghouani",
-    "Alberto Barrón-Cedeño",
-    "Preslav Nakov",
-    "Firoj Alam"
-   ],
-   "published": "2024",
-   "venue": "CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)",
-   "pdf": "clef2024_task1_overview.pdf",
-   "claims": [
-    {
-     "id": "5a",
-     "where": "III. 실험 (데이터)",
-     "paper": "CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)",
-     "quote": "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches.",
-     "support": "direct"
-    },
-    {
-     "id": "5b",
-     "where": "결론 (한계)",
-     "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축",
-     "quote": "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates.",
-     "support": "direct",
-     "note": "Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set."
-    },
-    {
-     "id": "5c",
-     "where": "III. 실험 (데이터)",
-     "paper": "테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장",
-     "quote": "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253",
-     "support": "direct",
-     "note": "Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only."
-    },
-    {
-     "id": "5d",
-     "where": "결론 (한계)",
-     "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장",
-     "quote": "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4].",
-     "support": "direct"
-    }
-   ]
-  },
-  {
-   "n": 6,
-   "key": "arslan2020claimbuster",
-   "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
-   "doi": "10.1609/icwsm.v14i1.7346",
-   "authors_official": [
-    "Fatma Arslan",
-    "Naeemul Hassan",
-    "Chengkai Li",
-    "Mark Tremayne"
-   ],
-   "published": "2020-05-26",
-   "venue": "Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)",
-   "pdf": "icwsm2020_claimbuster.pdf",
-   "claims": [
-    {
-     "id": "6a",
-     "where": "III. 실험 (데이터)",
-     "paper": "ClaimBuster (미국 대선 토론 문장)",
-     "quote": "we present the ClaimBuster dataset of 23,533 statements extracted from all U.S. general election presidential debates and annotated by human coders",
-     "support": "direct",
-     "note": "We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501."
-    }
-   ]
-  },
-  {
-   "n": 7,
-   "key": "wang2026srr",
-   "bib": "Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
-   "arxiv": "2609.07786",
-   "version_read": "v1",
-   "authors_official": [
-    "Zheyuan Wang",
-    "Siyu Li",
-    "Peiqiao Song",
-    "Sijia Chen",
-    "Qianqian Song",
-    "Qian Liu"
-   ],
-   "published": "2026-09-07",
-   "venue": "arXiv preprint",
-   "pdf": "2609.07786.pdf",
-   "claims": [
-    {
-     "id": "7a",
-     "where": "서론 2문단",
-     "paper": "교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].",
-     "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
-     "support": "direct",
-     "note": "SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting."
-    }
-   ]
-  },
-  {
-   "n": 8,
-   "key": "zhang2026cauc",
-   "bib": "Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
-   "arxiv": "2609.11446",
-   "version_read": "v1",
-   "authors_official": [
-    "Yilin Zhang",
-    "Han Jiang",
-    "Cai Xu",
-    "Ying Liu",
-    "Wei Zhao"
-   ],
-   "published": "2026-09-10",
-   "venue": "arXiv preprint; comment: 'Under review'",
-   "pdf": "2609.11446.pdf",
-   "claims": [
-    {
-     "id": "8a",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].",
-     "quote": "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary.",
-     "support": "direct"
-    },
-    {
-     "id": "8b",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "(CAUC 결과: 호출 약 절반 절감, 강한 모델 단독보다 정확도 향상 — 우리 결과와 같은 방향)",
-     "quote": "CAUC achieves an average relative accuracy improvement of 1.9% over strong-model-only inference while avoiding approximately 47% of strong-model calls",
-     "support": "direct"
-    },
-    {
-     "id": "8c",
-     "where": "Ⅱ. 본론 2.1 선행 연구",
-     "paper": "본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.",
-     "quote": "This sign test is performed once on the calibration set and introduces no learned decision network.",
-     "support": "inference",
-     "note": "CAUC fuses standardized, temperature-calibrated logits weighted by each model's calibrated confidence (Eq. 6: z_fuse = (p_s q_s + p_l q_l)/(p_s + p_l)) and enables fusion only if a calibration-set sign test is positive. No fusion coefficient is fitted to labels. Our Eq. (1) fits (a, b, c) by logistic regression on labelled calibration data, so the fused score can re-weight an LLM whose decision criterion differs from the labels. The 'difference' sentence is our characterization based on these passages."
-    }
-   ]
-  }
- ],
- "screened_not_cited": [
-  {
-   "arxiv": "DOI 10.1007/978-3-031-71908-0_2",
-   "title": "Overview of the CLEF-2024 CheckThat! Lab (Barrón-Cedeño et al., LNCS, pp. 28-52)",
-   "depth": "public Springer abstract (paywalled)",
-   "verdict": "Was [5] until 2026-09-27; replaced by the Task 1 overview, which the dataset card of iai-group/clef2024_checkthat_task1_en asks users to cite and which documents the English data provenance and split sizes."
-  },
-  {
-   "arxiv": "2609.26913",
-   "title": "COMED: The Missing Middle Between Routing and Collaboration in Multi-LLM Inference",
-   "depth": "full text read",
-   "verdict": "Was [7] in an earlier draft; removed. Concerns LLM-LLM collaboration ('a correct model may also be swayed by noisy or misleading peer outputs'), only an analogy for classifier-to-LLM replacement. Replaced by SRR [7] plus our own flip counts."
-  },
-  {
-   "arxiv": "2603.25269",
-   "title": "When Hate Meets Facts: LLMs-in-the-Loop for Check-worthiness Detection in Hate Speech",
-   "depth": "keyword scan of full text",
-   "verdict": "Check-worthiness + LLM annotation in hate speech; no cascade or selective LLM invocation found. Not overlapping."
-  },
-  {
-   "arxiv": "2603.03752",
-   "title": "Confidence-Calibrated Small-Large Language Model Collaboration for Cost-Efficient Reasoning",
-   "depth": "keyword scan of full text",
-   "verdict": "SLM-to-LLM escalation for reasoning; the LLM response 'serves as the final answer' (replacement). Same family as [4]; not overlapping with fusion."
-  },
-  {
-   "arxiv": "2608.22879",
-   "title": "Large-Small Model Collaboration for Zero-Shot Surgical Phase Recognition",
-   "depth": "keyword scan of full text",
-   "verdict": "Ensembling for pseudo-label training in surgical video; unrelated."
-  },
-  {
-   "arxiv": "2605.18796",
-   "title": "UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing",
-   "depth": "title only - NOT verified",
-   "verdict": "Routing criterion paper by title; method not read. Re-check if a reviewer raises routing criteria."
-  },
-  {
-   "arxiv": "2607.25018",
-   "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
-   "depth": "title only - NOT verified",
-   "verdict": "Deferral guarantees by title; method not read."
-  },
-  {
-   "arxiv": "2606.27457",
-   "title": "Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving",
-   "depth": "title only - NOT verified",
-   "verdict": "Serving-side cascade by title; method not read."
-  },
-  {
-   "arxiv": "2608.17711",
-   "title": "Accuracy and Robustness of Model Cascades Under Data Perturbations",
-   "depth": "title only - NOT verified",
-   "verdict": "Cascade robustness by title; method not read."
-  },
-  {
-   "arxiv": "2603.14828",
-   "title": "The CLEF-2025 CheckThat! Lab",
-   "depth": "title only",
-   "verdict": "Later CheckThat! edition; not the data we use."
-  }
- ],
- "search_log": [
-  {
-   "date": "2026-09-27",
-   "source": "alphaXiv embedding",
-   "query": "cascade that sends only uncertain inputs from a small classifier to a large language model and combines both scores instead of replacing"
-  },
-  {
-   "date": "2026-09-27",
-   "source": "alphaXiv keyword",
-   "query": "check-worthiness cascade LLM"
-  },
-  {
-   "date": "2026-09-27",
-   "source": "alphaXiv keyword",
-   "query": "deferral ensemble cascade combine small model large model predictions"
-  },
-  {
-   "date": "2026-09-27",
-   "source": "OpenAlex",
-   "query": "model cascade deferral combining small and large model predictions",
-   "result": "failed (HTTP 429), not retried"
-  },
-  {
-   "date": "2026-09-27",
-   "source": "alphaXiv keyword",
-   "query": "CheckThat! 2024 overview check-worthiness subjectivity persuasion"
-  }
- ]
+  ]
 }
