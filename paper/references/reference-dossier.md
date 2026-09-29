@@ -4,8 +4,8 @@
 
 ## 요약
 
-- 참고문헌 8편, 근거 27건 (원문 직접 확인 24건, 해석 3건)
-- 원문 PDF에서 찾은 인용문 27/27건 (유료 원문 0건은 공개 초록으로 확인)
+- 참고문헌 8편, 근거 28건 (원문 직접 확인 25건, 해석 3건)
+- 원문 PDF에서 찾은 인용문 28/28건 (유료 원문 0건은 공개 초록으로 확인)
 - 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 3b (모든 입력에 LLM을 호출한다.…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
 
 ## [1] P. Amatya, Venktesh V, and V. Setty, "Calibrating Small Language Models for Claim Check-Worthiness Detection," arXiv:2608.30731, 2026.
@@ -98,6 +98,12 @@
 
 - 근거 유형: direct
 
+**2b** (서론) — 논문: 관용적 표현에서는 LLM이 앞선다고 보고하고
+
+> "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps" (p. 7)
+
+- 근거 유형: direct — '관용적 표현' translates 'highly idiomatic English (memes, satire)'.
+
 **2c** (서론) — 논문: 인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].
 
 > "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low" (p. 9)
@@ -170,7 +176,7 @@
 
 - 근거 유형: direct
 
-## [6] F. Arslan et al., "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
+## [6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
 
 - 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
 - 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne

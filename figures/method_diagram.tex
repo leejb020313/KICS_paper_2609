@@ -11,7 +11,7 @@
 \definecolor{ink}{HTML}{3A3A3A}
 \definecolor{soft}{HTML}{F2F2F2}
 \begin{document}
-\fontsize{7}{8.4}\selectfont
+\fontsize{7.5}{9}\selectfont
 \begin{tikzpicture}[
     node distance=2.6mm and 7mm,
     box/.style={draw=ink, rounded corners=1.2pt, align=center, line width=0.45pt,
@@ -20,7 +20,7 @@
     ours/.style={box, draw=ours, fill=ours!9, line width=0.9pt, minimum width=21mm},
     gate/.style={draw=ink, diamond, aspect=1.9, align=center, line width=0.45pt, inner sep=0.6pt},
     flow/.style={-{Stealth[length=1.5mm,width=1.2mm]}, draw=ink, line width=0.45pt},
-    lbl/.style={font=\fontsize{6}{7}\selectfont, text=ink!80, inner sep=1pt},
+    lbl/.style={font=\fontsize{6.5}{7.5}\selectfont, text=ink!80, inner sep=1pt},
   ]
   \node[box]                       (svm)  {Embedding SVM\\[0.3mm]$d(x)$};
   \node[gate, right=of svm]        (gate) {Uncertain?};

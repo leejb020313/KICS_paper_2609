@@ -64,6 +64,7 @@ scripts/
   final_eval.py            본 실험 (--full: 논문의 전체 테스트셋)   -> results/final_results_full.json
   streaming_eval.py        문장 단위 라우팅 점검 (--full)           -> results/streaming_results_full.json
   sanity_checks.py         배치/단건 채점 AUC, 재채점 상관, SVM 지연시간
+  example_case.py          본문 3.2절의 판정 기준 예시 (CLEF 1회차 계수, 예시 문장)  -> results/example_case.json
   verify_paper_numbers.py  논문 PDF의 모든 수치와 유의성 주장을 results/*.json과 대조
   make_figure.py           그림 2 (--full)                         -> figures/cascade_budget_full.{pdf,png}
   score_gemma.py           Gemma 3 4B 채점 (llama.cpp 서버)

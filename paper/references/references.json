@@ -131,6 +131,14 @@
           "support": "direct"
         },
         {
+          "id": "2b",
+          "where": "서론",
+          "paper": "관용적 표현에서는 LLM이 앞선다고 보고하고",
+          "quote": "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps",
+          "support": "direct",
+          "note": "'관용적 표현' translates 'highly idiomatic English (memes, satire)'."
+        },
+        {
           "id": "2c",
           "where": "서론",
           "paper": "인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].",
@@ -258,7 +266,7 @@
     {
       "n": 6,
       "key": "arslan2020claimbuster",
-      "bib": "F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+      "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
       "doi": "10.1609/icwsm.v14i1.7346",
       "authors_official": [
         "Fatma Arslan",
