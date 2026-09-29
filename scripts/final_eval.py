@@ -37,6 +37,7 @@ SEEDS = 5
 BUDGETS = [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]
 NNPPI_KS = (3, 5, 10)
 BOOT = 2000
+LAST_PREDS = {}  # dataset -> (y, {method: [per-seed predictions]}), filled by evaluate()
 
 
 def metrics(y, p):
@@ -141,6 +142,7 @@ def evaluate(name, full=False):
         rho_sel.append(rho)
         preds['fuse_sel'].append(route(p_svm, p_fuse, order, rho))
 
+    LAST_PREDS[name] = (y, preds)  # per-seed predictions, for scripts/seed_robustness.py
     summary = {}
     for key, plist in preds.items():
         ms = [metrics(y, p) for p in plist]
