@@ -86,7 +86,7 @@ for label, rate, n in [("Gemma 3 4B", "0%", "gemma_raw"), ("+ NN-PPI [1]", "0%",
                        ("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
                        ("+ NN-PPI [1]", "100%", "sonnet_nnppi"), ("교체형 캐스케이드", "50%", "replace_0.5"),
                        ("NN-PPI 판정 캐스케이드", "50%", "nnppi_0.5"),
-                       ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5"), ("결합형 캐스케이드 (제안)", "100%", "fuse_1.0")]:
+                       ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5"), ("(호출률 100%, 참고)", "100%", "fuse_1.0")]:
     checks.append((f"table row {n}", f"{label} {rate} {mark('clef', n)} {mark('cb', n)}"))
 gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 # claims whose direction the text asserts: "fused > replacement at every rho > 0" and "significant" / "not significant"

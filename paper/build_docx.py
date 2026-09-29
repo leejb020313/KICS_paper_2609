@@ -289,13 +289,13 @@ rows = [
     ("교체형 캐스케이드", "50%", cell(cl, "replace_0.5"), cell(cb, "replace_0.5")),
     ("NN-PPI 판정 캐스케이드", "50%", cell(cl, "nnppi_0.5"), cell(cb, "nnppi_0.5")),
     ("결합형 캐스케이드 (제안)", "50%", cell(cl, "fuse_0.5"), cell(cb, "fuse_0.5")),
-    ("결합형 캐스케이드 (제안)", "100%", cell(cl, "fuse_1.0"), cell(cb, "fuse_1.0")),
+    ("  (호출률 100%, 참고)", "100%", cell(cl, "fuse_1.0"), cell(cb, "fuse_1.0")),
 ]
 cap = doc.add_paragraph()
 cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
 cap.paragraph_format.space_before = Pt(4)
 cap.paragraph_format.space_after = Pt(2)
-set_font(cap.add_run("표 1. 테스트 정확도 (5회 평균, †: 결합형(50%)이 유의하게 높음)"), BODY_FONT, 8.5, bold=True)
+set_font(cap.add_run("표 1. 테스트 정확도 (5회 평균, †: 제안 방법(호출률 50%)보다 유의하게 낮음, McNemar p<0.05)"), BODY_FONT, 8.5, bold=True)
 t = doc.add_table(rows=1 + len(rows), cols=4)
 t.style = "Table Grid"
 t.alignment = WD_TABLE_ALIGNMENT.CENTER
