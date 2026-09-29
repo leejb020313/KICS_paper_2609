@@ -194,7 +194,7 @@
 - 공식 저자: Zheyuan Wang, Siyu Li, Peiqiao Song, Sijia Chen, Qianqian Song, Qian Liu
 - 원문 PDF: `pdfs/2609.07786.pdf`
 
-**7a** (III. 결과 (교체형 해석)) — 논문: 이는 교체가 옳은 답을 해칠 수 있다는 보고[7]와 일치한다.
+**7a** (서론 2문단) — 논문: 교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].
 
 > "it is harmful when the large model replaces a correct answer with an incorrect one" (p. 1)
 

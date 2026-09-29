@@ -308,8 +308,8 @@
       "claims": [
         {
           "id": "7a",
-          "where": "III. 결과 (교체형 해석)",
-          "paper": "이는 교체가 옳은 답을 해칠 수 있다는 보고[7]와 일치한다.",
+          "where": "서론 2문단",
+          "paper": "교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].",
           "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
           "support": "direct",
           "note": "SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting."

@@ -43,7 +43,7 @@ checks = [("clef n_test", f"{R['clef']['n_test']:,}문장"), ("cb n_test", f"{R[
           ("cb NN-PPI wF1 (2016 full)", f"{m('cb', 'gemma_nnppi_sel', 'wf1'):.3f}"),
           ("k_sel", f"k={R['clef']['k_sel']}")]
 for d in ("clef", "cb"):
-    for n in ["gemma_nnppi_sel", "svm", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5", "fuse_0.5", "nnppi_0.5"]:
+    for n in ["gemma_nnppi_sel", "svm", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5", "fuse_0.5"]:
         checks.append((f"{d} acc {n}", f"{acc(d, n):.3f}"))
     checks += [(f"{d} p svm vs nnppi", pf(pv(d, 'svm_vs_gemma_nnppi_sel'))),
                (f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
@@ -54,7 +54,6 @@ for d in ("clef", "cb"):
                (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
            ("p fuse50 vs sonnet+nnppi (max)", pf(max(pv(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ("clef", "cb")))),
-           ("p fuse50 vs nnppi-cascade (max)", pf(max(pv(d, 'fuse_0.5_vs_nnppi_0.5') for d in ("clef", "cb")))),
            ("cb p fuse50 vs fuse100 (seed 0)", pf(pv('cb', 'fuse_0.5_vs_fuse_1.0_seed0'))),
            ("cb raw - thr accuracy drop", pp('cb', 'sonnet_raw', 'sonnet_thr')),
            ("cb test positive share", f"{100 * sum(v['n_pos'] for v in R['cb']['by_part'].values()) / R['cb']['n_test']:.0f}%"),
@@ -62,27 +61,25 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("fuse vs replace p bound", pup([("cb", f"fuse_{b}_vs_replace_{b}") for b in (0.3, 0.4, 0.5)] +
                                            [("clef", f"fuse_{b}_vs_replace_{b}") for b in (0.2, 0.3)])),
            ("batch vs single AUC", "0.991 대 0.990"),
-           ("example bar at d=0", f"d=0일 때 {EX['bar_at_0']:.2f}"), ("example text", EX["example"]["text"]), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
+           ("example text", EX["example"]["text"]), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"{EX['llm_threshold']:.2f}"),
-           ("example bar", f"{EX['example']['bar']:.2f}"),
-           ("example counts", f"결합형만 옳은 문장({EX['n_queried_fuse_right_replace_wrong']}개)이 교체형만 옳은 "
-                              f"문장({EX['n_queried_replace_right_fuse_wrong']}개)"),
-           ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p"),
-           ("cb flips replace broke", f"{R['cb']['flips_confident_half_seed0']['replace']['broke']}건"),
-           ("cb flips replace fixed", f"{R['cb']['flips_confident_half_seed0']['replace']['fixed']}건"),
-           ("cb flips fuse broke/fixed", f"{R['cb']['flips_confident_half_seed0']['fuse']['broke']}건, "
-                                         f"{R['cb']['flips_confident_half_seed0']['fuse']['fixed']}건")]
+           ("example bar", f"{EX['example']['bar']:.2f} 이상"),
+           ("example counts", f"결합형만 옳은 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳은 문장은 "
+                              f"{EX['n_queried_replace_right_fuse_wrong']}개"),
+           ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p")]
+# the text names which full-call setting is the stronger one on each dataset
+BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
+checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
 # Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher (McNemar p<0.05, seed 0)
 DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
        "sonnet_nnppi": "fuse_0.5_vs_sonnet_nnppi", "replace_0.5": "fuse_0.5_vs_replace_0.5",
        "nnppi_0.5": "fuse_0.5_vs_nnppi_0.5"}
 mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and pv(d, DAG[n]) < 0.05 else "")
 # whole Table 1 rows (label, call rate, CLEF, ClaimBuster), so a † can only match in its own row
-for label, rate, n in [("Gemma 3 4B", "0%", "gemma_raw"), ("+ NN-PPI [1]", "0%", "gemma_nnppi_sel"),
+for label, rate, n in [("Gemma 3 4B + NN-PPI [1]", "0%", "gemma_nnppi_sel"),
                        ("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
                        ("+ NN-PPI [1]", "100%", "sonnet_nnppi"), ("교체형 캐스케이드", "50%", "replace_0.5"),
-                       ("NN-PPI 판정 캐스케이드", "50%", "nnppi_0.5"),
-                       ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5"), ("(호출률 100%, 참고)", "100%", "fuse_1.0")]:
+                       ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5")]:
     checks.append((f"table row {n}", f"{label} {rate} {mark('clef', n)} {mark('cb', n)}"))
 gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 # claims whose direction the text asserts: "fused > replacement at every rho > 0" and "significant" / "not significant"
@@ -91,7 +88,6 @@ directional = {
                                           for b in (.05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0)),
     "fuse50 vs best full-call n.s.": all(pv(d, f"fuse_0.5_vs_{best[d]}") >= 0.05 for d in ("clef", "cb")),
     "fuse50 > sonnet+nnppi significant": all(pv(d, "fuse_0.5_vs_sonnet_nnppi") < 0.05 for d in ("clef", "cb")),
-    "fuse50 > nnppi-cascade significant": all(pv(d, "fuse_0.5_vs_nnppi_0.5") < 0.05 for d in ("clef", "cb")),
     "svm > nnppi significant on CLEF only": pv("clef", "svm_vs_gemma_nnppi_sel") < 0.05 <= pv("cb", "svm_vs_gemma_nnppi_sel")
                                             and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
