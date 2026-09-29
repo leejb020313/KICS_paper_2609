@@ -1,0 +1,36 @@
+% 그림 1: 결합형 캐스케이드의 처리 흐름. One KICS column (8.2 cm); compile with Tectonic (XeTeX):
+%   tectonic figures/method_diagram.tex   -> figures/method_diagram.pdf (PNG for the Word draft: 600 dpi)
+% The fusion step is the only accented node (the contribution); the rest is neutral.
+\documentclass[border=1pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{Malgun Gothic}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc}
+\definecolor{ours}{HTML}{0072B2}
+\definecolor{ink}{HTML}{333333}
+\begin{document}
+\fontsize{7.5}{9}\selectfont
+\begin{tikzpicture}[
+    node distance=3.2mm and 3.4mm,
+    box/.style={draw=ink, rounded corners=1.5pt, align=center, inner sep=2pt, minimum height=7.5mm, line width=0.5pt},
+    llm/.style={box, fill=black!6},
+    ours/.style={box, draw=ours, fill=ours!10, line width=0.8pt},
+    flow/.style={-{Stealth[length=1.6mm]}, draw=ink, line width=0.5pt},
+    lbl/.style={font=\fontsize{6.5}{7.5}\selectfont, text=ink, inner sep=1pt},
+  ]
+  \node[box]                          (x)     {문장\\$x$};
+  \node[box, right=of x]              (svm)   {임베딩 SVM\\결정값 $d(x)$};
+  \node[box, right=of svm]            (route) {$|d(x)|$가\\하위 $\rho$?};
+  \node[box, right=7mm of route]      (keep)  {SVM 판정\\$d(x)>0$};
+  \node[llm, below=3.8mm of route]    (llm)   {LLM 호출\\점수 $s(x)$};
+  \node[ours, left=5mm of llm]        (fuse)  {결합 판정 (식 1)\\\mbox{$\sigma(a\,d+b\,s+c)\geq 0.5$}};
+
+  \draw[flow] (x) -- (svm);
+  \draw[flow] (svm) -- (route);
+  \draw[flow] (route) -- node[lbl, above] {아니오} (keep);
+  \draw[flow] (route) -- node[lbl, right] {예} (llm);
+  \draw[flow] (llm) -- node[lbl, above] {$s$} (fuse);
+  \draw[flow] (svm.south) -- node[lbl, right, pos=0.4] {$d$} (svm.south |- fuse.north);
+\end{tikzpicture}
+\end{document}

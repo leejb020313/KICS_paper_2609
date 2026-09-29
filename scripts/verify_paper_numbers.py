@@ -1,7 +1,7 @@
 """Check that every result number printed in the paper PDF matches the result files.
 
-The paper reports the full held-out evaluation (results/final_results_full.json,
-results/streaming_results_full.json); only the CLEF NN-PPI reproduction F1 is on the original
+The paper reports the full held-out evaluation (results/final_results_full.json); only the CLEF
+NN-PPI reproduction F1 is on the original
 paper's dev-test split (results/final_results.json).
 
 Usage: python scripts/verify_paper_numbers.py <paper.pdf>
@@ -17,7 +17,6 @@ import pymupdf
 RESULTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
 R = json.load(open(os.path.join(RESULTS, "final_results_full.json"), encoding="utf-8"))
 R0 = json.load(open(os.path.join(RESULTS, "final_results.json"), encoding="utf-8"))
-S = json.load(open(os.path.join(RESULTS, "streaming_results_full.json"), encoding="utf-8"))
 text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[1])))
 acc = lambda d, n: R[d]["metrics"][n]["acc"][0]
 m = lambda d, n, k: R[d]["metrics"][n][k][0]
@@ -49,23 +48,28 @@ for d in ("clef", "cb"):
                (f"{d} diff fuse50 - best full", pp(d, 'fuse_0.5', best[d])),
                (f"{d} p fuse50 vs best full", pf(pv(d, f'fuse_0.5_vs_{best[d]}'))[0 if d == "clef" else 2:]),
                (f"{d} diff fuse50 - sonnet+nnppi", pp(d, 'fuse_0.5', 'sonnet_nnppi')),
-               (f"{d} diff fuse100 - fuse50", pp(d, 'fuse_1.0', 'fuse_0.5')),
-               (f"{d} stream acc@50", f"{S[d]['acc']['stream_global_0.5'][0]:.3f}"),
-               (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
+               (f"{d} diff fuse100 - fuse50", pp(d, 'fuse_1.0', 'fuse_0.5'))]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
            ("p fuse50 vs sonnet+nnppi (max)", pf(max(pv(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ("clef", "cb")))),
            ("p fuse50 vs nnppi-cascade (max)", pf(max(pv(d, 'fuse_0.5_vs_nnppi_0.5') for d in ("clef", "cb")))),
            ("cb p fuse50 vs fuse100 (seed 0)", pf(pv('cb', 'fuse_0.5_vs_fuse_1.0_seed0'))),
            ("cb raw - thr accuracy drop", pp('cb', 'sonnet_raw', 'sonnet_thr')),
            ("cb test positive share", f"{100 * sum(v['n_pos'] for v in R['cb']['by_part'].values()) / R['cb']['n_test']:.0f}%"),
-           ("fuse vs replace p bound", pup([("cb", f"fuse_{b}_vs_replace_{b}") for b in (0.3, 0.4, 0.5)] +
-                                           [("clef", f"fuse_{b}_vs_replace_{b}") for b in (0.2, 0.3)])),
            ("calib gap <=0.7pp", "0.7%p"),
            ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p"),
            ("cb flips replace broke", f"{R['cb']['flips_confident_half_seed0']['replace']['broke']}건"),
            ("cb flips replace fixed", f"{R['cb']['flips_confident_half_seed0']['replace']['fixed']}건"),
            ("cb flips fuse broke/fixed", f"{R['cb']['flips_confident_half_seed0']['fuse']['broke']}건, "
                                          f"{R['cb']['flips_confident_half_seed0']['fuse']['fixed']}건")]
+# Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher (McNemar p<0.05, seed 0)
+DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
+       "sonnet_nnppi": "fuse_0.5_vs_sonnet_nnppi", "replace_0.5": "fuse_0.5_vs_replace_0.5"}
+mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and pv(d, DAG[n]) < 0.05 else "")
+# whole Table 1 rows (label, call rate, CLEF, ClaimBuster), so a † can only match in its own row
+for label, rate, n in [("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
+                       ("+ NN-PPI [1]", "100%", "sonnet_nnppi"), ("교체형 캐스케이드", "50%", "replace_0.5"),
+                       ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5")]:
+    checks.append((f"table row {n}", f"{label} {rate} {mark('clef', n)} {mark('cb', n)}"))
 gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 # claims whose direction the text asserts: "fused > replacement at every rho > 0" and "significant" / "not significant"
 directional = {

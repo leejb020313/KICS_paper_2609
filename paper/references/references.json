@@ -258,7 +258,7 @@
     {
       "n": 6,
       "key": "arslan2020claimbuster",
-      "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+      "bib": "F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
       "doi": "10.1609/icwsm.v14i1.7346",
       "authors_official": [
         "Fatma Arslan",

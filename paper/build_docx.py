@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """Build the KICS 2026 2-page draft (paper/cascade_kics_draft.docx).
 
-Every number is read from the full held-out evaluation, results/final_results_full.json and
-results/streaming_results_full.json (scripts/final_eval.py --full, scripts/streaming_eval.py --full), except
+Every number is read from the full held-out evaluation, results/final_results_full.json
+(scripts/final_eval.py --full), except
 the CLEF NN-PPI reproduction F1, which is on the original paper's dev-test split (results/final_results.json);
-Figure 1 is figures/cascade_budget_full.png (scripts/make_figure.py --full). Math is LaTeX rendered to PNG
+Figure 1 is figures/method_diagram.pdf (TikZ) and Figure 2 figures/cascade_budget_full.png (scripts/make_figure.py --full). Math is LaTeX rendered to PNG
 by equations/render_equations.py.
 
     uv run --isolated --no-project --with python-docx --with pymupdf python paper/build_docx.py
@@ -29,7 +29,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 R = json.load(open(os.path.join(ROOT, "results", "final_results_full.json"), encoding="utf-8"))
 R_ORIG = json.load(open(os.path.join(ROOT, "results", "final_results.json"), encoding="utf-8"))
-IMP = json.load(open(os.path.join(ROOT, "results", "streaming_results_full.json"), encoding="utf-8"))
 BODY_FONT = "함초롬바탕"
 
 
@@ -92,10 +91,31 @@ def centered(doc, text, size=10, bold=False, font=BODY_FONT, after=4):
 
 def heading(doc, text, size=10.5):
     p = doc.add_paragraph()
-    p.paragraph_format.space_before = Pt(6)
-    p.paragraph_format.space_after = Pt(3)
+    p.paragraph_format.space_before = Pt(5)
+    p.paragraph_format.space_after = Pt(2)
     p.paragraph_format.keep_with_next = True  # never leave a heading alone at the bottom of a column
     set_font(p.add_run(text), BODY_FONT, size, bold=True)
+
+
+def subheading(doc, text):
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(3)
+    p.paragraph_format.space_after = Pt(1.5)
+    p.paragraph_format.keep_with_next = True
+    set_font(p.add_run(text), BODY_FONT, 9.5, bold=True)
+
+
+def figure(doc, png, width_cm, caption):
+    pic = doc.add_paragraph()
+    pic.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    pic.paragraph_format.space_before = Pt(3)
+    pic.paragraph_format.space_after = Pt(1)
+    pic.paragraph_format.keep_with_next = True
+    pic.add_run().add_picture(png, width=Cm(width_cm))
+    cap = doc.add_paragraph()
+    cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    cap.paragraph_format.space_after = Pt(4)
+    set_font(cap.add_run(caption), BODY_FONT, 8, bold=True)
 
 
 def body(doc, text, size=9, indent=0.35, after=2.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY):
@@ -151,14 +171,14 @@ FL = R["cb"]["flips_confident_half_seed0"]
 centered(doc, "요 약", 10.5, True, after=3)
 body(doc, (
     "팩트체크 필요성 탐지(check-worthiness detection)는 유입되는 모든 문장에 적용되므로, 대형 언어 모델(LLM)을 "
-    "모든 문장에 호출하면 비용과 지연이 크다. 선행 연구 NN-PPI는 소형 LLM 점수를 이웃 문장의 잔차로 보정하였다. "
-    "본 논문은 CLEF 2024와 ClaimBuster에서 NN-PPI를 재현하고, 같은 라벨과 문장 "
+    "모든 문장에 호출하면 비용과 지연이 크다. 본 논문은 소형 LLM 점수를 이웃 문장의 잔차로 보정하는 선행 연구 NN-PPI를 "
+    "CLEF 2024와 ClaimBuster에서 재현하고, 같은 라벨과 문장 "
     "임베딩으로 분류기를 직접 학습하면 LLM 없이도 NN-PPI와 같거나 높은 정확도를 얻음을 보인다. 이어 저비용 분류기가 모든 "
-    "문장을 판정하고 불확실한 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 점수를 결합하는 결합형 "
-    "캐스케이드를 제안한다. 보정 세트에서 정확도가 포화되는 호출률 50%에서 테스트 정확도는 "
-    f"CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {ro(f3(acc(cb,'fuse_0.5')))}, LLM 전량 호출 중 더 높은 설정"
-    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})과 유의한 차이가 없었고 NN-PPI 적용 전량 호출"
-    f"({f3(acc(cl,'sonnet_nnppi'))}, {f3(acc(cb,'sonnet_nnppi'))})보다 유의하게 높았다. 결합형은 모든 호출률에서 "
+    "문장을 판정하고 불확실한 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 결합하는 결합형 "
+    "캐스케이드를 제안한다. 실험 결과 LLM 호출을 절반으로 줄이고도 테스트 정확도"
+    f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})가 LLM 전량 호출 중 더 높은 설정"
+    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})과 유의한 차이가 없었고, NN-PPI 적용 전량 호출"
+    f"({f3(acc(cl,'sonnet_nnppi'))}, {f3(acc(cb,'sonnet_nnppi'))})보다는 유의하게 높았다. 결합형은 모든 호출률에서 "
     "교체형 캐스케이드보다 평균 정확도가 높아, 라벨에 담긴 판정 기준과 LLM의 일반 지식이 상호 보완적임을 시사한다."
 ), size=9, indent=0.5)
 
@@ -168,8 +188,7 @@ columns(doc, 2)
 # ---------------- I. 서론 ----------------
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
-    "팩트체크 필요성 탐지는 유입되는 모든 문장에 적용되므로, 실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 "
-    "비현실적이라고 보고하였다[1]. NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 "
+    "실제 팩트체크 서비스 운영사는 유입되는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1]. NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 "
     "잔차로 보정한다. 같은 연구진은 인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2]. "
     "일반적인 캐스케이드[4]는 "
     "불확실한 입력을 더 큰 LLM에 넘기되 그 답으로 교체하고, LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 "
@@ -185,16 +204,22 @@ body(doc, (
 
 # ---------------- II. 제안 기법 ----------------
 heading(doc, "Ⅱ. 제안 기법")
+subheading(doc, "2.1 저비용 분류기")
 body(doc, (
     "문장 x가 팩트체크가 필요한지 y∈{0,1}을 판정하며, NN-PPI와 같은 라벨이 있는 보정 세트 L을 사용한다. 저비용 "
     "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 쓰는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM이며, 클래스 불균형을 "
     "고려한 가중치로 L에서 학습한다. 결정값 d(x)는 양수일수록 팩트체크가 필요함을 뜻하며, 추론은 CPU에서 문장당 약 "
     "6 ms이다."
 ))
+subheading(doc, "2.2 결합형 캐스케이드")
 body(doc, (
-    "결합형 캐스케이드(이하 결합형)는 |d(x)|가 작은 순서, 즉 분류기가 가장 불확실한 문장부터 전체의 ρ 비율만큼 LLM을 호출하여 "
-    "점수 s(x)∈[0,1]을 얻는다. 호출한 문장은 식 (1)로, 나머지는 d(x)>0 여부로 판정한다."
+    "결합형 캐스케이드(이하 결합형)는 그림 1과 같이 |d(x)|가 작은 순서, 즉 분류기가 가장 불확실한 문장부터 전체의 ρ 비율(호출률)만큼 "
+    "LLM을 호출하여 점수 s(x)∈[0,1]을 얻는다. 호출한 문장은 식 (1)로, 나머지는 d(x)>0 여부로 판정한다."
 ))
+# figures/method_diagram.tex, compiled at its printed size (Tectonic) and inserted at that size
+_dg = pymupdf.open(os.path.join(ROOT, "figures", "method_diagram.pdf"))[0].rect
+figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 * 2.54,
+       "그림 1. 결합형의 처리 흐름 (파란 상자가 제안하는 결합 판정)")
 eq = doc.add_paragraph()
 eq.paragraph_format.space_before = Pt(2)
 eq.paragraph_format.space_after = Pt(3)
@@ -206,6 +231,7 @@ add_math(eq.add_run(), "eq1")
 set_font(eq.add_run("\t(1)"), BODY_FONT, 9)
 p = body(doc, "(a, b, c)는 L에서 5겹 교차적합으로 얻은 d와 LLM 점수 s로 학습한 로지스틱 회귀 계수이고, "
              "σ는 시그모이드 함수, ")
+p.paragraph_format.widow_control = False  # may split across the page so the column bottom is not left empty
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
     "은 조건이 참이면 1인 지시함수이다. 비교 대상인 교체형 캐스케이드(이하 교체형)는 같은 문장을 선택하되, LLM 점수에 L에서 "
@@ -213,33 +239,44 @@ set_font(p.add_run(
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실험 및 결과")
+subheading(doc, "3.1 실험 설정")
 body(doc, (
     f"실험에는 CLEF 2024 CheckThat! Task 1 영어 데이터(보정 {R[cl]['n_calib_gemma']:,}문장, 테스트는 dev·dev-test·공식 test를 "
     f"합친 {R[cl]['n_test']:,}문장)와 ClaimBuster 데이터(보정은 2012년 토론 {R[cb]['n_calib_gemma']:,}문장, 테스트는 2016년 토론 "
     f"{R[cb]['n_test']:,}문장)를 사용하였다[5,6]. "
     "NN-PPI는 원 논문의 Gemma 3 4B 설정으로 재현하였고(원 논문과 같은 CLEF dev-test와 ClaimBuster 2016년 분할에서 "
-    f"NN-PPI 적용 후 가중 F1 CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
+    f"가중 F1 CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
     f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}; 원 논문 0.827, 0.760), 이웃 수 k는 보정 세트 내부 "
-    f"검증으로 선택하였다(두 데이터셋 모두 k={R[cl]['k_sel']}). LLM은 "
-    "Claude Sonnet 5이며 NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다(문장 단위 채점과 AUC 0.991 대 0.990). LLM 임계값, 결합 계수, k는 모두 보정 세트 안에서만 정하였고 "
+    f"검증으로 선택하였다(두 데이터셋 k={R[cl]['k_sel']}). LLM은 "
+    "Claude Sonnet 5이며 NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다. LLM 임계값, 결합 계수, k는 모두 보정 세트 안에서만 정하였고 "
     "임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 보정 세트의 80%를 비복원 추출하여 5회 반복한 평균을 보고하며, 방법 간 "
-    "차이는 1회차 예측에 대한 McNemar 검정으로 평가하였다."
+    "차이는 1회차 예측에 대한 McNemar 검정(α=0.05)으로 평가하였다."
 ))
 
+subheading(doc, "3.2 결과")
+DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
+       "sonnet_nnppi": "fuse_0.5_vs_sonnet_nnppi", "replace_0.5": "fuse_0.5_vs_replace_0.5"}
+
+
+def cell(ds, name):
+    """Accuracy as printed in Table 1; † when the fused cascade at 50% is significantly higher (McNemar p<0.05)."""
+    return f3(acc(ds, name)) + ("†" if name in DAG and pval(ds, DAG[name]) < 0.05 else "")
+
+
 rows = [
-    ("Gemma 3 4B + NN-PPI [1]", "0%", acc(cl, "gemma_nnppi_sel"), acc(cb, "gemma_nnppi_sel")),
-    ("임베딩 SVM", "0%", acc(cl, "svm"), acc(cb, "svm")),
-    ("LLM 전량 호출", "100%", acc(cl, "sonnet_raw"), acc(cb, "sonnet_raw")),
-    ("  + 임계값 조정", "100%", acc(cl, "sonnet_thr"), acc(cb, "sonnet_thr")),
-    ("  + NN-PPI [1]", "100%", acc(cl, "sonnet_nnppi"), acc(cb, "sonnet_nnppi")),
-    ("교체형 캐스케이드", "50%", acc(cl, "replace_0.5"), acc(cb, "replace_0.5")),
-    ("결합형 캐스케이드 (제안)", "50%", acc(cl, "fuse_0.5"), acc(cb, "fuse_0.5")),
+    ("Gemma 3 4B + NN-PPI [1]", "0%", cell(cl, "gemma_nnppi_sel"), cell(cb, "gemma_nnppi_sel")),
+    ("임베딩 SVM", "0%", cell(cl, "svm"), cell(cb, "svm")),
+    ("LLM 전량 호출", "100%", cell(cl, "sonnet_raw"), cell(cb, "sonnet_raw")),
+    ("  + 임계값 조정", "100%", cell(cl, "sonnet_thr"), cell(cb, "sonnet_thr")),
+    ("  + NN-PPI [1]", "100%", cell(cl, "sonnet_nnppi"), cell(cb, "sonnet_nnppi")),
+    ("교체형 캐스케이드", "50%", cell(cl, "replace_0.5"), cell(cb, "replace_0.5")),
+    ("결합형 캐스케이드 (제안)", "50%", cell(cl, "fuse_0.5"), cell(cb, "fuse_0.5")),
 ]
 cap = doc.add_paragraph()
 cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
 cap.paragraph_format.space_before = Pt(4)
 cap.paragraph_format.space_after = Pt(2)
-set_font(cap.add_run("표 1. 방법별 테스트 정확도 (5회 평균, 호출률 = LLM을 호출한 문장 비율)"), BODY_FONT, 8.5, bold=True)
+set_font(cap.add_run("표 1. 테스트 정확도 (5회 평균, †: 결합형(50%)이 유의하게 높음)"), BODY_FONT, 8.5, bold=True)
 t = doc.add_table(rows=1 + len(rows), cols=4)
 t.style = "Table Grid"
 t.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -250,7 +287,7 @@ for j, h in enumerate(["방법", "호출률", "CLEF", "ClaimBuster"]):
     c.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
 for i, (name, rate, a1, a2) in enumerate(rows, start=1):
     bold = "제안" in name
-    for j, v in enumerate([name, rate, f3(a1), f3(a2)]):
+    for j, v in enumerate([name, rate, a1, a2]):
         c = t.rows[i].cells[j]
         c.text = ""
         set_font(c.paragraphs[0].add_run(v), BODY_FONT, 8, bold=bold)
@@ -263,7 +300,7 @@ for row in t.rows:
 body(doc, (
     f"표 1에서 임베딩 SVM은 LLM 없이 NN-PPI보다 CLEF에서 유의하게 높았고({pfmt(pval(cl,'svm_vs_gemma_nnppi_sel'))}) "
     f"ClaimBuster에서는 차이가 유의하지 않았다({pfmt(pval(cb,'svm_vs_gemma_nnppi_sel'))}). LLM을 그대로 쓰면 팩트체크가 필요한 문장을 과소 "
-    f"판정하여 해당 클래스 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
+    f"판정하여 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
     f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
     f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f})에 그쳤고, 라벨로 임계값을 조정하자 각각 "
     f"{R[cl]['metrics']['sonnet_thr']['rec1'][0]:.2f}, {ro(f"{R[cb]['metrics']['sonnet_thr']['rec1'][0]:.2f}")} 개선되었다. 이는 LLM의 판정 기준과 데이터셋 라벨 사이에 "
@@ -271,48 +308,34 @@ body(doc, (
     f"{100*sum(v['n_pos'] for v in R[cb]['by_part'].values())/R[cb]['n_test']:.0f}%여서, 임계값 조정 후 정확도는 오히려 {pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다."
 ), after=3)
 
-pic = doc.add_paragraph()
-pic.alignment = WD_ALIGN_PARAGRAPH.CENTER
-pic.paragraph_format.space_after = Pt(1)
-# built at the printed column width by figures/cascade_budget.py, so inserted without rescaling
-pic.add_run().add_picture(os.path.join(ROOT, "figures", "cascade_budget_full.png"), width=Cm(8.2))
-cap2 = doc.add_paragraph()
-cap2.alignment = WD_ALIGN_PARAGRAPH.CENTER
-cap2.paragraph_format.space_after = Pt(4)
-set_font(cap2.add_run("그림 1. 호출률에 따른 테스트 정확도 (5회 평균, 띠는 표준편차)"), BODY_FONT, 8, bold=True)
-
-def p_upper_multi(pairs):
-    """Largest p over (dataset, contrast) pairs, rounded up to 3 decimals so that "p≤" never understates it."""
-    return f"p≤{math.ceil(1000 * max(pval(ds, k) for ds, k in pairs)) / 1000:.3f}"
-
 
 BF = {d: best_full(d) for d in (cl, cb)}
 body(doc, (
-    "호출률 50%는 테스트가 아닌 보정 세트의 교차적합 예측으로 정하였다. 보정 세트에서 결합형 정확도는 50% 이후 "
+    "호출률 50%는 테스트가 아닌 보정 세트에서 정하였다(교차적합 정확도가 50% 이후 "
     f"{100*max(cal(d,f'fuse_{b}')-cal(d,'fuse_0.5') for d in (cl,cb) for b in (.6,.7,.8,.9,1.0)):.1f}%p 이하로만 올라 "
-    "포화되었고 전량 호출과의 차이는 0.7%p 이내였다. 이 호출률에서 결합형의 테스트 정확도는 LLM 전량 "
+    "포화, 전량 호출과 0.7%p 이내). 이 호출률에서 결합형의 테스트 정확도는 LLM 전량 "
     f"호출 중 더 높은 설정보다 {pp(cl,'fuse_0.5',BF[cl])}%p, {pp(cb,'fuse_0.5',BF[cb])}%p 높았으나 유의하지 않았고"
     f"({pfmt(pval(cl,f'fuse_0.5_vs_{BF[cl]}'))}, {pfmt(pval(cb,f'fuse_0.5_vs_{BF[cb]}'))[2:]}), NN-PPI 적용 전량 호출보다는 "
     f"{pp(cl,'fuse_0.5','sonnet_nnppi')}%p, {pp(cb,'fuse_0.5','sonnet_nnppi')}%p 유의하게 높았다"
-    f"({pfmt(max(pval(d,'fuse_0.5_vs_sonnet_nnppi') for d in (cl,cb)))}). 호출률을 100%로 올리면 정확도가 "
+    f"({pfmt(max(pval(d,'fuse_0.5_vs_sonnet_nnppi') for d in (cl,cb)))}). 호출률을 100%로 올리면(그림 2) 정확도가 "
     f"{pp(cl,'fuse_1.0','fuse_0.5')}%p, {pp(cb,'fuse_1.0','fuse_0.5')}%p 더 올랐고, ClaimBuster에서는 이 차이가 "
-    f"유의하였다({pfmt(pval(cb,'fuse_0.5_vs_fuse_1.0_seed0'))}). 테스트 문장을 모으지 않고 보정 세트의 |d| 임계값으로 문장마다 라우팅해도 "
-    f"정확도는 {IMP['clef']['acc']['stream_global_0.5'][0]:.3f}, {IMP['cb']['acc']['stream_global_0.5'][0]:.3f}"
-    f"(실제 호출 {100*IMP['clef']['test_call_rate']['0.5'][0]:.0f}%, {100*IMP['cb']['test_call_rate']['0.5'][0]:.0f}%)였다. 교체형은 호출률이 높아질수록 임베딩 SVM이 확신하는 문장까지 바꾸어, "
-    "확신도 상위 절반에서 옳은 판정 "
+    f"유의하였다({pfmt(pval(cb,'fuse_0.5_vs_fuse_1.0_seed0'))}). 교체형은 임베딩 SVM이 확신하는 상위 절반에서 옳은 판정 "
     f"{FL['replace']['broke']}건을 틀리게, 틀린 판정 {FL['replace']['fixed']}건을 옳게 바꾸었으나 결합형은 각각 "
-    f"{FL['fuse']['broke']}건, {FL['fuse']['fixed']}건이었다(ClaimBuster 1회차). 이는 교체가 옳은 답을 해칠 수 있다는 "
-    "보고[7]와 일치한다. 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았고(ClaimBuster 30~50%, "
-    f"CLEF 20~30%에서 유의, {p_upper_multi([(cb, f'fuse_{b}_vs_replace_{b}') for b in (0.3,0.4,0.5)] + [(cl, f'fuse_{b}_vs_replace_{b}') for b in (0.2,0.3)])}), 같은 문장에 LLM을 호출하고 NN-PPI로 판정하는 "
+    f"{FL['fuse']['broke']}건, {FL['fuse']['fixed']}건이었다(1회차, ClaimBuster). 이는 교체가 옳은 답을 해칠 수 있다는 보고[7]와 일치한다. 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았고, "
+    "같은 문장에 LLM을 호출하고 NN-PPI로 판정하는 "
     f"캐스케이드({f3(acc(cl,'nnppi_0.5'))}, {f3(acc(cb,'nnppi_0.5'))})보다도 유의하게 높아"
-    f"({pfmt(max(pval(d,'fuse_0.5_vs_nnppi_0.5') for d in (cl,cb)))}) 차이는 판정 방식에서 온다."
+    f"({pfmt(max(pval(d,'fuse_0.5_vs_nnppi_0.5') for d in (cl,cb)))}) 이 차이는 판정 방식에서 온다."
 ))
+
+# built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
+figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
+       "그림 2. 호출률에 따른 테스트 정확도 (5회 평균, 띠는 표준편차)")
 
 # ---------------- IV. 결론 ----------------
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
-    "팩트체크 필요성 탐지에서 라벨로 학습한 저비용 분류기와 LLM은 서로 다른 정보를 가지며, 불확실한 문장에서만 "
-    "LLM을 호출해 두 점수를 결합하면 호출을 절반으로 줄여도 전량 호출과 유의한 차이가 없는 정확도를 얻는다. 출처가 겹치는[5] 영어 두 데이터셋과 단일 "
+    "라벨로 학습한 저비용 분류기와 LLM은 서로 다른 정보를 가지며, 불확실한 문장에서만 "
+    "LLM을 호출해 결합하면 호출을 절반으로 줄여도 전량 호출과 유의한 차이가 없는 정확도를 얻는다. 출처가 겹치는[5] 영어 두 데이터셋과 단일 "
     "LLM으로 평가하였고 비용을 호출률로만 보고하였다는 한계가 있다."
 ))
 
@@ -325,12 +348,12 @@ refs = [
     "[3] M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
     "[4] T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
     "[5] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
-    "[6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+    "[6] F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
     "[7] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
     "[8] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
 ]
 for r in refs:
-    body(doc, r, size=7, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT)
+    body(doc, r, size=7, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format.line_spacing = Pt(8.4)
 
 # Word inserts a gap between Hangul and Latin/digits by default ("LLM을" rendered as "LLM 을");
 # switch it off everywhere. pPr children must follow the OOXML schema order, so insert before the

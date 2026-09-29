@@ -170,7 +170,7 @@
 
 - 근거 유형: direct
 
-## [6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
+## [6] F. Arslan et al., "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
 
 - 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
 - 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne
