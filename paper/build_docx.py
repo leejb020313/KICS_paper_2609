@@ -16,6 +16,7 @@ Convert to PDF with Word (File > Save As > PDF), then check it:
 import json
 import math
 import os
+import re
 
 import pymupdf
 from docx import Document
@@ -129,7 +130,8 @@ def figure(doc, png, width_cm, caption):
     set_font(cap.add_run(caption), BODY_FONT, 8, bold=True)
 
 
-def body(doc, text, size=9, indent=0.3175, after=2.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY):
+def body(doc, text, size=9, indent=0.3175, after=3.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY, lead=None):
+    """Body paragraph; `lead` is a bold run-in sentence that states the paragraph's finding."""
     p = doc.add_paragraph()
     p.alignment = align
     pf = p.paragraph_format
@@ -137,6 +139,8 @@ def body(doc, text, size=9, indent=0.3175, after=2.5, align=WD_ALIGN_PARAGRAPH.J
     pf.line_spacing = 1.0
     if indent:
         pf.first_line_indent = Cm(indent)
+    if lead:
+        set_font(p.add_run(lead + " "), BODY_FONT, size, bold=True)
     set_font(p.add_run(text), BODY_FONT, size)
     return p
 
@@ -180,17 +184,16 @@ cb, cl = "cb", "clef"
 FL = R["cb"]["flips_confident_half_seed0"]
 centered(doc, "요 약", 11, False, after=3)
 body(doc, (
-    "팩트체크 필요성 탐지(check-worthiness detection)는 유입되는 모든 문장에 적용되므로, 대형 언어 모델(LLM)을 "
-    "모든 문장에 호출하면 비용과 지연이 크다. 본 논문은 소형 LLM 점수를 이웃 문장의 잔차로 보정하는 선행 연구 NN-PPI를 "
-    "CLEF 2024와 ClaimBuster에서 재현하고, 같은 라벨과 문장 "
-    "임베딩으로 분류기를 직접 학습하면 LLM 없이도 NN-PPI와 같거나 높은 정확도를 얻음을 보인다. 이어 저비용 분류기가 모든 "
-    "문장을 판정하고 불확실한 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 결합하는 결합형 "
-    "캐스케이드를 제안한다. 실험 결과 LLM 호출을 절반으로 줄이고도 테스트 정확도"
-    f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})가 LLM 전량 호출 중 더 높은 설정"
-    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})과 유의한 차이가 없었고, NN-PPI 적용 전량 호출"
+    "팩트체크 필요성 탐지(check-worthiness detection)는 유입되는 모든 문장에 적용되므로, 모든 문장에 대형 언어 모델(LLM)을 "
+    "호출하면 비용과 지연이 크다. 본 논문은 소형 LLM 점수를 이웃 문장으로 보정하는 선행 연구 NN-PPI를 "
+    "CLEF 2024와 ClaimBuster에서 재현하고, 같은 라벨과 문장 임베딩으로 학습한 저비용 분류기만으로도 NN-PPI와 같거나 높은 "
+    "정확도를 얻음을 보인다. 이어 분류기가 불확실한 문장에만 LLM을 호출하고, 그 판정을 LLM의 답으로 교체하는 대신 두 점수를 "
+    "결합하는 결합형 캐스케이드를 제안한다. LLM 호출을 절반으로 줄여도 테스트 정확도"
+    f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})는 LLM 단독 전량 호출의 최고 정확도"
+    f"({f3(acc(cl,best_full(cl)))}, {f3(acc(cb,best_full(cb)))})와 유의한 차이가 없었고, NN-PPI를 적용한 전량 호출"
     f"({f3(acc(cl,'sonnet_nnppi'))}, {f3(acc(cb,'sonnet_nnppi'))})보다는 유의하게 높았다. 결합형은 모든 호출률에서 "
-    "교체형 캐스케이드보다 평균 정확도가 높아, 라벨에 담긴 판정 기준과 LLM의 일반 지식이 상호 보완적임을 시사한다."
-), size=9, indent=0.5)
+    "교체형 캐스케이드보다 평균 정확도가 높아, 라벨에 담긴 판정 기준과 LLM의 일반 지식이 서로 보완적임을 시사한다."
+), size=9, indent=0.5, after=2.5)
 
 doc.add_section(0)
 _body = doc.sections[-1]
@@ -202,71 +205,81 @@ columns(doc, 2)
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
     "팩트체크 필요성 탐지는 유입되는 모든 문장에 적용되므로, 실제 팩트체크 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 "
-    "비현실적이라고 보고하였다[1]. NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 "
-    "잔차로 보정한다. 같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나 관용적 표현에서는 LLM이 앞선다고 "
-    "보고하고, 인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2]. "
-    "일반적인 캐스케이드[4]는 "
-    "불확실한 입력을 더 큰 LLM에 넘기되 그 답으로 교체하고, LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 "
-    "LLM을 호출한다. 위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8]. "
-    "본 논문은 [2]의 하이브리드를 구현하되, 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 반영한다."
+    "비현실적이라고 보고하였다[1]. 이에 NN-PPI[1]는 소형 LLM의 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 "
+    "문장의 잔차로 보정한다. 같은 연구진은 파인튜닝한 소형 인코더도 LLM과 경쟁할 수 있으나 관용적 표현에서는 LLM이 앞선다고 "
+    "보고하며, 인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드를 향후 과제로 남겼다[2]."
 ))
 body(doc, (
-    "본 논문의 기여는 다음과 같다. (1) NN-PPI를 재현하고, 같은 라벨과 임베딩으로 학습한 분류기가 LLM 없이 NN-PPI와 "
-    "같거나 높은 정확도를 냄을 보인다. (2) 상용 LLM을 모든 문장에 적용해도 팩트체크가 필요한 문장을 "
-    "과소 판정함을 보인다. (3) 저비용 분류기의 판정을 유지하면서 불확실한 문장에서만 LLM 점수를 결합하는 결합형 캐스케이드를 "
-    "제안하고, 호출을 절반으로 줄여도 전량 호출과 유의한 차이가 없는 정확도를 얻음을 보인다."
+    "이러한 하이브리드의 일반적 형태인 캐스케이드[4]는 넘긴 입력의 판정을 LLM의 답으로 교체한다. 그러나 LLM의 판정 기준은 "
+    "데이터셋 라벨과 다를 수 있어, 교체는 분류기의 옳은 판정까지 바꿀 수 있다. LabelFusion[3]은 인코더와 LLM의 출력을 "
+    "결합하지만 모든 입력에 LLM을 호출하며, 넘긴 입력에서만 두 출력을 결합하는 캐스케이드는 일반 분류 과제에서 "
+    "제안되었다[8]. 본 논문은 [2]의 하이브리드를 팩트체크 필요성 탐지에 구현하되, 결합 가중치를 라벨로 학습하여 LLM과 "
+    "라벨의 판정 기준 차이까지 반영한다."
+))
+body(doc, (
+    "본 논문의 기여는 세 가지이다. (1) NN-PPI를 재현하고, 같은 라벨과 임베딩으로 학습한 분류기가 LLM 없이도 NN-PPI와 "
+    "같거나 높은 정확도를 냄을 보인다. (2) 상용 LLM을 모든 문장에 적용해도 팩트체크가 필요한 문장을 상당수 놓침을 보인다. "
+    "(3) 분류기가 불확실한 문장에서만 LLM 점수를 결합하는 결합형 캐스케이드를 제안하고, 호출을 절반으로 줄여도 전량 "
+    "호출과 유의한 차이가 없는 정확도를 얻음을 보인다."
 ))
 
 # ---------------- II. 제안 기법 ----------------
 heading(doc, "Ⅱ. 제안 기법")
 subheading(doc, "2.1 저비용 분류기")
 body(doc, (
-    "문장 x가 팩트체크가 필요한지 y∈{0,1}을 판정하며, NN-PPI와 같은 라벨이 있는 보정 세트 L을 사용한다. 저비용 "
-    "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 쓰는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM이며, 클래스 불균형을 "
-    "고려한 가중치로 L에서 학습한다. 결정값 d(x)는 양수일수록 팩트체크가 필요함을 뜻하며, 추론은 CPU에서 문장당 약 "
-    "6 ms이다."
+    "문장 x에 대해 팩트체크 필요 여부 y∈{0,1}을 판정하며, 학습에는 NN-PPI와 같은 라벨 있는 보정 세트 L을 쓴다. 저비용 "
+    "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 쓰는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM으로, "
+    "클래스 불균형을 고려한 가중치로 L에서 학습한다. 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이고, 절댓값이 클수록 "
+    "분류기가 확신한다는 뜻이다. 추론은 CPU에서 문장당 약 6 ms가 걸린다."
 ))
 subheading(doc, "2.2 결합형 캐스케이드")
 body(doc, (
-    "결합형 캐스케이드(이하 결합형)는 그림 1과 같이 |d(x)|가 작은 순서, 즉 분류기가 가장 불확실한 문장부터 전체의 ρ 비율(호출률)만큼 "
-    "LLM을 호출하여 점수 s(x)∈[0,1]을 얻는다. 호출한 문장은 식 (1)로, 나머지는 d(x)>0 여부로 판정한다."
+    "결합형 캐스케이드(이하 결합형)는 그림 1과 같이 동작한다. 분류기가 가장 불확실한 문장, 즉 |d(x)|가 가장 작은 문장부터 "
+    "전체의 ρ(호출률)만큼 골라 LLM을 호출하고 점수 s(x)∈[0,1]을 얻는다. 호출한 문장은 식 (1)로 d와 s를 결합해 판정하고, "
+    "나머지 문장은 분류기의 판정(d(x)>0)을 그대로 쓴다."
 ))
 # figures/method_diagram.tex, compiled at its printed size (Tectonic) and inserted at that size
 _dg = pymupdf.open(os.path.join(ROOT, "figures", "method_diagram.pdf"))[0].rect
 figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 * 2.54,
        "그림 1. 결합형 캐스케이드의 구조")
 eq = doc.add_paragraph()
-eq.paragraph_format.space_before = Pt(2)
-eq.paragraph_format.space_after = Pt(3)
+eq.paragraph_format.space_before = Pt(4)
+eq.paragraph_format.space_after = Pt(4)
 col_w = (21.0 - 2.0 - 1.5 - 0.75) / 2  # one text column (cm)
 eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w / 2), WD_TAB_ALIGNMENT.CENTER)
 eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w), WD_TAB_ALIGNMENT.RIGHT)
 eq.add_run("\t")
 add_math(eq.add_run(), "eq1")
 set_font(eq.add_run("\t(1)"), BODY_FONT, 9)
-p = body(doc, "(a, b, c)는 L에서 5겹 교차적합으로 얻은 d와 LLM 점수 s로 학습한 로지스틱 회귀 계수이고, "
+p = body(doc, "(a, b, c)는 L에서 5겹 교차적합으로 얻은 d와 s로 학습한 로지스틱 회귀 계수, "
              "σ는 시그모이드 함수, ")
 p.paragraph_format.widow_control = False  # may split across the page so the column bottom is not left empty
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
-    "은 조건이 참이면 1인 지시함수이다. 비교 대상인 교체형 캐스케이드(이하 교체형)는 같은 문장을 선택하되, LLM 점수에 L에서 "
-    "고른 임계값만 적용하여 판정한다."), BODY_FONT, 9)
+    "는 조건이 참이면 1인 지시함수이다. 비교 대상인 교체형 캐스케이드(이하 교체형)는 같은 문장에 LLM을 호출하되, d를 버리고 "
+    "s에 L에서 고른 임계값만 적용한다."), BODY_FONT, 9)
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실험 및 결과")
 subheading(doc, "3.1 실험 설정")
 body(doc, (
-    f"실험에는 CLEF 2024 CheckThat! Task 1 영어 데이터(보정 {R[cl]['n_calib_gemma']:,}문장, 테스트는 dev·dev-test·공식 test를 "
-    f"합친 {R[cl]['n_test']:,}문장)와 ClaimBuster 데이터(보정은 2012년 토론 {R[cb]['n_calib_gemma']:,}문장, 테스트는 2016년 토론 "
-    f"{R[cb]['n_test']:,}문장)를 사용하였다[5,6]. "
-    "NN-PPI는 원 논문의 Gemma 3 4B 설정으로 재현하였고(원 논문과 같은 CLEF dev-test와 ClaimBuster 2016년 분할에서 "
-    f"가중 F1 CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
-    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}; 원 논문 0.827, 0.760), 이웃 수 k는 보정 세트 내부 "
-    f"검증으로 선택하였다(두 데이터셋 k={R[cl]['k_sel']}). LLM은 "
-    "Claude Sonnet 5이며 NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다(문장 단위 채점과 AUC 0.991 대 0.990). LLM 임계값, 결합 계수, k는 모두 보정 세트 안에서만 정하였고 "
-    "임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 보정 세트의 80%를 비복원 추출하여 5회 반복한 평균을 보고하며, 방법 간 "
-    "차이는 1회차 예측에 대한 McNemar 검정(α=0.05)으로 평가하였다."
-))
+    f"CLEF 2024 CheckThat! Task 1 영어 데이터[5]는 {R[cl]['n_calib_gemma']:,}문장을 보정 세트로, dev·dev-test·공식 test를 "
+    f"합친 {R[cl]['n_test']:,}문장을 테스트로 썼다. ClaimBuster[6]는 2012년 토론 {R[cb]['n_calib_gemma']:,}문장을 보정 세트로, "
+    f"2016년 토론 {R[cb]['n_test']:,}문장을 테스트로 썼다."
+), lead="데이터.")
+assert R[cl]["k_sel"] == R[cb]["k_sel"]  # the text says both datasets selected the same k
+body(doc, (
+    "NN-PPI는 원 논문과 같이 Gemma 3 4B로 재현하였다. 원 논문과 같은 분할(CLEF dev-test, ClaimBuster 2016년)에서 가중 F1은 "
+    f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
+    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 0.827, 0.760). 이웃 수 k는 "
+    f"보정 세트 내부 검증으로 정하였다(두 데이터셋 모두 k={R[cl]['k_sel']}). LLM은 Claude Sonnet 5이며, NN-PPI의 판정 기준 "
+    "프롬프트로 40문장씩 묶어 채점하였다. 문장 단위로 채점한 표본에서 AUC는 0.991 대 0.990으로 묶음 채점과 거의 같았다."
+), lead="모델.")
+body(doc, (
+    "LLM 임계값, 결합 계수, k, 호출률은 모두 보정 세트 안에서만 정하였고, 임베딩 SVM은 기본 하이퍼파라미터를 썼다. 보정 "
+    "세트의 80%를 비복원 추출하여 5회 반복한 평균을 보고하며, 방법 간 차이는 1회차 예측에 McNemar 검정(α=0.05)을 적용해 "
+    "평가하였다."
+), lead="평가.")
 
 subheading(doc, "3.2 결과")
 DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
@@ -321,16 +334,20 @@ for row in t.rows[:-1]:
     for c in row.cells:
         c.paragraphs[0].paragraph_format.keep_with_next = True
 
+table_gap = body(doc, (
+    f"CLEF에서는 임베딩 SVM이 NN-PPI보다 유의하게 높았고({pfmt(pval(cl,'svm_vs_gemma_nnppi_sel'))}), ClaimBuster에서는 "
+    f"차이가 유의하지 않았다({pfmt(pval(cb,'svm_vs_gemma_nnppi_sel'))})."
+), lead="LLM 없이도 NN-PPI와 같거나 높다.")
+table_gap.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
 body(doc, (
-    f"표 1에서 임베딩 SVM은 LLM 없이 NN-PPI보다 CLEF에서 유의하게 높았고({pfmt(pval(cl,'svm_vs_gemma_nnppi_sel'))}) "
-    f"ClaimBuster에서는 차이가 유의하지 않았다({pfmt(pval(cb,'svm_vs_gemma_nnppi_sel'))}). LLM을 그대로 쓰면 팩트체크가 필요한 문장을 과소 "
-    f"판정하여 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
-    f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
-    f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f})에 그쳤고, 라벨로 임계값을 조정하자 각각 "
-    f"{R[cl]['metrics']['sonnet_thr']['rec1'][0]:.2f}, {ro(f"{R[cb]['metrics']['sonnet_thr']['rec1'][0]:.2f}")} 개선되었다. 이는 LLM의 판정 기준과 데이터셋 라벨 사이에 "
-    "차이가 있음을 시사한다. 한편 ClaimBuster에서는 클래스 균형인 보정 세트와 달리 테스트의 팩트체크가 필요한 문장이 "
-    f"{100*sum(v['n_pos'] for v in R[cb]['by_part'].values())/R[cb]['n_test']:.0f}%여서, 임계값 조정 후 정확도는 오히려 {pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다."
-), after=3)
+    f"LLM 점수를 그대로(0.5 기준) 쓰면 정밀도는 CLEF {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, ClaimBuster "
+    f"{ro(f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}")} 높지만 재현율은 {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, "
+    f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤다. 라벨로 임계값을 조정하면 재현율이 "
+    f"{R[cl]['metrics']['sonnet_thr']['rec1'][0]:.2f}, {ro(f"{R[cb]['metrics']['sonnet_thr']['rec1'][0]:.2f}")} 올라, "
+    "LLM의 판정 기준이 데이터셋 라벨과 다름을 시사한다. 다만 ClaimBuster는 보정 세트가 클래스 균형인 반면 테스트는 "
+    f"팩트체크가 필요한 문장이 {100*sum(v['n_pos'] for v in R[cb]['by_part'].values())/R[cb]['n_test']:.0f}%뿐이어서, "
+    f"조정 후 정확도가 오히려 {pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다."
+), lead="LLM 단독은 팩트체크가 필요한 문장을 놓친다.")
 
 
 def p_upper_multi(pairs):
@@ -339,40 +356,44 @@ def p_upper_multi(pairs):
 
 
 BF = {d: best_full(d) for d in (cl, cb)}
+CAL_GAIN = max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in (cl, cb) for b in (.6, .7, .8, .9, 1.0))
+assert max(cal(d, 'sonnet_thr_oof') - cal(d, 'fuse_0.5') for d in (cl, cb)) <= 0.007 + 1e-9  # "0.7%p 이내"
 body(doc, (
-    "호출률 50%는 테스트가 아닌 보정 세트에서 정하였다(교차적합 정확도가 50% 이후 "
-    f"{100*max(cal(d,f'fuse_{b}')-cal(d,'fuse_0.5') for d in (cl,cb) for b in (.6,.7,.8,.9,1.0)):.1f}%p 이하로만 올라 "
-    f"포화, 전량 호출과 0.7%p 이내: CLEF {f3(cal(cl,'fuse_0.5'))} 대 {f3(cal(cl,'sonnet_thr_oof'))}, ClaimBuster "
-    f"{f3(cal(cb,'fuse_0.5'))} 대 {f3(cal(cb,'sonnet_thr_oof'))}). 이 호출률에서 결합형의 테스트 정확도는 LLM 전량 "
-    f"호출 중 더 높은 설정보다 {pp(cl,'fuse_0.5',BF[cl])}%p, {pp(cb,'fuse_0.5',BF[cb])}%p 높았으나 유의하지 않았고"
-    f"({pfmt(pval(cl,f'fuse_0.5_vs_{BF[cl]}'))}, {pfmt(pval(cb,f'fuse_0.5_vs_{BF[cb]}'))[2:]}), NN-PPI 적용 전량 호출보다는 "
-    f"{pp(cl,'fuse_0.5','sonnet_nnppi')}%p, {pp(cb,'fuse_0.5','sonnet_nnppi')}%p 유의하게 높았다"
+    f"호출률 50%는 보정 세트에서 정하였다. 교차적합 정확도가 50% 이후 {100*CAL_GAIN:.1f}%p 이하로만 올랐고, 전량 호출과의 "
+    "차이도 0.7%p 이내였기 때문이다. 이 호출률에서 결합형은 LLM 단독 전량 호출의 최고 정확도(표 1의 두 설정 중 높은 쪽)와 "
+    f"유의한 차이가 없었고(CLEF {pfmt(pval(cl,f'fuse_0.5_vs_{BF[cl]}'))}, ClaimBuster {pfmt(pval(cb,f'fuse_0.5_vs_{BF[cb]}'))}), "
+    "NN-PPI를 적용한 전량 호출보다는 유의하게 높았다"
     f"({pfmt(max(pval(d,'fuse_0.5_vs_sonnet_nnppi') for d in (cl,cb)))}). 호출률을 100%로 올리면(그림 2) 정확도가 "
-    f"{pp(cl,'fuse_1.0','fuse_0.5')}%p, {pp(cb,'fuse_1.0','fuse_0.5')}%p 더 올랐고, ClaimBuster에서는 이 차이가 "
-    f"유의하였다({pfmt(pval(cb,'fuse_0.5_vs_fuse_1.0_seed0'))}). 테스트 문장을 모으지 않고 보정 세트에서 정한 |d| 임계값으로 "
-    f"문장마다 라우팅해도 정확도는 {IMP['clef']['acc']['stream_global_0.5'][0]:.3f}, {IMP['cb']['acc']['stream_global_0.5'][0]:.3f}"
-    f"(실제 호출률 {100*IMP['clef']['test_call_rate']['0.5'][0]:.0f}%, {100*IMP['cb']['test_call_rate']['0.5'][0]:.0f}%)였다. "
-    f"교체형은 임베딩 SVM이 확신하는 상위 절반에서 옳은 판정 "
-    f"{FL['replace']['broke']}건을 틀리게, 틀린 판정 {FL['replace']['fixed']}건을 옳게 바꾸었으나 결합형은 각각 "
-    f"{FL['fuse']['broke']}건, {FL['fuse']['fixed']}건이었다(1회차, ClaimBuster). 이는 교체가 옳은 답을 해칠 수 있다는 보고[7]와 일치한다. 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았고"
-    f"(ClaimBuster 30~50%, CLEF 20~30%에서 유의, {p_upper_multi([(cb, f'fuse_{b}_vs_replace_{b}') for b in (0.3,0.4,0.5)] + [(cl, f'fuse_{b}_vs_replace_{b}') for b in (0.2,0.3)])}), "
-    "같은 문장에 LLM을 호출하고 NN-PPI로 판정하는 "
-    f"캐스케이드({f3(acc(cl,'nnppi_0.5'))}, {f3(acc(cb,'nnppi_0.5'))})보다도 유의하게 높아"
-    f"({pfmt(max(pval(d,'fuse_0.5_vs_nnppi_0.5') for d in (cl,cb)))}) 이 차이는 판정 방식에서 온다."
-))
+    f"CLEF {pp(cl,'fuse_1.0','fuse_0.5')}%p, ClaimBuster {pp(cb,'fuse_1.0','fuse_0.5')}%p 더 올랐고, ClaimBuster에서는 이 "
+    f"차이가 유의하였다({pfmt(pval(cb,'fuse_0.5_vs_fuse_1.0_seed0'))}). 테스트 문장을 모아 순위를 매기지 않고 보정 세트에서 "
+    f"정한 |d| 임계값으로 문장마다 바로 라우팅해도 정확도는 {IMP['clef']['acc']['stream_global_0.5'][0]:.3f}, "
+    f"{IMP['cb']['acc']['stream_global_0.5'][0]:.3f}(실제 호출률 {100*IMP['clef']['test_call_rate']['0.5'][0]:.0f}%, "
+    f"{100*IMP['cb']['test_call_rate']['0.5'][0]:.0f}%)였다."
+), lead="호출을 절반으로 줄여도 정확도가 유지된다.")
+body(doc, (
+    "결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았다(ClaimBuster 30~50%, CLEF 20~30%에서 유의, "
+    f"{p_upper_multi([(cb, f'fuse_{b}_vs_replace_{b}') for b in (0.3,0.4,0.5)] + [(cl, f'fuse_{b}_vs_replace_{b}') for b in (0.2,0.3)])}). "
+    "같은 문장에 LLM을 호출하고 NN-PPI로 판정하는 캐스케이드보다도 유의하게 높아"
+    f"({pfmt(max(pval(d,'fuse_0.5_vs_nnppi_0.5') for d in (cl,cb)))}), 차이는 어떤 문장을 호출하느냐가 아니라 호출한 뒤 "
+    "어떻게 판정하느냐에서 온다. 호출률을 100%로 올려 임베딩 SVM이 확신하는 절반까지 LLM을 호출하면, 교체형은 그중 옳은 "
+    f"판정 {FL['replace']['broke']}건을 틀리게, 틀린 판정 {FL['replace']['fixed']}건을 옳게 바꾸었지만 결합형은 각각 "
+    f"{FL['fuse']['broke']}건, {FL['fuse']['fixed']}건만 바꾸었다(ClaimBuster 1회차). 교체가 옳은 답을 해칠 수 있다는 "
+    "보고[7]와 일치한다."
+), lead="교체보다 결합이 낫다.")
 
 # worked example: results/example_case.json (scripts/example_case.py, seed-0 CLEF models)
 EX = json.load(open(os.path.join(ROOT, "results", "example_case.json"), encoding="utf-8"))
 E = EX["example"]
 neg = lambda x, n=2: f"{x:.{n}f}".replace("-", "−")
+assert E["d"] < 0 and EX["llm_threshold"] <= E["s"] < E["bar"]  # replacement says "needed", fused says "not needed"
 body(doc, (
-    "식 (1)은 LLM 점수의 판정 기준을 d에 따라 옮긴다. CLEF 1회차에서 학습한 계수"
-    f"(a={neg(EX['a'])}, b={neg(EX['b'])}, c={neg(EX['c'])})로 보면, 결합형이 팩트체크가 필요하다고 판정하는 LLM 점수 기준 "
-    f"(−c−a·d)/b는 d=0에서 {EX['bar_at_0']:.2f}이고 분류기가 불필요 쪽으로 기울수록 높아진다. 예를 들어 공약 문장 "
-    f"“{E['text']}”(라벨: 불필요)은 d={neg(E['d'])}, s={E['s']:.2f}여서, LLM 임계값 {eul(f'{EX['llm_threshold']:.2f}')} 쓰는 교체형은 "
-    f"팩트체크가 필요하다고 잘못 판정하지만 결합형은 기준 {E['bar']:.2f}에 못 미쳐 옳게 판정한다. 호출한 절반에서 결합형만 "
-    f"옳은 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳은 문장은 {EX['n_queried_replace_right_fuse_wrong']}개였다."
-))
+    "식 (1)은 d에 따라 LLM 점수의 판정 기준을 옮긴다. 분류기가 ‘불필요’ 쪽으로 기울수록(d<0) 결합형은 LLM에 더 높은 "
+    f"점수를 요구하며, CLEF 1회차에서 이 기준은 d=0일 때 {EX['bar_at_0']:.2f}이다. 예를 들어 공약 문장 “{E['text']}”"
+    f"(라벨: 불필요)은 d={neg(E['d'])}여서 기준이 {ro(f"{E['bar']:.2f}")} 올라가고, s={E['s']:.2f}인 이 문장을 결합형은 옳게 "
+    f"‘불필요’로 판정한다. 반면 LLM 임계값 {eul(f'{EX['llm_threshold']:.2f}')} 쓰는 교체형은 ‘필요’로 잘못 판정한다. "
+    f"LLM을 호출한 절반 전체에서도 결합형만 옳은 문장({EX['n_queried_fuse_right_replace_wrong']}개)이 교체형만 옳은 "
+    f"문장({EX['n_queried_replace_right_fuse_wrong']}개)보다 많았다."
+), lead="작동 예.")
 
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
 figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
@@ -381,10 +402,10 @@ figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
 # ---------------- IV. 결론 ----------------
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
-    "라벨로 학습한 저비용 분류기와 LLM은 서로 다른 정보를 가지며, 불확실한 문장에서만 "
-    "LLM을 호출해 결합하면 호출을 절반으로 줄여도 전량 호출과 유의한 차이가 없는 정확도를 얻는다. 출처가 겹치는[5] 영어 두 데이터셋과 단일 "
-    "LLM으로 평가하였고 비용을 호출률로만 보고하였다는 한계가 있으며, 향후 다국어 데이터와 여러 LLM, 금액 기준 비용으로 "
-    "평가를 확장할 계획이다."
+    "라벨로 학습한 저비용 분류기와 LLM은 서로 다른 정보를 가지며, 분류기가 불확실한 문장에서만 LLM을 호출해 두 점수를 "
+    "결합하면 호출을 절반으로 줄여도 전량 호출과 유의한 차이가 없는 정확도를 얻는다. 또한 결합은 같은 문장을 LLM의 판정으로 "
+    "교체하는 방식보다 모든 호출률에서 평균 정확도가 높았다. 다만 출처가 겹치는[5] 영어 두 데이터셋과 단일 LLM으로 "
+    "평가하였고 비용을 호출률로만 측정하였다. 향후 다국어 데이터와 여러 LLM, 금액 기준 비용으로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
@@ -424,6 +445,21 @@ def no_autospace(paragraph):
             anchor.addprevious(el)
 
 
+_HANGUL_PAIR = re.compile(r"(?<=[가-힣])(?=[가-힣])")
+
+
+def hangul_breaks(paragraph):
+    """Let justified lines break between Hangul syllables, as in HWP, by putting a zero-width space between adjacent
+    syllables. Word otherwise breaks Korean only at spaces, so narrow justified columns stretch the gaps between 어절.
+    (w:wordWrap=0 would do the same but also splits English words and numbers mid-token.)"""
+    ts = [t for t in paragraph._p.iter(qn("w:t")) if t.text]
+    for t in ts[:-1]:
+        t.text = _HANGUL_PAIR.sub("​", t.text)
+    if ts:  # keep the paragraph's last 어절 whole, so no single syllable ("다.") is left alone on the last line
+        head, sep, tail = ts[-1].text.rpartition(" ")
+        ts[-1].text = _HANGUL_PAIR.sub("​", head) + sep + tail
+
+
 def no_break_hyphens(paragraph):
     """Replace '-' in text runs by Word's non-breaking hyphen so NN-PPI, RBF-SVM, dev-test never split across lines."""
     for t in list(paragraph._p.iter(qn("w:t"))):
@@ -444,6 +480,8 @@ def no_break_hyphens(paragraph):
 
 for para in doc.paragraphs + [q for tbl in doc.tables for row in tbl.rows for cell in row.cells for q in cell.paragraphs]:
     no_autospace(para)
+    if para.alignment == WD_ALIGN_PARAGRAPH.JUSTIFY:
+        hangul_breaks(para)
     if not para.text.startswith("["):  # reference entries may break at hyphens
         no_break_hyphens(para)
 

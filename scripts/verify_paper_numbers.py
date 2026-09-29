@@ -19,7 +19,8 @@ R = json.load(open(os.path.join(RESULTS, "final_results_full.json"), encoding="u
 R0 = json.load(open(os.path.join(RESULTS, "final_results.json"), encoding="utf-8"))
 S = json.load(open(os.path.join(RESULTS, "streaming_results_full.json"), encoding="utf-8"))
 EX = json.load(open(os.path.join(RESULTS, "example_case.json"), encoding="utf-8"))
-text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[1])))
+# the paper puts zero-width spaces between Hangul syllables (line-break opportunities); drop them
+text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[1])).replace("​", ""))
 acc = lambda d, n: R[d]["metrics"][n]["acc"][0]
 m = lambda d, n, k: R[d]["metrics"][n][k][0]
 cal = lambda d, n: R[d]["calib_curve"][n][0]
@@ -47,11 +48,8 @@ for d in ("clef", "cb"):
     checks += [(f"{d} p svm vs nnppi", pf(pv(d, 'svm_vs_gemma_nnppi_sel'))),
                (f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
                (f"{d} recall sonnet_thr", f"{m(d, 'sonnet_thr', 'rec1'):.2f}"),
-               (f"{d} diff fuse50 - best full", pp(d, 'fuse_0.5', best[d])),
-               (f"{d} p fuse50 vs best full", pf(pv(d, f'fuse_0.5_vs_{best[d]}'))[0 if d == "clef" else 2:]),
-               (f"{d} diff fuse50 - sonnet+nnppi", pp(d, 'fuse_0.5', 'sonnet_nnppi')),
-               (f"{d} diff fuse100 - fuse50", pp(d, 'fuse_1.0', 'fuse_0.5')),
-               (f"{d} calib fuse_0.5", f"{cal(d, 'fuse_0.5'):.3f}"), (f"{d} calib sonnet_thr_oof", f"{cal(d, 'sonnet_thr_oof'):.3f}"),
+               (f"{d} p fuse50 vs best full", ("CLEF " if d == "clef" else "ClaimBuster ") + pf(pv(d, f'fuse_0.5_vs_{best[d]}'))),
+               (f"{d} diff fuse100 - fuse50", ("CLEF " if d == "clef" else "ClaimBuster ") + pp(d, 'fuse_1.0', 'fuse_0.5')),
                (f"{d} stream acc@50", f"{S[d]['acc']['stream_global_0.5'][0]:.3f}"),
                (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
@@ -64,13 +62,11 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("fuse vs replace p bound", pup([("cb", f"fuse_{b}_vs_replace_{b}") for b in (0.3, 0.4, 0.5)] +
                                            [("clef", f"fuse_{b}_vs_replace_{b}") for b in (0.2, 0.3)])),
            ("batch vs single AUC", "0.991 대 0.990"),
-           ("example a", f"a={EX['a']:.2f}"), ("example b", f"b={EX['b']:.2f}"),
-           ("example c", f"c={EX['c']:.2f}".replace("-", "−")), ("example bar at d=0", f"{EX['bar_at_0']:.2f}"),
-           ("example text", EX["example"]["text"]), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
+           ("example bar at d=0", f"d=0일 때 {EX['bar_at_0']:.2f}"), ("example text", EX["example"]["text"]), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"{EX['llm_threshold']:.2f}"),
            ("example bar", f"{EX['example']['bar']:.2f}"),
-           ("example counts", f"{EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳은 문장은 "
-                              f"{EX['n_queried_replace_right_fuse_wrong']}개"),
+           ("example counts", f"결합형만 옳은 문장({EX['n_queried_fuse_right_replace_wrong']}개)이 교체형만 옳은 "
+                              f"문장({EX['n_queried_replace_right_fuse_wrong']}개)"),
            ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p"),
            ("cb flips replace broke", f"{R['cb']['flips_confident_half_seed0']['replace']['broke']}건"),
            ("cb flips replace fixed", f"{R['cb']['flips_confident_half_seed0']['replace']['fixed']}건"),
