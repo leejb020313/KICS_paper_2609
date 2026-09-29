@@ -1,36 +1,39 @@
-% 그림 1: 결합형 캐스케이드의 처리 흐름. One KICS column (8.2 cm); compile with Tectonic (XeTeX):
+% Figure 1: the fused cascade. One KICS column (8.2 cm); compile with Tectonic (XeTeX):
 %   tectonic figures/method_diagram.tex   -> figures/method_diagram.pdf (PNG for the Word draft: 600 dpi)
 % The fusion step is the only accented node (the contribution); the rest is neutral.
 \documentclass[border=1pt]{standalone}
 \usepackage{fontspec}
-\setmainfont{Malgun Gothic}
+\setmainfont{Arial}
 \usepackage{amsmath}
 \usepackage{tikz}
-\usetikzlibrary{positioning,arrows.meta,calc}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
 \definecolor{ours}{HTML}{0072B2}
-\definecolor{ink}{HTML}{333333}
+\definecolor{ink}{HTML}{3A3A3A}
+\definecolor{soft}{HTML}{F2F2F2}
 \begin{document}
-\fontsize{7.5}{9}\selectfont
+\fontsize{7}{8.4}\selectfont
 \begin{tikzpicture}[
-    node distance=3.2mm and 3.4mm,
-    box/.style={draw=ink, rounded corners=1.5pt, align=center, inner sep=2pt, minimum height=7.5mm, line width=0.5pt},
-    llm/.style={box, fill=black!6},
-    ours/.style={box, draw=ours, fill=ours!10, line width=0.8pt},
-    flow/.style={-{Stealth[length=1.6mm]}, draw=ink, line width=0.5pt},
-    lbl/.style={font=\fontsize{6.5}{7.5}\selectfont, text=ink, inner sep=1pt},
+    node distance=2.6mm and 7mm,
+    box/.style={draw=ink, rounded corners=1.2pt, align=center, line width=0.45pt,
+                minimum width=15.5mm, minimum height=7.6mm, inner sep=1.5pt},
+    llm/.style={box, fill=soft},
+    ours/.style={box, draw=ours, fill=ours!9, line width=0.9pt, minimum width=21mm},
+    gate/.style={draw=ink, diamond, aspect=1.9, align=center, line width=0.45pt, inner sep=0.6pt},
+    flow/.style={-{Stealth[length=1.5mm,width=1.2mm]}, draw=ink, line width=0.45pt},
+    lbl/.style={font=\fontsize{6}{7}\selectfont, text=ink!80, inner sep=1pt},
   ]
-  \node[box]                          (x)     {문장\\$x$};
-  \node[box, right=of x]              (svm)   {임베딩 SVM\\결정값 $d(x)$};
-  \node[box, right=of svm]            (route) {$|d(x)|$가\\하위 $\rho$?};
-  \node[box, right=7mm of route]      (keep)  {SVM 판정\\$d(x)>0$};
-  \node[llm, below=3.8mm of route]    (llm)   {LLM 호출\\점수 $s(x)$};
-  \node[ours, left=5mm of llm]        (fuse)  {결합 판정 (식 1)\\\mbox{$\sigma(a\,d+b\,s+c)\geq 0.5$}};
+  \node[box]                       (svm)  {Embedding SVM\\[0.3mm]$d(x)$};
+  \node[gate, right=of svm]        (gate) {Uncertain?};
+  \node[box, right=of gate]        (keep) {SVM label\\[0.3mm]$d(x)>0$};
+  \node[llm, below=4.2mm of gate]  (llm)  {LLM score\\[0.3mm]$s(x)$};
+  \node[ours] at (llm -| svm)      (fuse) {Fused label (Eq.\,1)\\[0.3mm]$\sigma(ad+bs+c)\geq 0.5$};
 
-  \draw[flow] (x) -- (svm);
-  \draw[flow] (svm) -- (route);
-  \draw[flow] (route) -- node[lbl, above] {아니오} (keep);
-  \draw[flow] (route) -- node[lbl, right] {예} (llm);
+  \coordinate[left=4.5mm of svm] (in);
+  \draw[flow] (in) -- node[lbl, above] {$x$} (svm);
+  \draw[flow] (svm) -- (gate);
+  \draw[flow] (gate) -- node[lbl, above] {no} (keep);
+  \draw[flow] (gate) -- node[lbl, right] {yes} (llm);
   \draw[flow] (llm) -- node[lbl, above] {$s$} (fuse);
-  \draw[flow] (svm.south) -- node[lbl, right, pos=0.4] {$d$} (svm.south |- fuse.north);
+  \draw[flow] (svm) -- node[lbl, right] {$d$} (fuse);
 \end{tikzpicture}
 \end{document}
