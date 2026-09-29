@@ -47,6 +47,9 @@ def main():
                   f"fuse_0.5_vs_best_full({best})": ("fuse_0.5", best),
                   f"replace_0.5_vs_best_full({best})": ("replace_0.5", best),
                   "fuse_0.5_vs_sonnet_nnppi": ("fuse_0.5", "sonnet_nnppi"),
+                  # Table 1 daggers: the proposed row against every other row that uses the LLM
+                  "fuse_0.5_vs_sonnet_raw": ("fuse_0.5", "sonnet_raw"),
+                  "fuse_0.5_vs_sonnet_thr": ("fuse_0.5", "sonnet_thr"),
                   "fuse_0.5_vs_fuse_1.0": ("fuse_0.5", "fuse_1.0")}
         for b in fe.BUDGETS[1:]:
             claims[f"fuse_{b}_vs_replace_{b}"] = (f"fuse_{b}", f"replace_{b}")

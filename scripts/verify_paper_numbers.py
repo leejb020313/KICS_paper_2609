@@ -19,6 +19,9 @@ R = json.load(open(os.path.join(RESULTS, "final_results_full.json"), encoding="u
 R0 = json.load(open(os.path.join(RESULTS, "final_results.json"), encoding="utf-8"))
 S = json.load(open(os.path.join(RESULTS, "streaming_results_full.json"), encoding="utf-8"))
 EX = json.load(open(os.path.join(RESULTS, "example_case.json"), encoding="utf-8"))
+SR = json.load(open(os.path.join(RESULTS, "seed_robustness_full.json"), encoding="utf-8"))  # tests on each of the 5 runs
+ns = lambda d, c: SR[d]["per_seed"][c]["n_sig"]
+ps = lambda pairs: [p for d, c in pairs for p in SR[d]["per_seed"][c]["p"]]
 # the paper puts zero-width spaces between Hangul syllables (line-break opportunities); drop them
 text = re.sub(r"\s+", " ", "".join(p.get_text() for p in pymupdf.open(sys.argv[1])).replace("​", ""))
 acc = lambda d, n: R[d]["metrics"][n]["acc"][0]
@@ -45,22 +48,26 @@ checks = [("clef n_test", f"{R['clef']['n_test']:,}문장"), ("cb n_test", f"{R[
 for d in ("clef", "cb"):
     for n in ["gemma_nnppi_sel", "svm", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5", "fuse_0.5"]:
         checks.append((f"{d} acc {n}", f"{acc(d, n):.3f}"))
-    checks += [(f"{d} p svm vs nnppi", pf(pv(d, 'svm_vs_gemma_nnppi_sel'))),
-               (f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
+    checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
                (f"{d} recall sonnet_thr", f"{m(d, 'sonnet_thr', 'rec1'):.2f}"),
                (f"{d} diff fuse100 - fuse50", ("CLEF " if d == "clef" else "ClaimBuster ") + pp(d, 'fuse_1.0', 'fuse_0.5')),
                (f"{d} stream acc@50", f"{S[d]['acc']['stream_global_0.5'][0]:.3f}"),
                (f"{d} stream rate@50", f"{100 * S[d]['test_call_rate']['0.5'][0]:.0f}%")]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
-           ("p fuse50 vs sonnet+nnppi (max)", pf(max(pv(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ("clef", "cb")))),
-           ("cb p fuse50 vs fuse100 (seed 0)", pf(pv('cb', 'fuse_0.5_vs_fuse_1.0_seed0'))),
+           ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
+           ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
+           ("fuse50 vs best full: n.s. in all runs, p bound", "5회 모두 유의한 차이가 없는 수준이며(p≥" + f"{math.floor(100 * min(ps([(d, f'fuse_0.5_vs_best_full({best[d]})') for d in ('clef', 'cb')]))) / 100:.2f})"),
+           ("reach rates (abstract)", f"교체형(50%)보다 적은 {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}~"
+                                      f"{round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률"),
+           ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
+                                     f"ClaimBuster {round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률로 도달"),
+           ("replacement gap at 50%", f"CLEF {100 * SR['clef']['gap_to_best_full']['0.5']['replace']:+.2f}%p, "
+                                      f"ClaimBuster {100 * SR['cb']['gap_to_best_full']['0.5']['replace']:+.2f}%p"),
            ("cb raw - thr accuracy drop", pp('cb', 'sonnet_raw', 'sonnet_thr')),
            ("cb test positive share", f"{100 * sum(v['n_pos'] for v in R['cb']['by_part'].values()) / R['cb']['n_test']:.0f}%"),
            ("calib gap <=0.7pp", "0.7%p"),
-           ("fuse vs replace p bound", pup([("cb", f"fuse_{b}_vs_replace_{b}") for b in (0.3, 0.4, 0.5)] +
-                                           [("clef", f"fuse_{b}_vs_replace_{b}") for b in (0.2, 0.3)])),
            ("batch vs single AUC", "0.991 대 0.990"),
-           ("example text (quoted prefix)", "I'm going to give them $5,000 to take with them …"), ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
+           ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
            ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
            ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
@@ -68,13 +75,15 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("calib gain after 50%", f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for d in ('clef', 'cb') for b in (.6, .7, .8, .9, 1.0)):.1f}%p")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
-checks.append(("p fuse50 vs best full (CLEF, CB)", f"{pf(pv('clef', 'fuse_0.5_vs_' + best['clef']))}, {pf(pv('cb', 'fuse_0.5_vs_' + best['cb']))[2:]}"))
 checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
-# Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher (McNemar p<0.05, seed 0)
-DAG = {"sonnet_raw": "fuse_0.5_vs_sonnet_raw", "sonnet_thr": "fuse_0.5_vs_sonnet_thr",
-       "sonnet_nnppi": "fuse_0.5_vs_sonnet_nnppi", "replace_0.5": "fuse_0.5_vs_replace_0.5",
-       "nnppi_0.5": "fuse_0.5_vs_nnppi_0.5"}
-mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and pv(d, DAG[n]) < 0.05 else "")
+# Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher on >= 3 of the 5 runs
+DAG = {n: f"fuse_0.5_vs_{n}" for n in ("sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5")}
+mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and ns(d, DAG[n]) >= 3 else "")
+# fusion beats replacement on >= 3 of 5 runs exactly over the call-rate ranges the text names
+RATES = (.05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0)
+maj = {d: [b for b in RATES if ns(d, f"fuse_{b}_vs_replace_{b}") >= 3] for d in ("clef", "cb")}
+rng = lambda r: f"{round(100 * r[0])}% 이상" if r[-1] == 1.0 else f"{round(100 * r[0])}~{round(100 * r[-1])}%"
+checks.append(("fuse > replace majority ranges", f"CLEF {rng(maj['clef'])}, ClaimBuster {rng(maj['cb'])}의 호출률에서 5회 중 3회 이상 유의"))
 # whole Table 1 rows (label, call rate, CLEF, ClaimBuster), so a † can only match in its own row
 for label, rate, n in [("Gemma 3 4B + NN-PPI [1]", "0%", "gemma_nnppi_sel"),
                        ("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
@@ -86,12 +95,12 @@ gap = max(cal(d, "sonnet_thr_oof") - cal(d, "fuse_0.5") for d in ("clef", "cb"))
 directional = {
     "fuse >= replace at every rho>0": all(acc(d, f"fuse_{b}") >= acc(d, f"replace_{b}") for d in ("clef", "cb")
                                           for b in (.05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0)),
-    "fuse50 vs best full-call n.s.": all(pv(d, f"fuse_0.5_vs_{best[d]}") >= 0.05 for d in ("clef", "cb")),
-    "fuse50 > sonnet+nnppi significant": all(pv(d, "fuse_0.5_vs_sonnet_nnppi") < 0.05 for d in ("clef", "cb")),
-    "svm > nnppi significant on CLEF only": pv("clef", "svm_vs_gemma_nnppi_sel") < 0.05 <= pv("cb", "svm_vs_gemma_nnppi_sel")
-                                            and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
+    "fuse50 vs best full-call n.s. in all 5 runs": all(ns(d, f"fuse_0.5_vs_best_full({best[d]})") == 0 for d in ("clef", "cb")),
+    "fuse50 > sonnet+nnppi significant in all 5 runs": all(ns(d, "fuse_0.5_vs_sonnet_nnppi") == 5 for d in ("clef", "cb")),
+    "cb fuse100 > fuse50 significant in all 5 runs": ns("cb", "fuse_0.5_vs_fuse_1.0") == 5,
+    "svm vs nnppi: CB n.s. in all 5 runs, CLEF higher": ns("cb", "svm_vs_gemma_nnppi_sel") == 0 and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
+    "replacement first reaches all-call accuracy at 50%": all(SR[d]["first_rate_reaching_best_full"]["replace"] == 0.5 for d in ("clef", "cb")),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
-    "quoted pledge text is a prefix of the example": EX["example"]["text"].startswith("I'm going to give them $5,000 to take with them"),
 }
 bad = 0
 for name, s in checks:
