@@ -219,7 +219,7 @@ body(doc, (
 # figures/method_diagram.tex, compiled at its printed size (Tectonic) and inserted at that size
 _dg = pymupdf.open(os.path.join(ROOT, "figures", "method_diagram.pdf"))[0].rect
 figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 * 2.54,
-       "그림 1. 결합형의 처리 흐름 (Uncertain: |d(x)|가 하위 ρ에 속함)")
+       "그림 1. 결합형 캐스케이드의 구조")
 eq = doc.add_paragraph()
 eq.paragraph_format.space_before = Pt(2)
 eq.paragraph_format.space_after = Pt(3)

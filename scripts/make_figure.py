@@ -32,25 +32,31 @@ def series(m, prefix):
     return mu, sd
 
 
+# figure text: English in the full-set figure (matches the English method diagram), Korean in the original one
+T = dict(fuse="Fused cascade (ours)", replace="Replacement cascade", thr="All-call LLM (tuned threshold)",
+         nnppi="All-call LLM + NN-PPI", x="LLM call rate (%)", y="Accuracy", font="Arial") if FULL else     dict(fuse="결합형 캐스케이드 (제안)", replace="교체형 캐스케이드", thr="전량 호출 (임계값 조정)",
+         x="LLM 호출률 (%)", y="정확도", font="Malgun Gothic")
+
+
 def main():
     use_style()
-    mpl.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Malgun Gothic"],
+    mpl.rcParams.update({"font.family": "sans-serif", "font.sans-serif": [T["font"]],
                          "axes.unicode_minus": False, "font.size": 8, "axes.labelsize": 8,
                          "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5})
     fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.48 if FULL else 0.58)
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]
-        for prefix, color, marker, label in [("fuse", "blue", "o", "결합형 캐스케이드 (제안)"),
-                                              ("replace", "orange", "s", "교체형 캐스케이드")]:
+        for prefix, color, marker, label in [("fuse", "blue", "o", T["fuse"]),
+                                              ("replace", "orange", "s", T["replace"])]:
             mu, sd = series(m, prefix)
             ax.fill_between(x, mu - sd, mu + sd, color=PALETTE[color], alpha=0.15, linewidth=0)
             ax.plot(x, mu, marker=marker, markersize=2.6, color=PALETTE[color], linewidth=1.2, label=label, zorder=3)
         ax.axhline(m["sonnet_thr"]["acc"][0], color=PALETTE["black"], linestyle="--", linewidth=1.0,
-                   label="전량 호출 (임계값 조정)")
+                   label=T["thr"])
         if FULL:
             ax.axhline(m["sonnet_nnppi"]["acc"][0], color=PALETTE["green"], linestyle="-.", linewidth=1.1,
-                       label="전량 호출 + NN-PPI")
+                       label=T["nnppi"])
         else:
             ax.axhline(m["gemma_nnppi_sel"]["acc"][0], color=PALETTE["green"], linestyle=":", linewidth=1.2,
                        label="Gemma 3 4B + NN-PPI")
@@ -58,9 +64,9 @@ def main():
         ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter("%.2f"))
         ax.set_xlim(-4, 104)
         ax.set_xticks([0, 50, 100])
-        ax.set_xlabel("LLM 호출률 (%)")
+        ax.set_xlabel(T["x"])
         ax.grid(True, axis="y", linewidth=0.4, alpha=0.5)
-    axes[0].set_ylabel("정확도")
+    axes[0].set_ylabel(T["y"])
     if FULL:
         axes[0].set_ylim(0.85, 0.93)
         axes[0].set_yticks([0.86, 0.88, 0.90, 0.92])
