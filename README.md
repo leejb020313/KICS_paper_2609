@@ -69,6 +69,7 @@ scripts/
   example_case.py          본문 3.2절의 판정 기준 예시 (CLEF 1회차 계수, 예시 문장)  -> results/example_case.json
   verify_paper_numbers.py  논문 PDF의 모든 수치와 유의성 주장을 results/*.json과 대조
   make_figure.py           그림 2 (--full)                         -> figures/cascade_budget_full.{pdf,png}
+  figstyle.py              그림 공통 스타일 (크기, 글꼴, 색)
   score_gemma.py           Gemma 3 4B 채점 (llama.cpp 서버)
   build_frontier_prompts.py / run_frontier_batch.sh   Claude Sonnet 5 배치 프롬프트 생성·채점
 data/
@@ -79,10 +80,11 @@ data/
 results/
   gemma/                   Gemma 3 4B 원시 응답과 점수
   frontier/batches/        Claude Sonnet 5 배치 프롬프트(.txt)와 응답(.out)
-  frontier/single/         CLEF 80문장 단건 채점 (배치 채점 타당성 점검용)
+  frontier/single/         CLEF 80문장 단건 채점 (배치 채점 타당성 점검용; JSON이 없는 11개는 CLI 사용량 한도로 실패한 응답 그대로)
   frontier/rerun/          CLEF 테스트 2차 배치 채점 (안정성 점검용)
   *.json, *.log            평가 결과와 실행 로그 (*_full: 논문 수치, 나머지: 이전 표본 318/800문장)
-figures/                   논문 그림 (method_diagram.tex: 그림 1, TikZ)
+figures/                   논문 그림 (method_diagram.tex: 그림 1, TikZ; cascade_budget_full: 그림 2;
+                           cascade_budget: --full 없이 만든 이전 표본의 같은 그림)
 paper/
   cascade_kics_draft.{docx,pdf}  투고 원고 (교신저자 이메일 입력 전). 여백·글꼴·크기는 KICS 공식 워드 양식
                            (conf.kics.or.kr/2026f의 "양식-논문샘플(워드).doc")을 따른다
