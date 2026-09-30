@@ -1,0 +1,75 @@
+
+===== clef: full test n=1691, seeds=5
+  test AUC: Jev 0.964  Sonnet 0.980;  corr(Jev, Sonnet scores) = 0.904
+  svm          acc=0.859±0.003  F1c1=0.755
+  jev_raw      acc=0.908±0.000  F1c1=0.799
+  jev_thr      acc=0.901±0.006  F1c1=0.822
+  jev_nnppi    acc=0.914±0.009  F1c1=0.837
+  sonnet_thr   acc=0.915±0.000  F1c1=0.851
+  svmjev       acc=0.912±0.001  F1c1=0.837
+  budget   SVM->Sonnet fuse   Jev->Sonnet replace   Jev->Sonnet fuse   SVM+Jev->Sonnet fuse
+     0%    0.859±0.003      0.901±0.006      0.901±0.006      0.912±0.001
+     5%    0.874±0.004      0.913±0.003      0.915±0.003      0.921±0.001
+    10%    0.887±0.004      0.913±0.004      0.920±0.003      0.925±0.001
+    20%    0.906±0.002      0.910±0.003      0.924±0.000      0.926±0.001
+    30%    0.917±0.001      0.908±0.003      0.924±0.000      0.926±0.001
+    40%    0.921±0.001      0.910±0.003      0.925±0.000      0.926±0.001
+    50%    0.923±0.000      0.910±0.002      0.925±0.000      0.926±0.001
+    60%    0.924±0.001      0.912±0.002      0.925±0.000      0.926±0.001
+    70%    0.924±0.001      0.914±0.001      0.925±0.000      0.926±0.001
+    80%    0.924±0.001      0.915±0.000      0.925±0.000      0.926±0.001
+    90%    0.924±0.001      0.915±0.000      0.925±0.000      0.926±0.001
+   100%    0.924±0.001      0.915±0.000      0.925±0.000      0.926±0.001
+  error overlap with Sonnet (seed 0): {'svm': {'p_wrong_given_sonnet_wrong': 0.4965034965034965, 'p_wrong_given_sonnet_right': 0.10723514211886305}, 'jev_thr': {'p_wrong_given_sonnet_wrong': 0.5384615384615384, 'p_wrong_given_sonnet_right': 0.06201550387596899}, 'n_sonnet_errors': 143}
+  jev_thr_vs_svm               diff=+0.038 CI[+0.020,+0.056] McNemar p=0.0001
+  jev_thr_vs_sonnet_thr        diff=-0.018 CI[-0.033,-0.003] McNemar p=0.0224
+  svmjev_vs_svm                diff=+0.051 CI[+0.037,+0.067] McNemar p=0.0000
+  fuse_0.3_vs_jevfuse_0.3      diff=-0.008 CI[-0.020,+0.005] McNemar p=0.2631
+  fuse_0.3_vs_jevrep_0.3       diff=+0.009 CI[-0.002,+0.021] McNemar p=0.1371
+  tri_0.3_vs_fuse_0.3          diff=+0.011 CI[+0.002,+0.021] McNemar p=0.0226
+  fuse_0.5_vs_jevfuse_0.5      diff=-0.002 CI[-0.014,+0.009] McNemar p=0.7666
+  fuse_0.5_vs_jevrep_0.5       diff=+0.014 CI[+0.003,+0.024] McNemar p=0.0192
+  tri_0.5_vs_fuse_0.5          diff=+0.005 CI[-0.003,+0.014] McNemar p=0.2806
+  fuse_1.0_vs_jevfuse_1.0      diff=-0.002 CI[-0.014,+0.009] McNemar p=0.8424
+  fuse_1.0_vs_jevrep_1.0       diff=+0.008 CI[-0.002,+0.018] McNemar p=0.1821
+  tri_1.0_vs_fuse_1.0          diff=+0.005 CI[-0.004,+0.014] McNemar p=0.3409
+  -- part clef: svm=0.851  jev_thr=0.869  sonnet_thr=0.877  fuse_0.5=0.900  jevfuse_0.5=0.895  tri_0.5=0.906
+  -- part clefdev: svm=0.878  jev_thr=0.935  sonnet_thr=0.951  fuse_0.5=0.950  jevfuse_0.5=0.957  tri_0.5=0.957
+  -- part clefoff: svm=0.807  jev_thr=0.828  sonnet_thr=0.845  fuse_0.5=0.865  jevfuse_0.5=0.857  tri_0.5=0.853
+
+===== cb: full test n=2745, seeds=5
+  test AUC: Jev 0.905  Sonnet 0.921;  corr(Jev, Sonnet scores) = 0.816
+  svm          acc=0.790±0.004  F1c1=0.597
+  jev_raw      acc=0.831±0.000  F1c1=0.573
+  jev_thr      acc=0.850±0.000  F1c1=0.704
+  jev_nnppi    acc=0.833±0.020  F1c1=0.654
+  sonnet_thr   acc=0.830±0.013  F1c1=0.729
+  svmjev       acc=0.854±0.001  F1c1=0.702
+  budget   SVM->Sonnet fuse   Jev->Sonnet replace   Jev->Sonnet fuse   SVM+Jev->Sonnet fuse
+     0%    0.790±0.004      0.850±0.000      0.850±0.000      0.854±0.001
+     5%    0.799±0.004      0.852±0.001      0.853±0.000      0.859±0.002
+    10%    0.809±0.004      0.855±0.001      0.858±0.000      0.862±0.001
+    20%    0.822±0.002      0.857±0.003      0.861±0.000      0.864±0.001
+    30%    0.831±0.001      0.849±0.005      0.861±0.000      0.864±0.001
+    40%    0.840±0.002      0.839±0.008      0.861±0.000      0.864±0.001
+    50%    0.846±0.001      0.832±0.010      0.861±0.000      0.864±0.001
+    60%    0.849±0.001      0.831±0.011      0.861±0.000      0.864±0.001
+    70%    0.851±0.001      0.830±0.012      0.861±0.000      0.864±0.001
+    80%    0.852±0.001      0.830±0.012      0.861±0.000      0.864±0.001
+    90%    0.852±0.001      0.830±0.013      0.861±0.000      0.864±0.001
+   100%    0.852±0.001      0.830±0.013      0.861±0.000      0.864±0.001
+  error overlap with Sonnet (seed 0): {'svm': {'p_wrong_given_sonnet_wrong': 0.40725806451612906, 'p_wrong_given_sonnet_right': 0.16896398399288573}, 'jev_thr': {'p_wrong_given_sonnet_wrong': 0.4012096774193548, 'p_wrong_given_sonnet_right': 0.09470875944864385}, 'n_sonnet_errors': 496}
+  jev_thr_vs_svm               diff=+0.062 CI[+0.046,+0.078] McNemar p=0.0000
+  jev_thr_vs_sonnet_thr        diff=+0.031 CI[+0.015,+0.047] McNemar p=0.0002
+  svmjev_vs_svm                diff=+0.066 CI[+0.052,+0.081] McNemar p=0.0000
+  fuse_0.3_vs_jevfuse_0.3      diff=-0.031 CI[-0.044,-0.018] McNemar p=0.0000
+  fuse_0.3_vs_jevrep_0.3       diff=-0.015 CI[-0.029,-0.003] McNemar p=0.0265
+  tri_0.3_vs_fuse_0.3          diff=+0.035 CI[+0.023,+0.047] McNemar p=0.0000
+  fuse_0.5_vs_jevfuse_0.5      diff=-0.015 CI[-0.028,-0.003] McNemar p=0.0210
+  fuse_0.5_vs_jevrep_0.5       diff=+0.021 CI[+0.009,+0.034] McNemar p=0.0008
+  tri_0.5_vs_fuse_0.5          diff=+0.019 CI[+0.008,+0.031] McNemar p=0.0015
+  fuse_1.0_vs_jevfuse_1.0      diff=-0.009 CI[-0.021,+0.003] McNemar p=0.1692
+  fuse_1.0_vs_jevrep_1.0       diff=+0.032 CI[+0.021,+0.044] McNemar p=0.0000
+  tri_1.0_vs_fuse_1.0          diff=+0.013 CI[+0.002,+0.024] McNemar p=0.0303
+  -- part cb: svm=0.796  jev_thr=0.849  sonnet_thr=0.830  fuse_0.5=0.852  jevfuse_0.5=0.850  tri_0.5=0.857
+  -- part cbrest: svm=0.787  jev_thr=0.850  sonnet_thr=0.830  fuse_0.5=0.843  jevfuse_0.5=0.865  tri_0.5=0.867
