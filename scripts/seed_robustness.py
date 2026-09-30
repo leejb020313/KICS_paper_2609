@@ -55,11 +55,13 @@ def main():
             claims[f"fuse_{b}_vs_replace_{b}"] = (f"fuse_{b}", f"replace_{b}")
         per_seed = {}
         for cname, (a, b) in claims.items():
+            if a not in preds or b not in preds:  # e.g. no Gemma scores on CT22
+                continue
             rows = [fe.compare(y, seed_pred(preds, a, sd), seed_pred(preds, b, sd)) for sd in range(fe.SEEDS)]
             per_seed[cname] = dict(diff=[r["diff"] for r in rows], p=[r["mcnemar_p"] for r in rows],
                                    n_sig=sum(r["mcnemar_p"] < 0.05 for r in rows),
                                    same_sign=len({np.sign(r["diff"]) for r in rows if r["diff"] != 0}) <= 1)
-        out[name] = dict(best_full=best, mean_acc={k: mean[k] for k in ("svm", "gemma_nnppi_sel", best, "sonnet_nnppi")},
+        out[name] = dict(best_full=best, mean_acc={k: mean[k] for k in ("svm", "gemma_nnppi_sel", best, "sonnet_nnppi") if k in mean},
                          gap_to_best_full=curve, first_rate_reaching_best_full=reach, per_seed=per_seed)
 
     with open(OUT, "w", encoding="utf-8") as f:

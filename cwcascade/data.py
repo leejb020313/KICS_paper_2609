@@ -18,6 +18,7 @@ RESULTS = os.path.join(ROOT, "results")
 DATASETS = {
     "clef": ("clefcal", "clef_calib_scores", "clef_test_scores"),
     "cb": ("cbcal", "claimbuster_calib_scores", "claimbuster_test_scores"),
+    "ct22": ("ct22cal", None, None),  # CheckThat! 2022 1A English tweets (data/build_ct22.py); no Gemma scores
 }
 EMBEDDER = "all-MiniLM-L6-v2"
 
@@ -67,7 +68,7 @@ class Split:
 
 
 # full held-out test sets: the paper's test set followed by the parts in data/frontier/full_set.json
-FULL_PARTS = {"clef": ("clefdev", "clefoff"), "cb": ("cbrest",)}
+FULL_PARTS = {"clef": ("clefdev", "clefoff"), "cb": ("cbrest",), "ct22": ()}  # ct22: eval_set already holds every held-out split
 
 
 def load_frontier(name, full=False):
@@ -102,6 +103,8 @@ def load_gemma(name, test_items):
     when some test sentence has not been scored by Gemma at all.
     """
     _, calib_file, test_file = DATASETS[name]
+    if calib_file is None:  # dataset without Gemma scores
+        return None, None
     calib_rows = [r for r in read_jsonl(os.path.join(RESULTS, "gemma", calib_file + ".jsonl")) if r.get("parse_ok")]
     by_id = {}
     for f in (test_file, test_file + "_full"):  # *_full: Gemma scores of the extra full-set items
