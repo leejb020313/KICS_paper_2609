@@ -2,7 +2,7 @@
 
 **Cost-Efficient Check-Worthy Claim Detection via Selective Fusion of a Low-Cost Classifier and a Large Language Model**
 
-이정빈 (Jeongbin Lee) · 2026 한국통신학회(KICS) 추계종합학술발표회 투고 논문의 코드·데이터·결과
+이정빈, 김은경(교신저자) · 국립한밭대학교 · 2026 한국통신학회(KICS) 추계종합학술발표회 투고 논문의 코드·데이터·결과
 
 ---
 
@@ -12,7 +12,7 @@
 
 1. **NN-PPI 재현**: 선행연구 NN-PPI([arXiv:2608.30731](https://arxiv.org/abs/2608.30731))를 원 논문과 같은 Gemma 3 4B 설정으로 재현하였다. 같은 라벨과 문장 임베딩으로 SVM을 직접 학습하면 LLM 없이도 NN-PPI와 같거나 높은 정확도를 얻는다.
 2. **프런티어 LLM의 과소 판정**: Claude Sonnet 5를 모든 문장에 그대로 적용하면 팩트체크가 필요한 문장을 과소 판정한다. 라벨로 임계값을 조정하면 재현율이 크게 오른다.
-3. **결합형 캐스케이드(제안)**: 분류기가 가장 불확실한 문장에만 LLM을 호출하고, LLM의 판정으로 **교체하지 않고** 분류기 결정값과 LLM 점수를 로지스틱 회귀로 **결합**한다. 호출을 절반으로 줄여도 LLM 전량 호출과 유의한 차이가 없는 정확도를 얻는다.
+3. **결합형 캐스케이드(제안)**: 분류기가 가장 불확실한 문장에만 LLM을 호출하고, LLM의 판정으로 **교체하지 않고** 분류기 결정값과 LLM 점수를 로지스틱 회귀로 **결합**한다. 호출을 절반으로 줄여도 LLM 전량 호출과 유의한 차이가 없는 정확도를 얻는다. 다만 교체형도 호출률 50%에서 전량 호출 수준에 이르므로 호출 절감 자체는 캐스케이드 구조의 효과이고, 결합형은 같은 수준에 더 적은 호출률(CLEF 30%, ClaimBuster 40%)로 도달한다.
 
 ## 주요 결과
 
@@ -31,13 +31,14 @@
 | **결합형 캐스케이드 (제안)** | **50%** | **0.923** | **0.846** |
 | 결합형 캐스케이드 (제안) | 100% | 0.924 | 0.852 |
 
-McNemar 검정은 1회차 예측으로 하였다.
+유의성은 5회 각각의 예측에 McNemar 검정(α=0.05)을 적용해 판단한다(`scripts/seed_robustness.py` → `results/seed_robustness_full.json`). 논문 표 1은 이 중 Gemma 원점수, NN-PPI형 캐스케이드, 결합형 100% 행을 빼고 7행만 싣는다.
 
-- 결합형(50%)은 LLM 전량 호출 중 더 높은 설정(CLEF는 임계값 조정, ClaimBuster는 조정 없음)과 유의한 차이가 없다(+0.8%p p=0.22, +1.1%p p=0.18). NN-PPI를 적용한 전량 호출(선행연구의 가장 강한 설정)보다는 두 데이터셋 모두 유의하게 높다(p<0.001).
-- 임베딩 SVM은 NN-PPI보다 CLEF에서 유의하게 높고(p=0.013) ClaimBuster에서는 차이가 없다(p=0.79).
+- 결합형(50%)은 LLM 전량 호출 중 더 높은 설정(CLEF는 임계값 조정, ClaimBuster는 조정 없음)과 5회 모두 유의한 차이가 없다(평균 +0.8%p, +1.1%p, p≥0.10). NN-PPI를 적용한 전량 호출(선행연구의 가장 강한 설정)보다는 두 데이터셋 모두 5회 모두 유의하게 높다(p≤0.016).
+- 교체형도 호출률 50%에서 전량 호출 수준에 이른다(CLEF +0.01%p, ClaimBuster +0.05%p). 즉 호출 절감은 캐스케이드 구조에서 오고, 결합은 같은 수준에 더 적은 호출(CLEF 30%, ClaimBuster 40%)로 도달하게 한다.
+- 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 4회 유의하게 높고 ClaimBuster에서는 5회 모두 차이가 없다.
 - ClaimBuster에서는 클래스 균형인 보정 세트와 달리 테스트의 팩트체크 필요 문장이 27%라서, 임계값 조정이 재현율(0.42 → 0.86)을 올리는 대신 정확도를 0.5%p 낮춘다.
-- 호출률 50%는 테스트가 아니라 보정 세트에서 정했다. 보정 세트의 교차적합 정확도는 50% 이후 0.1%p 이하로만 올라 포화되었고, 전량 호출과의 차이는 0.7%p 이내였다. (`final_eval.py`의 `fuse_sel`은 별도로 미리 정해 둔 규칙 "보정 정확도가 전량 호출에 도달하는 최소 호출률"의 결과로, 포화 수준이 전량 호출보다 조금 낮아 대부분 100%를 고른다. 논문 수치에는 쓰지 않았다.) 테스트에서 호출률을 100%로 올리면 0.1%p, 0.6%p 더 오르며, ClaimBuster에서는 이 차이가 유의하다(p=0.006).
-- 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높고, 같은 문장을 호출해 NN-PPI로 판정하는 캐스케이드보다도 유의하게 높다(p<0.001).
+- 호출률 50%는 테스트가 아니라 보정 세트에서 정했다. 보정 세트의 교차적합 정확도는 50% 이후 0.1%p 이하로만 올라 포화되었고, 전량 호출과의 차이는 0.7%p 이내였다. (`final_eval.py`의 `fuse_sel`은 별도로 미리 정해 둔 규칙 "보정 정확도가 전량 호출에 도달하는 최소 호출률"의 결과로, 포화 수준이 전량 호출보다 조금 낮아 대부분 100%를 고른다. 논문 수치에는 쓰지 않았다.) 테스트에서 호출률을 100%로 올리면 0.1%p, 0.6%p 더 오르며, ClaimBuster에서는 이 차이가 5회 모두 유의하다.
+- 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높고, 그 차이는 CLEF 20~30%, ClaimBuster 20% 이상에서 5회 중 3회 이상 유의하다(ClaimBuster에서 회차에 따라 흔들리는 쪽은 임계값이 학습 표본에 따라 바뀌는 교체형이다: 표준편차 0.67%p 대 결합형 0.14%p). 같은 문장을 호출해 NN-PPI로 판정하는 캐스케이드보다도 유의하게 높다.
 - 분류기가 확신하는 절반의 문장에서 교체형은 SVM의 옳은 판정 94건을 틀리게, 틀린 판정 66건을 옳게 바꾸었고 결합형은 각각 9건, 26건이었다(ClaimBuster, 1회차).
 - 문장 단위 스트리밍 라우팅(보정 세트에서 |d| 문턱을 고정)에서는 정확도가 CLEF 0.920(실제 호출 38%), ClaimBuster 0.845(실제 호출 49%)였다.
 
@@ -63,6 +64,7 @@ cwcascade/                 공통 라이브러리
 scripts/
   final_eval.py            본 실험 (--full: 논문의 전체 테스트셋)   -> results/final_results_full.json
   streaming_eval.py        문장 단위 라우팅 점검 (--full)           -> results/streaming_results_full.json
+  seed_robustness.py       5회 각각의 McNemar 검정, 호출률별 교체형/결합형 대 전량 호출  -> results/seed_robustness_full.json
   sanity_checks.py         배치/단건 채점 AUC, 재채점 상관, SVM 지연시간
   example_case.py          본문 3.2절의 판정 기준 예시 (CLEF 1회차 계수, 예시 문장)  -> results/example_case.json
   verify_paper_numbers.py  논문 PDF의 모든 수치와 유의성 주장을 results/*.json과 대조
@@ -82,7 +84,7 @@ results/
   *.json, *.log            평가 결과와 실행 로그 (*_full: 논문 수치, 나머지: 이전 표본 318/800문장)
 figures/                   논문 그림 (method_diagram.tex: 그림 1, TikZ)
 paper/
-  cascade_kics_draft.{docx,pdf}  투고 원고 (소속 입력 전). 여백·글꼴·크기는 KICS 공식 워드 양식
+  cascade_kics_draft.{docx,pdf}  투고 원고 (교신저자 이메일 입력 전). 여백·글꼴·크기는 KICS 공식 워드 양식
                            (conf.kics.or.kr/2026f의 "양식-논문샘플(워드).doc")을 따른다
   build_docx.py            results/*.json과 figures/에서 원고 docx 생성
   equations/               식을 LaTeX로 렌더링한 이미지와 스크립트
@@ -100,6 +102,7 @@ uv sync --locked --all-extras
 # 1) 평가 (저장된 LLM 점수를 사용하며 CPU에서 수십 분 소요)
 uv run --locked python scripts/final_eval.py --full
 uv run --locked python scripts/streaming_eval.py --full
+uv run --locked python scripts/seed_robustness.py      # 5회 각각의 유의성 검정
 uv run --locked python scripts/sanity_checks.py
 (cd scripts && uv run --locked --with matplotlib python make_figure.py --full)
 (cd figures && tectonic method_diagram.tex)     # 그림 1 (XeTeX, Arial)
@@ -148,6 +151,7 @@ CLEF 2024 영어 데이터는 ClaimBuster 말뭉치에서 가져왔다(Hasanain 
 
 - **이전 표본**: 초기 실험은 프런티어 LLM 비용 때문에 ClaimBuster 2016년 테스트 중 800문장(추출 시드 미기록, `data/frontier/eval_set.json`으로 고정)과 CLEF dev-test 318문장만 사용했다. 논문은 나머지 문장을 추가로 채점한 전체 테스트셋 결과(`*_full`)를 보고한다.
 - **Few-shot 예시**: NN-PPI는 few-shot 예시 6개를 공개하지 않았다. `cwcascade/prompt.py`의 예시는 원 논문의 6단계 기준에 맞춰 직접 작성한 것이다.
+- **LLM 모델**: `claude -p --model sonnet`의 모든 채점 호출(2026-09-25~26, 09-28)은 Claude Code 세션 기록상 `claude-sonnet-5`였다.
 - **배치 채점**: 프런티어 LLM은 한 번에 40문장씩 채점하였다. CLEF 80문장을 단건으로도 채점했는데, 그중 11건은 CLI 사용량 한도 초과로 응답이 없었다. 나머지 69문장에서 ROC-AUC는 단건 0.991, 배치 0.990으로 같았다. CLEF 테스트를 두 번 배치 채점한 점수의 상관계수는 0.973이다.
 - **선행 연구와의 관계**: 위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드는 일반 분류 과제에서 CAUC([arXiv:2609.11446](https://arxiv.org/abs/2609.11446))가 먼저 제안하였다. 본 연구는 팩트체크 필요성 탐지에 이를 적용하면서 결합 가중치를 라벨로 학습한다.
 - **한계**: 영어 데이터셋 두 개와 프런티어 모델 하나로만 평가하였고, 비용은 호출률로만 보고하였다.
@@ -164,6 +168,7 @@ CLEF 2024 영어 데이터는 ClaimBuster 말뭉치에서 가져왔다(Hasanain 
 | `prompt-reorder-ablation` | 프롬프트·채점 방식 변형 실험과 임베딩 분류기 발견 과정 |
 | `safety-flag-extension` | 다른 도메인(Safety-Flag)으로의 전이 실험 |
 | `topic-venue-research` | 주제 선정과 학회 적합성 검토 기록 |
+| `ct22-tweets` | 세 번째 데이터셋 시험: CheckThat! 2022 Task 1A 영어 트윗([GitLab](https://gitlab.com/checkthat_lab/clef2022-checkthat-lab/clef2022-checkthat-lab), "free for general research use"). 미리 정한 기준(`results/ct22_preregistration.md`) 중 결합형 > LLM 전량 호출(0.746 대 0.596)과 결합형 > 교체형은 성립했으나, 결합형 > NN-PPI 적용 전량 호출(0.756)은 성립하지 않아 논문에는 넣지 않았다. 이 브랜치의 채점은 `--restricted` 모드라 9월 채점과 조건이 조금 다르다(`results/frontier/modelcheck`). |
 
 ## 참고 문헌
 
