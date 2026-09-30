@@ -200,13 +200,17 @@ for s in doc.sections:
 # ---------------- title block ----------------
 centered(doc, "저비용 분류기와 대형 언어 모델의 선택적 결합을 통한", 13, True, after=0)
 centered(doc, "팩트체크 필요성 탐지", 13, True, after=0)
-centered(doc, "이정빈", 11, after=0).paragraph_format.space_before = Pt(7.6)
-centered(doc, "(소속 입력 필요)", 11, after=0)
-centered(doc, "leejb020313@gmail.com", 11, after=7.6)
+# title block as in the peer KICS papers: authors with the corresponding author starred, affiliation, e-mails
+AUTHORS_KO, AUTHORS_EN = "이정빈, 김은경*", "Lee Jeongbin, Kim Eunkyung*"  # English romanization of the advisor: to confirm
+AFFIL_KO, AFFIL_EN = "국립한밭대학교", "Hanbat National Univ."
+EMAILS = "leejb020313@gmail.com, *(교신저자 이메일)"  # corresponding author's e-mail: to fill in
+centered(doc, AUTHORS_KO, 11, after=0).paragraph_format.space_before = Pt(7.6)
+centered(doc, AFFIL_KO, 11, after=0)
+centered(doc, EMAILS, 11, after=7.6)
 centered(doc, "Cost-Efficient Check-Worthy Claim Detection via Selective Fusion\nof a Low-Cost Classifier and a Large Language Model",
          13, True, after=0)
-centered(doc, "Jeongbin Lee", 11, after=0).paragraph_format.space_before = Pt(14.2)
-centered(doc, "(Affiliation)", 11, after=14.2)
+centered(doc, AUTHORS_EN, 11, after=0).paragraph_format.space_before = Pt(14.2)
+centered(doc, AFFIL_EN, 11, after=14.2)
 
 cb, cl = "cb", "clef"
 BF = {d: best_full(d) for d in (cl, cb)}
