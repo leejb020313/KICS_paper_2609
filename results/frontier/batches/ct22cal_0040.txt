@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	Covid-19 vaccines do not affect anyone's fertility. Mr Rehan Khan a consultant in Obstetrics and Gynaecology said: “There is no evidence to show that having a Covid-19 vaccine affects fertility in women or men.” 👉 https://t.co/A4JZNrArHd https://t.co/qOV2foJMJ6
+41	SBS has today released videos in more than 60 languages, including AUSLAN, informing communities about Australia’s COVID-19 vaccination roll-out plan, how vaccines work and how they are approved in Australia. #VaccineAustralia #COVID19 https://t.co/8fRsVxs1ND https://t.co/Wf8cwZUdpn
+42	One the 1 year anniversary of the first COVID-19 case in Kentucky, Mitch McConnell and Rand Paul voted against direct relief to Kentuckians and funding to ramp up vaccines. Shameful. https://t.co/XumlmYpJqR
+43	Just like other medicines or vaccines, COVID-19 vaccines may have side effects most of which are minor and go away after a day or two. Report all side effects you or a loved one may experience to the FDA using the links below. https://t.co/utkTGmTkQD https://t.co/NUtexTrYbh
+44	Looks like the corona virus is antiblack and Iâm okay with that https://t.co/CMwiAIeaz6
+45	1,500 doses of the vaccine went to waste in Ontario. And the worst part is that @fordnation complained about not having enough vaccines the whole time. We can do so much better, Ontario. https://t.co/zIGVXz1KNE
+46	“it is important to consider the possibility that the spike protein produced by the new COVID-19 vaccines triggers cell signaling events that promote PAH (incurable), other cardiovascular complications, and/or complications in other tissues/organs in certain individuals” https://t.co/GFKhLzHOrJ
+47	#HongKongers decided not to listen to their own government for good reasons and decided to wear masks to protect themselves. #HongKong had the first case of #coronavirus way earlier than most of the countries on this list and had seen nearly little to no increase in cases since.
+48	Russian disinformation campaign aims to undermine confidence in Pfizer, other Covid-19 vaccines, U.S. officials say https://t.co/AfF7ImTWLP played up the risk of side effects, questioned their efficacy, and said the U.S. had rushed the Pfizer vaccine through the approval process
+49	A year later, the World Health Organization is still struggling to keep on top of the evolving science of COVID-19, to persuade countries to abandon their nationalistic tendencies and help get vaccines where they're needed most. https://t.co/uZxYnRZJxz
+50	We've joined a broad group of health care organizations, cancer patients and advocates to send a letter to the Biden administration urging prioritization of patients with active cancer and survivors of cancer to receive the COVID-19 vaccine. https://t.co/sDiwEZs42z #OneMoreWay
+51	@eGizzur @MissCiku Africa CDC has advised against the use of Ivermectin but our social media prescriber is here recommending it, with hydroxychloroquine, another obsolete therapeutic choice in managing COVID-19. Tsk. Stop misinforming the public. Vaccines and masks work. https://t.co/0GIkHjvvuh
+52	They did not cut taxes. They did not bail out companies. They just attacked the public health emergency. The way to enable economic recovery is focus on public health. https://t.co/9avqBJ9hLX
+53	Lots of new Fargo, West Fargo and Grand Forks openings for COVID-19 vaccines at Thrifty White, if you work at a school or daycare or you're high risk! https://t.co/XiqlaGe63v
+54	Countries are starting to stop vaccine exports. Germany is brutally slow at rolling out vaccines. Shortages ahead. We have an even faster 3rd wave ahead of us thanks to B.1.1.7 that spreads way faster and seems to cause slightly worse cases of COVID. This shit isn't over yet.
+55	Ad26.COV2.S, developed by Janssen (J&amp;J) became the 4th vaccine listed by @WHO for emergency use in all countries and for COVAX roll-out Pfizer/BioNTech, Astrazeneca-SK Bio and Serum Institute of India vaccines are also listed for emergency use https://t.co/4z3RvCTD4s
+56	Capitalism's way to produce and distribute Covid vaccines: after tax-payer dollars subsidized big drug firms, they priced vaccines above what most of world can afford. Florida gov then gave vaccines to the white rich first. What a system! https://t.co/AJmwmUrh6e
+57	Breaking: A child under the age of 18 has died of coronavirus in Los Angeles, public health officials announce, in what is believed to be the first child death from the virus in the US. “A devastating reminder that COVID-19 infects people of all ages,” LA health official says.
+58	😡😡😡 Deaths and serious injuries from the Covid vaccines continue to grow. Latest CDC VAERS report shows 1,265 deaths and 4,424 serious injuries. 47% of reported deaths became sick within 48 hours of being jabbed https://t.co/6CQTG9QXSm #CovidVaccine https://t.co/yWUrQ0OZHl
+59	The US media isn’t reporting on Pfizer’s and Moderna’s Covid vaccine deaths, which are mRNA vaccines. Danger of mRNA vaccines to elderly under spotlight after 16 deaths in Switzerland - Global Times https://t.co/mYZa1oAgpW
+60	Bolsonaro fraudulently circumvented Trump's COVID-19 immigration ban to smuggle his scandal-plagued ex-Education Minister into the U.S. https://t.co/dcCamAD4ne by @ggreenwald
+61	Netanyahu announcing Israel's new extreme measures against #corona. Orders Israelis to stop shaking hands, suggests following Indian custom of namaste instead. ðð½ <link>
+62	BREAKING: Oxford coronavirus vaccine helps bring about a positive immune response, according to new published study.
+63	👇AND vaccines won't prevent you from spreading the virus or catching it again. 🤔Makes me wonder if we would have herd immunity if there had been no lockdowns CDC: Face Masks Don’t Prevent COVID-19 https://t.co/GMmKjxjTGq
+64	Four publications that have sought to raise doubts about the safety and efficacy of Covid vaccines have been identified by the State Dept as Russian intelligence fronts, WSJ reports https://t.co/JnKKOglY0v
+65	THIS WEEKEND (AND MON. 3/8)! Free COVID-19 vaccines for eligible individuals who live or work in Alameda County at the West Oakland Senior Center, 1724 Adeline Street. Call (510) 549-5402 to make an appointment. Be sure to bring a form of identification with you. https://t.co/54WLUOSvEe
+66	#Milvax: "Officials at Vandenberg Air Force Base told [military] personnel they will not be approved for [leave and pass privilege] travel outside the state of California until they’ve had both doses of the COVID vaccine... despite the fact that the vaccines are not mandatory" https://t.co/rzD3ZC152a
+67	World Health Org DG @DrTedros brands French scientists saying Coronavirus vaccine should be trialled in Africa, as racist. Adds that Africa will not be a testing ground &amp; that this ‘colonial hangover’ needs to stop https://t.co/ryi8GcG0Gg
+68	“There is nothing peculiar about the jab. I have just taken it(jab) and I am not experiencing anything funny,”Aceng noted after becoming the first person to take the first jab of the Astra-Zeneca vaccines. #NilePostNews #NBSUpdates https://t.co/JPkDoO7TxJ
+69	Preventing the spread of COVID-19 is important, and what is even more important is protecting yourself and your loved ones from contracting or getting seriously ill from this virus. Vaccines saves lives. #IDareYouToStaySafe #GetTheFacts #GetTheVax #EachVaccinated #AllProtected https://t.co/ql1eoMNINC
+70	This photo circulating about a case of #COVID19 in Kano allegedly reported by @BBCWorld is FALSE This image has been doctored to spread fear and panic Details on confirmed cases can be found via https://t.co/bynbDWi0gm #FactsNotFear #COVID19Nigeria https://t.co/HQ9DdL9N9s
+71	3/16: ron paul publishes article calling corona a hoax 3/22: ron paul's son tests positive for corona https://t.co/KkzdgrsigP
+72	COVAXIN human trials are beginning today at the AIIMS. Indigenously developed COVID-19 vaccine that will help India lead globally. Hope and pray for it’s earliest success in this fight against Corona. This may epoch a new era of #AatmaNirbhar Bharat
+73	The FDA has issued 3 emergency use authorizations for COVID-19 vaccines built to help protect you from serious illness. All 3 vaccines are safe &amp; effective. Check in with #NHCgov Assistant Health Director Carla Turner for more on Pfizer, Moderna, and Johnson &amp; Johnson vaccines. https://t.co/saIl9tTJ6X
+74	Safe, effective #COVID19 vaccines are available every single day from 8AM to 8PM at the @wolsteincenter starting March 17. Learn more and book your appointment at https://t.co/Yb7ZUGeXc0 #GetTheShot https://t.co/nIB99GKjfw
+75	This week on a one hour special of #InFocusNY1, @CherylWillsNY1 speaks with those who've lost loved ones, and to community leaders about the emotional, economic and social toll of COVID-19, and @syramadad on how leadership and vaccines should give us hope for the future. https://t.co/CtMMjOzd58
+76	Monitoring adverse reactions following immunisation is essential, particularly for new vaccines such as those against COVID-19. We describe 20 cases of acute onset of a single supraclavicular lymphadenopathy manifesting between 24 h and 9 days after ipsilateral intramuscular 2/x
+77	What we know about COVID-19 vaccines and kids: -B.C. will for now use Pfizer vaccine (approved for 16+) on teens 16-17 who are severely clinically vulnerable -First data from clinical trials on teens could come by end of summer More (w/ @MichelleGhsoub): https://t.co/3XPulA58Wu
+78	Hold on - #China Communist Party now denying #CoronavirusOutbreak originated in China? This after Beijingâs catastrophic mishandling of the virus has caused a global health crisis? What a collection of incompetent thugs & liars <link>
+79	The US, UK, EU, Japan &amp; Australia continue to block the Indian initiative at the WTO to waive TRIPS provisions that constrain manufacture and disbursal of COVID-19 vaccines. This moral bankruptcy will have very real consequences for the world. https://t.co/vT2mN81jrt

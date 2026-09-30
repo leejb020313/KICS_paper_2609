@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	With @TheAmirImani Never in history has a vax been used to quell a pandemic. But this won't work if people shop around. Take the first vaccine you're offered, let the dust settle, and we'll get back to normal. Lots of time to figure out afterwards. https://t.co/z7Rjr6KXby
+681	In the research studies of the approved COVID-19 vaccines in Canada, all the vaccines prevented severe disease, hospitalization and death from COVID-19 - that includes the AstraZeneca vaccine. - Dr Daniel Warshovsky @OntarioCollege @UofTFamilyMed Community of Practice https://t.co/4H55WIotQF
+682	FYI: Third Baptist Church is offering COVID 19- vaccines for all, any age and no insurance needed on Sunday, March 14 , 2021 from 12noon to 4pm
+683	We in Florida have dropped to 42in the nation in vaccine administration The result of no plan, arrogance and politicization of a public health issue And of course pay to play Below NY , TX and CA #RemoveRon https://t.co/QkimDlLaD1 https://t.co/kwonydPWAg
+684	Texas health officials and Gov. Abbott say the federal government is using outdated population figures to calculate the number of COVID-19 vaccines — an inaccuracy that has potentially cost the state millions of doses. https://t.co/gEa1gCl1o8
+685	AMC says the rollout of COVID-19 vaccines and new movie releases should boost sales this year https://t.co/sQjCekrwQj https://t.co/US2nZgzhd0
+686	Amazing. The NYT acknowledges biological differences between men and women with respect to Covid and vaccines. Pretty unusual for them to stick to a binary model of sex, even tho they won't mention that men are more likely to die than women. https://t.co/dj4GfhHME6
+687	COVID-19 vaccines should be distributed immediately - Mayor Treñas Iloilo City Mayor Jerry Treñas called on the Department of Health Region 6 to immediately distribute the COVID-19 vaccines. The message was extended by the mayor yesterday to testing czar and NTF Against https://t.co/8AYHnOxQ0b
+688	New York City is making more COVID-19 vaccines available at more locations throughout New York City. All vaccinations are free and available to those 60 years and older. Visit, https://t.co/9MtvogiXpz to make your appointment.
+689	Accepting the government’s premises that vaccines and vaccines certificates are required, for a virus with over 99.7% survival rate, lays the foundations for the path to medical tyranny.' https://t.co/7Ko8nqBs4s
+690	The emergence of COVID-19 "variants of concern" makes it essential to expand access to vaccines around the world—or risk leading to even more dangerous variants that could prolong the pandemic. @mtosterholm and Mark Olshaker in @ForeignAffairs https://t.co/6ZyuUk9DCS
+691	“If IP rights are temporarily suspended, and companies would also share their know-how, production could start in a couple of months.” MSF’s @DimitriEynikel in @investigate_eu on how the #TRIPSWaiver could allow for increased production of mRNA vaccines https://t.co/byC5AgS6N3
+692	Indiana will open COVID-19 vaccines up to teachers and childcare providers and staff starting Monday
+693	Eighty-six Catholic women issued a letter March 8 opposing what they called “abortion-tainted” COVID-19 vaccines, and arguing Church statements approving their use rely on “an incomplete assessment of the science of vaccination and immunology. https://t.co/oVRrM85bHS
+694	MSF urges Australia to stop blocking WTO proposal to improve access to #COVID19 treatments and vaccines @DrChristou @MSF @MSF_access https://t.co/oXQcLJh4LC
+695	Why is Ireland prepared to sit back and deprive our population of effective covid 19 vaccines to demonstrate our slavish EU devotion. Slovakia joins Hungary and buys Russian coronavirus vaccine https://t.co/bgfqk8dhua
+696	Our recovery from the COVID-19 pandemic starts with the equitable distribution of vaccines. #OnlyTogether can we build back greener &amp; create a more sustainable future for people and the planet. @unitednations https://t.co/qp6bd7V7Vu
+697	Let me take this earliest opportunity to wish ODM party leader Rt. Hon Raila Odinga quick recovery. Anybody can contract COVID-19 but it's preventable. I hope the vaccines the country acquired are effective and would help us manage the virus. https://t.co/1QTpww4oXc
+698	Enough of this terminology madness. The EU has made zero EU state developed vaccines. Private companies within the EU have made the vaccines and sold commercial deals. Talk of vaccine commandeering is an assault on the private enterprise that has delivered our Covid salvation https://t.co/Rl2huZIZDE
+699	Having one vaccine, rather than multiple vaccines with multiple protocols, will simplify the rollout. It means that everyone in New Zealand can be fully vaccinated against COVID-19 and have access to the same vaccine.
+700	It's been a historic week in #Rwanda as both Pfizer &amp; Astrazeneca vaccines were received and deployed countrywide. Tune in to @1035KISSFM at 2PM today to listen to our Representative @LindseyJulianna discuss this, reimagining a post-COVID-19 world for children, &amp; other topics. https://t.co/nA62AkiVw5
+701	The acquisition will also result in Agostini’s representing three of the international companies that have approved Covid-19 vaccines on the market: AstraZeneca, Pfizer and Johnson &amp; Johnson. THE DETAILS HERE: https://t.co/LffVxbPFS8
+702	Even though COVID-19 vaccines are here in Georgia, and most of us are waiting to become eligible, there are simple measures we can all take to save lives. Let's wear a mask, practice physical distancing, and wash our hands often to protect ourselves and our community. https://t.co/ECWsVVPYcS
+703	#Peru | We know the quality of the products that Cuba produces in terms of medicines and vaccines, said Peru's Health Minister, adding that with all certainty, a negotiation will also be opened with the Cubans on the acquisition of Soberana 02. https://t.co/VGviA9Ujie
+704	Here's a list of the 13 #Covid19 vaccines in use anywhere in the world, and who uses them. Of these, 9 have yet to be approved by any major Western drug regulator, usually due to insufficient (in some cases any) published clinical trial data. #cdnpoli 4/x https://t.co/eerjcCtyO2
+705	Tony Blair think tank has warned the UK should be stockpiling vaccines and antivirals for a potential "worst-case scenario" coronavirus variant. https://t.co/4UMH8pm3ab https://t.co/hK3DL9pJk3
+706	The number of excess Covid-19 vaccines secured by the United States, the United Kingdom and the European Union could cover the needs of 20 conflict and disaster-stricken countries https://t.co/aqZX2vUBeQ
+707	#whatishappeninginthailand No block or delay on private hospitals importing COVID-19 vaccines The private sector entities who want to import COVID-19 vaccines must first be licensed to import drugs and must apply for registration of their COVID-19 vaccine. 1/5 https://t.co/ntYlDL7xRO
+708	To help low- and middle-income countries access #COVID19 vaccines, the @WorldBank is partnering with @WHO @UNICEF @gavi and global partnerships like @ACTAccelerator which also includes @BioNTech_Group in the COVAX program: https://t.co/Z26xHzusAZ - #investinpeople #HealthForAll
+709	A new partnership between WHO and Facebook aims to promote authoritative information about Covid-19 vaccines and remove false claims about vaccines from the Internet. 1. Check the source 2. Check how it makes you feel 3. Check the context https://t.co/t16k7kB9jm
+710	Two deaths occurred in North Bengal districts on March 8 and March 9 after they were inoculated with the Covishield vaccine. Initial assessment revealed multiple cardiac problems... - an official said https://t.co/HXSBkbCRTj
+711	Pharmacy appointments are now available for booking the AstraZeneca COVID-19 vaccines for eligible people between the ages of 60 and 64. Here is a list of pharmacies available in Ward 21 Scarborough: 2751 Eglinton Ave East 1235 Mccowan Road 1411 Warden Ave 85 Ellesmere Road https://t.co/5ymJYc5zqr
+712	The Medicines Control Authority of #Zimbabwe has approved the use of four vaccines: Sinopharm and Sinovac from China, Covaxin from India and Sputnik V from Russia for emergency use in the country. #vaccine #COVID_19 https://t.co/IVyEJoaczh https://t.co/TZ6Dn1XFFi
+713	MEDIA REACTION: @wto #TRIPSWaiver for COVID-19 vaccines blocked again by rich countries, Oxfam's @Anna_Marriott says This is a massive missed opportunity to speed up and scale up the production of lifesaving vaccines worldwide #PeoplesVaccine https://t.co/ysvf7cYdDz
+714	Given the limited supply of #COVID19 #vaccines, those most at risk, such as health workers and older adults, are prioritized. Through fair and equitable allocation of vaccines we can reduce the tragic burden of COVID-19. #ACTogether for #VaccinEquity 👉 https://t.co/4DIRW94Xex https://t.co/uw5TIvbtw7
+715	Vaccines are a critical new tool in the battle against COVID-19 and it is hugely encouraging to see so many vaccines proving successful and going into development #KickCOVIDoutOfKenya https://t.co/fSbA1OvX5o
+716	Effective today, Governor Edwards announced that Louisiana has expanded eligibility for COVID-19 vaccines to include people 16 and older who have certain health conditions.https://t.co/PWgAV3uM6s
+717	The CDC has issued new guidance aimed at clarifying what activities those who have received the COVID-19 vaccines can and cannot do, including how and when to visit with others who are fully vaccinated. https://t.co/dAuvzTGt46
+718	Political figures in the state have said over the last month that Montana isn’t getting its fair share of COVID-19 vaccines. MTPR’s Aaron Bolton dug into those claims and shared his reporting with News Director Corin Cates-Carney. #mtnews #mtpol https://t.co/zwlGMcTNwt https://t.co/i5D4LBb1rD
+719	@Kate18831168 @Walkabout24 Our bodies are a closed loop system. Once vaccinated, nobody knows what the short or long term mal-effects will be. Currently the death rate from these vaccines in the US and UK appears to be c.4% (obviously this excludes unreported deaths). https://t.co/rC5LPdkdPz

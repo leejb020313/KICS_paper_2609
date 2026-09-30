@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	This is devastating news. Global South countries have been fighting for the right to manufacture and import affordable versions of the covid vaccines. A few hours ago, the USA, UK and European Union joined forces to block them at the WTO. The West is indefensible.
+241	Peter Drury: Liverpool benefited from covid-19 to win the premier league and now that vaccines are out, they are back to normal. https://t.co/mLUlf9QDNM
+242	India has emerged the surprise leader of the global vaccine diplomacy race. It has exported three times more doses than it's given its own citizens and can spare even more without hurting its own rollout. https://t.co/QvRqmyUMzf https://t.co/OXlpOenRdc
+243	Israel is top of the league for vaccinating its own people. The accolades say Israel is the 'example'. False. Israel is denying the vaccine to Palestinians whose land and lives it controls. WHO has pleaded with Israel: to no avail. Apartheid in action. https://t.co/BpQDRDWS4H
+244	What Moderna and Pfizer have created is not a "vaccine" either in function or legal definition. What they've created is a synthetic pathogen. https://t.co/l1y9rR6XvZ https://t.co/utcf3DKa0Y
+245	The World Health Organization gave new guidance about Moderna’s Covid-19 vaccine this week, recommending generally against its use for most pregnant people, echoing similar guidance for the Pfizer and BioNTech shot https://t.co/Dyx2aSUWAF
+246	Sit down! Canada has following supplier agreements for COVID-19 vaccine - Pfizer: upto 76 million doses Moderna: 44m AstraZeneca: 20m AstraZeneca from SII: 2m These are commercial agreements and no other country is making such a song and dance about supplying vaccines. https://t.co/ATMa1rC8uz
+247	NEW: Alaska is now making covid vaccines available to everyone over the age of 16. It's the first state to expand vaccine eligibility to all ages that are approved to receive covid doses. https://t.co/ugNHNqAa91
+248	This makes Iran the 11th country to ban the vaccines. RT Iranians ban import of UK and US Covid-19 vaccines, saying they're 'completely untrustworthy' https://t.co/gdiFtSWHHb
+249	Funny + accurate. A reminder: • The coronavirus vaccine can’t give you COVID-19. • The mRNA in the vaccine doesn’t become a permanent part of your body. • Pfizer, Moderna and J&amp;J all have highly effective and SAFE vaccines to prevent severe COVID-19 infection. #ThisIsOurShot https://t.co/qXUzg20B2k
+250	Pfizer's former Vice President and Chief Scientist for Allergy and Respiratory Vaccines - Mike Yeadon says - most people should NOT take Covid vaccine. https://t.co/xk0x35XAX8
+251	The spectrum of covid illness and effect of the vaccines in clinical trials 1. The trials were designed and powered for protection from mild to moderate illness. Not severe infections. Not asymptomatic infections. Not hospitalizations or deaths. Not #LongCovid. https://t.co/ixKlm6IiCS
+252	Messaging really got off track on these vaccines. The most important number is zero, which apparently is the number of people who have wound up dead or hospitalized from COVID after taking ANY of these vaccines. They’re all good. https://t.co/eJP3eIlfcw
+253	NEW: So far, COVID-19 vaccines haven't been equitably distributed. Asking for ID is supposed to improve that. But @skbaer and I found instances in which the rules are creating barriers for vulnerable people, including undocumented immigrants. Our story: https://t.co/x38ndAU62U
+254	Mike Lindell likens COVID-19 vaccines to the mark of the beast and Revelations. https://t.co/hAFwGTKQqf
+255	Today we announced agreements with @BARDA and @JNJNews that will enable us to deploy our manufacturing capacity to supply much needed vaccines and medicines for the #COVID19 pandemic. $MRK https://t.co/B5S9kcN6AB https://t.co/eHUMPlcehj
+256	New @CDCMMWR describes a small number of reports of severe allergic reactions after people received the Moderna #COVID19 vaccine. Providers giving COVID-19 vaccines should screen recipients &amp; have needed supplies and staff ready to manage these reactions. https://t.co/jm4TOHGwEP https://t.co/gQbuxV3eJc
+257	MIKE YEADON: "SPIKE PROTEIN based vaccines are inherently dangerous. The is published literature showing spike protein causes clumping of blood platelets &amp; that leads to clots." https://t.co/hFHftF5eov https://t.co/pDYfmAtc75
+258	@JeremyFaison4TN #IAmHerdImmunity If you have recovered from COVID-19 coronavirus, you now have B and T cell immunity and humoral antibody immunity as well. You contribute toward #HerdImmunity and do not need to take current mRNA vaccines. Potentially mRNA can cause harm if already exposed. https://t.co/J4vI5yW4IK
+259	Canada is executing a population-wide experiment on vaccination, just because our government failed to obtain vaccines quickly enough. There are pluses and minuses to offering a single dose of vaccines needing two doses in short order. A thread. https://t.co/O3pTHgiJTD
+260	The whole world are praising Modi and his Bhakts for manufacturing and distributing COVID vaccines worldwide! India is the only country in South East Asia to have manufactured the most effective and popular vaccine!!
+261	Scientists continue to monitor #COVID19 vaccines for safety even after you receive yours. CDC and @US_FDA use both v-safe and VAERS to watch for any COVID-19 vaccine safety concerns. Learn more: https://t.co/lohw1h0pKE. https://t.co/AokdaUWG6J
+262	More and more Americans are receiving their COVID-19 vaccines every day. Keep it here for information from health agencies and officials about: 🧪 Vaccine effectiveness 😓 Potential side effects 📈Vaccines and variants 🤰Advice for pregnant people https://t.co/G5beBMeA6F
+263	The US and other countries that produce covid vaccines just blocked the proposal at WTO to waive property rights. I am not imputing it as a motivation but note that eradicating the pandemic is not the market interest of vaccine producers.
+264	On vaccines and health, support for workers and small businesses, and protecting vulnerable communities across the country – the Liberal government is taking strong action to help Canadians get through this global crisis together. Learn how: https://t.co/RN8hcs88pO https://t.co/KaxttV7O0J
+265	Prison officials have failed incarcerated people in every way throughout this pandemic. These officials have a responsibility to provide information about the safety and effectiveness of authorized vaccines. Vaccine access alone is not enough. https://t.co/TGrN3vhPtf
+266	Continental Europe is the only big, rich region that has few vaccines and lots of new covid-19 cases. It is an unexpected outcome for the EU https://t.co/aI2mCssMyq
+267	CDC Director Dr. Walensky says "the more virus that is out there and replicating ... the more likely that variants are going to emerge." Walensky stresses that stopping the spread is key to prevent variants that risk the efficacy of Covid-19 vaccines. https://t.co/VenYirdU3w
+268	Many will die when they next come into contact with the coronavirus. ..Now those of us who haven’t had the vaccine also appears to be in serious danger. Covid-19 Vaccines Are Weapons of Mass Destruction - and Could Wipe out the Human Race https://t.co/HT5GxoOvlM
+269	Russia, China, and Iran have been carrying out info operations to manipulate narratives around #coronavirus vaccines. ASD analyzed &gt;35,000 vaccine-related messages captured on our Hamilton 2.0 dashboard to understand the impact of these ops. https://t.co/XvZjOhTFgs
+270	An exciting moment. The first #COVAX COVID-19 vaccines arrive on @flyethiopian this morning. Congratulations, @lia_tadesse @FMoHealth and @UNEthiopia on your fine national and international leadership. No one is safe until everyone is safe. https://t.co/uRKFqoaNYD
+271	This is a failure of communication. If the UK Government didn't invest in vaccine creating infrastructure, and didn't get in early with the purchasing- Scotland wouldn't have the vaccines. Scotland's vaccine rollout is also the slowest in the UK. https://t.co/9Xe3MMGuXF
+272	Vaccination is an important tool, like wearing a mask and washing our hands. Right now, public health measures are still needed to reduce the spread of COVID-19 and save lives. For more information on #COVID19 vaccines visit: https://t.co/VVm0NDo9Sv #COVIDVaccine #VaccinesWork https://t.co/3e7dILdHbE
+273	The NHS is now texting people with links to book vaccines. Inevitably, this means there's going to be a further rise in scams. Here's @stokel on how to know the messages are genuine. Tl;dr: look for the NHS domain and don't click if you're not sure https://t.co/Vu7atjZCy1
+274	@AmyKremer If it weren’t for President Donald J Trump, 520,000 American wouldn’t be dead of COVID-19. There are vaccines because of the scientists at Moderna, Pfizer, BioNTech and Johnson &amp; Johnson.
+275	The best vaccine is the one available to you. All three available COVID-19 vaccines have been proven to protect against serious illness, hospitalization, and death from COVID-19. Get pre-registered for the COVID-19 vaccine at: https://t.co/wc5BNe0myn https://t.co/nvDJ4LxicN
+276	Glad to see the Johnson &amp; Johnson vaccine approved for use, an encouraging sign in our fight against COVID-19. We need more vaccines to get here quickly so we can get them into the arms of Albertans. https://t.co/TA2wBaQecH
+277	The COVID-19 vaccines are safe, effective, and lifesaving—but we can only end this pandemic if people get them. Make sure to get vaccinated when it’s your turn. https://t.co/8IgfjLiaZn
+278	The governments of the United States, the European Union and the United Kingdom, among others, objected to a popular proposal to temporarily waive any intellectual property rights for vaccines and treatments related to COVID-19. https://t.co/mklncxDYON
+279	Front-line workers in Texas are predominantly women and people of color. Outside of health workers and school employees, these workers have not yet been prioritized for COVID-19 vaccines. https://t.co/qtvYw0uKjI

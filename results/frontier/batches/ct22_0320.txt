@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	Acute Allergic Reactions to mRNA COVID-19 Vaccines: “overall risk of anaphylaxis to an mRNA COVID-19 vaccine remains extremely low and largely comparable to other common health care exposures.” #covid19 #vaccines https://t.co/hf3ZiNQwpJ
+321	Well, as long as the side-effects are expected... Flu-like illness an expected side-effect of Covid vaccines, says WHO, with symptoms including fever and headache — RT World News https://t.co/cfKQ6Vob2U
+322	Dr. Fitzgerald also reiterates a warning surrounding fraudulent calls asking for payment for vaccines and pre-registration. Both the pre-registration and COVID vaccine are free of charge. Report such calls to the police or the Canadian Anti-Fraud Centre.
+323	@LBC Case fatality rates can be up to 50% in the case of yellow fever - no where near covid. And comparing seatbelts to vaccines isnt helpful either especially as theres still limited evidence they prevent transmission (so you're having a vaccine for you and you only)
+324	Update: Oregon has confirmed a mutated version of the COVID-19 variant first discovered in Britain. Genetic analysis suggests it was contracted from the community and did not originate in the patient. This variant has a mutation that may make it less susceptible to vaccines.
+325	Free COVID-19 vaccines by appointment only at #CalStateLA. Check your eligibility under the state’s tiered priority system and sign up for drive-thru or walk-up appointments seven days a week from 9 a.m. to 7 p.m. through https://t.co/Fj3Bx8aIOI or by calling (833) 422-4255. https://t.co/1E540UGV3P
+326	I took my first Covid-19 vaccine jab this morning. I thank the federal government @MBuhari and @Fmohnigeria for procuring the vaccines in installment, to protect the lives of Nigerians. https://t.co/IIQkolC3Hy
+327	🚨Vaccines are a global public good and not a tool for profit-maximization. Everyone needs to have access in order to stop the global pandemic! Join the @progressive_all call for #GlobalVaxSolidarity and 🖊️the petition 👇 https://t.co/rG8jzR0O6b https://t.co/EKLDlMTemB
+328	In cities across the country, BIPOC communities are not getting vaccinated at the rate we would expect. The US has a long history of racism and systems of oppression, and these systems are showing up in the inequitable vaccine rollout. https://t.co/CRRMkdslks
+329	We are grateful beyond words to the Lummi Tribal Health Center for providing COVID-19 vaccines to 150 WTA employees today. Thank you for hosting us, thank you for vaccinating us, and thank you for helping us safely serve our community! @lummicomm
+330	Covid 19 situation remains dangerous. Number of vaccines delivered daily is still low. We are expecting a larger number of vaccines in the weekend. This will improve the immunization situation and beef up the campaign. (1/2)
+331	The Southeast ranks last in doses received per capita among all the state's regions. Pennsylvania's most populous region has received the fewest COVID vaccines in the state. This should be a scandal. And maybe it will be if national media ever notices. https://t.co/5K4jxvJcLQ
+332	Federal authorities are being asked to step in amid concerns that sensory sensitivities, physical access and other barriers may be keeping people with #disabilities from receiving COVID-19 vaccines. https://t.co/wl1gjwFUAl #specialneeds #COVID19Vaccine
+333	Migrants in irregular situations are particularly at risk of being left behind. States must build firewalls between health service providers and immigration authorities to ensure their safe access to #COVID19 vaccines. Read our statement here: https://t.co/uBgRRl4lLP https://t.co/PkwxTfRZDm
+334	Hundreds of FAKE #COVID19 #vaccines seized in South Africa❗️ @INTERPOL_HQ warns again that no approved vaccines are currently available for sale online. Vaccines advertised on websites or #darkweb, are not legitimate and may be dangerous. #FightTheFakes https://t.co/H3ELbliYKB
+335	The unprecedented demand for COVID-19 vaccine manufacturing worldwide has led to a shortage of key supplies, including glass vials, plastic filters, and the raw materials needed to make them, warned the World Health Organization on Friday. https://t.co/HMUsYvr1st
+336	Well said @nickdearden75! Vaccine apartheid is unacceptable. Rich countries and companies must stop hoarding vaccines and know-how and help to scale up manufacturing of COVID vaccines @SECTION27news @FixPatentLaw @MSF_access https://t.co/XSDPCTHvmH
+337	More positive lab studies on COVID-19 vaccines and variants. https://t.co/GM4JQ42dq9
+338	You may have heard a lot about COVID-19 vaccines, and you may have questions. COVID-19 vaccines do not have live virus in them, and they cannot give you COVID-19. When you have the facts, you can make informed decisions for yourself and your family. https://t.co/2zSYkvEFHZ https://t.co/XPGnEzD0fg
+339	Family, we are excited to inform you that West Angeles Church is partnering with the LA County Department of Public Health and Curative to provide free COVID-19 Vaccines to our community this Sunday, March 7th at the Cathedral. Must Sign up at https://t.co/4bY4vqK7Hn.
+340	Missourians continue to die every day from COVID-19 and @HealthyLivingMo isn’t moving fast enough. We must do everything in our power- using all resources at our disposal- to get vaccines in the arms of Missourians who want them as quickly as possible. https://t.co/qVw2333MfB
+341	Magufuli played down the COVID-19 threat, saying God and remedies like steam inhalation would protect Tanzanians. He mocked coronavirus tests, denounced vaccines as a Western conspiracy to take Africa’s wealth, and opposed masking and social distancing. https://t.co/UeZqDz5mfE
+342	America’s Monroe Doctrine means that Mexico and rest of Latin America should be US vassal states, although they can’t even get COVID-19 vaccines. For that, they can go to communist China https://t.co/HecQK6Xlgd
+343	“While hotels and motels, masks, and social distancing are critical to minimizing the spread and protecting people’s lives, the best tools that we have to keep people experiencing homelessness truly safe from COVID-19 are vaccines &amp; a home.” - @Richard_S_Cho of @HUDgov #NAEH2021
+344	... There is no evidence that any of the COVID-19 vaccines prevent viral infection and transmission. That is pure pie in the sky wishful thinking, based on no clear science. Irresponsible and unprofessional.
+345	Kenya is among the first African countries to receive COVID-19 vaccines. While the #COVAX initiative is promising, many will still be excluded from the rollout, whose focus is essential workers and those who can afford to get vaccinated. We are calling for #VaccinesForAll. https://t.co/kW7xp1Wym8
+346	We have used up all the vaccines already, and we don't know when the next supply would arrive, said Dr William Bernardo. https://t.co/yQrQkd6pWl
+347	Catholic Bishops shameful position on Covid vaccines will kill...like their morally bankrupt role during the HIV/AIDS pandemic, opposing condoms, which killed thousands of followers in Africa and elsewhere....ignore them, shame them, leave them. #cdnpoli https://t.co/aiJ164EvD6
+348	More evidence that the COVID vaccines prevent symptomatic &amp; asymptomatic COVID-19. Meaning the vaccine protects you AND those around you. #ThisIsOurShot #VaccinesSaveLives https://t.co/HqEe8Vzite
+349	President Joe Biden pledged to make all adults eligible for vaccines by May 1 and raised the prospect of “independence from this virus” by the Fourth of July. But he cautioned that this depends on people following health guidelines and getting vaccinated. https://t.co/Mn5lrMscRR
+350	Those who are working in frontline health services, all senior citizens, persons with comorbidities, frontline personnel in essential sectors, including uniformed personnel, and indigent population will get the first doses of COVID-19 vaccines.
+351	#PTI Govt has so far received COVID-19 vaccine only from China. It has not procured yet anything from the open market and is now awaiting more vaccines from the COVAX Facility, but it has not made any bilateral agreement with India in this regard. https://t.co/vO2t4V6fig
+352	“We don’t anticipate receiving any COVID vaccines, not even for our doctors, nurses and midwives, until next year at best.” @trocaire on what vaccine inequality looks like at its clinics in southern Somalia: https://t.co/AbZeHapiUp
+353	Vaccines arrived at pilot pharmacies 1 yr to the date when the WHO designated COVID-19 a pandemic! This is an emotional time for #pharmacists that took possession of the first 500. Hard work and perseverance got us here. This is optimism &amp; herd immunity on its way. I salute you.
+354	Chief Medical Officer Dr. Mary McIntyre speaks about the Pfizer and Moderna #COVID19Vaccines and says Vaccination against COVID-19 will work only if most of us take the vaccines. For more info, visit https://t.co/iibCT1VzFm. https://t.co/KIO8ucQt8c
+355	I've seen motorcycle accident victims listed as a covid death. Almost all deaths during the pandemic were attributed to Covid. But none of the deaths of people who've taken the vaccine (like Hank Aaron) have been attributed to the vaccine. Vaccines are safe and FDA approved.
+356	Several North African and Middle East countries are receiving Covid-19 vaccines at such a slow pace that it could lead to protracted public health crises, global inequality campaigners and health experts have told Middle East Eye. https://t.co/1R0QgAY07i https://t.co/NZEGWrJBEO
+357	Last week we transported together with @FlyingBrussels and @Kuehne_Nagel the first Covid-19 vaccines to Liberia. In addition, we were able to organize transports to BJL and FNA as part of @UNICEF Human Airfreight Initiative. https://t.co/jeDEESEdBq
+358	Domestic pharma companies work overtime to meet soaring demand of COVID-19 vaccine. As of Feb 28, China has offered COVID-19 vaccine assistance to 69 countries and two international organizations, and exported vaccines to 28 countries. #COVID_19 #vaccine https://t.co/w9om4yvGC6
+359	Merck says study shows COVID-19 drug causes quick reduction in virus https://t.co/z7i3zMRvSK Therapeutics are where it's at... Vaccines and herd immunity are kewl, but a pill that prevents the infected from becoming seriously ill = back to normal THE NEXT DAY

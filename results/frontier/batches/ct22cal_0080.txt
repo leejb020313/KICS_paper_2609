@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	If by “Russian” you mean major media publications, the cdc and members of Biden administration, constant doomsaying on vaccine, well yes. Russian disinformation campaign aims to undermine confidence in Pfizer, other Covid-19 vaccines, U.S. officials say https://t.co/jOozvAtavL
+81	BREAKING: CDC (VAERS) REPORTS 966 deaths from Moderna and Pfizer Covid vaccines. - 86 died immediately. - 129 died 1 day after - 97 died in 2 days - 61 died in 3 days - 514 died in a week. - 173 died in 7-13 days - 106 in 14-20 days Data tracked: Dec.14 - Feb.19. https://t.co/oHo7U74xjH
+82	I was starting to think the Coronavirus fear-mongering was actually really something to worry about. Then this move by Pelosi happened, and it all became clear again. COVID-19 is a hoax.
+83	Help CANVAS Network monitor the safety of COVID-19 vaccines. Both vaccinated and unvaccinated Canadians are invited to enrol in this national study. Visit https://t.co/ehjbEq5he1 for more information.
+84	Heh. South Africa accused Canada of hypocrisy for opposing the patent waiver after introducing its own emergency legislation in March, 2020, to allow it to suspend patent rights and authorize the immediate licensing of vaccines or drugs https://t.co/G28zrIQic7 #cdnpoli
+85	LOOK: PAF Black Hawk helicopters delivered 500 PPE sets and 278 vials of Covid-19 vaccines to #Basco, #Batanes today, 08 March 2021. AFP assets are being used to transport medical supplies and vaccines nationwide. #DuterteImpact #OneDefenseTeamPH 📷 DND PH https://t.co/67FlNV6M1d
+86	UK, US, and EU blocked a push by India and South Africa at WTO to waive patent rights in an effort to boost production of COVID-19 vaccines for poor nations. The notion was supported by 80 developing countries, but opposed by all Western countries. https://t.co/Sq6nDwjwFE
+87	This is unbelievable. It reportedly took Macron's threat to close the UK border for Boris Johnson to finally shutdown bars and restaurants. The Elysee refers to UK policy as 'benign neglect'. This failure of leadership is costing lives.
+88	ISIOLO county receives 1,500 doses of covid-19 vaccines.Confirming the receipt,chief officer Ibrahim Aliow said that the vaccine will be distributed to all the three sub counties Merti,Garbatulla and Isiolo. https://t.co/ma38h5GQlU
+89	Africa why your own drugs and medicine 💊💉 are not valuable to you Covid-19 medicine is here in Africa which the world knows, but African Presidents are giving millions of dollars to Fake Vaccines that can't cuare or prevent any one from contacting Chinese Virus Covid-19 https://t.co/QP87COEToR
+90	The Government has failed to source extra vaccines from other EU countries or the UK, and has no plans to seek extra supplies from outside the EU https://t.co/mzGkq8ZCJ1 via @IrishTimes
+91	Rona vaccine gives Rona symptoms Only they call it a flu-like illness now Flu-like illness an expected side-effect of Covid vaccines, says WHO, with symptoms including fever and headache https://t.co/dADDO71RJI
+92	South Korea extends use of AstraZeneca #COVID-19 vaccine to people aged 65 and over #CovidVaccine #retweet #IARTG #COVID19BC #COVID19Canada https://t.co/Y7yfpuseDk
+93	The Media is celebrating Conservatives getting the Coronavirus. Over 5,000 articles have been written about the 1 case of #coronavirus at #CPAC2020. If this were a leftist conference, the media wouldnât touch it. This is a prime example of the media attacking Conservatives.
+94	New Covid cases have been rising again in the European Union since mid-February, as the continent suffers from slowness to procure and approve vaccines, production delays at vaccine makers and bureaucratic holdups in injecting available doses. https://t.co/gDeRHiDZE0
+95	Published 13th March 2021 by Dr Vernon Coleman MD "COVID-19 vaccines are weapons of mass destruction which could wipe out the entire human race" https://t.co/eKppW3FV1F
+96	#Georgia GET YOUR VACCINES! GA will expand COVID-19 vaccine eligibility starting Monday, March 15, to everyone 55 and older, plus younger adults with serious health conditions. some appointments at pharmacies going unclaimed. https://t.co/Vwuc4fYhKy
+97	Toronto has another case of #COVID19 in a traveler who acquired the infection in.....Las Vegas. You heard that right - Las Vegas. The USA is exporting cases and the travel history is rapidly becoming irrelevant. https://t.co/g5QpObskW4
+98	Garlic may be tasty, but it WON'T protect you from the new #coronavirus. Don't spread rumors. The fight against #COVID19 is also a fight against disinformation. #ShareInformation #ShareKnowledge #StayAtHomeChallenge https://t.co/DFLwgCdpL8
+99	To-date, Uganda has NO confirmed case of #COVID19. There is an article alleging that “Uganda confirms 1st case of Coronavirus”-this is NOT true and absolutely FAKE. People, please stop spreading rumors. Our teams are working around the clock to protect you &amp; keep COVID out of 🇺🇬 https://t.co/c9NMsQucq6
+100	Bogus claims about the virus, masks and vaccines have exploded since COVID-19 was declared a global pandemic a year ago. https://t.co/SYlu4TnT5V
+101	The whole covid scam may have backfired. A whole lot of people, including myself, in researching covid, have learned a lot about vaccines generally, and have become vaccine-hesitant.
+102	So, the last week I have been battling COVID-19 &amp; Pneumonia. Never in my life have I been this ill. “Young people aren’t at risk, they’ll only have mild symptoms” Wrong. I want to open up about the difficulties I’ve gone through these past days, what it was like in the ICU...
+103	On March 09, 2021 at about 9:24 AM Pat Aidelyn J Sabud, Assistant PCR PNCO of Mahinog Municipal Police Station distributed six info graphics awareness on DOH regarding COVID 19 Vaccines and six info graphics awareness with MPS Hotline at Tupsan Pequeño, Mahinog, Camiguin. https://t.co/mSp9SLBdYM
+104	“The hangover from a colonial mentality has to stop.” The head of the WHO condemns the “racist remarks” of scientists who suggested potential coronavirus vaccines could be tested on people in Africa. https://t.co/IkDhXejZph
+105	Logistics supply chains have delivered. More than 300 million vaccine doses have been distributed and administered. . . . #vaccine #logistics #transportation #covid_19 #covid #freight #CovidVaccine https://t.co/yDOnoR3vef
+106	Pfizer’s and Moderna’s mRNA vaccines took over three decades to get here. https://t.co/qAgCzKtWiC https://t.co/hAeriK70l1
+107	In this month’s e-GiST, you can read about our Trust delivering more than 100,000 COVID-19 vaccines, find out how we're working with @salvationarmyuk to offer homeless people a safe place to recover after leaving hospital, and meet our award winning staff. https://t.co/U87pSgmBQ6 https://t.co/x2RZa9deBZ
+108	UK: 508 Dead And 297,274 Injured Following COVID-19 Experimental Vaccines!South Korea: 2 patient dies after receiving AstraZeneca vaccine | COVID vaccine Friday, March 12, 2021 https://t.co/3vdlDDG5x4
+109	⚠️ Over 75% of #Covid19 vaccinations carried out in just 10 countries ‼️ Vaccine monopolies are creating artificial scarcity. We urge members of the @wto to support the #TRIPSwaiver proposal and help boost global vaccine production. Our statement ➡️ https://t.co/JYr7MMbSzR ⬅️ https://t.co/Cm5G8k4yJ7
+110	Veronica McNally, MI member of the @CDCgov's ACIP voted to recommend the COVID-19 vaccines developed by @pfizer, @moderna_tx, &amp; @JNJNews. All three demonstrated the ability to reduce the risk of severe disease, hospitalization, and death. #IVaccinate https://t.co/7edJ7KHV7j
+111	The TRIPS waiver raised by India at the WTO would help the global community move forward in defeating the scourge of COVID-19 by making diagnostics, treatments, and vaccines available in developing countries but some in USA oppose it ! #VaccineMaitri https://t.co/UQUFXurZsg
+112	Our new paper rapidly studied T cell + antibody immune responses in average COVID-19 cases. This is good news in multiple ways, including coronavirus vaccines. @ljiresearch https://t.co/jm7YGi2Op8 https://t.co/Cg89Sg1mth
+113	The Covid-19 Vaccine has undergone months of rigorous testing and the MHRA’s approval processes mean we can be sure that they meet strict safety standards and offer high levels of protection. #CovidVaccine #CovRugby https://t.co/OBcwL8UDRb
+114	Alaska makes vaccines available to those 16 and older, becoming 1st state to remove eligibility. The state has become a leader in quickly vaccinating its residents, benefiting from relationships with tribal health organizations. requirements https://t.co/ZIgp9on2AW
+115	What works in stopping the spread of Coronavirus: 1. Wash your hands for at least 20 seconds 2. Cough and sneeze into your elbow 3. Stay home if you're sick What doesn't work: 1. Racism
+116	What you should know about the AstraZeneca vaccine: You will still be able to contract COVID-19 even after vaccination. However, these vaccines lessen the severity of the infection and reduce the risk of death due to Covid-19. @nbstv #NBSUpdates 📸- @RAkwesiga https://t.co/Npu99LVois
+117	He told wealthy friends. Then cashed out a cool $1.4m in stock. Then voted AGAINST the covid-19 relief bill. He needs to go
+118	#FakeNews Alert #PIBFactCheck: The claim that Paracetamol can treat #Coronavirus infection is false! Beware of #False remedies being shared on #Covid19india . For authentic information on #CoronavirusInIndia follow @MoHFW_INDIA https://t.co/Y7GmqFa4As
+119	All COVID-19 vaccines are safe and effective. With the recent authorization of the Johnson &amp; Johnson single-shot vaccine, we have yet another tool (along with the Moderna and Pfizer BioNTech vaccines) to help stop the spread of the virus. Learn more at https://t.co/AtorCB6nnR. https://t.co/I2UOE1KPaZ

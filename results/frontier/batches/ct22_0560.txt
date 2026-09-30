@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	More than 4500 DIED YESTERDAY from Coronavirus. No vaccine. No treatment. No surveillance testing. No strategic plan. We will never break out of this pit and get back to work. Trump has failed at national leadership. https://t.co/MjXayuitOL
+561	BREAKING: Germany permits human trials of a possible coronavirus vaccine
+562	Greedy mofos gonna kill us all. GOP blocking coronavirus bill — because it limits how much drugmakers can charge for a vaccine: report | Raw Story https://t.co/2MH98dg1Da
+563	JUST IN: Putin says his own daughter has been vaccinated with new coronavirus vaccine
+564	Coronavirus: UK 'throwing everything' at developing vaccine - BBC News https://t.co/Wjajc4DRxH
+565	JUST IN: President of the EU Commission says a German company could have a coronavirus vaccine by this fall
+566	The Coronavirus vaccine is being developed at record speed. "Two vaccine candidates are entering the final stage of clinical trials this month.” https://t.co/hqrQhWwHdO
+567	Coronavirus vaccines in stage three testing: Murdoch Institute and University of Melbourne - Australia Sinovac - China SinoPharm - China AstraZeneca and Oxford - UK Moderna and NIAID - US (starting 27th of July)
+568	BREAKING: President Vladimir Putin says Russia's coronavirus vaccine has been registered; his daughter is among those inoculated. https://t.co/waRjBnjUBQ
+569	MEDICINE: Human trials of a vaccine being developed by Oxford have shown it generates an immune response against the coronavirus infection
+570	Russia on Tuesday became the first country to officially register a coronavirus vaccine and declare it ready for use, despite international skepticism https://t.co/hsZ0GH4JsF
+571	Coronavirus #RussianVaccine News Updates by @SatlokChannel: Russia finished human trials; India and other countries are also working on vaccines. Here is one true vaccine for #COVID19. Read more: https://t.co/9kasERl3Jp https://t.co/x7HI2dn9kK
+572	Moderna’s experimental coronavirus vaccine moves to a large and decisive clinical trial after the latest study showed the shot induced the desired immune response #WSJWhatsNow https://t.co/Pc9xtLqyIa
+573	Panic buying and stockpiling of toilet roll continues. These are the scenes at Costco in Farnborough in Hampshire today. #coronavirus #toiletpaperpanic #panickbuying https://t.co/JLlZVVS7EH
+574	Native American communities have been hit hard by COVID-19. But thanks to the Indian Health Service and strong partnerships with Tribal governments, organizations, and urban Indian groups, more than 500,000 vaccines have already been administered with more on the way.
+575	ALERT: CVS Pharmacy is now offering COVID-19 vaccines in Massachusetts to Teachers K-12, Daycare and preschool workers, and staff. https://t.co/pBRXCSpHmL
+576	#COVID19 vaccines are an important tool to help stop the pandemic. As of January 19, more than 13.5 million people had received their first dose of a COVID-19 vaccine. Of those, more than 2 million had received both doses and are fully vaccinated. More: https://t.co/zYLe3H12re. https://t.co/wgECA6chAO
+577	Pfizer reports that IRL the vaccine is 97% effective against symptomatic COVID and 94% effective against asymptomatic disease. These vaccines are a complete and total scientific miracle. https://t.co/hc7IhuNMrK
+578	Vaccines are complex medicines. Europeans can trust that COVID-19 vaccines authorised in the EU have gone through rigorous testing and trials, and are only put on the market if safety and efficiency are proven. Learn more about the process ↓ #SafeVaccines https://t.co/BuXaQnBRR5
+579	Lack of internet access or transportation are significant barriers to receiving the vaccine — especially for Arizona’s underserved communities. Programs like this will go a long way to helping close the gap and get more vaccines in arms. https://t.co/pBmM9wXOkb
+580	Pfizer's shot causes mortality 100s of times greater in young people compared to mortality from coronavirus without the vaccine, and dozens more in the elderly... https://healthimpactnewsDOTcom/2021/death-rates-skyrocket-in-israel-following-pfizer-experimental-covid-vaccines/
+581	.@POTUS is prioritizing vaccines for our teachers, school staff, and child care workers this month — that’s how we’ll get back on track. https://t.co/5hoOWRwHgL
+582	If Covid vaccines were developed in Warp Speed than @POTUS's administration used Transwarp Drive to procure a vaccine SURPLUS. Their mastery of logistics and disciplined efficiency has saved USA. We just need to do our part and not be recklessly stupid a little while longer. https://t.co/MFCXhGOPdu
+583	📣 BREAKING NEWS: The EU has authorised the fourth #COVID19 vaccine → Janssen (Johnson &amp; Johnson). The authorisation process in place ensures that any vaccine on the EU market is safe and effective. More 👉 https://t.co/G5f0tS6bAH #StrongerTogether #VaccinesWork https://t.co/dlDmQ0PoYz
+584	https://t.co/WgdOehVPOp There is no clear scientific evidence establishing either the safety or efficacy of proposed COVID 19 vaccines. The BBC and other MSM reports that this evidence exists are false. So check my blog to find trusted sources.
+585	Export of COVID vaccine is not charity by Modi Govt. Gates Foundation gave $ 150 million to Serum Institute for equitable distribution of Vaccine to India and low-middle income nations. https://t.co/mhdtWD5bWs
+586	SARS-CoV-2 California (B.1.427/B.1.429) and New York (B.1.526) variants join B.1.1.7, B.1.351, P.1 and B.1.2 lineages, adding to research on how viral evolution may impact COVID-19 vaccine efficacy. Read the updated article here: https://t.co/jdF0uqycLN
+587	Two Texas counties, Hardin and Orange, have opened their vaccines not just to phase 1A and 1B, but to anyone. https://t.co/WLdETICc5l
+588	China has pledged to donate #coronavirus vaccines to 53 countries and export them to 27 more, according to state media, which has celebrated the deliveries https://t.co/oEhDXYml3m
+589	On Wednesday, Gov. Andy Beshear announced the state’s positivity rate decreased again, to 3.93%, as more Kentuckians receive one of three highly effective COVID-19 vaccines and continue to follow guidance from public health officials. Read more: https://t.co/4tMjFRJIW5 https://t.co/SZCCMYzyJd
+590	Maryland providers have administered 1,877,404 COVID-19 vaccines, and are averaging 42,705 shots per day. Phase 1 eligible Marylanders can now pre-register for the state’s mass vaccination sites at https://t.co/MjHeoZnfuj or by calling 1-855-MD-GOVAX. https://t.co/Ob2ZYXYpa0
+591	Khairy Welcomes Private Sector Procuring Approved Covid-19 Vaccines Malaysia aims to achieve herd immunity by Feb 2022, with a target of 160,000 daily doses administered during the second and third phase of the Covid-19 vaccination programme. https://t.co/07k9mq25gZ
+592	JUST IN: Next week, State of Michigan will receive 11,400 Johnson and Johnson COVID-19 vaccine doses 98,200 first dose Pfizer vaccines and 133,380 first dose Moderna vaccines will also be received Total vaccines next for Michigan (J&amp;J plus first and second doses): 474,560 doses
+593	Country musician Larry Gatlin goes on Fox and announces that he came down with COVID-19 four days after taking the 2nd Moderna vaccine. Then says he wants to "thank Moderna for giving him Covid." Fox host them forced to read CDC statement that vaccines don't contain live virus.
+594	COVID-19 vaccines are safe and effective. Before the @US_FDA authorizes a vaccine for use, the vaccine goes through rigorous clinical trials to make sure it works well. Vaccines are continuously studied to ensure effectiveness. Learn more: https://t.co/XHM1Q8nZ4X https://t.co/oCyNsNnCzc
+595	Individuals with ESRD have one of the highest mortality rates due to #COVID19. It is critical that dialysis patients and related clinical staff receive prompt, priority access to COVID-19 vaccines in the #dialysis clinic. https://t.co/9Y57WcYoE1
+596	Like Pfizer and Moderna, the @JNJNews vaccine is safe, effective and protects against COVID-19-related hospitalization and death. Learn more: https://t.co/bzzZqw1QUu. https://t.co/hFiVCssLot
+597	More CoronaVac doses arriving this month The country is expecting another 1.4 million doses of #CoronaVac vaccines this month, National Task Force (NTF) Against Covid-19 chief implementer and vaccine czar Carlito Galvez Jr. said on Sunday. https://t.co/kb394n7BW9
+598	China-donated COVID-19 vaccines arrive in #Philippines #Marking a new phase in the country's fight against the COVID-19 that infected 576,352 and killed 12,318.■ https://t.co/tzAeMIB6YE @salhaj @ggonzzalezz https://t.co/eq5mPn418U
+599	Russia uses the #CovidVaccine as a weapon in the disinformation campaigns built on promoting #SputnikV while discrediting Western vaccines. Find out more on how and why in our article. https://t.co/AbwwZ5TU5C

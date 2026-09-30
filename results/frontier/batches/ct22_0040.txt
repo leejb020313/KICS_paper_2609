@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	NEW: EU draft proposals for a vaccine certificate — “EU covid card/digital green certificate” — could include vaccines from Russia and China that have received emergency authorisation from national governments but not EMA approval https://t.co/eVYtL2uiAL
+41	BREAKING NEWS: Ireland suspends with immediate effect from today 14th March 2021 the COVID-19 vaccination with Oxford-AstraZeneca vaccine. Denmark and Norway have also suspended the use of COVID-19 vaccines.
+42	Gates funded 2019 Event 201 pandemic exercise In focus: Industry-centric, fear based, police-state, censorship, patentable antivirals vaccines Ignored: building immune systems, off-the-shelf remedies, drugs, vitamins, The rest they say, is history https://t.co/7gzrLtyfre
+43	$PDSB PDS Biotech COVID-19 Vaccine Consortium Receives a US$60 Million Commitment from Brazil’s MCTI to Fund Clinical Development and Commercialization of PDS0203 #CovidVaccine https://t.co/iG5lgfIR2Z
+44	When leaders of the [Quad] meet...Friday, they will discuss ways to ramp up vaccine manufacturing by India and measures to get doses speedily to more developing countries...As of Wednesday India had shipped more than 58 million doses to 66 countries https://t.co/CjXMPrlCBS
+45	Rich, non-disabled people in Philadelphia are pretending they live in “congregate settings” to get early access to vaccines meant for disabled people living in group homes and institutions. https://t.co/RIBxYsm9TP
+46	After getting your #COVID19Vaccine, you may not have to wait to donate as long as you’re symptom free and feel well. Read more details about vaccines and blood donor eligibility here: https://t.co/z74GvC0u2J https://t.co/kvGdM1lA90
+47	Several UN and regional bodies issued a Guidance Note on Equitable Access to COVID-19 vaccines for migrants, regular and irregular, calling States to avoid any discrimination against them, applying the same standards they use for nationals. https://t.co/IdKeX9beaR
+48	The safety of vaccines delivered to Nigeria is paramount to the Presidential Task Force on COVID-19. For this reason, it has enhanced multi-sectoral collaboration among stakeholders and technical entities such as the FMOH, NPHCDA, NAFDAC, WHO and UNICEF
+49	#CVSHealth is now administering #COVID19 vaccines in 1,200 stores across 29 states and Puerto Rico. Newly activated states and jurisdictions are CO, IL, KY, MN, MO, MT, NC, ND, NV, OK, UT, VT, NYC and Philadelphia. https://t.co/faGimUyBEn https://t.co/faGimUyBEn
+50	Great news! The VA Northern California Health Care System is now offering COVID-19 vaccines to all enrolled Veterans who already receive their care at VA, regardless of age, and their registered caregivers. https://t.co/W6i5cOXwOH
+51	On Wednesday, #Cuba expressed its willingness to assist Lebanon to combat COVID-19, offering its most advanced vaccines, Soberana 02 and Abdala, which will start their final-phase clinical trials this month. https://t.co/YUtXiyed04
+52	With three COVID-19 vaccines approved for use, and a steadily increasing vaccine supply, the OK State Dept. of Health has now opened vaccine eligibility to all Phase 3 priority groups, which applies to most students, faculty &amp; staff on the OU Norman campus. #OUVaccinates https://t.co/nvDwLICUQc
+53	According to this data, New York is 4 months away from having 75% of the population vaccinated and possibly reaching herd immunity. The US is currently leading the world in number of vaccines administered. https://t.co/b6sPpt68aU
+54	Mongolia received 14,400 doses of AstraZeneca-Oxford vaccines via the COVAX Facility. UNICEF and WHO have been technically, financially and logistically supporting the Government of Mongolia to prepare for the COVID-19 immunization campaign. @UNICEF_Mongolia @gavi @WHOMongolia https://t.co/noEGmsPHlE
+55	Covid vaccines are safe for people with epilepsy (I had zero side effects and no seizures) and having Covid puts you at greater risk so please get that vaccine in your arm https://t.co/UYZYMRU1rY
+56	Honoured to represent EU and #TeamEurope at this morning ceremony for the arrival of the first batch COVID-19 vaccines in Addis Ababa through COVAX. The world will not be free from the virus until everybody is protected. EU and ETH together in the fight for the pandemic. https://t.co/CWzvGE7SKQ
+57	Several countries in the Americas have received their first COVID vaccine shipments over the past few weeks — not from the U.S., but from China, Russia, and in some cases, India. https://t.co/UQkJ2SnGAo
+58	There are now 81 #COVID19 vaccine candidates undergoing clinical trials around the world and three vaccines have moved to phase 3 trials. Learn more via our latest vaccine race update: https://t.co/ETtHP6XmYI
+59	ICYMI: New Yorkers age 60 and up are now eligible for the COVID vaccine. The vaccines are safe, effective &amp; free. If you're eligible, book your appointment today: https://t.co/nGVJXXouUG https://t.co/WnOwl0dzhx
+60	Alaska is 1st in US to open vaccines to anyone age 16+. Last week they opened to 55+ &amp; ppl with comorbidities yet still had appointments unfilled. So anyone 16 or &gt; gets a vaccine in Alaska! They had previously vaccinated 25% #OVHealthcare #ONEV1 https://t.co/DtkgBlAcHQ
+61	Health authorities booked 17,210 appointments for COVID-19 vaccines today and 85,904 this week. Each health authority’s total for today (and this week) are: VIHA - 4,468 (14,325) FHA - 5,148 (32,588) IHA - 3,214 (14,368) VCH - 2,434 (18,245) NHA - 1,946 (6,378)
+62	Today, the #GC provided an update on #COVID19 and #Indigenous communities. 536 First Nations, Inuit and Territorial communities are rolling out vaccines, and more than 162,155 doses have been administered. https://t.co/Pm1Rh7TEQv #AllInThisTogether https://t.co/CiQxSUYYYA
+63	At least 37 states and Washington, D.C., now allow some residents with certain health problems to get vaccines, according to a New York Times survey. But the health issues granted priority differ from state to state, and even county to county. https://t.co/WUYHBwQpBi https://t.co/rv25w7cRxA
+64	‼️UPDATE‼️Very successful day at Fair Park today. We administered a total of 8839 vaccines to Dallas County residents. We are averaging over 1k vaccines per hour. Don’t let your guard down and continue to do your best to defeat COVID-19. @JudgeClayJ @FEMARegion6 https://t.co/oEidQ7265R
+65	More 100,000 doses of the COVID-19 vaccine from the Indian government will arrive today afternoon at Entebbe International Airport. The #COVID19 vaccines are #safe #effective and #free @WHOUganda @MinofHealthUG
+66	How Chile built one of the world’s most successful vaccination campaigns - Vox The Latin American country bet big on vaccines and relied on a strong primary health care network. Now, a quarter of the country has had at least one shot. https://t.co/CAjWX8DPH1
+67	In Los Angeles, Dr Jerry Abraham transformed a historically Black hospital into a COVID-19 vaccination hub. Today, he testified in a senate committee hearing saying, We took down every barrier that stood in the way of our patients and their vaccines. https://t.co/SR8SB72gt1
+68	In the first 2.5 hours of expanding eligibility to those 65 and older, we scheduled more than 15,000 Vermonters for their vaccines. Keep it up! #OutShotVT https://t.co/KaYvmsLE56 https://t.co/Lv3DMmhUkZ
+69	President #Kagame and First Lady Rwanda Jeannette Kagame today received their Covid-19 vaccines at King Faisal Hospital in Kigali. #Rwanda's Covid-19 vaccination campaign launched last Friday has seen more than 230,000 people vaccinated so far. #VaccinesSaveLives https://t.co/hZBJU4ygeu
+70	.@PressSec says there is no plan at this time for the U.S. to send Covid-19 vaccine doses to developing countries. She says Biden is committed to expanding global vaccinations but "is first and foremost focused on ensuring Americans have access to vaccines as soon as possible."
+71	Russia is mounting a disinformation campaign against Pfizer's Covid vaccine https://t.co/JWrmQ117uj. And idiotic comments in the West have already harmed the AZ one.
+72	The first #COVAX delivery of vaccines arrived in #Ethiopia today. 2.2 Million doses through #TeamEurope and the international partnership established to ensure equitable distribution of #COVID-19 vaccines around the world @EUinEthiopia @EleniKyrou_ @BNMarkussen #AUEU https://t.co/6q1MKWgDPi
+73	The best vaccine is the one that is available. This statement was by Dr Tony Fauci (USA) in the context of Pfizer, Moderna and J&amp;J vaccines being available to the population. https://t.co/6aDsIqP7Yt
+74	No one is safe until everyone is safe 🌍 COVAX has so far shipped over 28.5 million COVID-19 vaccines to 37 countries, with more arrivals due in the coming days and weeks 🙌 @gavi | @WHO | @UNICEF Follow our partner @gavi’s live blog for more ⤵️ https://t.co/wxVTreIa8V
+75	74% of the British public think governments should ensure vaccine science and know-how is shared with qualified manufacturers around the world. We need a #PeoplesVaccine now. https://t.co/SMv3gsye32
+76	Everyone needs vaccines. They are recommended for infants, children, teenagers, and adults Make sure that you and your loved ones get the COVID-19 vaccine #KickCOVIDoutOfKenya https://t.co/74CSN5Hwwr
+77	Awesome time volunteering w/an amazing grp of local providers and nurses at multiple churches that opened doors to help us give 2nd dose COVID-19 vaccines to &gt;1700 African American and Latinx seniors from vulnerable zip codes in Raleigh, NC. Here's our strike team-all smiles! https://t.co/oCdNyTvhnS
+78	With Hon PM, UN Resident Coordinator and the 12400 Astra Zeneca Vaccines we received tonight . It is the beginning of the end to COVID-19 in Fiji and its affect on the nation as a whole. #TogetherWeCan https://t.co/Z4iuP88pSf
+79	Today, Sue and I received our first COVID-19 shot at the Dunkin’ Donuts Center — we’re feeling great! These vaccines are safe and will save lives. Every shot helps Rhode Island get one step closer to beating this virus and getting back to school, back to work and back to normal. https://t.co/itMZopTxXm

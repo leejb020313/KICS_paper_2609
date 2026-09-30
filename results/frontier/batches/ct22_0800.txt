@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	A death warrant for Texans. Add them to the 44,000+ killed as he failed to confront the pandemic &amp; botched the vaccine rollout. And those who froze to death because he cares more about energy companies’ profits than keeping Texans alive. Abbott is killing the people of Texas. https://t.co/2idUcqSjJT
+801	“Vaccines are unnatural.” Yeah, so are eye glasses and air travel and surgical anesthesia and scuba diving and air conditioning and purified water and bullets and television and microwaves and shoes.
+802	NEW: Our latest investigation hears from a whistleblower engaged in Pfizer’s pivotal covid-19 vaccine trial. Her evidence raises serious questions about data integrity and regulatory oversight https://t.co/Ho99hQhwRM
+803	It would make every Indian proud that the two vaccines that have been given emergency use approval are made in India! This shows the eagerness of our scientific community to fulfil the dream of an Aatmanirbhar Bharat, at the root of which is care and compassion.
+804	An mRNA vaccine doesn't actually contain the virus itself. Think of it as an email sent to your immune system that shows what the virus looks like, instructions to kill it, and then—like a Snapchat message—it disappears. Amazing technology.
+805	24-year-old Chloe Mrozak from Illinois was arrested after allegedly using this fake #COVID19 vaccine card to enter Hawaii and avoid travel restrictions — it says “Maderna” instead of “Moderna” @KITV4 https://t.co/1EWp3eG3OR
+806	I am pleased to report a federal judge rejected the FDA's request to produce the Pfizer Covid vaccine data at 500 pages per month and instead ordered a rate of 55,000 pages per month! Everyone should read the Judge's excellent 3-page decision available at https://t.co/ziqCs9fA9J
+807	Holy moly. This study shows that after three months the vaccine effectiveness of Pfizer &amp; Moderna against Omicron is actually negative. Pfizer customers are 76.5% more likely and Moderna customers are 39.3% more likely to be infected than unvaxxed people. https://t.co/wPgAwG8BW3 https://t.co/3Oh3IJSVIk
+808	9 months ago today I collapsed at home 14 days after my 1st AstraZeneca. I’m here when I shouldn’t be. I lost my left leg from above the knee and I have numerous other things going on. All from the vaccine. I was a really fit and healthy person with no underlying health issues.
+809	The booster shot was never about reducing symptoms. The booster shot was about trying to maintain the lie that the vaccine could prevent people from contracting and spreading COVID. That lie was the basis for all vaccine mandates, and it completely disintegrated this month.
+810	Today I got my first COVID-19 vaccination dose. I am extremely grateful and privileged to be able to live in a part of the world where I can already get vaccinated. The vaccine distribution around the world is extremely unequal. 1/2 https://t.co/C7vVEpEiGt
+811	I really don’t think people understand just how bad this Covid Passport actually is. Look into it, it’s not just checking that people got the vaccine. It is setting up a national caste system and a spying apparatus unlike anything in our history. This is it. The big one. Fight it
+812	Sorry Dr Fauci and other fearmongers, new study shows vaccines and naturally acquired immunity DO effectively neutralize COVID variants. Good news for everyone but bureaucrats and petty tyrants! Neutralizing Antibodies Against SARS-CoV-2 Variants https://t.co/k4SKSfxLJh
+813	The Blackfeet Nation in Montana gifted their surplus COVID-19 vaccines (750 doses) to nearby residents in Alberta, Canada. People drove for hours and lined up for miles on the highway to be vaccinated at a mobile clinic set up at the border crossing. https://t.co/7gdjVYvT9F
+814	To every snot-nosed “journalist” who accosted me in the halls of Congress and spouted Fauci-isms denigrating natural immunity— read the science! Harvard Epidemiologist Says the Case for COVID Vaccine Passports Was Just Demolished - FEE https://t.co/cAFhE6O8JO
+815	Breaking - UPS and FedEx trucks carrying the first U.S. shipment of coronavirus vaccine have left Pfizer’s facility near Kalamazoo, Michigan. https://t.co/Cf32ki9gCF
+816	Dr. Malone may be right or may be wrong in his views regarding Covid vaccines. But he is a respectable scientist, the inventor of mRNA vaccine technology(!), and so has the right to state his scientific opinion. There is no justification for suspending him. It's a disgrace. https://t.co/rG9jSV8QD9
+817	plz stop calling them vaccine passports and just call it immunization records because we have ALWAYS had those and ALWAYS had to show them for jobs and school.
+818	Today FDA and @CDCgov issued a statement regarding the Johnson &amp; Johnson #COVID19 vaccine. We are recommending a pause in the use of this vaccine out of an abundance of caution.
+819	Orlando Magic’s Jonathan Isaac says he isn’t getting the covid vaccine because he has natural immunity and data shows he isn’t at risk at all from covid. Well said: https://t.co/AJmvlNRyff
+820	Stephen A. Smith caught Covid, was hospitalized with severe symptoms, and *almost* died. He believes that this is proof that the vaccine he received, worked. Because he only *almost* died. We did it y’all. We’ve reached peak stupidity as a species.
+821	NOW: Seattle firefighters and Seattle police officers that were fired for not complying with the vaccine mandate are out feeding the homeless. https://t.co/33S42hg9Aa
+822	Great news! Cleveland clinic study of 52,238 employees shows unvaccinated people who have had COVID 19 have no difference in re-infection rate than people who had COVID 19 and who took the vaccine.
+823	Thanks to a generous contribution of KRW100 million made to @Rotary by @BTS_twt Jimin, more children will be able to access polio vaccines. His talent is matched by his generosity and will help @WHO work with our partners to #EndPolio. https://t.co/MFbLkH9h1Y
+824	Dow is over 36,000, unemployment has dropped from 6.3 in Jan. to 4.8. Over 5 million jobs added, a record. 220m vaccines in 10 months. And only 30% of country think US is on right track. The Democratic Party has a huge messaging problem.
+825	had the honor of speaking with @POTUS today about the importance of young people getting vaccinated! check out https://t.co/r4TnB8gx3b to learn more about vaccines and to find a vaccination center near you! it’s easy, free, and so important!!! https://t.co/rnM2UtRfeb
+826	The Biden administration has now confirmed that 20 million doses of the Covid-19 vaccine are "missing." Several weeks ago I said there was something fishy about the federal vaccine supply being less than expected. And I suggested we look to Jared for answers. I repeat this.
+827	Life is pretty much back to normal here in Norway. And we have no mask mandates, no vaccine mandate, no mandated social distancing. It’s amazing how much freedom you get when you just listen to and follow the science 🤷🏼‍♀️
+828	Guys Joe Rogan is NOT a scientist! Don’t take what he says seriously. Coming up next, the Jonas brothers and big bird reminding you to get your vaccine!
+829	Stanley Johnson who broke lockdown repeatedly, getting a 2nd vaccine before many very vulnerable people haven't had their 1st, epitomises the rank hypocrisy, cronyism and elitism of this Tory government.
+830	BREAKING: Utah teacher is fired after telling her conservative students that Trump “is a moron,” and that they should “take the vaccine” and “turn off FOX News.” RT IF YOU THINK THIS HERO SHOULD GET HER JOB BACK!
+831	A thread about vaccines and why vaccinated people are catching COVID- The vaccines that were developed were against the original (alpha) strain of the virus that causes COVID-19. Unfortunately, by the time we ramped up vaccination efforts, a mutated strain (delta) took over…
+832	✨ the vaccine is for lessening your symptoms so you are not as sick without it and reducing how many people get hospitalised so the hospitals don’t get overcrowded and healthcare workers don’t get overworked and also lessening the chance of death, pass it on ✨
+833	BREAKING: Wisconsin Republican lawmaker Andre Jacque, who sponsored bills banning mask &amp; vaccine mandates, is now intubated and fighting for his life on a ventilator after catching COVID just days after going maskless during a heated committee meeting. RT IF YOU’RE VACCINATED!
+834	Not a single word from Joe Biden about naturally acquired immunity, which the latest data shows is more durable than the vaccine, and an estimated 100 million Americans already have- There is no scientific justification for the omission. It’s dishonest. They don’t care.
+835	🦠NEW VARIANT—a new #SARSCoV2 variant C.1.2 just identified in South Africa &amp; several countries, with concerns it could be more infectious and evade vaccines. #C12 also has mutation rate that is nearly **twice as fast** as the rate of the other variants.🧵 https://t.co/r4RReDcAIe https://t.co/a432jYiexE
+836	Kevin Durant just tested positive for covid. Pretty soon the only player the Nets are going to have eligible to play is Kyrie Irving, the guy who refused to get the covid vaccine and the media spent months telling all of us was a selfish, idiotic teammate.
+837	My mum had a bad reaction to Covid-19 &amp; vaccine. Now she has been amputated below her knees and will be losing most of her hands later. Please we need help with medical bills and adjustments to make her comfortable. We thank God for her life. God bless you!🙏🏾 https://t.co/KTyzzBk4dm
+838	BREAKING: American and Southwest Airlines announce that they will ignore Republican Governor Greg Abbott's foolish ban on vaccine mandates and will continue to enforce them in deference to the Biden administration's orders. RT IF YOU SUPPORT THEIR DECISION!
+839	A partial list of COVID misinformation repeated by the US Supreme Court so far today: •100,000 children in critical care and on ventilators (Sotomayor) •Vaccine mandate would prevent 100% of US cases (Breyer) •COVID deaths are at an all-time high (Sotomayor) 1/

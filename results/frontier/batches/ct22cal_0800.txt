@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	The US, Japan and Australia have decided to manufacture Covid-19 vaccines in India. The informal strategic forum known as the 'Quad' that aims to counter China’s growing influence in the Asia-Pacific region. https://t.co/o5c6aHMi2x
+801	BREAKING: There have now been more than 100,000 #coronavirus cases worldwide. 3,398 people have died of #COVID19 and 55,672 people have recovered.
+802	US government scientists reportedly pushing back against calls for one-dose regimens for the COVID-19 vaccines by Moderna and Pfizer. https://t.co/zpNdZFdVSr
+803	Expect more deaths from the CV-19 vaccines. It normally takes years to develop a vaccine, and this was rushed through for a virus that has a survival rate of more than 99%. Big Brother and Big Pharma SCAM. “The Great Reset.” https://t.co/D13LeDuhDF via @nypost
+804	And a landmark proposal put to the @wto to try and tackle the access issue for vaccines and other vital COVID-19 medical tools is still being blocked by the countries in red on THIS map👇 https://t.co/Ic7o63B4TB
+805	Thank you to the Government of India for the donation of the 100,000 doses of the AstraZeneca vaccine. The vaccines arrived this afternoon and is a boost to our COVID-19 Vaccination exercise that will start on 10 March 2021. https://t.co/ka3lcWG6TW
+806	#ICICIBank announced that it will bear the cost of Covid-19 vaccines for its employees and their dependent family members in order to safeguard them from the pandemic. Read more. https://t.co/EiL3vcrEmn
+807	President Trump's comments about the coronavirus death rate were 100% correct. The media falsely claimed he was spreading misinformation. They falsely reported that his comments weren't in line with top health officials. That was 100% fake news.
+808	Updates: COVID-19 vaccines open for individuals 65+, West Hawai'i mass vaccination site opens, Waimea multi-modal improvements project, and more! - https://t.co/mBAApCQovP https://t.co/63n6RZOHio
+809	https://t.co/U5hMAXUx7t this is great,but why can't Ontario do both locations for seniors and locations for the general public.Why brake down in various group's or a specific group with the general public.We have four providers now.Vaccines were not done that way years previou
+810	SNP MP Chris Stephens has tabled an Early Day Motion in the House of Commons supporting the campaign by @TPTgeneral, @RNIB and @guidedogs to ensure that Covid-19 vaccines and testing are accessible. https://t.co/koEkaeZ83c
+811	Just to let you know @DrMercyKorir, our political leadership are hoarding the vaccines for themselves, it's for their loved ones, families and mistresses. Another scandal loading, over to you @PurityMwambia, @DennisOkari @johnallannamu @njerikan COVID-19 vaccines scandal loading https://t.co/pFgMo36Ley
+812	Mass vaccination site coming to Portsmouth on Monday: https://t.co/AFmDXcZ7Qe The goal is to provide up to a thousand vaccines per day, but officials hope to ramp up as needed and when more vaccine becomes available.
+813	Dear @realDonaldTrump: Have you talked to your own @NIH expert Dr. Fauci? He said #coronavirus has mortality rate of 2% &amp; that 15-20% of people will require hospitalization. Thatâs about 20 times more lethal &amp; serious than the Flu. Death rate likely higher for older Americans. https://t.co/d84oXun4Jp
+814	Those who falsely claim Vaccines are 100% safe and who laugh at anti-vaxxers will be dependent on those who refuse to tell the official lies to say that wide-spread vaccination *is* critical. 23 die in Norway after receiving COVID-19 vaccine: https://t.co/eN10HwZvqW via @nypost
+815	The Catholic Church notes that it is licit and ethically acceptable to receive all COVID-19 vaccines that the Ministry of Health recognizes as clinically genuine, safe and effective. #KickCOVIDoutOfKenya https://t.co/XyYWCwIfvv
+816	Interpol says thousands of doses of counterfeit COVID-19 vaccines have been seized in China and South Africa, with 84 suspects arrested https://t.co/JSW7QKiWhI
+817	Florida Governor Ron Death Sentence may be selling vaccines to high dollar donors State Sen Leader @FarmerForFLSen and State Ag Commissioner @nikkifried want the @FBI to investigate after the @MiamiHerald broke the story #FloridaMan #floridaVaccine https://t.co/PpZzRwMPrO https://t.co/nQRhV80cpN
+818	@kayleighmcenany Pfizer had been working on this vaccine for yrs prior to the outbreak of covid! These companies have all come out and said the vaccines had been worked on prior to trump asking them to come up with a vaccine.
+819	French cabinet minister urged EU countries on Friday not to use the Russian or Chinese COVID-19 vaccines unless they are approved by the bloc's medicines regulator, warning of a risk to the bloc's unity and public health.
+820	The IHS continues to make progress towards our goal of administering 1 million #COVID19 vaccines by March 31, with more than 655,000 so far. Follow our progress at https://t.co/wLjqtYN9ok, and help us protect your community by getting the vaccine. #IndianCountry #NativeHealth https://t.co/qsfmriXWD0 https://t.co/bZofbUIWZq
+821	So the Texas AG is going to waste state time and money suing the cities asking people to wear masks... in a pandemic... where only a fraction of us have vaccines.... https://t.co/JtlDv2a9tw
+822	BREAKING: Trump just told the press that a Coronavirus vaccine will be ready in 3-4 months. Seconds later, in the same exact room, an expert tells the press that a vaccine will be ready in 12-18 months at the earliest. THIS IS A PROBLEM! Trump is a train wreck!
+823	Starting today, Michigan residents 50+ w/ disabilities, pre-existing medical conditions, caregivers of kids with special needs are eligible for COVID-19 vaccine https://t.co/4eZl4xG0cS https://t.co/wgS6RzeHBk
+824	.@SenSchumer &amp; I are demanding that the Trump Administration prioritize the health and safety of American workers and their families over corporate interests. #coronavirus https://t.co/S8TuwaHQeM
+825	🚨While thousands of Arizona seniors wait for vaccines, the Biden Administration and Democrats in Congress are refusing to prioritize Americans over illegal immigrants for COVID-19 vaccinations. READ my op-ed in @FoxNews below⬇️ https://t.co/BbrWVO9tsa
+826	BREAKING: Trump could still own stock in a company that, according to the CDC, will play a major role in providing coronavirus test kits to the federal government, which means that Trump could profit from coronavirus testing. #COVIDー19 #coronavirus https://t.co/Kwl3ylMZRk
+827	Trump was not responsible for the privately funded vaccines developed by pharmaceutical companies and he put the burden of creating distribution plans on states, but he gets 100% full credit for 500k unnecessary COVID deaths and losing 20 million doses of the vaccine. https://t.co/HTnTi81lrj
+828	MORE PEOPLE DIE FROM THE REGULAR FUCKING FLU EVERY YEAR THAN THE NUMBER OF PEOPLE WHO HAVE DIED FROM THE CORONA VIRUS JUST WASH YOUR HANDS COVER YOUR MOUTH WHEN COUGHING TAKE YOUR FUCKING VITAMINS AND STOP BEING RACIST TO EVERY ASIAN PERSON YOU SEE YOU FUCK HEADS
+829	Wells Fargo is reportedly joining JPMorgan and Bank of America in giving staff up to 8 hours off to get COVID-19 vaccines https://t.co/5N2COvW11B
+830	More and more information is coming out about the COVID-19 vaccines, and @ZCHAGLA said that peer reviewed studies look at the fact that people who have already had COVID-19 may only need one dose @bobcowanchch. FULL INTERVIEW: https://t.co/6lWCyeSGm1 https://t.co/mRFnbg2Mxh
+831	According to Kaspersky researchers, unverified COVID-19 vaccines including three major COVID-19 vaccines, Pfizer/BioNTech, AstraZeneca and Moderna, are beginning to make sales on darknet between $250 and $1,200 with crypto currency. Read more &gt;&gt;&gt;&gt;https://t.co/Jos5bLJIfJ https://t.co/iKJODQwNqI
+832	Fox News claims it never called COVID-19 a hoax. Let's check the receipts. https://t.co/MeRiAoR7LV
+833	#COVID19 vaccines are available to people of all immigration statuses. Your immigration status does not matter to us and you will not be asked about it at the vaccination site. Learn more: https://t.co/kMzdj6bxMW https://t.co/2rq8wyTe0V
+834	We donât yet have all the tools we need to fight COVID-19. This is an important step toward having treatments, while we also explore vaccines and diagnostics. Thanks to @wellcometrust and @mastercard for launching this effort with us. https://t.co/M8AJ3083zK
+835	So far 460 Dead and 243,612 reported Injuries from COVID19 Vaccines Reported in the U.K. Wakey wakey! https://t.co/RWtPPmJ8GC
+836	Pfizer-BioNTech and Moderna's Covid-19 shots were at least 10 times less effective against the coronavirus variant first found in South Africa, in a small, lab-based new study using real-world samples. https://t.co/ls13E28PiW https://t.co/KhYVawVOr8
+837	Oh dear, Ursula! Joe Biden slaps down Brussels desperate plea for loan of Covid vaccines https://t.co/8GgJOlvt05
+838	Ce'Cile is encouraging Jamaicans to do their research as it relates to the science behind the coronavirus and the available vaccines. The Entertainer says she will be taking the COVID-19 vaccine, once it becomes available.
+839	COVID-19 vaccines are safe and effective. Is the new "there is no evidence of election fraud"

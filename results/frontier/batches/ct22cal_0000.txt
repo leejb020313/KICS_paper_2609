@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	The Department of Labor and Employment releases guidelines on the administration of COVID-19 vaccines in the workplace. | via @Ted_Cordero https://t.co/NcP5moxlMS
+1	Coronavirus vaccine used in first European trial was developed in under three months by team at Oxford University @BBCFergusWalsh reports https://t.co/I6MIuTwk5G https://t.co/QtrnzNHuHb
+2	The White House Covid response team has 6 weeks to roll out a website to help millions of people sign up for Covid vaccines and make good on the president's pledge to get life back to something close to normal by midsummer https://t.co/vFPEkWx4Ga
+3	@PattyHajdu The current Covid 19 protocols and vaccines are effective. Please let post March 18th Immigrant Visa holders land now. We shall abide by these protocols and win this war together. Don’t abandon us. https://t.co/XLWchpwItk
+4	Immune systems are more effective against #COVID than any vaccine. Lockdowns and masks are destroying our immune systems. Big Pharma want you to have weak immune systems so you keep buying their drugs &amp; injecting their vaccines. https://t.co/3y8lSt4v2c
+5	This is the face of someone who just spent 9 hours in personal protective equipment moving critically ill Covid19 patients around London. I feel broken - and we are only at the start. I am begging people, please please do social distancing and self isolation #covid19 https://t.co/hs0RQdvsn3
+6	Y’all dirty mfs brought corona home from Miami &amp; now it’s increased by 88% in 48HRS ....
+7	Amnesty says Qatar refused to prepare hospital for workers infected with #coronavirus working on projects like @FIFAWorldCup. Amnesty confirmed many cases inside “labour camps” where workers in Qatar live. I warned about this days ago. #coronavirus @FIFAcom has blood on its hands
+8	we have 1.3 million vaccine doses, but only 100k have been given. Some states are lagging badly and now not sharing data QLD only gave 22% of doses they got last week, VIC just 30%. Latest federal stats only show vaccines given, not number delivered https://t.co/30k5PbKBl3 https://t.co/oUDQ5DAkmb
+9	Number of Injuries Reported to CDC After COVID Vaccines Climbs by Nearly 4,000 in One Week Between Dec. 14, 2020, and Feb. 18, 2021, 19,907 reports of adverse events were submitted to VAERS, including 1,095 deaths and 3,767 serious injuries' https://t.co/OM8J4nBvK8 https://t.co/rcDTmHe9rT
+10	A small reminder that the WTO led by the USA, UK, EU, etc (the 'developed nations') blocked a temporary waiver of intellectual property rights for vaccines &amp; treatments related to COVID-19, for the *third time* since it was proposed by South Africa and India last year. 😑😑😑
+11	In this March 2021 Economic Report, Stears Data takes a deep-dive into the evolution of COVID-19 in Nigeria, assessing whether vaccines will help the country achieve herd immunity, and what the future looks like. Get it here: https://t.co/2x4utOtKvC
+12	Extent of damage to AstraZeneca vaccine’s perceived safety in Europe revealed % saying they would refuse this vaccine and wait for a diff one AstraZeneca 🇩🇪27% 🇫🇷22% 🇮🇹 23% 🇪🇸19% 🇬🇧2% Pfizer 🇩🇪6% 🇫🇷7% 🇮🇹 7% 🇪🇸5% 🇬🇧4% Moderna 🇩🇪12% 🇫🇷11% 🇮🇹 11% 🇪🇸6% 🇬🇧5% https://t.co/rppoUptxIO https://t.co/yY6rpEcxIJ
+13	https://t.co/VlLTSpQcai '12 prominent doctors and scientists are demanding that EU regulators address seven critical safety issues relating to the AstraZeneca, Pfizer and Moderna COVID vaccines, or withdraw approval of the vaccines for use in the EU'.
+14	Vietnam was the first country to fully contain SARS and COVID-19 (with no deaths) and developed a quick-test kit in one month that the WHO says should have taken four years. WHO is now consulting with Vietnam to get help for the global crisis. Of course this isn't in our news.
+15	Dr Lalloo and Dr Milton featured in the Citizen yesterday. With all the misconceptions regarding the COVID-19 vaccine running around, we are glad that they had the opportunity to share their experience and educate the public! #EMPret #vaccinate https://t.co/ypd5IKAs6V
+16	President Biden called on states to make all adults in the U.S. eligible for Covid-19 vaccines by May 1 and set a goal for the public to be able to gather in small groups during Independence Day weekend https://t.co/cwfSbTD2zb
+17	You may have seen or heard rumours linking the vaccines and fertility, but these claims are unfounded. It’s not possible for the Covid-19 vaccines to affect a person’s fertility – here, we explain why. https://t.co/ly6x33yPOk
+18	Both the #PfizerBioNTech and the #OxfordAstraZeneca COVID-19 vaccines have been shown to be extremely safe and effective, which is great news for all Australians.
+19	Puzzled why this isn't headline news, pretty much everywhere - GSK drug delivers 85% reduction in hospitalisation and death in Covid patients. If rolled out at scale alongside the vaccines, we really are talking about something like normality returning... https://t.co/bfqjNxaLRX
+20	Please don't take hydroxychloroquine (Plaquenil) plus Azithromycin for #COVID19 UNLESS your doctor prescribes it. Both drugs affect the QT interval of your heart and can lead to arrhythmias and sudden death, especially if you are taking other meds or have a heart condition.
+21	I’m old enough to remember when Trump did away with visitor’s logs at the White House. But, people coming in have to declare which countries they’ve visited. Meanwhile, #coronavirus is in how many states? Guess it’s not a Democratic hoax after all. https://t.co/jzIEGNIUMZ
+22	Rexdale has been a hot spot for COVID-19, with a large population of essential workers and people living with extended families. The neighbourhood has reportedly been overlooked for vaccines with nothing set up for those 80 and older to get a shot. https://t.co/V6jQtNhRQn
+23	There are no COVID-19 vaccines specifically produced for Africa or Nigeria. The vaccines we will use in Nigeria are the same vaccines being used in the USA, UK, Israel, France, Germany, and most European countries. #YesToCOVID19Vaccine https://t.co/PxmjUfjfsQ
+24	ICYMI: More than half of Fort Smith police officers and firefighters have refused COVID-19 vaccines https://t.co/1RUCKBFDqA | #arnews https://t.co/nrWP2Ohmyg
+25	Just got #CovidVaccine shot #2. Grateful to truth based science to have safe and effective vaccines available. Please get vaccinated when you’re able. The #BidenHarris #Covid_19 plan will use a whole-of-government approach to get the pandemic under control. #WearAMask https://t.co/cil4YLCeDz
+26	Russia is — surprse, surprise — spreading disinformation about COVID-19 vaccines in the US. And just like he did in 2016, Trump is helping them https://t.co/viUePmiFpc
+27	Join us Tues, March 9th, 7pm ET for a conversation with the faith community on COVID-19 Vaccines. Leading medical experts and faith leaders discuss #COVID19, the vaccine and how to keep our communities safe! Click the link to RSVP and join the conversation https://t.co/yLlzWtkSgu https://t.co/g6ePmFa7dB
+28	WOW! We have money with no value, and now vaccines that don't vaccinate! We're number #1 https://t.co/602OUj84zI
+29	â ï¸Doctors in #Italy warn Europe to âget readyâ for #coronavirus, saying ~10% of #COVID19 patients need ICU care, and hospitals are overwhelmed. âIncrease your total ICU capacity...prepare ICU areas (for) patients â in every hospital if necessary.â https://t.co/VoHqJ1IFxF
+30	The Medicines and Healthcare Agency in the UK has reviewed recipients of Covishield and Pfizer vaccines. In conclusion, the body has found no evidence of serious adverse events from either of the two Covid-19 vaccines in about 10 million jabs. @narendramodi @AmitShah @MoHFW_INDIA
+31	For months Tanzania's president scoffed at the idea of a pandemic, and railed against masks, social distancing and vaccines. Now he has not been seen in public for two weeks, and rumors abound that he is in a Kenyan hospital, being treated for Covid-19. https://t.co/Wmsmf5qJDe
+32	Yesterday, @InfoMinZW Minister, Mutsvangwa said Covid-19 vaccines so far approved for emergency use in Zim are #Sinopharm and #Sinovac from China, India's #Covaxin and #Sputnik-V from Russia. Companies wishing to procure vaccines for their employees can choose from the list
+33	Wisconsin wasted almost 1900 doses of the COVID-19 vaccines and had close to 500 doses sabotaged by a pharmaceutical employee. Wisconsin's governor is Tony Evers, a Democrat. Incompetence transcends both parties when it comes to handling the pandemic. https://t.co/55jnqb4gLe
+34	New @RESCUEorg analysis shows excess COVID-19 vaccines secured by US, UK and EU sufficient to vaccinate 16+ populations in countries facing worst humanitarian crises: https://t.co/Kvn6X3TrpZ
+35	Returning from a break, Rep. Ami Bera (D-CA-7) brings up COVID-19 strategy and the upcoming US-India-Japan-Australia (Quad) Summit. Blinken responds, We have a Quad Summit meeting on Friday, and I expect we'll see something on vaccines coming out of that summit.
+36	Please do NOT get the #covidvaccine ... it is not really a vaccine at all, is experimental, and could harm or kill you. it has killed many people already. Utah woman, 39, dies 4 days after 2nd dose of COVID-19 vaccine; autopsy ordered https://t.co/OrfKHDkOa0
+37	“Magufuli has played down the threat from COVID-19, saying God and remedies such as steam inhalation would protect. He has mocked covid tests, denounced vaccines as part of a Western conspiracy to take Africa’s wealth. Opposed masks/SD.” https://t.co/W4CWgpQ1L4 via @AJEnglish
+38	Like so much of the government response to COVID-19, the rollout of vaccines has been beset by poor planning and bad management. https://t.co/0XBsFB5UZO
+39	Both Pfizer J&amp;J Covid-19 vaccines are available at @InterfaithMed on Atlantic Avenue this week and next. Appointments are Monday-Saturday until 3:30pm. Please call 718-613-6818 to arrange a time. Alternate phone numbers are 718-613-6842 &amp; 718-613-6837. #BedStuy #CrownHeights https://t.co/qh72sTwebg

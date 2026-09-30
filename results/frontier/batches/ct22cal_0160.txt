@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	There was a nasty flu that went round in December / early Jan. I’m telling you, that was corona. Bare ppl were sick (including me) complaining of what we now know as the symptoms for corona.
+161	Senator @ChrisVanHollen/@VanHollenForMD discusses the American Rescue Plan and how it will deploy COVID-19 vaccines quickly and equitably, highlighting the $25 billion that will support underserved communities and communities of color. https://t.co/cCI4UE4Q4I
+162	More than 100 million Covid-19 vaccine doses have been administered in the U.S., the CDC said, as the inoculation drive gains pace in the U.S. and as new cases of Covid-19 have dropped in recent weeks https://t.co/kbJsis3NNE
+163	Amazing! Passengers at the Kigali Bus Park have to wash their hands before getting onto buses as a prevention and risk reduction #Coronavirus outbreak. #Rwanda https://t.co/PbNxXrWjbM
+164	A Texas doctor gave out 10 doses of the Moderna COVID-19 vaccine after an opened vial was set to expire in 6 hours. Then he was charged with stealing the vaccine and was fired from his job. https://t.co/h6Aln28Q66 https://t.co/ZquXEu5jk2
+165	Israel refused World Health Organization and Palestinian health officials’ requests “to immediately make Covid-19 vaccines available to Palestinian medical workers to avert a health disaster,” violating its obligations under international law. #Apartheid https://t.co/AZeHGSKmKT
+166	Just like all the other fake stuff they do, the COVID-19 over-hype will backfire on the Democrats. The economy will come roaring backs with China's grip on trade weakened and Trump's high approval on handling the virus will only help.
+167	The NHS has decades of experience delivering large-scale vaccine programmes. The measles vaccine has prevented 20 million measles cases and 4,500 deaths in the UK💉 We are here to provide care and support to those who are eligible for the #CovidVaccine. https://t.co/5Z04AKS6H9 https://t.co/KUbMu2jSPo
+168	BAKUNATION READY: Mayor Beng Climaco welcomes the arrival of additional 20,000 COVID-19 vaccines, 10,000 of which are AstraZeneca vials, Wednesday afternoon. The mayor joined DOH and FDA officials in inspecting the vaccines after they were transported to the DOH cold chain (1/3) https://t.co/6zdDQ4ktZs
+169	Just got a look of guidlines for testing COVID-19 at a San Diego hospital and they are...really bad! In order to get a test the patient has to have had close contact w someone w a confirmed infection or travelled to an infected area. But that's totally insufficient!
+170	It's time for a proper count of the damage and death caused by the #Covid vaccines in Ontario. Officials are covering up the true toll. https://t.co/HeEEQ26ZGd
+171	Secretary Azar is refusing to promise that a Coronavirus vaccine will be affordable to every American. Kick them out of office.
+172	The World Bank has approved a US $500-million funding for the Philippines to support its government's efforts in addressing the COVID-19 pandemic, including the purchase and distribution of vaccines. https://t.co/yoeuYS4L6O
+173	Seminars can improve people's confidence in COVID-19 vaccines as observed in several town hall meetings, the Department of the Interior and Local Government (DILG) said. https://t.co/sXw8XbumcW
+174	BREAKING: UK, US and Canada accuse Russian group of trying to hack into coronavirus vaccine research.
+175	#COVID19 vaccines are safe and effective. As of March 8, over 60 million people in the US had received at least one dose of COVID-19 vaccine. Of those, more than 31 million had received two doses. See more data: https://t.co/FHGplTGixk https://t.co/achMsVb0rM
+176	Quick reminder of the threat of information influence operations and #disinformation: Russian Disinformation Campaign Aims to Undermine Confidence in Pfizer, Other Covid-19 Vaccines, U.S. Officials Say - WSJ https://t.co/pQrqrkk7M7
+177	The Pfizer and Moderna vaccines don’t work as well against the coronavirus variant first discovered in South Africa as they do against the dominant virus strain first seen in U.K., according to a new study. https://t.co/yzVYBQHgHm https://t.co/6OA2yN9Blz
+178	@ReallyAmerican1 The GOP had no problems giving away $50 Trillion to the 1% from the Treasury as a tax break in exchange for campaign contributions. In 2021 they delay saving American jobs, Covid-19 vaccines and reopening the economy, because it doesn't butter their bread. https://t.co/RP5i01diOL
+179	Senior propagandist for the Chinese communist regime spreading more conspiracy theories. Same dickhead who said virus originated in US. Twitter allows Chinese govt officials on their platform even though Twitter is banned in China.
+180	President Joe Biden challenged all states and U.S. territories to expand the vaccine eligibility to all adults by Saturday, May 1, on the one-year mark of the World Health Organization declaring the coronavirus pandemic. #hawaiinews https://t.co/QgLg8ItmcV
+181	US pharma company Gilead, which owns the most promising COVID-19 vaccine, is booming in "pandemic stock sales," preparing to sell it for $50-100/person, and in a legal battle to deny the Chinese gov access, because China would make the vaccine free and ship it to the global south https://t.co/QmQSfnMdKI https://t.co/nQcxvq4HUX
+182	Sen. Risa Hontiveros urges the National Task Force against COVID-19 and the Dept. of Health to release a vaccine tracker so that the public can view the progress of the inoculation program, following reports that the country has secured $900M in loans for COVID vaccines. https://t.co/SXgCjQTrRz
+183	Latest from Japan and beyond on the #coronavirus outbreak *1st "Quad" summit to focus on COVID-19 vaccines with eye on China *Thailand suspends use of AstraZeneca vaccine #CoronaVirusUpdates ↓More #COVID19 Updates https://t.co/6ImhDZ4jU4 https://t.co/wUlf41CKSJ
+184	If Americans were allowed to ask questions and discuss concerns about the Covid-19 vaccines on Big Tech platforms, perhaps some of the many who have died following vaccine doses would still be alive. https://t.co/y0TnRG2vHD
+185	WATCH: 'The best estimates now of the overall mortality rate for COVID-19 is somewhere between 0.1% and 1%,' Adm. Brett Giroir, assistant secretary for health at HHS, says. 'That's lower than you heard probably in many reports ... it's not likely in the range of 2 to 3%' https://t.co/ATnMRBLXVy
+186	In the 5 months since the beginning of the Corona Virus outbreak, 3800 people Worldwide Have died. In that same period The flu has killed Over 310,000. Wake up people! The Coronavirus "Scare" Is a maufactured crisis. Ask yourself: Who benefits from this crisis? Feel me??
+187	@racquetball54 @4mishee An open letter from a group of doctors calling for an emergency investigation into blood clotting after vaccines. Please read before you respond. https://t.co/dT9ewwlMTV
+188	In Alaska, Indigenous people have been dying from Covid-19 at four times the rate of white residents. Tribal health workers are now leading an urgent effort to deliver vaccines to remote villages — using planes and sleds, at times in 61-below temperatures. https://t.co/37dCmZyfqi
+189	#ICYMI: We went straight to the legal experts to find out if your #Condo or #HOA board can require you to show proof of the #COVID19 vaccine: https://t.co/jroIaP5FB0 #WeAreCAI https://t.co/Hg9lnE1vOY
+190	Join us tomorrow (Mar. 11) for a conversation with AFSC staff reflecting on the past year of the COVID-19 pandemic, and what lies ahead: ensuring the availability of vaccines, addressing misinformation, and more. Join at https://t.co/yQesOhkRkb https://t.co/q5TYAbNMd3
+191	@thearmouryblog @_IDONTCOMPLY_ Diseases such as covid-19 and influenza can be fatal due to an overreaction of the body’s immune system called a cytokine storm due to experimental mRNA bioagent vaccines to the extent the immune system could turn on organs of the body.
+192	The Black Doctor's COVID-19 Consortium is administering vaccines to 1B eligible Philadelphians in the hardest hit zip codes this Sunday, Monday and Tuesday from 10am-4pm at the Liacouras Center. No appointment necessary
+193	The COVID-19 vaccines are against one variant of one virus. Our annual 'flu 'shot' is actually 3 or 4 different vaccines against different viruses. A multi-variant COVID vaccine is certainly feasible for the future. https://t.co/2tdmDvVCra
+194	2-Big Pharma Media supports California Senator Dr. Pan starting a 'Domestic Terrorist' campaign against those who refuse the Experimental COVID Vaccines. 80 doctors, nurses, and administrative staff of Jerusalem's Hadassah hospital are on unpaid leave for refusing COVID vaccine https://t.co/MwCK6wfPHY
+195	#VANorCal now offering COVID-19 vaccines to Veterans ages 55+ and Veterans who are Esssential Workers. Learn more: https://t.co/UBIPhVKxNn https://t.co/Oy2sn8Co3r
+196	Creating the foundation today to address challenges of tomorrow: we’re evaluating a 3rd dose of our #COVID19 vaccine against current &amp; new variants. We’re also discussing regulatory pathways similar to that of the flu vaccine to adapt vaccines if needed. https://t.co/13moUoWmvO
+197	LOOK: The Lourdes Parish Don Bosco Youth Center and Robinsons Galleria have been approved to be a vaccination site for Cebu City's roll-out of COVID-19 vaccines to barangay and city health workers next week. | Photo Courtesy of Cebu City PIO @cebudailynews https://t.co/1wDqYB9Gih
+198	Anoka County Public Health is offering a limited supply of #COVID19vaccines for residents age 65 &amp; over. These vaccines will be administered at upcoming vaccination clinics, and residents can sign up for the random selection process by visiting https://t.co/mi0fEnnygv https://t.co/KwruV6ivMW
+199	Sputnik V, AztraSeneca and J&amp;J COVID-19 vaccines are based on Adenovirus viral vector, the same technology that vaccines for common flu is based on. Pfizer and Moderna vaccines are based on mRNA, a technology that has been in development since the 1960s.

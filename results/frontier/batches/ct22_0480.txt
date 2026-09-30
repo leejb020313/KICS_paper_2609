@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	@M4ttmc87 Get the Covid 19 vaccine and very real chance of becoming very ill or dying. One of the world's leading vaccines advocates/developers says so. If you want get very ill or die to appease your beloved TV politicians and civil servants then your call. https://t.co/MEIjXSHSTX
+481	@PeterDodds15 @PickardJE Screw the Covid-19 rules. Everyone knows they are utter bollocks; all the vulnerable have been vaccinated and the vaccines work!! Covid-19 cases are amongst the lowest in Europe. There is NO justification for the current tight lockdown rules, let alone against a peaceful protest
+482	@jasonhickel @GretaThunberg Not a problem. All that will be accomplished here is to make the Third World 100% dependant on Russian and Chinese COVID-19 vaccines, leading to more and more Third World alignment with these two countries (and more estrangement from America and the EU). Evolution in action.
+483	@mwavu Of course it needs the vaccine. More than 107,000 people have died of Covid across the African continent, and the deaths are continuing. Without vaccines, more new variants will continue to emerge, posing a threat to everyone.
+484	10 countries have now suspended their use of all or some doses of the #AstraZeneca vaccine: Romania, Austria, Italy, Iceland, Norway, Denmark, Estonia, Lithuania, Luxembourg and Latvia #vaccines #covid #coronavirus #Ivermectin #HydroxyChloroquine https://t.co/Rw5RwuoEVD
+485	You got a vaccine. Walgreens got your data. Retail pharmacies are now giving out Covid-19 vaccines, and some of them are using it as an opportunity to profit off your information. https://t.co/YMgF0Sn0n2
+486	@Jim_Jordan Scientists got us the COVID-19 vaccines. They were created before Trump ever mentioned Operation Warped President. He spent the last 3 months of his presidency inciting an insurrection and ignoring the 500,000 deaths from Covid. He also didn’t have a vaccination rollout plan.
+487	@drcraigwax Look at this!! ALL Coronavirus Vaccines on Market Now Proof of HARM THOSE WHO ARE MOST VULNERABLE IN ELDERLY by "Pathogenic Priming" Huge Warning signs from Early Results and Complaints of a Bad Reaction after 2nd dose!! #FakeFauci https://t.co/3C9K9rQUWl via @gatewaypundit
+488	This is amazing. Get vaccinated, it’s the right thing to do for your family, your community and for your country. #vaccinated #CovidVaccine 😊😎😊 U.S. tops 100 million Covid vaccine doses given, 13% of adults fully vaccinated https://t.co/UQRAKgSKgV
+489	Korea finished developing the 10 minute Covid-19 diagnostic kit and is now ramping up production. They plan to export 300.000 test-kits per week - https://t.co/DpJCph9RT7
+490	This is why the beaches haven't closed in Florida, and why they've had minimal COVID-19 prevention. Absolute dysfunction. https://t.co/8x2tcQeg21
+491	CDC just announced that corona can be spread via Instagram story challenges :-/
+492	Iceland tested its entire population. Read that again: ITS ENTIRE POPULATION.
+493	This is RITM Director Dr. Celia Carlos who was allegedly unjustly removed from her position because she refused to prioritize the processing of COVID-19 tests of asymptomatic politicians and other VIPs over patients with symptoms. RESPECT! #JusticeforDrCarlos #NOtoVIPTesting https://t.co/8dIzFxe9vH
+494	To be clear, Sen Loeffler not only dumped stock, illegally using non-public information (allegedly), she used the proceeds to buys stock in a TELEWORKING SOFTWARE company, profiting off the #COVID19-induced collapse of the economy.
+495	Fox News claims it never called COVID-19 a hoax. Let's check the receipts. https://t.co/7NgmdaoGbQ
+496	Things the GOP has done during the Covid-19 outbreak: - Illegally traded stocks - Called it a hoax - Blamed it on China - Tried to bailout big business without conditions What they haven’t done: - Help workers - Help small businesses - Produced enough tests or ventilators
+497	.@realDonaldTrump, dear Lord—please step up and be a leader. While you have been yammering about hoaxes and fake news, the COVID-19 pandemic has hit all over America. @GovPritzker and others have filled this country’s leadership gap. Lead or get out of their way.
+498	Fake news peddler Dhruv Rathee had said: “Corona virus won't spread outside China, we need not worry” Has this guy ever spoke something sensible? https://t.co/siBAwIR8Pn
+499	A message from the Ministry of Information “The General Public is hereby urged to disregard any voice note circulating on WhatsApp that a helicopter will spray ‘antivirus’ throughout the Nation by 11:00 pm. This news is fake and should be disregarded in its entirety.” RT #COVID19
+500	Hungarian Justice Min. @JuditVarga_EU sends bill to Parliament: - State of emergency til end of 2020 - Rule by decree - Parliament suspended - No snap elections/referendums - Spreading fake news and rumors punishable with up to 5 years in prison #COVID19 https://t.co/1QJaLaKp6J
+501	Shameful that a person of your repute spreads fake news/rumours in blind hate for India and its traditions. India as a mark of respect came out in balconies on call of PM @narendramodi to applaud doctors, health as well as emergency workers. There was no other reason. Fact check?
+502	My fraud warning published this morning, please read and share - Frank Figliuzzi : Coronavirus scam alert: From fake Starbucks coupons to taxpayer fraud, cons are going viral ⁦@NBCNewsTHINK⁩ @MSNBC⁩ #coronavirus https://t.co/Xgk8MDFJQ3
+503	One million dirhams fine. 5 years jail and deportation and ban for life from #UAE for sharing any unconfirmed or #FakeNews about #CoronaVirus on social media or whatsapp. #UAE Government The best announcement I have heard during this pandemic. Can we do this in #Pakistan ?
+504	Maddow - the woman who has peddled lies and wild conspiracy theories for 4 years - is calling on Trump to stop his COVID-19 pressers 🤦🏿‍♂️ Zero self-awareness. https://t.co/7uQy3k3IfF
+505	WOW. A man in Incheon, west of Seoul - who contracted #coronavirus - has documented his symptoms and activities for past 25 days since his felt the symptoms in 38 pages in remarkable detail. He wore masks and gloves at home and all 23 close contacts tested negative for the virus. https://t.co/2mjDiBjVtC
+506	This is deadly serious: Talking about corona-virus this morning, Trump said, 'We closed it down. We stopped it.' There were 15 confirmed cases in the US a week ago. There are 233 today. There will be *5,000* in a week TRUMP'S INCOMPETENCE KILLS. https://t.co/my1hPapbfo
+507	It’s Friday. That means @realDonaldTrump is lying, again. @POTUS has not stopped the #CoronavirusOutbreak. It has now grown &amp; spread to 21 states with over 225 cases in the US. And we can’t contain it because we still don’t have enough test kits to know where the virus is.
+508	Rick Santelli on @CNBC just made the argument that we'd be better off if everyone got the #coronavirus right away and 2% of the world died off, so that financial markets could stabilize. Rick likes Republicans, don't be like Rick. This should go viral. #VoteBlueToSaveAmerica https://t.co/1orGoG6cWO
+509	There's not a single confirmed case of an Asian infected in NYC. Stop discriminating cause the virus definitely doesn't. #racist #coronavirus https://t.co/Wt1NPOuQdy
+510	As soon as President @realDonaldTrump heard that the #Coronavirus was a problem in China he shutdown entry into the United States from China. This saved many lives! #TrumpTownHall https://t.co/a5bdOwe1i3
+511	I work with a mat salleh boss and every time he hears someone sneezes or coughs he would ask them to go back immediately, or work from home. The thing about us Asians is, we always think RAJINNYA DTG KERJA WALAUPUN SAKIT SO MUCH DEDICATION BUT NO YOU'RE JUST SPREADING GERMS.....
+512	Like an invasion of hostile space aliens, COVID-19 Is an enemy of the human species that won’t negotiate. It cares not of your nationality, ideology, politics, or religion. This enemy of us all requires a global effort to combat, guided by science and not by magical thinking. https://t.co/ir50k21Fbd
+513	#VIDEO: The circling area around Holy Kaaba at the Holy Mosque in #Makkah was emptied of people temporarily in order to clean and sterilize it, due to #Coronavirus fears and to insure the safety of pilgrims. https://t.co/8CivSYbS29
+514	⚠️A nurse—exposed to #coronavirus and SICK in quarantine—hammers @CDCgov for initially REFUSING and then delaying #COVID19 testing. “What a ridiculous and uneducated response...it’s a public health emergency.” h/t @Iam_BrookeSmith @NationalNurses https://t.co/DXvzVzYfLs
+515	This latest report of SARS-like lung damage is consistent with prior clinical reports of #coronavirus cases from #China. At least 1 patient who survived #COVID19 later received a lung transplant due to permanent fibrosis ('scarring') of his lungs. https://t.co/CvxaNJ1edV
+516	Nero's fiddling again. As people die &amp; his administration fumbles the COVID-19 response, DONALD TRUMP IS TAKING ANOTHER TAXPAYER-FUNDED VACATION TO HIS PRIVATE LUXURY RESORT. I'm really trying hard to comply with a social media policy that surely bans cursing out a corrupt POTUS.
+517	Dear @StateDept: A reminder that last week in @HouseForeign Affairs Committee, @SecPompeo refused 6 times to deny that #coronavirus is a hoax. https://t.co/3kiwPLsYcj
+518	There's something strange going on with Turkey. It is refusing to give evidence about the corona virus to WHO. There are rumors that the problem is almost like with IRAN. Some cases are reported on Turkish airlines. They don't give evidence as TA are on the verge of bankruptcy https://t.co/lV5A5ESFzX
+519	Trump campaign sues CNN over ‘false and defamatory’ 'Russia Russia' statements, seeks millions in damages. Fake News Medias are worse than #coronavirus. Enemy of the People! THE GREAT AWAKENING. You are the news now. Handle w/ care. Q #QAnon #Trump2020 #KAG #KAG2020 #WWG1WGA https://t.co/yWiMqKmSUx

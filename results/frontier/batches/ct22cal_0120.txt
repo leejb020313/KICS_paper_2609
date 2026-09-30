@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	In two weeks #COVAX delivered 28.5 million #COVID-19 vaccines to 37 countries. Thanks to the solidarity and commitment of our donors and partners, and to everyone at @Gavi @CEPIvaccines @WHO @UNICEF no country will be left behind. https://t.co/MPnxG1kUnv #OneWorldProtected https://t.co/Ov3g0mN7aD
+121	The #bizhumanrights issue: WTO fails to waive any intellectual property rights for vaccines and treatments related to COVID-19. https://t.co/jojdWldDDY
+122	How Walgreens, CVS, and Walmart are using vaccines to get your data. A: Trump Republicans cut a vaccine deal with them for your birthdate and web data. https://t.co/u5Tv4vlQn0
+123	Soon, vaccines and vaccine passports may not be the only things required for travel. A growing number of “experts” are now pushing for the removal of exemptions which protect infants from mask mandates. Great read. Be prepared for what's ahead. https://t.co/qRdeRc45if
+124	Covid-19 vaccines are in Phase 1B, Tier 1. Eligibility req. have been updated to include more groups and went into effect on March 9. Join the citywide vaccine waitlist by 📞 311 or visit https://t.co/Jo2n8qslBP #Covid2021 #Covid19vaccine #MaskUp #SleevesUp #StaySafe #NOLA https://t.co/lYS2wXxTlf
+125	The Ministry of Health has mobilized all resources to ensure utmost safety as Vietnam continues COVID-19 vaccinations. Using AstraZeneca vaccines, Vietnam inoculated some 250 medical workers in Hanoi, Ho Chi Minh City and Hai Duong yesterday, March 8. https://t.co/0FIKnLJkJK
+126	🇺🇸 — UPDATE: The United States has so far administered 105,703,501 doses of COVID-19 vaccines in the country and distributed 135,846,665 doses as of Saturday, the CDC said.
+127	@ABCPolitics tr*mp gets credit for lying about covid-19, telling people to inject bleach, killing 500,000 americans, spreading misinformation/disinformation about covid-19, having NO PLAN to deal with the pandemic short of 'sacrifice the olds and the kids,' losing 20,000,000 vaccines, etc
+128	First European coronavirus vaccine trial underway, as two patients injected in Oxford, UK https://t.co/rMWhGD7GLS
+129	#Enugu govt takes delivery of #COVID19vaccines Enugu State Government alongside Ebonyi and Anambra states, on Thursday, took delivery of the first batch of #oxfordastrazeneca COVID-19 vaccines from @NphcdaNG, at Enugu Airport... https://t.co/srx1CWZqtK @Coal_City #COVID19 https://t.co/PrO9GSiXuv
+130	Nothing to see here folks. Only the @GOP stopping a corona virus bill because it doesnât allow all of their big pharma pals to charge whatever they want for a lifesaving vaccine that hasnât even been developed yet. #OneVoice1 <link>
+131	Adjusted for the number of products administered this is 65% more yellow cards than for the Pfizer vaccine, 124% more adverse reactions than the Pfizer vaccine and 33% more fatalities https://t.co/tSUNsz89jq
+132	#yqg Anecdotal from Lasalle Community Facebook Group: Individuals looking to get the AstraZeneca COVID vaccine aged 60-64 the Zehrs on Malden has a bunch of vaccines and no wait list.
+133	3 Medical Innovations Fueled by Covid-19 That Will Outlast the Pandemic • Genetic Vaccines • Wearables • Drug discovery (and I would add #telehealth to the list) https://t.co/QQhTibI54E https://t.co/7YF8QNTxD9
+134	COVID-19 vaccines are now available in South Florida, and the rules on who can get a shot, where and when can be confusing. Here’s what you need to know: https://t.co/V0Jyk9H3fE
+135	I went to my GP today. We discussed Covid Vaccines. This practice has 1700 patients over 70 and 500 with chronic conditions. They will be getting 50 doses of Vaccine a week starting in April. The Govt says we will all be inoculated by October. They just didn't say which year.
+136	Reminder that two Republican senators were implicated this weekend in an insider trading scandal, selling millions in stock while telling voters COVID-19 was a hoax. Neither Republican has resigned.
+137	The US, EU, and Japan are holding the world hostage as Global South nations led by India and South Africa, and with full support from China, fight to waive intellectual property restrictions on the mass production of COVID-19 vaccines and treatments. https://t.co/scfjxFXNLv
+138	@ChronicRights I had my first COVID-19 Vaccine shot today at Munster Community Hospital. It was the Pfizer vaccine. Due back 4/5. I would encourage all my Kidney Patient friends to speak to their physicians and to give strong consideration to taking the vaccines https://t.co/brSo0DlzXA
+139	After three months of delay tactics by the Conservatives, yesterday they voted against needed legislation that would provide: ❌ funding for long-term care facilities ❌ support for low &amp; middle-income families ❌ COVID-19 treatment and vaccines ❌ support for small businesses
+140	The only way to get back to normal life is if the whole world gets vaccinated against Covid-19. Today I got myself vaccinated and I would request everybody to find out the availability of vaccines in your country and get vaccinated as soon as possible. https://t.co/WWoK5NSiln
+141	GWENT'S Police and Crime Commissioner has called for surplus coronavirus vaccines to be given to police after reports of officers being assaulted and spat at by people claiming to have Covid-19. Jeff Cuthbert has said that vaccines for police officers https://t.co/qol8D6kPFu https://t.co/OOWKStFsvt
+142	Korea: giving free test kit for covid-19 PH: we on tiktok!!! 🥰
+143	It's more than just talk: Public Health has been setting aside 25% of all vaccines they receive for clinics targeting minority communities. I'm excited to say we've become a model for the state and other communities around Ohio! https://t.co/1RPXzDWj16
+144	“Some States are very slow to inoculate recipients despite successful and very large scale distribution of vaccines by the Federal Government.” The slow administration of #Vaccines for the #CCPVirus is due to states, said President Trump. https://t.co/x90HtqZdam
+145	This is the most frightening disease I've ever encountered in my career. Richard Hatchett, the doctor leading efforts to find a vaccine for coronavirus, says it is much more lethal than normal flu. https://t.co/1tjJ2ed0Hq
+146	$ATOS two major strong pipelines/catalyst in play with vaccines being overwhelming around the world and it may take many many more months to get back to normal (covid-19 Nasal Spray and Breast cancer ) https://t.co/M0i1kXUIhT
+147	Black and Hispanic communities, which have been disproportionately affected by Covid-19, are being left behind in the vaccine rollout. Vaccine events intended for underserved communities became destinations for those accustomed to getting their way. https://t.co/7RaBU9Yp0o
+148	@critica18495985 DEPOPULATION is REAL and it is very true-vaccines can do a very efficient job Much easier than 'gas chambers' I do not believe there is any difference in crimes Only the cause of death DO NOT TAKE their 'cure; worse than the disease https://t.co/ppAqJ8xuqk
+149	I am done with my first dose of the COVID-19 vaccine, waiting for the second dose after 8 weeks. The COVID-19 Vaccines are safe, effective and free @MinofHealthUG @WHOUganda @UNICEFUganda https://t.co/qSaTGkh47I
+150	CVS announced this morning that it will begin administering COVID-19 vaccines to eligible populations at 34 additional retail pharmacies in Massachusetts and four additional locations in Rhode Island. https://t.co/gFrYPuu6wF via @BostonGlobe
+151	Gov Cuomo: New Yorkers 60 and older can get COVID-19 vaccines this week https://t.co/vGqqJ1PSpX
+152	The @AZDHS on Wednesday reported 830 new COVID-19 cases and 78 additional deaths. The total number of COVID-19 vaccines administered in Maricopa County are 853,458 doses. https://t.co/cDGF4SmZIJ
+153	Israel has announced a plan to offer COVID vaccines to Palestinians—but only to workers who come into close contact with Israeli Jews. The rest of the Palestinians under military occupation in Gaza and the West Bank still don’t have access to the vaccine. https://t.co/bXm3X0Dhmf
+154	Yeah, #COVID19 vaccines are super important! But simple oxygen saves way more lives. And there’s a massive shortage of it. I wrote a whole story on why that matters ⤵️ https://t.co/d9HXSJordq
+155	Indian vaccine makers are also planning to produce more COVID-19 vaccines developed by the United States and Russia, including Johnson &amp; Johnson. https://t.co/mKt8H71ktc
+156	Science and engineering FTW: it used to take 110 days for Pfizer to make a batch of vaccine. Now it’s down to 60 days. Good explanatory reporting via @suehalpernVT⁩. https://t.co/e2onevbQD5
+157	Vaccines for Cash! Donate to Desantis and get a COVID vaccine! #ArrestDesantis Florida Official Calls On FBI To Investigate ‘Red Carpet’ Vaccines For State’s GOP Donors" #DemVoice1 https://t.co/kmanYtrPvs https://t.co/BuFl1Yu2DP
+158	Not via #VaccineMaitri but #Pakistan is getting #MadeInIndia vaccine via GAVI (Global Alliance for Vaccines and Immunizations" .. 45 million dosages. Kafiro ki banayi vaccine lena hi padega .. Ha..Ha😊 @ImranKhanPTI @narendramodi @HamidMirPAK @nailainayat https://t.co/NuAx16DFrw
+159	CEPI, @gavi and @WHO are co-leading COVAX, with key delivery partner @UNICEF, to ensure equitable access to COVID-19 vaccines and end the acute phase of the pandemic by the end of 2021 🌍 In just over a week over 10 million doses have been delivered to participating economies 🙌 https://t.co/WBjirJzr93

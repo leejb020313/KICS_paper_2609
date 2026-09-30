@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	In Palm Beach, Covid-19 vaccines intended for rural Black communities are instead going to wealthy... https://t.co/B09X4TkUUq via @statnews
+361	Commissioner Malcolm is eligible for COVID-19 vaccine and got the Johnson &amp; Johnson shot through her health care provider today. All three vaccines available are proven to be safe and effective at preventing severe disease, hospitalization, and death. https://t.co/iBypibCukT
+362	Johnson and Johnson announced they will release their vaccine data soon . We may soon have another major company manufacturing more Covid vaccines . Great news . Please retweet .
+363	UK: 35 people deaf and 25 blind after taking mRNA vaccine shot The Yellow Card scheme tracking potential vaccine injuries has flagged a combined 191,832 individual adverse events, or side effects, related to COVID vaccines. https://t.co/SZeTu4CSvC
+364	Eight countries suspend AstraZeneca COVID-19 vaccines. Concerns first came up after a recipient in Austria was diagnosed with blood clots and died 10 days after vaccination. https://t.co/1RzPjBkiDV
+365	I wanted detailed Covid-19 data, but had a hard time finding numbers without accompanying media bias. I collected it myself, and am sharing here. In this thread: - Incubation Time - Symptom Occurrence - Transmission Rates - First 20 US cases by date and location (cont'd)
+366	“...concerns that the approval of the COVID-19 vaccines by the EMA was premature &amp; reckless, and that the administration of the vaccines constituted &amp; still does constitute “human experimentation”, which was &amp; still is in violation of the Nuremberg Code.” https://t.co/5vutA3eRFI
+367	The @WorldBank is building on its initial #COVID19 response with $12 billion globally to help poor countries purchase and distribute vaccines, tests, and treatments. Learn more about our ongoing support for countries in #EastAsiaPacific: https://t.co/6djifutRM8 #ResilientRecovery https://t.co/UTk8AA8xdq
+368	We found people who were denied COVID vaccines—even when they brought ID that fit a site’s stated rules. These policies are inconsistent, sometimes arbitrary. Walgreens, Albertsons and LA now say they're working to ensure qualified people aren’t rejected. https://t.co/x38ndAU62U
+369	People in the @realDonaldTrump Administration need to resign for the continuing massive testing deficiencies. @POTUS knew in January about #Covid_19. And he failed to do the one thing necessary to stop the spread of #coronavirus: to test for it so we can contain it.
+370	DANGERS OF COVID-19 VACCINES! Dr Stella Emmanuel warns about the danger of the Covid 19 Vaccine by Pfizer and Moderna #COVID19 #Covid #coronavirus #CovidVaccine #vaccinations #VacunaCOVID19 #VaccineStrategy #NewWorldOrder https://t.co/K0LkFrab0W
+371	I recently spent an afternoon at a @UCSF site in San Francisco's Mission District, administering COVID vaccines. Great to be a small part of this important effort to help CA communities understand the vaccine and get access for themselves &amp; their families. https://t.co/rLei2l6VE7
+372	An intro 🧵: I am fundraising for COVAX who are working to provide equitable access to COVID-19 vaccines across the world. They are led by a group of organisations who already have expertise in vaccine distribution and administration... #fundraising #COVAX #CovidVaccine https://t.co/Z2mKJbS2Cy
+373	Alaska Gov. Mike Dunleavy has COVID - and it has killed the sister of DC Mayor Muriel Bowser. Pfizer gets good news on vaccine effectiveness. The latest on virus and vaccines. Live. https://t.co/gr5jrD87IK
+374	LOOK: Frontline health workers in the City of Manila aged 60 years old and above receive COVID-19 vaccines made by AstraZeneca at Ospital ng Maynila Medical Center on Tuesday, March 9. (📸: Photos from Manila Public Information Office) | @MBMinkaTiangco https://t.co/JhhXpis4DU
+375	There is absolutely no evidence, and no theoretical reason, that any of the vaccines can affect the fertility of women or men. This document by @ARCScientists and @BritFertSoc explains all you need to know about the COVID-19 vaccine and fertility 👇 https://t.co/3tI9XCZGBB
+376	When states began to announce body mass index (BMI) would be a factor in determining early eligibility for COVID-19 vaccines, Sydney Greene experienced a lot of complicated feelings, ranging from apprehension to shame. https://t.co/CPdFNrncPC
+377	BREAKING: US government accuses Chinese hackers of stealing coronavirus vaccine research
+378	Over 200 people have died after having the AZ vaccine and 200 after the Pfizer (along with some other pretty adverse effects such as heart attacks/blindness etc). AstraZeneca’s experimental COVID vaccines are banned in 9 countries... https://t.co/cCUxsOUTL7
+379	Potassium chloride is so poisonous it is used in US executions. And in covid-19 vaccines. It is little wonder people are saying this is a depopulation exercise. Gates. Johnson. Rockefeller. Prince Charles. Klaus Schab - all think there are too many plebs. https://t.co/x7iq6ge0LH
+380	After failing to correct @AOC's lie that President Trump called the #coronavirus a “hoax,” @CNN's Jake Tapper admitted he knew “the president did not call the virus a hoax.” Today @tomfriedman repeated the same lie. Tapper did not correct him. https://t.co/o31FI8osb5 #FactsFirst https://t.co/MmQzG1JSTD
+381	In fact, most vaccines don't fully protect against infection, even if they can block symptoms from appearing. As a result, vaccinated people can carry and spread pathogens. https://t.co/EYk49qCLRN Yet vaccinated people think they are cleaner than unvaccinated people.
+382	DM(West) along with Senior officers of West delhi Administration i.e. ADM, SDM's, OSD/Vaccination and other staffs got their 2nd dose of Covid Vaccine today at Janakpuri Superspeciality Hospital. #COVID19Vaccination #LargestVaccineDrive #Covishield #Covaxin #CovidVaccine https://t.co/hfTiwvZToI
+383	Dino and Yaya Bello agreed on covid 19 and are doing everything possible to harm their people. Dino despite taking the vaccines in Dubai 🤦🏼‍♂️ At this rate, I won’t mind giving Nnamdi Kanu Kogi State now.
+384	India has a steady supply of #COVID19vaccines that are safe with proven immunogenicity and efficacy. Based on the initial results, Made in India vaccines have shown the lowest adverse events following immunization in the world, @drharshvardhan said. https://t.co/xP0NVDOhGa
+385	South Africa + India approached WTO to temporarily suspend intellectual property rights so that Covid-19 vaccines and other new technologies are accessible for poor countries.
+386	@CROWSPLAY1 @haterdeep2 Yep! And apparently... if you have life insurance &amp; die after taking the covid vaccine..... they DO NOT pay out because these “vaccines” are Experimental 🤔🤷🏽‍♀️ https://t.co/3lRg3YA8Rs
+387	INBOX: The City of Seattle is opening coronavirus vaccination appointments at its West Seattle and Rainier Beach to all Seattle residents ages 65 and over tomorrow through Saturday. Both sites will administer either the two-dose Pfizer or Moderna vaccines. https://t.co/v7ws0RPxvK https://t.co/6WjqNzRAkW
+388	“COVID-19 cases falling&amp;vaccines rolling out, [...] hope a rebounding economy and reopened schools will drive down the national numbers in 2021” We will need more than the pandemic slowing down to end gun violence. We need action. #EndGunViolence https://t.co/llxC94eNXe
+389	It's been one year since the WHO declared COVID-19 a pandemic. We hope you see the light at the end of the tunnel with the number of approved vaccines in Canada and the expected increase in supply. In the words of our Chief Medical Officer of Health we all must “Hold Fast.” https://t.co/VjkpzlgVGn
+390	#FLGov. @RonDeSantisFL is being accused of saving vaccines for wealthy, white, Republican zip codes. These texts expose the political considerations that led to the vaccination event in question: https://t.co/TNSxvpt7Ve
+391	U.S. bishops' statement today marks one year with Covid-19. The pandemic has revived our sense that we are a global community, and that each of us is indeed each other’s keeper. They call for universal availability of vaccines.
+392	Polk County has FIRST DOSE ONLY COVID-19 vaccine appointments available March 10 or 11 for Groups 1, 2 &amp; 3. Schedule your appointment at: https://t.co/Gz4yFCamvT. For in English and Spanish from @ncdhhs about eligible groups: https://t.co/vFa4ndAZmR, https://t.co/prh98gw8cR. https://t.co/k1HrZWTMwK
+393	Actual people telling the World that Pakistan is taking precautions against #CoronaVirusPakistan. But our Fake Media giving only hype &amp; sensationalism. We all have to be ONE in this war against #CoronaVirus. Stay home. Stay safe. https://t.co/CpH74lIhCJ
+394	In #Italy we made a terrible mistake Everybody kept saying "It's just a flu" and now our intensive care units are collapsing. Our grandparents and parents, our friends, are dying Please, learn the lesson. Now! #coronavirus #CoronavirusOutbreak #italylockdown #italystaystrong
+395	🔴 LIVE UPDATES: Coronavirus NI - Fourth wave of Covid-19 deaths and infections inevitable says Prof Chris Whitty - Boris Johnson tells Taoiseach Micheal Martin he won't be sharing Covid-19 vaccines until everyone in United Kingdom is offered jab first. https://t.co/I1RQkxpFaZ
+396	Development of the COVID-19 vaccine has been underway since early 2020, as soon as virus began spreading. Knowledge from other vaccines, like SARS and MERS, have been used in developing the COVID-19 vaccines. Read more 👇 https://t.co/qAOGzpFb5w https://t.co/0dw8xptjuf
+397	⚠️Chinese doctors say autopsies of #coronavirus victims suggest that #COVID19 is “like a combination of #SARS and #AIDS as it damages both the lungs and immune systems,” and can cause “irreversible” lung damage even if the patient survives. @thespybrief https://t.co/bmnu8VIf0S
+398	Tesla &amp; CureVac create printer for COVID-19 vaccines https://t.co/p1duJg0UfD Looks a bit like my friend @daniel_kraft showed in his TED talk a while ago https://t.co/fD776jFvgQ
+399	Covid 19 vaccines in Nigeria are for politicians and their wives

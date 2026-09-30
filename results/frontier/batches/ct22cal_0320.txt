@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	Kerala is the only state in India which successfully stopped 3 deadly virus, Corona, Nipah and BJP.
+321	JUST IN: Russia begins production of coronavirus vaccine
+322	COVID VACCINE: The plan to distribute COVID-19 vaccines to CA's most vulnerable areas in 400+ zip codes only includes 10 in Bay Area, leaving out hard-hit neighborhoods like East SJ and Mission and Bayview Districts in SF. @TaylorBisackyTV reports: https://t.co/xoIhIxuL9B
+323	Israel: Vaccinating young people may help block the spread of COVID-19 5 weeks ago vaccines opened to 16-18 y/o. The army also vaccinated 19-21 y/o 2 weeks after 1st dose, these groups dropped &gt;50% in cases, compared to &lt;30% drop in 13-15 y/o and 22-24 y/o who were not vaxed https://t.co/3OFUFcdRpC
+324	Elected officials and advocates in Palm Beach County say Gov. Ron DeSantis should use free clinics to distribute COVID-19 vaccines to vulnerable farmworkers. https://t.co/YjsuyCVgg5
+325	Coronavirus in Illinois updates: More than 152,000 COVID-19 vaccines administered on Friday, the highest daily total yet; 1,675 new cases and 23 additional deaths reported https://t.co/qDQTeehwg5
+326	1000 Vaccines in One-day - PWHD Mass Vaccination Clinic using the new Johnson and Johson COVID-19 vaccine. The J and J vaccine only requires a single-dose https://t.co/tugthtmz34 https://t.co/Z9nfgIlbIq
+327	@ridgeisback One potential hurdle for antibody-based vaccines and therapeutics is the risk of exacerbating COVID-19 severity via antibody-dependent enhancement (ADE). ADE can increase the severity of multiple viral infections, including other respiratory viruses. https://t.co/wScMgi495C
+328	The PA is relying on a #lockdown strategy as it scrambles to acquire #COVID19 vaccines. So far, only 22,000 vaccines have entered the #Gaza Strip, and another 10,000 have gone to the West Bank. https://t.co/O0qP0RtAO9
+329	Denmark Twitter: Austria and Denmark team up with Israel for next generation COVID-19 vaccines Austria and Denmark have teamed up with Israel to produce 2nd generation vaccines against new mutations of the coronavirus. The alliance, dubbed First Movers https://t.co/Ih1uLTO9vC
+330	First quantity of COVID-19 vaccines arrives in Djibouti https://t.co/rfWoz83096 second country in the Middle East and North Africa region to receive COVID-19 vaccines through the COVAX facility Djibouti is...
+331	This #coronavirus emergency response package gives our government the resources it needs to confront this public health crisis – without stealing a dime from other critical initiatives. With my signature, it goes to the President’s desk. https://t.co/stxLFdcdcj
+332	Despite approved vaccines going through guidelines and approval processes by the @WHO and the U.S. Center for Disease Control and Prevention (@CDCgov), @dino_melaye had, on numerous occasions on the social media, expressed doubts about vaccines. https://t.co/3Oacjre8yc
+333	On this day 2020: @WHO declared #COVID19 a pandemic. Take a look at the resources we’ve collated about #LongCovid, vaccines, and infection prevention and control https://t.co/4IZQ262GQX https://t.co/S0uwbAIyfL #GlobalPT @AWcpta @ERWorldPhysio @WorldPhysioNACR @WorldPhysioSAR https://t.co/WdJGkismZo
+334	Bihar:One person aged 38 years died at AIIMS Patna due to #Coronavirus.He returned from Qatar and was admitted in hospital on March 20. #CoronaVirusUpdate https://t.co/emOzuisIJV
+335	New study warns Pfizer, Moderna COVID-19 vaccines could be far less effective against South Africa variant https://t.co/BgsY9bQQo2 https://t.co/OgsAuHMjOd
+336	EU: “UK and US have imposed an outright ban on the export of vaccines or vaccine components produced on their territory.” HMG: “UK has not blocked the export of a single COVID-19 vaccine. Any references to a UK export ban or any restrictions on vaccines are completely false.” https://t.co/dK23d3e22F
+337	Here's my Risk Analysis of the Covid-19 vaccines; 1. The #Covidvaccines are experimental and clinical trials are not complete until End 2022 earliest. https://t.co/gG9oAlZmqW
+338	International Criminal Court case filed against Israel under the Nuremberg Code, a code set up after Nazis forced Jews to test vaccines for the benefit of the Master Race. The covid vaccine is in its experimental stage with similar force and pressure. https://t.co/1uWfdXdP9D
+339	Arkansans who work in food manufacturing are now eligible to receive the COVID-19 vaccine. Learn more about the available vaccines and find locations where you can get vaccinated here: https://t.co/vliykStzMp https://t.co/8LbMZ0TVIo
+340	Dr. Anthony Fauci says he’s optimistic that towards the “end of the summer,” everyone who wants a shot will have gotten one thanks to the opening of community vaccine centers, mobile units and getting a lot more people to administer the Covid-19 vaccines. #CNNSOTU https://t.co/RcEajVkfFe
+341	Doug Ford has 15 months left in his term. He's going to sell off, burn down as much of #Ontario as possible, while the population remains distracted by Covid-19 &amp; vaccines! It'll take years to rebuild! #cdnpoli #Barrie https://t.co/R1i401bG6F
+342	..”However, NK cell-based vaccines will primarily enable our natural immunity to be beter prepared (memory!) and to induce herd immunity (which is exactly the opposite of what current Covid-19 vaccines do as those increasingly turn vaccine recipients into asymptomatc carriers..”
+343	Everyone is looking at Bill Gates for the Coronavirus Vaccine when the 'cure' is actually here in Africa from Madagascar. I don't care what it is but I would take that 'cure' from Madagascar than any Vaccine from Bill Gates. I am a believer in Africa. For Africa!♥️
+344	Proud moment for India for achieving a landmark number of more than 2 million Covid-19 vaccine jabs in the last 24 hours and for being a torchbearer of empathy to our neighbouring countries via #MadeInIndia vaccines, 25 and counting. #VaccineMaitri @DrSJaishankar https://t.co/Oye4B53kPK
+345	Fury as Germany and Italy sit on MILLIONS of unused Covid jabs while EU blocks AstraZeneca vaccine exports https://t.co/q30cM6YgVz
+346	Vaccines work by triggering a response in a person's immune system. That means some people will feel a little sore, tired or unwell after their #COVID19 vaccination. Most side effects are mild and should not last longer than a week. More on the vaccine: https://t.co/6ePOXYDfmG https://t.co/8ShpaFXMwn
+347	The fourth Covid-19 vaccine has just obtained marketing authorisation in the EU. Find out about how the European Parliament is supporting and scrutinising the roll-out process of vaccination against Covid-19 in the EU → https://t.co/lmvJaGYLAS https://t.co/lQ7UEZXUNb
+348	All three @FDA-authorized vaccines are safe and effective. The best vaccine is the one you can get, as soon as you can get it. Get notified when you're eligible for an available appointment at a Hennepin County vaccine clinic. ✅ Sign up now: https://t.co/wQby3eXpcZ https://t.co/rmFkHgnCvV
+349	Africa needs access to Covid-19 vaccines, in sufficient quantities, quickly and at affordable prices.@EmmanuelMacron @AUC_MoussaFaki @CyrilRamaphosa @BillGates @KGeorgieva @NOIweala @antonioguterres @POTUS @PaulKagame @DrTedros @AbiyAhmedAli @KamalaHarris @AminaJMohammed
+350	•Only the Ministry of Health and the Ghana Health Service have the mandate to import and deploy the 2 vaccines. •INTERPOL issues global alert that vaccines would be a prime target for criminal networks. https://t.co/broJ4SRgwY
+351	. @Ohioanpodcast: COVID-19 vaccines expanded, how the COVID-19 mask mandate will end, lawsuit says @kroger's poor data-keeping led to breach and 5 COVID-19 movie protocols https://t.co/JxBNvIIdiB #Ohio #podcast with @CraigShoupNH
+352	“Magufuli has repeatedly denied that Covid-19 is spreading in the east African country and claimed without evidence that vaccines are dangerous, suggesting instead that people pray and inhale herbal-infused steam,” reports ⁦⁦@ea_akin⁩ https://t.co/07qVJWZG5S
+353	President Muhammadu Buhari and his vice, Prof. Yemi Osinbajo on Saturday received shots of the COVID-19 vaccines at the State House, Abuja, and since then other eminent Nigerians have also received it. @jidesanwoolu @drobafemihamzat @gboyegaakosile @LSMOH #LASG #Covid19LASG
+354	Breaking news. And I wonder if global stock markets will now do a pole vault.. Coronavirus: Oxford vaccine can train immune system. https://t.co/9us9EVzIrl
+355	A new @YouGov poll for @peoplesvaccine shows that 7 in 10 Americans believe their govt should ensure vaccine developers share their science and technology. Despite similar figures in UK, France and Germany, all these countries still blocking WTO reform. https://t.co/3ZxNS4m4GQ
+356	@NHSuk The mRNA vaccines are very problematic. DO NOT GIVE mRNA VACCINES TO OLD FRAIL PEOPLE THEY WILL DIE. https://t.co/hfUMymVtBS
+357	. VIDEO: Horseshoe Crabs, known as “living dinosaurs,” are over 350 million years old. Now, they've been critical to the development of COVID-19 vaccines. https://t.co/VvB1JAoYvx
+358	Texas will allow residents 50 and over to receive Covid-19 vaccines beginning March 15. #ThisIsOurShot https://t.co/J2FRU7LO68
+359	The COVID VIRUS IS LETHAL!!! Get ANY vaccine available! Do not hesitate or fret over WHICH vaccine to get...JUST GET ONE THATS AVAILABLE! Covid is 15x more DEADLY THAN THE FLU and ALL VACCINES ARE EFFECTIVE💓❤️Listen to EXPERTS!! 👍🏻

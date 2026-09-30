@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	Helping to “squeeze more RNA out of the manufacturing process,” @Ginkgo bioengineers bacteria to produce DNA and enzymes, key ingredients for RNA in #COVID19 vaccines. Watch via @60Minutes. See minute 7:30. #NSFfunded https://t.co/WhRidhwvak
+201	The #AmericanRescuePlan will: ✅ speed up the production and distribution of vaccines ✅ provide relief dollars directly to millions of Americans ✅ prevent layoffs of teachers, firsts responders and other public servants by supporting local governments https://t.co/jRtt69SFxE
+202	The United States has administered 87,912,323 doses of COVID-19 vaccines as of Saturday morning and delivered 116,355,405 doses, the Centers for Disease Control and Prevention said.​ https://t.co/29WGJvi2wq
+203	Five new #COVID19 variants are having implications for vaccines 💉 and potential reinfection. Excellent analysis of what we know about how approved #vaccines work against new 🦠 variants emerging from 🇿🇦🇬🇧🇧🇷 by @KnowC19_Burnet team Read vol. 2 https://t.co/jaWvx6xcKn https://t.co/s8TUtKfJbw
+204	#BREAKING: Wisconsin DHS releases list of 20 conditions -- including asthma, cancer, heart conditions, obesity, liver disease, and pregnancy -- that qualify for next round of COVID vaccines. READ MORE: https://t.co/Dan7imEuly https://t.co/v1oN01Zd9W
+205	Getting vaccinated protects you and your loved ones, and gets us one step closer to a return to our normal way of life. Together, let's #CancelCovid and save lives. Register for your vaccine here: https://t.co/znJoh69vDT #HealingStartsHere https://t.co/dxllMlJ1Gq
+206	Each of the COVID-19 vaccines is safe and highly effective at preventing severe illness, hospitalization and death. Visit https://t.co/Nnitom3NGo to read about the new guidance from CDC for people who’ve been fully vaccinated
+207	The United States has administered 101,128,005 doses of COVID-19 vaccines in the country and distributed 133,337,525 doses as of Friday morning, the US Centers for Disease Control and Prevention said
+208	The @Novavax vaccine is a protein subunit vaccine ⤵️ Find out how it works and how it compares to other vaccines ➡️ https://t.co/J4aq9Uph8r https://t.co/D6wn1zmAgm
+209	The Chickasaw Nation announced that it is offering COVID-19 vaccines to all educators and their family members at no cost. https://t.co/McwfOtMm8C
+210	Lung Center and Tala Hospital start using AstraZeneca COVID-19 vaccines https://t.co/ty4EWAd2UQ
+211	A new block of vaccines is available tomorrow for York Region residents 80 and over. Registration begins at 8:30 a.m. Mar. 8. https://t.co/j20yVds4UW
+212	Education and childcare workers in SacCounty are eligible for COVID-19 vaccines. Informal childcare workers (daycare workers, nannies, etc.) will need to register their interest with the County. Complete this survey with your contact info to be notified: https://t.co/kFyNl0X3rf https://t.co/r9K2ZF6vQj
+213	Moderna, Pfizer, and Johnson &amp; Johnson COVID-19 vaccines ALL provide the life-saving protection you need against COVID-19. When it is your turn, say “yes” to whichever vaccine is available at the time of your appointment. #ProudtobeProtected https://t.co/VTlS053BBi
+214	Additional vaccines will be dispatched to Johor soon to inoculate between 50,000 and 100,000 Malaysian workers who work in Singapore. https://t.co/eEVvvP3A7V
+215	The COVID-19 vaccines were tested on thousands of people of different ages, ethnic backgrounds and with different health conditions before being approved, and have now been given to 11 million people in England alone! #vaccines #haringey #communityprotect https://t.co/Xq1tAp8hwU
+216	Ontario is moving to a 16 week interval between the vaccine doses. All 2nd dose appts that were booked with shorter intervals will be cancelled and you will be phoned or emailed a new appt time. This is based on guidance from Canada’s NACI: https://t.co/Jelhfua0sB https://t.co/8wpf5vPiNy
+217	Some vaccine information, the effectiveness against severe cases of covid and against hospitalizations. The Johnson &amp; Johnson is one shot, the other vaccines are two doses. #VaccineInformation #VaccinesWork https://t.co/38VP0kJMWW
+218	“100 women doctors, religious, politicians, and pro-life activists ‘humbly suggest’ that Pope Francis, the Vatican and bishops worldwide ‘re-evaluate’ their statements on COVID-19 vaccines, arguing that justification of such vaccines is ‘incomplete’”: https://t.co/XNxqGl26Wy https://t.co/f5ZY0JMrH3
+219	Health Canada has approved two vaccines for use in Canada to help protect you and your family from #COVID19. They will be an important tool to help stop the spread of the virus and allow individuals, families and workers to safely resume normal life. https://t.co/nrn8UUUIea https://t.co/tVi1kCqqHa
+220	Another sex difference has emerged in relation to Covid vaccines. Not an argument against having one, obvs - I had an aching arm, which was perfectly bearable. But men and women have different reactions. via ⁦@nytimes⁩ https://t.co/iV3dLcIDNz
+221	Starting today, parents and caregivers living with children with disabilities who are medically fragile, including those enrolled in the Katie Beckett program are eligible for the vaccine in phase 1c. Learn more about eligibility with @TNDeptofHealth: https://t.co/efaHITkC3H https://t.co/PARmDPI4hk
+222	Lipid nanoparticles are a key element of the mRNA based COVID-19 vaccines @DahlmanLab reviews the ways in which lipid nanoparticles are currently used to deliver therapeutics and assesses the future of the field @Kpaunovska @CoulterBME Read the article: https://t.co/xjur81HA5q https://t.co/SfmCNmTRV9
+223	Populations eligible for Phase Two of COVID-19 vaccines include people with developmental and intellectual disabilities, as well as diagnoses of a mental disorder: https://t.co/3ZvcnvShHw
+224	All residents aged 18 years and older in Inuvik and Hay River, and residents aged 50 years and older in Yellowknife, can now get the Covid-19 vaccine. https://t.co/yaDTirwgWG
+225	If over 50 living in London and interested in getting a covid jab quicker than waiting to be called, both St George’s and UCL are recruiting for a trial. They are looking at time between vaccines and mixing the vaccine type. https://t.co/KmHub2JwE6
+226	Both Pfizer and Moderna vaccines require two doses for maximum effectiveness. The first dose prepares your immune system to respond to the COVID-19 virus, and the second dose boosts the immune response to ensure long-term protection. https://t.co/bMy9Rs1Y9D
+227	🚨Important to say - @roinnslainte statement: "It has NOT been concluded that there is any link between the COVID-19 Vaccine AstraZeneca® and these cases " Move being taken as a precaution until we get more info #CovidVaccine ⬇️⬇️⬇️ https://t.co/WnBlKWMS7a
+228	Today I have received my dose of the COVID-19 vaccine. When we received the vaccines, priority was given to health workers, the police and teachers.I urge our people to embrace the vaccine. Taking the vaccine will see us build immunity, protect our loved ones and the community. https://t.co/aCr4Pao3sh
+229	💯 All three vaccines have been shown in clinical trials to be 100% effective against hospitalization&amp; death related to COVID-19 💪🏽 The best vaccine to get is the one that is immediately available to you Learn more about our vaccine sites and eligibility: https://t.co/5TXMi5gdLy
+230	@niall_gunn @mdouganlpool Creatively funding R&amp;D= AZ vac “More generally across the programmes at the Jenner Institute—and there are more than 12 vaccines in clinical development now—the European Commission has probably been our largest funder over the past five years until now" https://t.co/v71QGBqUQ0
+231	Data on how well vaccines work after 1 dose isn't clear cut — depends on what you're measuring, &amp; when you're measuring it. Stephen Evans, professor of medical statistics and former EMA Drug Safety Committee member, helped us break it down https://t.co/oQBvwZ6WNy @BusinessInsider
+232	mRNA #vaccines were the first to be approved for #COVID19, but they require ultra-cold storage to stay intact. This made-in-Canada DNA vaccine could offer more flexibility, and it's headed to clinical trials now: https://t.co/j17VQALmvp via @folioUAlberta @UofAResearch @UAlberta https://t.co/koGBHd8d1T
+233	ICYMI: Texans ages 50-64 will be eligible for COVID-19 vaccines starting March 15. MORE: https://t.co/7P1EH4oMEW https://t.co/qZ9R24qfgz
+234	Wonderful news: All individuals 16 years and older who live or work in Alaska are now eligible to receive the COVID-19 vaccine. This makes Alaska the first state in the nation to lift vaccination eligibility for all adults. Proud to be an Alaskan. https://t.co/YpfjrRNxvp
+235	At the Cashman Center mass vaccination site, officials are able to prioritize those who were less mobile, and also, as @DrewJandre reports, people were given a choice between the three different COVID-19 vaccines today. More coronavirus coverage: https://t.co/D3B3NDfKFf https://t.co/XbBrqEuogx
+236	Navy Seaman Gabriel Cabral, assigned to the Naval Medical Center San Diego, administers the first-round of Pfizer-BioNTech COVID-19 vaccines to sailors and select Defense Department support staff at Naval Air Facility in EL Centro, Calif., https://t.co/LWkIDPKvk9 https://t.co/prGCsYSYRr
+237	TONIGHT!: First vaccine townhall in collaboration with 13 community organizations, starting at 5 pm. Topic: COVID-19 Vaccines and the Elderly. Thrilled to have @DrSamirSinha @AmitAryaMD on this incredible panel, moderated by @SabiVM https://t.co/oXUJyBnV1z
+238	J&amp;J is planning to test vaccine on Babies, Pregnant Women, and the immunocompromised. Which tells us: 1. These vaccines have never been tested on any of these cohorts, and yet are being given to pregnant women and the immunocompromised as we speak https://t.co/MJ1vR1feNu
+239	🔴 A shipment carrying 2 million doses of the Sinovac vaccine has just landed in Santiago. In Chile, both Sinovac and Pfizer-BioNTech are the only vaccines authorised in the fight against covid-19. https://t.co/i4IDAlwiwm

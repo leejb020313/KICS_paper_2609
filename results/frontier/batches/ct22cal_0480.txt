@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	Namibia has approved the import of six COVID-19 vaccines from China, Russia, the U.S., South Korea and India, announced Namibian health authorities on Thursday. https://t.co/cAF6E3Lxd7
+481	Remember when the Chairman of the Senate Intelligence Committee enriched himself through stock trades off of inside information about the danger of COVID-19 while his Party told people it was a hoax to get Trump?
+482	Pharmaceutical companies have been given $6 billion in taxpayer dollars, and more to come, to develop a coronavirus vaccine. Once a safe and effective vaccine is approved by the FDA it must be made available to all for free. This is no time for profiteering.
+483	BREAKING: @MBuhari’s Chief Of Staff, Abba Kyari, Reportedly Sick, Suspected Of Contracting #Coronavirus | Sahara Reporters A top government source told SR on Monday that Kyari has been seriously “down” since returning from a trip abroad. READ MORE: https://t.co/Acy5NcbMzQ https://t.co/kStp4cmFlr
+484	Since this will never get reported by the media, I wanted to share a copy of this check. @realDonaldTrump is once again donating his salary back to the United States Government â This quarter, it will be donated to @HHSGov to confront, contain, and combat #Coronavirus. Flag of United StatesFlag of United States
+485	Grocery chains grew profits by $18 billion in the pandemic so far. Almost all stopped hero pay after a month. 29,000 grocery workers got covid and 74% of them aren't eligible for vaccine yet. We're not treating them as essential. They're sacrificial. https://t.co/fZRruG3tBO
+486	After @realDonaldTrump and cronies downplayed the #CoronavirusOutbreak, Pence now admits there aren't enough #coronavirus test kits. Experts (including me) saw this coming for weeks and called for point-of-care #COVID19 tests. Their incompetence will cost lives.🤬 @thespybrief
+487	At a S. Korean gov't briefing on COVID-19 response: "The gov't is covering the financial costs for related testing and treatment instead of saddling individuals with those expenses. The gov't is also reimbursing medical facilities for losses incurred from imposed quarantines."
+488	👋 Good evening, it's day 57 here at @ca_covid here's what went down: ☎️ We placed more phone calls and are up to 2353 locations with COVID-19 vaccines. We've still got more places to call and expect that number of locations to increase https://t.co/PqRmNtwUcQ
+489	@MonicaFibonacci @CrankyBlonde1 @PattyHajdu In the article, The COVAX alliance aims to share COVID-19 vaccines with more than 90 lower- and middle-income nations. However, the program is facing delays, under-funding and limited supplies. 🇨🇦draws from it, proud to be Canadian. https://t.co/nYJojUe1Oi
+490	PAY ATTENTION !!!! Protective antibodies that neutralized the variant — called B.1.351, was 12x lower for Moderna's COVID-19 shot than against the original coronavirus, and 10x lower for Pfizer's, the study authors said. https://t.co/LTjnK3zrCh
+491	ICYMI: Iowa reported another 86 kids have contracted coronavirus, pushing the total to 3,868 in 37 days since January 29, the day Gov. Reynolds signed SF160 to force schools to provide 100% in-person learning without requiring safety precautions. (1/2) https://t.co/PI1964xDQE
+492	South African police have seized hundreds of fake COVID-19 vaccines and arrested four suspects in connection with the haul, the Interpol global police co-ordination agency said #NilePostNews #NBSUpdates https://t.co/bb1dlfdDgU
+493	As of Wednesday, COVID-19 vaccines were being offered at select CVS pharmacy locations in 28 states and Puerto Rico, according to the company's website. https://t.co/4N9seqcQGB
+494	Russian intel efforts to undermine the vaccines. Watch for this disinformation to spread among vulnerable U.S. populations such as anti-vaxxers, anti-maskers, Qanon, GOP electeds, and some Dems like Robert F. Kennedy https://t.co/DQjZtc3dkG
+495	fun fact: its tradition for europeans to spread a potentially fatal disease to every other country not fully inhabited by white people &amp; not take accountability for the subsequent devastation &amp; lives lost
+496	It may not feel that way right now, but rich countries have ordered so much #covid19 vaccine that they will soon have many hundreds of millions of surplus doses. It‘s high time we figure out how to share those doses. By @sciencecohen and me. https://t.co/oadyxbkTNG
+497	Received vaccines as an infant, to start school, boosters during school, vaccines to go on a mission, and once a month on my mission... a flu shot now every year. It’s what we do to stay safe. Please just get your COVID vaccine. 👊❤️💉
+498	@Bombastique1 @mmpadellan A separate issue that should also be thoroughly investigated. Same for Pay-To-Play vaccines and under-reporting of COVID-19 deaths here in Florida.
+499	The first Silicon Valley death from COVID-19 was a woman in her 60s. Both my parents are in their 60s. If you want to travel internationally and be socially irresponsible just because you're young, "it's just the flu," or flights are cheap then you're just an inconsiderate brat.
+500	Death Rates Skyrocket in Israel Following Pfizer Experimental COVID 'Vaccines' March 2, 2021 “This is a new Holocaust” – Engineer Haim Yativ and Dr. Seligmann https://t.co/8QMMlAl7n9
+501	Some pearl of Wisdom by your fuckeer "Bill Gates intentionally developed Corona Virus in his Lab which put whole world in Lockdown Now he'll develop vaccine which contains nano cells which will remove our religion from our bodies.This Nano cells will be controlled by 5G towers" https://t.co/KDIVgxbM7D
+502	Public health experts feared that Johnson &amp; Johnson's single coronavirus shot could be seen as inferior to the two other approved vaccines. But its "one and done" advantage is ideal for reaching vulnerable populations. https://t.co/FXq2kfObvM
+503	In marking one year of the COVID-19 pandemic, a story of hope — Meet Myrna and Mervin Lass. This week, the couple celebrated their 68th wedding anniversary a little bit early, by getting their COVID-19 vaccines at Sunnybrook 💕https://t.co/oepddLWTpV
+504	According to the New York Times,Chinese Covid-19 vaccines top safety rankings: 1. Sinopharm (China) 2. Sinovac (China) 3. Kexing (China) 4. Can Sino (China) 5. AstraZeneca (UK) 6. Pfizer (USA and Germany) 7. Modena (USA) @Solwayo1 @drjaytee87 https://t.co/RjZMs9HmtU
+505	@danieteebee @Dragkonias it’s actually arguable that J&amp;J is more effective than other vaccines. it was tested under more circumstances and during a peak of the pandemic and has fewer injection side effects. also only vaccine with FDA approved efficacy against asymptomatic spread https://t.co/j9saKS3ROG
+506	U.S. scientists are skeptical of a one-shot regimen for Pfizer Inc and Moderna Inc COVID-19 vaccines, saying that there isn't enough evidence that a single dose provides long-term protection. #ThisIsOurShot https://t.co/9RlowTA4BC
+507	First #BigPharma takes billions from Taxpayers for vaccine research. Then they demand monopoly control so they can set prices and limit supply. Now they’re making billions more selling the same vaccines back to us that we funded We need a better system! https://t.co/kkyfOneYTu
+508	I hear unfounded rumors about #NationalGuard troops supporting a nationwide quarantine. Let me be clear: There has been no such discussion. ... For news about the great work the Guard IS doing to support the #Covid_19 response, click the link. #COVID19 https://t.co/JZROM4xfF9
+509	After weeks of the Federal Government dragging its feet on COVID-19 testing, Trump just admitted in front of the cameras he wants to manipulate the measurement of the outbreak for his personal political benefit.
+510	Very good and important new data on the UK variant and vaccine response "B.1.1.7 is not a neutralization escape variant of concern for COVID-19 vaccines" "B.1.1.7 is unlikely to increase the risk of SARS-CoV-2 re-infection" https://t.co/DWzwBUDwY3 @cellhostmicrobe https://t.co/iQv7mL9MHq
+511	tw suicide, COVID-19 Hey, so, um, there's a big elephant in the room right now. COVID isn't the only epidemic happening right now - and it's come at a bad, bad time. Not that there's ever a good time. There's a mental health epidemic happening, and we're gonna start seeing-
+512	The US has found multiple online publications that, under instruction from Russia, are spreading misinformation about the @Pfizer and @Moderna COVID-19 vaccines. | #Russia | #COVID19 | https://t.co/8HMEy4Sk1q
+513	Major new @IFRC and Migration Lab report finds migrants and refugees face an "invisible wall" in accessing COVID-19 care and vaccines. Case Studies from Egypt 🇪🇬 Sudan 🇸🇩 Philippines 🇵🇭Sweden 🇸🇪 Australia 🇦🇺 Colombia 🇨🇴 &amp; UK 🇬🇧 Full report available now: https://t.co/tucpTFnb2i https://t.co/41tGdVGTVi
+514	More #COVID19 vaccines are needed to meet the growing demand. Our inaugural AMA Insight Network virtual meeting allowed participants to get feedback from peers, network and exchange innovative ideas to improve vaccine rollout. https://t.co/xBmbP6QXjX
+515	The data show the vaccines are extraordinarily effective at preventing death from covid AND preventing transmission from covid. The throat-clearing nonsense about vaccine doubt actively disincentivizes mass numbers of people from getting vaccinated and ending the pandemic.
+516	According to TMZ, and some other reliable sources. Selena Gomez has reportedly donated $1,000,000 to vaccine research to help prevent the spread of COVID-19 also known as the Coronavirus. “I want everyone to know that they are rare and soon this disease will be.” https://t.co/YyZJ64uUwr
+517	Before I hit the hay, this is your reminder that for the 12 years before COVID-19 happened people dismissed the ongoing research on mRNA vaccines for coronaviruses to be pointless navel gazing and playing around with science kits. Warp Speed took 13 years.
+518	SERIOUS ! Geert Vanden Bossche, vaccine expert, formerly of GAVI and the B&amp;M Gates Foundation has written an open letter to all scientists: This type of prophylactic [covid] vaccines are.. highly dangerous, when used... during a viral pandemic.. READ: https://t.co/dXpNCoQAzq
+519	Vaccine Facts • Washington bus drivers eligible on March 17 • CDC on schools and vaccines • US hits milestone of 100 million shots https://t.co/V79Ras2mTZ

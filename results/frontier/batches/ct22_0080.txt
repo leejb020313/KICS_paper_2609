@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	***************** ROMANIA: Vaccine Protests ***************** Thousands of protesters gathered in Romania’s capital, Bucharest, on Sunday to protest COVID-19 restrictions and vaccinations, which they fear will become compulsory. https://t.co/zqFRLLnu0E
+81	Israeli PM Netanyahu slams ‘SNL’ joke about COVID-19 vaccine efforts: This is outrageous. It’s so false. In fact, I brought vaccines and went especially to the Arab communities, the Arab citizens of Israel, and vaccinated as many as we can. https://t.co/07B45Pqkwj
+82	232,000 coronavirus vaccine doses have been given since Friday in Illinois — and the state again broke its record for shots. https://t.co/1XBE5gV0xQ https://t.co/SlBApndQww
+83	#BREAKING: The coronavirus variant first identified in South Africa is now in Colorado, per the @CDPHE. Experts say the B.1.351 variant (also known as 501Y.V2) is more contagious and resistant to the COVID-19 vaccines currently available to the public. #COVID19Colorado https://t.co/dDJUSyigky
+84	Oregon, we’re almost at 1 million administered first doses of the COVID-19 vaccines! 👏👏 Help keep our community safe by masking up and stay a safe distance from others on transit 🚌🚈 https://t.co/Mz1mMpvzWr
+85	@politvidchannel Pfizer was funded by Germany. 116 countries participated in getting the vaccine. The vaccines are a worldwide effort. If the US did not exist the world would still have created vaccines. 4 % of the world’s population and 25% of the World’s Covid deaths, this is our record.
+86	Dr. Reshma Ramachandran: Pfizer plans to increase Covid vaccine price to $150 or $175 per dose in 2022 https://t.co/QtT8p5FFVC @donatopmancini @natashaloder @DavidP4AD @Vivivovi @uaem
+87	The Philippines has secured $900 million (about ₱43.67 billion) in fresh funding from the World Bank and Asian Development Bank for its purchase of COVID-19 vaccines and measures in response to the health crisis. https://t.co/UnGl3ClY8R
+88	Gauteng has depleted its stock of Johnson and Johnson Covid-19 vaccine for healthcare workers. 31 000 healthcare workers have been vaccinated in the province since arrival of the first two batches totalling 160 000 doses of J&amp;J vaccines arrived in the country last month.
+89	Johnson &amp; Johnson now in on the money making Covid vaccine scam. There must be agreement to share the profit. Young and healthy don't need vaccines they have able immune systems. https://t.co/T5Spm4Omq5
+90	Don't panic if you see a lump on your armpit after COVID-19 vaccination, doctors say As more Canadians receive COVID-19 vaccines, more and more people might encounter a side effect that radiologists want the public to be more aware of: swelling under the https://t.co/Oi8gUcb0mi
+91	Not good if proven true. Indian Government has refused to approve other #Vaccines just relying on this and #Covaxin Denmark suspends use of AstraZeneca's Covid vaccine after concerns were raised over potentially dangerous side effects https://t.co/7mIyYkLUI1 via @bpolitics
+92	The OECD has positively updated its 2021 Global Growth forecast in response to the U.S stimulus and advised against winding down fiscal and monetary support. 👉🏼 Covid-19 vaccines and stimulus plans will aid global growth, says OECD https://t.co/BXqwLbzULn
+93	A new U-M poll shows a significant shift in older adults’ attitudes toward #COVID19 vaccines compared to last fall, when only 58% of people in their 50s, 60s, and 70s said they would get it. Now, 71% say they are ready. https://t.co/IL5V3xDccN https://t.co/NNlMYhrjCc
+94	Retail giant Target is partnering with CVS Pharmacy to bring coronavirus vaccines to more than 600 stores across the country, including locations in Virginia and Maryland. https://t.co/2RjmS64Uun
+95	The Texas Department of State Health Services has announced that Texans age 50 and older will be eligible to receive COVID-19 vaccines beginning on March 15. More info: https://t.co/QPZb3c0bPD https://t.co/hsT4BEJhY3
+96	More than 120 GW students, faculty and staff helped administer about 2,500 COVID-19 vaccines during D.C.’s first high-capacity vaccination event. https://t.co/6SkOu4hT9E
+97	@SharpieDj 2008, Chief Medical Adviser Prof Chris Whitty, accepted, $40 million from Bill Gates to control British vaccine promulgation: and he stated “COVID-19 vaccines and drugs would need to be in place before measures could be lifted … : https://t.co/kTMFYPvyxi
+98	Vaccine deliveries continue to ramp up. At the end of the month, we'll begin receiving more than 1M doses from Pfizer and over 800,000 from Moderna. To follow how these vaccines are being distributed to provinces, check out the following link: https://t.co/FCEpU996ah https://t.co/EexFmuJzgT
+99	NEWS: Meijer prepares to give 10,000 coronavirus shots to Hoosier teachers and school staffers this week. https://t.co/keHvBxo0mu
+100	B.1.1.7 was first identified in the U.K and is now spreading in the US. Using a lentivirus-based pseudo-virus assay study shows that B.1.1.7 is probably not a neutralization escape VOC for COVID-19 vaccines. Moreover, B.1.1.7 is unlikely to⬆️ the risk of SARS-CoV-2 re-infection.
+101	@ItaiMatumbike is talking about his own experience of having the COVID-19 vaccine. We’ve been using vaccines to eradicate + protect people against infectious diseases since the 18th century! Very interesting to hear about the different types of vaccine and how they work @ourNHCP
+102	As the weather warms and the promise of spring’s renewal is bolstered by increased optimism about the availability of COVID-19 vaccines, several of the symbolic centers of “life in D.C.” won’t return to pre-pandemic normal for the foreseeable future. https://t.co/RLPZWciYo0
+103	The risk of anaphylaxis is low, and those at highest risk have a history of anaphylaxis. We need to continue assurances that vaccinations are safe and necessary. Acute Allergic Reactions to mRNA COVID-19 Vaccines https://t.co/MCC5IfdOJ5 via @JAMA_current part of @JAMANetwork
+104	The Utah Department of Health said there are 491 new confirmed COVID-19 cases and 4 more deaths in the state Saturday. 25,687 more vaccines were administered. https://t.co/kxYATwps2O
+105	A lot of people with pre-existing conditions are now on this list for vaccines... And the #COVID19 #vaccines supply is going up! @DHSWI @aarpwi https://t.co/dIMxLhJ3wV https://t.co/244iv0NqgK
+106	As COVID-19 rates fall and the availability of vaccines increases, we're making plans for more face-to-face classes and activities by Fall 2021. Details at ▶️ https://t.co/oENWnJYjKS
+107	The European Union's drugs regulator on Thursday recommended conditionally approving Johnson &amp; Johnson's single dose COVID-19 vaccine, as the bloc seeks to speed up a stuttering inoculation campaign and boost its supplies of vaccines.​ https://t.co/TcBmxd8WS3
+108	LLUH has appts. for the Johnson &amp; Johnson one-dose vaccine. You do NOT have to be a LLUH patient to schedule an appointment. Appts. are available to residents 65+ and those in other eligible categories. Appts. must be made at https://t.co/M5K8sHoLxO https://t.co/jzZ8zSkDGP
+109	Great news! Alaska will be first state to offer Covid-19 vaccine to anyone 16 and older! #bbn #Alaska #CovidVaccine #AcademicChatter https://t.co/jU0l7FmgWs
+110	A group representing the pharmaceutical industry in the United States has written to President Joe Biden urging him to block efforts underway at the World Trade Organisation to create waivers for certain intellectual property rights and patents on Covid-19 vaccines. #sabcnews
+111	Additional doses of Covid-19 vaccines will be sought for provinces which are tourist destinations to boost confidence and the local economies there, according to Culture Minister Itthiphol Kunplome. #BangkokPost #Thailand https://t.co/nYgFBLXfiR
+112	All 50 states are now offering vaccines to teachers! This is an incredible and important step forward in keeping our children, educators and communities safe. https://t.co/WWPCFiQY1B
+113	More than 10.5 million vaccines have been administered statewide and as more people are vying for a chance to get the coronavirus vaccine, officials are now recruiting volunteers to help vaccine sites run more efficiently. https://t.co/3e78EoSwbT
+114	It’s been a year since the first COVID-19 case in Kentucky. During this time, our community has counted on Norton Healthcare for 200K COVID-19 tests, and, in less than 4 months, 100K COVID-19 vaccines. https://t.co/KXznbEGaCj
+115	Blue Cross and Blue Shield of Alabama is providing 100% coverage for the administration of COVID-19 vaccines during the government’s phased-in vaccine distribution. Blue Cross is recommending the COVID-19 vaccine for those currently eligible. Full release: https://t.co/1cm8BO6cLo https://t.co/YSor7GyymC
+116	#Nepal received 348,000 doses of the #COVID-19 vaccine delivered through #COVAX - a partnership between CEPI, Gavi, UNICEF and WHO - to ensure low- and middle-income countries have access to vaccines. No one is safe until everyone is safe. #TeamEurope https://t.co/9zNxJsRGxt
+117	ICYMI: Vermonters 55 and older with select conditions can sign up for vaccines Monday morning. For more information about where and other groups eligible in the coming weeks, head here: https://t.co/eeLbg3Cpea https://t.co/3xFhfFsMMG
+118	Russian intelligence agencies mounted a campaign to undermine confidence in Pfizer and other Western #vaccines, using online publications questioning the vaccines’ development and safety. #Disinformation https://t.co/WU0QYUYRab
+119	Africa-zambian leader Dr. .Mumba refuses covid vaccine says no should have this vaccine in their body until it is fully known what's in the vaccines and what it does to the body. https://t.co/GKijGrHoSU

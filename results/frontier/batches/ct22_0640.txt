@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	Inclusive deployment of #COVID19 vaccines and strengthening health systems is critical to saving lives and ensuring #ResilientRecovery. Today, the @WorldBank committed $500M to help the Philippines with affordable and equitable access to COVID-19 vaccines. https://t.co/ClCtsNRNQy https://t.co/WhH9i8aCUV
+641	2005 an animal study was done with SARS-CoV-1 MNRA vaccines on ferrets. Two doses were administered in the same manor as the SARS-CoV-2 COVID-19 mRNA Vaccines. The ferrets showed no adverse reaction and seemed to be completely healthy.
+642	That’s the bottom line. We have multiple effective and safe vaccines. Learn more about #COVID19 vaccine safety: https://t.co/RlPSp2vAex https://t.co/L8YGB86YBy
+643	The strategy seems to be working. As of Feb. 28, nearly two-thirds of the 15,863 vaccines administered by private, nonprofit health centers had gone to African Americans, Hispanics, and Asians. https://t.co/9NgEN8oW1V
+644	🇦🇺🇮🇳🇯🇵🇺🇸 🇮🇳 would manufacture Johnson and Johnson's single dose COVID shot, as part of 1st Quad vaccine initiative. Production to be financed by 🇺🇸 and 🇯🇵 and vaccines to be shipped by 🇦🇺 to SE Asia and Pacific counties ... #QuadSummit #PharmacyoftheWorld @mygovindia
+645	Azerbaijan was the first country in the South Caucasus to start vaccinating its population and is planning to provide vaccines for at least 20% of its population in 2021. It has already managed to vaccinate over 400,000 people. https://t.co/EHa0ZBY9Jm
+646	UPDATE: Rwanda's President @PaulKagame and First Lady Jeannette Kagame have received their #COVID-19 vaccines at King Faisal Hospital in Rwanda https://t.co/QXdcH6c09T #LookUPTVUpdates https://t.co/k4s7hVTVMP
+647	Pharmaceutical giant #Pfizer has demanded ransom from sovereign governments by making bizarre demands for bank reserves, embassy buildings and military bases as collateral in exchange for COVID-19 vaccines. https://t.co/Z4NJhVoItn
+648	IN PHOTOS: President Rodrigo Duterte and some members of the Cabinet welcomed the 600,000 COVID-19 vaccines from Sinovac delivered by the Chinese government to the Philippines. https://t.co/ie8gvs2s7r
+649	In our latest COVID Focus Report, we spotlight the tremendous potential of intranasal vaccines. As of March 10, four intranasal COVID-19 vaccine candidates — developed in China, India, U.K., and the U.S. — have progressed to Phase 1 trials. https://t.co/sJ3JgOj6l5
+650	TODAY, ON NEWS IN SCIENCE We bring news on how SARS-CoV-2 also known as Covid-19 mutates to escape antibody binding, thus making the existing vaccines and therapeutics to be inefficient in less than a year. @IfumsaOau @the_omolewa @le_pamz https://t.co/Ss2mIKBUYK
+651	False claims that the recently introduced COVID-19 vaccines impair fertility have been spreading since December. The public worries which followed have prompted a unified response from professional and news organisations, denouncing the misinformation 👇 https://t.co/HUkro6esj6
+652	More COVID-19 vaccine doses will soon be made available to Americans, and they will come from a production facility in Bloomington, Indiana. @IIB reports. https://t.co/etExWmSav3
+653	COVID-19 vaccines are here, but what I do is still important. So, I’m masking up, avoiding crowds, staying at least six feet apart from others, and not socializing indoors with people I don’t live with. Vaccines can help, but so can I. #SlowTheSpread
+654	Fun fact: the #covid mRNA vaccines now account for more side effect reports to VAERS since December than EVERY OTHER VACCINE COMBINED in the last year. And 8 times the number of death reports.
+655	Vietnam celebrates 6 months without any deaths caused by coronavirus. Cuba sent health professionals to 40 countries during the pandemic and is in the final stages of producing 2 vaccines against Covid-19. -The worst socialism was still better than the best capitalism-G. Lukács
+656	Russian intelligence agencies are waging a disinformation campaign to undermine confidence in the Pfizer vaccine. This is a dangerous attack on our nation’s health security and a direct threat to our ability to fight the pandemic. https://t.co/W3YNcDtsNo
+657	Don't get it twisted: The Johnson &amp; Johnson vaccine is 100% effective at preventing Covid-19 hospitalizations and deaths, according to clinical trial data. https://t.co/QYSaYiG9Ni https://t.co/nuJ2157Z2M
+658	My advice is simple: stay informed about the safety and efficacy of COVID-19 vaccines. I talked to my doctor and took the vaccine, and I’m glad I did. These vaccines save lives. https://t.co/lzKAR51ll7
+659	The @WHO Director-General has said that deals between some high-income countries and manufacturers of COVID-19 vaccines are undermining its COVAX initiative by reducing the number of doses it can purchase. Read more: https://t.co/zWxZnAm6lO https://t.co/oj1YVjtmXD
+660	The same people who said... COVID is like flu Masks don’t work BCG will protect us HCQ and Zinc are great We’ve reached herd immunity ...are now spreading vaccine fears Data wasn’t on their side then and it isn’t now. Vaccines safety is established. Just Google it.
+661	While vaccines may prevent COVID-19, monoclonal antibody treatments could improve COVID-19 symptoms in certain people and help them stay out of the hospital.
+662	⁦Florida voters must ⁦@RemoveRon⁩. This moron is selling Covid vaccines to ⁦@GOP⁩ donors and others with undeserving #privelege https://t.co/bAwKqmBgDV
+663	Don't Hesitate. Vaccinate. COVID-19 vaccines are safe, effective and rigorously tested. Encourage your family and friends to get the vaccine when it is their turn.
+664	4.5 Interaction with other medicinal products and other forms of interaction No interaction studies have been performed. Concomitant administration of COVID-19 mRNA Vaccine BNT162b2 with other vaccines has not been studied (see section 5.1). https://t.co/wX0j0aQyTs
+665	Australia’s COVID-19 vaccination program begins today for our first priority groups. For updated information on the rollout to priority groups and where to access the #COVID19 vaccine, visit https://t.co/g4IbPPSzQn #coronavirus #COVID19vaccines https://t.co/oXm6oC8aAE
+666	Gita Gopinath of IMF hails India's role during the coronavirus crisis by manufacturing and shipping vaccines to several countries. 'India has been at the forefront in fighting the Covid-19 pandemic and "really stands out" in terms of its vaccine policy' https://t.co/eYmJgBtRu9
+667	Gurdeep Singh Sappal, the former CEO of Rajya Sabha TV and a Congress loyalist, ranted against nominal price of COVID-19 vaccines charged at private vaccination centres https://t.co/zPIy6MCTJ3
+668	Read more about how the EU, UK, US and others are blocking the expansion of vaccine production at the WTO, thus prolonging the pandemic. From the WTO: https://t.co/tHLPGjC8DY Detailed Q&amp;A from Human Rights Watch: https://t.co/3vOYZT2Fae https://t.co/zNZzrT6DF6
+669	Dozens of deaths have been reported to the federal government among people who received COVID-19 vaccines in Ohio, but authorities said there is no evidence vaccination contributed to the deaths. https://t.co/ApyyzhoJbk via @mattwrighttv
+670	A Comment article published in @NatRevImmunol discusses how the approved COVID-19 vaccines trigger innate immunity to promote durable immunological memory and the future implications of protecting populations with these vaccines. https://t.co/WoKjsKgasR https://t.co/kVeOcsRQWB
+671	Last April the President of the EC said the vaccine would be a ‘universal, common good’. But since then The EU has fought tooth and nail to defend patents on COVID vaccines and medicines. Read the horror story about the EU’s global role. #TRIPSwaiver https://t.co/g9XQt4nlRD https://t.co/kP3Um2im6e
+672	But meanwhile @Vimeo pulled my video that goes with this article of mine from a couple of weeks ago. They emailed me saying that no information questioning the safety of vaccines is allowed. So I'm uploading the video to my website where it'll be safer. https://t.co/HeEEQ26ZGd
+673	The media and Republicans are trying to give Trump credit for the coronavirus vaccine, but the truth is the vaccines were in development months before Operation Warp Speed. https://t.co/6qOnyCGf2H via @politicususa
+674	1. Tun Dr Siti Hasmah explains that she had received a COVID-19 vaccine in Langkawi as a senior citizen, and not as Langkawi MP Tun Dr Mahathir Mohamad's wife. She says she had taken the jab to encourage people in Langkawi to also do so, as doubts around the vaccines persist. https://t.co/3pRZ8XObjQ
+675	Yes, @MacGlobalNexus researchers are racing to beat COVID– 19, developing vaccines, and creating better PPE. But they’re also sharing their expertise to shape better policy that informs Canada’s COVID–19 response and safeguards Canadians’ health. https://t.co/08xUuJx1Y9
+676	World Trade Organization chief Ngozi Okonjo-Iweala urges the EU and all other WTO members to end export restrictions on vaccines and other medical goods needed to combat the Covid-19 pandemic (via @bbaschuk) https://t.co/e40dWnJcWc
+677	Vaccines and treatments for the pandemic are the most relevant public discussion of 2021. It affects, directly or indirectly, every single person on Earth. Transparency should be at its centre. #VaccinesTransparency. https://t.co/6As57iVhqC
+678	.@JDRF continues to advocate directly to the CDC to share evidence in support of those with #T1D being prioritized for receiving the COVID-19 vaccines. Learn how YOU can engage locally – view and share our toolkit: https://t.co/JGb69I4U5q https://t.co/DMBTeqbCWS
+679	📸 Speaker of Parliament, Alban Bagbin today led Members and Staff of Parliament to take the first shot of the COVID-19 vaccines. #TV3GH https://t.co/j13WSIqUeI

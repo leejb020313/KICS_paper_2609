@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	“COVID-19 vaccines are now a central component of the United States’ national security and defense. But unlike other spheres of defense, this one involves protecting—not fighting—foreigners.” https://t.co/gCrBy6hfbf
+441	A Los Angeles city-run vaccination site opened Tuesday at the University of Southern California and is expected to administer thousands of vaccines per day once fully operational.​ https://t.co/x0D9f6PuRk
+442	Florida lowers COVID-19 vaccine eligibility age, Publix offers choice between Johnson &amp; Johnson and Moderna vaccines, deadline for small business PPP loans and more: https://t.co/EhY3a1tVoZ https://t.co/WNwFLoALhs
+443	There is no evidence that taking any of the Covid-19 vaccines affects a woman’s future ability to conceive, or to continue a pregnancy... We recommend that all those of reproductive age take the #Covid19 vaccine as it becomes available. @RCPI_ObsGyn https://t.co/lkhEuuitFO
+444	For a second week, Kansas is ranked last for COVID-19 vaccines administered. Our state's inefficient distribution efforts are detrimental to both our public health and our economy. We need an improved, targeted approach so that more Kansans have access. https://t.co/pJWy9DClkH
+445	@LionelMedia Technically, the shots are experimental gene therapy and should not be called vaccines. If the vaccine companies didn't call these covid shots vaccines then they would be liable for injuries/deaths.
+446	#BREAKINGNEWS: @NMDOH announced plans for all K-12 educators, early childhood professionals and staff to be eligible to get COVID-19 vaccines starting TODAY. @koat7news https://t.co/NEssa0sIXt https://t.co/MMetfrHNYw
+447	Pfizer and Moderna set to make billions from vaccine while AstraZeneca, Johnson &amp; Johnson have pledged no cost till the pandemic ends. I have no doubt which companies will stand longer eventually simply because of their values. https://t.co/mnDBvZPc58
+448	We just launched our online appointment platform for COVID-19 vaccines! Eligible people have the opportunity to choose appointments based on date, time, location, and type of vaccine at https://t.co/Rp2RvTqyMl https://t.co/C9k4r9lYYP
+449	COVID-19 vaccine producers need bags, filters, vials, glass, plastic and stoppers. We need international cooperation in ramping up production of theses materials, not vaccine nationalism. https://t.co/IHqfFzGlOB
+450	NEW: Biden and Hispanic group find more than $200,000 worth of COVID-19 vaccines behind taco truck https://t.co/oj6UJY3ZjT
+451	Covid-19 variants from US and UK have merged to form a new super-mutant strain that could be more infectious and more likely to dodge vaccines. #COVID19 https://t.co/SPgfwcuZFH https://t.co/mv8GFszqPS
+452	For all the ‘anti conspiracy’ theorists that spout anti Vaxxers - can you kindly do some research and realise the COVID ‘vaccine’ isn’t a vaccine. Vaccines are supposed to prevent you from catching a disease - this thing doesn’t....
+453	When you say trump is responsible for the Covid Vaccine, perhaps you should look at the two he invested our money in - Novavax &amp; AstraZeneca covid vaccines (AstraZeneca has been suspended and Novavax still not approved) Pfizer did not take investment monies.
+454	The Indian Ocean island nation of Seychelles had one of the world's first COVID-19 vaccine rollouts, and this month it aims to again break ground by reaching so-called “herd immunity. #Seychelles #India #CovidVaccine https://t.co/xuls3ZNwT6
+455	Yo friends in Canada - your govt passed law to waive patents domestically for covid-19 vaccines and drugs And hypocritically is preventing developing nations from compulsory licensing of the same patents at the WTO! Not cool! https://t.co/4bHdVFYQ5J
+456	World Health Organisation approved the Johnson &amp; Johnson Covid vaccine for emergency use, after already authorising the jabs made by Pfizer-BioNTech and Oxford-AstraZeneca https://t.co/GxcZOorMKx
+457	President Joe Biden met virtually today with leaders of the Indo-Pacific, to discuss plans to produce more vaccines and beat the deadly COVID-19 pandemic globally. This as authorities warned Americans not to get lax. White House Correspondent, @owentjensen reports. https://t.co/OJv64DjAgk
+458	My 95 yo uncle was pressured by his kids to get the Covid vaccine, but he didn't want it. Still sharp as a tack, no medical problems and still drove! Got the vaccine and four days later he's in the hospital with..... You guessed it.....COVID! 😢 #CovidVaccine
+459	The FDA has approved three #COVID19 vaccines in the United States. Use this infographic to compare the vaccine type, possible side effects, and more. But remember — the best #vaccine is the one that's available to you! https://t.co/jsXsjTiPoc https://t.co/Vne7mxrSdL
+460	@RediTlhabi @BusinessLiveSA @Redi Tlhabi ANC government missed the target at Medupi and khusile power station by 10yrs. With covid 19 vaccines it might as well take the same !!!
+461	A claim that US newspaper @nytimes and German broadcaster @DeutscheWelle have endorsed China's #COVID19 vaccines is viral, alongside a list claiming the top four safest COVID-19 #vaccines in the world are all Chinese-made. The posts are misleading. https://t.co/lBhNo9HQuj
+462	*Tomorrow* Community African Network is hosting an online vaccine information event on 13th March 2-4pm, with speakers from Congolese, Somali, Guinea Bissau, Tigray and East African communities. Breakout rooms will be in several languages. 👉https://t.co/ql42UUfEpb
+463	“I know it's been challenging. One year later and vaccines are no longer a hope, but a reality with three now being administered in San Francisco. @KRON4MKelly reports: https://t.co/49D11VPJ4Y
+464	One of the striking things about the struggle for COVID-19 vaccines for all is the absence of a grassroots, mass movement around it. It may help to revisit the lessons from the struggle for affordable and public access to AIDS drugs in South Africa. https://t.co/LmCwJQWho2
+465	LA County is pushing to get more educators vaccinated. When @duarteusd received an allotment of COVID-19 vaccines from @lapublichealth for their employees and 8 neighboring school districts, we were there to safely administer the vaccine 💙 https://t.co/cB8O9GNJ0j
+466	Stream what you love and help save lives. Purchase a subscription to @discoveryplus between now &amp; April 19 and we'll donate $1 to @UNICEFUSA to help deliver 2 Billion doses of COVID-19 vaccines to global frontline workers and vulnerable populations. &gt;&gt; https://t.co/WbDA5sGX5c https://t.co/4GJMXzFPCo
+467	Dr. Faisal Shuaib, Executive Director, National Primary Health Care Development Agency (NPHCDA) Monday confirmed that COVID -19 vaccines have been deployed and states would start receiving them on Monday. https://t.co/adNTfbnVwK
+468	High Commissioner to the Gambia Mr G V Srinivas answers questions from DJ Mass Sey of GRTS / West Coast Radio Gambia on 7 March 2021 on India-The Gambia bilateral relations and the strengths of India including in Covid-19 vaccines, ICT and agriculture. https://t.co/phKaQOJZsF
+469	Global COVID-19 Experts See Inequitable Distribution and Vaccine Hesitancy as the Key Challenges for Africa in 2021 Read more: https://t.co/Ig1xiT1QB2 @broadreachinfo #Africa #COVID19 #Coronavirus #CoronavirusOutbreak #Health #Vaccination #COVIDvaccine https://t.co/796aFmT2Rg
+470	George is aiming to crochet 10km of yarn between 1 March and 30 April to raise money for #COVAX, which is working to provide equitable worldwide access to COVID-19 vaccines. Read her thread about why this is important. Fundraising links in the thread. 🧶 https://t.co/7CulR5DtJr
+471	St. Louis County announced Missouri’s first known case of COVID-19 on March 7, 2020. Vaccines and falling case numbers now give hope, in the face of a second round of uncertainties. https://t.co/OhKiwfaxC5
+472	#China opposes #vaccine nationalism and rejects any vaccine divide or attempts to politicize cooperation on COVID-19 vaccines, #Chinese State Councilor and Foreign Minister Wang Yi said on Sunday during a virtual press conference at the Great Hall of the People in #Beijing. https://t.co/yeviyAN91j
+473	This tragic situation is repeating itself around the country and needs to change now. #healthequity #SDOH In Palm Beach, Covid-19 vaccines intended for rural #Black communities are instead going to wealthy white Floridians https://t.co/HyUFa27Xth by @OliviaGoldhill via @statnews https://t.co/j86pIcgAVg
+474	Fake #CovidVaccine. Now out there. INTERPOL - Fake COVID vaccine distribution network dismantled after INTERPOL alert https://t.co/CApqhv9DO2
+475	Dave “warned a state House Health committee in late January that COVID-19 vaccines couldn't be trusted. He said they were especially risky for several communities, including the elderly and people of color.” #LaRockLies again. https://t.co/HmOsJT4SVr
+476	Safe and effective COVID-19 vaccines will be easily available to ALL New Yorkers at no cost, likely by mid-2021. Learn more about the vaccine from @nycHealthy: https://t.co/OTonkw7u2k https://t.co/tv2e8x3Hxw
+477	The Covid-19 vaccine will help protect you and your loved ones against the virus, and so it is important we offer it to those most at risk first #CovidVaccine #CWPT https://t.co/5uJ8hR8W31
+478	World renowned vaccine maker, warns that the vaccines are making the covid virus stronger. And the countries with the most vaccinated people will see huge spikes in covid infections with stronger variants within months. https://t.co/FnhIZepSGT
+479	Thursday, March 18th at 6pm @DrJustinMTurner of Turner Care and I will be hosting a virtual Q&amp;A and discussion on COVID-19 vaccines. This event will take place on Thursday, March 18, 2021, 6:00 - 6:45 p.m. CST. Visit https://t.co/cIMa6yfu3G to register for this free event. https://t.co/2Exp5MHTLE

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	Utah family says it lost a 39-year-old Kassidi Lyn Kurill from apparent complications after 2nd COVID-19 vaccination. We talked with her family, who says they aren’t against vaccines, and the medical examiner about how a cause of death is determined, tonight on 2News at 10 p.m. https://t.co/yAiW1tjLRw
+601	@KLB_ang @cvangeyn @marylouisemcgi7 We should be free to travel without vaccines, especially when they are completely unnecessary and not a bargaining chip for our freedom. As for people in their thirties, they are more likely to die in a car accident than from COVID-19, assuming it even exists.
+602	The Provincial Incident Management Team and Negros Occidental COVID-19 Vaccination Task Force receive the 1,600 doses of Sinovac vaccines for storage at the Provincial Health Office cold room today, March 10. 📷 Provincial Capitol PIO | via Glazyl Masculino https://t.co/8ECFqG6JUH
+603	Thanks to Governor Cuomo's tearing up of COVID vaccination plans to micromanage NYC and reverse his back to back previous failures, today 66% of our vaccines are not being used due to systemic distribution failures. Some have expired. https://t.co/gahkRnaWaT
+604	UNITED STATES: First dose for possible coronavirus vaccine to be trialled today in Seattle
+605	‼️ Azar refuses to promise a coronavirus vaccine will be affordable for anyone: "We would want to ensure that we work to make it affordable, but we can't control that price, because we need the private sector to invest.. Price controls won't get us there."
+606	The MISD Health Services Team has been working tirelessly with the McKinney Fire Dept to administer COVID vaccines to the teachers and staff in MISD. This joint venture began back in Jan., and as of today, we have vaccinated everyone in the district who has requested a vaccine! https://t.co/nxhj6PCTNS
+607	Government - “Covid-19 mRNA vaccines are safe”. Translation - “We will never admit, or allow the media to report, there’s a connection between death or adverse reaction and the vaccines”
+608	Ok listen. A new COVID-19 strain (B.1.526) originated in Manhattan in Feb “eludes some of the protection of antibodies” &amp; the vaccines We don’t want things to get worse so wear masks above your nose, keep physical distance from ppl, AVOID GROUPS, and get any vaccine if you can https://t.co/tTftCb1VIK
+609	Sonali Kolhatkar: Pfizer and Moderna have earned near-mythical status for the life-saving vaccines, but... these private entities were paid handsomely to do their job and cannot be allowed to hold humanity hostage over their profits. https://t.co/2FR3yBKfhS #COVID19
+610	#FOX to cause PANDEMIC #FoxNews is spreading #Trump's #CORONAVIRUS LIES faster than the disease itself Steer clear of MAGA hats: They're being told the whole thing is a HOAX, and their leader's got it under control, go to work #MOG☘️ #Christians #MAGA https://t.co/RmrDtoL4bE
+611	@Angry_Staffer Fixed it: Hope everyone remembers when they're getting the Covid-19 (referred to as Trump Virus) Vaccine, that when #TheFormerGuy was President, he failed the country and allowed 500,000 + deaths. Biden came in and saved the day....got us vaccines and COVID relief. Remember
+612	The World Trade Organization and Doctors Without Borders call for @ScottMorrisonMP to stop obstructing the Intellectual Property waver and #COVID19 medical products. Saying it is preventing poorer countries having access to vaccines and treatments #auspol https://t.co/6Mw75NdPwy
+613	Good news! 6 million doses of COVID-19 vaccines were expected by the end of March. With accelerated Pfizer vaccine deliveries and additional 500,000 Astrazeneca doses delivered this week, Canada will now get 8 million doses by the end of this month. https://t.co/VMAytFof0g
+614	Biden said deploying an additional 4,000 active-duty troops to support vaccination efforts and allowing more people — such as medical students, veterinarians and dentists — to deliver shots would help the vaccine effort. https://t.co/fFscHArLKN
+615	New studies of a coronavirus variant that devastated a Brazilian city show that it can reinfect people who have already had Covid-19, and may make vaccines weaker. https://t.co/MNWMLU559h
+616	JJ vaccine does what Moderna and Pfizer do - it keeps you protected from severe Covid and prevents hospitalization and death. When my patients ask me which vaccine to take, trust that I’ll be telling them to take any of the three vaccines they can get.
+617	'Epic fail': seniors shiver for more than 2 hours waiting for COVID-19 vaccines in Newmarket! How awful! Paramedics can go to their homes and deliver the vaccine. We can do better than this! https://t.co/vVQJBTWjez
+618	President Joe Biden will direct states to make all adults eligible for COVID-19 vaccines by May 1 and declare that Americans should expect to be able to host neighborhood parties come the July 4 holiday. https://t.co/m5dcMEejyb
+619	@Scott_Maxwell It’s not just Florida Gov. DeSantis using COVID-19 vaccines for millionaires for political contributions &amp; votes: In Argentina, the Fernandez government and their party loyalists are facing similar allegations https://t.co/RonXe9347r
+620	Texas, NY, &amp; Cali are the 3 largest states. Cuomo &amp; Newsom are aggressive, *knowing* what's to come. In Texas, Greg Abbott is “fake coughing” to a reporter's questions, and Sen Cornyn is tweeting Corona beer pics 2 weeks from now my state will be a dystopian rodeo. Book it.
+621	As of March 8, COVID-19 vaccines distributed on Navajo Nation is 187,560. Total administered shots is 141,530, and 52,324 people have received both shots.
+622	All new cases of #COVID19 in PH are Filipinos Here are information on all 33 cases | via @raphbosano https://t.co/UlxJoWCShY
+623	JUST IN: Russia's president Putin has announced the registration of the first coronavirus vaccine
+624	This is a global pandemic. It requires a global response. Our best chance of all staying safe is to ensure COVID-19 vaccines, tests and treatment are available for everyone, everywhere. #AFairShot https://t.co/9t35cdem1M https://t.co/PobA4mdwwy
+625	Tokyo, Osaka and Kanagawa prefectures will receive enough vaccines for around 2,000 people, with others scheduled to receive supplies for 1,000 individuals in the first batch. https://t.co/72q9VrPpYy
+626	@delfinut #Covaxin is better and more complete than other #Vaccines, including Covidsheild. With Covaxin you have a multifunctional vaccine that also protects against the #Covid Mutations. You get the complete package.💪 The final Results of Phase-3 will be even better.🌎 $OCGN
+627	As of 3/7, we've offered vaccination opportunities to 36,453 unique employees. All CPS staff are now eligible to receive COVID-19 vaccines. For more information, visit https://t.co/69sr9qqX3w. https://t.co/L9nh9tWUDZ
+628	ICE pretended to be doctors. There are no fucking words. Please donate if you can
+629	GOP blocking coronavirus bill — because it limits how much drugmakers can charge for a vaccine https://t.co/eIkvU7QquQ
+630	The Palestinian org. @AMANCoalition has accused the PA of playing favorites with the Covid vaccine, releasing a poster which simply reads Wasta kills. Wasta is an Arabic term for “nepotism and abuse of power and positions in obtaining vaccines.” https://t.co/KpIcOjlPiS
+631	The billboard read, Thank You India and PM Narendra Modi for providing COVID vaccines to Canada. Long Live Canada-India Friendship. Hindu Forum, Canada. https://t.co/ILnZ53XLdj
+632	In partnership with CDC, Walmart and Sam’s Club pharmacies can now accept and administer federal allocations of the COVID-19 vaccine through the U.S. Federal Retail Pharmacy Program announced earlier today. https://t.co/KSvh3aQJqQ https://t.co/eZVmVOYCpm
+633	PHOTOS: Health professionals and those with health conditions receive COVID-19 vaccines at the National Laboratory, in Kigali. https://t.co/rVvWSjSZlM
+634	LOOK: Health Secretary Francisco Duque III visits the UST Hospital to inspect its Covid-19 vaccination drive and administer vaccines to some medical workers. (Photos from PTV) https://t.co/6nrVgRVn86
+635	From last September. Common folk can clearly see that there is NO STATE OF EMERGENCY anymore. There are vaccines, therapeutics, empty hospitals, declining cases &amp; deaths &amp; natural immunity. WTF is going on-Dewine doesn't want to lose his power. GET HIM OUT https://t.co/a0JbGQPAeA
+636	I’m coming to believe Justin Trudeau is an anti-vaxxer: He did a horrid job getting vaccines for Canadians, he didn’t support vaccine manufacturing, and now he’s trash talking a G-7 plan for vaccine passports. Sounds 100% like an anti-vaxxer. https://t.co/HluyogMcEB
+637	Dr. Nikka Hao of the DOH Disease Prevention and Control Bureau has also presented the country's Prioritization Framework for the rollout of COvid-19 Vaccines, saying that we have adopted the recommendation WHO. https://t.co/JIZF0qG1wb
+638	CIMAS is leading a private sector drive to import COVID-19 vaccines, says the initiative includes banks, mines and industry and is now at “an advanced stage.” Private vaccine procurement to go through govt, which has so far registered Sinopharm, Sinovac, Sputnik V and COVAXIN. https://t.co/hPoDJ4BFHk
+639	In the #geopolitical #Commission's backyard: #SER to establish 1st #European production facility for #Sinopharm #Covid19 vaccines – co-financed by #CHN and #UAE!! cc @tkarasik @tysonbarker @TGehrke_ @vtchakarova @ruehlig @MWigell @MoehringJohanna https://t.co/iImt7cbndO

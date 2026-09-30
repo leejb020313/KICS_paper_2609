@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	The Senate just passed COVID relief. ✔️ $1,400 relief checks. ✔️ Funding for vaccines. ✔️ Money to reopen schools. ✔️ Food, unemployment, and rental assistance. ✔️ Cutting child poverty in half. ✔️ Help for small businesses. We must end this pandemic. And help is on the way.
+1	All seven COVID-19 vaccines that have completed large efficacy clinical trials are very effective in preventing severe COVID. Not one vaccinated person has gotten sick enough to require hospitalization. Not a single vaccinated person has died of COVID-19. https://t.co/zBwyL880BZ
+2	In India the vaccination program is progressing well with two indigenous vaccines Covishield and Covaxin. Sat-Bhakti given by @SaintRampalJiM is a well tested vaccine. #COVID19Vaccine #COVID19 #COVID_19 #COVIDVaccine https://t.co/bpHvMCxfOj
+3	Vaccines are here. But it's important that we continue to stay six feet away from others, wear masks, and avoid crowds to help slow the spread of COVID-19.
+4	McDonald's Philippines has purchased close to 100,000 doses of COVID-19 vaccines from AstraZeneca, as the fast-food chain operator said it plans to inoculate its employees for free. https://t.co/zG8pwZ8c1G
+5	The latest on vaccines: We received almost a million doses of COVID-19 vaccines last week - and we’re getting another million this week. Before the end of the month, we’ll have received a total of 8 million doses of COVID-19 vaccines for people across the country.
+6	#COVID19 vaccines are safe for people living with HIV! Find out about COVID-19 vaccines and HIV here 👇🏾
+7	Update on vaccines: @GovCanHealth has approved Janssen’s COVID-19 vaccine. This is the fourth vaccine to be deemed safe and effective by Canada’s health experts - and with millions of doses already secured, we’re one step closer to defeating this virus.
+8	We just passed a COVID-19 relief bill that will provide immediate support to Arizona working families and small businesses, help reopen schools safely, get vaccines into peoples’ arms, and get our economy back on track. https://t.co/tPGJ8MC5Td
+9	Federally funded health clinics are getting COVID vaccines to more people of color. "These patients have built up trust with their doctor and nurses over years. They are now listening to the people they trust most to give them advice about the vaccine." https://t.co/Xfj2eBah2G
+10	When every country was focusing to encash Covid Crises and was selling Medical Equipments, Masks, PPE Kits etc, India gave Covid Vaccines 'Free of Cost' to all neighboring counties. We are now set to fulfill 70% of world's Covid Vaccine needs. Proud To Born As An Indian 🇮🇳
+11	When you vaccinate basically the entire population, anything that happens to anyone will be called vaccine related - and it turns out to be nothing of the sort. The Covid vaccines are pretty much the safest intervention out there. Get yours as soon as you can. #VaccinesWork
+12	@rahulkanwal India Today and the BJP falsely claimed that India is providing COVID vaccines for the lowest cost to its citizens. However, in reality, India is the only country in the chart that has not pledged to provide free vaccination. https://t.co/tjKRv3gYvd
+13	Ginkgo Bioworks is working on optimizing the manufacturing process for RNA – the key ingredient in vaccines produced by Pfizer/BioNtech and Moderna. RNA instructs cells to produce proteins that trigger the body to fight the coronavirus. https://t.co/w7tcvlUjpz https://t.co/ZKpIY8Bwb8
+14	Covid-19 might be ending, but if Nigeria is not prepared for the next Pandemic.. We will beg for Vaccines again and the world might not be so generous. The fact intern Doctors have not been paid in 3 months is proof Nigeria has learnt nothing..
+15	First Week of COVID Experimental Vaccines in South Korea: 7 DEAD and More than 2,800 Injured https://t.co/MdwY1qD0yd https://t.co/Yo3ycHRH4D
+16	Ghana and Cote d'Ivoire have started vaccinating citizens against COVID-19. They join Guinea, Seychelles, Morocco, Egypt, Mauritius, Algeria, Rwanda, South Africa, Zimbabwe, Senegal on the list of African countries who have launched Coronavirus vaccines.
+17	Israel has provided thousands of vaccines to the Palestinians. Spreading disinformation otherwise about these facts shows how normalized antisemitism has become. Combatting this trend will be one of the great challenges of our time. @Aaron_Kliegman https://t.co/fn61KIqV1y
+18	I was pleased to announce the opening of a new vaccination site at Crane Lakes in Volusia County which will offer 4,000 Johnson &amp; Johnson vaccines over the next four days to Floridians 65 and older as a continuation of our #SeniorsFirst strategy. https://t.co/vcSgmDeJ3U https://t.co/3cuYQuvRon
+19	Touch down🛬! 1.02 million life-saving COVID-19 vaccine doses arrived safely in Kenya early this morning. UNICEF procured and delivered these as part of #COVAX, a global initiative to ensure that vaccines are available to ALL countries, no matter their income. @MOH_Kenya https://t.co/hItw7tHoi9
+20	New data from a large study of elderly U.K. adults provided further evidence that the Pfizer and AstraZeneca vaccines are highly effective against Covid-19 after just one dose https://t.co/frbBo6tGEC
+21	India started external supplies of Made-in-India vaccines on January 20, the minister said. Supplies are being undertaken in three ways -- grant, commercial sales by the manufacturers and through vaccine alliance GAVI's COVAX facility https://t.co/WRq7B7enzP
+22	The COVID-19 vaccines are safe. I’ve had mine, my mum’s had hers, and when it’s your turn, I urge you to have yours too. https://t.co/ZG1X1UEKnT
+23	LA County chief science officer Dr. Paul Simon: "All three vaccines were highly effective in preventing hospitalization and death due to COVID ... Differences in reported vaccine efficacy are insignificant relative to the" big benefits.
+24	The COVID-19 vaccine was only made available to the public after meeting strict safety and effectiveness criteria. Vaccines work by teaching your immune system how to defend itself against attack from the virus. Read more: https://t.co/MPCevFV6SM https://t.co/ryk02jSGOR
+25	The first round of #COVAX vaccines has arrived in #SriLanka! This is an important step in our goal to ensure equitable and fair distribution of #COVID19 #vaccines globally. Read more here: https://t.co/Itqodh6hyq #COVID19LK #COVID19SL #SriLanka #lka @GotabayaR @PresRajapaksa https://t.co/yTc8yJqz9j
+26	All vaccines are extensively tested before they are introduced, and this vaccine is no exception. Dr Mary Ramsay, head of immunisation at @PHE_uk, talks about the safety standards for the #COVID19 vaccine. Find out more: ▶️ https://t.co/PKVgX1hLvB https://t.co/DeokgTaBXG
+27	A big thank you to all partners, my technical teams and the media for making this day come to reality. It is indeed a happy day for me as we received the AstraZeneca COVID-19 Vaccines. Vaccination against COVID-19 will kick off on 10 March 2021. 📷: @bamulanzeki https://t.co/DQiEpf0o2i
+28	Through a clinical trial, our Dr. Van Morris and Dr. Scott Kopetz are testing personalized mRNA vaccines for colorectal cancer: https://t.co/xTQs03gkrk @VanMorrisMD @skopetz #ColorectalCancer #EndCancer
+29	New Jersey currently ranks #5 nationwide in percentage of #COVID19 vaccines administered, according to @BeckersHR. We’re getting shots into arms as quickly and equitably as possible, and won’t stop until everyone who wants to be vaccinated is vaccinated. https://t.co/lyai0SCImz
+30	Louisiana just expanded the Covid vaccine eligibility to include people 16+ with a health condition! I qualify as a smoker and got the one dose J&amp;J vaccine from a Walmart this morning. In two weeks I can 100% safely see other fully vaccinated people.. maskless! GET YOUR VACCINES! https://t.co/OPYGnbFOtz
+31	Jen Psaki tells @nancycordes the Biden administration is planning for an oversupply of COVID vaccines because they still don't know which vaccine will be most effective on kids, as well as the impact of variants or the need for booster shots https://t.co/yKcu17BfYn https://t.co/t33QFTfOHc
+32	Alabama will begin offering COVID-19 vaccines to anyone age 55 and older, and anyone over 16 with certain health conditions on March 22. https://t.co/1BPEjKWimx https://t.co/GDfREjR2RQ
+33	Billions of people at risk of COVID-19 are unlikely to receive a single dose of the life-saving vaccines this year. Our global campaign calling for universal access to #COVID19 vaccines launches today. Find out more... #PeoplesVaccine #AFairShot https://t.co/JphCtpRjbT
+34	As of March 9, Alaska is the first state in the U.S. to open COVID-19 vaccines to anyone 16 and older, regardless of their health status or occupation. In a tweet, Gov. Mike Dunleavy said the decision 'marks a significant step forward in our efforts to put the virus behind us.’ https://t.co/se5Y9L3VKq
+35	We're pressing the federal government to get us COVID-19 vaccines so that we can get as many Albertans protected, as soon as possible. Alberta is preparing to have everyone 18+ receive a 1st COVID-19 vaccine dose by the end of June, if and only if, we receive the supply we need. https://t.co/LZAxg4LpMi
+36	Life-saving vaccines will now be available for essential workers who have been on the front lines of this pandemic. Supply remains limited. City sites will provide second doses this week, and a small number of first dose appointments. More info: https://t.co/Hr5BGEq2Ul. https://t.co/OZuvZVQ8to
+37	Unlike mRNA vaccines, which must be stored at -20 degrees C, adenovirus vaccines can be refrigerated for up to three months at 36–46 degrees F. That means it can be distributed more easily in doctor’s offices, pharmacies, clinics, or anywhere else. https://t.co/uLjAqopvbx
+38	Promising news: COVID-19 vaccines are arriving, through COVAX, in countries @RESCUEorg operates in—DRC, Nigeria, Colombia, Kenya and others on the way. Hopeful steps toward driving equitable access to the vaccine and ending the pandemic. No one is safe until everyone is safe.
+39	#COVAX has notified 3⃣6⃣ countries in the Americas 🌎 of the first #COVID19 vaccine allocations. WHO is now helping these countries receive &amp; deploy the vaccines. More info 👉https://t.co/xJ26fUKu44 #WHOImpact https://t.co/08FL82Ijpz

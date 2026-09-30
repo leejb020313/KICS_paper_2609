@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	Unusual swelling caused by Covid-19 vaccines is being picked up on routine mammograms and other scans, radiologists say. Here's what you can do to avoid unnecessary worries about breast and other forms of cancer when you get your vaccination. https://t.co/BxXbkaAaib
+401	More data pointing to #HCQ being effective prophylaxis against #COVID19. https://t.co/btHBX728sH
+402	@simsy1977 mRNA vaccine animal trials in 2012 resulted in immune cytokine storm response when they were then exposed to wild cold virus 🦠 again. They became very sick and died. These ‘Covid’ mRNA vaccines were rushed through ..will we be seeing people getting very sick next cold season
+403	Thanks to vaccines, for the most recent week of data available there were only 22 new resident COVID-19 infections and 31 staff infections. https://t.co/geHkhHAWd7
+404	A new survey found high levels of vaccine hesitancy and mistrust of the COVID-19 vaccines among Black Americans, who cited a distrust of the government's motives and transparency regarding COVID-19 and systemic racism. Learn more: https://t.co/HTY24T2Pjw https://t.co/KLHg5GRhAZ
+405	The UK's medicine regulator said on Thursday that Britons should keep on getting their COVID-19 vaccines, including the shot developed by Oxford and AstraZeneca, after Denmark and some other countries restricted their use of it. https://t.co/4ZYMKIzo27
+406	I'm a nurse who works &gt; 50 hr/wk with our most vulnerable. I cannot get tested None of our caregivers can be tested My patients cannot get tested My patients' families cannot get tested My family members cannot be tested. And noone I know can afford to miss work #GasMaskGaetz https://t.co/7Njm0QAD4t
+407	1. The flu vaccine is only semi-effective. It helps reduce, but does not eliminate the flu. COVID vaccines are more effective. 2. If everyone took it, it would reduce cases significantly. 3. COVID is much more contagious, and 15-25x as deadly as the flu. https://t.co/ehLpEHX4cc
+408	At Yankee Stadium, New Yorkers are waiting for vaccines in the middle of the night — and happy about it https://t.co/dAikmtPV9l
+409	The rollout of the Covid-19 vaccines by India in collaboration with leading global institutions has rescued the world from the deadly coronavirus and the contributions by the country must not be underestimated, a top American scientist has said. https://t.co/t5nLbI4RLy
+410	UNITED STATES: Coronavirus vaccine, backed by the Gates Foundation and other organisations, is entering Phase One clinical human testing.
+411	News is that since January, classified security briefings told Trump that a pandemic was coming. Trump did nothing, told us it was a “Democrat Hoax,” and that the fifteen cases would soon be none. Thread. #coronavirus #TrumpPandemic #TrumpLiesPeopleDie https://t.co/uUgpRnUZCX
+412	Women's History Spotlight: Dr. Kizzmekia Corbett, Lead Scientist of Coronavirus Vaccine Program at National Institute of Health (NIH) Dr. Corbett worked to develop Moderna’s #COVID-19 vaccine. She worked on vaccines for coronaviridae since 2014, studying SARS and MERS. #WHM https://t.co/Yrwim5akXt
+413	The US FDA has still not approved the #AstraZeneca vaccine, citing a continued lack of adequate efficacy data. But the US government is still indicating that the 300 million AZ vaccines to be produced on US territory can only be used on Americans. https://t.co/yC1KoAd2S7
+414	@EMA_News Choose not to respond to this letter from February 18th, and now saying nothing wrong with Astrazeneca vaccines. They will be severly punished. If the truth gets out there is nowhere to hide. https://t.co/lHXl0WK8xO
+415	Nigeria Covid-19 vaccine update. During first wave C-19 in Nigeria, some politicians hoarded palliatives meant for the poor and distributed same as birthday souvenirs. Now we are waiting patiently to see the politician that will hoard and distribute c-19 vaccines as souvenirs
+416	#EXO members #Chanyeol, #Lay, #Suho and #Kai have donated a combined 170 million won to Korea Disaster Relief Association Hope Bridge to help fight the #coronavirus outbreak. #COVID19 @weareoneEXO @layzhang #ì°¬ì´ #ZhangYixing #ìí¸ #ìì
+417	The CDC's VAERS database list 236 vaccines. The 2 COVID vaccines (Moderna and Pfizer) rank 3 and 4 in number of deaths reported after getting the vaccine. https://t.co/Oz6VpvcH2r Only particular polio and pneumonia vaccines have more deaths. And not that many more. https://t.co/kAriQ1E5Uj
+418	COVID-19: @ifrc warns of “deadly gap” in global efforts to distribute vaccines: “Our message today is simple: we need urgent funding so that we can continue and expand vaccination efforts into all communities. " @Francescorocca https://t.co/WtxpfoHIs8
+419	Never buy #COVID19 vaccines online, by phone or from unauthorized sources. These scams can result in: ➡️ loss of money ➡️ identity theft ➡️ the purchase of an unsafe and ineffective product Protect yourself and learn more about COVID-19 vaccines: https://t.co/O8OPUa3bmZ https://t.co/gj0B9VJ9kp
+420	Despite being essential, agriculture workers are still not eligible for COVID-19 vaccines. @JuliaLeBlancNC9 speaks with industry leaders about it. #LocalSYR https://t.co/FGZvzMrC3b
+421	We cannot let being rich become a prerequisite for getting the COVID vaccine. This is exactly why @RepDelBene and I called on the CDC to ban VIP access to vaccines. https://t.co/p2A7BoLNyG
+422	Same people used in multiple photos for corona claims in different cities across the world &gt;&gt;33 is a prevalent number apparently. https://t.co/54V77XEfBB
+423	Took my first dose of the COVID Vaccine today at V.R.Multi Speciality Hospital, Kurnool. Kudos to our scientists and doctors for their efforts. They developed Vaccines in shortest possible time. Also, appeal everyone to take Vaccine. Lets make #CoronaFreeIndia https://t.co/bgpM47KAKK
+424	Find out how two individuals who overcame COVID-19 are combatting misconceptions around the disease and increasing awareness of vaccines through @MUExtension’s Rural Vaccination Action. Group. https://t.co/lHlxX7w4tP #ExtendMU #LiveHealthyMO
+425	Blood clots from one the COVID-19 vaccines - Roll out suspended in certain northern European countries. I think I’m gonna wait before anyone jabs me with vaccine - And I’m happy to have a vaccine because I want to go to Italy
+426	All "covid" vaccines will continue to cause adverse effects immediately soon after or sometime in the near future post-vaccination and in some cases kill which has already been proven to have taken place. There was no need for a vaccine/s for something not proven to exist.
+427	Netanyahu focused on sending vaccines to friendly dictators around the world &amp; refused to help vaccinating the West Bank. Now a wave of covid-19 there is crossing over in to Israel and jeopardizing his vaccination-election strategy. My @haaretzcom analysis https://t.co/CUIteSmYEz
+428	#HCPs: CDC issued interim recommendations for the use of the Janssen #COVID19 vaccine (Johnson &amp; Johnson) in the U.S. for people 18 and older. Read these considerations and those for other COVID-19 vaccines: https://t.co/fEXOVu1QyW https://t.co/L2nyK2zkUr
+429	@fdaghana update on COVID-19 vaccines •Do not purchase COVID-19 vaccines online. •Fake COVID-19 vaccines seized in South Africa. •Ghana has approved 2 COVID-19 vaccines (Sputnik V and Oxford-AstraZeneca / Covishield). More here: https://t.co/broJ4SRgwY
+430	INDIA will supply made-in-India Covid-19 vaccines to Pakistan through the Covax facility, a Global Alliance for supplying Vaccines across the World. Pakistan signed up for the United Nation’s COVAX Facility, aimed at equitable access to safe and effective COVID-19 vaccines.
+431	Despite being hospitalized and killed at a disproportionately higher rate by the coronavirus, according to an analysis by Kaiser Health News, Black Americans are getting COVID-19 vaccines at a much lower rate than white Americans. https://t.co/XomYUhFNR3
+432	Charities slam rich nations for blocking efforts to waive patents for Covid-19 vaccines, saying this would prolong the pandemic for years in poorer nations and push millions across the continent deeper into poverty... https://t.co/fHHW9PxNml
+433	Hat trick of COVID vaccine consignments from #India for health and safety of Sri Lankans! 1st consignment of India-made vaccines as gift helped #lka begin vaccination in January, much ahead of plans(1/5) https://t.co/E2yDqtRe9Z
+434	Coronavirus vaccine approved for use in Russia, President Vladimir Putin announces Experts have raised concerns, suggesting researchers may be cutting corners https://t.co/9s1tn9pdln
+435	@dino_melaye ✅ The results showed that four weeks after the ‘FIRST DOSES’ of the Pfizer BioNTech and Oxford AstraZeneca vaccines were administered the risk of hospitalisation from COVID-19 fell by up to 85% (95% confidence interval 76 to 91) and 94% (95% CI 73 to 99) https://t.co/1WyZ0QclqA https://t.co/CbymZRRYDJ
+436	The UK, EU and USA are blocking proposals at the @wto to get the vaccine quickly rolled out to the world poorest countries. We need to put peoples lives before profit! That’s why CAFOD are joining the movement for a people’s vaccine 💉 #PeoplesVaccine https://t.co/N1VsrRhW4Y https://t.co/xvVIovSKq7
+437	Operation Warp Speed leaders waited more than two months to approve a plan to distribute and administer Covid-19 vaccines proposed by U.S. health officials, administration officials said https://t.co/pwcoXO17IR
+438	FDA warns Ghanaians against sale and purchase of COVID-19 vaccines online https://t.co/QcIsDJz6Q2 https://t.co/Wz451q3rda
+439	Pakistan requested for Covid Vaccine under Global Alliance for Vaccines and Immunization (GAVI) program, India like any father agreed to give medicine to kid without caring how worthless he is. Just Indian culture, nothing else.

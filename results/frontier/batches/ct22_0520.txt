@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	Three more Iranian officials reportedly dead from #COVID19. Either being a politician makes you extra-susceptible to coronavirus, or the prevalence of the disease is orders of magnitude higher than the government admits: https://t.co/OJGsWY74F1
+521	WARNING ⚠️: This man is the KING of the collusion hoax empire. Trust nothing he says or writes. He’s pure disinformation. 👇🏻👇🏻👇🏻
+522	Just 1 case of Corona Virus in India and people are crazy for masks!! Daily 400 people die in road crashes & still no craze for HelmetsThinking face #safetysaves be it virus or road crashes!
+523	President @realDonaldTrump made a commitment to donate his salary while in office. Honoring that promise and to further protect the American people, he is donating his 2019 Q4 salary to @HHSGov to support the efforts being undertaken to confront, contain, and combat #Coronavirus.
+524	Experts across the world have advised to reduce mass gatherings to avoid the spread of COVID-19 Novel Coronavirus. Hence, this year I have decided not to participate in any Holi Milan programme.
+525	The new #coronavirus has killed about 3.4% of confirmed cases globally - making it deadlier than the flu, but still containable. The seasonal flu's fatality rate is below 1% https://aje.io/gysap
+526	Just spoke with ER doc who say he's seeing cases he's 99% sure are #coronavirus. Negative for flu, recent travel, work in airports. Not allowed to test. Patients return to work because they can't take time off w/out a firm diagnosis. Other ER docs seeing the same thing.
+527	A State of Emergency has been declared for LA City and County due to confirmed cases of Coronavirus. Angelenos need to be prepared, but not panicked. Listen to the advice of experts. Make sure you're following @CDCgov and @lapublichealth for the latest info and recommendations. <link>
+528	Amazing! What South Korea is doing is really bending their #Covid19 epidemic curve. Only 131 new cases today, versus 909 on Feb. 29. It's not just China. This clearly can be done. https://t.co/sueAO9XLF7 https://t.co/Bw7WX1s9nM
+529	Hospital Sungai Buloh will soon to be COVID-19 centre. May this effort be a paradigm for a better precaution to all Malaysians. We're arranging beds 100% for COVID-19 patients, &amp; re-distributing in-House patients to other Tertiary Hospital/District Hosp for continuation of care.
+530	Covid-19 hit during cold/flu season. Wondering if you might have the virus? This chart on #covid19 v. cold v. flu is helpful: https://t.co/iDk6eG0cm5
+531	Bigoted statements which spread misinformation and blame Asians and the Asian American community for #coronavirus make us all less safe. @GOPLeader must delete this tweet and apologize immediately. https://t.co/twzCcVAWDH
+532	THREAD: On #Coronavirus, we may be entering a period of accelerating cases. The country could look very different over next two weeks. Weâll get through this, but need to take steps now to limit the scope and impact of virus. There are things we can do now to help ourselves. 1/n
+533	An antiviral spray against novel #coronavirus has developed in Shanghai Public Health Clinical Center, which can be put into throat as shield from virus. The spray can greatly help protect front-line medical staff, yet mass-production for public use is not available for now. https://t.co/bmRzCssCY5
+534	EXCLUSIVE Nadine Dorries, a health minister, has become first MP to be diagnosed with coronavirus She has been in Westminster for past week, met hundreds of people, and attended a No 10 reception hosted by Boris Johnson on Thursday https://t.co/3seuE2NGYE
+535	Four days ago @realDonaldTrump said he âstoppedâ the #coronavirus &amp; âclosed it down.â As of tonight, there are over 1,000 cases in America with at least 31 deaths. The virus has now spread to 37 states. And we still lack sufficient testing. #FactsMatter https://t.co/HE1xjCRj66
+536	To my dear students: Due to confirmed case of COVID-19 virus in Rizal, there will be no more research defense however you need to pass the manuscript on March 20. Stay at home and work individually. P.S. your life is more precious than your grades as a teacher I will do my part.
+537	How did @realDonaldTrump fail to contain #coronavirus? 1. By focusing on China, he failed to stop the virus coming in from other countries; 2. By focusing on foreign nationals, he failed to stop virus carried by US travelers; 3. By not testing, he let the virus spread undetected. https://t.co/XzB9vXHiQv
+538	BREAKTHROUGH: Chloroquine phosphate -- an old anti-malaria drug -- has shown apparent efficacy in treatment of COVID-19 associated pneumonia in clinical studies. Chloroquine provides both anti-viral and anti-inflammatory benefits to patients
+539	The Executive Office for Immigration Review, which falls under the Department of Justice, told all judges and staff members in an email Monday that all coronavirus posters, which explain in English and Spanish how to prevent catching and spreading the virus, had to be removed. https://t.co/nd7agSok7p
+540	Umm seems like maybe you should include this part in your tweet instead of contributing to mass hysteria âBergen County man with several underlying medical conditions, including emphysema, diabetes + hypertension,is NJâs first coronavirus death, state officials said Tuesday.â https://t.co/s8nJ5Uj3Ge
+541	Today's #coronavirus recap: -110,029 #COVID19 cases globally &amp; 3,817 deaths ð -93% of cases in ð¨ð³ ð®ð¹ ð°ð· ð®ð· -All of Italy on lockdown -In China, 70% of cases recovered -"Countries w/ community transmission should consider closing schools, cancelling gatherings," -@DrTedros
+542	BREAKING: All Italy is locked down, PM Conte has just announced. Everyone must remain at home. Nationwide lockdown. #COVID19
+543	Department of Health has confirmed to Sky News that health minister Nadine Dorries has tested positive for covid-19
+544	#Coronavirus is real. The President took action to contain it over a month ago. The hoax is the media’s fear-mongering for clicks and the Dems’ wishful thinking for an economic crash. Still, after dozens of fatalities, there is no cure for Spontaneous Clinton Witness Suicide.
+545	But, but...Trump didn’t prepare for the coronavirus...his admin still doesn’t have a clue...we are just not ready to combat a pandemic...Trump ignored the HHS, CDC🤪 #FakeNews WATCH 👇👇 #coronavirus #RepMarkGreen thank you! https://t.co/a1Hj1Mtr7u
+546	Clemson announced 28 student-athletes and staff tested positive for COVID-19 since their return to campus two weeks ago. 21 football players were among the new cases, a source told @ADavidHaleJoint. https://t.co/uTVkQd886d
+547	BREAKING: The Tory government is planning to cut the social distancing rule from 2 metres to 1 metre because they are concerned the Covid-19 death rate is falling too low
+548	I am here at the Trump rally in Tulsa The media is saying “trump supporters” will spread corona There are blm, antifa, and leftist protesters out here not social distancing Will @donlemon report on that too?
+549	Uruguay has had a series of public health successes. And it fits the pattern: places that are guided by and fully support public health have less Covid death and less economic disruption. https://t.co/3c7iDkR1eL
+550	So umm... there’s a COVID-19 exposure log trying to sync with my Bluetooth and Health app, and I definitely did not download or consent to adding the exposure log (contact tracing tool) to my phone. WTF is this? https://t.co/OyfHbxZhP1
+551	COVID-19 is still a threat and we can’t let up on taking precautions every day to stop the spread and protect our families and neighbors. Please keep wearing a face covering when you leave the house, maintaining physical distance from others and washing your hands often.
+552	75% of all COVID-related deaths in Arizona are in the &gt;65 age bracket. https://t.co/90k4fbua8A
+553	A brief reminder: #Covid19 has not gone away. There are still around 5,000 new cases per day in the UK and many thousands more around the world. The UK Government is acting as if it's over and attempting to return to normality. But, normality is a thing of the past. Wake up!
+554	Coronavirus vaccine developed by Oxford University appears safe and trains the immune system, key early trials show https://t.co/vXdDZlqZ2r
+555	BREAKING: The first vaccine tested in the U.S. for the coronavirus boosted volunteers' immune systems as hoped, researchers report. Final study starts this month. https://t.co/NPeK5a4iBP
+556	BREAKING: Oxford coronavirus vaccine is safe and well-tolerated, according to new published study.
+557	....Together we are putting into policy a plan to prevent, detect, treat and create a vaccine against CoronaVirus to save lives in America and the world. America will get it done!
+558	Oxford's coronavirus vaccine is reported to have shown promising results after the team discovered the jab could provide "double protection" against the virus https://t.co/Pdse2yZkP3
+559	They are infected with Communal Virus, which is more serious than Corona Virus. This virus infects &amp; hollows the brain. Unfortunately it has no cure &amp; no vaccine https://t.co/zMlpJtts3b

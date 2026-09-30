@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	More Americans have died of Covid in the last two years than died of AIDS from 1981-2000. And we have a vaccine to stop it. History will look back on this time in utter disbelief that a nation could be this ignorant, and could casually grow accustomed to such vast carnage.
+841	The University of Connecticut is going to fine and block internet access to students that do not get the vaccine. If you do not understand that there is something purely evil involved right now in terms of these vaccines you will never understand. It will NEVER enter my arm. https://t.co/D8zsxtUsaw
+842	COVID can’t read a calendar. Nothing magical will happen on Jan 1st 2021. Vaccines/masks/avoiding crowds will slow it down and ultimately end Our actions will end the pandemic, not time.
+843	NEW—scientists at Walter Reed Army Institute of Research will soon announce that they have developed a vaccine that protects people from COVID-19 and all its variants, even #Omicron, called The ‘Spike Ferritin Nanoparticle COVID-19 vaccine’, or SpFN. 🧵 https://t.co/C140590sPj
+844	BREAKING: Federal judge rules in favor of a Kentucky hospital system’s COVID vaccine mandate, turning down a legal request to end the mandate by anti-vaxxer hospital employees — who will now be fired for putting their patients and coworkers’ lives at risk. RT TO THANK THE JUDGE!
+845	Pfizer isn’t Lamborghini. Sinovac isn’t Proton. Stop being choosy and accept whichever vaccine you get.
+846	Here in Italy people started to share this figure claiming that this is the diagram of the 5G chip that has been inserted in the covid vaccine. In reality it is the electric circuit of a guitar pedal and I believe that putting it in the covid vaccine has been an excellent idea💡 https://t.co/qXKnv7VVly
+847	Calgary: Restaurants and bars are requiring vaccine passports to sit on patios so people are bringing their own food and having picnics on the street. https://t.co/EJdenZtMdD
+848	🧠A vaccine against Alzheimer’s disease could be on the horizon after scientists carried out successful trials in animals. Researchers were able to reverse memory loss in mice and are keen to move quickly to human trials Thread 🧵👇 https://t.co/HDnxvXZJgj https://t.co/yI7wuMSu3K
+849	Polio and smallpox never reached herd immunity. They were eradicated by vaccines.
+850	My 5 year old immuno-suppressed daughter didn't build antibodies to the vaccines. She's a cancer and transplant survivor. Just a bummer. Still, we keep hope. This is why you vaccinate and mask up and take this pandemic seriously. You do it for those who are vulnerable.
+851	The University of California has put me on leave for challenging their vaccine mandate in court. I am a physician and the Director of the Medical Ethics Program at UC Irvine. I describe the details in this post… https://t.co/SZLjW0xvDl
+852	My brother was anti-vaccine. He died on August 31st and his wife passed yesterday, both from COVID. Please vaccinate; please wear a mask.
+853	Texas schools have amassed more than 50,000 confirmed coronavirus student cases in just weeks. More than a dozen school districts have closed temporarily as a result of the disease, and Texas is a leader in child #COVID19 deaths with 59 as of Sept. 3. 🧵 https://t.co/iqvLScg9GC
+854	Emmanuel Macron, Justin Trudeau, and Joe Biden are all in it together. Using fear to force vaccinations and vaccine passports was always the goal. They are evil, totalitarian leaders and I am so glad Western citizens are waking up the madness. Keep going, France! #liberte https://t.co/XLV3diTrJg
+855	BREAKING: A North Carolina police chief is placed on two weeks unpaid leave and six months probation for telling his officers to visit a "self-vaccination" clinic where they could get fake vaccine cards. RT IF YOU THINK HE SHOULD BE FIRED!
+856	It is absolutely true that there is no FDA approved COVID-19 vaccine available in the United States today, &amp; Pfizer has no plans to make one available any time soon. I fact checked the fact checkers, Big Pharma, &amp; the feds &amp; couldn’t believe what I found. https://t.co/yR3BLpApGo
+857	Fact Check: This Moderna /NIH vaccine is literally the one that President @realDonaldTrump partnered with Moderna to create on January 13, 2020... I repeat January 13th, 2020. Just be happy. This is great news for America and for the world! 🇺🇸 https://t.co/Oq9UTwOfet
+858	Yesterday @archiemanners and I convinced anti-vaxxer Piers Corbyn to take £10,000 he thought came from AstraZeneca to stop criticising their vaccine. Except it was monopoly money and we recorded the whole thing. https://t.co/XfW1deStQk
+859	The Biden regime is now threatening Marines with their pensions, tuition assistance, and even access to the G.I. bill if they refuse to take the COVID-19 vaccine. This is a new low and pure medical tyranny.
+860	Please stop saying the vaccine has no drastic side effects. I took two shots and now I’m alive with no excuse to not hangout with friends
+861	BREAKING NEWS: AT&amp;T becomes the largest private company in the U.S. to mandate vaccines for workers, and threatens to fire all employees who defy its deadline. RT IF YOU SUPPORT AT&amp;T’S DECISION TO PROTECT THE LIVES OF ITS EMPLOYEES AND CUSTOMERS!
+862	FANTASTIC NEWS—A potential vaccine for multiple sclerosis is now within sight on the horizon! And it’s an mRNA vaccine by BioNTech, maker of the Pfizer #COVID19 vaccine. Study in mice shows great promise for improving symptoms &amp; stopping MS progression! https://t.co/n9SJ3VhcUT https://t.co/rzboYgPV4k
+863	BREAKING: United Airlines announces it will be firing 600 workers for refusing to obey its vaccine mandate unless they relent and get the shot. RT IF YOU SUPPORT UNITED KEEPING OUR SKIES SAFE!
+864	Social movements flood São Paulo's Paulista Avenue demanding vaccines, food and the immediately impeachment of Brazil's Jair Bolsonaro. https://t.co/u2o5HgOk2U
+865	BREAKING: BBC presenter Lisa Shaw died due to complications from the AstraZeneca Covid vaccine, a coroner has found. The healthy mother of one developed headaches a week after her first dose of the vaccine and suffered blood clots in the brain which ultimately led to her death. https://t.co/RS4jeqxSdw
+866	Governors were told repeatedly by @HHSgov there was a strategic reserve of vaccines, and this week, the American people were told it’d be released to increase supply of vaccine. It appears now that no reserve exists. The Trump admin. must answer immediately for this deception. https://t.co/JJky0NcbPi
+867	Let me get this straight ... 1) 75% of Americans are now vaccinated. 2) COVID cases are up 300% from this time last year when there was no vaccine. - this must be liberal science and math all rolled into one. I guess I’m just too dumb to figure it out.
+868	Joe Biden’s presidency so far: -Gas crisis -Border crisis -Closed schools -Inflation rising -Israel under attack -Crime up in major cities -Taking credit for President Trump’s vaccine efforts Oh and he’s going raise taxes.
+869	Last night, I ran into man who lives in Israel, where they’ve vaccinated almost whole eligible population. I asked if they have “vaccine passports” and he pulled his up on his smartphone. Then he said, “I don’t understand why Americans politicize everything”. Me neither, Eli.
+870	BREAKING: America’s Frontline Doctors has just filed a lawsuit in federal court seeking a temporary restraining order against use of the COVID-19 vaccine in children. AFLDS will protect our civil liberties and uncompromising right to bodily integrity. https://t.co/gtIz25xJZm
+871	At its peak (1952), polio killed 3,145 Americans. After a vaccine became available in 1955, all 50 states passed laws requiring polio vaccination before kids can enter public schools. COVID killed 345,000 Americans in 2020, and has killed 416,000 more so far in 2021.
+872	After a rigorous process, the FDA reaffirmed its findings that the Pfizer COVID-19 vaccine is safe and effective — and gave its full and final approval this week. So please, get vaccinated today and let’s put an end to this pandemic.
+873	I was sad to learn today that my friend &amp; @8VC partner lost his uncle to COVID-19 in India. The pandemic is getting worse there, and they need more vaccines. In honor of his family, I will donate $50 for every re-tweet, up to $125,000 USD, to help with efforts in India. (1/2)
+874	psa: the covid vaccine(s) were never supposed to prevent you from getting covid- you can and still will get covid. the vaccines REDUCE the integrity of the symptoms and HELP you by reducing your chances of DEATH. i swear, some of y’all were born yesterday.
+875	In Greece, antivaxxers have been paying doctors 400 euros to give them shots of bacteriostatic water instead of th #COVID19 vaccine. Except the doctors have been pocketing the money and giving them the real shot anyway: https://t.co/cAX9fbmDW6
+876	BREAKING REPORT: Disney and other Florida-based businesses are “PAUSING THEIR COVID-19 VACCINE MANDATES and rehiring employees that were fired for refusing to “take the jab.”...
+877	At every label, Bill Gates was directly involved with this pandemic— Wuhan lab, WEF predictions, vaccines, tests, and censorship. Now as people are impoverished from lockdowns— he is quietly purchasing a ton of land. He should be arrested for crimes against humanity. https://t.co/FqT6g3VDTt
+878	The great majority of adults have been vaccinated. Four weeks working on a COVID ward makes stark the reality that the majority of our hospitalised COVID patients are unvaccinated and regret delaying. Some are very sick including young adults. Please don't delay your vaccine.
+879	BREAKING: In a BIG loss for Governor Abbott, a Texas judge sets a major legal precedent by green-lighting Southwest Airlines’ pilot vaccine mandate, ruling that it “improves the safety of air travel” and “working conditions for ALL pilots.” RT IF YOU SUPPORT THE JUDGE’S DECISION!

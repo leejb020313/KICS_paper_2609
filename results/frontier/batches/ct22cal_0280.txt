@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	We must set the record straight: The story that Israel denies the COVID-19 vaccine to Palestinians is a complete falsehood. Read and share AJC President @HPSchleifer's letter to the editor in response to a dishonest @NYTimes piece. https://t.co/hiksCdx8cb
+281	COVID hit Houston's predominantly Black, Latino and low-income communities the hardest. Vaccines, on the other hand, are not reaching those ZIP codes at the rate they need. With @jordan_rubio and @MarieDennise https://t.co/Q4EPt5WPQW
+282	I just landed at JFK after reporting on #coronavirus in Milan and Lombardy —the epicenter of Italy’s outbreak— for @vicenews. I walked right through US customs. They didn’t ask me where in Italy I went or if I came into contact with sick people. They didn’t ask me anything.
+283	BREAKING: The Richmond and Henrico Health Districts today will begin registering people in the rest of Phase 1B for COVID-19 vaccines, including those 16-64 with pre-existing conditions.
+284	@rubiconcapital_ @OnCall4ON More like the Vaccine Cult. No safe Corona virus vaccines were produced for MERS, SARS because animal experiments proved they were not safe. Now, without those safeguards, every Covid vaccine is safe and effective. I have not heard how or if the prior hurdles were overcome.
+285	There is nothing like Third Wave...the Spike in COVID-19 Cases is being manufactured to justify the extension of the Useless Night Curfew and to sway People to take the Controversial Vaccines. Meanwhile,let's all #Pray4Magufuli , Baba and United Republic of Tanzania. #JKLive https://t.co/WDvznhuEnM
+286	🚩Subscriber exclusive🚩 Universities say they face pressure to fully reopen like their primary and secondary school counterparts, but they're not included in vaccine rollout. https://t.co/Lek35dMNLR
+287	Vaccines are still available for 16- and 17-year-olds on Thursday at the Johnson City Medical Center from 4 p.m. until 7 p.m. Walk-ins are accepted. Future dates are forthcoming. https://t.co/KouB28C1Bh
+288	The State Department’s Global Engagement Center identified four outlets — News Front, New Eastern Outlook, Oriental Review, and Rebel Inside — that it believes are spreading false information about the vaccines the U.S. has developed. https://t.co/S8RxpAOCyx
+289	As Mesa County enters its second year living with the virus, vaccines are outpacing total infections, hospitalizations have plummeted and events that were totally shut down last year are readying to return. #gjco via @tomhesseWY https://t.co/4s9e02YbRm
+290	The United States, the wealthiest nation in the world, with the highest number of Covid-19 deaths — now over half a million — should be leading the charge to share life-saving vaccines and treatments around the globe. https://t.co/tw2yy0ayAU
+291	“So far several #COVID19 vaccines seem to be highly effective in real-world settings” - Gavi’s Dr Lee Hampton explains what vaccine efficacy actually is and why it’s so important: https://t.co/plVKszc4ly Via @WHO
+292	Why has it taken the threat of a virus before they started cleaning tube stations?? Trains should be cleaned every week, the seats have more dust than sahara desert. https://t.co/mNElIEGfRi
+293	A narrative has emerged that all of the COVID-19 vaccines are perfect--or close to it--at preventing hospitalization or death. Here's @hildabast on how that's not quite right, and why the details matter. https://t.co/2d7CW58vSo
+294	As of March 5, there have been 1,524 deaths, 1,072 life-threatening adverse events, 630 cases of permanent disability, and 9,000+ hospitalizations and emergency room visits following COVID vaccination reported to the Vaccine Adverse Event Reporting System. #COVID19 #CovidVaccine https://t.co/Td9zV7Mnw0
+295	One third of black protestants and nearly half of white evangelical Christians say they do NOT plan to get COVID-19 vaccines, data reveal. Protestant Christianity can kill you apparently.
+296	Introducing the @HealthEvolution Forum report: 'Increasing #vaccine uptake in diverse communities: A working guide for health care CEOs' - with 10 steps to create an action plan for increasing confidence and improving accessibility to COVID-19 vaccines. https://t.co/kKZ247k1hH
+297	5K covid cases in the Philippines today. And we just have the donated covid vaccines though we have ₱10 Trillion Covid Loans. A new strain of Covid. Let's call it DU30 Covid-19 strain - courtesy of our IATF and Chief Testing, Tracing, Isolation, Vaccine, and Treatment Czars.
+298	Excellent #CovidVaccine news 👏 BNT162b2 (Pfizer vaccine) can neutralize three #VariantsOfConcern - UK (B.1.1.7 lineage), South Africa (B.1.351 lineage), and Brazil (P.1 lineage). https://t.co/QrBPEIgPSA #COVID https://t.co/Z1RFGLdLGu
+299	No need to routinely check antibodies after COVID vaccination. A vaccinated person is very likely to get a negative result from a serology test, even if the vaccine was successful and protective - Dr Rachel West, Immunologist at Johns Hopkins. 1/9 https://t.co/hZEpfzkpZd
+300	Flu Season is winding down and warm weather is returning. Experts predicted 70% of Americans would be infected with #COVID19. Turns out .005% were. Missed it by THAT much. #FearPorn, it's the new #FakeNews.
+301	Latin American governments gave legal and tax benefits to pharmaceutical companies in vaccine purchases 📑🔍 13 countries changed their laws in order to purchase the Covid-19 vaccine between September 2020 and February 2021. 🔗 https://t.co/YRuTrUi8Fk #VacunasSecretasLatam 💉 https://t.co/wlzWBBNU30
+302	Thank Trump for lying, denying Covid, politicizing masks and 530,000 deaths. Thank Pfizer, Moderna and J&amp;J for the vaccines. Thank Biden for vaccine distribution, truth, competence and the American Rescue Plan.
+303	You may be fully vaccinated, but millions of others remain unprotected and it’s unclear how effective vaccines are at stopping the spread of the virus. https://t.co/ivNmR9LEMW
+304	@MartinCo8256 @TinFoilAwards @GRHutchinson @MadyWaterer Here you go. Click on each link for Pfizer and AZN and you will see the deaths and injuries from the vaccine. Reports are 7 days old but 472 deaths from the vaccines is unacceptable! Many more will have life long injuries. https://t.co/ocPtnDfHQ6
+305	I don't know who needs to hear this but Alberta just added COVID19 testing to ALL respiratory swabs done in ER or hospital. So if you're looking for flu, you'll also get an answer on #covid19. Should be #StandardOfCare IMHO.
+306	Biden is expected to announce that DENTISTS and VETERINARIANS will be allowed to give Covid vaccines. I’ll say this for those who don’t already know, there is NO freaking way I’m getting a vaccine from a vet.
+307	Dirty Russian politics at play as Russia spreads disinformation to undermine confidence in Pfizer and other Western vaccines, using online publications that have questioned the vaccines development and safety. #covid19 https://t.co/215Jv4AFgN
+308	Vaccine appointments are still available at City-run sites. While Dodger Stadium is our biggest location, we have other sites accessible without a car — including our new @USC site, Lincoln Park and San Fernando Park. Visit https://t.co/naMSTBoW89 to make an appointment today. https://t.co/mnJ8bZKMSo
+309	@mattdpearce When will @latimes acknowledge that California #vaccine allocation program has been a disaster--for weeks 49th in the country in terms of DISTRIBUTION of vaccines we had--and the buck stops with LA County &amp; @GavinNewsom? https://t.co/p5qg6TKMNc
+310	The Democrats' hyper-partisan $1.9 trillion wish list is not focused on coronavirus relief. All told, less than 10% of the Democrats’ wish list is for directly combating COVID-19 and just 1% is for vaccines.
+311	Big Pharma Shouldn’t Control COVID-19 Vaccines: The real culprits are the companies refusing to share their publicly funded intellectual property and the governments allowing them to get away with it. #covid #vaccine @SonaliKolhatkar https://t.co/xuIGmmY8iG https://t.co/Y0tGxhPrfU
+312	Nearly 200 doses of first- and second-round COVID vaccines were administered to service members during the @185ARW's March drill weekend. #InThisTogether https://t.co/m2YKM3uehH
+313	@giladerdan1 @nbcsnl @SouthPark ICUs at West Bank hospitals are at capacity and still Israel refuses to abide by its obligations under international law and provide vaccines to Palestinians living under its military occupation https://t.co/UjZn7a0e58
+314	COVID-19 vaccines for children and teens are coming, experts say. As more Americans line up for COVID-19 vaccines, children have been excluded. But that is expected to change by the fall, Dr. Anthony Fauci says. #ThisIsOurShot https://t.co/iupjVGoVXY
+315	Urgent Open Letter from Doctors and Scientists to the EMA COVID-19 Vaccine Safety Concerns: “There are serious concerns, including but not confined to those outlined above, that the approval of the COVID-19 vaccines by the EMA was premature and reckless”. https://t.co/NBNHkIrEvg
+316	I mainly shared this story because I want people to know how difficult it is to even get tested for #COVID19 in Missouri right now. With such a narrow group of people being tested, can really know the extent of the outbreak? The current system seems pretty foolish.
+317	@paulapoundstone Ahhhh. I'm good. GOOD. Thanks for this very kind response. I am a teacher who has received Vaccines 1 and 2. So grateful. I am just sedentary... teaching online. (Also grateful for that opportunity.) I have unfortunately GAINED (almost) the "Covid 19" pounds. Obv very FORTUNATE.
+318	Misinformation about a Joe Biden speech, a Donald Trump statue and Nancy Pelosi’s investments are among the falsehoods circulating online this week. Inaccuracies about COVID-19 tests and vaccines are also spreading. Get the facts from @AP. https://t.co/jqwWensZnr
+319	HK experts said a local man, 71, died Monday after accepting COVID-19 vaccines on March 3. The coroner will conduct an autopsy and the experts will review the report later to see whether the death is related to the vaccines: experts https://t.co/ux96vLEfmG

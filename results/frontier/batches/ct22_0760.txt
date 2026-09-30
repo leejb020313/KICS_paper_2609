@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	The President wonât let us see this. What is he hiding? Stalled Intelligence Report Warns of Pandemic Dangers | Time â¦@ODNIgovâ© #coronavirus https://t.co/XbBmyqFN9k
+761	Italy ð®ð¹ ð´ 60 million people put under lockdown. ð¦ More than 9,000 cases reported (It was 231 two weeks ago) ðï¸ All sporting events suspended. ð«ð All schools, universities closed. ð­ðï¸ð Theatres, gyms, bars, funerals and weddings barred. Unprecedented. #coronavirus
+762	Remember how you taught your kids not to open the door to strangers? ? Now its your turn to keep the door shut to anyone you don't know unless they have a #WARRANT! Georgia kicks off chilling door-to-door #COVID19 blood collections - https://t.co/S8n6Csk2hP
+763	NSUI welcomes the decision of Maharashtra Govt. to promote the final year students as well. We are thankful to Maharashtra Government for admitting our demands. We also demand other state governments to promote the students due to this Corona crisis. #PromoteStudentsSaveFuture https://t.co/ltMgd6FLik
+764	Today, University of Pittsburgh School of Medicine @PittHealthSci scientists announced a potential vaccine against SARS-CoV-2, the new coronavirus causing the #COVID19 pandemic. https://t.co/ILW4IQfou7 https://t.co/Y7l0SifBtn
+765	UK: Coronavirus vaccine could be ready by September, says Oxford University.
+766	Top NIH official Anthony Fauci says coronavirus vaccine will likely take 12 to 18 months: "That means...the answer to containing is public health measures. We can't rely on a vaccine over the next several months to a year." https://t.co/pAUO2PN10Y https://t.co/sW8h5kL8fm
+767	my flintstones gummies from 15 years ago fighting corona https://t.co/wHeBEN1Mos
+768	#COVIDã¼19 Something we all need to be aware and alert of. It's now up to 3rd gen infection. Watch this video (borrowed) to understand how easy it is to spread the virus. #coronavirus https://t.co/USNpSQl2pP
+769	i was a vaccine checker tonight at my venue and i swear to god i’m not fucking with you, one couple came up to me and asked “vaccine for what”…… WHAT DO YOU MEAN VACCINE FOR WHAT
+770	I asked the nurse giving my vaccine if I could use a bandaid I brought from home and she was like “I don’t see why not” and now she sees why not https://t.co/iYSkmePANJ
+771	When the polio vaccine dropped in 1955 people lined up to get it, &amp; we were 2 years away from artificial satellites. Now in 2021 we carry external world-brains in our pockets &amp; there’s robots on Mars and idiots think the COVID vaccine is full of wizard poison.
+772	I asked my mom if she felt any side effects from her second vaccine shot today and she said "an acute appreciation for science"
+773	A 6-year old ballet student asked me today if I'm excited about getting my "Fauci Ouchie" soon, and I will now be referring to the covid-19 vaccine as only that, because it's the cutest thing ever.
+774	I’m a nurse and Lindsey Graham got a vaccine before me.
+775	Johnson &amp; Johnson used their experience making 2-in-1 shampoo and conditioner to design their vaccine.
+776	As my 10yo got his @pfizer vaccine tonight he was nervous but kept whispering his (high risk) best friend’s name over and over. And I have zero regrets that my kid was scared and yet did something out of love for another person anyways.
+777	dolly parton didn’t tumble outta bed and stumble to the kitchen and pour herself a cup of ambition just for you to refuse to take the covid vaccine that she helped fund
+778	Great—my horse has worms and the pharmacy is out of everything except COVID vaccines.
+779	My aunt died of covid last night.. Wasn't sick very long.. She's a lawyer who was about to retire. Had all the vaccines.. She was a warrior for saving women from domestic violence and a proud volunteer of the House of Ruth for years! RIP we lost a beautiful soul. ❤️
+780	Had an extensive interaction with @BillGates. We discussed issues ranging from India’s efforts to fight Coronavirus, work of the @gatesfoundation in battling COVID-19, role of technology, innovation and producing a vaccine to cure the pandemic. https://t.co/UlxEq72i3L
+781	PFIZERLEAK: EXPOSING THE PFIZER MANUFACTURING AND SUPPLY AGREEMENT. (thread) Background: Pfizer has been extremely aggressive in trying to protect the details of their international COVID19 vaccine agreements. Luckily, I've managed to get one. #PfizerLeak #Pfizer https://t.co/1JlyJzxByb
+782	The mRNA vaccines (Pfizer and Moderna) are kind of brilliant at a science level. I’ve had a few people in my real non-Twitter life ask me to explain how it works so I’m going to try my best here in this thread while I’m waiting for a patient to show.
+783	So I’m hearing many myths about #COVID-19 and would like to quickly clear the record. Coronavirus will go away in Sumer months. Wrong. Previous pandemics didn’t follow weather patterns plus as we enter summer, there will be winter in the Southern Hemisphere. Virus is global.
+784	Today, BTS returned to #UNGA to share a powerful message on climate action, COVID-19 vaccines &amp; the importance of taking care of ourselves and our communities. Thank you, @BTS_twt for inspiring a generation of young people. Together, we can create a better world. #BTSLoveMyself https://t.co/1lEke2lQ9i
+785	Today, FDA approved the first COVID-19 vaccine for the prevention of #COVID19 disease in individuals 16 years of age and older. https://t.co/iOqsxXV1fj
+786	I work at a thrift store and found this vaccine card from 1956. Felt weirdly timely https://t.co/pjo8nhwwUL
+787	I just left the ER. We are officially back to getting crushed by COVID-19. Delta Variant is running rampant and it’s MUCH more transmissible than the original virus. 99% of our ICU admits did NOT receive a vaccine. Virtually ALL of them wish they had.
+788	I got the COVID-19 vaccine today! My wing is feeling a little sore, but it'll give my body an extra protective boost that keeps me and others healthy. Ms. @EricaRHill even said I’ve been getting vaccines since I was a little bird. I had no idea!
+789	Oxford University was going to open source its vaccine, then the Bill and Melinda Gates Foundation stepped in and convinced them to sell exclusive rights to AstraZeneca. Now AstraZeneca is failing to deliver and poor countries are struggling to access vaccines. https://t.co/1GbFDYgWrH
+790	Story of a 66-year-old researcher, an immigrant, who rarely got grants, never got her own lab, never earned more than $60K. For four decades, she kept working on mRNA—a path considered foolish. Her work is the basis for the Pfizer and Moderna vaccines. https://t.co/wOvCEM8jja
+791	Jin : We are all vaccinated and we sympathize with people who fear vaccines because it's something that didn't exist before. But I believe that if we are afraid of the past, we won't be able to make progress. *And president Moon's smile @BTS_twt https://t.co/sSfN8xfwH2
+792	KFC had 11 secret herbs and spices and nobody questioned it for years but suddenly you want to know what’s in the Covid vaccine
+793	They said the vaccine stopped transmission. Now they are lying and saying they didn’t. Video proof here 👇 https://t.co/Ds632bHZzI
+794	Alabama doctor says this about her Covid patients, some of whom are dying: “One of the last things they do before they’re intubated is beg me for the vaccine. I hold their hand and tell them that I’m sorry, but it’s too late.” https://t.co/WEgAhHW2hf
+795	This is devastating news. Global South countries have been fighting for the right to manufacture and import affordable versions of the covid vaccines. A few hours ago, the USA, UK and European Union joined forces to block them at the WTO. The West is indefensible.
+796	The CDC now claims that 94% of all coronavirus deaths were supplementary, meaning, the person had co-morbidities. Less than 10,000 Americans have died from Covid-19 alone. #Coronavirus is and always has been a hoax. Democrats masked &amp; impoverished America to rig an election.
+797	Today’s record-breaking vaccination numbers are gladdening. The vaccine remains our strongest weapon to fight COVID-19. Congratulations to those who got vaccinated and kudos to all the front-line warriors working hard to ensure so many citizens got the vaccine. Well done India!
+798	The idea that these vaccines came out of nowhere is a failure of science communication with tragic results. They're the result of DECADES of basic research in MULTIPLE fields building on the BREADTH and DEPTH of human knowledge. That’s how science works. And it's awe inspiring.
+799	Breaking News: The WHO approved the first ever malaria vaccine, which could save tens of thousands of children in sub-Saharan Africa. The quest for this vaccine has been underway for a hundred years, a WHO official said, and is a "historic event." https://t.co/i1hcYBhbvb https://t.co/wTNg6xWmzU

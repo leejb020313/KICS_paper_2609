@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	The Interpol, revealed on Thursday that South African and Chinese police have seized hundreds of fake COVID-19 vaccines. #VoiceOfNations https://t.co/Wzm1mxMGpP
+721	Research colleagues from @LeedsHospitals and leading UK Universities are taking part in the OCTAVE study to examine vaccine responses in patients with impaired immune systems https://t.co/JjqLN2dyDl #CovidVaccine #COVID19 #ResearchScience
+722	How &amp; why President Magufuli, a former chemistry professor who ought to know better, can deny the existence of Covid 19 in Tanzania, mock coronavirus tests, denounce vaccines as part of a Western conspiracy and oppose mask-wearing and social distancing - boggles the mind.
+723	Trials are underway to see whether combining different COVID-19 vaccines is safe and effective. https://t.co/4O1suL1WVL
+724	UPDATED RESOURCE: More states are moving to wider distribution of the COVID-19 vaccines. Check to see who is eligible in your state and how to schedule an appointment --&gt; https://t.co/lCbTKWcYiE https://t.co/JatxxmBvKU
+725	Health workers in Kenya are hesitant about taking Covid-19 vaccine, stating the fear of side effects, lack of knowledge, and the speed at which the vaccines were developed among the factors fueling the hesitancy. @NationFMKe #TinaKaggia
+726	Covid-19 Vaccines are being administered at the Health Department in Warner Robins Mondays, Wednesdays, and Fridays. You may call 478-749-0179 or 844-987-0099 so set up an appointment.
+727	The Latin American Legal Defense and Education Fund (LALDEF), is teaming with Diocese of Trenton, Catholic Charities and Trenton Health Team to expand access to COVID-19 vaccines, testing and information for Trenton communities. https://t.co/Jvnewxn2Es https://t.co/4zOSR2kENB
+728	Residents of San Pedro Garza García — the wealthiest city in Mexico and Latin America — are traveling to Texas and Florida to get COVID-19 vaccines https://t.co/XIP1jfFU6k
+729	The Spanish government is unaware of any contract to domestically manufacture Russia’s Sputnik V coronavirus vaccine. But the Russian Embassy in Spain says negotiations are taking place and biotech firm Zendal does not deny it https://t.co/SqrifjL16h
+730	A doctor in #Iran has suffered serious internal bleeding after receiving the Russian #Sputnik #Covid_19 vaccine, officials and media say. He has been hospitalized. #Khamenei banned Western vaccines in January. https://t.co/cw3mWUjJHi https://t.co/rZuTQsx05l
+731	Statement of Bishop Joseph C. Bambera Regarding COVID-19 Vaccines “The COVID-19 pandemic has caused tremendous grief and fear in our country and world over the last year, leaving more than 500,000 dead in the United States alone. Read more at: https://t.co/wTy6QbxYaj https://t.co/xNkZkFWFwO
+732	Pakistan has joined a new United Nations public advocacy campaign #onlytogether which calls for coronavirus vaccines to be available to everyone and everywhere in order to contain the deadly pandemic. ➡️https://t.co/g81tHpMoyt
+733	Former Presidents Barack Obama, George W. Bush, Bill Clinton and Jimmy Carter feature in national ad campaigns launched Thursday in a bid to boost public confidence in Covid-19 vaccines, which has been undermined by months of politicization #ThisIsOurShot https://t.co/dI6MCqJPHK
+734	On the day that Joe Biden was inaugurated or whatever they did United States had already administered 1.5 million covid-19 vaccines. Joe Biden had/has nothing to do with it and Trump was actually right 9n in his debate when he said the middle or end of 2020. He was correct again.
+735	Join the Hackney African Network online vaccine event on Saturday 13th March 2-4pm, with speakers from Congolese, Somali, Guinea Bissau, Tigray and East African communities and breakout rooms in French, Somali, Swahili, Portuguese, Tigrinya and English. https://t.co/o4KJheHEJ3
+736	COVID-19 KENYA; Thursday, 100,000 More Vaccine Doses Arrive At JKIA From India. KDF Staff And Teachers Are Next In Line As Vaccination Drive Picks Up Pace |JKIA |India |Raila Odinga |COVID-19 |Breaking News |#CovidVaccine |#COVID19 |Eric Omondi |India | https://t.co/iThK12u9lV
+737	Georgians ages 55 and older as well as those with a variety of health issues will be eligible for COVID-19 vaccines starting next Monday amid a recent boost in supplies, Gov. Brian Kemp announced Wednesday. #gapol Capitol Beat story: https://t.co/YO8V9ceTDa https://t.co/fPfET8mSiE
+738	If these so-called vaccines cannot guarantee no transmission of Covid-19 there is absolutely no justification for taking the risk. The people who have suppressed and smeared hydroxychloroquine and ivermectin have caused Americans to die. They need to be arrested and these
+739	Rhode Island Governor Daniel J. McKee announced Tuesday that the state would be partnering with cities and towns on a plan to get first doses of COVID-19 vaccines to all K-12 teachers, school staff, and child care workers by the end of March. https://t.co/p5e7EhOA58
+740	BREAKING: 525 new cases of Covid-19 and three further deaths reported in the State with 19,228 more vaccine doses administered https://t.co/mwYsnTzYUl
+741	@stretchwomble @Telegraph One of the most breathtakingly ignorant tweets I've read for weeks. 𝐀𝐋𝐋 medicines have side effects, even aspirin. The issue with new Covid 'vaccines' is that the trials end 2023, (itself accelerated), and long term effects are not known. https://t.co/DHWpSxAIhy
+742	The world is at the risk of losing the struggle to contain the pandemic because of the inequity in distribution of and access to vaccines across nations. Read @Jayati1609 on the 3 major problems now afflicting global vaccination. https://t.co/N0aQjKXSUi @TheIndiaForum
+743	Pro-establishment newspapers are this Sunday not just legitimizing the crackdown of critical voices but like this one are bastardizing the vaccines as exploitative neo-colonial tool and boldly lionizing voices against Covid-19 vaccine. #ItMatters https://t.co/9Xiyui5EzU
+744	what we know about vaccines ,none of which is conspiracy theory: 1- We do not know how long Covid vaccines will make our body immune against the virus 2- AstraZeneca (made by India and also another type by UK) so far is worst vaccine banned by Denmark,Norway,Thailand TBC.....
+745	I did almost everything right. Worked at home. Saw one friend in the last 10 days. Had a beer for an hour outside a pub, either side of a big table. Fresh air, no contact. Washed my hands 3 times. Still caught corona from him. Do not fuck around with this thing.
+746	Corona Virus isn't real, the government just wants everyone inside for two weeks so they can change the batteries in the birds.
+747	Coronavirus: AltNews founder, Shekhar Gupta and others spread unverified claims by a fake twitter account https://t.co/YEMcc6loDW
+748	[Tweeting again with detail in single tweet so no alarm] JUST IN: 38-yr-old #Covid19 positive man dies in Patna. Had serious kidney problems that let to renal failure shortly after returning from Qatar. Makes this 1st ‘virus-linked’ death of someone who isn’t a senior citizen.
+749	Another 'fake news' being peddled in India is India is a country of vegetarians, so it is not going to be affected by #CoronaVirus like China. Vegetarianism &amp; #Corona has NO connection. + India's vegetarianism is a myth, 80% Indians are meat eaters! https://t.co/9hraqXBxbE
+750	An online website has falsely reported that the Government is likely to impose Financial Emergency in India to tackle the crisis caused by #Covid19. Please be advised that the story is malicious and fake and that there is no such plan. https://t.co/5lx0u3NUED
+751	Prisoner released early over COVID-19 concerns allegedly broke into woman’s home, tied her up at knifepoint, and threatened to kill her https://t.co/BouajIUvYG
+752	Namaskaram, this message is not from Sadhguru. This is a fake message that is being circulated on WhatsApp. We request you to delete these tweets. 🙏🏻
+753	Bihar: The 38-year-old man who has passed away at AIIMS in Patna and tested positive for #COVID19, had foreign travel history to Qatar.
+754	#Qatar refused to prepare a hospital for the thousands #CoronaVirus infected migrant workers on its soil, instead, it has locked them inside animal shelters without any medical care! Migrants workers are not slaves, they have rights! Shame on #HumanRights orgs for being silent!
+755	Saif Ali returns frm Qatar, goes to Munger, Bihar. Gets unwell, is admitted to hospital, referred to AIIMS but dies. Doc found he is Corona+ Police reaches home, puts entire family in quarantine. Now Evry member has ran away from home &amp; everyone's scared https://t.co/jKj0Ify4oh
+756	Japan: close schools Italy: close schools and football games China: shut everything down Olympics; may cancel Trump: Coronavirus is a hoax, my hunch is experts are wrong, and you should go to work and school. #TrumpVirus #COVID19 #Coronvirus
+757	@realDonaldTrump Donald Trump canceled his trip to CDC in Atlanta because one person allegedly had #coronavirus?? #hypocrite https://t.co/sCsDU1ffum
+758	New York AG Warns Televangelist #JimBakker To Stop Selling FAKE #CORONAVIRUS CURE #LisaLandau, chief of the AG’s Health Care Bureau, sent a cease and desist letter to Bakker on Thursday threatening legal action #MOG☘️ #BlueWave2020 #MAGA #Christians https://t.co/y1iWhZWlsI
+759	Our #FlattenTheCurve graphic is now up on @Wikipedia with proper attribution &amp; a CC-BY-SA licence. Please share far &amp; wide and translate it into any language you can! Details in the thread below. #Covid_19 #COVID2019 #COVID19 #coronavirus Thanks to @XTOTL &amp; @TheSpinoffTV https://t.co/BQop7yWu1Q

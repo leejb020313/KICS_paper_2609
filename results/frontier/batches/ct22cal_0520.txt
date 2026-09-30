@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	hakyeon: ive donated money toward overcoming the pandemic covid-19 k0reaboo: it is unclear if “hakyeon”, who is allegedly a member of “vixx”, is reffering to the struggles of life when using the words “overcome”. we’re not sure at this time if “money” is a metaphor
+521	One year after the first COVID-19 shutdowns began in the U.S., over 500,000 people have died from the disease, businesses have opened and closed, and several vaccines have been approved. @CarolineYLChen joins @hari to discuss the past year in the pandemic. https://t.co/Iwy7zMm8L1
+522	Trump's timeline of handling the corona crisis: One month ago: it's a hoax. Way overblown. Two weeks ago: this is serious. We must take action to prevent its spread. This week: ehhhh on second thought maybe a million or so Americans dying isn't *that* bad
+523	I've been saying this to Forrester clients and stakeholders for about six months. &gt;&gt; Russians Mount Campaign Against Vaccines, U.S. Says https://t.co/bNhbbOBHY4
+524	About 28,000 US Troops Are Stationed in South Korea. Only 28 Got COVID-19 | https://t.co/sTmlYnt2oj (still, let's get some vaccines out to all the military bases and share with the unarmed contractors) https://t.co/axxhBFNIUq
+525	With this new COVID relief package, we’re turbocharging vaccine distribution. This means more vaccines should be available very soon throughout the Valley. To find out where and when you can get a vaccine, head to California’s vaccine hub at https://t.co/y1NxHiUNaD https://t.co/HYR9ghsizC
+526	Over 250,000 Covid-19 deaths in Brazil, and growing. Health system collapsing in most states. Meanwhile the president and his sons are speaking out against lockdowns and masks, and denying vaccines for our people. #StopBolsonaro #SOSBrazil #BrazilianLivesMatter
+527	CDC coronavirus test kits were likely contaminated, federal review confirms https://t.co/cjTTXBfrrP https://t.co/TgjXMNnqlX
+528	Ivory Coast and Ghana first to receive covid vaccine shipments via COVAX https://t.co/6Vu6bcgbGX
+529	Blacks and Hispanics are being short-changed on Covid-19 vaccines in Florida and elsewhere https://t.co/CtKTerhhyw
+530	@BreesAnna @Colin_Cambray I wonder when the MSM will question the gov on their own figures for adverse reactions and death resulting from the various covid vaccines . They tell us but the press don’t report it. https://t.co/dSXU3L2xUs
+531	@lawless_grant @OMGno2trump @kayleighmcenany Biden said he was going to release the vaccine that had been reserved for second shots, and suddenly there was no reserved vaccine. The missing vaccine has never been adequately explained. https://t.co/jIYVbAS5bJ
+532	Today, we have 'Made in India' vaccines for our country and for the world. COVID19 vaccination is being done for free at government hospitals and at the cost of Rs 250 at private hospitals. I have also taken the first dose of the COVID vaccine: Prime Minister Narendra Modi https://t.co/hV6yShklPa
+533	As the first COVID-19 vaccines arrived in Uganda last week through #COVAX, we worked with @MinofHealthUG to train 300 master trainers, who then trained 5,000 frontline health workers and district leaders on vaccine administration. #VaccinEquity https://t.co/hEltzTQ5OF
+534	Catholic Church’s direction on Johnson &amp; Johnson COVID-19 vaccine raises questions Via @reporterdeepa: Orange County will only provide Pfizer and Moderna vaccines at the Christ Cathedral clinics out of respect for the church’s moral teaching. https://t.co/lFdiN8wjAS
+535	Agricultural and grocery workers in the Yakima Valley and statewide will be eligible for COVID-19 vaccines several days earlier than scheduled. https://t.co/2cmu5WjctD
+536	Corrupt Florida. Setting up vaccines for the rich, and DeSantis is under investigation for taking bribes related to vaccines. https://t.co/Bh7mZUwr4v
+537	Reports of Deaths After COVID Vaccines Up by 259 in 1 Week, CDC Data Show Data released today by the Centers for Disease Control and Prevention (CDC) on the number of injuries and deaths reported to the Vaccine Adverse Event Reporting System (VAERS) fol… https://t.co/Iht6Abcg8a
+538	Right here on campus, @DrakeCPHS students have helped distribute more than 4,000 #COVID19 vaccines this year to eligible Polk County residents. https://t.co/Ccwlb1fdx7
+539	Instagram’s algorithm is suggesting posts that tout false claims about #COVID19, vaccines, and the US election, according to a study by the UK-based Center for Countering Digital Hate. https://t.co/88XJ6uMW4T
+540	March 3, 2021 Lude Media 1. Navarro Tweeted Covid-19 is CCP’s biological weapon and Vaccines could not solve the virus. 2. In an internal letter president of Harvard expressed his gratitude again to CCP’s Evergrande Group for its donation of $115million. https://t.co/xP0xIr5KH3
+541	“China and the WHO's chief: Hold them both accountable for pandemic”: An indictment of how ⁦@WHO⁩ chief ⁦@DrTedros⁩ allegedly helped Chinese president #XiJinping conceal full extent of #COVID19 for weeks in Jan, causing a global disaster. Read! https://t.co/7RjJgmyW9L
+542	The extinction of Man excites me. COVID-19 vaccines do not prevent infection at best and kills the vaccinated at worst. Fuckin’ A. #covid19
+543	A partnership between #InfectiousDisease research powerhouses @MacGlobalNexus and @vidointervac at @USask will lead Canada’s response to — and preparedness for — pandemics. Together, we’ll develop and test vaccines, drugs and diagnostic tools. https://t.co/bx3OnlnWbz
+544	TAIT: Kenney doesn't give a damn about disabled Albertans | Edmonton Sun “His leadership on COVID-19 and rollout of the vaccines has collectively been perhaps the worst train wreck Alberta has had.” #ableg #abpoli #DisabilityTwitter https://t.co/pCLQLGSKrw
+545	Pfizer's and Moderna's vaccine was found to have a reduced effectiveness against the South African variant by about 10.3 and 12.4 times respectively. Both Novavax and Johnson &amp; Johnson vaccines showed a substantial drop in efficacy in South Africa https://t.co/jxHH0sm5z2
+546	Black Americans are being *offered* COVID-19 vaccines at lower rates than white Americans. It’s time to end the “hesitancy” narrative. It’s about who is and who is not getting the chance of a shot. https://t.co/7COo3LHSsq
+547	Black residents in Michigan account for roughly 21% of the state's COVID-19 deaths despite being just 14% of the state's population. To decrease the number of deaths, officials are using a CDC-recommended formula to distribute vaccines to minority groups. https://t.co/OhMCW3Fwhd
+548	🚨Pfizer Demanding Bank Reserves, Military Bases And Embassy Buildings As Collateral For COVID-19 Vaccines https://t.co/s0lNJpR5NJ
+549	.@realdonaldtrump just said: “if it were up to the doctors, they'd shut down the entire world.” Actually, if it were up to us, we'd save as many people as possible. We would follow the science &amp; evidence. We would never put politics ahead of the public's health #covid19
+550	“I believe that one brother, one cousin, one friend at a time, we can educate, reassure and advocate the importance of getting vaccinated.” Black biomedical scientist Ty Fletcher-Beals shares how she advocates for COVID vaccines to her family and community #Covid_19
+551	Join us March 25 at 5:30 pm PT for a Let's Talk: COVID-19 Vaccines webinar for families to learn more about the vaccines, where and when you can get vaccinated, school re-openings and where to turn for more resources and information. Register here: https://t.co/gtEImx2aqt https://t.co/NWxhh8BxJk
+552	@Iyervval Taiwan is also getting 5 million doses from U.S. drugmaker Moderna Inc, and the government said last week it could begin administering its home-made COVID-19 vaccines as early as July.
+553	The more Covid spreads globally, the more it will mutate into strains that are more infectious, more deadly, and more resistant to vaccines. We agree with @SenBooker: To truly end the pandemic, Biden must take bold steps to ramp up global vaccine access. https://t.co/ZJG3zipdkc
+554	Real-world #COVIDVaccine data. Retrospective cohort study in HCW (Israel) rate reductions expressed for day 1-14 &amp; day 15-18 after 1st dose. 'Early rate reductions of SARS-CoV-2 infection and COVID-19 in BNT162b2 vaccine recipients' https://t.co/E9mFYHZdLc
+555	Almost 45% of black Brits fear Covid vaccines are unsafe and hesitancy is worst in under-30s, official survey shows https://t.co/COEIQPosDB
+556	No, you’re misinformed. Goal of COVAX is to guarantee fair and equitable access to COVID-19 vaccines for every country in the world. 92 low to middle income are eligible incl. Indonesia &amp; Vietnam. Likewise, 42 self-financing countries wanted access incl. JPN, CAN, AUS &amp; SGP. https://t.co/YQCWJHH1ZM https://t.co/w6ffgC7rE5
+557	1/ So Europe has its own adverse events reporting system for drugs and vaccines, called EUDRA. It now has data for the Covid vaccines. Which turns out to be EVEN WORSE than the US data. It now contains 58,000 reports for the @pfizer vaccine alone, including about 730 deaths...
+558	The United States, Japan and Australia have decided to manufacture Covid-19 vaccines in India as part of their joint effort to fight back the coronavirus pandemic --- India gets financial support to produce one billion Covid-19 vaccines https://t.co/gS2tsW7Mex
+559	Just saw on NBC national news that state of South Carolina has a surplus of COVID vaccines. Somebody needs to tell me where these vaccines are-we have been searching for days for a vaccine appointment-everything is booked according to SCDHEC and phone calls to private pharmacies.

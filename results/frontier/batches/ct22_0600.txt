@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	Pregnant women were excluded from initial trials of the Pfizer-BioNTech and Moderna vaccines, but there is increasing evidence that the shots are safe for them, the group says. https://t.co/9wvHSyIX0g
+601	Toronto and Peel Region are preparing to enter the grey zone. PLUS: Toronto is getting closer to hitting the 200,000 mark of COVID-19 vaccines administered in the city today. Your 680 NEWS TO GO with @TheAsherRoth &amp; @ZackBodenstein. LISTEN: https://t.co/h9p45U4Tka https://t.co/TXWG8UdHrr
+602	The first case of COVID-19 was reported in Sudan on 13 March 2020. In less than a year approved vaccines arrive in Khartoum. Science and solidarity can do great things. Lots more work ahead to close the gap in access but this is incredible. https://t.co/RMPRBTfNnh
+603	@POTUS Someone at the federal level needs to look into our governor and his giving vaccines to wealthy communities or a grocery chain and then a few days before or after gets a hefty campaign donation. The latest is below. https://t.co/wRaWDpckqt
+604	Teachers and staff members from the Pittsburgh Public Schools are among the tens of millions of Americans who have received at least one dose of COVID-19 vaccine. This comes as students will soon be returning to classrooms. https://t.co/3FwdQURhZQ
+605	More Covid vaccines coming our way this year. And we will need them all. Home grown, Indian, DNA vaccine from Zydus Cadilla is a new technology with great potential. More details in my this chat with @kushmaan95 on @aajtakradio https://t.co/IQPs1b8vvN
+606	Hi night owls! It’s day 56 at @ca_covid. Here’s what’s happening: https://t.co/hjYdSvBd1B is up to 2315 locations with COVID-19 vaccines, and counting! And we still have a queue of new places to call. https://t.co/oNwsGVD5qL
+607	The Holness administration announced on Tuesday a $60-billion allocation aimed at purchasing COVID-19 vaccines and dedicated to social and economic recovery under an initiative dubbed – The SERVE Jamaica Programme. Read more: https://t.co/f6p0kyET5t #GLNRToday https://t.co/qJmgv5UGlu
+608	Health care workers in Williamson County administered 6,000 vaccines — both first and second doses — in a 24-hour “vax-a-thon” at the Kelly Reeves Athletic Complex this past weekend. https://t.co/qL3TzVYhec
+609	“The Kremlin has been actively spreading disinformation about two of the vaccines being distributed in the U.S. in a bid to sow division and undermine confidence in the COVID-19 vaccine rollout. Russia’s efforts to spread anti-vaxxer disinformation https://t.co/8yvsWUakZG
+610	Anyone under 65 in Iowa with a BMI index of 30-40+ is now eligible for COVID vaccines (CDC rates this as an underlying condition and puts someone at higher risk). I could go on and on about how shit BMI scores are but if this makes you eligible please get a vaccine.
+611	Pediatricians call on Biden to prioritize COVID vaccines for children: As more adults get vaccinated for COVID-19 and the country looks to reopen, pediatricians and advocates want to ensure that children aren’t forgotten. - @erinmdurkin - National Journal https://t.co/BkZXlay0gJ https://t.co/wsTu6EKtsY
+612	Oregon has so far given out a total of 1,142,035 first and second doses of COVID-19 vaccines. https://t.co/oZsLgKPj1K
+613	What a team effort! Students, alumni, and faculty helped give hundreds of Covid-19 vaccines during @Towncrest Pharmacy clinics over the weekend! @cpesnia Read more about the important role our students are playing in the #covidvaccine rollout: https://t.co/xiYjgYWdwy https://t.co/gFoWQrx0La
+614	Thanks to @ANTHCtoday for this press release about the Johnson &amp; Johnson Janssen vaccine and its use in Alaska. All three authorized vaccines have proven safe and highly effective, and work well across ages, races and ethnicities. Read the press release: https://t.co/dCERadG4kS
+615	25K+ people with #chronicillness #cancer #autoimmune #raredisease have completed an ongoing longitudinal study of #COVID-19 vaccine, including #vaccinehesitancy, #vaccineSideEffects and #longtermCOVID See interactive dashboard https://t.co/7LliJjvFzi
+616	That's me got my first dose of the Oxford-AstraZeneca COVID-19 vaccine! Very grateful to have received it. Huge praise to all the scientists, doctors, nurses and everyone involved in this phenomenal feat 👏 #AstraZeneca #vaccines #vaccine #vaccinated #oxfordastrazeneca #COVID19 https://t.co/cxNkhCDmiw
+617	#vaccines The latest results of the Novavax covid-19 vaccine trials have confirmsed protection against the variants in South African and the UK. GLS
+618	According to the analysis, unvaccinated individuals were 44 times more likely to develop symptomatic Covid-19 and 29 times more likely to die from Covid-19 than those who had received the vaccine. Vaccines work. https://t.co/BVriqXoYjC
+619	TAKE the vaccines ASAP, you do NOT want to catch covid, since I have family that STILL today, months later, have long term effects, headaches, can’t smell/taste, shortness of breath, and more! If you still don’t want the vaccine, FINE, don’t take it, more for US smart ones!
+620	COVID-19 vaccines in Summit County: 50+ can get vaccine starting Thursday. Here's the latest update from @beaconjournal @EmilyMills818 and I on where to get the shot. Mass clinics coming soon, too. https://t.co/Hbqwrr6f1q
+621	To keep their families and communities safe, Aboriginal and Torres Strait Islander adults will be able to get their vaccine soon after the first priority group, such as health workers and quarantine and border workers. For more information: https://t.co/qzdyiJa2NG
+622	With her team, Corbett, a viral immunologist, has been instrumental in developing one of the first two successful COVID vaccines. #ScienceSavesLives https://t.co/aQQ7D7Lvt1
+623	At present, the country has a total of 1,125,600 million doses of COVID-19 vaccines courtesy of China’s Sinovac and the COVAX Facility’s AstraZeneca. https://t.co/U7PhJObEVC
+624	Utah health officials report 412 new cases of COVID-19 and 1 new death. Since the outbreak began there have been: • 374,850 total cases • 3,912,298 total tests • 1,976 deaths • 855,663 vaccines administered https://t.co/lMTWWNUx5P
+625	If we can't get these in time, we should consider ordering more Pfizer vaccines urgently. Other vaccines we have scheduled for delivery, Novavax and J&amp;J, may have only 55% (https://t.co/zucCMj8Rlo) and 57% (https://t.co/IVQW3y878z) efficacy against the SA strain.
+626	Without these lipid shells, there would be no mRNA vaccines for COVID-19 https://t.co/U4YqRNZIw3 Lipoprotein(a) is associated with large artery atherosclerosis stroke aetiology and stroke recurrence among patients below the age of 60 years: https://t.co/69uL4pWLfe
+627	India donated 40,000 COVID-19 vaccines to Antigua and Barbuda and 80,000 vaccines to Guyana under the 'Vaccine Maitri' initiative https://t.co/1qCqvDi110
+628	For the route 🇧🇷SBGR ✈️ SGAS🇵🇾, we coordinated along with the Paraguayan Air Force and the Ministry of Public Health the transport of 3,000 vaccines 💉 against Covid-19 donation from the UAE. Today we fly with a little more hope. https://t.co/SfEh1jMYGy
+629	On Saturday, Congresswoman @janschakowsky, Congressman @RepSchneider, Cook County Board President @ToniPreckwinkle and @CmsrBritton toured and visited with those receiving the COVID-19 vaccines at the Des Plaines site. More than 2,500 people were vaccinated on Saturday. https://t.co/M6ZJ3mg7ke
+630	#COVID-19 vaccines are an essential step to ending the pandemic and gaining independence from the virus. Today I joined Dr. Camile McDonald-Toussaint at the North Lauderdale vaccine distribution, where we were able to assist over 250 residents. #District33 #Community https://t.co/oY8vt4NDKQ
+631	Great to see 1st vaccines arrive in 🇬🇪 today thru the Covax facility. And great to see the wonderful 🇬🇪 health professionals will soon get the necessary protection. 🇪🇺🇨🇵 #TeamEurope massively support Covax and are happy and proud to stand with 🇬🇪 throughout the covid-19 crisis. https://t.co/4va5345OIa
+632	After a human-to-gorilla transmission and an outbreak of SARS-CoV-2, San Diego Zoo great apes get coronavirus vaccines. #manbitesdog https://t.co/GRLc6aeN0G
+633	As proud supporters of #COVAX, we as #TeamEurope are thrilled that the first COVID-19 vaccines are now being rolled out in Uganda, protecting those most at risk. In the meantime, let's not drop our guard, but remember to still keep that social distance and wear our masks! 😷💉 https://t.co/0moK6zlcjG
+634	#COVID-19 vaccines were not developed using fetal tissue and they do not contain any material such as implants, microchips or tracking devices. Get your questions answered in our @RyersonNIA COVID-19 Vaccine Q&amp;A Pamphlet for Older #Canadians https://t.co/TmANL5Vv3K https://t.co/GyJNzrRiqn
+635	Covid-19 is a serious disease. Vaccination gives you the best protection against it and the #Covid19 vaccines are safe and effective. For more information go to https://t.co/I8ydWHtNY3 #TeamLAS medic Rasak has had his vaccine and this is his message: https://t.co/Q5zGWfBz28
+636	Duterte also said that more anti-COVID-19 vaccines coming from the national government and the city’s procurement from private firms are expected to arrive in the city in the coming days. READ: https://t.co/9TM7ibZrd1 https://t.co/cdWFyEbFEs
+637	At least 926 of the approximately 1,040 Maryland inmates considered vulnerable to the disease have received at least one vaccine dose and 570 have been fully vaccinated, according to MD Dept. of Public Safety and Correctional Services. https://t.co/dIGINVzRAx
+638	.@MOHFiji is training over 100 frontline workers this week, in preparation for the roll-out of the COVID-19 vaccines in Fiji. The training, which is supported by UNICEF &amp; WHO, will empower frontline workers with the right information, training and support on COVID-19 vaccines. https://t.co/CsX6pgxItv
+639	#SaudiArabia’s health minister assures the safety of #COVID19 vaccines currently being distributed in the Kingdom, after recent reports raised concerns globally over the potential health risks and side-effects of certain vaccines. https://t.co/4wjM0pMHWb

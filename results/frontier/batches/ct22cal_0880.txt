@@ -1,0 +1,31 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	Here’s what you need to know about COVID-19 vaccines in the UK, including how to stay safe before and after receiving one. https://t.co/OYwkdzdOny
+881	This man is spreading lies and fake news. Dear responsible Malaysians, kindly report him to https://t.co/i1B2suHGIN. Thank you.
+882	An Oregon researcher recently found a new COVID-19 mutation in Marion County. It's more deadly and more contagious than what the U.S. has been dealing with, but vaccines work well against it. https://t.co/tbQqX6RQFk
+883	Introducing TeleGov, a #digitalgovernment tool making appointment scheduling easy for a growing number of agencies in the U.S. Using @Microsoft tech, the SaaS solution is already used in 8 states for DMV services, #COVID19 vaccines and more. Learn more: https://t.co/9G9vSYSyTl https://t.co/0auozgTPj6
+884	At least seven countries in Europe have suspended AstraZeneca’s COVID-19 vaccines or pulled batches after suspicious deaths among recently vaccinated https://t.co/xL4Wg8e4uJ
+885	State and county lawmakers are sounding off, saying that the health department has not been transparent with its COVID vaccine distribution. They also say that the suburbs are being overlooked. @KimberlyDavisTV reports. https://t.co/Rv3JhiWhD0
+886	Russia is trying to kill as many Americans as possible through Bounty-gate and the spread of misinformation of our vaccines. But get this, the dayum Republican party is helping him! https://t.co/8Xz3xRvR2q
+887	This nitwit and her dim witted assessment of issues sef. The primary reason why prominent people publicly take vaccines is to establish the credibility of the exercise and allay fears of the public doubting the safety and efficacy of Covid-19 vaccines.... https://t.co/aNWC0k73aW
+888	Chinese authorities still haven't learned that censorship impedes public health. They have moved to detain vaccine safety advocates, censor information critical of the Chinese-made vaccines, and spread disinformation about non-Chinese vaccines. https://t.co/3YEcEiqDSv https://t.co/aOBzek8swU
+889	Have the Covid vaccines at your risk! Denmark joins five other countries - Austria, Estonia, Lithuania, Luxembourg and Latvia - who suspended the vaccine after a 49-year-old Austrian woman died of 'severe blood coagulation problems.' https://t.co/0CG1iaNgpd
+890	@jkbjournalist @ericgarland @MiamiHerald @GovRonDeSantis Similarly, DeSantis received a sizeable donation, through his PAC, from Publix and coincidentally gave them exclusive distribution (i.e. a monopoly) of COVID vaccines in Palm Beach county (population 1.5 million) for roughly a month. https://t.co/fd8gqyUpGT
+891	Two of the top US scientists laud India's efforts to tackle Covid-19 pandemic and said Indian vaccines have rescued the world from coronavirus. 🙏🇮🇳 #VaccineMaitri #LargestVaccineDrive #Covaxin https://t.co/PATqBUSBFN
+892	In our call with Governors today, Dr. Fauci shared exciting news from biotech company, Moderna! The first potential Coronavirus vaccine has shown promising results in a clinical trial. 45 participants received 2 doses of the vaccine &amp; all 45 produced antibodies.
+893	So my mom has been in the hospital since Friday. She had her second Covid vaccine 10 days ago. Guess what, the vaccine CAUSED her to get meningitis. No joke. And get this, my stepdad's mom had the vaccine 2 weeks ago, she had a stroke today. #CovidVaccine Don't do it!

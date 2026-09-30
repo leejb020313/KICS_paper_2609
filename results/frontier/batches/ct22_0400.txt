@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	ZANZIBAR’s Minister for Health, Social Welfare, Elderly, Gender and Children, Mr Nassor Ahmed Mazrui has insisted that the country will not accept Covid-19 vaccines until health experts approve their efficacy. https://t.co/OFENG390NP
+401	A game-changer in the fight against #COVID19 in #Mozambique! COVID-19 vaccines as part of the #COVAX facility are now in Mozambique. Still stay safe with preventive measures - mask, wash hands, keep 2m distance. Thank you @gavi, @CEPIvaccines, and @WHO https://t.co/m8Ixhfv0Ea
+402	Yesterday, I voted for the #AmericanRescuePlan to bring more funds for vaccines, stimulus checks, small businesses, extended unemployment insurance, and much more. Next step: President Biden signing this lifesaving relief bill into law #ForThePeople. https://t.co/HAVbUQu2Gx
+403	@ChrisBBacon3 @thedaily_expose @PeeniHenare There are vaccines coming available that rely on virus trace and immune system recognition. This rna vaccine should not be used. Shouldn’t be long to wait. In any case there is Ivermectin, VitD3 and zinc with similar efficacy. Problem is Covid is a political virus.
+404	#ICYMI: Lagos may start adminstering COVID-19 vaccines on Thursday | The Guardian Nigeria News - Nigeria and World News https://t.co/NAjMBsmGDO
+405	@StevenTDennis The increase in the wealth of the 10 richest billionaires since the crisis began is more than enough to prevent anyone on Earth from falling into poverty because of the virus and to pay for a COVID-19 vaccine for all, https://t.co/B2Cdt6vRrk
+406	Michael Olsterholm predicts that COVID variants will likely kick off a surge in cases and deaths in the U.S. in a matter of weeks, and says we should delay the second doses of two-shot vaccines until after the wave. @m_scribe reports https://t.co/OBoefLVgS4
+407	Financing agreement will reportedly be between US, Japan and others and focus on expanding output of Indian companies manufacturing COVID-19 vaccines sponsored by Novavax and Johnson &amp; Johnson. By @DavidBrunnstrom &amp; @MichaelVMartina https://t.co/sW6fRUUxIr
+408	“This vaccine grab by rich countries meant that most of the world would get safe and approved vaccines only in 2022, and in some cases not even until 2024.” @Jayati1609 on the political economy of Covid-19 vaccines. https://t.co/Tcic9DvuLz
+409	Health staff across the country have joined the CDM, and are refusing to get their second dose of vaccines for fear that if they return to their place of employment military officials will force them back to work. https://t.co/wp50D7B4Nh
+410	In May last year, the four Visegrad countries pledged at an international conference to provide €3 million towards the development of COVID-19 vaccines. But so far, Poland, Slovakia and the Czech Republic have not given any money https://t.co/TfcAwqOW0B
+411	Renée Rassilyer-Bomers, ‘03, ‘05, ‘16, played an integral role in establishing the Swedish Community COVID-19 Vaccination Clinic at @seattleu. With ~48,000 vaccines administered, it is now being used as a model for clinics across the nation! 👩🏻‍⚕️Learn more: https://t.co/JAoXaiRifQ https://t.co/dgOLOBgTAx
+412	After thousands of signups @1daysooner and https://t.co/zXOWggsrJU, today volunteers have been exposed to COVID-19 to advance our knowledge of the virus, treatments, and vaccines. Their altruism is inspiring, and helping to end the pandemic. My sincere thanks and best wishes!
+413	The @RideSacRT launched a new community survey to help plan future service and gauge rider and community attitudes about travel on SacRT as vaccines are being rolled out and cases of COVID-19 are significantly dropping. Take the survey here: https://t.co/Lp3niUZ0nt https://t.co/iIUlHHOXrU
+414	The current COVID-19 vaccines are safe and highly effective and they could save your life. The best vaccine is the one you can get when it’s your turn. For questions about vaccines, you can call 1-877-CO VAX CO (1-877-268-2926). @DenverHealthMed @SGilmoreDist11 https://t.co/AZnT1Q9yDs
+415	Vulnerable Populations: Those deemed medically vulnerable to COVID-19 must have the COVID-19 Determination of Extreme Vulnerability form completed and signed by a physician. Vaccines will not be given if the form is not completed. Download the form at: https://t.co/rTAYRRag8v
+416	Darkweb and Scammers Now Selling COVID-19 Vaccines for as much as $500 (Ksh. 54,800) ... Paid in Bitcoins - READ MORE - https://t.co/1VTOAEtgEa https://t.co/cqKhUNSPP5
+417	The production &amp; distribution of Covid-19 vaccines has exposed &amp; intensified global inequality. @Jayati1609 on how the blatant vaccine grab by rich countries and the protection of patent rights by advanced countries harm health outcomes everywhere. https://t.co/Tcic9DvuLz
+418	Death Rates Skyrocket in Israel Following Pfizer Experimental COVID 'Vaccines' https://t.co/xx0zTXYHvI and you people who think this vaccine is going to save your life better rethink your game plan. This is MURDER... @AlanCane604 @anthonyfurey
+419	The efficacy of the Pfizer vaccine may not be as high as reported by Israeli studies, some experts say, pointing to the fact that the original data was collected while Israelis were social distancing, wearing masks and the country was in a lockdown. https://t.co/0SndX2ACE5
+420	@FT on Wednesday reported that the United States is working with allies Japan, India and Australia on a plan to distribute COVID-19 vaccines in Asia to counter the influence of China.
+421	Many Latinos are front-line workers who have seen #COVID19 devastate their families and community. We must tear down barriers to vaccinations &amp; increase access, from providing more information in Spanish to offering vaccines at pop-up sites. @COPulsePoll https://t.co/S3Mbv2Cz3X
+422	There are no Sars2 vaccines, and Covid is a set of symptoms. Those are not vaccines. It's experimental Gene Therapy. Stay alert, stay alive. https://t.co/sBwprU2kk8
+423	Austria, the Czech Republic, Latvia, Bulgaria and Slovenia urge the European Union to hold meeting to discuss unfair distribution of #COVID19 vaccines https://t.co/Wn8wjMA0zw
+424	Australian athletes and officials will not take part in an International Olympic Committee deal to buy COVID-19 vaccines from China for Olympic and Paralympic participants ahead of the Tokyo Games | @phillutton78 https://t.co/gTovuxNS4h
+425	The Kenya Catholic Doctors Association raised eyebrows when they made three claims about repurposed #Covid19 treatments and vaccines. We found that one of their claims was misleading and two were incorrect. https://t.co/u4ivMkACL6
+426	Regina had 67 new cases on 746 tests, 9% positive rate. We remain the Covid-19 hotspot in Saskatchewan and Canada. We are in a race between the UK variant and the vaccines. #covidsk #COVID19SK
+427	Delaying second doses of #COVID19 vaccines should reduce case numbers in the near term; however, the longer term case burden and the potential for evolution of viral ‘escape’ from immunity will depend on the robustness of immune responses. https://t.co/MFVvS3YGVw
+428	Commission extends transparency and authorisation mechanism for exports of COVID-19 vaccines https://t.co/nmCZQomYSU
+429	Proud of the work @GroupSJR created with the @AdCouncil’s Covid Collective featuring former Presidents and former First Ladies encouraging Americans to learn more about the COVID-19 vaccines. Watch it here https://t.co/PYFr2dtZNh 👇
+430	@YardleyShooting The COVID-19 viral vector vaccines under development use non-replicating viral vectors. Once injected into the body, these vaccine viruses begin infecting our cells and inserting their genetic material – including the antigen gene – into the cells' nuclei. https://t.co/7COT9YcLsd
+431	#VoyagesAfriq We are glad that we have launched the delivery of our mission-critical service with the distribution of much-anticipated COVID-19 vaccine. We will be repeating the remarkable and globally recognized success in leading @flyethiopian https://t.co/fjxzC1Vlt0
+432	If COVID-19 mutations are left to thrive it could lead to vaccines, diagnostics, and treatments that are less effective. But a quarter of countries have not submitted data to the global database tracking mutations. https://t.co/GdRckJYBud
+433	@TeresaCCarter2 @YDanasmithdutra I haven't kept up on COVID vaccines, but: Mar 11, 2021: 1/ AstraZeneca’s vaccine is authorized in more than 70 countries, according to a company spox, [but] its US clinical trial has not yet reported results, and the company has not applied to the FDA... https://t.co/jh5oTfqoAO
+434	South Park' is back with an hour-long special! The episode revolves around Cartman and the gang trying to get a vaccine for their teacher, Mrs. Nelson. https://t.co/ZhEbQgydwE
+435	We have limited COVID-19 vaccine appointments available for community members who meet current tier eligibility requirements. Learn more about eligibility and schedule an appointment: https://t.co/7HSUNoI2jl
+436	If the virus isn’t asking for ID, neither should our testing and vaccination centers! IDs cost ⌛ &amp; 💰 — that’s something that over 21 million Americans simply DON’T have. Tell Congress: No IDs for vaccines! It takes just 30 seconds! https://t.co/8FnLfPTE0j
+437	Facebook has banned certain false claims about Covid-19 vaccines. But thousands of posts containing restricted claims have appeared on the platform since a policy update last month, and many lingered there for days or longer https://t.co/rfRaDesTFe
+438	With three COVID-19 vaccines available in the U.S.—Pfizer-BioNTech, Moderna, and Johnson &amp; Johnson—selecting one might seem difficult, if you’re given a choice. Find out which vaccine is best for you. https://t.co/mzOsZFSrpi
+439	Vaccines are being wasted because #SouthAustralia doesn’t have specialised syringes, and we’ll fall short of the 12,000-dose target, a #COVID19 committee has heard. @Bradcrouch reports. https://t.co/vLjuhmTEfr

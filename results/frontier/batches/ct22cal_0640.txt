@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	As of March 6th 3PM KST, #BTSARMY donated approx. 505,500,000 won for COVID-19 relief in 9 days!! @BTS_twt 💜💜💜💜💜💜💜 https://t.co/uHoZHtDn1S
+641	“Vaccines, testing, and tracing: The bill directs $46 billion to the Department of Health and Human Services to detect, diagnose, trace, and monitor Covid-19.” Great news for rapid testing and vaccines!! $SONA @SonaNanotech https://t.co/DsuzVqizf2
+642	Trump says “we were early” on #coronavirus. 2/26 “The 15 (people) within a couple of days is going to be down to close to 0” 2/28 “One day, it’s like a miracle, it will disappear” 2/28 “This is their new hoax” 3/12 “It’s going to go away” Yup. We were early
+643	23 years after Canada proposed bar codes to deliver vaccines quickly/accurately, the country is in an IT dark age and has fallen behind countries like India and Turkey tracking vaccines to protect people from #COVID19 @Justin_Ling @globeandmail https://t.co/Ljr4JQnO9l
+644	Meetings of the WTO Council for Trade-Related Aspects of Intellectual Property Rights have ended once again with the U.S. and other rich nations objecting to a proposition which would ease IP restrictions on life-saving COVID-19 vaccines and treatments. https://t.co/cvCwGMh0nV
+645	We had only about 40% of the city of Newark and the surrounding region ready and willing to take the vaccine when it arrived. Now that number is closer to 60%, said the president of Newark Hospital. https://t.co/4Ypw4C2kLd
+646	The State of Maryland is reporting 50,484 doses of COVID-19 vaccines administered over the past 24 hours—breaking our single-day record and exceeding 50,000 for the first time—as the state surpassed 1.5 million total vaccines administered. https://t.co/xX1QmHFfmy
+647	A new outbreak of #COVID19 has been declared at the Cottonwoods Care Centre in the Interior Health region where staff and residents had already received vaccines, #BC's provincial health officer announced Monday. https://t.co/WFeWuB5b6N
+648	Status of COVID-19 Vaccines within WHO EUL/PQ evaluation process. Notes: Sinopharm vaccine has two types. Peru has recommended discontinuation of 'Sinopharm Wuhan' vaccine for inadequate efficacy. 'Sinopharm Beijing' vaccine data is w/ WHO and they're very near to get EUL/PQ. https://t.co/1c7jYQh88L
+649	@Mal_DuBois The vaccines won't stop us getting the virus and it won't stop us spreading the virus to other people. https://t.co/nz7GnakMJI
+650	The Italian COVID-19 outbreak has just been explosive... look at the numbers &amp; timeframe. Time is not a luxury we have! Feb 18: 3 cases Feb 21: 20 cases Feb 24: 231 cases Feb 27: 655 cases Mar 1: 1,694 cases Mar 4: 3,089 cases Mar 7: 5,883 cases
+651	Medical myths around COVID-19 vaccine, The vaccines are not safe, because they were developed so fast, The vaccine will alter DNA, and can give you COVID-19 disease and make you infertile It is hard to believe a vaccine is available for a disease hardly known a year ago!
+652	THREAD: I mostly talk about movies on here, but here goes. We are currently pivoting our factory to solely make surgical masks and other medical garments in short supply. We can make 2 million masks a day, and are looking to help in any way possible during this time. #COVID19 https://t.co/dOX7N3e1GJ
+653	Trump: Corona-flu is not serious, go to work if you have it, WHO numbers are fake. Investors: Dump stocks as president makes clear he's not going to deal with this. Rick Santelli: Meh, let's just kill millions so stock prices go up. Too many Republicans are inhuman monsters.
+654	Russia has created front organizations, with ties to Russian intelligence, to conduct a disinformation against US vaccines. They include New Eastern Outlook and Oriental Review (linked to SVR), News Front (linked to FSB), Rebel Inside (linked to GRU) https://t.co/HLpwt6oPU2
+655	Big Pharma is putting their profits ahead of saving lives and ending the pandemic, despite getting massive govt support to research and develop COVID-19 vaccines, and in some cases had nearly all of their costs covered by taxpayer funds. #PeoplesVaccine https://t.co/OwiaNMaNJP
+656	Denmark, Norway and Iceland suspend use of AstraZeneca Covid vaccine over reports of blood clots https://t.co/RAqwJjzJWW #COVID19 #CovidVaccine #AstraZeneca
+657	President Trump reportedly offered about $1 billion to a German firm working on a coronavirus vaccine, raising fears in Berlin that he was trying to make sure it would be available first, and perhaps exclusively, in the U.S. https://t.co/4GmmzzkrUp
+658	@rlamartini I would be thrilled if the vaccines turn out to be both safe and effective at not only reducing the symptoms of COVID-19, but the transmission of SARS-CoV-2 virus. Meantime I think government is making a mistake pushing so hard, so fast, to all populations. Side effects unknown.
+659	The U.S. had a program that put scientists all over the world to identify viruses early so we could get a head start on vaccines and treatments. The program was working in the exact lab in Wuhan that identified coronavirus in January. Trump shut the program down last September.
+660	Safe #vaccines are critical to fighting diseases, from #polio to #COVID-19 and evidence shows that the protection provided by vaccines currently licensed in the US outweighs any potential risks https://t.co/jihp6ZhvqV via @USGAO https://t.co/cxksIQmRSH
+661	The latest false antivaccine claim is that a research paper by researchers at @sloan_kettering shows that RNA in the #Moderna and #Pfizer #CovidVaccine can cause cancer. It’s based on a complete misunderstanding and misapplication of a cherry-picked study. https://t.co/s75EqXNOmW
+662	Cheers and hope as doctor gets Nigeria's first COVID-19 vaccine https://t.co/IKstwYQxW5
+663	Drug companies reportedly killed a provision in the corona virus funding bill that would have cracked down on unfair prices. A striking example of how lobbying and influence can get industry what it wants, even in the midst of a global health crisis. https://t.co/u5SgzDpwtR
+664	Bravo Ontario!! Deciding to target Long Term Care homes for the first COVID-19 vaccines substantially reduced infections, hospitalizations, &amp; deaths among LTC residents and health care workers. #COVID19Ontario https://t.co/1BVhNiRz76
+665	Due to structural inequities that have been exacerbated by #COVID19, many Black and Latinx patients have been left out of the vaccination picture. Experts offer insight on the importance of accessible data on race, ethnicity, and vaccines. https://t.co/hllTtivlsK
+666	The U.S. is set to receive enough doses of the three approved COVID-19 vaccines — from Pfizer, Moderna and Johnson &amp; Johnson — by the middle of May to cover all adults. https://t.co/K4JieEZgYS
+667	They told you vaccines were 100% safe and 95% effective. They lied. The EMA covid-19 data leak, and what it tells us about mRNA instability https://t.co/m0LURlgOke
+668	Ontario staring down possible third wave of #COVID19, but severity remains unclear. Variants, vaccines, and oncoming warmer weather all make accurate predictions difficult, experts say, by @AdamCarterCBC https://t.co/WqYdQpIdCH via @cbcnews #cdnhealth #onpoli
+669	Dr Tehseen Khan explains that the COVID-19 vaccines do not contain pork products or any animal products. The vaccines are safe and the most effective way to prevent you getting ill from coronavirus. Make sure you get your COVID-19 vaccine when it is your turn. #KeepLondonSafe https://t.co/n8a2BiifdD
+670	Luckily in the USA, Federal Law prohibits employers and others from requiring vaccination with a COVID vaccine distributed under an Emergency Use Authorization: https://t.co/LzxSIkER7Y FDA clearly states that these are investigational vaccines. See p 9: https://t.co/rcgMqwiuDC
+671	Zimbabwe on Tuesday announced its emergency use of two Chinese COVID-19 vaccines, produced by #Sinopharm and #Sinovac. https://t.co/osxncZDc7X
+672	In less than a year, the world has a number of available licensed Covid-19 vaccines. Nikki Turner, associate professor in General Practice and Primary Health Care and Immunisation Advisory Centre Clinical Director, summarises how it was done. https://t.co/IbEofHHGtb
+673	Delivering vaccines to health facilities in Malaysia for more than 25 years, @pharmaniaga_bhd is looking to Oracle to automate processes and meet the monumental challenge of distributing the COVID-19 vaccine https://t.co/tWDJ80TVyI https://t.co/DktvdMAqI4
+674	#NEW at 11PM: People 50 and older can soon get COVID-19 vaccines in Ohio. Governor Mike DeWine said they are eligible as of Thursday morning. Those we talked with included in the next phase said there is hope in the doses to come. #wlwt @wlwt https://t.co/rQ1dQtOcJN
+675	Per the AP, Germany has more than 1,100 confirmed #Coronavirus cases, but so far just *two deaths.* Experts say rapid testing early on likely resulted in more diagnosing of the infected and gave the country a chance to contain and prepare for the virus.
+676	A Phoenix woman grew concerned after a man knocked on her door attempting to register her for a COVID-19 vaccine. FOX 10 looked into it and it was confirmed to be an effort by the state's health department to get a certain hard hit zip code registered.​ https://t.co/SXjRPfZyxN
+677	Students, faculty and staff can now register to receive the COVID-19 vaccine @NCState! The university plans to start administering vaccines by appointment at Talley Student Union the week of March 22. Check your email for more info, and pre-register here: https://t.co/nBxrFGovV1 https://t.co/d6FX0YlLIl
+678	- EMERGENCY ALERT - Mass Murdering of Humans - In Progress - NOW COVID-19 RNA Based Vaccines and the Risk of Prion Disease The vaccine is a bioweapon and even more dangerous than the original infection. Analysis of the Pfizer vaccine against COVID-19 identified two potential.. https://t.co/1RNmVdpdqI
+679	The RCDHU has announced who is eligible to receive the COVID-19 vaccine. These priority groups include retirement home residents, essential caregivers, residents who are 80 years and older and Indigenous residents who are 55 years of age and older. https://t.co/x65nFMxLuV

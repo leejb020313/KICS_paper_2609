@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	Unilateral adenopathy is not an uncommon benign side effect of vaccines- that is the immune response- your body at work. It is benign and will resolve. https://t.co/XPGnwRkKG9 @CI_Journal @BreastImaging @Forbes @KizzyPhD @KemiMDRad @DrGMcGinty #EndTheConfusion #COVID19Vaccine
+121	Vaccines owe their very existence to multicultural collaboration. The experimental treatments that culminated in Edward Jenner’s first inoculation in 1796 grew out of smallpox precautions learned from the Ottoman empire and China – Sadakat Kadri https://t.co/AwcjShlvVQ
+122	NEWS: Early Friday morning, Pitt-Johnstown Nursing Department members joined forces to administer a few hundred COVID-19 vaccines to residents of the Town House, Vine and Connor Towers in downtown Johnstown. https://t.co/gWSsgLNVj4
+123	All 3 FDA approved vaccines are 100% effective at preventing hospitalizations and death. Get whichever vaccine you are able to as soon as it's offered to you, it could save your life. Register for the COVID-19 vaccine at https://t.co/nQqh5Md5O4 or by calling 1-855-600-3453. https://t.co/FtXiBEY3of
+124	As of Friday, four Arizona counties were administering COVID-19 vaccines to people 65 and older, while nine more had lowered the threshold to people 55 and older. Two counties, Gila and Greenlee, are allowing anyone older than 16 to register for a shot. https://t.co/1O2iB5JUHK
+125	covid death rate: 2.21% y'all: this isn't that serious, i'll survive blood clots correlated to (correlation ≠ causation) one vaccine: 0.000187% y'all: vaccines are a hoax and unsafe, i can't risk it
+126	Our Mar. 19 vaccine clinic is now FULL. The next #COVID19 (Pfizer) vaccine clinic for ages 50+ or those w/certain health conditions or professions will be Mar. 22 from 7:30am – 7:30pm. https://t.co/PZlgtDQW07 Online &amp; phone sign-up begins Mar. 16 at noon. https://t.co/1w6C7yOXM9 https://t.co/wy1k9loFhL
+127	Most side effects from COVID-19 vaccines are minimal and only last about 36 hours. Here are some examples: Pain where the shot was given Fatigue Headache Muscle pain Fever Chills https://t.co/Jf2VGZKXpT
+128	With 3 #COVID19 vaccines rolling out across the US, @umichsph epidemiologist Arnold Monto — who led the @US_FDA committee that evaluated and recommended them — joined @Local4News to reflect on the success of the vaccines and talk about what's next. MORE: https://t.co/dW7mQ4ekPo https://t.co/7DkSuDJuJC
+129	@musica1a @markoskrtic @FralickMike @ThrombosisCan The potentially small -&gt; no increased clot risk with vaccines is obliterated by the clot risk with COVID disease. So even individuals with high risk thrombophilias will benefit from the vaccine. We don't want our patients getting COVID (and the scary clot risk it carries.)
+130	Don't throw away your shot! When it's your turn, get vaccinated with the first vaccine available to you. This will help protect all of us from COVID-19. Any of the COVID-19 vaccines will reduce severe disease and death. https://t.co/euicXnt2SU
+131	More than 98 million doses of COVID-19 vaccines have been administered in the U.S., according to data from the CDC. The 7-day average is now at 2.2 million shots per day and climbing. https://t.co/rTMNVoxus8
+132	Volunteered at a COVID-19 vaccination event yesterday where we got about 1,000 Moderna shots into arms. Wonderful to see so many people excited about getting their vaccines and ending this pandemic! #VaccinesWork
+133	#COVID-19 has killed over a hundred thousand people across Africa, decimated economies, and pushed millions of people into poverty and hunger with no end in sight unless there is a shift to ensure immediate full access to vaccines We need a #PeoplesVaccine, not a profit vaccine. https://t.co/Qy6ZsQu4aj
+134	$MRNA First Participants Dosed in Study Evaluating mRNA-1273 COVID-19 Booster Vaccine; In parallel, NIAID, part of NIH will conduct Phase 1 clinical trial to assess the monovalent and multivalent modified mRNA-1273 vaccines (More at https://t.co/BOqRdzA5MH)
+135	$265 billion -- about 8.5% of the bill -- is specifically listed for things like COVID testing, protective gear, treatments, vaccines and distribution. This might be where the 9% claim originates. https://t.co/Gy3w9lFQ4n
+136	COVID-19 Vaccines by appointment only - Today and Friday, March 10th &amp; 12th, at Kingsbrook Medical Center from 7:30AM - 7PM https://t.co/TNdD9j0fCN
+137	#COVID19 #JoeBiden to announce that U.S. will secure an additional 100 million doses of J&amp;J vaccine and Merck, just over a week after announcing that his administration had helped broker a deal between the rival companies https://t.co/qVsOqwtpSv #JohnsonAndJohnson #vaccines
+138	A new US administration. A #Brexit deal. COVID-19 vaccines. Find out CEOs' concerns and expectations for 2021 in our new Global CEO Survey report launching 11 March. Register for our launch event here. &gt;&gt; https://t.co/K7zmC48ff9 #CEOSurvey @PwC_Italia https://t.co/W80ZeslI3B
+139	With more vaccine on hand than it can distribute, the U.S. state of Alaska opens COVID vaccines up to everyone aged 16 and older https://t.co/87sY02jdj1
+140	COVID-19 vaccines are now available for all individuals who live or work in Alaska and are age 16 and older, more information on signing up at https://t.co/BzFAvRyJxV
+141	There’s only one thing that really matters: all three FDA-authorized vaccines seem to work equally well — close to 100% — at preventing hospitalization and death https://t.co/2HaXHdCFQr
+142	#Instagram's own #algorithm recommended false claims about COVID-19, vaccines and the 2020 U.S. election to people who appeared interested in related topics, according to a new report from a group that tracks #online #misinformation. Report: https://t.co/xe3Wv3D2Lx
+143	The Benton County Mass Vaccination Site is a well-oiled machine, having distributed over 25,000 vaccines since it opened at the end of January. I had the chance to tour the site and see firsthand how staff, service members, and volunteers are doing their part to defeat COVID-19. https://t.co/I8RLPTs9xI
+144	For even more information on the COVID-19 vaccines, transmission, and our return to normal, join us for a virtual event this Thursday at 12:30 EST for a conversation featuring @MonicaGandhi9 , @DrPaulOffit , @DrOnyemaOgbuagu and @EricTopol.
+145	Ross Silverman (@PHLU) discusses new @CDCgov travel guidelines, 'vaccine passports', and the choice of vaccines now that there are three authorized options in his weekly review for the #WISEIndiana COVID-19 Daily Digest. Read more -&gt; https://t.co/2CmsKIXl69.
+146	Tonight (3/9): Attend COVID-19 Vaccines and the Disability Community, a virtual event hosted by the Center for Public Representation, at 6:00PM. CART and ASL will be provided. Learn more and register - https://t.co/Ne7G78YByb @CambCPD https://t.co/Ng5wwA1fD0
+147	We know that many of you are anxious to get your first vaccine. To get the most protection, Pfizer and Moderna vaccines require two doses. These COVID-19 vaccines are proven to be up to 95% effective after two doses. https://t.co/X53IoBja3F
+148	Here are the top 3 ethical and #corruption challenges for #COVID19 vaccine distribution: 1️⃣ legal but ethically dubious loopholes, like #VaccineTourism 2️⃣ political favors &amp; queue-jumping 3️⃣ black market vaccines &amp; miracle cures Read @TheEconomist https://t.co/0tgl7Pp09q
+149	As the second wave of COVID-19 sweeps across Africa, bringing steep increases in infections and deaths, the battle between facts and conspiracies – especially around the safety of COVID vaccines – has also intensified. https://t.co/zUB8Jd5sMQ
+150	The expenditure to be incurred as operational cost for vaccination of estimated 3 crore healthcare workers and frontline workers is about Rs 480 crore and vaccines cost is about Rs 1392.82 crore, minister of state for health Ashwini Choubey said. https://t.co/gUXdDfVDSr
+151	Vaccines have changed the world for the better, protecting individuals and communities from serious infectious diseases. To date, Netcare frontline heroes who were first in line to be vaccinated for COVID-19 have overwhelmingly supported the vaccination programme. https://t.co/2EqwlZuYQT
+152	Miami's Jackson Hospital Now Offering Vaccines to Medically Vulnerable Adults and Teens: Jackson Memorial Hospital will open up its vaccine appointments to anyone 16 years and older with a high-risk medical condition. https://t.co/f85OoeNfFv https://t.co/6LIHAFUTCt
+153	Safety is our number one priority. Before administering the #COVID19 vaccine, all health professionals must complete the mandatory COVID-19 vaccination training program. This ensures consistent and safe handling, storage and administration. Visit https://t.co/j2jhZJpees https://t.co/2OoaUAifzV
+154	I've had the first dose of #COVIDVaccine for myself, and for my community! 🙌🏽 🩹💪🏼Get your #COVID vaccine if you have #IBD or you just want to end the pandemic!! #ThankYouScience #ThisIsOurShot https://t.co/URSM46RStR
+155	Priority populations in Iron Bridge eligible for COVID-19 vaccines this week: Clinics are upcoming across central and east Algoma in the coming weeks https://t.co/tLT9xOVbfI https://t.co/WpBhDHIt9p
+156	Weekly Kansas COVID-19 update: Again this week the metrics themselves are overall pretty good, but the trends are mixed. Still think it's possible we see another spike in cases, but blunted vaccines and acquired immunity. https://t.co/VhD0ihGnV2 #ksleg https://t.co/imzMGafV7m
+157	Starting Thursday in Ohio, COVID-19 vaccines available to those as young as 50, and people with Type 2 diabetes or end-stage renal disease https://t.co/FOvquXpWlA via @DispatchAlerts
+158	Vaccines work Long term care experience in Ontario - vaccination associated with an estimated 89% reduction in infection among residents, a 79% reduction in infections in HCWs, and a 96% reduction in mortality (all relative numbers) https://t.co/Xsir7RjUPv
+159	Starting later this month, thousands more Ohioans — including Cincinnati residents — will be able to get COVID-19 vaccines. https://t.co/YvacGhUaey

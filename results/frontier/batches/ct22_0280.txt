@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	Egypt is in talks with India and China to produce COVID-19 vaccines.
+281	We've published new guidance on the information we would need to approve any modifications to authorised COVID-19 vaccines, should virus mutations make them less effective at preventing the disease. Find out more: https://t.co/GV7DwTKAje https://t.co/FTw9gDmt0s
+282	Lebanon has one of the world's highest rates of new covid-19 infections and deaths. Efforts to distribute vaccines fairly have been hampered by government nepotism https://t.co/w1h5VCSRB4
+283	Together with collaborators, we founded a spinout company to develop and commercialise a nasal spray vaccine against COVID. The vaccine is based on research by our and @UniEastFinland's researchers. #HelsinkiHealth #corona #COVID19 #covidvaccine https://t.co/PZ7LxzJi7E
+284	It's really important that we all get protected — particularly our LGBT+ community.' For #LBTWomensHealthWeek, Director for Equality and Inclusion @Jenldt shares an important vaccine message to the LGBT+ community. Find out more about the #COVIDVaccine. https://t.co/roEUCuZBh1 https://t.co/IO491Lex8j
+285	Vaccines save lives and help to eradicate diseases that once were prevalent around the world. I encourage all Albertans to get their COVID-19 shot when they are eligible to do so &amp; help to put COVID-19 behind us. https://t.co/dfkxZg3MXZ
+286	#TeamOntario is making steady progress in our mission to get vaccines out as quickly as possible. This week, we administered our one millionth dose of COVID-19 vaccine. Thank you to all our amazing frontline health care heroes who have pitched in and made this possible. https://t.co/SxU8EEEs6P
+287	With Trump gone, QAnon groups seethe with covid denialism and vaccine misinformation The ideology’s followers have reconstituted themselves as a leaderless but still fervent online movement https://t.co/e35AkCTgoD
+288	Dr. Geert Vanden Bossche (https://t.co/UfqjgJ0mCj) used to work for Gates' GAVI Vaccine Alliance and the B&amp;M Gates Foundation. He points out that current COVID vaccines do NOT prevent infection and deploying prophylactic vaccines in the midst of pandemic is a recipe for disaster.
+289	If you’re wondering which of the COVID-19 vaccines is best for you, the short answer is: whichever one is available to you. All 3 are safe and highly effective at preventing #COVID19 hospitalizations and deaths. Learn more: https://t.co/7gn2hiod6q https://t.co/vvUazKoL4J
+290	We've revised the patient education handout, COVID Vaccine Advice if You are Pregnant or Breastfeeding. The latest version includes info on all 3 vaccines authorized for use in pregnant &amp; lactating people in the U.S. (Pfizer, Moderna, and Janssen/J&amp;J). https://t.co/qClgAVj38Q https://t.co/Ob44stj1ih
+291	Africa is almost out of COVID. No masks, no social distancing and no vaccines. 🧐#Covid_19
+292	Gov. Ron DeSantis has yet to make vaccines available to state prisons, even as corrections officials have requested doses and identified thousands of elderly inmates who meet the state’s eligibility requirements. https://t.co/H9LtyeWbXB
+293	My @WSJ column on tech tips for booking Covid vaccines is (sadly) one of the most popular things I’ve ever written. I have hundreds of emails, ranging from thankful readers to those you need help. https://t.co/QXJ32RS6Lz
+294	Florida Agriculture Commish asking FBI to investigate DeSantis' 'vaccine auction'. I will not stand by and let our vaccines be used as political game, and to go ... to the highest bidders while so many of our Floridians are suffering #RemoveRon https://t.co/wvdnkcndD1
+295	The only two countries promoting human rights and saving lives in developing nations are Russia and China. The Chinese are actually donating vast amounts of COVID-19 vaccines free of charge. https://t.co/f3PUhvItu0
+296	On Thursday, Gov. Andy Beshear said cases and deaths from COVID-19 continue to moderate as more Kentuckians receive the safe and effective vaccines. Read more: https://t.co/C6bMusZ8IQ https://t.co/H29VpQ7meT
+297	With the arrival of vaccines, proven safe and effective around the world, we can all play our part in protecting ourselves, our loved ones, and SA. #rollupSA Find out when it’s your turn to roll up at https://t.co/OYQPwNuHYm. https://t.co/Ya7fnYAPWx
+298	Dr. Cynthia Kudji-Sylvester and daughter Dr. Jasmine Kudji both graduated medical school last spring. In the time since, they have started their new careers at the same hospital, learned more about each other and received their Covid-19 vaccines. https://t.co/fOnCvoZjDf
+299	America’s COVID-19 vaccine drive is failing to reach Black and Hispanic communities, despite pervasive warnings about their lack of healthcare access and heightened vaccine hesitancy, rooted in distrust of the government and historical medical exploitation https://t.co/gYNenWgZqU
+300	Tonight, the House took action to ensure VA can provide COVID-19 vaccines to ALL veterans and caregivers who walk through its doors We must get more shots in arms — our VA VACCINE Act makes sure that VA can. https://t.co/lf53u74FKo
+301	There are important differences in the technology employed in the smallpox vaccine and the currently available Covid vaccines, with implications for the immune system. https://t.co/ovNCa32kqs
+302	How Philadelphia's vaccination efforts fell to a startup run by a 22-year-old who took home a bag of vaccines and gave them to his friends https://t.co/sr5hFElQlq
+303	Red-hat MAGA world has been against the Covid vaccine from day one, even while Trump was in office promising vaccines and boasting about vaccines. They just assumed he didn't really mean it. https://t.co/VSsZUzbLHn
+304	HIV - 40 years of research, no vaccine. Cancer - Over 100 years of research, no vaccine Common cold - Over 200 years of research, no vaccine COVID-19 - 6 months research, vaccine approved. Both Pfizer and Moderna vaccine are mRNA vaccines. mRNA has been trialled as a 1/2
+305	Denmark, Norway and Iceland have temporarily suspended the use of AstraZeneca's Covid-19 vaccine over concerns about patients developing post-jab blood clots, as the manufacturer and the European Medicines Agency insisted the vaccine was safe. #vaccines https://t.co/4bP9VU8wA3
+306	🔴 Press Release Coalition of International NGOs Call for Equitable Access for Vaccines and Treatment during #COVID19 Pandemic ➡️ https://t.co/iZZkxYVQYb #NGO4VaccinEquity #VaccinEquity https://t.co/T200zR2xGB
+307	‘Vaccine apartheid’: “The roll-out of Covid-19 vaccines, with poor countries far behind, has exposed the moral bankruptcy and structural privilege of Western nations. “ https://t.co/tRGrXIFRQL
+308	Sadly, today’s appropriate focus on coronavirus deaths and vaccines has led many to overlook the deepening social crisis the nation has been enduring for decades. A growing proportion of Americans are enduring the painful decline in their quality of life. https://t.co/1brT1xqJIM
+309	WSJ's @mgordonwsj reported Russian efforts to sow disinfo regarding Pfizer &amp; other vaccines 👉Read more for insights on Russia's overt information manipulation re: vaccines from a new @SecureDemocracy report by Bret Shafer and the Hamilton team https://t.co/hPFxruP4hC
+310	History in the making. @UPS, @zipline and @gavi working together to deliver Covid-19 vaccine to rural parts of Ghana. https://t.co/c15KjRuTJt
+311	Thanks to Hon'ble PM @narendramodi ji 's vision and his initiative to distribute vaccines across the world , India has played a significant role in rescuing the world from the Covid19 pandemic. https://t.co/iGfaqZrxbE
+312	Dr. Bonnie Henry just announced a new LTC COVID-19 outbreak in the BC Interior where a high proportion of residents and staff had received both doses of vaccine. She said it's a reminder that while vaccines are effective, they can't stop all transmissions.
+313	All COVID-19 vaccines have gone through rigorous testing and review by Health Canada. When it’s your turn to receive one, know that you’re joining over 200,000 Canadians and millions around the world who will be effectively protected. These numbers are increasing every day. https://t.co/Om96jv6xLf
+314	Claim: A video published by a right-wing Facebook page called “Canada Proud” is alleging that Prime Minister @JustinTrudeau is “turning his back on science” and distributing #COVID19 vaccines “based on their race, not on their risk.” #cdnpoli #onpoli https://t.co/Qx1gmqe968
+315	Vaccine trials are not all alike and occurred at different stages in the pandemic. Limited sample sizes mean hospitalizations and deaths may still occur in large-scale vaccination programs. https://t.co/KxPzkDad1w
+316	Now that there are 3️⃣ COVID-19 vaccines available, many people have questions about the differences. All 3 vaccines are safe and effective. The best vaccine for you is the one that is available to you! Learn more about the vaccines: https://t.co/7gn2hiod6q https://t.co/A5JCGoYyvt
+317	And of course this is the first we're hearing about #COVID19 "has spread to such an extent" in Prince Rupert... COVID-19 is spreading so much in this B.C. city that vaccines will be available to all adults by April https://t.co/dCYxGO6uLz #BCpoli
+318	#COVID19 Vaccine Update: MSK is offering COVID-19 vaccines to MSK patients with cancer 18+ who live in New York State and have been in treatment on or after Jan 1, 2018, or who had at least one visit with an MSK healthcare provider since Jan 1, 2018. https://t.co/d80gmUx9GS
+319	The #EU🇪🇺and its Member States have kept their commitment and support to #Albania🇦🇱. This delivery of 750K € state-of-art CT scanner is another concrete example of this strong bond. The EU 🇪🇺continues to be next to🇦🇱, including on vaccines. More info 👉https://t.co/b5rFleOhaC. https://t.co/zw0DGnYOnI

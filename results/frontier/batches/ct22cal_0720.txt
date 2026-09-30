@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	As of March 9, over 268 mln people have been vaccinated against COVID-19 globally, and currently, no deaths from the vaccines have been confirmed, the World Health Organization....sure.... https://t.co/1r6jAUFHnj https://t.co/SjXRZlMaT1
+721	The EU blocked a shipment of Covid vaccines to Australia last week. But this desperate flailing can’t hide the EU’s own failure to procure vaccine supplies. Endless red tape and infighting among member states have led to disaster, says Xin Du https://t.co/rS3yakJSX9
+722	The countries and states that started vaccinations early are suffering again; yesterday Brazil and Texas (USA) got 2000+ and 3,000+ new COVID-19 cases respectively. There is a possibility the virus is being injected into people as vaccines just like Maxwell did in S.A for AIDS.
+723	Fenway Park, home of the Boston Red Sox, holds a special place in the hearts of Donna and Thomas Wall. They met at a game in 1967 and got engaged there in 1971. Now, they received their COVID-19 vaccines together at the park. https://t.co/HUkMWfYlE8
+724	The United States publicly blasted what it called a Russian disinformation campaign designed to undermine confidence in U.S.-made COVID-19 vaccines and vowed to fight back with every tool we have."" https://t.co/BfxUp0kkcu
+725	Vaccines will defeat this COVID-19 pandemic. And so will the spirit and talents of families like these. Have the new jab. https://t.co/sGFz9dPmLM
+726	COVID-19 vaccines for sale on the underground for $250 to $1,200 https://t.co/iHE9Qc41Ho majority of sellers came from France, Germany, the UK, and the USA, and the prices per dose ranged from $250 to $1,200, with an...
+727	The GOP blamed Obama when 4 Americans died in Benghazi They were outraged 119,000 Americans have died of COVID-19 The GOP response? No outrage. Endless praise for Trump. Craven assholes. #TrumpRallyTulsa #WomenScareTrump Rudy Trump &amp; Barr Saturday Night Massacre Mr. Berman https://t.co/eOddupdChT
+728	Some rural counties, especially those located between the Mississippi River and the Rocky Mountains like Colorado's Jackson County, lack brick-and-mortar pharmacies capable of administering the covid vaccines. 📝: @MarkianHawryluk https://t.co/XdpEl3cUPE
+729	Update on the coronavirus and vaccine rollout | As of 1pm on 8 March, the WC has: Active Covid-19: 3172 Confirmed Covid-19: 276 528 Recoveries: 262 106 A total of 17 568 vaccines had been administered by 5pm on 5 March. Statement: https://t.co/npuQMfcfSc https://t.co/d9HTQQH6qh
+730	President Biden and the leaders of Australia, India and Japan launched a plan on Friday to boost COVID-19 vaccine production and distribution in Asia. They also agreed to set up working groups to cooperate on vaccines, climate change and technology. https://t.co/CaaXTheBOe
+731	N.J. reports 37 new COVID deaths and 3,015 cases, as teacher vaccine eligibility moves up https://t.co/KE0V6oZjzp Too many deaths, too few vaccines, and R rate keeps climbing. This is a THIRD wave and we can't open up. #NoUnsafeReturn
+732	🔥CDC update🔥 If a person has received one dose of mRNA vaccine and the second is contraindicated or not available , the J&amp;J vaccine may be considered — but should not be given until at least 28 days after the mRNA vaccine https://t.co/lnj6BKxWtL
+733	Vaccine propaganda in action! A fresh report by @SecureDemocracy shows, among other, Kremlin-affiliated accounts significantly more often spread negative news about the Pfizer and Moderna vaccines, often containing #disinformation https://t.co/WT5LZeOGIN https://t.co/XBJHo5WDrE
+734	🎧 Most of the world doesn't yet have access to COVID-19 vaccines. On Why It Matters podcast, Dr. Anthony Fauci explains how new variants could tighten the pandemic’s grip on rich and poor countries alike. ⬇️
+735	This week, the world's richest countries denied low and middle-income countries the ability to produce COVID-19 vaccines of their own. We NEED to be talking about this. https://t.co/To49Y5i8SA
+736	With the COVAX facility WHO and partners are committed to ensuring equitable access to all countries. Equity in vaccines, diagnostics and therapeutics is the moral imperative of our times. @PandavRajesh https://t.co/diA7uhztmH via @kathmandupost
+737	CVS is now administering Covid-19 vaccines in nearly 1,200 stores across 29 states and Puerto Rico. Covid-19 vaccine appointments at CVS are only available online or by phone. https://t.co/DZxVeCr0Gc
+738	Know the facts about #COVID19. Don’t share rumors &amp; unintentionally spread misinformation. Federal, state &amp; local governments are posting current and accurate information. For help in distinguishing rumor from fact, see @FEMA Coronavirus Rumor Control: https://t.co/Hi5AF1waWk https://t.co/AkbQjOM2xw
+739	#Rotary member Dr. Pavithra, PhD. Microbiology and Coronavirus, debunks nine myths related to #Covid19 vaccines. https://t.co/3MB9hKs1t4 #RotaryResponds
+740	👏🏼👏🏼👏🏼👏🏼 Covax starts deliveries of COVID-19 vaccines 💉 in 🇦🇱. 🇪🇺 EU is proud to be a strong supporter of Covax to ensure safe and affordable COVID-19 vaccines reach all countries in the 🌎 #TeamEurope #StrongerTogether #VaccinesForAll
+741	Global pharmaceutical companies have berated South Africa and India's efforts to waive certain Trade-Related Intellectual Property Rights which, the countries say, could ensure access to Covid-19 vaccines. | @azarrahk https://t.co/wyhHJnxYJP
+742	Trump administration orders immigration offices to immediately remove posters explaining how to prevent #coronavirus https://t.co/sDFMQ9guRl
+743	Confirmed -- Google is recommending *all* of its North American employees work from home due to #coronavirus concerns. Biggest company to do this so far. Parent company Alphabet has more than 100,000 employees most of whom work in the US.
+744	@OntariosDoctors welcome today’s announcement that family doctors will begin administering #COVID19 vaccines on Friday. The details released today will help doctors plan and provide the best care for their patients. https://t.co/3fGawZQdHk https://t.co/YHhlo6dFOL
+745	UK, US and EU have blocked S Africa and India’s proposal to waive intellectual property protections on COVID-19 vaccines and treatments at the WTO general council meeting. colonial logic go brrr
+746	I see that #AstraZeneca paid a lot to #media but truth is that their vaccine as all COVID-19 #vaccines are unproved and may or may not prevent COVID-19. https://t.co/B7PGAyudn0 Evidence in my blog. Rest is propaganda loves. If someone says opposite he/she is paid to state it. https://t.co/tC5vZGYB7t
+747	South Africa, India, and more than 100 other nations have called on the World Trade Organization to temporarily waive patents for COVID-19 vaccines https://t.co/vxEn8RURWr https://t.co/ULseR92LMf
+748	Amerijet flew 350,000 doses of India-produced AstraZeneca C-19 vaccines to destinations in the Caribbean + Central America https://t.co/8g39VQ68Me
+749	@xsambob The most common side effects with the J&amp;J COVID-19 vaccine are pain at the injection site, headache, and flu-like symptoms. There have been fewer cases of allergic reactions to the J&amp;J vaccine compared with the Moderna-NIAID and Pfizer-BioNTech vaccines. https://t.co/uU6b4Vd1lJ
+750	The messenger RNA technology that developed a successful #covid19 vaccine could serve as the solution for HIV, sickle cell, and malaria vaccines. https://t.co/jFwOlSOJKZ
+751	The DOH and the FDA said the Philippines will not stop the rollout of AstraZeneca COVID-19 vaccines despite reports of blood clot among recipients in Europe. https://t.co/cZFHmaPtvp via @PTVph
+752	WHO's Dr. Abeyasinghe says the Philippines was prioritized and given a large batch of COVID-19 vaccines from COVAX because of increased transmission. @ABSCBNNews
+753	This Thursday and Friday from 1pm to 4pm CHCP will be taking walk-ups at three locations for COVID-19 vaccines for qualified individuals. #Vaccines https://t.co/vhYLS6WYfM
+754	“Virginia Kroger now says it administered ‘empty syringes’ instead of COVID-19 vaccines” https://t.co/hVYUnuBr51
+755	2/2 We MUST be cautious. Increased #COVID19 activity, particularly with more contagious variants, raises the risk for trends reversing &amp; rapid resurgence before vaccines programs can expand to protect all Canadians. Our work is not done: https://t.co/w27G7rHASE
+756	Three fully-vaccinated people in Hawaii have tested positive for Covid-19. CONTEXT is important: Moderna and Pfizer vaccines offer immunity for 95% of people. Five percent can still catch the virus. @6News https://t.co/tgBIs6fZIx
+757	Over R5 million of UIF Covid-19 relief funding has been allegedly fraudulently or mistakenly paid into the wrong account. | @nickymccain https://t.co/0AELEsas7S
+758	No reason China should worry about Quad (US, India, Japan, Aus) when they talk climate change, vaccines. US, India combined account for over 1/3 of global cases and more than 1/4 of global deaths from Covid-19. A lot to talk about and more to work on. Much to learn from E Asia.
+759	New: Russian intelligence agencies have mounted a campaign to undermine confidence in Pfizer and other Covid vaccines using online front publications that in recent months have questioned their development and safety, U.S. officials said. w/ @mgordonwsj https://t.co/x0P4rCiEAx

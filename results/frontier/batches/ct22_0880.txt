@@ -1,0 +1,55 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	CALIFORNIANS: My friend @GavinNewsom needs your support to stop the Republican recall. Vote no and return your ballot by tomorrow, 9/14 at 8PM. Vaccines, climate change, immigrant rights, minimum wage, reproductive rights, gun safety and more are on the ballot. #VoteNoOnRecall https://t.co/2ixa5TqIxk
+881	Jurgen Klopp shares his thoughts on the COVID-19 vaccine by comparing being unvaccinated to drinking and driving. https://t.co/xhZF1BEa0t
+882	Pfizer vaccine: effective, protective and safe Modena vaccine: effective, protective and safe Oxford vaccine: effective, protective, and safe
+883	BREAKING: A California firefighter has been placed on administrative leave after he pulled his pants down and smeared feces from his behind on his vaccine non-compliance letter. RT IF YOU THINK HE SHOULD BE FIRED!
+884	BREAKING: President Biden calls out Fox News and other right-wing networks for "making money by peddling lies" and killing "their own customers" by spreading anti-vaccine "misinformation." RT TO THANK BIDEN FOR DELIVERING THE HARSH TRUTH!
+885	The CDC reported today that only 28.4% of the black community have received the Covid vaccine. With states like CA and NY mandating vaccine passports to enter restaurants and businesses, the black community would be most affected by this modern day segregation
+886	“If you’re over 40 you can now get your booster jab 3 months after your second dose of vaccine. Please book today and the NHS will look after you. I’m sorry a member of the government isn’t here to tell you this. They’re hiding.” https://t.co/zdMToOojOz
+887	Hospitals are telling vaccinated workers w/ Covid to continue working as long as they are wearing a mask and don’t have a fever. Meanwhile thousands of healthcare workers were fired or quit because of vaccine mandates. Had they not been, maybe sick workers wouldn’t have to work.
+888	The Supreme Court votes 6-3 to block the Biden vaccine mandate. Huge win for federalism and the constitutional rule of law in this country.
+889	When the head of the New York police union says 10,000 officers will quit because of the vaccine mandate but only 34 actually do you have to conclude the police union was lying and using fear tactics against the public.
+890	NY Times: Republican politicians fight vaccine mandates and flout mask regs, then blame Biden for the continued spread of Covid.
+891	Been emphasizing the emerging picture of brain injury from COVID19 + longCovid. Antivaccine forces keep pointing to low death rates in young people and adolescents, while ignoring the rapidly accelerating hospitalizations and now neurological complications https://t.co/oqaWRbyw2E
+892	Joe Biden’s COVID vaccine mandate completely ignores the science and is an attack on Americans’ right to privacy. The feds have NO AUTHORITY to force employers make their employees get vaccinated.
+893	This is Chinese qr code vaccine passport system. It includes your name photo age family members address employer, whether you vaccinated or not, when you do covid test, where and when have you been...in real time. Digital vaccine passport is far more dangerous than paper one https://t.co/bObO7y9zdC
+894	Many Supreme Court Justices have falsely stated today that the Wuhan coronavirus vaccine "prevents disease" and transmission in the work place. This is absolutely false and highly alarming they're using that point as fact to make their decision.
+895	1. Your livelihood should not be dependent upon whether you get a COVID shot. This is a personal decision. 2. The Biden Vaccine Mandate is unconstitutional, and we have a responsibility to fight back as a state. 3. Vaccine mandates are bad for the economy. https://t.co/lGDzO5tWau
+896	This interview is sending shockwaves through the anti-vax MAGAs this morning. “The vaccine is one of the greatest achievements of mankind .. The ones that get very sick and go to the hospital are the ones who don’t take the vaccine.” https://t.co/ImCnNfJAiu
+897	Took the moderna second jab and have since found out I have a blood clot in my lungs, affecting my ability to talk, walk and breathe. To raise some sort of awareness for this, so people maybe double think before taking this vaccine (especially males 18-24). Retweet this ❤️
+898	In Verona, Italy tonight, protestors chant that they will never give up and will keep fighting to end the COVID vaccine mandate. https://t.co/RHQMjESjfp
+899	One of the benefits of being 65 is that I’m eligible for the COVID-19 vaccine. I got my first dose this week, and I feel great. Thank you to all of the scientists, trial participants, regulators, and frontline healthcare workers who got us to this point. https://t.co/67SIfrG1Yd
+900	BREAKING: New York City announces that all police officers and municipal workers who refuse to get vaccinated will be placed on leave WITHOUT pay. RT IF YOU SUPPORT VACCINE MANDATES!
+901	Joe Rogan really went on his show that 11 million people listen to and said that vaccines are causing covid mutations and the reason scientists aren't talking about it is because they're afraid of getting canceled. We are all going to die.
+902	The vaccine prevents you from having major symptoms and dying. Why is that so hard for y’all to grasp.
+903	My perfectly healthy 86 year old Mother (5'2", 95 lbs, no prescriptions, walks 3-4 miles a day, eats only venison, buffalo, fruits and vegetables, BP 120/80),...forced to get the COVID-19 "vaccine" by her personal Doctor,...8 weeks later develops a cancerous tumor on her cheek; https://t.co/LMxPZ5NoyK
+904	As the pandemic raged across the country, at least 75 lawmakers bought and sold stock in companies that make COVID-19 vaccines, treatments, and tests. It is ludicrous that this is not illegal.
+905	NEW -- As the pandemic raged, at least 75 lawmakers bought and sold stock in companies (Pfizer, Moderna, J&amp;J) that make COVID-19 vaccines, treatments, and tests, Business Insider reports.
+906	TX Republicans think masks and vaccines violate their right to control their bodies, but allowing anyone to sue an Uber driver for taking a woman 7 weeks pregnant after being raped by her uncle, to get an abortion, that’s legal. Even if you’re Pro-Life, this is Gilead-type stuff.
+907	They volunteered to serve in our nation’s military. And they’re now being discharged because they don’t want the #COVID19 vaccine. Meanwhile, unvaccinated illegal immigrants cross the southern border every day. And Democrats don’t say a word.
+908	The vaccinated Fox faces on Fox like Tucker Carlson bash the vaccine and claim that mandates are tyranny, despite Fox News having its own mandates. RT to show how #FoxKillsAmerica Video by @ReallyAmerican1 host @ChipFranklin https://t.co/5g3SUHnJlY
+909	BREAKING REPORT: Alabama, Arizona, Georgia, Idaho, Indiana, Louisiana, Mississippi, Montana, Oklahoma, South Carolina, Utah and West Virginia TO SUE BIDEN ADMINISTRATION over the vaccine mandate...
+910	So businesses will get fined $14,000 (per employee) if they don't comply with Biden's vaccine mandate. And illegal aliens get a $450,000 payout for "damages" for crossing our border illegally... Biden's America.
+911	Reminder that the vaccine passport is the digital ID. The digital ID is the social credit score. The social credit score is total state control of behaviour, activity and purchases.
+912	Pope Francis urges people to get vaccinated, saying, “Thanks to God’s grace and to the work of many, we now have vaccines to protect us from COVID-19. Getting the vaccines that are authorized by the respective authorities is an act of love.”
+913	BREAKING: Unvaccinated, vocal anti-vaxxer Marcus Lamb, founder and of the influential Christian Daystar Television Network dies of COVID. He and his network spent two years attacking scientists and vaccines, calling them the work of the “devil.” RT IF YOU’RE PROUDLY VACCINATED!
+914	NEW: Justice Sonia Sotomayor said during oral arguments today that “we have over 100,000 children, which we’ve never had before, in serious condition, and many on ventilators” due to the coronavirus. That's False. https://t.co/9itoVd1s1L https://t.co/zX8Nf6Bx8r
+915	“We oppose vaccine passports. It’s about freedom and civil liberties” say Tory MPs who were happy to vote to effectively ban protest and allow the removal of citizenship without notice.
+916	BREAKING: 5th Circuit temporarily blocks OSHA vaccine mandate. “Because the petitions give cause to believe there are grave statutory and constitutional issues with the Mandate ...” https://t.co/rdhYyiFKml
+917	The world is going towards vaccination and doing it. We will talk of everything but the vaccine. Where is the $150 million or so that was supposed to be for buying vaccines. https://t.co/cGHdd3AKZ6

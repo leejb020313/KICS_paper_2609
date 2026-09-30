@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	It's important to realize what #mRNA and DNA COVID-19 vaccine actually are. They are #not traditional #vaccines made with live or attenuated viruses. They're actually #gene_therapies. They don't even meet the medical or legal definition of a vaccine @mercola
+441	There are only 43 antibiotics in clinical development worldwide at the moment. By comparison, there are over 200 COVID-19 vaccines in clinical trials at the same moment. The #AMR problem is a runaway freight train and needs a commensurate response to stop it. https://t.co/DAtq8DHEYg
+442	Wisconsin is among the nation's leaders in distributing vaccines, but demand still outpaces supply, and some eligible residents struggle to find appointments. @besables spoke to eight residents who received shots. Here are their insights. | @WisconsinWatch https://t.co/f0dozEKpCZ
+443	CDC: 1,265 DEAD and 25,212 Injuries Following Experimental COVID-19 mRNA 'Vaccines' https://t.co/ZbzWrBAuV9
+444	@AishaYesufu @MBuhari We can print Banners for Covid 19, Spend 12.2 Billion on transport and other expenses on Covid( vaccines we got for free),pay Bandits millions but we can't pay House officers,Junior residents, interns and junior medical staff the salaries they have worked for since December.
+445	More than 81 million vaccines have been administered since Biden took office, and by May 1, the remaining adults may be eligible to be vaccinated. https://t.co/MFR0pFOjHV via @tnlookout
+446	President Biden announced expanded anti-covid vaccines and that all adults will be eligible by May 1. My Cinco de Mayo birthday wish is now one shot vaccine and one shot tequila.
+447	Antibodies raised by some COVID-19 vaccines are less effective at neutralising new, circulating variants of the novel coronavirus such as the ones first reported in the UK, South Africa and Brazil https://t.co/fObaxAEoZ4
+448	new and important: Russian disinfo campaign aims to undermine confidence in US covid vaccines, via ⁦@mgordonwsj⁩ ⁦@dnvolz⁩ https://t.co/CLcNKFR1lq
+449	“JCVI advises that the second vaccine dose should be with the same vaccine as for the first dose. “Switching between vaccines or missing the second dose is not advised as this may affect the duration of protection.” #COVID19 #Vaccine https://t.co/GUehEOQMFl
+450	@otlhogilegordon @jasonhickel Failed to temporarily waive intellectual property rights for vaccines and treatments of COVID-19. Poor countries have to shell out money to get vaccines. Or probably have to beg spineless UN to provide them or take loans to vaccinate their people.
+451	Good news. Acute Allergic Reactions to mRNA COVID-19 Vaccines are very rare and so far non-fatal. https://t.co/xrZc3ilLi0 via @JAMA_current https://t.co/hPpXVvQ1Dx
+452	@kindofdesign @elvan @JohnAALogan @porridgeisgood @OffGuardian0 @WinterOakPress @med1cinewoman @beegarc_ @Juzwik @Nornenland @InProportion2 Great point. And they do set a horrific precedent for a constant barrage of “vaccines” &amp; other drugs being put on an absurd fast track approval process. This Covid vaccine is in use on tens of millions of people after just a few months.
+453	No shit Sherlock. Ask the CDC why they’ve been working on SARS and COVID vaccines for years! Former top State Dept investigator says COVID-19 outbreak may have resulted from bioweapons research accident https://t.co/Aryuq4yxdA #FoxNews
+454	At least ten countries have now suspended use of the AstraZeneca Covid-19 jab, following reports of blood clots in some vaccinated people. But the evidence still doesn’t support a link between the vaccines and blood clots. #9Today https://t.co/X5pJrYX5xd
+455	WSJ: All three of Russia's main intelligence services (SVR, FSB, and GRU) ran fake news sites and phony social media accounts to spread misinformation about Pfeizer and Moderna vaccines in an attempt to undermine confidence in them. https://t.co/t3kmCYvBFs via @WSJ
+456	More than 335 million doses of Covid-19 vaccines have been administered globally so far, and no deaths have been found to have been caused by Covid-19 vaccines, WHO's @DrTedros tells press conference. But at least 2.6 million people have been killed by the Covid-19 virus.
+457	Proud of Australia’s good friend and strong regional partner India for donating 50,000 COVID-19 vaccines to Ghana. We are all in this together! @dfat @GhanaMFA @HCI_Accra https://t.co/9PmLEpYUXw
+458	ALERT‼️‼️‼️ The corona virus can be spread through money. If you have any money at home, put on some gloves, put all the money in to a plastic bag and put it outside the front door tonight. I'm collecting all the plastic bags tonight for safety. Think of your health.
+459	Instead of prioritizing regular Americans who need tests for #coronavirus, or paid sick leave because they live paycheck to paycheck, @realDonaldTrump wants to bail out oil billionaires. Thank goodness the House of Representatives, and not @POTUS, has the Power of the Purse. https://t.co/oJzdylQbrC
+460	World’s leading medical journal The Lancet’s endorsement that India’s indigenously-developed Covid vaccine, Covaxin, is safe and maybe better than similar vaccines, is a very good news for the country. It should end “Covaxin hesitancy” seen among some people.
+461	About 50% of the vaccinated in nursing homes had adverse reactions or death, and 50% did not. “It has an explanation – the unaffected 50% had a placebo. This is clinical research. All COVID-19 vaccines are in the early clinical trial stage.” ~ Dr. Angelova https://t.co/4eYVeN13Bm
+462	There are now over 1,000 deaths in the U.S. from the covid vaccine and not a peep from the media. Not only that, but questioning the vaccines gets censored by social media at the request of the government, and the manufacturers can’t even be sued. https://t.co/4iUj5C7MEN
+463	#China | The International Olympic Committee (IOC) announced Thursday that it would pay for additional vaccines against COVID-19 that the Chinese Olympic Committee has offered to athletes competing in both the Tokyo 2020 and the Beijing 2022 Olympic Games. https://t.co/C3DtZBZosF
+464	@Rossalincoln What crazy about people insisting Donald Trump deserves some credit for vaccines is he got vaccinated IN SECRET. He had a chance to depoliticize the vaccine and help share the credit and he turned it down. https://t.co/LlWbf3xsI2
+465	Johnson and Johnson’s 1-shot COVID-19 vaccine could spark fewer side effects than vaccines from Moderna or Pfizer https://t.co/s5p7lCHnsL
+466	Former Presidents Carter, Clinton, Bush and Obama taped an ad campaign urging all Americans to get their Covid-19 vaccines when they become available to them. It shows images of the four former presidents and first ladies getting their own Covid-19 shots. https://t.co/kuZSAs5L95
+467	Toilet paper completely sold out in supermarkets? Did you lot not wipe your ass before corona
+468	The same message here for PrEP medication. There is no scientific evidence to suggest that the COVID-19 vaccines and PrEP could interact with each other.
+469	With a focus on practical cooperation in the Indo-Pacific and Covid vaccine supplies, the first-ever #Quad summit will take place on Friday (Report by @sidhant) #QuadSummit https://t.co/AZPqtcw3xd
+470	@jbhelfrich @maggiekb1 @NateSilver538 I’m no expert but I read a lot about vaccines. In the last few days longhaulers are speculating and hopeful that getting the vaccine will help their symptoms, but no evidence. People can get Long Covid even with mild cases.
+471	Fearmongering #PharmaFauci - who built his entire career on the BOGUS HIV-AID$ causality by pushing a #FakeScience of the immune system &amp; imperial control of servile academics, NOW thinks he’ll get away with this current scam upon a petrified #coronavirus American public. NOT!
+472	This says 1) 1957-58 and 1968-69 death totals are exaggerated, 2) we had vaccines, 3) C19 is thus far worse in the US, so 4) it makes sense that we locked down. Makes no attempt beyond some passing bromides to connect lockdowns to virus control. https://t.co/x8omKyIBav
+473	From someone who dealed with hundreds of cases of the new variant (me): the P.1 variant is the nightmare of a nightmare - more transmissible, more pathogenic, likely more legal, possible less covered by current COVID-19 vaccines, less responsive to corticoids and other therapies.
+474	The vaccines approved by Health Canada are 94% to 95% effective in preventing COVID-19 and your body needs time to build immunity. After taking the vaccine, you'll still need to wear a mask and practice social distancing to stay &amp; keep others safe #StayHomeSaveLives #TeamVaccine https://t.co/4ZtmRHTqHQ
+475	The leaders of Australia, the United States, India and Japan have agreed to pool financing, manufacturing and distribution capacity to send 1 billion coronavirus vaccines across Asia by the end of 2022. https://t.co/VpdsnevYtd
+476	Firefighters delivering vaccines. State lead effort between the @FlFireChiefs, @FLDeptofHealth @FLSERT @JimmyPatronis @CoralGablesFire @IAFF12thDVP @IAFFNewsDesk @SoFlaCouncilFF Doctors and nurses no longer the only ones giving COVID vaccine shots https://t.co/w4NuQjpswv
+477	FTA: Folks fully vaccinated can now “Skip quarantine and testing if exposed to someone who has Covid-19 but are asymptomatic, but should monitor for symptoms for 14 days”. This will help tremendously with school staff shortages thanks to Ky prioritizing school staff for vaccines!
+478	Truly sobering analysis: US more vulnerable than many countries to #coronavirus owing to combination of high numbers of uninsured, many w/o paid sick leave, and a leadership that has downplayed the challenge while not preparing the country for it. https://t.co/oDhp4DpnMi
+479	Websites linked to Russian intelligence services publish false information questioning Western vaccines’ safety. Needless to say, these websites Oriental Review and New Eastern Outlook have also been pushing stories for years against #Kosovo independence. https://t.co/51DyjpUdV1

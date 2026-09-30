@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	Scott Morrison has declared the arrival of a “new dawn” in Australia’s region, as the Prime Minister and his US, Indian and Japanese counterparts pledged to distribute one billion COVID-19 vaccine doses to developing countries in the Asia-Pacific. https://t.co/QYxbTudYRU
+561	Such stupidity and this plus that order against couple holding hands represent two things: one, government running out of strategies to contain COVID-19 with vaccines delayed. Two, tendency of gov’t to mess with our constitutionally guaranteed privacy. https://t.co/DTiuog3RC3
+562	Tanzania’s president, John Magufuli, denied Covid-19 for months. Threatened health workers on reporting any Covid related death. Doubted the effectiveness of the Vaccines and didn’t bother to bid for it. Now he is reportedly down with COVID and receiving treatments in Kenya.
+563	3. Do not eat with people who are not part of your household. Period. 4. The variants are here and they are a problem. But 2 and 3 will work against ALL of the variants. 5. All approved vaccines will protect against severe COVID-19.
+564	Vaccine “efficacy” is Misleading Don’t compare 95% efficacy of one vaccine with 67% of another. This only means the % of people who may not get COVID All vaccines listed below are ~100% effective in preventing COVID hospitalizations and death Quickly get whichever is available https://t.co/UxTOqtX8he
+565	Biden will announce tonight that dentists, midwives, paramedics, veterinarians, medical students and other health care students and professionals will be able to administer Covid-19 vaccines now.
+566	All of the COVID-19 vaccines are highly effective and Canadians should not be picky about which vaccine they get, says our Dr. @AmolAVerma. He explains why on NewsTalk1010 (segment starts at 33:00). https://t.co/JTtU4909LL
+567	NSBA is pleased @POTUS has achieved several of our recommendations during his first 50 days in office, including repealing the 1776 Commission, prioritizing vaccines for educators, preserving DACA, and sending COVID-19 relief funding to public schools. https://t.co/Gh57Aq65ym
+568	#breakingnews The Ministry of Health today announced that Brunei registered its first positive COVID-19 case. The patient is a 53-year old man who returned to Brunei from Kuala Lumpur on March 3 2020 with three other friends. #borneobulletin More details soon.
+569	With 4 million uninsured people in Florida, @CarlosGSmith said he's encouraged anyone medically at risk to make vaccine appointments and go to the sites with or without the form. “I’ve had to talk people into just going.” 💉 https://t.co/LirTHF9Nty
+570	@realJeff45 @Jord_45 This covid 19 is nothing more than a bad flu! The REAL dangers lie in all these untested, unproven, and no idea of long term effects from the 'Vaccines'! People are dropping dead within a day or two after receiving the shot! 98% recovery rate after infection.I'll take those odds!
+571	Pakistan is not planning to buy vaccines anytime soon as it aims to tackle the #COVID19 challenge through herd immunity and donated vaccines from friendly countries like China https://t.co/Va7zblyFD4
+572	Tony Fauci and the Swine Flu Hoax; Betrayal of Trust Covid-19 is not the first time that Fauci and the CDC have lied about an epidemic to push a dangerously rushed "vaccine" https://t.co/RiEpUrx32t #Covid19 #CovidVaccine https://t.co/iQrMpvWBQ8
+573	Oh yay, this sounds like fun 😬 😷 B.1.351 is a variant of concern because it spreads more easily and quickly than others, and vaccines may be less effective, Colorado's Joint Information Center said. https://t.co/3luxgpEjsd
+574	A top WHO official warned against expecting a coronavirus vaccine to provide a quick, complete end to the pandemic. "We have some perfectly effective vaccines on this planet that we have not used effectively," he said. "This virus may never go away." https://t.co/6QAfziEto6 https://t.co/XkmVACDxXK
+575	Human trial with Corona vaccine (COVAXIN) of Bharat Biotech started at PGI Rohtak today. Three subjects were enrolled today. All have tolerated the vaccine very well. There were no adverse efforts.
+576	After weeks of careful analysis and negotiations between various Covid-19 vaccine providers including Covax and the GOU, Uganda received its 1st and 2nd lot of vaccines. https://t.co/IaN6z6GKf6
+577	ð France, Spain and Germany are about 9 to 10 days behind Italy in #COVID19 progression; the UK and the US follow at 13 to 16 days. In Italy we waited too long, these countries should really start implementing aggressive containment measures now. https://t.co/xL7jUczpmY
+578	Page 1 Interesting so they haven't isolated the virus at the cdc yet and yet we have vaccines for it.! The Seargant, [14.02.21 22:37] Clinical Lab Scientist, COVID-19 The following statements by Dr. Derick Knauss on the identity of the virus &amp; on the failures of the PCR test are
+579	The United States has identified three online publications directed by Russia's intelligence services that it says are seeking to undermine COVID-19 vaccines produced by Pfizer and Moderna, a State Department spokeswoman said on Sunday. https://t.co/UfEFP4C0dG
+580	If you told me on New Years that within 3 months of 2020: -Kobe Bryant is dead -We’d be quarantined from COVID-19 -Schools and sports are shut down -Tom Brady is a Tampa Bay Buccaneer I would’ve legitimately thought the world was ending.
+581	Tonight we crossed an important threshold: @CPAC ended 9 days ago. According to the experts we consulted that timing w NO NEW corona cases and NO attendees w symptoms is a huge turning point. Over 10,000 in a hotel w the virus present and no one is positive. ðð»ðð»ðºð¸
+582	After you have had the first dose of a Covid-19 vaccine, you still need to follow social distancing and hygiene measures. 💉 This short video from @NHSEngland explains why: https://t.co/A5ol3QWCMJ #Covid19UK #CovidVaccine
+583	BSP Chief Mayawati takes her first jab of a Covid-19 vaccine in Lucknow, asks Centre and state government to provide vaccines for free for the poor people. She also urged people to get vaccinated. #BSP #Mayawati #Covid19 #Covid19Vaccine #Lucknow https://t.co/PAgRoESaJu
+584	Anti-vaxxer letter from United Health Professionals about COVID-19 and the vaccines has been sent to governments in 30 countries. I have highlighted the many falsehoods and nonsense statements in their letter: https://t.co/SeDYLdg2a3
+585	#UPDATE: More than 7,800 people have now booked appointments for COVID-19 vaccines at City of Toronto run clinics while approximately 22 mobile and on-site vaccine clinics are being operated this weekend by health care partners. https://t.co/6cAQ1W5K2T
+586	#Tanzania: National Institute for Medical Research (@NIMRHQS) chief, Prof Yunus Mgaya says available COVID-19 vaccines not okay, lauds @MagufuliJP's claim that lemon, ginger and steam therapy work better, urges Tanzanians to wait for locally-made vaccine. https://t.co/Kaprob3ib1
+587	And ALL the vaccines currently being administered may protect you against SEVERE COVID, whether Sinovac or Pfizer. The point is, you don't want to die from this virus and the vaccine will help YOU do that. Convincing others to take it will keep them from dying too.
+588	Fellow mid-Michiganders: High positivity rates locally, so keep up your guard (masks, distancing) against covid. Article below indicates vaccine uptake already slowing as criteria expand. Get yours when eligible, and keep checking for expanded access. https://t.co/AD2lbPYYkA
+589	But I thought the Corona Virus was just a Democratic hoax to hurt Trump? Moral to the story: science and nature do not give a damn what Party you belong to. https://t.co/G3v509JQzC
+590	All 34 public health units now have publicly accessible vaccine plans. You can read the full analysis and expert opinion on the plans here: https://t.co/jKpNETRdZ0
+591	3,500 Arlington ISD teachers, administrators, staff and substitute teachers will get one-dose Johnson &amp; Johnson vaccines. Many arriving by bus. https://t.co/Bb1Pvtlaz5 🎥: @NBC5PhotogKevin https://t.co/uJJS07ugNf
+592	The media are doing everything they can to erase any and all contributions the Trump administration did to create and distribute the COVID-19 vaccines in record time. https://t.co/gxDPjmDBZB
+593	passport twitter been quiet since corona hit. shouldve spent ur money on jordans
+594	Patents on #covid vaccines are going to kill people: "the US and a small number of wealthy countries ... blocked a proposal to temporarily waive countries’ obligation to enforce patents on covid-19 vaccines during the pandemic" https://t.co/uNNx34SHUD
+595	People who have severe heart defects, Type 1 diabetes, cerebral palsy, cystic fibrosis and intellectual disabilities are now eligible for the vaccine. https://t.co/8WGDWe9dVM
+596	Journalist Hana Salah talks about Palestinian prisoners smuggling their sperm out of Israeli prisons for IVF treatment in Palestine. We discuss the Covid-19 situation, vaccines inequality, destruction of Irish aid and the plight of Palestinian fishermen https://t.co/jwkey1MkLb https://t.co/vJPlla0dml
+597	The Philippines has secured $900 million (P43.6 billion) in fresh loans from multilateral lenders for the procurement of safe and effective COVID-19 vaccines, a move critical to the country’s thrust toward economic recovery. https://t.co/MhqGMff6b7
+598	If pharmaceutical companies share their knowledge and technology, other companies can produce COVID-19 vaccines, and we can end the pandemic with no one left behind. Please share and sign the petition ⬇️ https://t.co/uCw4towgEO https://t.co/89MPgEK0TL
+599	Big day today! The PNG Government has signed off on the regulatory approval needed for the #COVAX Facility to bring in the COVID-19 vaccines to #PNG to receive the AstraZeneca/Oxford vaccine and is making detailed plans for its deployment and use across the country. https://t.co/YmHXl1SPP8

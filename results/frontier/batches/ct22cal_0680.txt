@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	The world’s first Coronavirus Vaccine is now available in Russia. President Putin said it •works effectively, •forms a stable immunity, and •passed all inspections. Final stages of clinical trials continue. Millions of Russians will soon get it too. RT pls. Best news today!
+681	The Wellcome Trust 2019 global monitor on attitudes towards vaccines showed the highest confidence in vaccines in Rwanda and Bangladesh. Vaccine hesitancy among ethnic minorities is due to ‘attitudes from home countries,’ says equalities minister https://t.co/0TzdV7IWvj
+682	Russia is working hard to discredit Pfizer's vaccine and other non-Russian vaccines. https://t.co/CvBZNyK25Q
+683	THERE IS STILL NOT ENOUGH DATA TO PROVE HOW EFFECTIVE THE CURRENT VACCINES CAN DEAL WITH THE NEW VARIANTS OF THE VIRUS: Coronavirus Mutations and COVID 19 Vaccine Implications with Shane Crott... https://t.co/w3C8YXveAg via @YouTube
+684	CDC Disease Detective Lieutenant Joshua Wong of the U.S. Public Health Service and the @AmoebaSisters discuss how #COVID19 mRNA vaccines work. Learn how the mRNA vaccines create proteins and trigger an immune response to help protect you from COVID-19: https://t.co/IQhSCgODJa. https://t.co/VinQaKXRum
+685	(Reuters) - The U.S. Centers for Disease Control and Prevention (CDC) said on Wednesday people who have been given full doses of the coronavirus vaccine no longer need to quarantine after an exposure to someone with the COVID-19 disease. ⁦@CDCgov⁩ https://t.co/tYqmmUfoTM
+686	We know people want details on COVID-19 vaccines. Currently, vaccines are being given to priority groups and more people will be added as we receive more vaccine. Details on how and where to be vaccinated will be provided very soon. For the latest, visit: https://t.co/Ootqatrcd9 https://t.co/804dtReA5G
+687	Look at the hospitals diagnosing COVID-19. St. Luke's, Cardinal, Makati Med, Medical City. COVID-19 isn't just purely a health issue. There is a strong class problem as well. Pag-mayaman, COVID. Pag-mahirap, ubo at sore throat lang.
+688	@funder 1) Hired an honest and intelligent press secretary 2) Compassionately acknowledged the 500,000+ souls lost to COVID-19 3) Ramped up the production and distribution of COVID-19 vaccines 4) Entered the US back into the Paris Climate Accord 5) Complete transparency in the WH!
+689	We are racing against more transmissible and potentially more deadly strain(s). Italy locking down now is very reminiscent of March 2020, except the world had the COVID-19 wild type and no vaccines. Mask. Shield. Distance. Ventilation. Hand hygiene. https://t.co/tCFsC607Gq
+690	‘Covid-19 Vaccines Are Weapons of Mass Destruction - and Could Wipe out the Human Race’ on #SoundCloud #np https://t.co/ZYahDasHg5
+691	#C19 Vaccine Update ⬇ Seniors 80+ can book appointments to receive the #COVID19 vaccine. 📍ARC expected to open as a clinic end of March 🗓 Book: 💻Online https://t.co/YjcFiRhiPz ☎Call 1-888-444-5113 Learn more ➡ https://t.co/Z4MaHwSNGL #RollUpYourSleevesDurham https://t.co/d5OMvVBqrg
+692	Deputy President David Mabuza said the government had put in place measures to prevent corruption and wasteful expenditure in the procurement and distribution of Covid-19 vaccines. https://t.co/Y6w6yRsm8s
+693	The Chinese Communist Party suppressed information about the #COVID19 outbreak from the world for political purposes. Rather than take accountability they are actively pushing a conspiracy theory propaganda campaign against the United States. 📽️: @axios / @HBO https://t.co/mbodTqfhj8
+694	Our COVID Vaccine Toolkit is updated weekly and features answers to common questions that healthcare providers receive from their patients. Explore FAQs on vaccine safety, timeline, vulnerable populations, and more. https://t.co/FIml2LZF4H #DFAVaccineToolkit #COVIDVaccine https://t.co/8gmvpoInGa
+695	@AbiyAhmedAli Mr Prime Minister, you have hundreds of #Ethiopian women in #Lebanon enslaved in modern days slavery. And now they are being thrown out on streets like garbage due to the economic crisis and #COVID19. Immediate &amp; affordable repatriation &amp; evacuation by the @flyethiopian is needed
+696	Galvez said the Philippines is expecting the shipment of up to 5.1 million doses of Covid-19 vaccines developed by China’s Sinovac Biotech, as well as those manufactured by the University of Oxford and British-Swedish firm AstraZeneca this month. https://t.co/8d1HZBEbeY https://t.co/PCuKpIsBwq
+697	The World Health Organization confirmed that Covid-19 is deadlier than the seasonal flu, but does not transmit as easily. Read the latest updates on the coronavirus outbreak here.
+698	19.6/x Con‘t quoting „The application..states: #Isotretinoin (13- cis-retinoic acid) versus spike protein-based vaccines for providing complete protection against COVID-19 and preventing the EXPECTED SERIOUS LONG-TERM SIDE EFFECTS of the spike protein-based #vaccine." 😳
+699	Prof. Jaoko: All medicines and vaccines have side effects https://t.co/GvSvlWYEv7 https://t.co/DkD5B6WBAn
+700	Masking, distancing, and vaccines are working! @AusPublicHealth has downgraded the area COVID risk level to Stage 3. It's critical to note the new guidelines do NOT supersede our existing health orders. Stay masked and stay distanced. More info here: https://t.co/cucqG7CUeH https://t.co/e7PDsYAjD4
+701	But for AstraZeneca’s and Johnson &amp; Johnson’s COVID-19 vaccines, the CCCB argued that the two organizations had used the abortion-derived cell lines during the stages of development, production, and testing. If given a choice, the CCCB recommended... https://t.co/3v3A92899N
+702	Two weekâs sick pay: ð¬ð§UK Â£188.50 What youâd get if you lived in: ð¦ð¹Austria Â£574.70 ð©ðªGermany Â£574.70 ð¸ðªSweden Â£459.76 ð³ð±Netherlands Â£402.29 ðªð¸Spain Â£241.37 Statutory sick pay in the UK isnât enough to live on. RT if you want decent #SickPayForAll #Coronavirus #Ridge #Marr
+703	EXO Baekhyun donates 50 Million Won to help those that has been affected by Corona 19 Adding up the amounts donated by EXO Members, they have donated 220 Million Won in total !! #EXO #ë°±í @weareoneEXO https://t.co/6QaDb0YhDB
+704	A report finds 4 publications with ties to Russia have targeted Western-made COVID-19 vaccines with misleading coverage of risks and side effects. https://t.co/o14spdhjUs
+705	Homeless people and rough sleepers to be prioritised for vaccines after JCVI recommendation https://t.co/sMG6ofXYoG https://t.co/wZzSCq2xhE
+706	Islamic Republic Of Pakistan says it aims to tackle the Covid-19 health challenge through herd immunity and donated vaccines by global agencies as it has no plan to buy vaccines at least during the current year. https://t.co/47V1FqRUzz
+707	Curfew for black lives matter but none for coronavirus..... black people can’t be more dangerous than an airborne virus with no vaccine.
+708	Attempt by @realdonaldtrump to minimize #Coronavirus has not aged well. According to @nytimes, there are over 215 cases &amp; 14 deaths, including 56 new cases today. Due to lack of testing by Administration, we still don’t know extent of the virus spread. https://t.co/HE1xjD8UuG
+709	“The vaccine works. It is safe, effective, and potent.” In 1955, those were the words that told the world that the polio shot was a success. But society soon found out the first vaccines were the end of the beginning — not quite the beginning of the end https://t.co/fS00jfMt07
+710	Here's the latest update on vaccines and COVID cases in York Region. One of the messages that I did not get into the story: vaccinated seniors must be reminded they are not protected until 2 weeks AFTER they get - &amp; they still need to be cautious https://t.co/W7dsBUXbkx
+711	Because COVID-19 is a new disease with new vaccines, you may have questions about what happens before, during, and after your appointment to get vaccinated. These tips will help you know what to expect when you get vaccinated. https://t.co/gALPBNUcYZ. #StrongerTogether https://t.co/YtXaDhQhJV
+712	This past weekend, our regional vaccination efforts hit a major milestone: we have administered more than 100,000 vaccines, and ended the weekend with more than 109,000 doses given through UTMB. Learn more and get on the vaccine waitlist @ https://t.co/YyhfKcwhAr https://t.co/08eou3bv7Y
+713	Today, Malawi received a #COVAX delivery of 360,000 vaccines. Now the critical work of protecting health workers who are protecting us can begin. #VaccinEquity https://t.co/dbIq5DmgSu
+714	Countries have developed National Deployment &amp; Vaccination Plans (NDVP) to prepare for #COVID19 vaccines introduction. Once an NDVP is reviewed &amp; approved, and other requirements met - that country can be allocated vaccines from the #COVAX Facility.👉https://t.co/O91wphUV1o https://t.co/9JT4tLnsEr
+715	3.5 billion doses of vaccines — against all kinds of diseases — are usually produced globally every year. The need for Covid-19 vaccines is 15 billion doses, and all of them are required now. #NoCovidMonopolies #TRIPSWaiver #PeoplesVaccine https://t.co/GSQsxSQjO1
+716	If you take the vaccine from #COVAX facility and are adversely affected, there is international #insurance for a no-fault compensation without recourse to the Courts. #Uganda is one of the beneficiaries of this programme/cover, which is a world-first https://t.co/SkX4rngh3P
+717	Launched a Global Decriminalization of Homosexuality campaign. Iran weaker and isolated. North Korea open dialogue. China unveiled &amp; confronted. Poland in Visa Waiver Program. Serbia-Kosovo Economic Normalization. USMCA Abraham Accords Vaccines for Covid 19 in warp speed.
+718	Novovax announced that their Covid-19 vaccine is "96% effective in preventing cases caused by the original version of the coronavirus" (phase 3 results). Right up there w/ Pfizer and Moderna. Also 86% effective against B.1.1.7. https://t.co/Y672NLrMAq
+719	We’re facing one pandemic with two futures: one for wealthy countries that can afford and acquire vaccines, and another for low-income countries that cannot. @PoliticsReid provides a good look at the global vaccine landscape. https://t.co/XPRLPSmjwd

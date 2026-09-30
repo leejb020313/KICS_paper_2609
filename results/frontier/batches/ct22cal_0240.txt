@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	Mitch abandoned bipartisan work on the COVID-19 bill, then tried to pass a no-strings attached corporate bailout that didn't sufficiently help health care workers, first responders, and working class families. Focus on the PEOPLE, @senatemajldr, not Wall Street.
+241	USA: Coronavirus vaccine trial by Moderna shows promising initial results. 8 of the 8 initial participants developed neutralizing antibodies to Covid-19.
+242	The monthly medical update from @COVID19actuary includes: - 284 million doses of 12 approved vaccines globally - Vaccine trials and real-world effectiveness - RECOVERY trial - REACT prevalence and antibodies - ‘Long Covid' Useful weekend reading. https://t.co/G8xfq9ktP4
+243	NURTW Lagos is already sensitizing their people on #COVID19, sharing Hand Sanitizers etc ...... While some very “Educated” ones are spreading Fake News and doubting the patient. NURTW 1 - Dem Dem 0 #Covid19Lagos https://t.co/QcJuHt6pA3
+244	Canada welcomes the new partnership between @CEPIvaccines and @VBIVaccines, which will advance the development of vaccines in Canada aimed at fighting against emerging variants of #COVID19. ➡️ https://t.co/d8n8Z1LaGD https://t.co/qrWp4a9AQC
+245	Dear @realDonaldTrump : You knew about #Covid_19 in January. It is March and your Administration still does not have enough test kits. That is unconscionable and a dereliction of duty. Stop minimizing the #CoronaOutbreak and start leading. Lives are at stake. <link>
+246	If you’re aged 56 or over and you haven’t yet had your first COVID-19 jab, you can book it now through the NHS by using the link below 👇 All vaccines in use have been authorised by the MHRA which has some of the highest safety standards in the world. https://t.co/IQTeRxsQ7s
+247	I thanked @EmmanuelMacron for #France’s support and solidarity w/#Slovakia. We both agree a joint European approach and safe, registered vaccines are key to emerge from the #Covid-19 pandemic. https://t.co/9FrFqVWrue
+248	COVID-19 antibody-based drugs and vaccines developed so far may become less effective as new variants of the novel coronavirus spread widely, according to a new study https://t.co/tYeDQ2gIwS
+249	The pause that followed meant more than 28,000 mostly avoidable cases were reported in 1955. The incident caused deep misgivings and still fuel anti-vaxxers today. It also kept large pharmaceutical firms away from vaccines https://t.co/hcfnNj7acd https://t.co/s7lJeXwlbV
+250	There have been 49,472 *reported* reactions to the Pfizer vaccine and 21,032 reactions to the Oxford / Astrazeneca vaccine. For both vaccines this equates to 1 in every 333 people suffering an adverse reaction https://t.co/omqWpi0DO7 https://t.co/pP1TWmiwpe
+251	IT’S NOT JUST ABOUT VACCINES New coronavirus drug/antibody said to be 80x more potent It should come as no surprise that work is also ongoing behind the scenes toward the development of other effective coronavirus treatments and therapies #MOG https://t.co/g3agrSfdBt
+252	JUST IN: Russia says a billion doses of new coronavirus vaccine have been ordered by twenty countries
+253	A suspicious @latimes reporter got word Pasadena was giving vaccines to media and Hollywood types. The reporter checked it out and turned out the codes had fallen into the wrong hands. But so many people signed up the city had to cancel vaccine clinic. https://t.co/Ug5TmDxSw2 https://t.co/bVXxjSGj5C
+254	Researcher Sangita Sharma is working with N.W.T. communities to promote HPV vaccination and learn how people feel about COVID vaccines—one of 19 U of A projects receiving new CIHR funding: https://t.co/13hIDUFeMV #UAlberta #HPV #COVID19 @CIHR_IRSC @GNWTNewsroom @hotii_tseeda https://t.co/B5Sama4v6Z
+255	As people start taking vaccines, the advisory is still to adhere to the COVID 19 protocols of social distancing and mask wearing. I hear a lot of people say they’ll stop wearing the masks once they get the shot. We are not quite there yet https://t.co/173v78VBeq
+256	Update of confirmed #COVID19 cases outside of China: #corona #coronavirus #CoronaVirusUpdate #Korona #koronawirus #Covid_19 #COVID2019 #coronavirusturkey #coronavirusitalIa #okullartatiledilsin https://t.co/xtvsO5PIz4
+257	Currently there are 3 vaccines authorized and recommended to prevent COVID-19 in the United States, including: ▪️ Pfizer ▪️ Moderna ▪️ Johnson &amp; Johnson (Janssen) Get more information each vaccine: https://t.co/jnrsoV1ORk https://t.co/MXxPTDDYda
+258	Australia. the US, the UK and the European Union are refusing to waive intellectual property rights to Covid-19 vaccines so developing countries can produce the vaccine locally. https://t.co/DNSyTYDQ0R
+259	The Malaysian govt made many grievous missteps in the management of the Covid epidemic, yes. They propagated fear instead of science, and withheld data. But the vaccines do work according to global clinical trials. Israel is a great real-world study. Do take the vaccine. https://t.co/RaAM93ch19
+260	FIRS proud to declare support for #VaccinEquity. Now it’s your turn. Sign the @WHO declaration to call for the rollout of #COVID19 vaccines to health workers &amp; those at high risk of COVID-19 in every country in the first 100 days of 2021: https://t.co/PJgOXcWjjf #ACTogether https://t.co/8Hp8fkM2Vh
+261	#Lebanon coronavirus- 2,363 hospitalized for COVID-19 and related complications, with 945 in the ICU and 294 requiring ventilators. Vaccines: cumulative number of inoculations since Feb. 14 launch 92,545 first-stage and 17,689 second-stage so far
+262	CONTINUED LACK OF #COVIDー19 TESTING IS A DERELICTION OF DUTY BY @realDonaldTrump. He knew since Jan about the #coronavirus. What is particularly shameful is @POTUS is using the artificially deflated numbers due to lack of testing to say the virus has been stopped. It has not.
+263	COVID-19 ALERT: Starting today, tens of thousands of additional New Yorkers will be allowed to roll up their sleeves for a #COVID19 vaccine. https://t.co/hOWW2wYcQe
+264	#QuadSummit US and Japan's financial institutions to finance increased manufacturing at India's Biological E, which will manufacture COVID vaccines including Johnson and Johnson's vaccine #vaccine @Parikshitl @CNBCTV18Live
+265	This week the European Commission is expected to unveil its proposal for #COVID19Vaccine green certificates, the so-called vaccine passports (EU is discouraging use of this term). Here's a short thread on what these are, and what they aren't. https://t.co/9MN2A0S8eA
+266	Top infectious disease expert Dr. Anthony Fauci says that "if everything falls into place right" there could be a coronavirus vaccine by January https://t.co/1ICJfnIORM https://t.co/w1t4fnZD8U
+267	BREAKING: "A cyber espionage group, almost certainly part of the Russian intelligence services" attempted to hack coronavirus vaccine research, U.K., U.S. and Canada allege. https://t.co/hh88Z5nOEl
+268	Oxford/AstraZeneca coronavirus vaccine showed an acceptable safety profile in a study released in Lancet https://t.co/2WFBUmlkT4
+269	COVID-19 Vaccine AstraZeneca is one of the vaccines used in reducing hospitalization, illness and death associated with COVID-19. #vaxprotects #vaxsaveslives @themohwgovjm @wrhagovjm @SRHAJamaica @mohnerha https://t.co/qCVZzUVdf0
+270	History is dying: Brazil's Indigenous communities urgently need COVID-19 vaccines and protection, groups say. #ThisIsOurShot https://t.co/0oytN6XpNX
+271	JUST IN: President Duterte announces 4 new cases of #COVID19; PH total now at 24 https://t.co/arH9a9imqC
+272	Never Forget.. When India was fighting Corona, pigs like @vinodkapri were sharing Fake News to Create Panic for Congress Propaganda. There's no shortage of PPEs. Assam Medical college students were testing PPEs as what can be used if shortage occurs. https://t.co/GhmJbBoTxk
+273	These are the World Cup 2022 workers quarantined in miserable conditions in Qatar.. this is inhuman.. does @FIFAcom accept this crime? @FIFAWorldCup @fifaworldcup_fr @EASPORTSFIFA @EAFIFADirect @fifamedia @fifacom_fr #Coronavirus #Covid_19 https://t.co/VqaWKgBOQV
+274	Brooklynites: If you live in one of the zip codes below and are eligible for the COVID vaccine, there are (as of 2/20 1:30pm) still a ton of appointments available at new Medgar Evers College vaccination site! Make appt at: https://t.co/L4ECc1empb #COVIDVaccine #GetVaccinated https://t.co/azmw1nOO4z
+275	COVID-19 vaccines: safe, effective, and probably prevent transmission as well as disease A lot of good news ping @CaulfieldTim @MackayIM @TheSciBabe https://t.co/4dMA9OhXgE
+276	Patients with #COVID19 have reportedly had mild to severe respiratory illness. Symptoms include fever, cough, or shortness of breath. Learn more about COVID-19 symptoms: https://t.co/ehL8kmRHaN https://t.co/0am2j0zhfE
+277	@Johnheretohelp Joe Biden’s Covid-19 taskforce member recommends withholding food stamps and rent assistance from those who refuse coronavirus vaccines https://www.distributednews(dot)com/474001.html
+278	LOOK: Doctors and nurses start receiving their first dose of COVID-19 vaccines on March 9 at Perpetual Succour Hospital during the the simultaneous vaccine rollout among private hospitals in Metro Cebu. @cebudailynews https://t.co/bSym2Z82gN
+279	As we saw over the wkend, disinfo is being spread online about a supposed national lockdown and grounding flights. Be skeptical of rumors. Make sure you’re getting info from legitimate sources. The @WhiteHouse is holding daily briefings and @cdcgov is providing the latest.

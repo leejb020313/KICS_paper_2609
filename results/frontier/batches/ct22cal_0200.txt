@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	I repeat... China warned WHO of the New Corona Virus in DEC of 2019... The President of the US called it a “HOAX” until about 10 days ago!!!
+201	Trial mixing Oxford/Astrazenca and Pfizer vaccines to start (Oxford University) in the UK. https://t.co/uVmpMMDxeP https://t.co/LhPloblD5v
+202	@LauraWBush and I are grateful to have been vaccinated against COVID-19. These safe and effective vaccines are our way out of this pandemic and toward recovery and renewal. So when it’s your turn, roll up your sleeve and do your part. -President Bush @AdCouncil @TheCovidCollab https://t.co/orCWMWtZ6C
+203	The Pfizer and Moderna vaccines teach your body to make a part of the virus (not the virus itself), which your immune system will then recognize as a foreign intruder, and develop antibodies against - antibodies which will work against COVID-19.
+204	The photo-sharing app owned by Facebook recommended posts and accounts making false claims about Covid-19, vaccines and the 2020 U.S. election. https://t.co/xTUpyY9iWy
+205	As someone who has had the vaccination, I hope I can put your mind at rest, the covid vaccine is safe and effective. It is halal and this has been confirmed by the @BritishIMA. Nighat Basharat from Thalassaemia South Yorkshire shares important information about vaccines. https://t.co/RVcKRUIxQe
+206	Update: According to the @MinofHealthUG , the COVID-19 vaccines have been distributed to over 40 districts and by close of business today, the number of districts that have received the vaccines will be 55. #NTVNews 📸: @bamulanzeki https://t.co/6SGANa7wLS
+207	The country is panic stricken over the #coronavirus, yet this flu season there have been 9.7 million flu illnesses, 87,000 hospitalizations and 4800 deaths from flu, including 32 pediatric deaths. Itâs time to stop the panic and put things into perspective.
+208	All the vaccines are essentially 100% effective at preventing hospitalization and death but as an asthmatic who has barely left my house in a year I also want the vaccine that best prevents me from contracting covid and experiencing long-term chronic effects either :/
+209	The Duterte administration's ₱72.5-billion ($1.4-billion) financing plan mainly funded by loans from three multilateral institutions will be used to buy, store, and distribute COVID-19 vaccines. https://t.co/QKAunOqLe7
+210	Genuinely confused here: we have three members of congress prophylatically self-quarantining because of possible Covid-19 exposure, but are they not being tested? Seems like they should be tested, right?
+211	Corona Virus Pro Tip: If you mix Emergen-C with Vodka you literally cannot get sick, itâs actually science
+212	435 child care centers that never closed, serving children of essential workers. 16 total COVID-19 cases in 10,558 children. https://t.co/SQEChPZoQ1
+213	Today @terryslevin caught up with @SonyaFeldhoff @abcadelaide to discuss Italy's blocking of COVID vaccines destined for Australia, and what it tells us about broader issues of vaccine equity for low-middle income countries. Interview starts at 32:00. https://t.co/9IU9kTZyMx
+214	⁦@RonDeSantisFL⁩ won’t take responsibility for his ineptness, and then blames Hispanics. 🙄🤦‍♀️ Florida Governor Ripped For Trying To Pin COVID-19 Spike On Hispanic Workers https://t.co/hqXPVngy3Y
+215	“According to the US CDC adverse incident report, 966 people out of 19,769 died after receiving the Covid mRNA vaccines. This is a 5% death rate. The Covid fatality rate is 0.13%. https://t.co/rM7anRt8yM
+216	Bihar reports first COVID-19 death: 38-year-old man with travel history to Qatar dies at AIIMS, Patna, says hospital official
+217	Read @realtahiramin on how the international intellectual property regime is holding back efforts to produce and distribute COVID-19 vaccines across the developing world—and what wealthy countries should do about it. https://t.co/WdvXowzwYc
+218	India Today News Director Rahul Kanwal claimed that President Trump suggested early access of coronavirus vaccine to India in his interview with Fox News. #AltNewsFactCheck could not find any such reference in the interview. | @samjawed65 https://t.co/rAjSoQgpX6
+219	Extremely encouraging reports in The Times this morning. Professor Sarah Gilbert is '80% confident' the Coronavirus vaccine she is developing at Oxford will work and if all goes perfectly, it could be ready by the Autumn. 80% is a very positive number indeed.
+220	Pfizer has demanded sovereign assets as collateral and wanted Argentina to put its bank reserves, military bases and embassy buildings as security against any future claims against them for the covid vaccine https://t.co/5eceNU2EPO
+221	Updated article. https://t.co/v59VSB4QuX COVID vaccines now rank No. 1 (of 94 total vaccine types) with reported deaths, birth defects and emergency room visits. Number 1.
+222	McConnell is blocking a bipartisan coronavirus bill, because it limits how much Big Pharma can charge for a vaccine!🙄 ... by all means, lets worry about how much drug makers will make off a life threatening pandemic, spreading across the US! I really hate that greedy MF'er 😡
+223	Germany is conducting 160k Covid-19 tests a week. It has a total 35k ventilators, 10k ordered to be made by the govt. It has converted a new 1k bed hospital in Berlin. It’s death rate is tiny bcos it’s mass testing allows quarantine and bcos it has fewer non reported cases.
+224	Newspaper Headlines: Anxiety over fake COVID-19 vaccines and Nigeria can save N3.7trn from MDAs | TheCable https://t.co/oKgWkdGcd0 https://t.co/0CJECxZhbG
+225	A number of greed and selfish africans leader are allowing this #COVAX to lend in africa while the rest of the world are suspending the so called vaccines 💉 https://t.co/dNkp7WEmjT
+226	Between the new sites launched and the arrival of J&amp;J and Pfizer vaccines, we now have appointment availability in Los Angeles for all eligible populations (healthcare, 65+, food. agriculture, education, childcare). Spread the word: https://t.co/a3DxfQKUWt https://t.co/VM1hZauMGV
+227	FRIENDS. The stuff about nature healing and wildlife returning because of COVID-19 is fake. https://t.co/IlVdiSdlun
+228	If U love humanity, then pl stop forwarding any fake msg abt #Hantavirus to avoid panic, when we already hv enough to fight wid #Coronavirus. Hanta Virus spreads only from an infected animal's urine,faeces or saliva. Pl educate yourself &amp; RT for others to understand. #NoFakeNews https://t.co/VinNLLq89y
+229	Russian intelligence agencies have mounted a campaign to undermine confidence in Pfizer Inc.’s and other Western vaccines... https://t.co/vZEysfIJrt
+230	This is devastating: Our analysis shows that with the same actions actually taken by other nations large and small, from East and West, the U.S. could have prevented 70% to 99% of its Covid-19 deaths. This has been a needless tragedy. https://t.co/Xi7JEJ89Ox via @statnews
+231	On Friday, March 19th, 10am-4pm, the @PhiladelphiaGov Health Dept. will be administering 500 COVID vaccines at EOM, 144 Moore St., for categories 1a and 1b, including these groups. Register: https://t.co/AEKu8QzKA4 Neighbors without internet can call @philly311 to register. https://t.co/vsFukvsxR9
+232	@CMOH_Alberta Absolutely vaccines eradicate however ALL COVID shots are THERAPEUTIC and not a vaccine if they only minimize symptoms and you still have to do all of the other things like wear a mask. Stop selling this as a vaccine! #notavaccine #endthelockdown #opentheprovince
+233	In the wake of the #coronavirus, Sen Josh Hawley introduces a bill to end United States dependency on China for the manufacturing and distribution of our medical supply. https://t.co/BRx40LQ1Du
+234	Over 20 drug companies have written to Biden to reject a proposal from India and S Africa before the WTO to temporarily waive patents to try to widen access to Covid-19 medicines and vaccines to largely low-income countries. UK, US, EU are already against https://t.co/ITGJHvqMBV
+235	The race to end the pandemic is on, and UNICEF is playing a vital role in the equitable global distribution of lifesaving COVID-19 vaccines. Here's the latest on a busy week for the COVAX initiative. #EndThePandemic https://t.co/X6YgYKoYzI
+236	Over the past year, the pandemic took no hostages charley. It has taken a little more than vaccines could salvage... human lives! Especially for @aNiiOkantah it was love💔! Check out his blog for a sec. https://t.co/yGOfvjyOw9
+237	SA🇿🇦 COVID-19 Update: 4.3.21 A year since 1st reported #COVID19 case in South Africa, with 31,194 active cases currently. In between there's been 1,517,666 confirmed cases, 9,178,323 tests conducted, 92,029 vaccines administered and 50,462 reported deaths #coronavirus #COVID19SA https://t.co/Yz6YTgJgDR
+238	Ebola has a 50% death rate. If you got infected, youâd most likely die. Covid-19 has a 3.4% death rate. Obviously not as bad as Ebolaâbut that makes it up to 34x more deadly than the seasonal flu https://t.co/bCyOeedRAy https://t.co/ga2RDGhpIQ
+239	Over the next two days, CISD employees will be among hundreds of Kaufman County educators receiving their COVID-19 vaccines. Vaccines are being administered by Forney ISD, in partnership with Kaufman County and the Terrell Fire Department. Thank you! Photos courtesy of @forneyisd https://t.co/sRLxNYXqJ3
