@@ -203,7 +203,7 @@ centered(doc, "팩트체크 필요성 탐지", 13, True, after=0)
 # title block as in the peer KICS papers: authors with the corresponding author starred, affiliation, e-mails
 AUTHORS_KO, AUTHORS_EN = "이정빈, 김은경*", "Lee Jeongbin, Kim Eunkyung*"  # English romanization of the advisor: to confirm
 AFFIL_KO, AFFIL_EN = "국립한밭대학교", "Hanbat National Univ."
-EMAILS = "leejb020313@gmail.com, *(교신저자 이메일)"  # corresponding author's e-mail: to fill in
+EMAILS = "20221065@edu.hanbat.ac.kr, *ekim@hanbat.ac.kr"
 centered(doc, AUTHORS_KO, 11, after=0).paragraph_format.space_before = Pt(7.6)
 centered(doc, AFFIL_KO, 11, after=0)
 centered(doc, EMAILS, 11, after=7.6)
