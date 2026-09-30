@@ -1,0 +1,285 @@
+{
+  "_about": "Evidence dossier for every reference in jev_kics_draft (JEV -> LLM paper). Same format and checker as paper/references; entries [1],[4],[5],[6] are copied from the main paper's verified dossier.",
+  "references": [
+    {
+      "n": 1,
+      "key": "amatya2026nnppi",
+      "bib": "P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
+      "arxiv": "2608.30731",
+      "version_read": "v2",
+      "authors_official": [
+        "Pratuat Amatya",
+        "V Venktesh",
+        "Vinay Setty"
+      ],
+      "published": "2026-08-31",
+      "venue": "arXiv preprint (anonymised ARR code link: likely under ACL Rolling Review)",
+      "pdf": "2608.30731.pdf",
+      "claims": [
+        {
+          "id": "1a",
+          "where": "서론 1문단",
+          "paper": "실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1].",
+          "quote": "invoking large LLMs on every incoming claim is prohibitive at production volumes",
+          "support": "direct"
+        },
+        {
+          "id": "1b",
+          "where": "서론 1문단",
+          "paper": "(운영사) — 저자들이 실제 서비스 운영 맥락에서 쓴 논문이라는 근거",
+          "quote": "This work is motivated by the practical demands of operating a commercial fact-checking service at an early-stage startup.",
+          "support": "direct"
+        },
+        {
+          "id": "1c",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "NN-PPI[1]는 소형 LLM의 점수를 라벨이 있는 보정 세트 중 의미적으로 가까운 이웃의 잔차로 보정한다.",
+          "quote": "For each test claim, we retrieve the k nearest neighbors to form a localized calibration set. The baseline LLM prediction is then adjusted using this set",
+          "support": "direct"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "key": "li2026jevjudge",
+      "bib": "Y. Li, Y. Miao, R. Krishnan, and R. Padman, \"JEV-as-a-Judge: Accept When Confident, Escalate When Unsure,\" arXiv:2609.26550, 2026.",
+      "arxiv": "2609.26550",
+      "version_read": "v3",
+      "authors_official": [
+        "Yubo Li",
+        "Yidi Miao",
+        "Ramayya Krishnan",
+        "Rema Padman"
+      ],
+      "published": "2026-09-22",
+      "venue": "arXiv preprint",
+      "pdf": "2609.26550.pdf",
+      "claims": [
+        {
+          "id": "2a",
+          "where": "서론 1문단",
+          "paper": "JEV는 텍스트를 생성하지 않고 라벨 확률만 반환하는 결정 전용 모델이다[2].",
+          "quote": "a hosted decision-only service that takes natural-language instructions and structured inputs and returns a verdict over a specified output type, with a probability for every label and no generated text",
+          "support": "direct"
+        },
+        {
+          "id": "2b",
+          "where": "서론 1문단",
+          "paper": "생성형 LLM보다 훨씬 저렴하다[2] (1,000건당 0.044달러).",
+          "quote": "it is 277 times cheaper ($0.044 per 1,000 judgments)",
+          "support": "direct",
+          "note": "Fee comparison is against GPT-6 at low reasoning effort on their timing panel, not against Claude Sonnet 5."
+        },
+        {
+          "id": "2c",
+          "where": "서론 2문단",
+          "paper": "JEV가 확신할 때 판정을 받아들이고 나머지는 LLM의 판정으로 교체하는 방식이었다[2].",
+          "quote": "whose verdict replaces JEV’s",
+          "support": "direct"
+        },
+        {
+          "id": "2d",
+          "where": "서론 2문단",
+          "paper": "두 모델의 출력을 결합하는 방식은 향후 과제로 남아 있다[2].",
+          "quote": "Fusion, conditioning, and rules that model the correlation are left to future work.",
+          "support": "direct"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "key": "rao2026jevjudges",
+      "bib": "D. Rao and C. Callison-Burch, \"JEV vs. LLMs as Rubric Judges: Cheaper, Faster, and Wrong in the Same Places,\" arXiv:2609.29769, 2026.",
+      "arxiv": "2609.29769",
+      "version_read": "v2",
+      "authors_official": [
+        "Delip Rao",
+        "Chris Callison-Burch"
+      ],
+      "published": "2026-09-24",
+      "venue": "arXiv preprint",
+      "pdf": "2609.29769.pdf",
+      "claims": [
+        {
+          "id": "3a",
+          "where": "서론 2문단",
+          "paper": "이러한 캐스케이드는 비용을 줄일 뿐 정확도는 거의 높이지 못한다고 보고되었다[3].",
+          "quote": "such cascades only lower cost while adding little accuracy",
+          "support": "direct",
+          "note": "Their cascades defer to an LLM judge whose verdict is used (replacement); rubric-judging panels, not check-worthiness."
+        },
+        {
+          "id": "3b",
+          "where": "서론 2문단",
+          "paper": "JEV와 LLM은 같은 곳에서 틀리는 경향이 있어[3]",
+          "quote": "these judges are wrong in the same places",
+          "support": "direct"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "key": "zhang2026cauc",
+      "bib": "Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
+      "arxiv": "2609.11446",
+      "version_read": "v1",
+      "authors_official": [
+        "Yilin Zhang",
+        "Han Jiang",
+        "Cai Xu",
+        "Ying Liu",
+        "Wei Zhao"
+      ],
+      "published": "2026-09-10",
+      "venue": "arXiv preprint; comment: 'Under review'",
+      "pdf": "2609.11446.pdf",
+      "claims": [
+        {
+          "id": "4a",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].",
+          "quote": "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary.",
+          "support": "direct"
+        },
+        {
+          "id": "4b",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "(CAUC 결과: 호출 약 절반 절감, 강한 모델 단독보다 정확도 향상 — 우리 결과와 같은 방향)",
+          "quote": "CAUC achieves an average relative accuracy improvement of 1.9% over strong-model-only inference while avoiding approximately 47% of strong-model calls",
+          "support": "direct"
+        },
+        {
+          "id": "4c",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.",
+          "quote": "This sign test is performed once on the calibration set and introduces no learned decision network.",
+          "support": "inference",
+          "note": "CAUC fuses standardized, temperature-calibrated logits weighted by each model's calibrated confidence (Eq. 6: z_fuse = (p_s q_s + p_l q_l)/(p_s + p_l)) and enables fusion only if a calibration-set sign test is positive. No fusion coefficient is fitted to labels. Our Eq. (1) fits (a, b, c) by logistic regression on labelled calibration data, so the fused score can re-weight an LLM whose decision criterion differs from the labels. The 'difference' sentence is our characterization based on these passages."
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "key": "hasanain2024task1",
+      "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
+      "url": "https://ceur-ws.org/Vol-3740/paper-24.pdf",
+      "authors_official": [
+        "Maram Hasanain",
+        "Reem Suwaileh",
+        "Sanne Weering",
+        "Chengkai Li",
+        "Tommaso Caselli",
+        "Wajdi Zaghouani",
+        "Alberto Barrón-Cedeño",
+        "Preslav Nakov",
+        "Firoj Alam"
+      ],
+      "published": "2024",
+      "venue": "CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)",
+      "pdf": "clef2024_task1_overview.pdf",
+      "claims": [
+        {
+          "id": "5a",
+          "where": "III. 실험 (데이터)",
+          "paper": "CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)",
+          "quote": "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches.",
+          "support": "direct"
+        },
+        {
+          "id": "5b",
+          "where": "결론 (한계)",
+          "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축",
+          "quote": "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates.",
+          "support": "direct",
+          "note": "Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set."
+        },
+        {
+          "id": "5c",
+          "where": "III. 실험 (데이터)",
+          "paper": "테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장",
+          "quote": "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253",
+          "support": "direct",
+          "note": "Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only."
+        },
+        {
+          "id": "5d",
+          "where": "결론 (한계)",
+          "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장",
+          "quote": "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4].",
+          "support": "direct"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "key": "arslan2020claimbuster",
+      "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+      "doi": "10.1609/icwsm.v14i1.7346",
+      "authors_official": [
+        "Fatma Arslan",
+        "Naeemul Hassan",
+        "Chengkai Li",
+        "Mark Tremayne"
+      ],
+      "published": "2020-05-26",
+      "venue": "Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)",
+      "pdf": "icwsm2020_claimbuster.pdf",
+      "claims": [
+        {
+          "id": "6a",
+          "where": "III. 실험 (데이터)",
+          "paper": "ClaimBuster (미국 대선 토론 문장)",
+          "quote": "we present the ClaimBuster dataset of 23,533 statements extracted from all U.S. general election presidential debates and annotated by human coders",
+          "support": "direct",
+          "note": "We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501."
+        }
+      ]
+    }
+  ],
+  "screened_not_cited": [
+    {
+      "arxiv": "2609.37647",
+      "title": "Evaluating and Benchmarking the System One Model Jev",
+      "depth": "title/abstract (orx discover)",
+      "verdict": "general JEV benchmark; not needed for our claims"
+    },
+    {
+      "arxiv": "2609.24574",
+      "title": "Evaluating Decision Models for Text Annotation in Computational Social Science",
+      "depth": "title/abstract",
+      "verdict": "annotation tasks, no cascade/fusion; not cited"
+    },
+    {
+      "arxiv": "2609.28940, 2609.30216, 2609.24965, 2609.34024, 2609.23986, 2609.30186, 2609.36965",
+      "title": "other 2026 JEV application papers (pentest, ecosystem, science, medicine, memory, mobile, Chinese)",
+      "depth": "title (keyword search)",
+      "verdict": "different domains; none on check-worthiness or fusion"
+    }
+  ],
+  "search_log": [
+    {
+      "date": "2026-09-30",
+      "source": "alphaXiv keyword",
+      "query": "JEV TypeSafe / JEV",
+      "result": "2609.26550, 2609.29769, 2609.37647 and JEV application papers"
+    },
+    {
+      "date": "2026-09-30",
+      "source": "alphaXiv embedding",
+      "query": "zero-shot decision model as cheap first stage in a cascade with a large language model for classification",
+      "result": "2609.24574, cascade papers (SRR, conformal cascade ...)"
+    },
+    {
+      "date": "2026-09-30",
+      "source": "alphaXiv keyword",
+      "query": "Jev check-worthiness / Jev fact-checking",
+      "result": "no JEV paper on check-worthiness or fact-checking"
+    },
+    {
+      "date": "2026-09-30",
+      "source": "full text",
+      "query": "2609.26550 §7-8, 2609.29769 abstract/RQ3",
+      "result": "both cascades are serial replacement; 2609.26550 leaves fusion to future work"
+    }
+  ]
+}

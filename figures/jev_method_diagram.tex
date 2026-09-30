@@ -1,0 +1,43 @@
+% Figure 1 of the JEV paper: JEV -> LLM fused cascade. One KICS column (8.2 cm); compile with Tectonic (XeTeX):
+%   tectonic figures/jev_method_diagram.tex   -> figures/jev_method_diagram.pdf (PNG for the Word draft: 600 dpi)
+% Same visual language as method_diagram.tex; the replacement cascade is the dashed road not taken.
+\documentclass[border=1pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+\definecolor{ours}{HTML}{0072B2}
+\definecolor{ink}{HTML}{3A3A3A}
+\definecolor{soft}{HTML}{F2F2F2}
+\begin{document}
+\fontsize{7.5}{9}\selectfont
+\begin{tikzpicture}[
+    node distance=2.6mm and 7mm,
+    box/.style={draw=ink, rounded corners=1.2pt, align=center, line width=0.45pt,
+                minimum width=15.5mm, minimum height=7.6mm, inner sep=1.5pt},
+    llm/.style={box, fill=soft},
+    ours/.style={box, draw=ours, fill=ours!9, line width=0.9pt, minimum width=21mm},
+    gate/.style={draw=ink, diamond, aspect=1.9, align=center, line width=0.45pt, inner sep=0.6pt},
+    flow/.style={-{Stealth[length=1.5mm,width=1.2mm]}, draw=ink, line width=0.45pt},
+    lbl/.style={font=\fontsize{6.5}{7.5}\selectfont, text=ink!80, inner sep=1pt},
+    base/.style={box, draw=ink!55, dashed, text=ink!70},
+    baseflow/.style={flow, draw=ink!55, dashed},
+  ]
+  \node[box]                       (jev)  {JEV\\[0.3mm]$p(x)$};
+  \node[gate, right=of jev]        (gate) {Uncertain?};
+  \node[box, right=of gate]        (keep) {JEV label\\[0.3mm]$p(x)\geq \theta$};
+  \node[llm, below=4.2mm of gate]  (llm)  {LLM score\\[0.3mm]$s(x)$};
+  \node[ours] at (llm -| jev)      (fuse) {Fused label (Eq.\,1)\\[0.3mm]$\sigma(a\ell+bs+c)\geq 0.5$};
+  \node[base] at (llm -| keep)     (repl) {Replacement\\[0.3mm]$s(x)\geq t$};
+
+  \coordinate[left=4.5mm of jev] (in);
+  \draw[flow] (in) -- node[lbl, above] {$x$} (jev);
+  \draw[flow] (jev) -- (gate);
+  \draw[flow] (gate) -- node[lbl, above] {no} (keep);
+  \draw[flow] (gate) -- node[lbl, right] {yes} (llm);
+  \draw[flow] (llm) -- node[lbl, above] {$s$} (fuse);
+  \draw[flow] (jev) -- node[lbl, right] {$\ell=\mathrm{logit}\,p$} (fuse);
+  \draw[baseflow] (llm) -- node[lbl, above] {$s$} (repl);
+\end{tikzpicture}
+\end{document}

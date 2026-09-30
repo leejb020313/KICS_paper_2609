@@ -126,6 +126,9 @@ def evaluate(name):
               'jevfuse_sel_vs_jevrep_sel': (sel['jevfuse'], f"jevrep_{rate['jevfuse']}")}
     for b in BUDGETS[1:]:
         claims[f'jevfuse_{b}_vs_jevrep_{b}'] = (f'jevfuse_{b}', f'jevrep_{b}')
+    # Table 1 of the JEV paper: the proposed row (JEV -> LLM fused at its selected rate) against every other row
+    for row in ('svm', 'jev_thr', 'sonnet_raw', 'sonnet_thr', 'sonnet_nnppi', sel['fuse'], f"jevrep_{rate['jevfuse']}"):
+        claims[f'table:{row}'] = (sel['jevfuse'], row)
     tests = {c: per_seed(a, b) for c, (a, b) in claims.items()}
     return dict(n_test=len(y), best_full=best, rate=rate, reach=reach, learning_curve=curve,
                 mean_acc=mean, metrics=summary, tests=tests)
