@@ -98,7 +98,7 @@
 
 - 근거 유형: direct — Stated in the conclusion as 'Future work will focus on ...'.
 
-## [3] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276–286, 2024.
+## [3] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276-286, 2024.
 
 - 식별자: https://ceur-ws.org/Vol-3740/paper-24.pdf · 공개일 2024 · CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)
 - 공식 저자: Maram Hasanain, Reem Suwaileh, Sanne Weering, Chengkai Li, Tommaso Caselli, Wajdi Zaghouani, Alberto Barrón-Cedeño, Preslav Nakov, Firoj Alam
@@ -140,7 +140,7 @@
 
 - 근거 유형: direct
 
-## [4] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
+## [4] F. Arslan et al., "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821-829, 2020.
 
 - 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
 - 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne

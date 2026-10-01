@@ -43,7 +43,7 @@ def main():
     mpl.rcParams.update({"font.family": "sans-serif", "font.sans-serif": [T["font"]],
                          "axes.unicode_minus": False, "font.size": 8, "axes.labelsize": 8,
                          "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5})
-    fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.53)
+    fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.48)
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]
@@ -86,7 +86,7 @@ def main():
     panel_labels(axes, labels=[f"(a) {NAMES['clef']}", f"(b) {NAMES['cb']}"], weight="normal")
     handles, labels = axes[0].get_legend_handles_labels()
     fig.set_layout_engine(None)
-    fig.subplots_adjust(left=0.155, right=0.955, top=0.90, bottom=0.40, wspace=0.40)
+    fig.subplots_adjust(left=0.155, right=0.955, top=0.89, bottom=0.44, wspace=0.40)
     leg = fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.0), fontsize=7,
                      columnspacing=0.8, handlelength=1.8, handletextpad=0.4)
     leg.get_texts()[labels.index(T["fuse"])].set_fontweight("bold")  # the proposed method

@@ -136,7 +136,7 @@
     {
       "n": 3,
       "key": "hasanain2024task1",
-      "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
+      "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276-286, 2024.",
       "url": "https://ceur-ws.org/Vol-3740/paper-24.pdf",
       "authors_official": [
         "Maram Hasanain",
@@ -202,7 +202,7 @@
     {
       "n": 4,
       "key": "arslan2020claimbuster",
-      "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+      "bib": "F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821-829, 2020.",
       "doi": "10.1609/icwsm.v14i1.7346",
       "authors_official": [
         "Fatma Arslan",

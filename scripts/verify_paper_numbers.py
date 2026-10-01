@@ -58,10 +58,9 @@ checks = [("clef n_test", f"{R['clef']['n_test']:,}문장"), ("cb n_test", f"{R[
 for d in ("clef", "cb"):
     for n in ["gemma_nnppi_sel", "svm", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5", "fuse_0.5"]:
         checks.append((f"{d} acc {n}", f"{acc(d, n):.3f}"))
-    checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
+    checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), 
 ]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
-           ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
            ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높았다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
            ("non-inferiority (abstract)", f"통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인"),
            ("non-inferiority (results)", f"5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. 즉 결합형의 정확도는 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다"),
@@ -77,16 +76,11 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
            ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
-           ("calib gain after 50%", "50% 이후 증가 " + ", ".join(
-               f"{n} {100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
-               for d, n in (("clef", "CLEF"), ("cb", "ClaimBuster")))),
-           ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
-                              f"{EX['n_queried_replace_right_fuse_wrong']}개"),
+           ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
            ("dagger definition", "†: 5회 중 3회 이상 제안보다 유의하게 낮음"),
-           ("svm ms per sentence", f"문장당 {CT['svm_ms_per_sentence']:.0f} ms 포함"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
            ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}였고"),
-           ("time per 1,000", f"시간은 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초로 추정되었다"),
+           ("time per 1,000", f"시간은 임베딩 SVM을 포함하여 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초로 추정되었다"),
            ("abstract cost/time (expected)", f"이를 통해 LLM 비용은 약 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 약 "
                                              f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("haiku nnppi", f"NN-PPI를 적용한 전량 호출({hk('clef', 'sonnet_nnppi')}, {hk('cb', 'sonnet_nnppi')})보다 유의하게 높지 않았다"),
@@ -103,7 +97,7 @@ checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef
 DAG = {n: f"fuse_0.5_vs_{n}" for n in ("sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5")}
 mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and ns(d, DAG[n]) >= 3 else "")
 # whole Table 1 rows (label, call rate, CLEF, ClaimBuster), so a † can only match in its own row
-for label, rate, n in [("Gemma 3 4B + NN-PPI [1]", "0%", "gemma_nnppi_sel"),
+for label, rate, n in [("Gemma+NN-PPI [1]", "0%", "gemma_nnppi_sel"),
                        ("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
                        ("+ NN-PPI [1]", "100%", "sonnet_nnppi"), ("교체형 캐스케이드", "50%", "replace_0.5"),
                        ("결합형 캐스케이드 (제안)", "50%", "fuse_0.5")]:

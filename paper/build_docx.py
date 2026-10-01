@@ -112,7 +112,7 @@ def best_full(ds):
     return max(("sonnet_raw", "sonnet_thr"), key=lambda n: acc(ds, n))
 
 
-LATIN_FONT = "Times New Roman"  # Latin letters and digits; HY신명조's hyphen is drawn as a long dash
+LATIN_FONT = BODY_FONT  # template: Latin letters and digits are 신명조 too (was Times New Roman)
 
 
 def set_font(run, name=BODY_FONT, size=9.5, bold=False, italic=False):
@@ -168,7 +168,7 @@ def figure(doc, png, width_cm, caption, detail=""):
         set_font(cap.add_run(" " + detail), BODY_FONT, 8)
 
 
-BODY_LINE_SPACING = 1.05  # template default is 1.0; 1.0 read as cramped at 9 pt in two columns
+BODY_LINE_SPACING = 1.0  # KICS template default
 
 
 def body(doc, text, size=9, indent=0.3175, after=3.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY, lead=None):
@@ -279,8 +279,8 @@ body(doc, (
     "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
     "기준은 데이터셋의 라벨(사람이 붙인 정답)과 다를 수 있으며, 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 "
     "있다[5]. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
-    "점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 결합 가중치는 라벨이 있는 데이터로 학습하므로, LLM의 "
-    "기준과 라벨 사이의 차이를 보정한다."
+    "점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 결합 가중치는 라벨로 학습하므로 LLM의 "
+    "기준과 라벨의 차이를 보정한다."
 ))
 
 # ---------------- II. 본론 ----------------
@@ -289,7 +289,7 @@ subheading(doc, "2.1 선행 연구")
 body(doc, (
     "NN-PPI[1]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
     "넘긴 입력에서만 두 모델의 출력을 결합하는 캐스케이드는 일반 분류 과제에서 제안되었고[6], SRR[5]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
-    "모델의 답으로 교체한다. 본 논문은 결합 가중치를 라벨로 학습해 LLM과 라벨의 기준 차이를 반영한다."
+    "모델의 답으로 교체한다. 본 논문은 결합 가중치를 라벨로 학습해 LLM의 기준 차이를 반영한다."
 ))
 subheading(doc, "2.2 전체 구조")
 body(doc, (
@@ -303,8 +303,8 @@ figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 
 subheading(doc, "2.3 저비용 분류기")
 body(doc, (
     "문장 x의 팩트체크 필요 여부 y∈{0,1}을 판정하며, 라벨이 있는 학습 세트 L(NN-PPI의 보정 세트)을 사용한다. 저비용 "
-    "분류기(이하 임베딩 SVM)는 문장 임베딩 all-MiniLM-L6-v2를 입력으로 하는 RBF-SVM으로, 이 임베딩은 NN-PPI가 이웃 검색에 "
-    "사용하는 것과 같다. 클래스 불균형을 고려한 가중치로 L에서 학습하며, 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이고 절댓값이 "
+    "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 쓰는 문장 임베딩 all-MiniLM-L6-v2를 입력으로 하는 "
+    "RBF-SVM이다. 클래스 불균형을 고려한 가중치로 L에서 학습하며, 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이고 절댓값이 "
     "클수록 확신이 높다."
 ))
 subheading(doc, "2.4 결합 판정")
@@ -323,8 +323,8 @@ p.paragraph_format.widow_control = False  # may split across the column so its b
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
     "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a·d)/b와 비교하므로, 분류기가 "
-    "‘불필요’로 기울수록(d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 같은 문장에 "
-    "LLM을 호출하되 s를 L에서 정한 고정 임계값 t와 비교한다."), BODY_FONT, 9)
+    "‘불필요’로 기울수록(d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 s를 "
+    "L에서 정한 고정 임계값 t와 비교한다."), BODY_FONT, 9)
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실 험")
@@ -334,7 +334,7 @@ body(doc, (
     f"CLEF 2024 CheckThat! Task 1 영어 데이터[3]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
     f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. ClaimBuster[4]는 2012년 토론 {R[cb]['n_calib_gemma']:,}문장과 "
     f"2016년 토론 {R[cb]['n_test']:,}문장을 각각 학습 세트와 테스트로 사용하였다. NN-PPI는 원 논문과 같이 Gemma 3 4B로 "
-    "재현하였으며, 원 논문과 같은 분할(CLEF dev-test, ClaimBuster 2016년)에서 가중 F1은 "
+    "재현하였으며, 원 논문과 같은 분할에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
     f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 0.827, 0.760). LLM은 Claude Sonnet 5를 "
     "사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다."
@@ -346,8 +346,7 @@ body(doc, (
     "평가 지표는 테스트 정확도이며, 학습 세트의 80%를 비복원 추출하여 5회 반복한 평균을 보고한다. 방법 간 차이는 5회 "
     "각각의 예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하고, 차이의 95% 신뢰구간은 테스트 문장 부트스트랩(2,000회)으로 구하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
     f"안에서만 정하였고(두 데이터셋 모두 k={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 학습 "
-    "세트의 교차검증 정확도가 두 데이터셋 모두 거의 오르지 않는 50%로 정하였다(50% 이후 증가 "
-    f"CLEF {100*CAL_GAIN[cl]:.2f}%p, ClaimBuster {100*CAL_GAIN[cb]:.2f}%p)."
+    "세트의 교차검증 정확도가 두 데이터셋 모두 거의 오르지 않는 50%로 정하였다."
 ))
 
 subheading(doc, "3.3 실험 결과")
@@ -377,7 +376,7 @@ def rule(tc, side, sz):
 
 
 rows = [
-    ("Gemma 3 4B + NN-PPI [1]", "0%", cell(cl, "gemma_nnppi_sel"), cell(cb, "gemma_nnppi_sel")),
+    ("Gemma+NN-PPI [1]", "0%", cell(cl, "gemma_nnppi_sel"), cell(cb, "gemma_nnppi_sel")),
     ("임베딩 SVM", "0%", cell(cl, "svm"), cell(cb, "svm")),
     ("LLM 전량 호출", "100%", cell(cl, "sonnet_raw"), cell(cb, "sonnet_raw")),
     ("  + 임계값 조정", "100%", cell(cl, "sonnet_thr"), cell(cb, "sonnet_thr")),
@@ -389,7 +388,7 @@ cap = doc.add_paragraph()
 cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
 cap.paragraph_format.space_before = Pt(4)
 cap.paragraph_format.space_after = Pt(2)
-set_font(cap.add_run("표 1. 테스트 정확도 (†: 5회 중 3회 이상 제안보다 유의하게 낮음)"), BODY_FONT, 8.5, bold=True)
+set_font(cap.add_run("표 1. 테스트 정확도(†: 5회 중 3회 이상 제안보다 유의하게 낮음)"), BODY_FONT, 8, bold=True)
 t = doc.add_table(rows=1 + len(rows), cols=4)
 t.style = "Table Grid"  # compact cell paragraphs; its grid lines are switched off below
 t.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -402,16 +401,16 @@ t._tbl.tblPr.append(_tb)
 for j, h in enumerate(["방법", "호출률", "CLEF", "ClaimBuster"]):
     c = t.rows[0].cells[j]
     c.text = ""
-    set_font(c.paragraphs[0].add_run(h), BODY_FONT, 8.5, bold=True)
+    set_font(c.paragraphs[0].add_run(h), BODY_FONT, 8, bold=True)
     c.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
 for i, (name, rate, a1, a2) in enumerate(rows, start=1):
     bold = "제안" in name
     for j, v in enumerate([name, rate, a1, a2]):
         c = t.rows[i].cells[j]
         c.text = ""
-        set_font(c.paragraphs[0].add_run(v), BODY_FONT, 8.5, bold=bold)
+        set_font(c.paragraphs[0].add_run(v), BODY_FONT, 8, bold=bold)
         c.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.LEFT if j == 0 else WD_ALIGN_PARAGRAPH.CENTER
-widths = [Cm(4.3), Cm(1.15), Cm(1.2), Cm(1.7)]  # 8.35 cm: one template column
+widths = [Cm(4.75), Cm(0.95), Cm(1.05), Cm(1.6)]  # 8.35 cm: one template column (신명조 digits are wide)
 for row in t.rows:
     for c, w in zip(row.cells, widths):
         c.width = w
@@ -439,8 +438,7 @@ first = body(doc, (
 first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
 body(doc, (
     f"LLM 점수를 0.5 기준으로 쓰면 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
-    f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤고(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
-    f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}), 임계값을 조정하면 재현율은 오르나 ClaimBuster 정확도는 "
+    f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤고, 임계값을 조정하면 재현율은 오르나 ClaimBuster 정확도는 "
     f"{pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다. 이는 LLM의 기준이 라벨과 다름을 시사한다."
 ))
 body(doc, (
@@ -454,8 +452,7 @@ body(doc, (
 body(doc, (
     f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 추정한 1,000문장당 LLM 비용"
     f"(Claude Sonnet 5 정가)은 전량 호출 ${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}였고, 순차 처리 "
-    f"시간은 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초로 추정되었다(임베딩 SVM 문장당 "
-    f"{COST_RAW['svm_ms_per_sentence']:.0f} ms 포함)."
+    f"시간은 임베딩 SVM을 포함하여 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초로 추정되었다."
 ))
 body(doc, (
     "그림 2와 같이 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았다. 전량 호출의 평균 정확도에 교체형은 "
@@ -472,8 +469,7 @@ body(doc, (
     "두 방법은 같은 문장에 LLM을 호출하므로 차이는 판정 방식에서만 생긴다. 예를 들어 CLEF의 "
     f"한 공약 문장(라벨: 불필요)은 LLM 점수가 s={E['s']:.2f}로, 임계값 t={eul(f'{EX['llm_threshold']:.2f}')} 사용하는 교체형은 "
     f"‘필요’로 잘못 판정하였으나, 결합형은 분류기의 결정값(d={neg(E['d'])})에 따라 판정 기준이 {ro(f'{E['bar']:.2f}')} 높아져 "
-    "옳게 판정하였다. CLEF 1회차에서 LLM을 호출한 절반 중 결합형만 옳게 판정한 문장은 "
-    f"{EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 {EX['n_queried_replace_right_fuse_wrong']}개였다."
+    "옳게 판정하였다."
 ))
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
@@ -517,8 +513,8 @@ heading(doc, "참 고 문 헌")
 refs = [
     "[1] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
     "[2] P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
-    "[3] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
-    "[4] F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+    "[3] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276-286, 2024.",
+    "[4] F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821-829, 2020.",
     "[5] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
     "[6] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
 ]
