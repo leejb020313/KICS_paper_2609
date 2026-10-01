@@ -43,7 +43,7 @@ def main():
     mpl.rcParams.update({"font.family": "sans-serif", "font.sans-serif": [T["font"]],
                          "axes.unicode_minus": False, "font.size": 8, "axes.labelsize": 8,
                          "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5})
-    fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.58)
+    fig, axes = figure_grid(1, 2, width=WIDTH_IN, ratio=0.53)
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]

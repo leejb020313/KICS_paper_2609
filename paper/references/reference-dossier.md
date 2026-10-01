@@ -4,8 +4,8 @@
 
 ## 요약
 
-- 참고문헌 8편, 근거 28건 (원문 직접 확인 25건, 해석 3건)
-- 원문 PDF에서 찾은 인용문 28/28건 (유료 원문 0건은 공개 초록으로 확인)
+- 참고문헌 8편, 근거 30건 (원문 직접 확인 27건, 해석 3건)
+- 원문 PDF에서 찾은 인용문 30/30건 (유료 원문 0건은 공개 초록으로 확인)
 - 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 3b (모든 입력에 LLM을 호출한다.…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
 
 ## [1] P. Amatya, Venktesh V, and V. Setty, "Calibrating Small Language Models for Claim Check-Worthiness Detection," arXiv:2608.30731, 2026.
@@ -14,7 +14,7 @@
 - 공식 저자: Pratuat Amatya, V Venktesh, Vinay Setty
 - 원문 PDF: `pdfs/2608.30731.pdf`
 
-**1a** (서론 1문단) — 논문: 실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1].
+**1a** (서론 1문단) — 논문: 실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것은 실제 서비스 규모에서 감당하기 어렵다고 보고하였다[1].
 
 > "invoking large LLMs on every incoming claim is prohibitive at production volumes" (p. 1)
 
@@ -92,7 +92,7 @@
 - 공식 저자: Pratuat Amatya, Vinay Setty
 - 원문 PDF: `pdfs/2606.08605.pdf`
 
-**2c** (서론) — 논문: 같은 연구진은 인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드 방식을 향후 과제로 제시하였다[2].
+**2c** (서론) — 논문: 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 제시하였다[2].
 
 > "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low" (p. 9)
 
@@ -122,13 +122,13 @@
 - 공식 저자: Tyler Burleigh
 - 원문 PDF: `pdfs/2604.19781.pdf`
 
-**4a** (서론) — 논문: 일반적인 캐스케이드[4]는 불확실한 입력을 큰 모델에 넘기되
+**4a** (서론) — 논문: 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며
 
 > "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs" (p. 1)
 
 - 근거 유형: direct
 
-**4b** (서론) — 논문: 그 답으로 교체하고
+**4b** (서론) — 논문: 일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4].
 
 > "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score" (p. 4)
 
@@ -164,6 +164,18 @@
 
 - 근거 유형: direct
 
+**5e** (Ⅰ. 서론 1문단) — 논문: 온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며
+
+> "Due to the significant surge of disinformative content online the importance of improving the capabilities of fact-checking pipeline is paramount" (p. 6)
+
+- 근거 유형: direct
+
+**5f** (Ⅰ. 서론 1문단) — 논문: 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 팩트체크 필요성 탐지이다[5].
+
+> "the first part of the pipeline is finding claims that important to fact check" (p. 6)
+
+- 근거 유형: direct
+
 ## [6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
 
 - 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
@@ -182,7 +194,7 @@
 - 공식 저자: Zheyuan Wang, Siyu Li, Peiqiao Song, Sijia Chen, Qianqian Song, Qian Liu
 - 원문 PDF: `pdfs/2609.07786.pdf`
 
-**7a** (서론 2문단) — 논문: 교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].
+**7a** (서론 2문단) — 논문: 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].
 
 > "it is harmful when the large model replaces a correct answer with an incorrect one" (p. 1)
 

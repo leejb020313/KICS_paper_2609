@@ -168,7 +168,7 @@ def figure(doc, png, width_cm, caption, detail=""):
         set_font(cap.add_run(" " + detail), BODY_FONT, 8)
 
 
-BODY_LINE_SPACING = 1.1  # 1.0 read as cramped at 9 pt in two columns
+BODY_LINE_SPACING = 1.05  # template default is 1.0; 1.0 read as cramped at 9 pt in two columns
 
 
 def body(doc, text, size=9, indent=0.3175, after=3.5, align=WD_ALIGN_PARAGRAPH.JUSTIFY, lead=None):
@@ -233,16 +233,18 @@ REACH = {d: round(100 * SR[d]["first_rate_reaching_best_full"]["fuse"]) for d in
 assert all(SR[d]["first_rate_reaching_best_full"]["replace"] == 0.5 for d in (cl, cb))  # text: "교체형은 50%"
 assert REACH[cl] <= REACH[cb]  # abstract prints the range as CLEF~ClaimBuster
 centered(doc, "요 약", 11, False, after=3)
+MEAN_GAIN = {d: 100 * sum(EQ["sonnet5"][d]["rows"]["fuse_0.5"]["diff"]) / 5 for d in (cl, cb)}
+assert all(v > 0 for v in MEAN_GAIN.values())  # "평균적으로 오히려 … 높았고"
+CUT_USD = 100 * (1 - COST["0.5"]["usd"] / COST["1.0"]["usd"])
+CUT_SEC = 100 * (1 - COST["0.5"]["seconds"] / COST["1.0"]["seconds"])
 body(doc, (
-    "팩트체크 필요성 탐지(check-worthiness detection)는 유입되는 문장 중 사실 확인이 필요한 문장을 선별하는 기술로, "
-    "모든 문장에 대형 언어 모델(LLM)을 호출하면 비용과 지연이 크다. 본 논문에서는 라벨로 "
-    "학습한 저비용 분류기가 불확실하게 판정한 문장에만 LLM을 호출하고, LLM의 판정으로 교체하는 대신 두 모델의 점수를 "
-    "결합하는 결합형 캐스케이드를 제안한다. CLEF 2024와 ClaimBuster에서 평가한 결과, 제안 방법은 호출률 50%에서 정확도 "
-    f"CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {ro(f3(acc(cb,'fuse_0.5')))} LLM만 전량 호출한 경우보다 {NI:.1f}%p 넘게 낮지 않음을 "
-    "5회 반복 모두에서 확인하였으나(95% 신뢰구간), 같은 호출률의 교체형은 이를 보이지 못하였다. 또한 제안 방법은 "
-    f"{REACH[cl]}~{REACH[cb]}%의 호출률에서 전량 호출의 평균 정확도에 도달하였다. 호출률 50%에서 LLM 비용은 "
-    f"{100*(1-COST['0.5']['usd']/COST['1.0']['usd']):.0f}%, 처리 시간은 {100*(1-COST['0.5']['seconds']/COST['1.0']['seconds']):.0f}% "
-    "줄었다. 또한 선행 연구 NN-PPI를 재현하여, 같은 라벨로 학습한 분류기만으로도 NN-PPI와 같거나 높은 정확도를 얻음을 보인다."
+    "팩트체크 필요성 탐지(check-worthiness detection)는 수많은 문장 중 사실 확인이 필요한 문장을 골라내는 기술이다. "
+    "대형 언어 모델(LLM)은 이 판정을 잘 수행하지만, 모든 문장에 LLM을 호출하면 비용과 처리 시간이 크게 늘어난다. "
+    "본 논문에서는 가벼운 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 확신하지 못하는 문장에만 LLM을 호출하되 "
+    "LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄여 LLM "
+    f"비용을 {CUT_USD:.0f}%, 처리 시간을 {CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도"
+    f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})를 유지하였다. 정확도는 평균적으로 오히려 "
+    f"{MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인하였다."
 ), size=9, indent=0.5, after=2.5)
 
 doc.add_section(0)
@@ -254,14 +256,19 @@ columns(doc, 2)
 # ---------------- I. 서론 ----------------
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
-    "팩트체크 필요성 탐지는 유입되는 모든 문장을 판정해야 하므로, 실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였으며[1], 같은 연구진은 "
-    "인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드 방식을 향후 과제로 제시하였다[2]."
+    "온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며, 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 "
+    "팩트체크 필요성 탐지이다[5]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. LLM은 이 판정을 "
+    "잘 수행하지만, 실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것은 운영 규모에서 감당하기 "
+    "어렵다고 보고하였다[1]. 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 "
+    "제시하였다[2]."
 ))
 body(doc, (
-    "이러한 하이브리드는 일반적으로 캐스케이드[4] 형태로 구현되며, 분류기가 넘긴 문장의 판정을 LLM의 답으로 교체한다. "
-    "그러나 LLM의 판정 기준이 데이터셋 라벨과 다를 경우, 교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7]. 본 논문에서는 "
-    "저비용 분류기가 불확실한 문장에서만 LLM을 호출하고, 두 모델의 점수를 라벨로 학습한 가중치로 결합하는 결합형 "
-    "캐스케이드를 제안한다."
+    "이처럼 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 "
+    "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
+    "기준은 데이터셋의 라벨(사람이 붙인 정답)과 다를 수 있으며, 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 "
+    "있다[7]. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
+    "점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 결합 가중치는 라벨이 있는 데이터로 학습하므로, LLM의 "
+    "기준과 라벨 사이의 차이를 보정한다."
 ))
 
 # ---------------- II. 본론 ----------------
@@ -269,9 +276,9 @@ heading(doc, "Ⅱ. 본 론")
 subheading(doc, "2.1 선행 연구")
 body(doc, (
     "NN-PPI[1]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
-    "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 LLM을 호출하며, 넘긴 입력에서만 두 모델의 출력을 "
-    "결합하는 캐스케이드는 일반 분류 과제에서 제안되었다[8]. SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 "
-    "고르지만 넘긴 입력은 큰 모델의 답으로 교체한다. 반면 본 논문은 넘긴 입력의 판정 방식을 바꾸며, 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이를 반영한다."
+    "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 LLM을 호출한다. 넘긴 입력에서만 결합하는 캐스케이드는 "
+    "일반 분류 과제에서 제안되었고[8], SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
+    "모델의 답으로 교체한다. 반면 본 논문은 결합 가중치를 라벨로 학습하여 LLM과 라벨의 기준 차이를 반영한다."
 ))
 subheading(doc, "2.2 전체 구조")
 body(doc, (
@@ -285,10 +292,9 @@ figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 
 subheading(doc, "2.3 저비용 분류기")
 body(doc, (
     "문장 x의 팩트체크 필요 여부 y∈{0,1}을 판정하며, 라벨이 있는 학습 세트 L(NN-PPI의 보정 세트)을 사용한다. 저비용 "
-    "분류기(이하 임베딩 SVM)는 첫 단계의 비용을 최소화하도록, NN-PPI가 이웃 검색에 사용하는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM이며, "
+    "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 사용하는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM이며, "
     "클래스 불균형을 고려한 가중치로 L에서 학습한다. 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이며, 절댓값이 클수록 "
-    "확신이 높다. 추론 시간은 CPU에서 문장당 약 "
-    f"{COST_RAW['svm_ms_per_sentence']:.0f} ms이다."
+    "확신이 높다."
 ))
 subheading(doc, "2.4 결합 판정")
 body(doc, "호출한 문장에 대해 LLM이 출력한 점수 s(x)∈[0,1]와 분류기의 결정값 d(x)를 다음과 같이 결합한다.")
@@ -320,7 +326,7 @@ body(doc, (
     "재현하였으며, 원 논문과 같은 분할(CLEF dev-test, ClaimBuster 2016년)에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
     f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 0.827, 0.760). LLM은 Claude Sonnet 5를 "
-    "사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다(문장 단위 채점과 AUC 0.991 대 0.990)."
+    "사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다."
 ))
 subheading(doc, "3.2 평가 방법")
 CAL_GAIN = {d: max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)) for d in (cl, cb)}
@@ -329,8 +335,8 @@ body(doc, (
     "평가 지표는 테스트 정확도이며, 학습 세트의 80%를 비복원 추출하여 5회 반복한 평균을 보고한다. 방법 간 차이는 5회 "
     "각각의 예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하고, 차이의 95% 신뢰구간은 테스트 문장 부트스트랩(2,000회)으로 구하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
     f"안에서만 정하였고(두 데이터셋 모두 k={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 학습 "
-    "세트의 교차검증 정확도가 두 데이터셋 모두 거의 오르지 않는 50%로 정하였다(50% 이후 증가 CLEF "
-    f"{100*CAL_GAIN[cl]:.2f}%p, ClaimBuster {100*CAL_GAIN[cb]:.2f}%p, 전량 호출과 0.7%p 이내)."
+    "세트의 교차검증 정확도가 두 데이터셋 모두 거의 오르지 않는 50%로 정하였다(50% 이후 증가 "
+    f"{100*CAL_GAIN[cl]:.2f}%p, {100*CAL_GAIN[cb]:.2f}%p)."
 ))
 
 subheading(doc, "3.3 실험 결과")
@@ -411,60 +417,39 @@ for row in t.rows[:-1]:
     for c in row.cells:
         c.paragraphs[0].paragraph_format.keep_with_next = True
 
-first = body(doc, (
-    "표 1에서 LLM을 사용하지 않는 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 "
-    f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고, ClaimBuster에서는 5회 모두 유의한 차이가 없었다."
-))
-first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
-body(doc, (
-    f"LLM 점수를 0.5 기준으로 쓰면 정밀도는 CLEF {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
-    f"ClaimBuster {R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}이나 재현율은 "
-    f"{R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, {R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤다. 라벨로 임계값을 "
-    f"조정하면 재현율은 {R[cl]['metrics']['sonnet_thr']['rec1'][0]:.2f}, {ro(f"{R[cb]['metrics']['sonnet_thr']['rec1'][0]:.2f}")} "
-    "오르나, ClaimBuster 정확도는 오히려 "
-    f"{pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다. 이는 LLM의 판정 기준이 라벨과 다름을 시사한다."
-))
-body(doc, (
-    f"호출률 50%의 결합형(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})과 LLM 전량 호출 중 더 나은 설정"
-    f"(CLEF는 {BF_NAME[BF[cl]]}, ClaimBuster는 {BF_NAME[BF[cb]]})의 정확도 차이는 평균 "
-    f"{100*(sum(EQ['sonnet5'][cl]['rows']['fuse_0.5']['diff'])/5):+.1f}%p, {100*(sum(EQ['sonnet5'][cb]['rows']['fuse_0.5']['diff'])/5):+.1f}%p"
-    f"였고, 95% 신뢰구간의 하한이 5회 모두 −{NI:.1f}%p 이상이어서 결합형은 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다. "
-    f"같은 호출률의 교체형은 ClaimBuster에서 하한이 {f'{100*lo("sonnet5", cb, "replace_0.5"):.1f}'.replace('-', '−')}%p까지 내려가 이를 보이지 못했다. "
-    "또한 결합형은 NN-PPI를 적용한 전량 호출보다 5회 모두 유의하게 높다"
-    f"({p_all([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in (cl, cb)], False)})."
-))
-
-
 # replacement at 50% minus the stronger all-call LLM (mean over runs), signed
 GAP = {d: f"{100 * SR[d]['gap_to_best_full']['0.5']['replace']:+.2f}" for d in (cl, cb)}
 assert nsig(cb, "fuse_0.5_vs_fuse_1.0") == 5  # "ClaimBuster에서는 이 차이가 5회 모두 유의"
-
-
-body(doc, (
-    "결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았으며(그림 2), 그 차이는 CLEF "
-    f"{sig_range(cl)}, ClaimBuster {sig_range(cb)}의 호출률에서 5회 중 3회 이상 유의하였다. 교체형은 호출률 50%에서 평균이 "
-    f"전량 호출 수준(CLEF {GAP[cl]}%p, ClaimBuster {GAP[cb]}%p)에 이르나, 결합형은 같은 수준에 CLEF {REACH[cl]}%, "
-    f"ClaimBuster {REACH[cb]}%의 호출률로 도달하였다. 호출률 100%에서는 CLEF {pp(cl,'fuse_1.0','fuse_0.5')}%p, ClaimBuster "
-    f"{pp(cb,'fuse_1.0','fuse_0.5')}%p 더 높았고 ClaimBuster는 5회 모두 유의하였다."
+mneg = lambda x: f"{x:.1f}".replace("-", "−")
+first = body(doc, (
+    "표 1은 각 방법의 테스트 정확도이다. LLM을 사용하지 않는 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 "
+    f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고, ClaimBuster에서는 5회 모두 유의차가 없었다."
 ))
-
+first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
 body(doc, (
-    f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 측정한 1,000문장당 LLM 비용(Claude Sonnet 5 정가)은 전량 호출 "
-    f"${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}, 30% ${COST['0.3']['usd']:.3f}이고, 순차 처리 시간은 "
-    f"각각 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초, {COST['0.3']['seconds']:.0f}초였다(임베딩 SVM 포함)."
+    f"LLM 점수를 0.5 기준으로 쓰면 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
+    f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤고(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
+    f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}), 라벨로 임계값을 조정하면 재현율은 오르나 ClaimBuster 정확도는 오히려 "
+    f"{pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다. 이는 LLM의 기준이 라벨과 다름을 시사한다."
 ))
-
-hk = lambda d, k: f3(HK[d]["mean_acc"][k])
-HB = {d: HK[d]["best_full"] for d in (cl, cb)}
-assert HB[cl] == HB[cb] == "sonnet_raw"  # text: "전량 호출" = Haiku at the 0.5 threshold on both datasets
-assert all(HK[d]["per_seed"][f"fuse_0.5_vs_best_full({HB[d]})"]["n_sig"] == 0 for d in (cl, cb))
-assert HK[cl]["per_seed"][f"replace_0.5_vs_best_full({HB[cl]})"]["n_sig"] >= 3
-assert all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < 3 for d in (cl, cb))
 body(doc, (
-    f"LLM을 Claude Haiku 4.5로 바꾸어도 결합형(50%)은 전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두), "
-    "교체형은 CLEF에서 "
-    f"하한이 {f'{100*lo("haiku45", cl, "replace_0.5"):.1f}'.replace('-', '−')}%p까지 내려갔다. 다만 NN-PPI를 적용한 전량 호출({hk(cl,'sonnet_nnppi')}, {hk(cb,'sonnet_nnppi')})보다 유의하게 "
-    "높지는 않았다."
+    "이하 전량 호출은 LLM 전량 호출의 두 설정(조정 전, 임계값 조정) 중 정확도가 높은 쪽"
+    f"(CLEF는 {BF_NAME[BF[cl]]}, ClaimBuster는 {BF_NAME[BF[cb]]})을 뜻한다. 호출률 50%의 결합형은 전량 호출보다 정확도가 "
+    f"평균 {MEAN_GAIN[cl]:.1f}%p, {MEAN_GAIN[cb]:.1f}%p 높았고, 5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. "
+    f"즉 결합형의 정확도는 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다. 반면 같은 호출률의 교체형은 ClaimBuster에서 하한이 "
+    f"{mneg(100*lo('sonnet5', cb, 'replace_0.5'))}%p까지 내려가 이를 보장하지 못했다. 또한 결합형은 NN-PPI를 적용한 전량 "
+    f"호출보다 5회 모두 유의하게 높았다({p_all([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in (cl, cb)], False)})."
+))
+body(doc, (
+    f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 측정한 1,000문장당 LLM 비용"
+    f"(Claude Sonnet 5 정가)은 전량 호출 ${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}이었고, 순차 처리 "
+    f"시간은 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초였다(임베딩 SVM 문장당 "
+    f"{COST_RAW['svm_ms_per_sentence']:.0f} ms 포함)."
+))
+body(doc, (
+    "그림 2와 같이 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았다. 전량 호출의 평균 정확도에 교체형은 "
+    f"호출률 50%에서 이르지만(CLEF {GAP[cl]}%p, ClaimBuster {GAP[cb]}%p), 결합형은 CLEF {REACH[cl]}%, ClaimBuster "
+    f"{REACH[cb]}%에서 이르렀다."
 ))
 
 # worked example: results/example_case.json (scripts/example_case.py, seed-0 CLEF models, 50% calls)
@@ -480,6 +465,19 @@ body(doc, (
     f"{EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 {EX['n_queried_replace_right_fuse_wrong']}개였다."
 ))
 
+# second LLM (Claude Haiku 4.5, same prompt and batches)
+hk = lambda d, k: f3(HK[d]["mean_acc"][k])
+HB = {d: HK[d]["best_full"] for d in (cl, cb)}
+assert HB[cl] == HB[cb] == "sonnet_raw"  # text: "전량 호출" = Haiku at the 0.5 threshold on both datasets
+assert all(HK[d]["per_seed"][f"fuse_0.5_vs_best_full({HB[d]})"]["n_sig"] == 0 for d in (cl, cb))
+assert HK[cl]["per_seed"][f"replace_0.5_vs_best_full({HB[cl]})"]["n_sig"] >= 3
+assert all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < 3 for d in (cl, cb))
+body(doc, (
+    f"LLM을 Claude Haiku 4.5로 바꾸어도 결합형(50%)의 정확도는 전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두), "
+    f"교체형은 CLEF에서 하한이 {mneg(100*lo('haiku45', cl, 'replace_0.5'))}%p까지 내려갔다. 단, 이때 결합형은 NN-PPI를 적용한 "
+    f"전량 호출({hk(cl,'sonnet_nnppi')}, {hk(cb,'sonnet_nnppi')})보다 유의하게 높지 않았다."
+))
+
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
 figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
        "그림 2. 호출률에 따른 테스트 정확도 (5회 평균, 띠는 표준편차)")
@@ -487,11 +485,11 @@ figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
 # ---------------- IV. 결론 ----------------
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
-    "본 논문에서는 저비용 분류기가 불확실한 문장에서만 LLM을 호출하고 두 모델의 점수를 결합하는 결합형 캐스케이드를 "
-    "제안하였다. 제안 방법은 호출률 50%에서 LLM 비용을 절반으로, 처리 시간을 "
-    f"{100*(1-COST['0.5']['seconds']/COST['1.0']['seconds']):.0f}% 줄이면서도 LLM만 전량 호출한 경우보다 정확도가 {NI:.1f}%p 넘게 "
-    "낮지 않음을 보였다. 교체형은 같은 호출률에서 이를 보이지 못하였으며, 결합은 교체보다 적은 호출로 같은 정확도에 도달하였다. "
-    "다만 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였다."
+    "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
+    f"결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄여 LLM 비용을 {CUT_USD:.0f}%, 처리 시간을 "
+    f"{CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도를 유지하였으며, 같은 호출률에서 LLM의 "
+    "판정으로 교체하는 방식은 이를 보장하지 못하였다. 다만 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, "
+    "향후에는 다국어 데이터로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed

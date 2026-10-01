@@ -19,7 +19,7 @@
         {
           "id": "1a",
           "where": "서론 1문단",
-          "paper": "실제 서비스 운영사는 모든 문장에 LLM을 적용하는 것이 비현실적이라고 보고하였다[1].",
+          "paper": "실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것은 실제 서비스 규모에서 감당하기 어렵다고 보고하였다[1].",
           "quote": "invoking large LLMs on every incoming claim is prohibitive at production volumes",
           "support": "direct"
         },
@@ -126,7 +126,7 @@
         {
           "id": "2c",
           "where": "서론",
-          "paper": "같은 연구진은 인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드 방식을 향후 과제로 제시하였다[2].",
+          "paper": "같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 제시하였다[2].",
           "quote": "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low",
           "support": "direct",
           "note": "Stated in the conclusion as 'Future work will focus on ...'."
@@ -183,14 +183,14 @@
         {
           "id": "4a",
           "where": "서론",
-          "paper": "일반적인 캐스케이드[4]는 불확실한 입력을 큰 모델에 넘기되",
+          "paper": "가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며",
           "quote": "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs",
           "support": "direct"
         },
         {
           "id": "4b",
           "where": "서론",
-          "paper": "그 답으로 교체하고",
+          "paper": "일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4].",
           "quote": "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score",
           "support": "direct"
         }
@@ -245,6 +245,20 @@
           "paper": "출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장",
           "quote": "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4].",
           "support": "direct"
+        },
+        {
+          "id": "5e",
+          "where": "Ⅰ. 서론 1문단",
+          "paper": "온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며",
+          "quote": "Due to the significant surge of disinformative content online the importance of improving the capabilities of fact-checking pipeline is paramount",
+          "support": "direct"
+        },
+        {
+          "id": "5f",
+          "where": "Ⅰ. 서론 1문단",
+          "paper": "그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 팩트체크 필요성 탐지이다[5].",
+          "quote": "the first part of the pipeline is finding claims that important to fact check",
+          "support": "direct"
         }
       ]
     },
@@ -294,7 +308,7 @@
         {
           "id": "7a",
           "where": "서론 2문단",
-          "paper": "교체는 분류기의 옳은 판정까지 틀리게 바꿀 수 있다[7].",
+          "paper": "이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].",
           "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
           "support": "direct",
           "note": "SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting."

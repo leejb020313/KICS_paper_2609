@@ -58,57 +58,46 @@ for d in ("clef", "cb"):
     for n in ["gemma_nnppi_sel", "svm", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5", "fuse_0.5"]:
         checks.append((f"{d} acc {n}", f"{acc(d, n):.3f}"))
     checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), (f"{d} prec sonnet_raw", f"{m(d, 'sonnet_raw', 'prec1'):.2f}"),
-               (f"{d} recall sonnet_thr", f"{m(d, 'sonnet_thr', 'rec1'):.2f}"),
-               (f"{d} diff fuse100 - fuse50", ("CLEF " if d == "clef" else "ClaimBuster ") + pp(d, 'fuse_1.0', 'fuse_0.5')),
 ]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
            ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
-           ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
-           ("non-inferiority (abstract)", f"전량 호출한 경우보다 {NI:.1f}%p 넘게 낮지 않음을 5회 반복 모두에서 확인"),
-           ("non-inferiority (results)", f"하한이 5회 모두 −{NI:.1f}%p 이상이어서 결합형은 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다"),
-           ("mean diff to best all-call", "정확도 차이는 평균 " + ", ".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:+.1f}%p" for d in ("clef", "cb"))),
+           ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높았다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
+           ("non-inferiority (abstract)", f"통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인"),
+           ("non-inferiority (results)", f"5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. 즉 결합형의 정확도는 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다"),
+           ("mean diff to best all-call", "정확도가 평균 " + ", ".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}%p" for d in ("clef", "cb")) + " 높았고"),
+           ("abstract mean gain", "평균적으로 오히려 " + "~".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}" for d in ("clef", "cb")) + "%p 높았고"),
            ("replacement CB lower bound", f"ClaimBuster에서 하한이 {mstr(100 * eqlo('sonnet5', 'cb', 'replace_0.5'))}%p까지"),
-           ("haiku non-inferiority", f"전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두)"),
+           ("haiku non-inferiority", f"정확도는 전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두)"),
            ("haiku replacement lower bound", f"CLEF에서 하한이 {mstr(100 * eqlo('haiku45', 'clef', 'replace_0.5'))}%p까지"),
            ("bootstrap", "부트스트랩(2,000회)"),
-           ("reach rates (abstract)", f"{round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}~"
-                                      f"{round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률에서 전량 호출의 평균 정확도에 도달"),
            ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
-                                     f"ClaimBuster {round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률로 도달"),
+                                     f"ClaimBuster {round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%에서 이르렀다"),
            ("replacement gap at 50%", f"CLEF {100 * SR['clef']['gap_to_best_full']['0.5']['replace']:+.2f}%p, "
                                       f"ClaimBuster {100 * SR['cb']['gap_to_best_full']['0.5']['replace']:+.2f}%p"),
            ("cb raw - thr accuracy drop", pp('cb', 'sonnet_raw', 'sonnet_thr')),
-           ("calib gap <=0.7pp", "0.7%p"),
-           ("batch vs single AUC", "0.991 대 0.990"),
            ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
            ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
            ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
                               f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("calib gain after 50%", "50% 이후 증가 " + ", ".join(
-               f"{n} {100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
-               for d, n in (("clef", "CLEF"), ("cb", "ClaimBuster")))),
+               f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
+               for d in ("clef", "cb"))),
            ("dagger definition", "†: 제안 대비 5회 중 3회 이상 p<0.05"),
-           ("svm ms per sentence", f"문장당 약 {CT['svm_ms_per_sentence']:.0f} ms"),
+           ("svm ms per sentence", f"문장당 {CT['svm_ms_per_sentence']:.0f} ms 포함"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
-           ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}, 30% ${C['0.3']['usd']:.3f}"),
-           ("time per 1,000", f"각각 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초, {C['0.3']['seconds']:.0f}초"),
-           ("abstract cost/time cut", f"LLM 비용은 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 "
-                                      f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄었다"),
-           ("haiku nnppi", f"NN-PPI를 적용한 전량 호출({hk('clef', 'sonnet_nnppi')}, {hk('cb', 'sonnet_nnppi')})보다 유의하게 높지는 않았다"),
-           ("conclusion time cut", f"처리 시간을 {100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄이면서도"),
-           ("conclusion non-inferiority", f"정확도가 {NI:.1f}%p 넘게 낮지 않음을 보였다")]
+           ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}이었고"),
+           ("time per 1,000", f"시간은 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초였다"),
+           ("abstract cost/time cut", f"비용을 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간을 "
+                                      f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 절감하면서도"),
+           ("haiku nnppi", f"NN-PPI를 적용한 전량 호출({hk('clef', 'sonnet_nnppi')}, {hk('cb', 'sonnet_nnppi')})보다 유의하게 높지 않았다"),
+           ("conclusion time cut", f"처리 시간을 {100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도를 유지")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
 checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
 # Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher on >= 3 of the 5 runs
 DAG = {n: f"fuse_0.5_vs_{n}" for n in ("sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5")}
 mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and ns(d, DAG[n]) >= 3 else "")
-# fusion beats replacement on >= 3 of 5 runs exactly over the call-rate ranges the text names
-RATES = (.05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0)
-maj = {d: [b for b in RATES if ns(d, f"fuse_{b}_vs_replace_{b}") >= 3] for d in ("clef", "cb")}
-rng = lambda r: f"{round(100 * r[0])}% 이상" if r[-1] == 1.0 else f"{round(100 * r[0])}~{round(100 * r[-1])}%"
-checks.append(("fuse > replace majority ranges", f"CLEF {rng(maj['clef'])}, ClaimBuster {rng(maj['cb'])}의 호출률에서 5회 중 3회 이상 유의"))
 # whole Table 1 rows (label, call rate, CLEF, ClaimBuster), so a † can only match in its own row
 for label, rate, n in [("Gemma 3 4B + NN-PPI [1]", "0%", "gemma_nnppi_sel"),
                        ("임베딩 SVM", "0%", "svm"), ("LLM 전량 호출", "100%", "sonnet_raw"), ("+ 임계값 조정", "100%", "sonnet_thr"),
@@ -122,7 +111,6 @@ directional = {
                                           for b in (.05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0)),
     "fuse50 vs best full-call n.s. in all 5 runs": all(ns(d, f"fuse_0.5_vs_best_full({best[d]})") == 0 for d in ("clef", "cb")),
     "fuse50 > sonnet+nnppi significant in all 5 runs": all(ns(d, "fuse_0.5_vs_sonnet_nnppi") == 5 for d in ("clef", "cb")),
-    "cb fuse100 > fuse50 significant in all 5 runs": ns("cb", "fuse_0.5_vs_fuse_1.0") == 5,
     "svm vs nnppi: CB n.s. in all 5 runs, CLEF higher": ns("cb", "svm_vs_gemma_nnppi_sel") == 0 and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
     "replacement first reaches all-call accuracy at 50%": all(SR[d]["first_rate_reaching_best_full"]["replace"] == 0.5 for d in ("clef", "cb")),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
