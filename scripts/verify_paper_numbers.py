@@ -81,12 +81,12 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
                               f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("calib gain after 50%", "50% 이후 증가 " + ", ".join(
-               f"{100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
-               for d in ("clef", "cb"))),
-           ("dagger definition", "†: 제안 대비 5회 중 3회 이상 p<0.05"),
+               f"{n} {100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
+               for d, n in (("clef", "CLEF"), ("cb", "ClaimBuster")))),
+           ("dagger definition", "†: 5회 중 3회 이상 제안보다 유의하게 낮음"),
            ("svm ms per sentence", f"문장당 {CT['svm_ms_per_sentence']:.0f} ms 포함"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
-           ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}이었고"),
+           ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}였고"),
            ("time per 1,000", f"시간은 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초였다"),
            ("abstract cost/time cut", f"비용을 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간을 "
                                       f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 절감하면서도"),
@@ -117,6 +117,7 @@ directional = {
     "haiku: stronger all-call = raw on both": all(HK[d]["best_full"] == "sonnet_raw" for d in ("clef", "cb")),
     "haiku: fuse50 vs all-call n.s. in all 5 runs": all(HK[d]["per_seed"]["fuse_0.5_vs_best_full(sonnet_raw)"]["n_sig"] == 0 for d in ("clef", "cb")),
     "fused50 non-inferior at NI in all 5 runs, both datasets": all(l > -NI / 100 for d in ("clef", "cb") for l in EQ["sonnet5"][d]["rows"]["fuse_0.5"]["ci_lo"]),
+    "replacement50 non-inferior at NI on CLEF (conclusion names ClaimBuster only)": all(l > -NI / 100 for l in EQ["sonnet5"]["clef"]["rows"]["replace_0.5"]["ci_lo"]),
     "replacement50 not non-inferior at NI on CB in some run": any(l <= -NI / 100 for l in EQ["sonnet5"]["cb"]["rows"]["replace_0.5"]["ci_lo"]),
     "haiku fused50 non-inferior at NI_HK in all runs": all(l > -NI_HK / 100 for d in ("clef", "cb") for l in EQ["haiku45"][d]["rows"]["fuse_0.5"]["ci_lo"]),
     "haiku replacement50 not non-inferior at NI_HK on CLEF": any(l <= -NI_HK / 100 for l in EQ["haiku45"]["clef"]["rows"]["replace_0.5"]["ci_lo"]),

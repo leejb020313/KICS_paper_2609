@@ -241,7 +241,7 @@ body(doc, (
     "팩트체크 필요성 탐지(check-worthiness detection)는 수많은 문장 중 사실 확인이 필요한 문장을 골라내는 기술이다. "
     "대형 언어 모델(LLM)은 이 판정을 잘 수행하지만, 모든 문장에 LLM을 호출하면 비용과 처리 시간이 크게 늘어난다. "
     "본 논문에서는 가벼운 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 확신하지 못하는 문장에만 LLM을 호출하되 "
-    "LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄여 LLM "
+    "분류기의 판정을 LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄여 LLM "
     f"비용을 {CUT_USD:.0f}%, 처리 시간을 {CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도"
     f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})를 유지하였다. 정확도는 평균적으로 오히려 "
     f"{MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인하였다."
@@ -257,7 +257,7 @@ columns(doc, 2)
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
     "온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며, 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 "
-    "팩트체크 필요성 탐지이다[5]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. LLM은 이 판정을 "
+    "팩트체크 필요성 탐지이다[5]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. 대형 언어 모델(LLM)은 이 판정을 "
     "잘 수행하지만, 실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것은 운영 규모에서 감당하기 "
     "어렵다고 보고하였다[1]. 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 "
     "제시하였다[2]."
@@ -292,9 +292,9 @@ figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 
 subheading(doc, "2.3 저비용 분류기")
 body(doc, (
     "문장 x의 팩트체크 필요 여부 y∈{0,1}을 판정하며, 라벨이 있는 학습 세트 L(NN-PPI의 보정 세트)을 사용한다. 저비용 "
-    "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 사용하는 문장 임베딩(all-MiniLM-L6-v2)을 입력으로 하는 RBF-SVM이며, "
-    "클래스 불균형을 고려한 가중치로 L에서 학습한다. 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이며, 절댓값이 클수록 "
-    "확신이 높다."
+    "분류기(이하 임베딩 SVM)는 문장 임베딩 all-MiniLM-L6-v2를 입력으로 하는 RBF-SVM으로, 이 임베딩은 NN-PPI가 이웃 검색에 "
+    "사용하는 것과 같다. 클래스 불균형을 고려한 가중치로 L에서 학습하며, 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이고 절댓값이 "
+    "클수록 확신이 높다."
 ))
 subheading(doc, "2.4 결합 판정")
 body(doc, "호출한 문장에 대해 LLM이 출력한 점수 s(x)∈[0,1]와 분류기의 결정값 d(x)를 다음과 같이 결합한다.")
@@ -336,7 +336,7 @@ body(doc, (
     "각각의 예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하고, 차이의 95% 신뢰구간은 테스트 문장 부트스트랩(2,000회)으로 구하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
     f"안에서만 정하였고(두 데이터셋 모두 k={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 학습 "
     "세트의 교차검증 정확도가 두 데이터셋 모두 거의 오르지 않는 50%로 정하였다(50% 이후 증가 "
-    f"{100*CAL_GAIN[cl]:.2f}%p, {100*CAL_GAIN[cb]:.2f}%p)."
+    f"CLEF {100*CAL_GAIN[cl]:.2f}%p, ClaimBuster {100*CAL_GAIN[cb]:.2f}%p)."
 ))
 
 subheading(doc, "3.3 실험 결과")
@@ -378,7 +378,7 @@ cap = doc.add_paragraph()
 cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
 cap.paragraph_format.space_before = Pt(4)
 cap.paragraph_format.space_after = Pt(2)
-set_font(cap.add_run("표 1. 테스트 정확도 (†: 제안 대비 5회 중 3회 이상 p<0.05)"), BODY_FONT, 8.5, bold=True)
+set_font(cap.add_run("표 1. 테스트 정확도 (†: 5회 중 3회 이상 제안보다 유의하게 낮음)"), BODY_FONT, 8.5, bold=True)
 t = doc.add_table(rows=1 + len(rows), cols=4)
 t.style = "Table Grid"  # compact cell paragraphs; its grid lines are switched off below
 t.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -442,7 +442,7 @@ body(doc, (
 ))
 body(doc, (
     f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 측정한 1,000문장당 LLM 비용"
-    f"(Claude Sonnet 5 정가)은 전량 호출 ${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}이었고, 순차 처리 "
+    f"(Claude Sonnet 5 정가)은 전량 호출 ${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}였고, 순차 처리 "
     f"시간은 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초였다(임베딩 SVM 문장당 "
     f"{COST_RAW['svm_ms_per_sentence']:.0f} ms 포함)."
 ))
@@ -488,7 +488,7 @@ body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
     f"결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄여 LLM 비용을 {CUT_USD:.0f}%, 처리 시간을 "
     f"{CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도를 유지하였으며, 같은 호출률에서 LLM의 "
-    "판정으로 교체하는 방식은 이를 보장하지 못하였다. 다만 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, "
+    "판정으로 교체하는 방식은 ClaimBuster에서 이를 보장하지 못하였다. 다만 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, "
     "향후에는 다국어 데이터로 평가를 확장할 계획이다."
 ))
 
