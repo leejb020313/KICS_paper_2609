@@ -135,69 +135,6 @@
     },
     {
       "n": 3,
-      "key": "schlee2025labelfusion",
-      "bib": "M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
-      "arxiv": "2512.10793",
-      "version_read": "v2",
-      "authors_official": [
-        "Michael Schlee",
-        "Christoph Weisser",
-        "Timo Kivimäki",
-        "Melchizedek Mashiku",
-        "Benjamin Saefken"
-      ],
-      "published": "2025-12-11",
-      "venue": "arXiv preprint",
-      "pdf": "2512.10793.pdf",
-      "claims": [
-        {
-          "id": "3a",
-          "where": "Ⅱ. 본론 2.1 선행 연구",
-          "paper": "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만",
-          "quote": "combines the output of a prompt-engineered LLM with contextual embeddings produced by a fine-tuned RoBERTa encoder through a lightweight Multilayer Perceptron",
-          "support": "direct"
-        },
-        {
-          "id": "3b",
-          "where": "Ⅱ. 본론 2.1 선행 연구",
-          "paper": "모든 입력에 LLM을 호출한다.",
-          "quote": "LabelFusion combines two complementary components",
-          "support": "inference",
-          "note": "The method feeds every input text x to both components and fuses them (Sec. 3); no selective/gated LLM invocation is described anywhere in the paper. 'Calls the LLM for every input' is our reading of the architecture, not a sentence the authors wrote."
-        }
-      ]
-    },
-    {
-      "n": 4,
-      "key": "burleigh2026cascade",
-      "bib": "T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
-      "arxiv": "2604.19781",
-      "version_read": "v1",
-      "authors_official": [
-        "Tyler Burleigh"
-      ],
-      "published": "2026-03-29",
-      "venue": "arXiv preprint; comment: 'Accepted at NCME 2026'",
-      "pdf": "2604.19781.pdf",
-      "claims": [
-        {
-          "id": "4a",
-          "where": "서론",
-          "paper": "가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며",
-          "quote": "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs",
-          "support": "direct"
-        },
-        {
-          "id": "4b",
-          "where": "서론",
-          "paper": "일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4].",
-          "quote": "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score",
-          "support": "direct"
-        }
-      ]
-    },
-    {
-      "n": 5,
       "key": "hasanain2024task1",
       "bib": "M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
       "url": "https://ceur-ws.org/Vol-3740/paper-24.pdf",
@@ -263,7 +200,7 @@
       ]
     },
     {
-      "n": 6,
+      "n": 4,
       "key": "arslan2020claimbuster",
       "bib": "F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
       "doi": "10.1609/icwsm.v14i1.7346",
@@ -288,7 +225,7 @@
       ]
     },
     {
-      "n": 7,
+      "n": 5,
       "key": "wang2026srr",
       "bib": "Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
       "arxiv": "2609.07786",
@@ -307,7 +244,7 @@
       "claims": [
         {
           "id": "7a",
-          "where": "서론 2문단",
+          "where": "Ⅰ. 서론 2문단",
           "paper": "이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].",
           "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
           "support": "direct",
@@ -328,11 +265,19 @@
           "quote": "if g ≥τq then",
           "support": "direct",
           "note": "Algorithm 1, online routing: 'if g ≥ τq then return Mℓ(x) else return as' — an escalated request gets the large model's answer (replacement); Fig. 1 labels the same branch 'Final answer from Mℓ'."
+        },
+        {
+          "id": "7d",
+          "where": "Ⅰ. 서론 2문단",
+          "paper": "가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5].",
+          "quote": "cascades answer easy requests with a small model and escalate selected requests to a larger model",
+          "support": "direct",
+          "note": "Abstract. Replacement of the escalated answer: claim 7c (Algorithm 1, 'return Mℓ(x)')."
         }
       ]
     },
     {
-      "n": 8,
+      "n": 6,
       "key": "zhang2026cauc",
       "bib": "Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
       "arxiv": "2609.11446",
@@ -433,6 +378,22 @@
       "title": "The CLEF-2025 CheckThat! Lab",
       "depth": "title only",
       "verdict": "Later CheckThat! edition; not the data we use."
+    },
+    {
+      "key": "schlee2025labelfusion",
+      "bib": "M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
+      "arxiv": "2512.10793",
+      "title": "LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification",
+      "depth": "full text (cited in earlier drafts)",
+      "verdict": "removed 2026-10-01 for space; no claim depends on it (cascade definition/replacement cited from SRR, closest fusion prior work is CAUC)"
+    },
+    {
+      "key": "burleigh2026cascade",
+      "bib": "T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
+      "arxiv": "2604.19781",
+      "title": "Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment",
+      "depth": "full text (cited in earlier drafts)",
+      "verdict": "removed 2026-10-01 for space; no claim depends on it (cascade definition/replacement cited from SRR, closest fusion prior work is CAUC)"
     }
   ],
   "search_log": [

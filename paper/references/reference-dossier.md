@@ -4,9 +4,9 @@
 
 ## 요약
 
-- 참고문헌 8편, 근거 30건 (원문 직접 확인 27건, 해석 3건)
-- 원문 PDF에서 찾은 인용문 30/30건 (유료 원문 0건은 공개 초록으로 확인)
-- 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 3b (모든 입력에 LLM을 호출한다.…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
+- 참고문헌 6편, 근거 27건 (원문 직접 확인 25건, 해석 2건)
+- 원문 PDF에서 찾은 인용문 27/27건 (유료 원문 0건은 공개 초록으로 확인)
+- 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
 
 ## [1] P. Amatya, Venktesh V, and V. Setty, "Calibrating Small Language Models for Claim Check-Worthiness Detection," arXiv:2608.30731, 2026.
 
@@ -98,43 +98,7 @@
 
 - 근거 유형: direct — Stated in the conclusion as 'Future work will focus on ...'.
 
-## [3] M. Schlee et al., "LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification," arXiv:2512.10793, 2025.
-
-- 식별자: arXiv:2512.10793 (v2 확인) · 공개일 2025-12-11 · arXiv preprint
-- 공식 저자: Michael Schlee, Christoph Weisser, Timo Kivimäki, Melchizedek Mashiku, Benjamin Saefken
-- 원문 PDF: `pdfs/2512.10793.pdf`
-
-**3a** (Ⅱ. 본론 2.1 선행 연구) — 논문: LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만
-
-> "combines the output of a prompt-engineered LLM with contextual embeddings produced by a fine-tuned RoBERTa encoder through a lightweight Multilayer Perceptron" (p. 1)
-
-- 근거 유형: direct
-
-**3b** (Ⅱ. 본론 2.1 선행 연구) — 논문: 모든 입력에 LLM을 호출한다.
-
-> "LabelFusion combines two complementary components" (p. 2)
-
-- 근거 유형: inference — The method feeds every input text x to both components and fuses them (Sec. 3); no selective/gated LLM invocation is described anywhere in the paper. 'Calls the LLM for every input' is our reading of the architecture, not a sentence the authors wrote.
-
-## [4] T. Burleigh, "Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment," arXiv:2604.19781, 2026.
-
-- 식별자: arXiv:2604.19781 (v1 확인) · 공개일 2026-03-29 · arXiv preprint; comment: 'Accepted at NCME 2026'
-- 공식 저자: Tyler Burleigh
-- 원문 PDF: `pdfs/2604.19781.pdf`
-
-**4a** (서론) — 논문: 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며
-
-> "small language models (LMs) handle easier scoring tasks while escalating harder ones to larger LMs" (p. 1)
-
-- 근거 유형: direct
-
-**4b** (서론) — 논문: 일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4].
-
-> "the small LM's score is replaced with the large LM's score, and all other decisions keep the small LM's score" (p. 4)
-
-- 근거 유형: direct
-
-## [5] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276–286, 2024.
+## [3] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276–286, 2024.
 
 - 식별자: https://ceur-ws.org/Vol-3740/paper-24.pdf · 공개일 2024 · CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)
 - 공식 저자: Maram Hasanain, Reem Suwaileh, Sanne Weering, Chengkai Li, Tommaso Caselli, Wajdi Zaghouani, Alberto Barrón-Cedeño, Preslav Nakov, Firoj Alam
@@ -176,7 +140,7 @@
 
 - 근거 유형: direct
 
-## [6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
+## [4] F. Arslan, N. Hassan, C. Li, and M. Tremayne, "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821–829, 2020.
 
 - 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
 - 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne
@@ -188,13 +152,13 @@
 
 - 근거 유형: direct — We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501.
 
-## [7] Z. Wang et al., "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference," arXiv:2609.07786, 2026.
+## [5] Z. Wang et al., "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference," arXiv:2609.07786, 2026.
 
 - 식별자: arXiv:2609.07786 (v1 확인) · 공개일 2026-09-07 · arXiv preprint
 - 공식 저자: Zheyuan Wang, Siyu Li, Peiqiao Song, Sijia Chen, Qianqian Song, Qian Liu
 - 원문 PDF: `pdfs/2609.07786.pdf`
 
-**7a** (서론 2문단) — 논문: 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].
+**7a** (Ⅰ. 서론 2문단) — 논문: 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].
 
 > "it is harmful when the large model replaces a correct answer with an incorrect one" (p. 1)
 
@@ -212,7 +176,13 @@
 
 - 근거 유형: direct — Algorithm 1, online routing: 'if g ≥ τq then return Mℓ(x) else return as' — an escalated request gets the large model's answer (replacement); Fig. 1 labels the same branch 'Final answer from Mℓ'.
 
-## [8] Y. Zhang et al., "Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration," arXiv:2609.11446, 2026.
+**7d** (Ⅰ. 서론 2문단) — 논문: 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5].
+
+> "cascades answer easy requests with a small model and escalate selected requests to a larger model" (p. 1)
+
+- 근거 유형: direct — Abstract. Replacement of the escalated answer: claim 7c (Algorithm 1, 'return Mℓ(x)').
+
+## [6] Y. Zhang et al., "Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration," arXiv:2609.11446, 2026.
 
 - 식별자: arXiv:2609.11446 (v1 확인) · 공개일 2026-09-10 · arXiv preprint; comment: 'Under review'
 - 공식 저자: Yilin Zhang, Han Jiang, Cai Xu, Ying Liu, Wei Zhao
@@ -250,6 +220,8 @@
 | 2606.27457 | Cluster, Route, Escalate: Cascaded Framework for Cost-Aware LLM Serving | title only - NOT verified | Serving-side cascade by title; method not read. |
 | 2608.17711 | Accuracy and Robustness of Model Cascades Under Data Perturbations | title only - NOT verified | Cascade robustness by title; method not read. |
 | 2603.14828 | The CLEF-2025 CheckThat! Lab | title only | Later CheckThat! edition; not the data we use. |
+| 2512.10793 | LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification | full text (cited in earlier drafts) | removed 2026-10-01 for space; no claim depends on it (cascade definition/replacement cited from SRR, closest fusion prior work is CAUC) |
+| 2604.19781 | Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment | full text (cited in earlier drafts) | removed 2026-10-01 for space; no claim depends on it (cascade definition/replacement cited from SRR, closest fusion prior work is CAUC) |
 
 ## 검색 기록
 

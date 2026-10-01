@@ -238,6 +238,12 @@ assert all(v > 0 for v in MEAN_GAIN.values())  # "평균적으로 오히려 … 
 CUT_USD = 100 * (1 - COST["0.5"]["usd"] / COST["1.0"]["usd"])
 CUT_SEC = 100 * (1 - COST["0.5"]["seconds"] / COST["1.0"]["seconds"])
 rec = lambda d, k: R[d]["metrics"][k]["rec1"][0]
+# drift analysis (results/analysis/drift_remedy.json, scripts/drift_remedy.py): label-free warning and retraining
+_DR = json.load(open(os.path.join(ROOT, "results", "analysis", "drift_remedy.json"), encoding="utf-8"))
+DR = {"warn_cb_learn": 100 * _DR["warning"]["cb_learning_oof"], "warn_cb_test": 100 * _DR["warning"]["cb_test"], "k": 300,
+      "gain": 100 * (_DR["remedy_cb"]["300"]["fused"]["recall"] - _DR["remedy_cb"]["0"]["fused"]["recall"])}
+assert _DR["warning"]["clef_test"] <= _DR["warning"]["clef_learning_oof"]  # "CLEF는 증가 없음"
+assert _DR["remedy_cb"]["300"]["fused"]["acc"] >= _DR["remedy_cb"]["0"]["fused"]["acc"]  # retraining does not cost accuracy
 REC = {"cb_svm": f"{rec(cb, 'svm'):.2f}", "cl_svm": f"{rec(cl, 'svm'):.2f}",
        "cb_fuse": f"{rec(cb, 'fuse_0.5'):.2f}", "cb_thr": f"{rec(cb, 'sonnet_thr'):.2f}"}
 assert rec(cb, "fuse_0.5") < rec(cb, "sonnet_thr") and rec(cb, "svm") < rec(cl, "svm")  # "많이 놓쳤다", "그쳐"
@@ -263,16 +269,16 @@ columns(doc, 2)
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
     "온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며, 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 "
-    "팩트체크 필요성 탐지이다[5]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. 대형 언어 모델(LLM)은 이 판정을 "
+    "팩트체크 필요성 탐지이다[3]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. 대형 언어 모델(LLM)은 이 판정을 "
     "잘 수행하지만, 실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것은 운영 규모에서 감당하기 "
     "어렵다고 보고하였다[1]. 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 "
     "제시하였다[2]."
 ))
 body(doc, (
     "이처럼 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 "
-    "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
+    "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
     "기준은 데이터셋의 라벨(사람이 붙인 정답)과 다를 수 있으며, 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 "
-    "있다[7]. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
+    "있다[5]. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
     "점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 결합 가중치는 라벨이 있는 데이터로 학습하므로, LLM의 "
     "기준과 라벨 사이의 차이를 보정한다."
 ))
@@ -282,8 +288,7 @@ heading(doc, "Ⅱ. 본 론")
 subheading(doc, "2.1 선행 연구")
 body(doc, (
     "NN-PPI[1]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
-    "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 LLM을 호출한다. 넘긴 입력에서만 결합하는 캐스케이드는 "
-    "일반 분류 과제에서 제안되었고[8], SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
+    "넘긴 입력에서만 두 모델의 출력을 결합하는 캐스케이드는 일반 분류 과제에서 제안되었고[6], SRR[5]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
     "모델의 답으로 교체한다. 본 논문은 결합 가중치를 라벨로 학습해 LLM과 라벨의 기준 차이를 반영한다."
 ))
 subheading(doc, "2.2 전체 구조")
@@ -326,8 +331,8 @@ heading(doc, "Ⅲ. 실 험")
 subheading(doc, "3.1 실험 환경")
 assert R[cl]["k_sel"] == R[cb]["k_sel"]  # the text says both datasets selected the same k
 body(doc, (
-    f"CLEF 2024 CheckThat! Task 1 영어 데이터[5]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
-    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. ClaimBuster[6]는 2012년 토론 {R[cb]['n_calib_gemma']:,}문장과 "
+    f"CLEF 2024 CheckThat! Task 1 영어 데이터[3]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
+    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. ClaimBuster[4]는 2012년 토론 {R[cb]['n_calib_gemma']:,}문장과 "
     f"2016년 토론 {R[cb]['n_test']:,}문장을 각각 학습 세트와 테스트로 사용하였다. NN-PPI는 원 논문과 같이 Gemma 3 4B로 "
     "재현하였으며, 원 논문과 같은 분할(CLEF dev-test, ClaimBuster 2016년)에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
@@ -467,7 +472,8 @@ body(doc, (
     "두 방법은 같은 문장에 LLM을 호출하므로 차이는 판정 방식에서만 생긴다. 예를 들어 CLEF의 "
     f"한 공약 문장(라벨: 불필요)은 LLM 점수가 s={E['s']:.2f}로, 임계값 t={eul(f'{EX['llm_threshold']:.2f}')} 사용하는 교체형은 "
     f"‘필요’로 잘못 판정하였으나, 결합형은 분류기의 결정값(d={neg(E['d'])})에 따라 판정 기준이 {ro(f'{E['bar']:.2f}')} 높아져 "
-    "옳게 판정하였다."
+    "옳게 판정하였다. CLEF 1회차에서 LLM을 호출한 절반 중 결합형만 옳게 판정한 문장은 "
+    f"{EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 {EX['n_queried_replace_right_fuse_wrong']}개였다."
 ))
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
@@ -495,7 +501,9 @@ body(doc, (
     f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 기대된다. 다만 학습 데이터"
     f"(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 {REC['cb_svm']}에 그쳐"
     f"(CLEF {REC['cl_svm']}), 제안 방법도 확인이 필요한 문장을 임계값을 조정한 LLM 전량 호출보다 많이 놓쳤다(재현율 {REC['cb_fuse']} 대 "
-    f"{REC['cb_thr']}). 또한 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 "
+    f"{REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장에서 LLM만 '필요'로 판정한 비율로 라벨 없이 "
+    f"감지할 수 있었고(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, CLEF는 증가 없음), 최근 문장 "
+    f"{DR['k']}개로 다시 학습하면 재현율이 {DR['gain']:.1f}%p 올랐다. 또한 출처가 겹치는[3] 영어 두 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 "
     "다국어 데이터로 평가를 확장할 계획이다."
 ))
 
@@ -505,12 +513,10 @@ heading(doc, "참 고 문 헌")
 refs = [
     "[1] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
     "[2] P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
-    "[3] M. Schlee et al., \"LabelFusion: Fusing Large Language Models with Transformer Encoders for Robust Financial News Classification,\" arXiv:2512.10793, 2025.",
-    "[4] T. Burleigh, \"Do Small Language Models Know When They're Wrong? Confidence-Based Cascade Scoring for Educational Assessment,\" arXiv:2604.19781, 2026.",
-    "[5] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
-    "[6] F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
-    "[7] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
-    "[8] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
+    "[3] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276–286, 2024.",
+    "[4] F. Arslan, N. Hassan, C. Li, and M. Tremayne, \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821–829, 2020.",
+    "[5] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
+    "[6] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
 ]
 for r in refs:
     ref = body(doc, r, size=9, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format

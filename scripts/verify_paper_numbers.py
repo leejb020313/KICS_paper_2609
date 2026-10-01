@@ -22,6 +22,7 @@ EX = json.load(open(os.path.join(RESULTS, "example_case.json"), encoding="utf-8"
 SR = json.load(open(os.path.join(RESULTS, "seed_robustness_full.json"), encoding="utf-8"))  # tests on each of the 5 runs
 CT = json.load(open(os.path.join(RESULTS, "cost_time.json"), encoding="utf-8"))  # LLM cost and time per 1,000 sentences
 C = CT["per_1000_sentences"]
+DR = json.load(open(os.path.join(os.path.dirname(RESULTS), "analysis", "drift_remedy.json"), encoding="utf-8"))  # drift warning/remedy
 HK = json.load(open(os.path.join(RESULTS, "seed_robustness_full_haiku45.json"), encoding="utf-8"))  # second LLM (Claude Haiku 4.5)
 hk = lambda d, k: f"{HK[d]['mean_acc'][k]:.3f}"
 EQ = json.load(open(os.path.join(RESULTS, "equivalence.json"), encoding="utf-8"))  # non-inferiority CIs
@@ -79,6 +80,8 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("calib gain after 50%", "50% 이후 증가 " + ", ".join(
                f"{n} {100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
                for d, n in (("clef", "CLEF"), ("cb", "ClaimBuster")))),
+           ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
+                              f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("dagger definition", "†: 5회 중 3회 이상 제안보다 유의하게 낮음"),
            ("svm ms per sentence", f"문장당 {CT['svm_ms_per_sentence']:.0f} ms 포함"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
@@ -90,6 +93,8 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("conclusion cost/time (expected)", f"이에 따라 LLM 비용은 약 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 약 "
                                                f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("conclusion recall limitation", f"분류기의 재현율이 {m('cb', 'svm', 'rec1'):.2f}에 그쳐(CLEF {m('clef', 'svm', 'rec1'):.2f})"),
+           ("drift warning", f"(학습 데이터 {100 * DR['warning']['cb_learning_oof']:.1f}% → 테스트 {100 * DR['warning']['cb_test']:.1f}%, CLEF는 증가 없음)"),
+           ("drift remedy", f"최근 문장 300개로 다시 학습하면 재현율이 {100 * (DR['remedy_cb']['300']['fused']['recall'] - DR['remedy_cb']['0']['fused']['recall']):.1f}%p 올랐다"),
            ("conclusion recall numbers", f"(재현율 {m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
@@ -113,6 +118,9 @@ directional = {
     "svm vs nnppi: CB n.s. in all 5 runs, CLEF higher": ns("cb", "svm_vs_gemma_nnppi_sel") == 0 and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
     "replacement first reaches all-call accuracy at 50%": all(SR[d]["first_rate_reaching_best_full"]["replace"] == 0.5 for d in ("clef", "cb")),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
+    "drift: CLEF disagreement does not rise; CB rises; retraining keeps accuracy":
+        DR["warning"]["clef_test"] <= DR["warning"]["clef_learning_oof"] and DR["warning"]["cb_test"] > DR["warning"]["cb_learning_oof"]
+        and DR["remedy_cb"]["300"]["fused"]["acc"] >= DR["remedy_cb"]["0"]["fused"]["acc"],
     "CB recall: fused50 below threshold-tuned all-call; SVM recall lower on CB than CLEF":
         m("cb", "fuse_0.5", "rec1") < m("cb", "sonnet_thr", "rec1") and m("cb", "svm", "rec1") < m("clef", "svm", "rec1"),
     "haiku: stronger all-call = raw on both": all(HK[d]["best_full"] == "sonnet_raw" for d in ("clef", "cb")),
