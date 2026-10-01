@@ -214,9 +214,9 @@ for s in doc.sections:
 centered(doc, "저비용 분류기와 대형 언어 모델의 선택적 결합을 통한", 13, True, after=0)
 centered(doc, "팩트체크 필요성 탐지", 13, True, after=0)
 # title block as in the peer KICS papers: authors with the corresponding author starred, affiliation, e-mails
-AUTHORS_KO, AUTHORS_EN = "이정빈, 김은경*", "Jeongbin Lee, Eunkyung Kim*"
+AUTHORS_KO, AUTHORS_EN = "이정빈, 노고산, 김은경", "Jeongbin Lee, Gosan Noh, Eunkyung Kim"  # as edited by the author in the uploaded docx
 AFFIL_KO, AFFIL_EN = "국립한밭대학교", "Hanbat National Univ."
-EMAILS = "20221065@edu.hanbat.ac.kr, *ekim@hanbat.ac.kr"
+EMAILS = "20221065@edu.hanbat.ac.kr, {gsnoh, ekim}@hanbat.ac.kr"
 centered(doc, AUTHORS_KO, 11, after=0).paragraph_format.space_before = Pt(7.6)
 centered(doc, AFFIL_KO, 11, after=0)
 centered(doc, EMAILS, 11, after=7.6)

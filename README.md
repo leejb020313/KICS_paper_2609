@@ -2,7 +2,7 @@
 
 **Cost-Efficient Check-Worthy Claim Detection via Selective Fusion of a Low-Cost Classifier and a Large Language Model**
 
-이정빈, 김은경(교신저자) · 국립한밭대학교 · 2026 한국통신학회(KICS) 추계종합학술발표회 학부논문 투고작의 원고, 코드, 데이터, 결과
+이정빈, 노고산, 김은경 · 국립한밭대학교 · 2026 한국통신학회(KICS) 추계종합학술발표회 학부논문 투고작의 원고, 코드, 데이터, 결과
 
 - 원고: [`paper/cascade_kics_draft.pdf`](paper/cascade_kics_draft.pdf) (A4 2쪽), [`.docx`](paper/cascade_kics_draft.docx)
 - 교수님 검토용 설명 자료: [`docs/professor-briefing.md`](docs/professor-briefing.md)
