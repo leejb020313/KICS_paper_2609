@@ -488,6 +488,13 @@ body(doc, (
     f"교체형은 CLEF에서 하한이 {mneg(100*lo('haiku45', cl, 'replace_0.5'))}%p까지 내려갔다. 단, 이때 결합형은 NN-PPI를 적용한 "
     f"전량 호출({hk(cl,'sonnet_nnppi')}, {hk(cb,'sonnet_nnppi')})보다 유의하게 높지 않았다."
 ))
+body(doc, (
+    "한편 학습 데이터(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 "
+    f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
+    f"놓쳤다(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장 중 LLM만 '필요'로 "
+    f"판정한 비율로 라벨 없이 감지할 수 있었고(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, "
+    f"CLEF는 증가 없음), 최근 문장 {DR['k']}개로 다시 학습하면 재현율이 {DR['gain']:.1f}%p 올랐다."
+))
 
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
 figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
@@ -498,13 +505,10 @@ heading(doc, "Ⅳ. 결 론")
 body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
     "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 문장에 LLM을 호출한 경우와 같은 "
-    f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 기대된다. 다만 학습 데이터"
-    f"(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 {REC['cb_svm']}에 그쳐"
-    f"(CLEF {REC['cl_svm']}), 제안 방법도 확인이 필요한 문장을 임계값을 조정한 LLM 전량 호출보다 많이 놓쳤다(재현율 {REC['cb_fuse']} 대 "
-    f"{REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장에서 LLM만 '필요'로 판정한 비율로 라벨 없이 "
-    f"감지할 수 있었고(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, CLEF는 증가 없음), 최근 문장 "
-    f"{DR['k']}개로 다시 학습하면 재현율이 {DR['gain']:.1f}%p 올랐다. 또한 출처가 겹치는[3] 영어 두 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 "
-    "다국어 데이터로 평가를 확장할 계획이다."
+    f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
+    "기대된다. 다만 학습 시기와 다른 데이터에서는 분류기가 노후화되어 확인이 필요한 문장을 더 놓칠 수 있으며, 이는 LLM과 "
+    "분류기의 판정이 엇갈리는 비율로 감지하고 최근 데이터로 다시 학습하여 줄일 수 있었다. 또한 출처가 겹치는[3] 영어 두 "
+    "데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 다국어 데이터로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
