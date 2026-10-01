@@ -13,7 +13,7 @@ import sys
 
 import matplotlib as mpl
 import numpy as np
-from figstyle import PALETTE, figure_grid, panel_labels, save, use_style
+from figstyle import BASELINE, PALETTE, figure_grid, panel_labels, save, use_style
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FULL = "--full" in sys.argv
@@ -47,17 +47,18 @@ def main():
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]
-        for prefix, color, marker, label in [("fuse", "blue", "o", T["fuse"]),
-                                              ("replace", "orange", "s", T["replace"])]:
+        # the proposed method is the only saturated, heavy series; comparisons are grey so ours reads at a glance
+        for prefix, color, marker, ms, lw, z, label in [("fuse", PALETTE["blue"], "o", 3.2, 1.9, 5, T["fuse"]),
+                                                         ("replace", BASELINE, "s", 2.2, 1.0, 3, T["replace"])]:
             mu, sd = series(m, prefix)
-            ax.fill_between(x, mu - sd, mu + sd, color=PALETTE[color], alpha=0.15, linewidth=0)
-            ax.plot(x, mu, marker=marker, markersize=2.6, color=PALETTE[color], linewidth=1.2, label=label, zorder=3)
+            ax.fill_between(x, mu - sd, mu + sd, color=color, alpha=0.15, linewidth=0, zorder=z - 1)
+            ax.plot(x, mu, marker=marker, markersize=ms, color=color, linewidth=lw, label=label, zorder=z)
         # the stronger of the two all-call settings on this dataset (tuned threshold on CLEF, raw 0.5 cut-off on
         # ClaimBuster), i.e. the baseline the text claims parity with; the weaker one would flatter the cascade
         best = max(("sonnet_raw", "sonnet_thr"), key=lambda n: m[n]["acc"][0]) if FULL else "sonnet_thr"
         ax.axhline(m[best]["acc"][0], color=PALETTE["black"], linestyle="--", linewidth=1.0, label=T["thr"])
         if FULL:
-            ax.axhline(m["sonnet_nnppi"]["acc"][0], color=PALETTE["green"], linestyle="-.", linewidth=1.1,
+            ax.axhline(m["sonnet_nnppi"]["acc"][0], color=BASELINE, linestyle=":", linewidth=1.1,
                        label=T["nnppi"])
         else:
             ax.axhline(m["gemma_nnppi_sel"]["acc"][0], color=PALETTE["green"], linestyle=":", linewidth=1.2,
@@ -86,8 +87,9 @@ def main():
     handles, labels = axes[0].get_legend_handles_labels()
     fig.set_layout_engine(None)
     fig.subplots_adjust(left=0.155, right=0.955, top=0.90, bottom=0.40, wspace=0.40)
-    fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.0), fontsize=7,
-               columnspacing=0.8, handlelength=1.8, handletextpad=0.4)
+    leg = fig.legend(handles, labels, loc="lower center", ncol=2, frameon=False, bbox_to_anchor=(0.5, 0.0), fontsize=7,
+                     columnspacing=0.8, handlelength=1.8, handletextpad=0.4)
+    leg.get_texts()[labels.index(T["fuse"])].set_fontweight("bold")  # the proposed method
     save(fig, os.path.join(ROOT, "figures", "cascade_budget_full" if FULL else "cascade_budget"),
          formats=("pdf", "png"))
 
