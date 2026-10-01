@@ -24,6 +24,11 @@ CT = json.load(open(os.path.join(RESULTS, "cost_time.json"), encoding="utf-8")) 
 C = CT["per_1000_sentences"]
 HK = json.load(open(os.path.join(RESULTS, "seed_robustness_full_haiku.json"), encoding="utf-8"))  # second LLM (Claude Haiku 4.5)
 hk = lambda d, k: f"{HK[d]['mean_acc'][k]:.3f}"
+EQ = json.load(open(os.path.join(RESULTS, "equivalence.json"), encoding="utf-8"))  # non-inferiority CIs
+eqlo = lambda llm, d, k: min(EQ[llm][d]["rows"][k]["ci_lo"])
+NI = math.ceil(-100 * min(eqlo("sonnet5", d, "fuse_0.5") for d in ("clef", "cb")) * 10) / 10
+NI_HK = math.ceil(-100 * min(eqlo("haiku45", d, "fuse_0.5") for d in ("clef", "cb")) * 10) / 10
+mstr = lambda x: f"{x:.1f}".replace("-", "−")
 ns = lambda d, c: SR[d]["per_seed"][c]["n_sig"]
 ps = lambda pairs: [p for d, c in pairs for p in SR[d]["per_seed"][c]["p"]]
 # the paper puts zero-width spaces between Hangul syllables (line-break opportunities); drop them
@@ -59,9 +64,15 @@ for d in ("clef", "cb"):
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
            ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
            ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
-           ("fuse50 vs best full: n.s. in all runs, p bound", "5회 모두 유의한 차이가 검출되지 않았으며(p≥" + f"{math.floor(100 * min(ps([(d, f'fuse_0.5_vs_best_full({best[d]})') for d in ('clef', 'cb')]))) / 100:.2f})"),
-           ("reach rates (abstract)", f"교체형(50%)보다 적은 {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}~"
-                                      f"{round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률"),
+           ("non-inferiority (abstract)", f"전량 호출한 경우보다 {NI:.1f}%p 넘게 낮지 않음을 5회 반복 모두에서 확인"),
+           ("non-inferiority (results)", f"하한이 5회 모두 −{NI:.1f}%p 이상이어서 결합형은 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다"),
+           ("mean diff to best all-call", "정확도 차이는 평균 " + ", ".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:+.1f}%p" for d in ("clef", "cb"))),
+           ("replacement CB lower bound", f"ClaimBuster에서 하한이 {mstr(100 * eqlo('sonnet5', 'cb', 'replace_0.5'))}%p까지"),
+           ("haiku non-inferiority", f"전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두)"),
+           ("haiku replacement lower bound", f"CLEF에서 하한이 {mstr(100 * eqlo('haiku45', 'clef', 'replace_0.5'))}%p까지"),
+           ("bootstrap", "부트스트랩(2,000회)"),
+           ("reach rates (abstract)", f"{round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}~"
+                                      f"{round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률에서 전량 호출의 평균 정확도에 도달"),
            ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
                                      f"ClaimBuster {round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%의 호출률로 도달"),
            ("replacement gap at 50%", f"CLEF {100 * SR['clef']['gap_to_best_full']['0.5']['replace']:+.2f}%p, "
@@ -84,11 +95,9 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("time per 1,000", f"각각 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초, {C['0.3']['seconds']:.0f}초"),
            ("abstract cost/time cut", f"LLM 비용은 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 "
                                       f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄었다"),
-           ("haiku sentence", f"전량 호출({hk('clef', 'sonnet_raw')}, {hk('cb', 'sonnet_raw')})과 5회 모두 유의한 차이가 검출되지 "
-                              f"않았으나({hk('clef', 'fuse_0.5')}, {hk('cb', 'fuse_0.5')}), 교체형({hk('clef', 'replace_0.5')}, "
-                              f"{hk('cb', 'replace_0.5')})은 CLEF에서 5회 중 {HK['clef']['per_seed']['replace_0.5_vs_best_full(sonnet_raw)']['n_sig']}회"),
            ("haiku nnppi", f"NN-PPI를 적용한 전량 호출({hk('clef', 'sonnet_nnppi')}, {hk('cb', 'sonnet_nnppi')})보다 유의하게 높지는 않았다"),
-           ("conclusion time cut", f"처리 시간을 {100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄이면서도")]
+           ("conclusion time cut", f"처리 시간을 {100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄이면서도"),
+           ("conclusion non-inferiority", f"정확도가 {NI:.1f}%p 넘게 낮지 않음을 보였다")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
 checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
@@ -119,6 +128,10 @@ directional = {
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
     "haiku: stronger all-call = raw on both": all(HK[d]["best_full"] == "sonnet_raw" for d in ("clef", "cb")),
     "haiku: fuse50 vs all-call n.s. in all 5 runs": all(HK[d]["per_seed"]["fuse_0.5_vs_best_full(sonnet_raw)"]["n_sig"] == 0 for d in ("clef", "cb")),
+    "fused50 non-inferior at NI in all 5 runs, both datasets": all(l > -NI / 100 for d in ("clef", "cb") for l in EQ["sonnet5"][d]["rows"]["fuse_0.5"]["ci_lo"]),
+    "replacement50 not non-inferior at NI on CB in some run": any(l <= -NI / 100 for l in EQ["sonnet5"]["cb"]["rows"]["replace_0.5"]["ci_lo"]),
+    "haiku fused50 non-inferior at NI_HK in all runs": all(l > -NI_HK / 100 for d in ("clef", "cb") for l in EQ["haiku45"][d]["rows"]["fuse_0.5"]["ci_lo"]),
+    "haiku replacement50 not non-inferior at NI_HK on CLEF": any(l <= -NI_HK / 100 for l in EQ["haiku45"]["clef"]["rows"]["replace_0.5"]["ci_lo"]),
     "haiku: replace50 below all-call on CLEF >= 3/5, all negative": HK["clef"]["per_seed"]["replace_0.5_vs_best_full(sonnet_raw)"]["n_sig"] >= 3
         and all(x < 0 for x in HK["clef"]["per_seed"]["replace_0.5_vs_best_full(sonnet_raw)"]["diff"]),
     "haiku: fuse50 vs all-call+NN-PPI not significant on a majority": all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < 3 for d in ("clef", "cb")),
