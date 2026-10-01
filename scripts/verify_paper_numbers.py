@@ -67,7 +67,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("mean diff to best all-call", "정확도가 평균 " + ", ".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}%p" for d in ("clef", "cb")) + " 높았고"),
            ("abstract mean gain", "평균적으로 오히려 " + "~".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}" for d in ("clef", "cb")) + "%p 높았고"),
            ("replacement CB lower bound", f"ClaimBuster에서 하한이 {mstr(100 * eqlo('sonnet5', 'cb', 'replace_0.5'))}%p까지"),
-           ("haiku non-inferiority", f"결합형(50%)의 하한은 5회 모두 −{NI_HK:.1f}%p 이상이었으나"),
+           ("haiku non-inferiority", f"결합형(50%)의 신뢰구간 하한은 5회 모두 −{NI_HK:.1f}%p 이상이었으나"),
            ("haiku replacement lower bound", f"CLEF에서 하한이 {mstr(100 * eqlo('haiku45', 'clef', 'replace_0.5'))}%p까지"),
            ("bootstrap", "부트스트랩(2,000회)"),
            ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
