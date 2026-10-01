@@ -47,9 +47,9 @@ def main():
     x = 100 * np.array(BUDGETS)
     for ax, key in zip(axes, ["clef", "cb"]):
         m = R[key]["metrics"]
-        # the proposed method is the only saturated, heavy series; comparisons are grey so ours reads at a glance
+        # the proposed method is the only heavy series; replacement keeps its color but thin, reference lines are grey
         for prefix, color, marker, ms, lw, z, label in [("fuse", PALETTE["blue"], "o", 3.2, 1.9, 5, T["fuse"]),
-                                                         ("replace", BASELINE, "s", 2.2, 1.0, 3, T["replace"])]:
+                                                         ("replace", PALETTE["orange"], "s", 2.2, 1.0, 3, T["replace"])]:
             mu, sd = series(m, prefix)
             ax.fill_between(x, mu - sd, mu + sd, color=color, alpha=0.15, linewidth=0, zorder=z - 1)
             ax.plot(x, mu, marker=marker, markersize=ms, color=color, linewidth=lw, label=label, zorder=z)
