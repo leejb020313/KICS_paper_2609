@@ -5,7 +5,7 @@ margins, logistic fuser, calib-tuned LLM threshold), then:
   - bar(d) = (-c - a*d) / b  is the LLM score above which Eq. (1) says "check-worthy"
   - picks the test sentence among the queried half (|d| below the median) where the replacement cascade is
     wrong and the fused cascade right, with the largest bar - threshold gap
-Writes results/example_case.json.
+Writes results/paper/example_case.json.
 """
 import json
 import os
@@ -17,7 +17,7 @@ from sklearn.model_selection import cross_val_predict
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import RESULTS, best_threshold, load_frontier  # noqa: E402
+from cwcascade.data import PAPER, best_threshold, load_frontier  # noqa: E402
 
 
 def main():
@@ -41,7 +41,7 @@ def main():
                n_queried_replace_right_fuse_wrong=int(sum(p_rep[j] == test.y[j] != p_fuse[j] for j in queried)),
                example=dict(text=items[i]["text"], label=int(test.y[i]), d=float(d_test[i]), s=float(test.s[i]),
                             bar=float(bar(d_test[i])), fused=int(p_fuse[i]), replaced=int(p_rep[i])))
-    with open(os.path.join(RESULTS, "example_case.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(PAPER, "example_case.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1, ensure_ascii=False)
     print(json.dumps(out, indent=1, ensure_ascii=False))
 

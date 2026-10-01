@@ -6,7 +6,7 @@ needs the batch in advance. A deployable router decides per sentence: fix a thre
 for a test sentence iff |d(x)| < tau. The realised test call rate no longer equals rho exactly,
 so it is reported alongside accuracy. Uses the same 5 calib subsamples as final_eval.py.
 
-Writes results/streaming_results.json (with --full: the full held-out sets, results/streaming_results_full.json).
+Writes results/analysis/streaming_results.json (with --full: the full held-out sets, results/paper/streaming_results_full.json).
 """
 import json
 import os
@@ -19,7 +19,7 @@ from sklearn.model_selection import cross_val_predict
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import DATASETS, RESULTS, best_threshold, load_frontier  # noqa: E402
+from cwcascade.data import ANALYSIS, DATASETS, PAPER, RESULTS, best_threshold, load_frontier  # noqa: E402
 
 SEEDS = 5
 BUDGETS = [.1, .2, .3, .4, .5, .6, .7, .8, .9]
@@ -80,5 +80,5 @@ def evaluate(name, full=False):
 if __name__ == '__main__':
     full = '--full' in sys.argv
     results = {name: evaluate(name, full) for name in DATASETS}
-    with open(os.path.join(RESULTS, 'streaming_results_full.json' if full else 'streaming_results.json'), 'w') as f:
+    with open((os.path.join(PAPER, 'streaming_results_full.json') if full else os.path.join(ANALYSIS, 'streaming_results.json')), 'w') as f:
         json.dump(results, f, indent=1)

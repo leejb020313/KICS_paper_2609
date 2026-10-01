@@ -2,14 +2,14 @@
 
 The September scoring runs kept only the text reply, so latency and token usage are re-measured on a sample of
 23 test batches (every 5th test batch, 40 sentences each), re-sent to claude-sonnet-5 in clean CLI mode
-(scripts/run_sonnet_costcheck.sh -> results/frontier/costcheck_sonnet/). The CLI adds its own system prompt to
-every request; its size is measured with a trivial prompt (costcheck_sonnet/overhead_*.json) and subtracted, so
+(scripts/run_sonnet_costcheck.sh -> results/llm_scores/checks/sonnet5_cost/). The CLI adds its own system prompt to
+every request; its size is measured with a trivial prompt (sonnet5_cost/overhead_*.json) and subtracted, so
 the prompt tokens below are those of our prompt alone (NN-PPI criteria + 40 statements), as a direct API call would
 send them. Only single-turn calls are used (in a few calls the CLI took a second turn, which inflates latency).
 Cost = input tokens x $2/M + output tokens x $10/M (Claude Sonnet 5 list price, no caching or batch discount).
 Time = sequential API time of the LLM batches + embedding and SVM on CPU for every sentence (the cascade only).
 
-    uv run --locked python scripts/cost_time.py      -> results/cost_time.json
+    uv run --locked python scripts/cost_time.py      -> results/paper/cost_time.json
 """
 import glob
 import json
@@ -21,9 +21,9 @@ import numpy as np
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import RESULTS, embed, load_frontier  # noqa: E402
+from cwcascade.data import PAPER, SCORES, embed, load_frontier  # noqa: E402
 
-DIR = os.path.join(RESULTS, "frontier", "costcheck_sonnet")
+DIR = os.path.join(SCORES, "checks", "sonnet5_cost")
 PRICE_IN, PRICE_OUT = 2 / 1e6, 10 / 1e6  # USD per token, Claude Sonnet 5
 BATCH = 40
 N = 1000  # report per 1,000 sentences
@@ -68,7 +68,7 @@ def main():
                prompt_tokens_per_batch=float(tok_in), output_tokens_per_batch=float(tok_out),
                latency_s_per_batch=float(lat), usd_per_batch=float(usd_batch), svm_ms_per_sentence=1000 * svm_s,
                per_1000_sentences=per)
-    with open(os.path.join(RESULTS, "cost_time.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(PAPER, "cost_time.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=1)
     print(json.dumps({k: v for k, v in out.items() if k != "per_1000_sentences"}, indent=1))
     print("per 1,000 sentences      USD      seconds")

@@ -6,9 +6,9 @@
 2. Seed dependence of the significance tests: the paper tests on seed-0 predictions only. Every
    significance claim of the paper is recomputed on each of the 5 seeds (McNemar, exact).
 
-    uv run --locked python scripts/seed_robustness.py      -> results/seed_robustness_full.json
-    CWC_LLM=haiku uv run --locked python scripts/seed_robustness.py -> results/seed_robustness_full_haiku.json
-    (second LLM: Claude Haiku 4.5 scores in results/frontier/haiku/; "sonnet_*" keys then mean that LLM)
+    uv run --locked python scripts/seed_robustness.py      -> results/paper/seed_robustness_full.json
+    CWC_LLM=haiku45 uv run --locked python scripts/seed_robustness.py -> results/paper/seed_robustness_full_haiku45.json
+    (second LLM: Claude Haiku 4.5 scores in results/llm_scores/haiku45/; "sonnet_*" keys then mean that LLM)
 """
 import json
 import os
@@ -19,8 +19,8 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import final_eval as fe  # noqa: E402
 
-LLM = os.environ.get("CWC_LLM", "batches")
-OUT = os.path.join(fe.RESULTS, "seed_robustness_full.json" if LLM == "batches" else f"seed_robustness_full_{LLM}.json")
+LLM = os.environ.get("CWC_LLM", "sonnet5")
+OUT = os.path.join(fe.PAPER, "seed_robustness_full.json" if LLM == "sonnet5" else f"seed_robustness_full_{LLM}.json")
 
 
 def acc(y, p):
@@ -54,7 +54,7 @@ def main():
                   "fuse_0.5_vs_sonnet_raw": ("fuse_0.5", "sonnet_raw"),
                   "fuse_0.5_vs_sonnet_thr": ("fuse_0.5", "sonnet_thr"),
                   "fuse_0.5_vs_fuse_1.0": ("fuse_0.5", "fuse_1.0")}
-        if LLM != "batches":  # second LLM: the call rate is re-chosen on its own learning set (paper's rule)
+        if LLM != "sonnet5":  # second LLM: the call rate is re-chosen on its own learning set (paper's rule)
             r = fe.LAST_RESULT[name]
             cal = [r["calib_curve"][f"fuse_{b}"][0] for b in fe.BUDGETS]
             rho = next(b for i, b in enumerate(fe.BUDGETS) if max(cal[i:]) - cal[i] <= 0.001)

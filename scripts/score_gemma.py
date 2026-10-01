@@ -4,7 +4,7 @@ Writes one JSON line per claim and resumes from an existing output file, so it c
 interrupted. Sampling follows NN-PPI Appendix C (T=1.0, top-k=64, top-p=0.95).
 
     llama-server -m google_gemma-3-4b-it-Q4_K_M.gguf --port 8080 -c 8192 -ngl 99
-    python scripts/score_gemma.py --dataset data/processed/clef_test.csv --out results/gemma/clef_test_scores.jsonl
+    python scripts/score_gemma.py --dataset data/processed/clef_test.csv --out results/llm_scores/gemma/clef_test_scores.jsonl
 """
 import argparse
 import json

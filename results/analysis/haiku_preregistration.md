@@ -1,6 +1,6 @@
 # Second LLM (Claude Haiku 4.5) — pre-registered criteria (written 2026-09-30, before any Haiku score was seen)
 
-Same batches (results/frontier/batches/*.txt: NN-PPI criteria prompt, 40 statements per call), same learning sets,
+Same batches (results/llm_scores/sonnet5/*.txt: NN-PPI criteria prompt, 40 statements per call), same learning sets,
 5 runs, McNemar per run, same learning-set rate rule as the paper. Only the LLM changes (sonnet -> haiku).
 Scored in clean CLI mode (--restricted --strict-mcp-config, neutral cwd), model id logged per call.
 

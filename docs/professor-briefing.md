@@ -176,10 +176,10 @@
 
 | 내용 | 파일 |
 |---|---|
-| 본 결과 | `results/final_results_full.json`, `results/seed_robustness_full.json` |
-| 신뢰구간 (3절) | `scripts/equivalence.py` → `results/equivalence.json` |
-| 비용·시간 | `scripts/cost_time.py` → `results/cost_time.json` |
-| 두 번째 LLM | `results/haiku_preregistration.md`, `results/seed_robustness_full_haiku.json` |
-| 첫 단계·결합 공식 비교 (4.2, 4.4절) | `scripts/ablation_stage_fusion.py`, `scripts/ablation_fusion_region.py` |
+| 본 결과 | `results/paper/final_results_full.json`, `results/paper/seed_robustness_full.json` |
+| 신뢰구간 (3절) | `scripts/equivalence.py` → `results/paper/equivalence.json` |
+| 비용·시간 | `scripts/cost_time.py` → `results/paper/cost_time.json` |
+| 두 번째 LLM | `results/analysis/haiku_preregistration.md`, `results/paper/seed_robustness_full_haiku45.json` |
+| 첫 단계·결합 공식 비교 (4.2, 4.4절) | `scripts/ablation_stage_fusion.py` → `results/analysis/ablation_stage_fusion.json`, `scripts/ablation_fusion_region.py` |
 | 원고 숫자 자동 검증 | `scripts/verify_paper_numbers.py` |
 | 참고문헌 원문 인용 검증 | `paper/references/references.json`, `paper/references/verify_references.py` |

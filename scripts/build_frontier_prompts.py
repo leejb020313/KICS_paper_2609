@@ -1,4 +1,4 @@
-"""Write the batched frontier-LLM prompts (40 statements per file) into results/frontier/batches/.
+"""Write the batched frontier-LLM prompts (40 statements per file) into results/llm_scores/sonnet5/.
 
 The prompt keeps NN-PPI's check-worthiness criteria (cwcascade/prompt.py) and replaces the
 single-statement task with a numbered list scored in one JSON object. Ids are positions in
@@ -9,7 +9,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import DATA, RESULTS, read_json  # noqa: E402
+from cwcascade.data import DATA, SCORES, read_json  # noqa: E402
 from cwcascade.prompt import SYSTEM_PROMPT  # noqa: E402
 
 BATCH = 40
@@ -19,7 +19,7 @@ TASK = ("\n# YOUR TASK\nBelow are numbered statements (id<TAB>statement). For EA
         "object mapping id (as string) to score, e.g. {\"0\":0.9,\"1\":0.1}. Include every id.\n\n")
 
 
-def main(set_files="eval_set.json,calib_set.json", out_dir=os.path.join(RESULTS, "frontier", "batches")):
+def main(set_files="eval_set.json,calib_set.json", out_dir=os.path.join(SCORES, "sonnet5")):
     os.makedirs(out_dir, exist_ok=True)
     sets = {k: v for fn in set_files.split(",") for k, v in read_json(os.path.join(DATA, "frontier", fn)).items()}
     for key, items in sets.items():

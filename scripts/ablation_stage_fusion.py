@@ -10,7 +10,7 @@ Protocol as in the paper: 5 runs on 80% subsamples of the learning set, fusion t
 d and the learning-set LLM scores, the queried rho of test sentences = smallest |d|. The rule to pick a variant
 is the learning-set (out-of-fold) accuracy at 50% calls; test accuracy is reported next to it.
 
-    uv run --locked python scripts/ablation_stage_fusion.py   -> results/ablation_stage_fusion.json
+    uv run --locked python scripts/ablation_stage_fusion.py   -> results/analysis/ablation_stage_fusion.json
 """
 import json
 import os
@@ -23,7 +23,7 @@ from sklearn.model_selection import GridSearchCV, StratifiedKFold, cross_val_pre
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import RESULTS, load_frontier  # noqa: E402
+from cwcascade.data import ANALYSIS, load_frontier  # noqa: E402
 
 SEEDS = 5
 RATES = (0.0, 0.3, 0.5, 1.0)
@@ -152,7 +152,7 @@ def run(name):
 
 def main():
     res = {name: run(name) for name in ("clef", "cb")}
-    with open(os.path.join(RESULTS, "ablation_stage_fusion.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(ANALYSIS, "ablation_stage_fusion.json"), "w", encoding="utf-8") as f:
         json.dump(res, f, indent=1)
     for name, r in res.items():
         for part in ("stage", "fusion"):

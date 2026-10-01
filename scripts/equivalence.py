@@ -5,7 +5,7 @@ Claude Haiku 4.5), dataset, call rate and run, the accuracy difference cascade -
 95% paired bootstrap CI over test sentences (final_eval.compare, 2000 resamples). The cascade is non-inferior at
 margin delta when the CI's lower bound is above -delta (a two-sided 95% CI, i.e. one-sided alpha = 0.025).
 
-    uv run --locked python scripts/equivalence.py      -> results/equivalence.json
+    uv run --locked python scripts/equivalence.py      -> results/paper/equivalence.json
 """
 import json
 import os
@@ -42,8 +42,8 @@ def run(llm):
 
 
 def main():
-    res = {"sonnet5": run("batches"), "haiku45": run("haiku")}
-    with open(os.path.join(fe.RESULTS, "equivalence.json"), "w", encoding="utf-8") as f:
+    res = {"sonnet5": run("sonnet5"), "haiku45": run("haiku45")}
+    with open(os.path.join(fe.PAPER, "equivalence.json"), "w", encoding="utf-8") as f:
         json.dump(res, f, indent=1)
     for llm, r in res.items():
         for name, d in r.items():

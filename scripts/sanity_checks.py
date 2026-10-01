@@ -1,9 +1,9 @@
 """Checks behind three side statements in the paper.
 
 1. Batched vs one-by-one frontier scoring (Section III): 80 CLEF test claims were also scored one
-   at a time with the few-shot prompt (results/frontier/single). 11 calls hit the CLI usage limit
+   at a time with the few-shot prompt (results/llm_scores/checks/single). 11 calls hit the CLI usage limit
    and returned no score, leaving 69; ROC-AUC on those 69 is compared with the batched scores.
-2. Stability of batched scoring: a second batched pass over CLEF test (results/frontier/rerun),
+2. Stability of batched scoring: a second batched pass over CLEF test (results/llm_scores/checks/rerun),
    Pearson correlation with the first pass.
 3. SVM inference latency on CPU (Section II, "about 6 ms per sentence"), embedding included.
    Machine-dependent; not part of verify_paper_numbers.py.
@@ -19,11 +19,11 @@ from sklearn.metrics import roc_auc_score
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import DATA, RESULTS, embed, load_frontier, read_frontier_scores, read_json  # noqa: E402
+from cwcascade.data import DATA, SCORES, embed, load_frontier, read_frontier_scores, read_json  # noqa: E402
 
 
 def single_scores():
-    folder = os.path.join(RESULTS, 'frontier', 'single')
+    folder = os.path.join(SCORES, 'checks', 'single')
     out = {}
     for i in read_json(os.path.join(folder, 'ids.json')):
         with open(os.path.join(folder, f'q_{i:04d}.out'), encoding='utf-8') as f:
@@ -43,7 +43,7 @@ def main():
     print(f"[1] batched vs single, CLEF n={len(ids)}: AUC single={roc_auc_score(y[ids], [single[i] for i in ids]):.3f}"
           f"  batched={roc_auc_score(y[ids], [batched[i] for i in ids]):.3f}")
 
-    rerun = read_frontier_scores('rerun')['clef']
+    rerun = read_frontier_scores(os.path.join('checks', 'rerun'))['clef']
     ids = sorted(rerun)
     r = pearsonr([batched[i] for i in ids], [rerun[i] for i in ids])[0]
     print(f"[2] batched pass 1 vs pass 2, CLEF n={len(ids)}: Pearson r={r:.3f}")

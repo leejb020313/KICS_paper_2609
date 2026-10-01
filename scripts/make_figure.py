@@ -1,9 +1,9 @@
 """그림 1: 프런티어 LLM 호출률에 따른 테스트 정확도 (결합형 vs 교체형 캐스케이드).
 
-Reads results/final_results.json (written by final_eval.py) and writes figures/cascade_budget.{pdf,png}
+Reads results/paper/final_results.json (written by final_eval.py) and writes figures/cascade_budget.{pdf,png}
 at the printed width of one KICS column (8.2 cm), so it is inserted without rescaling.
 
-With --full, reads results/final_results_full.json (final_eval.py --full) and writes
+With --full, reads results/paper/final_results_full.json (final_eval.py --full) and writes
 figures/cascade_budget_full.{pdf,png}: the same curves on the full held-out sets, with both
 full-call baselines (calib-tuned threshold, and + NN-PPI) as reference lines instead of Gemma.
 """
@@ -17,7 +17,7 @@ from figstyle import PALETTE, figure_grid, panel_labels, save, use_style
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FULL = "--full" in sys.argv
-R = json.load(open(os.path.join(ROOT, "results", "final_results_full.json" if FULL else "final_results.json"),
+R = json.load(open(os.path.join(ROOT, "results", "paper", "final_results_full.json" if FULL else "final_results.json"),
                    encoding="utf-8"))
 BUDGETS = [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]
 NAMES = {"clef": f"CLEF 2024 (n={R['clef']['n_test']})", "cb": f"ClaimBuster (n={R['cb']['n_test']})"}

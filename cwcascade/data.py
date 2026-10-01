@@ -13,6 +13,9 @@ import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 RESULTS = os.path.join(ROOT, "results")
+PAPER = os.path.join(RESULTS, "paper")        # result files the paper reads
+ANALYSIS = os.path.join(RESULTS, "analysis")  # supporting analyses not printed in the paper
+SCORES = os.path.join(RESULTS, "llm_scores")  # raw LLM scores: gemma/, sonnet5/, haiku45/, checks/
 
 # dataset key -> (frontier calib key, Gemma calib scores, Gemma test scores)
 DATASETS = {
@@ -33,16 +36,16 @@ def read_jsonl(path):
 
 
 def read_frontier_scores(folder=None):
-    """Parse the frontier LLM outputs in results/frontier/<folder>/*.out.
+    """Parse the frontier LLM outputs in results/llm_scores/<folder>/*.out.
 
-    folder defaults to $CWC_LLM (e.g. "haiku" for the second-LLM check) or "batches" (Claude Sonnet 5).
+    folder defaults to $CWC_LLM ("haiku45" for the second-LLM check) or "sonnet5" (Claude Sonnet 5).
 
     Each file holds one JSON object {id: score}; the file-name prefix (clef, cb,
     clefcal, cbcal) says which set the ids index into.
     """
-    folder = folder or os.environ.get("CWC_LLM", "batches")
+    folder = folder or os.environ.get("CWC_LLM", "sonnet5")
     scores = {}
-    for path in glob.glob(os.path.join(RESULTS, "frontier", folder, "*.out")):
+    for path in glob.glob(os.path.join(SCORES, folder, "*.out")):
         key = os.path.basename(path).split("_")[0]
         with open(path, encoding="utf-8", errors="ignore") as f:
             obj = json.loads(re.search(r"\{.*\}", f.read(), re.S).group(0))
@@ -105,10 +108,10 @@ def load_gemma(name, test_items):
     when some test sentence has not been scored by Gemma at all.
     """
     _, calib_file, test_file = DATASETS[name]
-    calib_rows = [r for r in read_jsonl(os.path.join(RESULTS, "gemma", calib_file + ".jsonl")) if r.get("parse_ok")]
+    calib_rows = [r for r in read_jsonl(os.path.join(SCORES, "gemma", calib_file + ".jsonl")) if r.get("parse_ok")]
     by_id = {}
     for f in (test_file, test_file + "_full"):  # *_full: Gemma scores of the extra full-set items
-        if os.path.exists(path := os.path.join(RESULTS, "gemma", f + ".jsonl")):
+        if os.path.exists(path := os.path.join(SCORES, "gemma", f + ".jsonl")):
             by_id.update({str(r["Sentence_id"]): r for r in read_jsonl(path)})
     if any(r["Sentence_id"] not in by_id for r in test_items):
         return None, None

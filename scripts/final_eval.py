@@ -14,9 +14,9 @@ Every calib-fitted component (SVM, fuser, threshold) is refit on 5 random 80% ca
 drawn without replacement; nothing is tuned on test. Headline contrasts use McNemar tests and
 paired bootstrap CIs on the seed-0 predictions.
 
-Writes results/final_results.json. With --full, evaluates on the whole held-out sets instead
+Writes results/paper/final_results.json. With --full, evaluates on the whole held-out sets instead
 (CLEF dev + dev-test + official test, all of ClaimBuster 2016; see data/build_full_sets.py) and
-writes results/final_results_full.json; Gemma rows are skipped where Gemma scores are missing.
+writes results/paper/final_results_full.json; Gemma rows are skipped where Gemma scores are missing.
 """
 import json
 import os
@@ -30,7 +30,7 @@ from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.svm import SVC
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from cwcascade.data import DATASETS, RESULTS, Split, best_threshold, load_frontier, load_gemma  # noqa: E402
+from cwcascade.data import DATASETS, PAPER, RESULTS, Split, best_threshold, load_frontier, load_gemma  # noqa: E402
 from cwcascade.nnppi import nn_ppi  # noqa: E402
 
 SEEDS = 5
@@ -214,5 +214,5 @@ def report(name, r):
 if __name__ == '__main__':
     full = '--full' in sys.argv
     results = {name: evaluate(name, full) for name in DATASETS}
-    with open(os.path.join(RESULTS, 'final_results_full.json' if full else 'final_results.json'), 'w') as f:
+    with open(os.path.join(PAPER, 'final_results_full.json' if full else 'final_results.json'), 'w') as f:
         json.dump(results, f, indent=1)
