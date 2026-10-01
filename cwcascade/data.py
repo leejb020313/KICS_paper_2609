@@ -32,12 +32,15 @@ def read_jsonl(path):
         return [json.loads(line) for line in f if line.strip()]
 
 
-def read_frontier_scores(folder="batches"):
+def read_frontier_scores(folder=None):
     """Parse the frontier LLM outputs in results/frontier/<folder>/*.out.
+
+    folder defaults to $CWC_LLM (e.g. "haiku" for the second-LLM check) or "batches" (Claude Sonnet 5).
 
     Each file holds one JSON object {id: score}; the file-name prefix (clef, cb,
     clefcal, cbcal) says which set the ids index into.
     """
+    folder = folder or os.environ.get("CWC_LLM", "batches")
     scores = {}
     for path in glob.glob(os.path.join(RESULTS, "frontier", folder, "*.out")):
         key = os.path.basename(path).split("_")[0]

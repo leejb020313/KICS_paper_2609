@@ -124,24 +124,9 @@
       "pdf": "2606.08605.pdf",
       "claims": [
         {
-          "id": "2a",
-          "where": "서론",
-          "paper": "같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나",
-          "quote": "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs",
-          "support": "direct"
-        },
-        {
-          "id": "2b",
-          "where": "서론",
-          "paper": "관용적 표현에서는 LLM이 앞선다고 보고하고",
-          "quote": "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps",
-          "support": "direct",
-          "note": "'관용적 표현' translates 'highly idiomatic English (memes, satire)'."
-        },
-        {
           "id": "2c",
           "where": "서론",
-          "paper": "인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].",
+          "paper": "같은 연구진은 인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드 방식을 향후 과제로 제시하였다[2].",
           "quote": "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low",
           "support": "direct",
           "note": "Stated in the conclusion as 'Future work will focus on ...'."
@@ -313,6 +298,22 @@
           "quote": "it is harmful when the large model replaces a correct answer with an incorrect one",
           "support": "direct",
           "note": "SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting."
+        },
+        {
+          "id": "7b",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만",
+          "quote": "a budgeted routing method that predicts these two events separately and ranks requests by their difference",
+          "support": "direct",
+          "note": "'these two events' = rescue (large model corrects the small one) and harm (large model replaces a correct answer), abstract."
+        },
+        {
+          "id": "7c",
+          "where": "Ⅱ. 본론 2.1 선행 연구",
+          "paper": "넘긴 입력은 큰 모델의 답으로 교체한다.",
+          "quote": "if g ≥τq then",
+          "support": "direct",
+          "note": "Algorithm 1, online routing: 'if g ≥ τq then return Mℓ(x) else return as' — an escalated request gets the large model's answer (replacement); Fig. 1 labels the same branch 'Final answer from Mℓ'."
         }
       ]
     },

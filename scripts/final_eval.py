@@ -38,6 +38,7 @@ BUDGETS = [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]
 NNPPI_KS = (3, 5, 10)
 BOOT = 2000
 LAST_PREDS = {}  # dataset -> (y, {method: [per-seed predictions]}), filled by evaluate()
+LAST_RESULT = {}  # dataset -> evaluate() result dict
 
 
 def metrics(y, p):
@@ -181,6 +182,7 @@ def evaluate(name, full=False):
                   k_sel=k_sel, nnppi_tune_acc=tune_acc, sonnet_nnppi_k=sonnet_k, flips_confident_half_seed0=flips, rho_sel=rho_sel, n_test=len(y),
                   n_calib_frontier=len(calib.y), n_calib_gemma=len(gemma_cal.y) if gemma_cal else None, metrics=summary, contrasts=contrasts)
     report(name, result)
+    LAST_RESULT[name] = result
     return result
 
 

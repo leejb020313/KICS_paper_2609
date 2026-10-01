@@ -1,0 +1,32 @@
+{
+ "n_calls": 23,
+ "n_single_turn": 16,
+ "cli_overhead_tokens": 19385,
+ "prompt_tokens_per_batch": 1538.4375,
+ "output_tokens_per_batch": 365.8125,
+ "latency_s_per_batch": 4.2684999999999995,
+ "usd_per_batch": 0.006735,
+ "svm_ms_per_sentence": 6.227028624998638,
+ "per_1000_sentences": {
+  "0.3": {
+   "usd": 0.050512499999999995,
+   "seconds": 38.24077862499863
+  },
+  "0.4": {
+   "usd": 0.06735,
+   "seconds": 48.912028624998634
+  },
+  "0.5": {
+   "usd": 0.0841875,
+   "seconds": 59.583278624998634
+  },
+  "1.0": {
+   "usd": 0.168375,
+   "seconds": 106.71249999999999
+  },
+  "svm_only": {
+   "usd": 0.0,
+   "seconds": 6.227028624998638
+  }
+ }
+}

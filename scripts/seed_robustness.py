@@ -7,6 +7,8 @@
    significance claim of the paper is recomputed on each of the 5 seeds (McNemar, exact).
 
     uv run --locked python scripts/seed_robustness.py      -> results/seed_robustness_full.json
+    CWC_LLM=haiku uv run --locked python scripts/seed_robustness.py -> results/seed_robustness_full_haiku.json
+    (second LLM: Claude Haiku 4.5 scores in results/frontier/haiku/; "sonnet_*" keys then mean that LLM)
 """
 import json
 import os
@@ -17,7 +19,8 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import final_eval as fe  # noqa: E402
 
-OUT = os.path.join(fe.RESULTS, "seed_robustness_full.json")
+LLM = os.environ.get("CWC_LLM", "batches")
+OUT = os.path.join(fe.RESULTS, "seed_robustness_full.json" if LLM == "batches" else f"seed_robustness_full_{LLM}.json")
 
 
 def acc(y, p):
@@ -51,6 +54,14 @@ def main():
                   "fuse_0.5_vs_sonnet_raw": ("fuse_0.5", "sonnet_raw"),
                   "fuse_0.5_vs_sonnet_thr": ("fuse_0.5", "sonnet_thr"),
                   "fuse_0.5_vs_fuse_1.0": ("fuse_0.5", "fuse_1.0")}
+        if LLM != "batches":  # second LLM: the call rate is re-chosen on its own learning set (paper's rule)
+            r = fe.LAST_RESULT[name]
+            cal = [r["calib_curve"][f"fuse_{b}"][0] for b in fe.BUDGETS]
+            rho = next(b for i, b in enumerate(fe.BUDGETS) if max(cal[i:]) - cal[i] <= 0.001)
+            claims.update({f"fuse_{rho}(rule)_vs_best_full({best})": (f"fuse_{rho}", best),
+                           f"fuse_{rho}(rule)_vs_sonnet_nnppi": (f"fuse_{rho}", "sonnet_nnppi"),
+                           f"fuse_{rho}(rule)_vs_replace_{rho}": (f"fuse_{rho}", f"replace_{rho}")})
+            mean["rho_rule"] = rho
         for b in fe.BUDGETS[1:]:
             claims[f"fuse_{b}_vs_replace_{b}"] = (f"fuse_{b}", f"replace_{b}")
         per_seed = {}
@@ -59,7 +70,8 @@ def main():
             per_seed[cname] = dict(diff=[r["diff"] for r in rows], p=[r["mcnemar_p"] for r in rows],
                                    n_sig=sum(r["mcnemar_p"] < 0.05 for r in rows),
                                    same_sign=len({np.sign(r["diff"]) for r in rows if r["diff"] != 0}) <= 1)
-        out[name] = dict(best_full=best, mean_acc={k: mean[k] for k in ("svm", "gemma_nnppi_sel", best, "sonnet_nnppi")},
+        out[name] = dict(best_full=best, mean_acc={k: mean[k] for k in ("svm", "gemma_nnppi_sel", "sonnet_raw", "sonnet_thr", "sonnet_nnppi", "rho_rule",
+                                                                         *(f"{v}_{b}" for b in fe.BUDGETS for v in ("fuse", "replace"))) if k in mean},
                          gap_to_best_full=curve, first_rate_reaching_best_full=reach, per_seed=per_seed)
 
     with open(OUT, "w", encoding="utf-8") as f:

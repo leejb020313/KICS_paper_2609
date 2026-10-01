@@ -92,19 +92,7 @@
 - 공식 저자: Pratuat Amatya, Vinay Setty
 - 원문 PDF: `pdfs/2606.08605.pdf`
 
-**2a** (서론) — 논문: 같은 연구진은 파인튜닝한 소형 인코더가 LLM과 경쟁할 수 있으나
-
-> "carefully fine-tuned Transformer architectures remain highly competitive, and in several practical settings preferable, to large general-purpose LLMs" (p. 1)
-
-- 근거 유형: direct
-
-**2b** (서론) — 논문: 관용적 표현에서는 LLM이 앞선다고 보고하고
-
-> "claim detection on highly idiomatic English (memes, satire), where surface-level signals are insufficient and the LLMs' broader world knowledge helps" (p. 7)
-
-- 근거 유형: direct — '관용적 표현' translates 'highly idiomatic English (memes, satire)'.
-
-**2c** (서론) — 논문: 인코더의 확신이 낮을 때만 LLM에 넘기는 하이브리드를 향후 과제로 제시하였다[2].
+**2c** (서론) — 논문: 같은 연구진은 인코더가 확신하지 못할 때만 LLM에 넘기는 하이브리드 방식을 향후 과제로 제시하였다[2].
 
 > "hybrid encoder-LLM systems that escalate to a generative model only when the encoder's confidence is low" (p. 9)
 
@@ -199,6 +187,18 @@
 > "it is harmful when the large model replaces a correct answer with an incorrect one" (p. 1)
 
 - 근거 유형: direct — SRR studies LLM-to-LLM cascades on MMLU/HellaSwag/ARC; our setting is classifier-to-LLM, so [7] is cited as consistent evidence, not as the same setting.
+
+**7b** (Ⅱ. 본론 2.1 선행 연구) — 논문: SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만
+
+> "a budgeted routing method that predicts these two events separately and ranks requests by their difference" (p. 1)
+
+- 근거 유형: direct — 'these two events' = rescue (large model corrects the small one) and harm (large model replaces a correct answer), abstract.
+
+**7c** (Ⅱ. 본론 2.1 선행 연구) — 논문: 넘긴 입력은 큰 모델의 답으로 교체한다.
+
+> "if g ≥τq then" (p. 4)
+
+- 근거 유형: direct — Algorithm 1, online routing: 'if g ≥ τq then return Mℓ(x) else return as' — an escalated request gets the large model's answer (replacement); Fig. 1 labels the same branch 'Final answer from Mℓ'.
 
 ## [8] Y. Zhang et al., "Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration," arXiv:2609.11446, 2026.
 
