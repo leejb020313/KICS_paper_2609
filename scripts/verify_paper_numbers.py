@@ -62,12 +62,12 @@ for d in ("clef", "cb"):
 ]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
            ("fuse50 vs sonnet+nnppi: 5/5, p bound", f"5회 모두 유의하게 높았다(p≤{math.ceil(1000 * max(ps([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in ('clef', 'cb')]))) / 1000:.3f})"),
-           ("non-inferiority (abstract)", f"통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인"),
-           ("non-inferiority (results)", f"5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. 즉 결합형의 정확도는 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다"),
+           ("non-inferiority (abstract)", f"5회 반복 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다"),
+           ("non-inferiority (results)", f"5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. 반면"),
            ("mean diff to best all-call", "정확도가 평균 " + ", ".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}%p" for d in ("clef", "cb")) + " 높았고"),
            ("abstract mean gain", "평균적으로 오히려 " + "~".join(f"{100 * sum(EQ['sonnet5'][d]['rows']['fuse_0.5']['diff']) / 5:.1f}" for d in ("clef", "cb")) + "%p 높았고"),
            ("replacement CB lower bound", f"ClaimBuster에서 하한이 {mstr(100 * eqlo('sonnet5', 'cb', 'replace_0.5'))}%p까지"),
-           ("haiku non-inferiority", f"정확도는 전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두)"),
+           ("haiku non-inferiority", f"결합형(50%)의 하한은 5회 모두 −{NI_HK:.1f}%p 이상이었으나"),
            ("haiku replacement lower bound", f"CLEF에서 하한이 {mstr(100 * eqlo('haiku45', 'clef', 'replace_0.5'))}%p까지"),
            ("bootstrap", "부트스트랩(2,000회)"),
            ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
@@ -76,7 +76,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
            ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
-           ("svm vs nnppi: CLEF n_sig of 5", f"CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고"),
+           ("svm vs nnppi: CLEF n_sig of 5", f"NN-PPI보다 CLEF에서 5회 중 {ns('clef', 'svm_vs_gemma_nnppi_sel')}회 유의하게 높았으며"),
            ("dagger definition", "†: 5회 중 3회 이상 제안보다 유의하게 낮음"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
            ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}였고"),
@@ -88,7 +88,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
                                                f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("conclusion recall limitation", f"분류기의 재현율이 {m('cb', 'svm', 'rec1'):.2f}에 그쳐(CLEF {m('clef', 'svm', 'rec1'):.2f})"),
            ("drift warning", f"(학습 데이터 {100 * DR['warning']['cb_learning_oof']:.1f}% → 테스트 {100 * DR['warning']['cb_test']:.1f}%, CLEF는 증가 없음)"),
-           ("drift remedy", f"최근 문장 300개로 다시 학습하면 재현율이 {100 * (DR['remedy_cb']['300']['fused']['recall'] - DR['remedy_cb']['0']['fused']['recall']):.1f}%p 올랐다"),
+           ("drift remedy", f"300문장의 라벨을 학습 세트에 추가하면 나머지 문장에서 재현율이 {100 * (DR['remedy_cb']['300']['fused']['recall'] - DR['remedy_cb']['0']['fused']['recall']):.1f}%p 올랐다"),
            ("conclusion recall numbers", f"(재현율 {m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}

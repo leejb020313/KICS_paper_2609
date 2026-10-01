@@ -254,8 +254,8 @@ body(doc, (
     "본 논문에서는 가벼운 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 확신하지 못하는 문장에만 LLM을 호출하되 "
     "분류기의 판정을 LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 "
     f"문장에 LLM을 호출한 경우와 같은 수준의 정확도(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})를 "
-    f"유지하였다. 정확도는 평균적으로 오히려 {MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 통계적으로도 {NI:.1f}%p 넘게 "
-    f"낮지 않음을 확인하였다. 이를 통해 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
+    f"유지하였다. 정확도는 평균적으로 오히려 {MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 5회 반복 모두 차이의 95% 신뢰구간 "
+    f"하한이 −{NI:.1f}%p 이상이었다. 이를 통해 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
     "기대된다."
 ), size=9, indent=0.5, after=2.5)
 
@@ -332,8 +332,8 @@ subheading(doc, "3.1 실험 환경")
 assert R[cl]["k_sel"] == R[cb]["k_sel"]  # the text says both datasets selected the same k
 body(doc, (
     f"CLEF 2024 CheckThat! Task 1 영어 데이터[3]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
-    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. ClaimBuster[4]는 2012년 토론 {R[cb]['n_calib_gemma']:,}문장과 "
-    f"2016년 토론 {R[cb]['n_test']:,}문장을 각각 학습 세트와 테스트로 사용하였다. NN-PPI는 원 논문과 같이 Gemma 3 4B로 "
+    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. 또 다른 데이터셋인 ClaimBuster[4]는 2012년 토론 "
+    f"{R[cb]['n_calib_gemma']:,}문장을 학습 세트로, 2016년 토론 {R[cb]['n_test']:,}문장을 테스트로 사용하였다. NN-PPI는 원 논문과 같이 Gemma 3 4B로 "
     "재현하였으며, 원 논문과 같은 분할에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
     f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 0.827, 0.760). LLM은 Claude Sonnet 5를 "
@@ -433,7 +433,7 @@ assert nsig(cb, "fuse_0.5_vs_fuse_1.0") == 5  # "ClaimBuster에서는 이 차이
 mneg = lambda x: f"{x:.1f}".replace("-", "−")
 first = body(doc, (
     "표 1에서 LLM을 사용하지 않는 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 "
-    f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고, ClaimBuster에서는 5회 모두 유의차가 없었다."
+    f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았으며, ClaimBuster에서는 5회 모두 유의차가 없었다."
 ))
 first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
 body(doc, (
@@ -445,8 +445,8 @@ body(doc, (
     "이하 전량 호출은 LLM 전량 호출의 두 설정(조정 전, 임계값 조정) 중 정확도가 높은 쪽"
     f"(CLEF는 {BF_NAME[BF[cl]]}, ClaimBuster는 {BF_NAME[BF[cb]]})을 뜻한다. 호출률 50%의 결합형은 전량 호출보다 정확도가 "
     f"평균 {MEAN_GAIN[cl]:.1f}%p, {MEAN_GAIN[cb]:.1f}%p 높았고, 5회 모두 차이의 95% 신뢰구간 하한이 −{NI:.1f}%p 이상이었다. "
-    f"즉 결합형의 정확도는 전량 호출보다 {NI:.1f}%p 넘게 낮지 않다. 반면 같은 호출률의 교체형은 ClaimBuster에서 하한이 "
-    f"{mneg(100*lo('sonnet5', cb, 'replace_0.5'))}%p까지 내려가 이를 보장하지 못했다. 또한 결합형은 NN-PPI를 적용한 전량 "
+    f"반면 같은 호출률의 교체형은 ClaimBuster에서 하한이 "
+    f"{mneg(100*lo('sonnet5', cb, 'replace_0.5'))}%p까지 내려갔다. 또한 결합형은 NN-PPI를 적용한 전량 "
     f"호출보다 5회 모두 유의하게 높았다({p_all([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in (cl, cb)], False)})."
 ))
 body(doc, (
@@ -480,16 +480,18 @@ assert all(HK[d]["per_seed"][f"fuse_0.5_vs_best_full({HB[d]})"]["n_sig"] == 0 fo
 assert HK[cl]["per_seed"][f"replace_0.5_vs_best_full({HB[cl]})"]["n_sig"] >= 3
 assert all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < 3 for d in (cl, cb))
 body(doc, (
-    f"LLM을 Claude Haiku 4.5로 바꾸어도 결합형(50%)의 정확도는 전량 호출보다 {NI_HK:.1f}%p 넘게 낮지 않았으나(5회 모두), "
-    f"교체형은 CLEF에서 하한이 {mneg(100*lo('haiku45', cl, 'replace_0.5'))}%p까지 내려갔다. 단, 이때 결합형은 NN-PPI를 적용한 "
-    f"전량 호출({hk(cl,'sonnet_nnppi')}, {hk(cb,'sonnet_nnppi')})보다 유의하게 높지 않았다."
+    f"LLM을 Claude Haiku 4.5로 바꾸면 결합형(50%)의 하한은 5회 모두 −{NI_HK:.1f}%p 이상이었으나, "
+    f"교체형은 CLEF에서 하한이 {mneg(100*lo('haiku45', cl, 'replace_0.5'))}%p까지 내려갔다. "
+    f"다만 이때 결합형은 NN-PPI를 적용한 전량 호출({hk(cl,'sonnet_nnppi')}, {hk(cb,'sonnet_nnppi')})보다 "
+    "유의하게 높지 않았다."
 ))
 body(doc, (
-    "한편 학습 데이터(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 "
+    "한편 학습 데이터(2012년 토론)와 시기가 다른 테스트(ClaimBuster 2016년 토론)에서는 분류기의 재현율이 "
     f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
-    f"놓쳤다(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장 중 LLM만 ‘필요’로 "
-    f"판정한 비율로 라벨 없이 감지할 수 있었고(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, "
-    f"CLEF는 증가 없음), 최근 문장 {DR['k']}개로 다시 학습하면 재현율이 {DR['gain']:.1f}%p 올랐다."
+    f"놓쳤다(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}). 이때 LLM을 호출한 문장 중 LLM만 ‘필요’로 "
+    f"판정한 비율이 늘어나(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, CLEF는 증가 없음) "
+    "라벨 없이 노후화의 징후로 쓸 수 있어 보이며, 2016년 토론 중 "
+    f"{DR['k']}문장의 라벨을 학습 세트에 추가하면 나머지 문장에서 재현율이 {DR['gain']:.1f}%p 올랐다."
 ))
 
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
@@ -502,9 +504,9 @@ body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
     "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 문장에 LLM을 호출한 경우와 같은 "
     f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
-    "기대된다. 다만 학습 시기와 다른 데이터에서는 분류기가 노후화되어 확인이 필요한 문장을 더 놓칠 수 있으며, 이는 LLM과 "
-    "분류기의 판정이 엇갈리는 비율로 감지하고 최근 데이터로 다시 학습하여 줄일 수 있었다. 또한 출처가 겹치는[3] 영어 두 "
-    "데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 다국어 데이터로 평가를 확장할 계획이다."
+    "기대된다. 다만 학습 시기와 다른 데이터에서는 분류기가 노후화되어 확인이 필요한 문장을 더 놓칠 수 있으며, LLM과 "
+    "분류기의 판정이 엇갈리는 비율이 그 징후가 될 수 있고 새 데이터 일부로 다시 학습하면 이를 줄일 수 있었다. 또한 CLEF 영어 "
+    "데이터가 ClaimBuster에서 구축된[3] 두 영어 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 다국어 데이터로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
@@ -558,8 +560,16 @@ def hangul_breaks(paragraph):
         ts[-1].text = _HANGUL_PAIR.sub("​", head) + sep + tail
 
 
+ALLOW_HYPHEN_BREAKS = True  # 신명조's wide Latin glyphs leave NN-PPI, dev-test stuck at line ends otherwise
+
+
 def no_break_hyphens(paragraph):
     """Replace '-' in text runs by Word's non-breaking hyphen so NN-PPI, RBF-SVM, dev-test never split across lines."""
+    if ALLOW_HYPHEN_BREAKS:  # a zero-width space after the hyphen marks a break opportunity: "NN-" / "PPI"
+        for t in paragraph._p.iter(qn("w:t")):
+            if t.text and "-" in t.text:
+                t.text = re.sub(r"(?<=[A-Za-z0-9])-(?=[A-Za-z])", "-​", t.text)
+        return
     for t in list(paragraph._p.iter(qn("w:t"))):
         if "-" not in (t.text or ""):
             continue
