@@ -322,9 +322,9 @@ p = body(doc, "여기서 (a, b, c)는 L에서 5겹 교차적합으로 얻은 d�
 p.paragraph_format.widow_control = False  # may split across the column so its bottom is not left empty
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
-    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a·d)/b와 비교하게 되므로, LLM 점수의 "
-    "판정 기준이 분류기의 결정값에 따라 달라진다. 반면 비교 대상인 교체형 캐스케이드(이하 교체형)는 같은 문장에 LLM을 "
-    "호출하되 d를 사용하지 않고, s를 L에서 정한 고정 임계값 t와 비교한다."), BODY_FONT, 9)
+    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a·d)/b와 비교하므로, 분류기가 "
+    "‘불필요’로 기울수록(d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 같은 문장에 "
+    "LLM을 호출하되 s를 L에서 정한 고정 임계값 t와 비교한다."), BODY_FONT, 9)
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실 험")
@@ -491,7 +491,7 @@ body(doc, (
 body(doc, (
     "한편 학습 데이터(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 "
     f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
-    f"놓쳤다(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장 중 LLM만 '필요'로 "
+    f"놓쳤다(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}). 이러한 분류기의 노후화는 LLM을 호출한 문장 중 LLM만 ‘필요’로 "
     f"판정한 비율로 라벨 없이 감지할 수 있었고(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, "
     f"CLEF는 증가 없음), 최근 문장 {DR['k']}개로 다시 학습하면 재현율이 {DR['gain']:.1f}%p 올랐다."
 ))
