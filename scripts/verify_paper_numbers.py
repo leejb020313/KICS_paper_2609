@@ -1,8 +1,8 @@
 """Check that every result number printed in the paper PDF matches the result files.
 
-The paper reports the full held-out evaluation (results/final_results_full.json); only the CLEF
+The paper reports the full held-out evaluation (results/paper/final_results_full.json); only the CLEF
 NN-PPI reproduction F1 is on the original
-paper's dev-test split (results/final_results.json).
+paper's dev-test split (results/paper/final_results.json).
 
 Usage: python scripts/verify_paper_numbers.py <paper.pdf>
 """
@@ -14,7 +14,7 @@ import sys
 
 import pymupdf
 
-RESULTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
+RESULTS = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "paper")
 R = json.load(open(os.path.join(RESULTS, "final_results_full.json"), encoding="utf-8"))
 R0 = json.load(open(os.path.join(RESULTS, "final_results.json"), encoding="utf-8"))
 S = json.load(open(os.path.join(RESULTS, "streaming_results_full.json"), encoding="utf-8"))
@@ -22,7 +22,7 @@ EX = json.load(open(os.path.join(RESULTS, "example_case.json"), encoding="utf-8"
 SR = json.load(open(os.path.join(RESULTS, "seed_robustness_full.json"), encoding="utf-8"))  # tests on each of the 5 runs
 CT = json.load(open(os.path.join(RESULTS, "cost_time.json"), encoding="utf-8"))  # LLM cost and time per 1,000 sentences
 C = CT["per_1000_sentences"]
-HK = json.load(open(os.path.join(RESULTS, "seed_robustness_full_haiku.json"), encoding="utf-8"))  # second LLM (Claude Haiku 4.5)
+HK = json.load(open(os.path.join(RESULTS, "seed_robustness_full_haiku45.json"), encoding="utf-8"))  # second LLM (Claude Haiku 4.5)
 hk = lambda d, k: f"{HK[d]['mean_acc'][k]:.3f}"
 EQ = json.load(open(os.path.join(RESULTS, "equivalence.json"), encoding="utf-8"))  # non-inferiority CIs
 eqlo = lambda llm, d, k: min(EQ[llm][d]["rows"][k]["ci_lo"])
@@ -72,14 +72,10 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("bootstrap", "부트스트랩(2,000회)"),
            ("reach rates (results)", f"CLEF {round(100 * SR['clef']['first_rate_reaching_best_full']['fuse'])}%, "
                                      f"ClaimBuster {round(100 * SR['cb']['first_rate_reaching_best_full']['fuse'])}%에서 이르렀다"),
-           ("replacement gap at 50%", f"CLEF {100 * SR['clef']['gap_to_best_full']['0.5']['replace']:+.2f}%p, "
-                                      f"ClaimBuster {100 * SR['cb']['gap_to_best_full']['0.5']['replace']:+.2f}%p"),
            ("cb raw - thr accuracy drop", pp('cb', 'sonnet_raw', 'sonnet_thr')),
            ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
            ("example bar", f"판정 기준이 {EX['example']['bar']:.2f}로 높아져"),
-           ("example counts", f"결합형만 옳게 판정한 문장은 {EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 "
-                              f"{EX['n_queried_replace_right_fuse_wrong']}개"),
            ("calib gain after 50%", "50% 이후 증가 " + ", ".join(
                f"{n} {100 * max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)):.2f}%p"
                for d, n in (("clef", "CLEF"), ("cb", "ClaimBuster")))),
@@ -87,11 +83,14 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("svm ms per sentence", f"문장당 {CT['svm_ms_per_sentence']:.0f} ms 포함"),
            ("cost sample size", f"테스트 배치 {CT['n_calls']}개"),
            ("cost per 1,000", f"전량 호출 ${C['1.0']['usd']:.3f}, 결합형 50% ${C['0.5']['usd']:.3f}였고"),
-           ("time per 1,000", f"시간은 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초였다"),
-           ("abstract cost/time cut", f"비용을 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간을 "
-                                      f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 절감하면서도"),
+           ("time per 1,000", f"시간은 {C['1.0']['seconds']:.0f}초, {C['0.5']['seconds']:.0f}초로 추정되었다"),
+           ("abstract cost/time (expected)", f"이를 통해 LLM 비용은 약 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 약 "
+                                             f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("haiku nnppi", f"NN-PPI를 적용한 전량 호출({hk('clef', 'sonnet_nnppi')}, {hk('cb', 'sonnet_nnppi')})보다 유의하게 높지 않았다"),
-           ("conclusion time cut", f"처리 시간을 {100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도를 유지")]
+           ("conclusion cost/time (expected)", f"이에 따라 LLM 비용은 약 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 약 "
+                                               f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
+           ("conclusion recall limitation", f"분류기의 재현율이 {m('cb', 'svm', 'rec1'):.2f}에 그쳐(CLEF {m('clef', 'svm', 'rec1'):.2f})"),
+           ("conclusion recall numbers", f"(재현율 {m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
 checks.append(("stronger full-call setting named", f"CLEF는 {BF_NAME[best['clef']]}, ClaimBuster는 {BF_NAME[best['cb']]}"))
@@ -114,6 +113,8 @@ directional = {
     "svm vs nnppi: CB n.s. in all 5 runs, CLEF higher": ns("cb", "svm_vs_gemma_nnppi_sel") == 0 and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
     "replacement first reaches all-call accuracy at 50%": all(SR[d]["first_rate_reaching_best_full"]["replace"] == 0.5 for d in ("clef", "cb")),
     "calib gap within 0.7pp": gap <= 0.007 + 1e-9,
+    "CB recall: fused50 below threshold-tuned all-call; SVM recall lower on CB than CLEF":
+        m("cb", "fuse_0.5", "rec1") < m("cb", "sonnet_thr", "rec1") and m("cb", "svm", "rec1") < m("clef", "svm", "rec1"),
     "haiku: stronger all-call = raw on both": all(HK[d]["best_full"] == "sonnet_raw" for d in ("clef", "cb")),
     "haiku: fuse50 vs all-call n.s. in all 5 runs": all(HK[d]["per_seed"]["fuse_0.5_vs_best_full(sonnet_raw)"]["n_sig"] == 0 for d in ("clef", "cb")),
     "fused50 non-inferior at NI in all 5 runs, both datasets": all(l > -NI / 100 for d in ("clef", "cb") for l in EQ["sonnet5"][d]["rows"]["fuse_0.5"]["ci_lo"]),

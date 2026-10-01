@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Build the KICS 2026 2-page draft (paper/cascade_kics_draft.docx).
 
-Every number is read from the full held-out evaluation, results/final_results_full.json
+Every number is read from the full held-out evaluation, results/paper/final_results_full.json
 (scripts/final_eval.py --full), except
-the CLEF NN-PPI reproduction F1, which is on the original paper's dev-test split (results/final_results.json);
+the CLEF NN-PPI reproduction F1, which is on the original paper's dev-test split (results/paper/final_results.json);
 Figure 1 is figures/method_diagram.pdf (TikZ) and Figure 2 figures/cascade_budget_full.png (scripts/make_figure.py --full). Math is LaTeX rendered to PNG
 by equations/render_equations.py.
 
@@ -28,18 +28,18 @@ from docx.shared import Cm, Pt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-R = json.load(open(os.path.join(ROOT, "results", "final_results_full.json"), encoding="utf-8"))
-R_ORIG = json.load(open(os.path.join(ROOT, "results", "final_results.json"), encoding="utf-8"))
-IMP = json.load(open(os.path.join(ROOT, "results", "streaming_results_full.json"), encoding="utf-8"))
+R = json.load(open(os.path.join(ROOT, "results", "paper", "final_results_full.json"), encoding="utf-8"))
+R_ORIG = json.load(open(os.path.join(ROOT, "results", "paper", "final_results.json"), encoding="utf-8"))
+IMP = json.load(open(os.path.join(ROOT, "results", "paper", "streaming_results_full.json"), encoding="utf-8"))
 # significance on each of the 5 runs, and the call rate at which each cascade reaches the all-call LLM (scripts/seed_robustness.py)
-SR = json.load(open(os.path.join(ROOT, "results", "seed_robustness_full.json"), encoding="utf-8"))
+SR = json.load(open(os.path.join(ROOT, "results", "paper", "seed_robustness_full.json"), encoding="utf-8"))
 # LLM cost (list price) and sequential processing time per 1,000 sentences: scripts/cost_time.py
-COST_RAW = json.load(open(os.path.join(ROOT, "results", "cost_time.json"), encoding="utf-8"))
+COST_RAW = json.load(open(os.path.join(ROOT, "results", "paper", "cost_time.json"), encoding="utf-8"))
 COST = COST_RAW["per_1000_sentences"]
-# second LLM (Claude Haiku 4.5, same prompt and batches; "sonnet_*" keys mean that LLM): scripts/seed_robustness.py, CWC_LLM=haiku
-HK = json.load(open(os.path.join(ROOT, "results", "seed_robustness_full_haiku.json"), encoding="utf-8"))
+# second LLM (Claude Haiku 4.5, same prompt and batches; "sonnet_*" keys mean that LLM): scripts/seed_robustness.py, CWC_LLM=haiku45
+HK = json.load(open(os.path.join(ROOT, "results", "paper", "seed_robustness_full_haiku45.json"), encoding="utf-8"))
 # non-inferiority: per-run 95% paired bootstrap CI of (cascade - stronger all-call setting): scripts/equivalence.py
-EQ = json.load(open(os.path.join(ROOT, "results", "equivalence.json"), encoding="utf-8"))
+EQ = json.load(open(os.path.join(ROOT, "results", "paper", "equivalence.json"), encoding="utf-8"))
 import math  # noqa: E402
 lo = lambda llm, d, k: min(EQ[llm][d]["rows"][k]["ci_lo"])  # worst lower bound over the 5 runs
 NI = math.ceil(-100 * min(lo("sonnet5", d, "fuse_0.5") for d in ("clef", "cb")) * 10) / 10  # margin printed, %p
@@ -237,14 +237,20 @@ MEAN_GAIN = {d: 100 * sum(EQ["sonnet5"][d]["rows"]["fuse_0.5"]["diff"]) / 5 for 
 assert all(v > 0 for v in MEAN_GAIN.values())  # "평균적으로 오히려 … 높았고"
 CUT_USD = 100 * (1 - COST["0.5"]["usd"] / COST["1.0"]["usd"])
 CUT_SEC = 100 * (1 - COST["0.5"]["seconds"] / COST["1.0"]["seconds"])
+rec = lambda d, k: R[d]["metrics"][k]["rec1"][0]
+REC = {"cb_svm": f"{rec(cb, 'svm'):.2f}", "cl_svm": f"{rec(cl, 'svm'):.2f}",
+       "cb_fuse": f"{rec(cb, 'fuse_0.5'):.2f}", "cb_thr": f"{rec(cb, 'sonnet_thr'):.2f}"}
+assert rec(cb, "fuse_0.5") < rec(cb, "sonnet_thr") and rec(cb, "svm") < rec(cl, "svm")  # "많이 놓쳤다", "그쳐"
+assert BF[cb] == "sonnet_raw" and rec(cb, "sonnet_thr") > rec(cb, "sonnet_raw")  # compared with the tuned (higher-recall) all-call
 body(doc, (
     "팩트체크 필요성 탐지(check-worthiness detection)는 수많은 문장 중 사실 확인이 필요한 문장을 골라내는 기술이다. "
     "대형 언어 모델(LLM)은 이 판정을 잘 수행하지만, 모든 문장에 LLM을 호출하면 비용과 처리 시간이 크게 늘어난다. "
     "본 논문에서는 가벼운 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 확신하지 못하는 문장에만 LLM을 호출하되 "
-    "분류기의 판정을 LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄여 LLM "
-    f"비용을 {CUT_USD:.0f}%, 처리 시간을 {CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도"
-    f"(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})를 유지하였다. 정확도는 평균적으로 오히려 "
-    f"{MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 통계적으로도 {NI:.1f}%p 넘게 낮지 않음을 확인하였다."
+    "분류기의 판정을 LLM의 판정으로 교체하지 않고 두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 "
+    f"문장에 LLM을 호출한 경우와 같은 수준의 정확도(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))})를 "
+    f"유지하였다. 정확도는 평균적으로 오히려 {MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고, 통계적으로도 {NI:.1f}%p 넘게 "
+    f"낮지 않음을 확인하였다. 이를 통해 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
+    "기대된다."
 ), size=9, indent=0.5, after=2.5)
 
 doc.add_section(0)
@@ -278,7 +284,7 @@ body(doc, (
     "NN-PPI[1]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
     "LabelFusion[3]은 인코더와 LLM의 출력을 결합하지만 모든 입력에 LLM을 호출한다. 넘긴 입력에서만 결합하는 캐스케이드는 "
     "일반 분류 과제에서 제안되었고[8], SRR[7]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
-    "모델의 답으로 교체한다. 반면 본 논문은 결합 가중치를 라벨로 학습하여 LLM과 라벨의 기준 차이를 반영한다."
+    "모델의 답으로 교체한다. 본 논문은 결합 가중치를 라벨로 학습해 LLM과 라벨의 기준 차이를 반영한다."
 ))
 subheading(doc, "2.2 전체 구조")
 body(doc, (
@@ -422,14 +428,14 @@ GAP = {d: f"{100 * SR[d]['gap_to_best_full']['0.5']['replace']:+.2f}" for d in (
 assert nsig(cb, "fuse_0.5_vs_fuse_1.0") == 5  # "ClaimBuster에서는 이 차이가 5회 모두 유의"
 mneg = lambda x: f"{x:.1f}".replace("-", "−")
 first = body(doc, (
-    "표 1은 각 방법의 테스트 정확도이다. LLM을 사용하지 않는 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 "
+    "표 1에서 LLM을 사용하지 않는 임베딩 SVM은 NN-PPI보다 CLEF에서 5회 중 "
     f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고, ClaimBuster에서는 5회 모두 유의차가 없었다."
 ))
 first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
 body(doc, (
     f"LLM 점수를 0.5 기준으로 쓰면 재현율이 CLEF {R[cl]['metrics']['sonnet_raw']['rec1'][0]:.2f}, ClaimBuster "
     f"{R[cb]['metrics']['sonnet_raw']['rec1'][0]:.2f}에 그쳤고(정밀도 {R[cl]['metrics']['sonnet_raw']['prec1'][0]:.2f}, "
-    f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}), 라벨로 임계값을 조정하면 재현율은 오르나 ClaimBuster 정확도는 오히려 "
+    f"{R[cb]['metrics']['sonnet_raw']['prec1'][0]:.2f}), 임계값을 조정하면 재현율은 오르나 ClaimBuster 정확도는 "
     f"{pp(cb,'sonnet_raw','sonnet_thr')}%p 낮아졌다. 이는 LLM의 기준이 라벨과 다름을 시사한다."
 ))
 body(doc, (
@@ -441,19 +447,19 @@ body(doc, (
     f"호출보다 5회 모두 유의하게 높았다({p_all([(d, 'fuse_0.5_vs_sonnet_nnppi') for d in (cl, cb)], False)})."
 ))
 body(doc, (
-    f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 측정한 1,000문장당 LLM 비용"
+    f"테스트 배치 {COST_RAW['n_calls']}개를 다시 호출하여 추정한 1,000문장당 LLM 비용"
     f"(Claude Sonnet 5 정가)은 전량 호출 ${COST['1.0']['usd']:.3f}, 결합형 50% ${COST['0.5']['usd']:.3f}였고, 순차 처리 "
-    f"시간은 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초였다(임베딩 SVM 문장당 "
+    f"시간은 {COST['1.0']['seconds']:.0f}초, {COST['0.5']['seconds']:.0f}초로 추정되었다(임베딩 SVM 문장당 "
     f"{COST_RAW['svm_ms_per_sentence']:.0f} ms 포함)."
 ))
 body(doc, (
     "그림 2와 같이 결합형은 LLM을 호출하는 모든 호출률에서 교체형보다 평균 정확도가 높았다. 전량 호출의 평균 정확도에 교체형은 "
-    f"호출률 50%에서 이르지만(CLEF {GAP[cl]}%p, ClaimBuster {GAP[cb]}%p), 결합형은 CLEF {REACH[cl]}%, ClaimBuster "
+    f"호출률 50%에서 이르지만, 결합형은 CLEF {REACH[cl]}%, ClaimBuster "
     f"{REACH[cb]}%에서 이르렀다."
 ))
 
-# worked example: results/example_case.json (scripts/example_case.py, seed-0 CLEF models, 50% calls)
-EX = json.load(open(os.path.join(ROOT, "results", "example_case.json"), encoding="utf-8"))
+# worked example: results/paper/example_case.json (scripts/example_case.py, seed-0 CLEF models, 50% calls)
+EX = json.load(open(os.path.join(ROOT, "results", "paper", "example_case.json"), encoding="utf-8"))
 E = EX["example"]
 neg = lambda x, n=2: f"{x:.{n}f}".replace("-", "−")
 assert E["d"] < 0 and EX["llm_threshold"] <= E["s"] < E["bar"]  # replacement says "needed", fused says "not needed"
@@ -461,8 +467,7 @@ body(doc, (
     "두 방법은 같은 문장에 LLM을 호출하므로 차이는 판정 방식에서만 생긴다. 예를 들어 CLEF의 "
     f"한 공약 문장(라벨: 불필요)은 LLM 점수가 s={E['s']:.2f}로, 임계값 t={eul(f'{EX['llm_threshold']:.2f}')} 사용하는 교체형은 "
     f"‘필요’로 잘못 판정하였으나, 결합형은 분류기의 결정값(d={neg(E['d'])})에 따라 판정 기준이 {ro(f'{E['bar']:.2f}')} 높아져 "
-    "옳게 판정하였다. CLEF 1회차에서 LLM을 호출한 절반 중 결합형만 옳게 판정한 문장은 "
-    f"{EX['n_queried_fuse_right_replace_wrong']}개, 교체형만 옳게 판정한 문장은 {EX['n_queried_replace_right_fuse_wrong']}개였다."
+    "옳게 판정하였다."
 ))
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
@@ -486,10 +491,12 @@ figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
-    f"결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄여 LLM 비용을 {CUT_USD:.0f}%, 처리 시간을 "
-    f"{CUT_SEC:.0f}% 절감하면서도 모든 문장에 LLM을 호출한 경우와 같은 수준의 정확도를 유지하였으며, 같은 호출률에서 LLM의 "
-    "판정으로 교체하는 방식은 ClaimBuster에서 이를 보장하지 못하였다. 다만 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, "
-    "향후에는 다국어 데이터로 평가를 확장할 계획이다."
+    "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 문장에 LLM을 호출한 경우와 같은 "
+    f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 기대된다. 다만 학습 데이터"
+    f"(2012년 토론)와 시기가 다른 ClaimBuster 테스트(2016년 토론)에서는 분류기의 재현율이 {REC['cb_svm']}에 그쳐"
+    f"(CLEF {REC['cl_svm']}), 제안 방법도 확인이 필요한 문장을 임계값을 조정한 LLM 전량 호출보다 많이 놓쳤다(재현율 {REC['cb_fuse']} 대 "
+    f"{REC['cb_thr']}). 또한 출처가 겹치는[5] 영어 두 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습과 "
+    "다국어 데이터로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
