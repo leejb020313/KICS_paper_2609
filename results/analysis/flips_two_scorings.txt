@@ -1,0 +1,38 @@
+﻿===== clef
+  Sonnet Sept    best all-call (sonnet_thr) 0.915
+     10%  replace broke   15.1 fixed   60.0 net  +44.9 acc 0.886 | fuse    broke   12.7 fixed   60.9 net  +48.2 acc 0.888
+     20%  replace broke   29.1 fixed  101.0 net  +71.8 acc 0.902 | fuse    broke   21.8 fixed  100.7 net  +78.9 acc 0.906
+     30%  replace broke   41.6 fixed  128.1 net  +86.4 acc 0.910 | fuse    broke   25.6 fixed  121.6 net  +96.0 acc 0.916
+     50%  replace broke   59.2 fixed  153.7 net  +94.5 acc 0.915 | fuse    broke   27.4 fixed  133.5 net +106.1 acc 0.922
+    100%  replace broke   68.8 fixed  163.8 net  +95.0 acc 0.915 | fuse    broke   27.4 fixed  134.6 net +107.2 acc 0.923
+  Sonnet Oct-04  best all-call (sonnet_thr) 0.910
+     10%  replace broke   15.9 fixed   60.0 net  +44.2 acc 0.885 | fuse    broke   11.2 fixed   60.8 net  +49.6 acc 0.889
+     20%  replace broke   29.2 fixed  101.4 net  +72.2 acc 0.902 | fuse    broke   19.1 fixed   99.3 net  +80.2 acc 0.907
+     30%  replace broke   41.3 fixed  128.4 net  +87.1 acc 0.911 | fuse    broke   22.8 fixed  120.8 net  +98.0 acc 0.917
+     50%  replace broke   63.2 fixed  153.8 net  +90.7 acc 0.913 | fuse    broke   26.5 fixed  136.1 net +109.5 acc 0.924
+    100%  replace broke   78.5 fixed  163.7 net  +85.2 acc 0.910 | fuse    broke   27.6 fixed  137.3 net +109.7 acc 0.924
+  Haiku          best all-call (sonnet_raw) 0.934
+     10%  replace broke   14.8 fixed   61.2 net  +46.4 acc 0.887 | fuse    broke   12.4 fixed   60.5 net  +48.1 acc 0.888
+     20%  replace broke   27.7 fixed  104.1 net  +76.4 acc 0.904 | fuse    broke   20.0 fixed  102.4 net  +82.3 acc 0.908
+     30%  replace broke   39.6 fixed  134.4 net  +94.8 acc 0.915 | fuse    broke   25.0 fixed  128.9 net +103.9 acc 0.921
+     50%  replace broke   61.6 fixed  165.3 net +103.7 acc 0.921 | fuse    broke   30.1 fixed  149.2 net +119.1 acc 0.930
+    100%  replace broke   82.4 fixed  182.6 net +100.2 acc 0.918 | fuse    broke   30.8 fixed  154.0 net +123.2 acc 0.932
+===== cb
+  Sonnet Sept    best all-call (sonnet_raw) 0.835
+     10%  replace broke   41.0 fixed   86.8 net  +45.8 acc 0.805 | fuse    broke   35.5 fixed   88.3 net  +52.8 acc 0.808
+     20%  replace broke   84.6 fixed  156.1 net  +71.6 acc 0.814 | fuse    broke   71.1 fixed  158.5 net  +87.4 acc 0.820
+     30%  replace broke  124.3 fixed  216.5 net  +92.3 acc 0.822 | fuse    broke   96.2 fixed  212.8 net +116.6 acc 0.831
+     50%  replace broke  188.5 fixed  305.6 net +117.2 acc 0.831 | fuse    broke  119.4 fixed  276.6 net +157.2 acc 0.846
+    100%  replace broke  270.6 fixed  376.1 net +105.5 acc 0.827 | fuse    broke  129.4 fixed  305.1 net +175.7 acc 0.852
+  Sonnet Oct-04  best all-call (sonnet_thr) 0.835
+     10%  replace broke   40.4 fixed   89.1 net  +48.8 acc 0.806 | fuse    broke   33.1 fixed   89.6 net  +56.5 acc 0.809
+     20%  replace broke   81.3 fixed  162.1 net  +80.8 acc 0.818 | fuse    broke   64.3 fixed  160.2 net  +95.9 acc 0.823
+     30%  replace broke  117.8 fixed  226.1 net +108.3 acc 0.828 | fuse    broke   81.3 fixed  211.4 net +130.1 acc 0.836
+     50%  replace broke  176.7 fixed  322.4 net +145.7 acc 0.841 | fuse    broke   96.8 fixed  275.2 net +178.5 acc 0.853
+    100%  replace broke  266.7 fixed  395.1 net +128.4 acc 0.835 | fuse    broke  103.8 fixed  296.7 net +192.9 acc 0.859
+  Haiku          best all-call (sonnet_raw) 0.849
+     10%  replace broke   33.9 fixed   89.5 net  +55.6 acc 0.809 | fuse    broke   33.0 fixed   88.5 net  +55.6 acc 0.809
+     20%  replace broke   66.4 fixed  159.1 net  +92.7 acc 0.822 | fuse    broke   62.2 fixed  154.8 net  +92.6 acc 0.822
+     30%  replace broke   99.3 fixed  218.0 net +118.6 acc 0.832 | fuse    broke   87.0 fixed  208.7 net +121.8 acc 0.833
+     50%  replace broke  158.3 fixed  307.2 net +149.0 acc 0.843 | fuse    broke  122.7 fixed  284.4 net +161.7 acc 0.847
+    100%  replace broke  229.5 fixed  378.0 net +148.5 acc 0.842 | fuse    broke  155.7 fixed  329.8 net +174.1 acc 0.852
