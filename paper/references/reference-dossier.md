@@ -8,7 +8,49 @@
 - 원문 PDF에서 찾은 인용문 27/27건 (유료 원문 0건은 공개 초록으로 확인)
 - 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
 
-## [1] P. Amatya, Venktesh V, and V. Setty, "Calibrating Small Language Models for Claim Check-Worthiness Detection," arXiv:2608.30731, 2026.
+## [1] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276-286, 2024.
+
+- 식별자: https://ceur-ws.org/Vol-3740/paper-24.pdf · 공개일 2024 · CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)
+- 공식 저자: Maram Hasanain, Reem Suwaileh, Sanne Weering, Chengkai Li, Tommaso Caselli, Wajdi Zaghouani, Alberto Barrón-Cedeño, Preslav Nakov, Firoj Alam
+- 원문 PDF: `pdfs/clef2024_task1_overview.pdf`
+
+**5a** (III. 실험 (데이터)) — 논문: CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)
+
+> "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches." (p. 1)
+
+- 근거 유형: direct
+
+**5b** (결론 (한계)) — 논문: 출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축
+
+> "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates." (p. 2)
+
+- 근거 유형: direct — Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set.
+
+**5c** (III. 실험 (데이터)) — 논문: 테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장
+
+> "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253" (p. 3)
+
+- 근거 유형: direct — Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only.
+
+**5d** (결론 (한계)) — 논문: 출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장
+
+> "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4]." (p. 2)
+
+- 근거 유형: direct
+
+**5e** (Ⅰ. 서론 1문단) — 논문: 온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며
+
+> "Due to the significant surge of disinformative content online the importance of improving the capabilities of fact-checking pipeline is paramount" (p. 6)
+
+- 근거 유형: direct
+
+**5f** (Ⅰ. 서론 1문단) — 논문: 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 팩트체크 필요성 탐지이다[5].
+
+> "the first part of the pipeline is finding claims that important to fact check" (p. 6)
+
+- 근거 유형: direct
+
+## [2] P. Amatya, Venktesh V, and V. Setty, "Calibrating Small Language Models for Claim Check-Worthiness Detection," arXiv:2608.30731, 2026.
 
 - 식별자: arXiv:2608.30731 (v2 확인) · 공개일 2026-08-31 · arXiv preprint (anonymised ARR code link: likely under ACL Rolling Review)
 - 공식 저자: Pratuat Amatya, V Venktesh, Vinay Setty
@@ -86,7 +128,7 @@
 
 - 근거 유형: direct — NN-PPI Table 1: ClaimBuster test 2,740 (725 CW / 2,015 NCW). Our 2016 set built from the Zenodo release has 2,745 (728 CW); the 5-sentence difference is unexplained (likely de-duplication or parsing).
 
-## [2] P. Amatya and V. Setty, "Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs," arXiv:2606.08605, 2026.
+## [3] P. Amatya and V. Setty, "Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs," arXiv:2606.08605, 2026.
 
 - 식별자: arXiv:2606.08605 (v1 확인) · 공개일 2026-06-07 · arXiv preprint
 - 공식 저자: Pratuat Amatya, Vinay Setty
@@ -98,67 +140,13 @@
 
 - 근거 유형: direct — Stated in the conclusion as 'Future work will focus on ...'.
 
-## [3] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276-286, 2024.
-
-- 식별자: https://ceur-ws.org/Vol-3740/paper-24.pdf · 공개일 2024 · CEUR Workshop Proceedings vol. 3740 (CLEF 2024 Working Notes)
-- 공식 저자: Maram Hasanain, Reem Suwaileh, Sanne Weering, Chengkai Li, Tommaso Caselli, Wajdi Zaghouani, Alberto Barrón-Cedeño, Preslav Nakov, Firoj Alam
-- 원문 PDF: `pdfs/clef2024_task1_overview.pdf`
-
-**5a** (III. 실험 (데이터)) — 논문: CLEF 2024 CheckThat! Task 1 영어 (테스트: dev·dev-test·공식 test)
-
-> "Task 1 involves determining whether a text item is check-worthy, with a special emphasis on COVID-19, political news, and political debates and speeches." (p. 1)
-
-- 근거 유형: direct
-
-**5b** (결론 (한계)) — 논문: 출처가 겹치는[5] 영어 두 데이터셋 — CLEF 영어 데이터는 ClaimBuster에서 구축
-
-> "As for the English subset, it was sourced from the annotated dataset described by Arslan et al. [4], and consists of transcribed sentences from candidates during the US Presidential election debates." (p. 2)
-
-- 근거 유형: direct — Consequence: the two benchmarks share a source corpus. Our measurement (2026-09-27, text match against the Zenodo ClaimBuster release): 2,405/2,406 CLEF calibration sentences are ClaimBuster sentences; only 3/318 CLEF dev-test sentences match ClaimBuster text (0 ids); 313 of the 2,745 ClaimBuster 2016 test sentences also occur in the CLEF calibration set. No evaluation leakage, because each dataset is calibrated only on its own calibration set.
-
-**5c** (III. 실험 (데이터)) — 논문: 테스트 = dev 1,032 + dev-test 318 + 공식 test 341 = 1,691문장
-
-> "Dev 411 682 102 150 238 794 704 4,296 Dev-test 377 123 316 350 108 210 509 4,491 Test 218 392 397 603 88 253" (p. 3)
-
-- 근거 유형: direct — Table 1, columns Arabic/Dutch/English/Spanish (Yes, No). English: Dev 238+794=1,032; Dev-test 108+210=318; Test 88+253=341; total 1,691 = our test set. Calibration comes from Train only.
-
-**5d** (결론 (한계)) — 논문: 출처가 겹치는[5] 영어 두 데이터셋 — CLEF 테스트 문장은 ClaimBuster에 없던 새 문장
-
-> "The English test set was constructed by manually annotating transcribed sentences that did not appear in Arslan et al. [4]." (p. 2)
-
-- 근거 유형: direct
-
-**5e** (Ⅰ. 서론 1문단) — 논문: 온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며
-
-> "Due to the significant surge of disinformative content online the importance of improving the capabilities of fact-checking pipeline is paramount" (p. 6)
-
-- 근거 유형: direct
-
-**5f** (Ⅰ. 서론 1문단) — 논문: 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 팩트체크 필요성 탐지이다[5].
-
-> "the first part of the pipeline is finding claims that important to fact check" (p. 6)
-
-- 근거 유형: direct
-
-## [4] F. Arslan et al., "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821-829, 2020.
-
-- 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
-- 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne
-- 원문 PDF: `pdfs/icwsm2020_claimbuster.pdf`
-
-**6a** (III. 실험 (데이터)) — 논문: ClaimBuster (미국 대선 토론 문장)
-
-> "we present the ClaimBuster dataset of 23,533 statements extracted from all U.S. general election presidential debates and annotated by human coders" (p. 1)
-
-- 근거 유형: direct — We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501.
-
-## [5] Z. Wang et al., "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference," arXiv:2609.07786, 2026.
+## [4] Z. Wang et al., "Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference," arXiv:2609.07786, 2026.
 
 - 식별자: arXiv:2609.07786 (v1 확인) · 공개일 2026-09-07 · arXiv preprint
 - 공식 저자: Zheyuan Wang, Siyu Li, Peiqiao Song, Sijia Chen, Qianqian Song, Qian Liu
 - 원문 PDF: `pdfs/2609.07786.pdf`
 
-**7a** (Ⅰ. 서론 2문단) — 논문: 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다[7].
+**7a** (Ⅰ. 서론 2문단) — 논문: 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 있다. (2026-10-04 지도교수 ver.2에서 이 문장의 중복 인용 표시가 빠지고, 앞 문장의 [4]가 같은 출처를 가리킴)
 
 > "it is harmful when the large model replaces a correct answer with an incorrect one" (p. 1)
 
@@ -182,7 +170,7 @@
 
 - 근거 유형: direct — Abstract. Replacement of the escalated answer: claim 7c (Algorithm 1, 'return Mℓ(x)').
 
-## [6] Y. Zhang et al., "Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration," arXiv:2609.11446, 2026.
+## [5] Y. Zhang et al., "Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration," arXiv:2609.11446, 2026.
 
 - 식별자: arXiv:2609.11446 (v1 확인) · 공개일 2026-09-10 · arXiv preprint; comment: 'Under review'
 - 공식 저자: Yilin Zhang, Han Jiang, Cai Xu, Ying Liu, Wei Zhao
@@ -205,6 +193,18 @@
 > "This sign test is performed once on the calibration set and introduces no learned decision network." (p. 4)
 
 - 근거 유형: inference — CAUC fuses standardized, temperature-calibrated logits weighted by each model's calibrated confidence (Eq. 6: z_fuse = (p_s q_s + p_l q_l)/(p_s + p_l)) and enables fusion only if a calibration-set sign test is positive. No fusion coefficient is fitted to labels. Our Eq. (1) fits (a, b, c) by logistic regression on labelled calibration data, so the fused score can re-weight an LLM whose decision criterion differs from the labels. The 'difference' sentence is our characterization based on these passages.
+
+## [6] F. Arslan et al., "A Benchmark Dataset of Check-Worthy Factual Claims," in Proc. ICWSM, vol. 14, pp. 821-829, 2020.
+
+- 식별자: DOI 10.1609/icwsm.v14i1.7346 · 공개일 2020-05-26 · Proc. Int. AAAI Conf. Web and Social Media (ICWSM), vol. 14, pp. 821-829 (Crossref)
+- 공식 저자: Fatma Arslan, Naeemul Hassan, Chengkai Li, Mark Tremayne
+- 원문 PDF: `pdfs/icwsm2020_claimbuster.pdf`
+
+**6a** (III. 실험 (데이터)) — 논문: ClaimBuster (미국 대선 토론 문장)
+
+> "we present the ClaimBuster dataset of 23,533 statements extracted from all U.S. general election presidential debates and annotated by human coders" (p. 1)
+
+- 근거 유형: direct — We use the Zenodo release record 3836810 (the paper links an earlier version, 10.5281/zenodo.3609356); 23,533 = groundtruth 1,032 + crowdsourced 22,501.
 
 ## 검토했으나 인용하지 않은 논문
 

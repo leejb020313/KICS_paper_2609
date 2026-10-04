@@ -33,7 +33,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from cwcascade.data import DATASETS, PAPER, RESULTS, Split, best_threshold, load_frontier, load_gemma  # noqa: E402
 from cwcascade.nnppi import nn_ppi  # noqa: E402
 
-SEEDS = 5
+SEEDS = int(os.environ.get("CWC_SEEDS", 100))  # learning-set subsamples (runs); seeds 0-4 = the earlier 5-run version
 BUDGETS = [0, .05, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1.0]
 NNPPI_KS = (3, 5, 10)
 BOOT = 2000
@@ -74,6 +74,26 @@ def select_nnppi_k(c, seed=0):
 
 
 def evaluate(name, full=False):
+    """Evaluate one dataset; with $CWC_CACHE set, reuse (or store) the result in that folder so the scripts that
+    re-evaluate (seed_robustness.py, equivalence.py) do not refit the 100 runs again. Key: LLM, dataset, split, runs."""
+    cache = os.environ.get("CWC_CACHE")
+    if cache:
+        import pickle
+        f = os.path.join(cache, f"{os.environ.get('CWC_LLM', 'sonnet5')}_{name}_{'full' if full else 'orig'}_{SEEDS}.pkl")
+        if os.path.exists(f):
+            with open(f, 'rb') as fh:
+                LAST_PREDS[name], LAST_RESULT[name] = pickle.load(fh)
+            report(name, LAST_RESULT[name])
+            return LAST_RESULT[name]
+        result = _evaluate(name, full)
+        os.makedirs(cache, exist_ok=True)
+        with open(f, 'wb') as fh:
+            pickle.dump((LAST_PREDS[name], result), fh)
+        return result
+    return _evaluate(name, full)
+
+
+def _evaluate(name, full=False):
     test, calib, test_items = load_frontier(name, full)
     gemma_test_s, gemma_cal = load_gemma(name, test_items)
     y = test.y
@@ -92,6 +112,8 @@ def evaluate(name, full=False):
     rho_sel, calib_curve, sonnet_k = [], {}, []
 
     for seed in range(SEEDS):
+        if seed and seed % 10 == 0:
+            print(f"  [{name}] run {seed}/{SEEDS}", file=sys.stderr, flush=True)
         idx = np.random.default_rng(seed).permutation(len(calib.y))[:int(0.8 * len(calib.y))]
         Xs, ys, ss = calib.X[idx], calib.y[idx], calib.s[idx]
 

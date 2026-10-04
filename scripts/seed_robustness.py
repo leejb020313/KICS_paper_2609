@@ -82,9 +82,9 @@ def main():
         for b, g in r["gap_to_best_full"].items():
             print(f"  {b:>8.0%}   {100 * g['fuse']:+6.2f}pp     {100 * g['replace']:+6.2f}pp")
         print(f"  first call rate reaching all-call accuracy: {r['first_rate_reaching_best_full']}")
-        print("  claim                                   p per seed (0..4)                    #sig  same sign")
+        print("  claim                                   p per seed                           #sig  same sign")
         for c, v in r["per_seed"].items():
-            print(f"  {c:38s} " + " ".join(f"{p:.3f}" for p in v["p"]) + f"   {v['n_sig']}/5   {v['same_sign']}"
+            print(f"  {c:38s} " + " ".join(f"{p:.3f}" for p in v["p"]) + f"   {v['n_sig']}/{fe.SEEDS}   {v['same_sign']}"
                   + "   diffs(pp) " + " ".join(f"{100 * d:+.1f}" for d in v["diff"]))
 
 

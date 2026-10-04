@@ -1,0 +1,172 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 1270.13it/s]
+  [cb] run 10/100
+  [cb] run 20/100
+  [cb] run 30/100
+  [cb] run 40/100
+  [cb] run 50/100
+  [cb] run 60/100
+  [cb] run 70/100
+  [cb] run 80/100
+  [cb] run 90/100
+
+===== cb: test n=2745, frontier-scored calib n=1314, seeds=100
+  calib OOF curve: {'sonnet_thr_oof': 0.838, 'svm_oof': 0.775, 'fuse_0': 0.775, 'fuse_0.05': 0.789, 'fuse_0.1': 0.799, 'fuse_0.2': 0.815, 'fuse_0.3': 0.826, 'fuse_0.4': 0.833, 'fuse_0.5': 0.837, 'fuse_0.6': 0.839, 'fuse_0.7': 0.84, 'fuse_0.8': 0.84, 'fuse_0.9': 0.84, 'fuse_1.0': 0.84}
+  NN-PPI k selected on calib: k=10 (tune acc {3: 0.7772151898734178, 5: 0.7620253164556962, 10: 0.779746835443038}); rho selected per seed: [1.0, 1.0, 1.0, 1.0, 1.0, 0.6, 0.7, 0.4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 1.0, 0.3, 1.0, 1.0, 1.0, 1.0, 1.0, 0.6, 1.0, 0.4, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 0.4, 1.0, 1.0, 1.0, 0.7, 1.0, 1.0, 1.0, 1.0, 0.5, 0.4, 0.6, 1.0, 0.4, 0.7, 1.0, 1.0, 1.0, 1.0, 1.0, 0.7, 1.0, 0.7, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 1.0, 1.0, 0.6, 1.0, 0.5, 1.0, 1.0, 0.4, 0.6, 1.0, 1.0, 0.6, 0.5, 1.0, 1.0, 0.5, 1.0, 0.7, 0.6, 1.0, 0.5, 0.7, 1.0, 1.0, 0.7, 1.0, 1.0]
+  gemma_raw          acc=0.745¡¾0.000  wF1=0.753  F1c1=0.569
+  gemma_nnppi_k3     acc=0.752¡¾0.000  wF1=0.753  F1c1=0.540
+  gemma_nnppi_k5     acc=0.774¡¾0.000  wF1=0.773  F1c1=0.570
+  gemma_nnppi_k10    acc=0.785¡¾0.000  wF1=0.785  F1c1=0.593
+  gemma_nnppi_sel    acc=0.785¡¾0.000  wF1=0.785  F1c1=0.593
+  svm                acc=0.788¡¾0.005  wF1=0.787  F1c1=0.595
+  sonnet_raw         acc=0.835¡¾0.000  wF1=0.812  F1c1=0.574
+  sonnet_thr         acc=0.827¡¾0.012  wF1=0.834  F1c1=0.726
+  sonnet_nnppi       acc=0.825¡¾0.008  wF1=0.829  F1c1=0.695
+  fuse_sel           acc=0.850¡¾0.005  wF1=0.852  F1c1=0.729
+  budget   FUSE acc (¡¾sd)     REPLACE acc (¡¾sd)   NNPPI-cascade acc (¡¾sd)
+     0%    0.788¡¾0.005      0.788¡¾0.005      0.788¡¾0.005
+     5%    0.799¡¾0.004      0.798¡¾0.004      0.797¡¾0.004
+    10%    0.808¡¾0.004      0.805¡¾0.004      0.803¡¾0.004
+    20%    0.820¡¾0.004      0.814¡¾0.004      0.811¡¾0.005
+    30%    0.831¡¾0.003      0.822¡¾0.005      0.816¡¾0.005
+    40%    0.840¡¾0.003      0.828¡¾0.006      0.820¡¾0.006
+    50%    0.846¡¾0.002      0.831¡¾0.008      0.822¡¾0.006
+    60%    0.849¡¾0.002      0.833¡¾0.009      0.824¡¾0.006
+    70%    0.852¡¾0.002      0.833¡¾0.010      0.825¡¾0.007
+    80%    0.852¡¾0.002      0.829¡¾0.011      0.825¡¾0.008
+    90%    0.852¡¾0.002      0.827¡¾0.012      0.825¡¾0.008
+   100%    0.852¡¾0.002      0.827¡¾0.012      0.825¡¾0.008
+  flips on SVM-confident half (seed 0): {'replace': {'broke': 94, 'fixed': 66}, 'fuse': {'broke': 9, 'fixed': 26}, 'nnppi': {'broke': 27, 'fixed': 32}}
+  fuse_0.2_vs_sonnet_thr           diff=+0.000 CI[-0.015,+0.016] McNemar p=1.0000
+  fuse_0.2_vs_replace_0.2          diff=+0.005 CI[+0.001,+0.009] McNemar p=0.0436
+  fuse_0.2_vs_nnppi_0.2            diff=+0.007 CI[+0.000,+0.013] McNemar p=0.0725
+  fuse_0.3_vs_sonnet_thr           diff=+0.010 CI[-0.004,+0.024] McNemar p=0.1704
+  fuse_0.3_vs_replace_0.3          diff=+0.009 CI[+0.004,+0.015] McNemar p=0.0022
+  fuse_0.3_vs_nnppi_0.3            diff=+0.014 CI[+0.006,+0.023] McNemar p=0.0011
+  fuse_0.4_vs_sonnet_thr           diff=+0.021 CI[+0.008,+0.034] McNemar p=0.0016
+  fuse_0.4_vs_replace_0.4          diff=+0.014 CI[+0.007,+0.021] McNemar p=0.0002
+  fuse_0.4_vs_nnppi_0.4            diff=+0.021 CI[+0.012,+0.030] McNemar p=0.0000
+  fuse_0.5_vs_sonnet_thr           diff=+0.026 CI[+0.013,+0.039] McNemar p=0.0000
+  fuse_0.5_vs_replace_0.5          diff=+0.016 CI[+0.008,+0.024] McNemar p=0.0003
+  fuse_0.5_vs_nnppi_0.5            diff=+0.025 CI[+0.015,+0.035] McNemar p=0.0000
+  fuse_1.0_vs_sonnet_thr           diff=+0.032 CI[+0.021,+0.044] McNemar p=0.0000
+  fuse_1.0_vs_replace_1.0          diff=+0.032 CI[+0.021,+0.044] McNemar p=0.0000
+  fuse_1.0_vs_nnppi_1.0            diff=+0.029 CI[+0.018,+0.041] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed0       diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0060
+  fuse_0.5_vs_fuse_1.0_seed1       diff=-0.005 CI[-0.009,-0.001] McNemar p=0.0351
+  fuse_0.5_vs_fuse_1.0_seed2       diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0014
+  fuse_0.5_vs_fuse_1.0_seed3       diff=-0.006 CI[-0.009,-0.003] McNemar p=0.0015
+  fuse_0.5_vs_fuse_1.0_seed4       diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed5       diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0046
+  fuse_0.5_vs_fuse_1.0_seed6       diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0137
+  fuse_0.5_vs_fuse_1.0_seed7       diff=-0.006 CI[-0.010,-0.003] McNemar p=0.0023
+  fuse_0.5_vs_fuse_1.0_seed8       diff=-0.007 CI[-0.011,-0.002] McNemar p=0.0079
+  fuse_0.5_vs_fuse_1.0_seed9       diff=-0.010 CI[-0.015,-0.006] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed10      diff=-0.008 CI[-0.012,-0.004] McNemar p=0.0003
+  fuse_0.5_vs_fuse_1.0_seed11      diff=-0.006 CI[-0.010,-0.001] McNemar p=0.0139
+  fuse_0.5_vs_fuse_1.0_seed12      diff=-0.008 CI[-0.012,-0.003] McNemar p=0.0015
+  fuse_0.5_vs_fuse_1.0_seed13      diff=-0.005 CI[-0.010,-0.001] McNemar p=0.0237
+  fuse_0.5_vs_fuse_1.0_seed14      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0009
+  fuse_0.5_vs_fuse_1.0_seed15      diff=-0.006 CI[-0.010,-0.001] McNemar p=0.0139
+  fuse_0.5_vs_fuse_1.0_seed16      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0034
+  fuse_0.5_vs_fuse_1.0_seed17      diff=-0.009 CI[-0.015,-0.005] McNemar p=0.0002
+  fuse_0.5_vs_fuse_1.0_seed18      diff=-0.009 CI[-0.013,-0.005] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed19      diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0060
+  fuse_0.5_vs_fuse_1.0_seed20      diff=-0.004 CI[-0.008,+0.001] McNemar p=0.1742
+  fuse_0.5_vs_fuse_1.0_seed21      diff=-0.007 CI[-0.011,-0.001] McNemar p=0.0133
+  fuse_0.5_vs_fuse_1.0_seed22      diff=-0.005 CI[-0.010,-0.001] McNemar p=0.0201
+  fuse_0.5_vs_fuse_1.0_seed23      diff=-0.007 CI[-0.012,-0.002] McNemar p=0.0055
+  fuse_0.5_vs_fuse_1.0_seed24      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0022
+  fuse_0.5_vs_fuse_1.0_seed25      diff=-0.008 CI[-0.012,-0.004] McNemar p=0.0003
+  fuse_0.5_vs_fuse_1.0_seed26      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed27      diff=-0.006 CI[-0.010,-0.003] McNemar p=0.0015
+  fuse_0.5_vs_fuse_1.0_seed28      diff=-0.007 CI[-0.012,-0.002] McNemar p=0.0079
+  fuse_0.5_vs_fuse_1.0_seed29      diff=-0.005 CI[-0.010,-0.001] McNemar p=0.0201
+  fuse_0.5_vs_fuse_1.0_seed30      diff=-0.010 CI[-0.016,-0.005] McNemar p=0.0002
+  fuse_0.5_vs_fuse_1.0_seed31      diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0115
+  fuse_0.5_vs_fuse_1.0_seed32      diff=-0.004 CI[-0.008,-0.000] McNemar p=0.0501
+  fuse_0.5_vs_fuse_1.0_seed33      diff=-0.005 CI[-0.009,-0.002] McNemar p=0.0059
+  fuse_0.5_vs_fuse_1.0_seed34      diff=-0.006 CI[-0.010,-0.001] McNemar p=0.0166
+  fuse_0.5_vs_fuse_1.0_seed35      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0005
+  fuse_0.5_vs_fuse_1.0_seed36      diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0095
+  fuse_0.5_vs_fuse_1.0_seed37      diff=-0.004 CI[-0.008,-0.000] McNemar p=0.0522
+  fuse_0.5_vs_fuse_1.0_seed38      diff=-0.006 CI[-0.010,-0.001] McNemar p=0.0166
+  fuse_0.5_vs_fuse_1.0_seed39      diff=-0.008 CI[-0.013,-0.004] McNemar p=0.0006
+  fuse_0.5_vs_fuse_1.0_seed40      diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0115
+  fuse_0.5_vs_fuse_1.0_seed41      diff=-0.005 CI[-0.010,-0.000] McNemar p=0.0444
+  fuse_0.5_vs_fuse_1.0_seed42      diff=-0.008 CI[-0.012,-0.003] McNemar p=0.0011
+  fuse_0.5_vs_fuse_1.0_seed43      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed44      diff=-0.005 CI[-0.010,-0.000] McNemar p=0.0444
+  fuse_0.5_vs_fuse_1.0_seed45      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0013
+  fuse_0.5_vs_fuse_1.0_seed46      diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0113
+  fuse_0.5_vs_fuse_1.0_seed47      diff=-0.006 CI[-0.011,-0.001] McNemar p=0.0137
+  fuse_0.5_vs_fuse_1.0_seed48      diff=-0.006 CI[-0.011,-0.002] McNemar p=0.0137
+  fuse_0.5_vs_fuse_1.0_seed49      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0008
+  fuse_0.5_vs_fuse_1.0_seed50      diff=-0.008 CI[-0.012,-0.004] McNemar p=0.0003
+  fuse_0.5_vs_fuse_1.0_seed51      diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0060
+  fuse_0.5_vs_fuse_1.0_seed52      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed53      diff=-0.005 CI[-0.009,-0.002] McNemar p=0.0094
+  fuse_0.5_vs_fuse_1.0_seed54      diff=-0.006 CI[-0.011,-0.001] McNemar p=0.0328
+  fuse_0.5_vs_fuse_1.0_seed55      diff=-0.008 CI[-0.013,-0.004] McNemar p=0.0005
+  fuse_0.5_vs_fuse_1.0_seed56      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0043
+  fuse_0.5_vs_fuse_1.0_seed57      diff=-0.007 CI[-0.011,-0.002] McNemar p=0.0096
+  fuse_0.5_vs_fuse_1.0_seed58      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0026
+  fuse_0.5_vs_fuse_1.0_seed59      diff=-0.009 CI[-0.015,-0.004] McNemar p=0.0005
+  fuse_0.5_vs_fuse_1.0_seed60      diff=-0.009 CI[-0.013,-0.004] McNemar p=0.0005
+  fuse_0.5_vs_fuse_1.0_seed61      diff=-0.009 CI[-0.013,-0.005] McNemar p=0.0002
+  fuse_0.5_vs_fuse_1.0_seed62      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0012
+  fuse_0.5_vs_fuse_1.0_seed63      diff=-0.006 CI[-0.009,-0.003] McNemar p=0.0025
+  fuse_0.5_vs_fuse_1.0_seed64      diff=-0.005 CI[-0.009,-0.001] McNemar p=0.0125
+  fuse_0.5_vs_fuse_1.0_seed65      diff=-0.008 CI[-0.012,-0.003] McNemar p=0.0019
+  fuse_0.5_vs_fuse_1.0_seed66      diff=-0.005 CI[-0.009,-0.001] McNemar p=0.0241
+  fuse_0.5_vs_fuse_1.0_seed67      diff=-0.008 CI[-0.013,-0.004] McNemar p=0.0013
+  fuse_0.5_vs_fuse_1.0_seed68      diff=-0.007 CI[-0.012,-0.002] McNemar p=0.0094
+  fuse_0.5_vs_fuse_1.0_seed69      diff=-0.009 CI[-0.014,-0.005] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed70      diff=-0.003 CI[-0.007,+0.001] McNemar p=0.1755
+  fuse_0.5_vs_fuse_1.0_seed71      diff=-0.008 CI[-0.012,-0.003] McNemar p=0.0019
+  fuse_0.5_vs_fuse_1.0_seed72      diff=-0.010 CI[-0.015,-0.006] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed73      diff=-0.006 CI[-0.011,-0.001] McNemar p=0.0259
+  fuse_0.5_vs_fuse_1.0_seed74      diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0113
+  fuse_0.5_vs_fuse_1.0_seed75      diff=-0.003 CI[-0.007,+0.000] McNemar p=0.1360
+  fuse_0.5_vs_fuse_1.0_seed76      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0043
+  fuse_0.5_vs_fuse_1.0_seed77      diff=-0.007 CI[-0.011,-0.002] McNemar p=0.0051
+  fuse_0.5_vs_fuse_1.0_seed78      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0055
+  fuse_0.5_vs_fuse_1.0_seed79      diff=-0.005 CI[-0.010,-0.001] McNemar p=0.0167
+  fuse_0.5_vs_fuse_1.0_seed80      diff=-0.009 CI[-0.014,-0.004] McNemar p=0.0002
+  fuse_0.5_vs_fuse_1.0_seed81      diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0113
+  fuse_0.5_vs_fuse_1.0_seed82      diff=-0.006 CI[-0.011,-0.001] McNemar p=0.0166
+  fuse_0.5_vs_fuse_1.0_seed83      diff=-0.008 CI[-0.012,-0.004] McNemar p=0.0008
+  fuse_0.5_vs_fuse_1.0_seed84      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed85      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0026
+  fuse_0.5_vs_fuse_1.0_seed86      diff=-0.007 CI[-0.012,-0.003] McNemar p=0.0029
+  fuse_0.5_vs_fuse_1.0_seed87      diff=-0.006 CI[-0.010,-0.002] McNemar p=0.0090
+  fuse_0.5_vs_fuse_1.0_seed88      diff=-0.005 CI[-0.009,-0.001] McNemar p=0.0470
+  fuse_0.5_vs_fuse_1.0_seed89      diff=-0.009 CI[-0.013,-0.004] McNemar p=0.0005
+  fuse_0.5_vs_fuse_1.0_seed90      diff=-0.004 CI[-0.009,-0.000] McNemar p=0.0576
+  fuse_0.5_vs_fuse_1.0_seed91      diff=-0.010 CI[-0.014,-0.006] McNemar p=0.0000
+  fuse_0.5_vs_fuse_1.0_seed92      diff=-0.007 CI[-0.011,-0.003] McNemar p=0.0039
+  fuse_0.5_vs_fuse_1.0_seed93      diff=-0.005 CI[-0.009,-0.001] McNemar p=0.0135
+  fuse_0.5_vs_fuse_1.0_seed94      diff=-0.007 CI[-0.011,-0.002] McNemar p=0.0064
+  fuse_0.5_vs_fuse_1.0_seed95      diff=-0.008 CI[-0.013,-0.003] McNemar p=0.0013
+  fuse_0.5_vs_fuse_1.0_seed96      diff=-0.011 CI[-0.016,-0.005] McNemar p=0.0001
+  fuse_0.5_vs_fuse_1.0_seed97      diff=-0.008 CI[-0.013,-0.004] McNemar p=0.0004
+  fuse_0.5_vs_fuse_1.0_seed98      diff=-0.007 CI[-0.012,-0.002] McNemar p=0.0054
+  fuse_0.5_vs_fuse_1.0_seed99      diff=-0.008 CI[-0.012,-0.004] McNemar p=0.0005
+  fuse_0.5_vs_sonnet_nnppi         diff=+0.023 CI[+0.012,+0.035] McNemar p=0.0001
+  fuse_sel_vs_sonnet_thr           diff=+0.032 CI[+0.021,+0.044] McNemar p=0.0000
+  nnppi_0.5_vs_sonnet_nnppi        diff=-0.002 CI[-0.007,+0.004] McNemar p=0.6029
+  fuse_0.3_vs_sonnet_raw           diff=-0.005 CI[-0.020,+0.010] McNemar p=0.5496
+  fuse_0.3_vs_sonnet_nnppi         diff=+0.007 CI[-0.005,+0.020] McNemar p=0.3058
+  fuse_0.5_vs_sonnet_raw           diff=+0.011 CI[-0.004,+0.026] McNemar p=0.1791
+  svm_vs_gemma_nnppi_sel           diff=+0.003 CI[-0.014,+0.019] McNemar p=0.7915
+  svm_vs_best_gemma_nnppi          diff=+0.003 CI[-0.014,+0.019] McNemar p=0.7915
+  -- part cb: n=800 (pos 221)  svm=0.795  sonnet_thr=0.827  sonnet_nnppi=0.836  replace_0.5=0.833  nnppi_0.5=0.831  fuse_0.5=0.852  fuse_1.0=0.857
+     fuse_0.5_vs_sonnet_thr       diff=+0.034 CI[+0.011,+0.055] McNemar p=0.0040
+     fuse_0.5_vs_sonnet_nnppi     diff=+0.020 CI[+0.000,+0.039] McNemar p=0.0599
+     fuse_0.5_vs_nnppi_0.5        diff=+0.026 CI[+0.009,+0.044] McNemar p=0.0046
+     fuse_0.5_vs_replace_0.5      diff=+0.019 CI[+0.004,+0.034] McNemar p=0.0237
+  -- part cbrest: n=1945 (pos 507)  svm=0.786  sonnet_thr=0.827  sonnet_nnppi=0.821  replace_0.5=0.830  nnppi_0.5=0.819  fuse_0.5=0.843  fuse_1.0=0.850
+     fuse_0.5_vs_sonnet_thr       diff=+0.023 CI[+0.009,+0.037] McNemar p=0.0030
+     fuse_0.5_vs_sonnet_nnppi     diff=+0.024 CI[+0.010,+0.038] McNemar p=0.0009
+     fuse_0.5_vs_nnppi_0.5        diff=+0.024 CI[+0.012,+0.036] McNemar p=0.0001
+     fuse_0.5_vs_replace_0.5      diff=+0.015 CI[+0.005,+0.025] McNemar p=0.0060
