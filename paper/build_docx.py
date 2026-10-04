@@ -215,7 +215,7 @@ centered(doc, "저비용 분류기와 대형 언어 모델의 선택적 결합�
 centered(doc, "팩트체크 필요성 탐지", 13, True, after=0)
 # title block as in the peer KICS papers: authors with the corresponding author starred, affiliation, e-mails
 AUTHORS_KO, AUTHORS_EN = "이정빈, 노고산, 김은경", "Jeongbin Lee, Gosan Noh, Eunkyung Kim"  # as edited by the author in the uploaded docx
-AFFIL_KO, AFFIL_EN = "국립한밭대학교", "Hanbat National Univ."
+AFFIL_KO, AFFIL_EN = "국립한밭대학교", "Hanbat National University"
 EMAILS = "20221065@edu.hanbat.ac.kr, {gsnoh, ekim}@hanbat.ac.kr"
 centered(doc, AUTHORS_KO, 11, after=0).paragraph_format.space_before = Pt(7.6)
 centered(doc, AFFIL_KO, 11, after=0)
@@ -269,16 +269,16 @@ columns(doc, 2)
 heading(doc, "Ⅰ. 서 론")
 body(doc, (
     "온라인 허위 정보가 급증하면서 팩트체크의 중요성이 커졌으며, 그 첫 단계는 사실 확인이 필요한 주장을 찾아내는 "
-    "팩트체크 필요성 탐지이다[3]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. 대형 언어 모델(LLM)은 이 판정을 "
+    "팩트체크 필요성 탐지이다[1]. 이 단계는 들어오는 모든 문장을 판정해야 하므로 처리할 문장이 매우 많다. 대형 언어 모델(LLM)은 이 판정을 "
     "잘 수행하지만, 실제 팩트체크 서비스 운영사는 모든 문장에 대형 LLM을 호출하는 것이 운영 규모에서 감당하기 "
-    "어렵다고 보고하였다[1]. 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 "
-    "제시하였다[2]."
+    "어렵다고 보고하였다[2]. 같은 연구진은 소형 인코더가 확신하지 못하는 문장만 LLM에 넘기는 방식을 향후 과제로 "
+    "제시하였다[3]."
 ))
 body(doc, (
     "이처럼 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 "
-    "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
+    "넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[4]. 그러나 어떤 문장을 사실 확인이 필요하다고 볼지에 대한 LLM의 "
     "기준은 데이터셋의 라벨(사람이 붙인 정답)과 다를 수 있으며, 이 경우 교체는 분류기가 이미 맞힌 판정까지 틀리게 바꿀 수 "
-    "있다[5]. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
+    "있다. 본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, LLM의 판정으로 교체하지 않고 두 모델의 "
     "점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 결합 가중치는 라벨로 학습하므로 LLM의 "
     "기준과 라벨의 차이를 보정한다."
 ))
@@ -287,14 +287,14 @@ body(doc, (
 heading(doc, "Ⅱ. 본 론")
 subheading(doc, "2.1 선행 연구")
 body(doc, (
-    "NN-PPI[1]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
-    "넘긴 입력에서만 두 모델의 출력을 결합하는 캐스케이드는 일반 분류 과제에서 제안되었고[6], SRR[5]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
+    "NN-PPI[2]는 소형 LLM이 출력한 점수를, 라벨이 있는 보정 세트에서 의미적으로 가까운 이웃 문장들의 잔차로 보정한다. "
+    "넘긴 입력에서만 두 모델의 출력을 결합하는 캐스케이드는 일반 분류 과제에서 제안되었고[5], SRR[4]은 옳은 답을 뒤집는 손실까지 예측하여 넘길 입력을 고르지만 넘긴 입력은 큰 "
     "모델의 답으로 교체한다. 본 논문은 결합 가중치를 라벨로 학습해 LLM의 기준 차이를 반영한다."
 ))
 subheading(doc, "2.2 전체 구조")
 body(doc, (
-    "제안 방법(그림 1)에서는 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 가장 불확실한 문장, 즉 "
-    "결정값의 절댓값 |d(x)|가 가장 작은 문장부터 전체의 ρ(호출률)만큼 골라 LLM을 호출한다. 호출하지 않은 문장은 분류기의 "
+    "그림 1은 제안하는 결합형 캐스케이드의 전체 구조이다. 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 가장 불확실한 문장, 즉 "
+    "결정값의 절댓값 |d(x)|가 가장 작은 문장부터 전체의 ρ(호출률)만큼 골라(그림 1의 ‘Top-ρ uncertain?’) LLM을 호출한다. 호출하지 않은 문장은 분류기의 "
     "판정(d(x)>0)을 그대로 사용하고, 호출한 문장은 2.4절의 결합 판정으로 최종 판정한다."
 ))
 # figures/method_diagram.tex, compiled at its printed size (Tectonic) and inserted at that size
@@ -317,26 +317,26 @@ eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w / 2), WD_TAB_ALIGNMENT.CENTE
 eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w), WD_TAB_ALIGNMENT.RIGHT)
 eq.add_run("\t")
 add_math(eq.add_run(), "eq1")
-set_font(eq.add_run("\t(1)"), BODY_FONT, 9)
+set_font(eq.add_run(",\t(1)"), BODY_FONT, 9)
 p = body(doc, "여기서 (a, b, c)는 L에서 5겹 교차적합으로 얻은 d와 s로 학습한 로지스틱 회귀 계수, σ는 시그모이드 함수, ")
 p.paragraph_format.widow_control = False  # may split across the column so its bottom is not left empty
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
-    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a·d)/b와 비교하므로, 분류기가 "
-    "‘불필요’로 기울수록(d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 s를 "
-    "L에서 정한 고정 임계값 t와 비교한다."), BODY_FONT, 9)
+    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a×d)/b와 비교하므로, 분류기가 "
+    "‘불필요’로 기울수록(즉, d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 s를 "
+    "고정 임계값 t와 비교하며, t는 L에서 정확도가 가장 높은 값으로 정한다(표 1의 ‘임계값 조정’과 같은 t)."), BODY_FONT, 9)
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실 험")
 subheading(doc, "3.1 실험 환경")
 assert R[cl]["k_sel"] == R[cb]["k_sel"]  # the text says both datasets selected the same k
 body(doc, (
-    f"CLEF 2024 CheckThat! Task 1 영어 데이터[3]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
-    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. 또 다른 데이터셋인 ClaimBuster[4]는 2012년 토론 "
-    f"{R[cb]['n_calib_gemma']:,}문장을 학습 세트로, 2016년 토론 {R[cb]['n_test']:,}문장을 테스트로 사용하였다. NN-PPI는 원 논문과 같이 Gemma 3 4B로 "
+    f"CLEF 2024 CheckThat! Task 1 데이터[1]는 {R[cl]['n_calib_gemma']:,}문장을 학습 세트로, dev·dev-test·공식 test를 "
+    f"합친 {R[cl]['n_test']:,}문장을 테스트로 사용하였다. 또 다른 데이터셋인 ClaimBuster[6]는 2012년 토론 "
+    f"{R[cb]['n_calib_gemma']:,}문장을 학습 세트로, 2016년 토론 {R[cb]['n_test']:,}문장을 테스트로 사용하였다. NN-PPI는 원 논문[2]과 같이 Gemma 3 4B로 "
     "재현하였으며, 원 논문과 같은 분할에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
-    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 0.827, 0.760). LLM은 Claude Sonnet 5를 "
+    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 보고값 0.827, 0.760). LLM은 Claude Sonnet 5를 "
     "사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다."
 ))
 subheading(doc, "3.2 평가 방법")
@@ -376,11 +376,11 @@ def rule(tc, side, sz):
 
 
 rows = [
-    ("Gemma+NN-PPI [1]", "0%", cell(cl, "gemma_nnppi_sel"), cell(cb, "gemma_nnppi_sel")),
+    ("Gemma+NN-PPI [2]", "0%", cell(cl, "gemma_nnppi_sel"), cell(cb, "gemma_nnppi_sel")),
     ("임베딩 SVM", "0%", cell(cl, "svm"), cell(cb, "svm")),
     ("LLM 전량 호출", "100%", cell(cl, "sonnet_raw"), cell(cb, "sonnet_raw")),
     ("  + 임계값 조정", "100%", cell(cl, "sonnet_thr"), cell(cb, "sonnet_thr")),
-    ("  + NN-PPI [1]", "100%", cell(cl, "sonnet_nnppi"), cell(cb, "sonnet_nnppi")),
+    ("  + NN-PPI [2]", "100%", cell(cl, "sonnet_nnppi"), cell(cb, "sonnet_nnppi")),
     ("교체형 캐스케이드", "50%", cell(cl, "replace_0.5"), cell(cb, "replace_0.5")),
     ("결합형 캐스케이드 (제안)", "50%", cell(cl, "fuse_0.5"), cell(cb, "fuse_0.5")),
 ]
@@ -506,19 +506,19 @@ body(doc, (
     f"수준의 정확도를 유지하였으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
     "기대된다. 다만 학습 시기와 다른 ClaimBuster 테스트에서는 분류기가 확인이 필요한 문장을 더 놓쳤다. 이때 LLM과 "
     "분류기의 판정이 엇갈리는 비율이 늘어나 이를 징후로 활용할 가능성이 있으며, 같은 시기 문장 일부로 다시 학습하면 놓치는 문장이 다소 줄었다. 또한 CLEF 영어 "
-    "데이터가 ClaimBuster에서 구축된[3] 두 영어 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습을 검증하고 다국어 데이터로 평가를 확장할 계획이다."
+    "데이터가 ClaimBuster에서 구축된[1] 두 영어 데이터셋으로만 평가하였으므로, 향후에는 분류기의 주기적 재학습을 검증하고 다국어 데이터로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
 
 heading(doc, "참 고 문 헌")
 refs = [
-    "[1] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
-    "[2] P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
-    "[3] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276-286, 2024.",
-    "[4] F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821-829, 2020.",
-    "[5] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
-    "[6] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
+    "[1] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276-286, 2024.",
+    "[2] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
+    "[3] P. Amatya and V. Setty, \"Multilingual Fact-Checking at Scale: Fine-Tuned Compact Models vs LLMs,\" arXiv:2606.08605, 2026.",
+    "[4] Z. Wang et al., \"Signed Rescue Routing: Harm-Aware Cascades for Efficient LLM Inference,\" arXiv:2609.07786, 2026.",
+    "[5] Y. Zhang et al., \"Calibration-Aware Uncertainty Cascades for Efficient Heterogeneous Model Collaboration,\" arXiv:2609.11446, 2026.",
+    "[6] F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821-829, 2020.",
 ]
 for r in refs:
     ref = body(doc, r, size=9, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format

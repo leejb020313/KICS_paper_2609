@@ -25,7 +25,8 @@
     baseflow/.style={flow, draw=ink!55, dashed},
   ]
   \node[box]                       (svm)  {Embedding SVM\\[0.3mm]$d(x)$};
-  \node[gate, right=of svm]        (gate) {Uncertain?};
+  % routing step of Sec. 2.2: the call-rate fraction rho of sentences with the smallest |d(x)| go to the LLM
+  \node[gate, right=of svm]        (gate) {Top-$\rho$\\[-0.3mm]uncertain?};
   \node[box, right=of gate]        (keep) {SVM label\\[0.3mm]$d(x)>0$};
   \node[llm, below=4.2mm of gate]  (llm)  {LLM score\\[0.3mm]$s(x)$};
   \node[ours] at (llm -| svm)      (fuse) {Fused label (Eq.\,1)\\[0.3mm]$\sigma(ad+bs+c)\geq 0.5$};
