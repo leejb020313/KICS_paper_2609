@@ -26,3 +26,8 @@ differs from the labels" are therefore confounded with the scoring environment.
 5. Sonnet vs Haiku under identical scoring.
 The paper text is rewritten to these numbers. If fused@50% is on average below the stronger all-call setting, the
 abstract says so (accuracy cost of halving the calls), instead of "higher on average".
+
+## Addendum (after scoring, before any evaluation)
+- First pass hit the subscription session limit after 73 batches; the 133 limit replies were deleted and re-run after the reset.
+- 15 batches came back with ids renumbered 0-39 (cb_0760 in the first pass, 14 in the second); all re-run (originals kept in results/llm_scores/checks/sonnet5_clean_renumbered/). After 3 re-runs one learning-set batch (clefcal_1240) was still renumbered; its keys were mapped by position to ids 1240-1279 (positional correlation with the old scores 0.914 vs 0.949 for a correctly numbered batch).
+- Final: 206/206 batches, model claude-sonnet-5 on every call (scripts/check_clean_scores.py).

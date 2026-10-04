@@ -8,3 +8,6 @@ f=$(realpath "$1"); d=$(dirname "$f"); n=$(basename "${f%.txt}")
 cd "$(mktemp -d)" && claude -p "$(cat "$f")" --model claude-sonnet-5 --output-format json --restricted \
   --strict-mcp-config < /dev/null > "$d/$n.json" 2>&1
 python -c "import json,sys; print(json.load(open(sys.argv[1], encoding='utf-8'))['result'])" "$d/$n.json" > "$d/$n.out"
+# a usage-limit reply is not a score: remove it so the batch is re-run later
+grep -q "hit your session limit\|usage limit" "$d/$n.json" && { rm -f "$d/$n.json" "$d/$n.out"; echo "LIMIT $n"; exit 1; }
+exit 0
