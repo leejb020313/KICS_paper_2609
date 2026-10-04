@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1894.51it/s]
+
+== sonnet5_cli_default clef
+  fused_0.5@30       acc 0.916  F1 0.847
+  llm_all_acc        acc 0.915  F1 0.851
+  replace_acc@30     acc 0.910  F1 0.840
+  fused_acc@30       acc 0.909  F1 0.838
+  llm_all_f1         acc 0.876  F1 0.802
+  replace_f1@30      acc 0.896  F1 0.823
+  fused_f1@30        acc 0.900  F1 0.827
+  fused_0.5@50       acc 0.922  F1 0.858
+  replace_acc@50     acc 0.915  F1 0.850
+  fused_acc@50       acc 0.912  F1 0.846
+  replace_f1@50      acc 0.887  F1 0.815
+  fused_f1@50        acc 0.900  F1 0.831
+  rule acc @30%: fused - replace acc -0.17pp, fused higher in 43/100 runs
+  rule acc @30%: fused - replace f1  -0.20pp, fused higher in 47/100 runs
+  rule f1  @30%: fused - replace acc +0.32pp, fused higher in 67/100 runs
+  rule f1  @30%: fused - replace f1  +0.36pp, fused higher in 68/100 runs
+  rule acc @50%: fused - replace acc -0.31pp, fused higher in 41/100 runs
+  rule acc @50%: fused - replace f1  -0.46pp, fused higher in 39/100 runs
+  rule f1  @50%: fused - replace acc +1.33pp, fused higher in 92/100 runs
+  rule f1  @50%: fused - replace f1  +1.60pp, fused higher in 88/100 runs
+
+== sonnet5_cli_default cb
+  fused_0.5@30       acc 0.831  F1 0.684
+  llm_all_acc        acc 0.827  F1 0.726
+  replace_acc@30     acc 0.822  F1 0.681
+  fused_acc@30       acc 0.831  F1 0.683
+  llm_all_f1         acc 0.820  F1 0.721
+  replace_f1@30      acc 0.820  F1 0.681
+  fused_f1@30        acc 0.827  F1 0.684
+  fused_0.5@50       acc 0.845  F1 0.715
+  replace_acc@50     acc 0.831  F1 0.713
+  fused_acc@50       acc 0.845  F1 0.714
+  replace_f1@50      acc 0.827  F1 0.710
+  fused_f1@50        acc 0.840  F1 0.716
+  rule acc @30%: fused - replace acc +0.90pp, fused higher in 97/100 runs
+  rule acc @30%: fused - replace f1  +0.16pp, fused higher in 71/100 runs
+  rule f1  @30%: fused - replace acc +0.75pp, fused higher in 93/100 runs
+  rule f1  @30%: fused - replace f1  +0.31pp, fused higher in 85/100 runs
+  rule acc @50%: fused - replace acc +1.40pp, fused higher in 92/100 runs
+  rule acc @50%: fused - replace f1  +0.08pp, fused higher in 58/100 runs
+  rule f1  @50%: fused - replace acc +1.35pp, fused higher in 96/100 runs
+  rule f1  @50%: fused - replace f1  +0.58pp, fused higher in 89/100 runs
+saved C:\Users\leejb\.local\share\openresearch\worktrees\44fa63ca-4051-4efc-8dd0-a644af64ad29\chat_d6161e43-a6a7-49de-926c-0146c8b70df1\results\analysis\knn_fusion_sonnet5_cli_default.json

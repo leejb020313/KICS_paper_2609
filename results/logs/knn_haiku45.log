@@ -1,0 +1,47 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1262.66it/s]
+
+== haiku45 clef
+  fused_0.5@30       acc 0.920  F1 0.851
+  llm_all_acc        acc 0.918  F1 0.855
+  replace_acc@30     acc 0.915  F1 0.847
+  fused_acc@30       acc 0.918  F1 0.850
+  llm_all_f1         acc 0.909  F1 0.844
+  replace_f1@30      acc 0.911  F1 0.842
+  fused_f1@30        acc 0.912  F1 0.843
+  fused_0.5@50       acc 0.930  F1 0.868
+  replace_acc@50     acc 0.921  F1 0.858
+  fused_acc@50       acc 0.926  F1 0.863
+  replace_f1@50      acc 0.913  F1 0.848
+  fused_f1@50        acc 0.916  F1 0.850
+  rule acc @30%: fused - replace acc +0.30pp, fused higher in 83/100 runs
+  rule acc @30%: fused - replace f1  +0.29pp, fused higher in 79/100 runs
+  rule f1  @30%: fused - replace acc +0.11pp, fused higher in 55/100 runs
+  rule f1  @30%: fused - replace f1  +0.10pp, fused higher in 55/100 runs
+  rule acc @50%: fused - replace acc +0.52pp, fused higher in 80/100 runs
+  rule acc @50%: fused - replace f1  +0.54pp, fused higher in 77/100 runs
+  rule f1  @50%: fused - replace acc +0.27pp, fused higher in 53/100 runs
+  rule f1  @50%: fused - replace f1  +0.24pp, fused higher in 50/100 runs
+
+== haiku45 cb
+  fused_0.5@30       acc 0.832  F1 0.676
+  llm_all_acc        acc 0.842  F1 0.721
+  replace_acc@30     acc 0.831  F1 0.679
+  fused_acc@30       acc 0.832  F1 0.676
+  llm_all_f1         acc 0.827  F1 0.725
+  replace_f1@30      acc 0.829  F1 0.691
+  fused_f1@30        acc 0.831  F1 0.686
+  fused_0.5@50       acc 0.846  F1 0.709
+  replace_acc@50     acc 0.843  F1 0.708
+  fused_acc@50       acc 0.847  F1 0.708
+  replace_f1@50      acc 0.838  F1 0.722
+  fused_f1@50        acc 0.842  F1 0.717
+  rule acc @30%: fused - replace acc +0.10pp, fused higher in 65/100 runs
+  rule acc @30%: fused - replace f1  -0.26pp, fused higher in 31/100 runs
+  rule f1  @30%: fused - replace acc +0.19pp, fused higher in 76/100 runs
+  rule f1  @30%: fused - replace f1  -0.43pp, fused higher in 13/100 runs
+  rule acc @50%: fused - replace acc +0.39pp, fused higher in 86/100 runs
+  rule acc @50%: fused - replace f1  -0.09pp, fused higher in 41/100 runs
+  rule f1  @50%: fused - replace acc +0.44pp, fused higher in 83/100 runs
+  rule f1  @50%: fused - replace f1  -0.46pp, fused higher in 13/100 runs
+saved C:\Users\leejb\.local\share\openresearch\worktrees\44fa63ca-4051-4efc-8dd0-a644af64ad29\chat_d6161e43-a6a7-49de-926c-0146c8b70df1\results\analysis\knn_fusion_haiku45.json
