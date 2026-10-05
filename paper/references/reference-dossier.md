@@ -164,7 +164,7 @@
 
 - 근거 유형: direct — Algorithm 1, online routing: 'if g ≥ τq then return Mℓ(x) else return as' — an escalated request gets the large model's answer (replacement); Fig. 1 labels the same branch 'Final answer from Mℓ'.
 
-**7d** (Ⅰ. 서론 2문단) — 논문: 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 일반적으로 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5].
+**7d** (Ⅰ. 서론 2문단) — 논문: 가벼운 모델이 먼저 판정하고 확신하지 못하는 입력만 큰 모델에 넘기는 구조를 캐스케이드라 하며, 흔히 넘긴 입력의 판정은 큰 모델의 판정으로 교체한다[5].
 
 > "cascades answer easy requests with a small model and escalate selected requests to a larger model" (p. 1)
 
