@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1611.16it/s]
+[haiku45 clef] run 0
+[haiku45 clef] run 20
+[haiku45 clef] run 40
+[haiku45 clef] run 60
+[haiku45 clef] run 80
+haiku45 clef: allcall bal 0.918 prior 0.928 | fuse50 bal 0.930 prior 0.927 prior+svm 0.934 | replace50 prior 0.930 prior+svm 0.929
+   fuse_prior_0.5_vs_allcall_prior: mean -0.09%p  sig higher 0  lower 0
+   fuse_prior_svm_0.5_vs_allcall_prior: mean +0.61%p  sig higher 10  lower 0
+   fuse_prior_0.5_vs_replace_prior_0.5: mean -0.36%p  sig higher 0  lower 5
+   fuse_prior_svm_0.5_vs_replace_prior_svm_0.5: mean +0.50%p  sig higher 11  lower 0
+   fuse_prior_1.0_vs_allcall_prior: mean +0.58%p  sig higher 10  lower 0
+   fuse_prior_0.5_vs_fuse_prior_1.0: mean -0.67%p  sig higher 0  lower 90

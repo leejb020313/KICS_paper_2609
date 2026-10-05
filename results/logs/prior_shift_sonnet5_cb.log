@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1586.56it/s]
+[sonnet5 cb] run 0
+[sonnet5 cb] run 20
+[sonnet5 cb] run 40
+[sonnet5 cb] run 60
+[sonnet5 cb] run 80
+sonnet5 cb: allcall bal 0.835 prior 0.862 | fuse50 bal 0.853 prior 0.843 prior+svm 0.846 | replace50 prior 0.857 prior+svm 0.856
+   fuse_prior_0.5_vs_allcall_prior: mean -1.93%p  sig higher 0  lower 97
+   fuse_prior_svm_0.5_vs_allcall_prior: mean -1.56%p  sig higher 0  lower 95
+   fuse_prior_0.5_vs_replace_prior_0.5: mean -1.43%p  sig higher 0  lower 97
+   fuse_prior_svm_0.5_vs_replace_prior_svm_0.5: mean -0.97%p  sig higher 0  lower 84
+   fuse_prior_1.0_vs_allcall_prior: mean -1.22%p  sig higher 0  lower 85
+   fuse_prior_0.5_vs_fuse_prior_1.0: mean -0.71%p  sig higher 0  lower 93
