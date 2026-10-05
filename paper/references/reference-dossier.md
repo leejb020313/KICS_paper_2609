@@ -6,7 +6,7 @@
 
 - 참고문헌 6편, 근거 27건 (원문 직접 확인 25건, 해석 2건)
 - 원문 PDF에서 찾은 인용문 27/27건 (유료 원문 0건은 공개 초록으로 확인)
-- 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 8c (본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기…)
+- 해석에 해당하는 근거 (심사에서 질문받으면 note의 논리로 답해야 함): 1j (프런티어 LLM + NN-PPI가 원 논문에서 가장 강한 설정…), 8c (결합 여부를 보정 세트의 검정으로 정할 뿐 결합 방식은 학습하지 않는다.…)
 
 ## [1] M. Hasanain et al., "Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content," CEUR-WS vol. 3740, pp. 276-286, 2024.
 
@@ -176,7 +176,7 @@
 - 공식 저자: Yilin Zhang, Han Jiang, Cai Xu, Ying Liu, Wei Zhao
 - 원문 PDF: `pdfs/2609.11446.pdf`
 
-**8a** (Ⅱ. 본론 2.1 선행 연구) — 논문: 위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].
+**8a** (Ⅱ. 본론 2.1 선행 연구) — 논문: CAUC[5]는 넘긴 입력에서 두 모델의 출력을 결합하지만,
 
 > "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary." (p. 1)
 
@@ -188,7 +188,7 @@
 
 - 근거 유형: direct
 
-**8c** (Ⅱ. 본론 2.1 선행 연구) — 논문: 본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.
+**8c** (Ⅱ. 본론 2.1 선행 연구) — 논문: 결합 여부를 보정 세트의 검정으로 정할 뿐 결합 방식은 학습하지 않는다. 본 논문은 결합 가중치를 라벨로 학습해 LLM의 기준 차이를 반영한다.
 
 > "This sign test is performed once on the calibration set and introduces no learned decision network." (p. 4)
 

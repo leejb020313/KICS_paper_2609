@@ -271,7 +271,7 @@
         {
           "id": "8a",
           "where": "Ⅱ. 본론 2.1 선행 연구",
-          "paper": "위임한 입력에서 두 모델의 출력을 선택적으로 결합하는 캐스케이드도 일반 분류 과제에서 제안되었다[8].",
+          "paper": "CAUC[5]는 넘긴 입력에서 두 모델의 출력을 결합하지만,",
           "quote": "For deferred inputs, CAUC selectively combines model outputs when their predictions are complementary.",
           "support": "direct"
         },
@@ -285,7 +285,7 @@
         {
           "id": "8c",
           "where": "Ⅱ. 본론 2.1 선행 연구",
-          "paper": "본 논문은 ... 결합 가중치를 라벨로 학습하여 LLM과 라벨의 판정 기준 차이까지 보정한다.",
+          "paper": "결합 여부를 보정 세트의 검정으로 정할 뿐 결합 방식은 학습하지 않는다. 본 논문은 결합 가중치를 라벨로 학습해 LLM의 기준 차이를 반영한다.",
           "quote": "This sign test is performed once on the calibration set and introduces no learned decision network.",
           "support": "inference",
           "note": "CAUC fuses standardized, temperature-calibrated logits weighted by each model's calibrated confidence (Eq. 6: z_fuse = (p_s q_s + p_l q_l)/(p_s + p_l)) and enables fusion only if a calibration-set sign test is positive. No fusion coefficient is fitted to labels. Our Eq. (1) fits (a, b, c) by logistic regression on labelled calibration data, so the fused score can re-weight an LLM whose decision criterion differs from the labels. The 'difference' sentence is our characterization based on these passages."

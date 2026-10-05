@@ -70,8 +70,8 @@ for d in ("clef", "cb"):
     checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), 
 ]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
-           ("fuse50 vs sonnet+nnppi: n_sig", f"NN-PPI를 적용한 전량 호출보다는 {ns('clef', 'fuse_0.5_vs_sonnet_nnppi')}회, {ns('cb', 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 높았다"),
-           ("abstract never lower (both LLMs)", f"두 종류의 LLM 모두에서 모든 문장에 LLM을 호출한 경우보다 유의하게 낮았던 반복이 {RUNS}회 중 한 번도 없었으며"),
+           ("fuse50 vs sonnet+nnppi: n_sig", f"NN-PPI로 LLM 점수를 보정한 전량 호출보다는 {ns('clef', 'fuse_0.5_vs_sonnet_nnppi')}회, {ns('cb', 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 높았다"),
+           ("abstract never lower (both LLMs)", f"두 종류의 LLM 모두에서 모든 문장에 LLM을 호출한 경우보다 유의하게 낮았던 경우가 {RUNS}회 반복 실험 중 한 번도 없었으며"),
            ("abstract vs replacement", "교체하는 방식보다 평균 정확도가 높았다"),
            ("abstract Sonnet gain + accs", f"전량 호출보다 오히려 {gain('clef')}~{gain('cb')}%p 높았다(CLEF {acc('clef', 'fuse_0.5'):.3f}, ClaimBuster {acc('cb', 'fuse_0.5'):.3f})"),
            ("results mean gain + sig higher", f"평균 {gain('clef')}%p, {gain('cb')}%p 높았고 {RUNS}회 중 {up('clef')}회, {up('cb')}회 유의하게 높았으며 유의하게 낮은 경우는 없었다"),
@@ -82,7 +82,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("haiku mean drop", f"전량 호출보다 평균 {hdrop('clef')}%p, {hdrop('cb')}%p 낮았으나"),
            ("haiku fused vs replacement accs", f"Haiku 4.5에서도 결합형({hk('clef', 'fuse_0.5')}, {hk('cb', 'fuse_0.5')})은 교체형({hk('clef', 'replace_0.5')}, {hk('cb', 'replace_0.5')})보다 정확도가 높았다"),
            ("haiku replacement sig lower (CLEF)", f"교체형은 CLEF에서 {RUNS}회 중 {hsig('clef', 'replace_0.5_vs_best_full(sonnet_raw)', -1)}회 유의하게 낮았다"),
-           ("haiku interpretation (hedged)", "라벨과의 기준 차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다"),
+           ("haiku interpretation (hedged)", "기준 차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다"),
            ("conclusion both LLMs", "두 종류의 LLM 모두에서 전량 호출보다 유의하게 낮지 않았고 교체 방식보다 정확하였으며"),
            ("runs (method)", f"80%를 비복원 추출하여 {RUNS}회 반복한 평균"),
            ("calib rate rule", f"교차검증 정확도가 {100 * max(max(cal(d, f'fuse_{b}') for b in (.6, .7, .8, .9, 1.0)) - cal(d, 'fuse_0.5') for d in ('clef', 'cb')):.1f}%p 이하로만 오르는 50%"),
@@ -106,7 +106,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
 assert best["clef"] == best["cb"] == "sonnet_thr"
-checks.append(("stronger full-call setting named", "이하 전량 호출은 정확도가 더 높았던 임계값 조정 설정을 뜻한다"))
+checks.append(("stronger full-call setting named", "이하 전량 호출은 더 정확한 설정(Sonnet 5는 임계값 조정)을 뜻한다"))
 # Table 1 daggers: a baseline cell carries † exactly when fused@50% is significantly higher on more than half of the runs
 DAG = {n: f"fuse_0.5_vs_{n}" for n in ("sonnet_raw", "sonnet_thr", "sonnet_nnppi", "replace_0.5")}
 mark = lambda d, n: f"{acc(d, n):.3f}" + ("†" if n in DAG and ns(d, DAG[n]) >= MAJ else "")
