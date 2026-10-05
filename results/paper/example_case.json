@@ -1,17 +1,17 @@
 {
- "a": 1.4615242232048136,
- "b": 6.761615056270463,
- "c": -1.5140186581951145,
+ "a": 1.4534558037635228,
+ "b": 7.0486687468515985,
+ "c": -1.624220809356161,
  "llm_threshold": 0.16,
- "bar_at_0": 0.22391376107562816,
- "n_queried_fuse_right_replace_wrong": 36,
- "n_queried_replace_right_fuse_wrong": 24,
+ "bar_at_0": 0.23042944245062522,
+ "n_queried_fuse_right_replace_wrong": 39,
+ "n_queried_replace_right_fuse_wrong": 22,
  "example": {
-  "text": "I'm going to give them $5,000 to take with them wherever they want to go, and this will give them affordability.",
+  "text": "You do a solicited ballot, and that's okay...",
   "label": 0,
-  "d": -0.844793814050813,
-  "s": 0.35,
-  "bar": 0.40651608501358216,
+  "d": -0.846620384634213,
+  "s": 0.25,
+  "bar": 0.4050050049894006,
   "fused": 0,
   "replaced": 1
  }

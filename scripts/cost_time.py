@@ -1,11 +1,11 @@
 """LLM cost (USD, list price) and processing time of the cascade vs calling the LLM on every sentence.
 
-The September scoring runs kept only the text reply, so latency and token usage are re-measured on a sample of
-23 test batches (every 5th test batch, 40 sentences each), re-sent to claude-sonnet-5 in clean CLI mode
-(scripts/run_sonnet_costcheck.sh -> results/llm_scores/checks/sonnet5_cost/). The CLI adds its own system prompt to
-every request; its size is measured with a trivial prompt (sonnet5_cost/overhead_*.json) and subtracted, so
-the prompt tokens below are those of our prompt alone (NN-PPI criteria + 40 statements), as a direct API call would
-send them. Only single-turn calls are used (in a few calls the CLI took a second turn, which inflates latency).
+Latency and token usage come from the JSON replies of the scoring run the paper uses (clean CLI mode,
+results/llm_scores/sonnet5/*.json, test batches only). The CLI adds its own system prompt to every request; its
+size is measured with a trivial prompt (checks/sonnet5_cost/overhead_*.json; same CLI system prompt: single-turn
+input tokens of the same batches differ by <= 2 tokens between the two runs) and subtracted, so the prompt tokens
+below are those of our prompt alone (NN-PPI criteria + 40 statements), as a direct API call would send them. Only
+single-turn calls are used. Output tokens include thinking tokens.
 Cost = input tokens x $2/M + output tokens x $10/M (Claude Sonnet 5 list price, no caching or batch discount).
 Time = sequential API time of the LLM batches + embedding and SVM on CPU for every sentence (the cascade only).
 
@@ -23,7 +23,9 @@ from sklearn.svm import SVC
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from cwcascade.data import PAPER, SCORES, embed, load_frontier  # noqa: E402
 
-DIR = os.path.join(SCORES, "checks", "sonnet5_cost")
+DIR = os.path.join(SCORES, "checks", "sonnet5_cost")  # CLI overhead measurement (overhead_*.json)
+RUN = os.path.join(SCORES, "sonnet5")  # the scoring run whose usage is reported
+TEST_PREFIXES = ("clef_", "clefdev_", "clefoff_", "cb_", "cbrest_")
 PRICE_IN, PRICE_OUT = 2 / 1e6, 10 / 1e6  # USD per token, Claude Sonnet 5
 BATCH = 40
 N = 1000  # report per 1,000 sentences
@@ -40,11 +42,16 @@ def main():
     overhead = [total_input(json.load(open(f, encoding="utf-8"))) - TRIVIAL_PROMPT_TOKENS
                 for f in sorted(glob.glob(os.path.join(DIR, "overhead_*.json")))]
     assert len(set(overhead)) == 1, overhead
-    calls = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(DIR, "*.json")))
+    # prompt tokens: our prompts are identical in both runs, but the CLI's own system prompt shrank between them
+    # (~4k tokens), so they are measured where the CLI overhead was measured (the Oct-01 cost check)
+    check = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(DIR, "*.json")))
              if not os.path.basename(f).startswith("overhead")]
+    tok_in = np.mean([total_input(d) - overhead[0] for d in check if d.get("num_turns") == 1])
+    # output tokens (incl. thinking) and latency: the scoring run the paper uses
+    calls = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(RUN, "*.json")))
+             if os.path.basename(f).startswith(TEST_PREFIXES)]
     assert all(list(d["modelUsage"]) == ["claude-sonnet-5"] for d in calls)
     single = [d for d in calls if d.get("num_turns") == 1]
-    tok_in = np.mean([total_input(d) - overhead[0] for d in single])
     tok_out = np.mean([d["usage"]["output_tokens"] for d in single])
     lat = np.mean([d["duration_api_ms"] / 1000 for d in single])
     usd_batch = tok_in * PRICE_IN + tok_out * PRICE_OUT
