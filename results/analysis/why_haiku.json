@@ -1,0 +1,520 @@
+{
+ "clef": {
+  "sonnet5": {
+   "n_test": 1691,
+   "test_pos_rate": 0.2566528681253696,
+   "learn_pos_rate": 0.4997920997920998,
+   "auc_test": 0.9740769662241677,
+   "auc_learn": 0.9220051645705482,
+   "flag_rate_05": 0.16380839739798936,
+   "prec_05": 0.9675090252707581,
+   "rec_05": 0.6175115207373272,
+   "acc_05": 0.8965109402720284,
+   "t_learn": 0.16,
+   "acc_t_learn": 0.9107037256061502,
+   "t_oracle": 0.26,
+   "acc_t_oracle": 0.934949733885275,
+   "mean_score_pos": 0.5284331797235022,
+   "mean_score_neg": 0.07503579952267303,
+   "n_distinct_scores": 25,
+   "bins": [
+    {
+     "bin": "[0.0,0.1)",
+     "n": 893,
+     "share": 0.5280898876404494,
+     "label_rate": 0.006718924972004479
+    },
+    {
+     "bin": "[0.1,0.2)",
+     "n": 253,
+     "share": 0.14961561206386753,
+     "label_rate": 0.05533596837944664
+    },
+    {
+     "bin": "[0.2,0.3)",
+     "n": 93,
+     "share": 0.05499704316972206,
+     "label_rate": 0.27956989247311825
+    },
+    {
+     "bin": "[0.3,0.4)",
+     "n": 95,
+     "share": 0.056179775280898875,
+     "label_rate": 0.5789473684210527
+    },
+    {
+     "bin": "[0.4,0.5)",
+     "n": 80,
+     "share": 0.04730928444707274,
+     "label_rate": 0.8125
+    },
+    {
+     "bin": "[0.5,0.6)",
+     "n": 70,
+     "share": 0.04139562389118864,
+     "label_rate": 0.9142857142857143
+    },
+    {
+     "bin": "[0.6,0.8)",
+     "n": 152,
+     "share": 0.0898876404494382,
+     "label_rate": 0.9802631578947368
+    },
+    {
+     "bin": "[0.8,1.0)",
+     "n": 55,
+     "share": 0.03252513305736251,
+     "label_rate": 1.0
+    }
+   ],
+   "prior": 0.240567085907293,
+   "t_prior": 0.30000000000000004,
+   "acc_t_prior": 0.9343583678296866
+  },
+  "haiku45": {
+   "n_test": 1691,
+   "test_pos_rate": 0.2566528681253696,
+   "learn_pos_rate": 0.4997920997920998,
+   "auc_test": 0.9746003028203353,
+   "auc_learn": 0.9117088725772923,
+   "flag_rate_05": 0.24719101123595505,
+   "prec_05": 0.8851674641148325,
+   "rec_05": 0.8525345622119815,
+   "acc_05": 0.9337670017740982,
+   "t_learn": 0.21,
+   "acc_t_learn": 0.9160260201064458,
+   "t_oracle": 0.46,
+   "acc_t_oracle": 0.9337670017740982,
+   "mean_score_pos": 0.702926267281106,
+   "mean_score_neg": 0.09548130469371521,
+   "n_distinct_scores": 30,
+   "bins": [
+    {
+     "bin": "[0.0,0.1)",
+     "n": 813,
+     "share": 0.4807806031933767,
+     "label_rate": 0.0024600246002460025
+    },
+    {
+     "bin": "[0.1,0.2)",
+     "n": 290,
+     "share": 0.17149615612063868,
+     "label_rate": 0.041379310344827586
+    },
+    {
+     "bin": "[0.2,0.3)",
+     "n": 89,
+     "share": 0.05263157894736842,
+     "label_rate": 0.21348314606741572
+    },
+    {
+     "bin": "[0.3,0.4)",
+     "n": 49,
+     "share": 0.02897693672383205,
+     "label_rate": 0.3877551020408163
+    },
+    {
+     "bin": "[0.4,0.5)",
+     "n": 32,
+     "share": 0.018923713778829097,
+     "label_rate": 0.375
+    },
+    {
+     "bin": "[0.5,0.6)",
+     "n": 40,
+     "share": 0.02365464222353637,
+     "label_rate": 0.625
+    },
+    {
+     "bin": "[0.6,0.8)",
+     "n": 143,
+     "share": 0.08456534594914251,
+     "label_rate": 0.8321678321678322
+    },
+    {
+     "bin": "[0.8,1.0)",
+     "n": 235,
+     "share": 0.13897102306327616,
+     "label_rate": 0.9617021276595744
+    }
+   ],
+   "prior": 0.240567085907293,
+   "t_prior": 0.56,
+   "acc_t_prior": 0.9278533412182141
+  },
+  "agreement": {
+   "both_yes": 265,
+   "both_no": 1261,
+   "haiku_only_yes": 153,
+   "sonnet_only_yes": 12,
+   "haiku_only_yes_label_rate": 0.7058823529411765,
+   "sonnet_only_yes_label_rate": 0.5,
+   "disagree_haiku_right": 114,
+   "disagree_sonnet_right": 51,
+   "score_corr": 0.9062712999904144
+  },
+  "ex_haiku_yes_sonnet_no_label1": [
+   {
+    "text": "The point is that the President also is opposed to Roe V. Wade.",
+    "sonnet": 0.4,
+    "haiku": 0.65
+   },
+   {
+    "text": "I paid $38 million one year, I paid $27 million one year.",
+    "sonnet": 0.45,
+    "haiku": 0.65
+   },
+   {
+    "text": "And Georgia and Ukraine are both major gateways of energy into Europe.",
+    "sonnet": 0.45,
+    "haiku": 0.65
+   },
+   {
+    "text": "I have brought into the top level, top levels of government, into the White House, into administrative offices of the Executive branch, into the judicial system, highly qualified black and Spanish citizens and women who in the past had been excluded.",
+    "sonnet": 0.3,
+    "haiku": 0.65
+   },
+   {
+    "text": "He voted against the first Gulf War.",
+    "sonnet": 0.4,
+    "haiku": 0.9
+   },
+   {
+    "text": "Number two, I don't make money from China, you do.",
+    "sonnet": 0.3,
+    "haiku": 0.65
+   },
+   {
+    "text": "He's banned Muslims because they're Muslims.",
+    "sonnet": 0.4,
+    "haiku": 0.9
+   },
+   {
+    "text": "The places we had trouble were Democratic-run cities...",
+    "sonnet": 0.4,
+    "haiku": 0.65
+   },
+   {
+    "text": "Governor Carter's answer tonight does not coincide with the answer that he gave in an interview to the Associated Press a week or so ago.",
+    "sonnet": 0.3,
+    "haiku": 0.5
+   },
+   {
+    "text": "I'm the guy that brought back the automobile industry.",
+    "sonnet": 0.4,
+    "haiku": 0.75
+   },
+   {
+    "text": "And I've changed without having a specific - we got rid of catch and release, we got rid of a lot of horrible things that they put in and that they lived with.",
+    "sonnet": 0.35,
+    "haiku": 0.75
+   },
+   {
+    "text": "Some of these ballots in some states can't even be opened until election day.",
+    "sonnet": 0.45,
+    "haiku": 0.65
+   }
+  ],
+  "ex_haiku_yes_sonnet_no_label0": [
+   {
+    "text": "I have gone on to found multibillion dollar companies.",
+    "sonnet": 0.3,
+    "haiku": 0.8
+   },
+   {
+    "text": "Let's go to work and end this fiasco in Central America, a failed policy which has actually increased Cuban and Soviet influence.",
+    "sonnet": 0.4,
+    "haiku": 0.65
+   },
+   {
+    "text": "Proud Boys, stand back and stand by.",
+    "sonnet": 0.03,
+    "haiku": 0.5
+   },
+   {
+    "text": "And again, he's been in government 47 years.",
+    "sonnet": 0.45,
+    "haiku": 0.85
+   },
+   {
+    "text": "And then revive our national identity where every high school senior should have to pass the same civics test that, frankly, every immigrant, including my mother, had to pass in order to become a citizen of this country.",
+    "sonnet": 0.25,
+    "haiku": 0.5
+   },
+   {
+    "text": "Creating millions of good-paying jobs.",
+    "sonnet": 0.2,
+    "haiku": 0.9
+   },
+   {
+    "text": "You want to put a lot of new Supreme Court Justices.",
+    "sonnet": 0.1,
+    "haiku": 0.75
+   },
+   {
+    "text": "Now, it is true that my friend and supporter, Warren Buffett, for example, could afford to pay a little more in taxes in order...",
+    "sonnet": 0.2,
+    "haiku": 0.5
+   }
+  ]
+ },
+ "cb": {
+  "sonnet5": {
+   "n_test": 2745,
+   "test_pos_rate": 0.26520947176684884,
+   "learn_pos_rate": 0.5,
+   "auc_test": 0.9251067165358192,
+   "auc_learn": 0.9080120653586594,
+   "flag_rate_05": 0.11693989071038251,
+   "prec_05": 0.9034267912772586,
+   "rec_05": 0.3983516483516483,
+   "acc_05": 0.829143897996357,
+   "t_learn": 0.16,
+   "acc_t_learn": 0.834608378870674,
+   "t_oracle": 0.30000000000000004,
+   "acc_t_oracle": 0.863023679417122,
+   "mean_score_pos": 0.42549450549450546,
+   "mean_score_neg": 0.10000000000000002,
+   "n_distinct_scores": 27,
+   "bins": [
+    {
+     "bin": "[0.0,0.1)",
+     "n": 1226,
+     "share": 0.44663023679417124,
+     "label_rate": 0.013866231647634585
+    },
+    {
+     "bin": "[0.1,0.2)",
+     "n": 511,
+     "share": 0.1861566484517304,
+     "label_rate": 0.136986301369863
+    },
+    {
+     "bin": "[0.2,0.3)",
+     "n": 256,
+     "share": 0.09326047358834244,
+     "label_rate": 0.36328125
+    },
+    {
+     "bin": "[0.3,0.4)",
+     "n": 269,
+     "share": 0.09799635701275046,
+     "label_rate": 0.5353159851301115
+    },
+    {
+     "bin": "[0.4,0.5)",
+     "n": 162,
+     "share": 0.05901639344262295,
+     "label_rate": 0.7037037037037037
+    },
+    {
+     "bin": "[0.5,0.6)",
+     "n": 120,
+     "share": 0.04371584699453552,
+     "label_rate": 0.8166666666666667
+    },
+    {
+     "bin": "[0.6,0.8)",
+     "n": 137,
+     "share": 0.049908925318761385,
+     "label_rate": 0.9343065693430657
+    },
+    {
+     "bin": "[0.8,1.0)",
+     "n": 64,
+     "share": 0.02331511839708561,
+     "label_rate": 1.0
+    }
+   ],
+   "prior": 0.2666,
+   "t_prior": 0.30000000000000004,
+   "acc_t_prior": 0.863023679417122
+  },
+  "haiku45": {
+   "n_test": 2745,
+   "test_pos_rate": 0.26520947176684884,
+   "learn_pos_rate": 0.5,
+   "auc_test": 0.9051966253875029,
+   "auc_learn": 0.9061401740766224,
+   "flag_rate_05": 0.25610200364298724,
+   "prec_05": 0.7226173541963016,
+   "rec_05": 0.6978021978021978,
+   "acc_05": 0.848816029143898,
+   "t_learn": 0.35000000000000003,
+   "acc_t_learn": 0.843351548269581,
+   "t_oracle": 0.56,
+   "acc_t_oracle": 0.8506375227686703,
+   "mean_score_pos": 0.5992032967032966,
+   "mean_score_neg": 0.14604858701041148,
+   "n_distinct_scores": 29,
+   "bins": [
+    {
+     "bin": "[0.0,0.1)",
+     "n": 1126,
+     "share": 0.410200364298725,
+     "label_rate": 0.018650088809946713
+    },
+    {
+     "bin": "[0.1,0.2)",
+     "n": 480,
+     "share": 0.17486338797814208,
+     "label_rate": 0.11458333333333333
+    },
+    {
+     "bin": "[0.2,0.3)",
+     "n": 191,
+     "share": 0.06958105646630237,
+     "label_rate": 0.20418848167539266
+    },
+    {
+     "bin": "[0.3,0.4)",
+     "n": 136,
+     "share": 0.04954462659380692,
+     "label_rate": 0.4264705882352941
+    },
+    {
+     "bin": "[0.4,0.5)",
+     "n": 109,
+     "share": 0.03970856102003643,
+     "label_rate": 0.43119266055045874
+    },
+    {
+     "bin": "[0.5,0.6)",
+     "n": 115,
+     "share": 0.04189435336976321,
+     "label_rate": 0.4782608695652174
+    },
+    {
+     "bin": "[0.6,0.8)",
+     "n": 269,
+     "share": 0.09799635701275046,
+     "label_rate": 0.6431226765799256
+    },
+    {
+     "bin": "[0.8,1.0)",
+     "n": 319,
+     "share": 0.1162112932604736,
+     "label_rate": 0.877742946708464
+    }
+   ],
+   "prior": 0.2666,
+   "t_prior": 0.66,
+   "acc_t_prior": 0.8389799635701275
+  },
+  "agreement": {
+   "both_yes": 294,
+   "both_no": 2015,
+   "haiku_only_yes": 409,
+   "sonnet_only_yes": 27,
+   "haiku_only_yes_label_rate": 0.5770171149144254,
+   "sonnet_only_yes_label_rate": 0.6666666666666666,
+   "disagree_haiku_right": 245,
+   "disagree_sonnet_right": 191,
+   "score_corr": 0.8272037864561691
+  },
+  "ex_haiku_yes_sonnet_no_label1": [
+   {
+    "text": "That's why what I have put forward doesn't add a penny to the debt, but it is the kind of approach that will enable more people to take those new jobs, higher-paying jobs.",
+    "sonnet": 0.35,
+    "haiku": 0.65
+   },
+   {
+    "text": "We learned that Bernie Sanders was taken advantage of by your people, by Debbie Wasserman Schultz.",
+    "sonnet": 0.3,
+    "haiku": 0.6
+   },
+   {
+    "text": "And we had sanctioned them.",
+    "sonnet": 0.3,
+    "haiku": 0.7
+   },
+   {
+    "text": "Many of the people that are giving her all this money that she can do many more commercials than me gave her -- took massive deductions.",
+    "sonnet": 0.3,
+    "haiku": 0.55
+   },
+   {
+    "text": "They're devaluing their currency, and there's nobody in our government to fight them.",
+    "sonnet": 0.35,
+    "haiku": 0.55
+   },
+   {
+    "text": "I pass factories that were thriving 20, 25 years ago, and because of the bill that her husband signed and she blessed 100 percent, it is just horrible what's happened to these people in these communities.",
+    "sonnet": 0.4,
+    "haiku": 0.7
+   },
+   {
+    "text": "You know, when we have a world where you have ISIS chopping off heads, where you have -- and, frankly, drowning people in steel cages, where you have wars and horrible, horrible sights all over, where you have so many bad things happening, this is like medieval times.",
+    "sonnet": 0.15,
+    "haiku": 0.5
+   },
+   {
+    "text": "We're working with NATO, the longest military alliance in the history of the world, to really turn our attention to terrorism.",
+    "sonnet": 0.4,
+    "haiku": 0.85
+   },
+   {
+    "text": "Russia hasn't paid any attention to ISIS.",
+    "sonnet": 0.4,
+    "haiku": 0.7
+   },
+   {
+    "text": "Cutting taxes on the wealthy, we've tried that.",
+    "sonnet": 0.3,
+    "haiku": 0.6
+   },
+   {
+    "text": "... we have made environments in schools healthier for kids, including healthier lunches...",
+    "sonnet": 0.45,
+    "haiku": 0.6
+   },
+   {
+    "text": "Right now, Syria is fighting ISIS.",
+    "sonnet": 0.3,
+    "haiku": 0.7
+   }
+  ],
+  "ex_haiku_yes_sonnet_no_label0": [
+   {
+    "text": "I built a massive company, a great company, some of the greatest assets anywhere in the world, worth many, many billions of dollars.",
+    "sonnet": 0.3,
+    "haiku": 0.6
+   },
+   {
+    "text": "She won't say the name and President Obama won't say the name.",
+    "sonnet": 0.45,
+    "haiku": 0.75
+   },
+   {
+    "text": "I mean, it's -- you know, and I've been saying at big speeches where I have 20,000 and 30,000 people, what do you have to lose?",
+    "sonnet": 0.1,
+    "haiku": 0.55
+   },
+   {
+    "text": "In the 1980s, I was working to reform the schools in Arkansas.",
+    "sonnet": 0.2,
+    "haiku": 0.5
+   },
+   {
+    "text": "And I support moving toward more clean, renewable energy as quickly as we can, because I think we can be the 21st century clean energy superpower and create millions of new jobs and businesses.",
+    "sonnet": 0.1,
+    "haiku": 0.55
+   },
+   {
+    "text": "Well, the D.C. vs. Heller decision was very strongly -- and she was extremely angry about it.",
+    "sonnet": 0.15,
+    "haiku": 0.6
+   },
+   {
+    "text": "She went over a minute over, and you don't stop her.",
+    "sonnet": 0.15,
+    "haiku": 0.55
+   },
+   {
+    "text": "Now, whether that was Russia, whether that was China, whether it was another country, we don't know, because the truth is, under President Obama we've lost control of things that we used to have control over.",
+    "sonnet": 0.2,
+    "haiku": 0.5
+   }
+  ]
+ }
+}
