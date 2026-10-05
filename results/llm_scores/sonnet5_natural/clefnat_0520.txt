@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	It's the sunrise side, not the sunset side.
+521	And, you know, we visited the website quite a bit and it still doesn't work.
+522	I believe that the question oversimplifies the difficulties of what we must do in Central America.
+523	You said that we should still have troops in Iraq to this day.
+524	Plus, we need fiscal discipline.
+525	And he was down there fighting against imperialism.
+526	Now, if we get our tax policies right so that they're good for the middle class, if we reverse the policies of the last eight years that got us into this fix in the first place and that Senator McCain supported, then we are going to be in a position to deal with Social Security and deal with Medicare, because we will have a health care plan that actually works for you, reduces spending and costs over the long term, and Social Security that is stable and solvent for all Americans and not just some.
+527	Can I make another point?
+528	Productivity in the first half of 1980 was down a minus 2 percent.
+529	I remember being in a high school in my own state as we were organizing something we call the Governor's Alliance Against Drugs, and a young 16 year old girl coming up to me, desperate, addicted, dependent, saying, Governor, I need help.
+530	And so the question here tonight is not where we've been, but where we're going.
+531	For every one of you who stood up here and asked a question tonight, I promise you there's a 100,000 Americans who said I wish I could have asked that question.
+532	We're standing with you strong.
+533	When I go one second over, it's like a big deal.
+534	Again Governor Carter is inaccurate.
+535	And what did we do in the late '40's and '50's and '60's?
+536	Again and again, on complex, difficult tasks, I have stayed the course.
+537	When you came to office 32 million people on food stamps.
+538	We don't have to settle for gasoline at four bucks.
+539	Now, as to my closing remarks: I've always believed that this land was placed here between the two great oceans by some divine plan.
+540	That was the right place.
+541	The most recent and troubling of these has been Russia.
+542	So why aren't you putting money into your own campaign?
+543	Let me -- I'm not exactly sure what you mean, "passes the global test," you take preemptive action if you pass a global test.
+544	It's a state tax relief.
+545	And the last thing I'd like to say is this: This grain deal with the Soviet Union in '72 was terrible, and Mr. Ford made up for it with three embargoes, one against our own ally in Japan.
+546	But again, I want to come back to, notice every time Senator Obama says, "We need to spend more, we need to spend more, that's the answer" -- why do we always have to spend more?
+547	Real interest rates -- the real cost of interest -- will remain very, very high, and many economists are predicting that we're moving into a period of very slow growth because the economy is tapering off and may be a recession.
+548	And furthermore, under this administration, spending has increased more than it has in the last 20 years and he asked Congress to spend more money than it actually spent.
+549	... with the Russians and other foreign powers.
+550	If you're middle income, you're about where you were.
+551	But I'll tell you this: As president, I'll never take my eye off that ball.
+552	With regard to business investment, it is higher than it has been since 1949.
+553	This current administration's worked hard to keep the parties at the table.
+554	And the fact is, it's gotten pretty tough.
+555	There is a difference, though, as to what the economy has meant.
+556	We have protected 25 million people through the passage of the Kennedy-Kassebaum bill that says you can use your health insurance if you change jobs or someone in your family has been sick.
+557	We had a legitimate difference, and I absolutely understand the difference between tactics and strategy.
+558	And I am also focussed on the fact that isn't it a paradox that we have the highest productivity in our workforce in the industrialized world and at the same time have the largest trade deficit, and at the same time rank behind 9 other nations in what we pay our most productive people in the world, and we're losing whole industries overseas.
+559	That's why I have a program for education, a program in the case of equal job opportunities, and one that would also deal with our older citizens.

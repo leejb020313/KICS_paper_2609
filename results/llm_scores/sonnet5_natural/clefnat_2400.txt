@@ -1,0 +1,22 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2400	As a matter of fact, today the shortages of non-commissioned officers that John mentioned are such that if we tried to have a draft today, we wouldn't have the non-commissioned officers to train the draftees.
+2401	Health care is priority number two, because that broken health care system is bad not only for families, but it's making our businesses less competitive.
+2402	There's another part of the lopsided economy that we're in today, and that is that these heavy deficits have killed exports and are swamping the Nation with cheap imports.
+2403	The point is, they'll get to decide what to think.
+2404	Can any American looking at the situation in Latin America feel contented with what's happening today, when a candidate for the presidency of Brazil feels it necessary to call - not on Washington during the campaign - but on Castro in Havana, in order to pick up the support of the Castro supporters in Brazil?

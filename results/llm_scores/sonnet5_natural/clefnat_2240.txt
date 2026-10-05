@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2240	I think of those people that took us back into space again, Rick Houk and that crew, as people that are worthy of this.
+2241	The use of diplomacy in this situation has already, well, it goes hour-by-hour and day-by-day now.
+2242	The president's policies have been exercised over the last four years and they haven't put Americans back to work.
+2243	Now, I honor your service in World War II, I honor Mr. Perot's service in uniform and the service of every man and woman who ever served, including Admiral Crowe, who was your Chairman of the joint Chiefs and who's supporting me.
+2244	Mr. Nixon resigned, and I became president.
+2245	Yes, we tried, and, yes, we failed to bring him into the family of nations; he had the 4th largest army.
+2246	He talked about children whose parents don't speak English as a first language?
+2247	Saddam Hussein released a tape, as you know, claiming it was a transcript of their meeting, where she said we will not become involved in your border dispute and, in effect, you can take the northern part of the country.
+2248	Well, I'd say the first homeless bill in the Senate was the Dole-Byrd Byrd-Dole bill, I can't remember who was in control then.
+2249	We may think that you deal with them in different ways.
+2250	This is not mud slinging.
+2251	The whole world is having economic difficulties.
+2252	Is Iran talking to Iraq about peace?
+2253	Now right here in Arizona, that difference would have been $131 million to the state of Arizona to help its kids be able to have better education and to lift the property tax burden from its citizens.
+2254	And it would be one to take Government off the backs of the great people of this country, and turn you loose again to do those things that I know you can do so well, because you did them and made this country great.
+2255	One's got a good job, one's studying to be a doctor.
+2256	Senator Bentsen said, as you recall at the debate with Senator Quayle, that if you give any of us $200 billion worth of hot checks a year, we can create an illusion of prosperity.
+2257	I think as you make the case, the American people will increasingly come to our cause.
+2258	Whenever you do that, inevitably the dictator is encouraged to try it again.
+2259	And you pull all of it at once and read it and I did, and it's pretty clear what she and Kelly and the other key guys around that thing thought they were doing.
+2260	And that's why I think it's so important for us to reverse course, because that's the central front on terrorism.
+2261	It didn't exceed beyond mine, because I know that that's a strategy that has worked and can succeed.
+2262	So if the tax plan he described were a tax plan I was asked to support, I'd say absolutely not.
+2263	Culture of life is really important for a country to have if it's going to be a hospitable society.
+2264	Jim, the question you asked, if I heard you correctly, was would he support legislation to overturn it.
+2265	Well, 67 percent of the people voted to re-elect me when I ran for my second term, and I was very proud and very humbled by that.
+2266	I want to be able to tell my grandson when I'm in my later years that I didn't turn away from the evidence that showed that we were doing some serious harm.
+2267	Now, specifically, one, on Medicare, it is not true that everyone knows how to fix it.
+2268	That -- that Detroit -- that Detroit answer...
+2269	But to indicate in advance how we would respond, to indicate the nature of this response would be incorrect; it would certainly be inappropriate; it would not be in the best interests of the United States.
+2270	And therefore, they shouldn't be treated lightly.
+2271	I will not privatize it.
+2272	And she was fiercely independent.
+2273	I think we're going to have to do it.
+2274	But the president has underfunded it by $28 billion.
+2275	And we know what happened.
+2276	And I think this is something the American people see.
+2277	We're giving them lots of money, lots of everything.
+2278	I just can't do it.
+2279	This was just a few weeks ago that you indicated that we should still have troops in Iraq.

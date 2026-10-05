@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2400	I saw a study that came out today that said you're going to raise taxes by $3,000 to $4,000 on middle-income families.
+2401	What we have right now in Washington is a place that's gridlocked.
+2402	I don't think you have to -- shouldn't have to hire a lawyer to figure out how to get into this country legally.
+2403	So the work that we've done with respect to sanctions now offers Iran a choice.
+2404	But what is also important for us to understand is, is that for America to be successful in this region there's some things that we're going to have to do here at home as well.
+2405	Well, my first job as commander in chief, Bob, is to keep the American people safe.
+2406	Well, in part, it comes, again, from my experience.
+2407	But we have some work to do.
+2408	You can't keep on holding down the value of your currency, stealing our intellectual property, counterfeiting our products, selling them around the world, even to the United States.
+2409	And we have put significant pressure on them to make sure they're doing that; to recognize the rights of women, which is critical throughout the region.
+2410	And she ended up living alone by choice.
+2411	You indicated that we shouldn't be passing nuclear treaties with Russia despite the fact that 71 senators, Democrats and Republicans, voted for it.
+2412	In the course of that, I think the president's campaign has tried to characterize me as -- as someone who's very different than who I am.
+2413	I think it's important for us to develop new sources of energy here in America, that we change our tax code to make sure that we're helping small businesses and companies that are investing here in the United States, that we take some of the money that we're saving as we wind down two wars to rebuild America and that we reduce our deficit in a balanced way that allows us to make these critical investments.
+2414	Number two, investigate exactly what happened, regardless of where the facts lead us, to make sure folks are held accountable and it doesn't happen again.
+2415	We need a strong economy.
+2416	There's no doubt about it.
+2417	I've met some of those people.
+2418	Well, four years ago, when I was running for office, I was traveling around and having those same conversations that Governor Romney talks about.
+2419	We have in -- in Egypt, a Muslim Brotherhood president.
+2420	And this is where there's a difference, because Governor Romney's central economic plan calls for a $5 trillion tax cut -- on top of the extension of the Bush tax cuts -- that's another trillion dollars -- and $2 trillion in additional military spending that the military hasn't asked for.
+2421	Candy, I don't have a policy of stopping wind jobs in Iowa and that -- they're not phantom jobs.
+2422	You had credit agencies that were stamping these as A1 great investments when they weren't.
+2423	Their oil production has plunged to the lowest level since they were fighting a war with Iraq 20 years ago.
+2424	And to the governor's credit, you supported us going into Libya and the coalition that we organized.
+2425	Middle- income Americans have seen their income come down by $4,300.
+2426	When it comes to going after Osama bin Laden, you said, well, any president would make that call.
+2427	And your plan is to take their tax rate from 35 percent to 40 percent.
+2428	When Ronald Reagan ran for office, he laid out the principles that he was going to foster.
+2429	And so if you believe the same thing, you just don't want to raise taxes on people.
+2430	Well I believe we should use any and all means necessary to take out people who pose a threat to us and our friends around the world.
+2431	And so the question is how to get them going again.
+2432	I happen to believe, I want the kids that are getting federal dollars from IDEA or Title I -- these are disabled kids or -- or -- or poor kids or -- or lower-income kids, rather, I want them to be able to go to the school of their choice.
+2433	I went to Yad Beshef (ph), the Holocaust museum there, to remind myself the nature of evil and why our bond with Israel will be unbreakable.
+2434	I also think that we should give visas to people -- green cards, rather, to people who graduate with skills that we need.
+2435	In the nature of a campaign, it seems that some campaigns are focused on attacking a person rather than prescribing their own future and the things they'd like to do.
+2436	I want to close loopholes that allow companies to deduct expenses when they move to China; that allow them to profit offshore and not have to get taxed, so they have tax advantages offshore.
+2437	That's what reporters called it.
+2438	People will look it up.
+2439	We're going to get through a very aggressive energy policy, 31/2 million more jobs in this country.

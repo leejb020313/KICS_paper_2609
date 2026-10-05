@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	And it's estimated that that will create 800,000 new jobs.
+281	I'd just assume not have the government telling me what kind of health care I get.
+282	We have every two years tests that look at how well our kids are doing.
+283	With respect to something like coal, we made the largest investment in clean coal technology, to make sure that even as we're producing more coal, we're producing it cleaner and smarter.
+284	If the -- the unemployment rate was 7.8 percent when he took office, it's 7.8 percent now.
+285	You've got to be clear, both to our allies and our enemies, about where you stand and what you mean.
+286	I would tighten those sanctions further.
+287	It's not as big as yours so it doesn't take as long.
+288	That was the right thing to do.
+289	And, you know, I appreciate and it appears we've got some agreement that a marketplace to work has to have some regulation.
+290	And that means that our aid that we provide to Pakistan is going to have to be conditioned upon certain benchmarks being met.
+291	We'll put in place the kind of principles that I put in place in my own state and allow each state to craft their own programs to get people insured and we'll focus on getting the cost of health care down.
+292	The president wants to do well.
+293	That was precisely what I recommended and ultimately what happened.
+294	And that's the budget that we've put forward.
+295	I will lower taxes on middle-income families.
+296	OK. We need to create jobs here.
+297	So there's no economist that can say Mitt Romney's tax plan adds $5 trillion if I say I will not add to the deficit with my tax plan.
+298	Companies are going to locate here depending on whether we've got the most highly skilled workforce.
+299	-- we're taking advantage of our energy resources.
+300	In Libya we stood on the side of the people.
+301	And private insurers have to make a profit.
+302	Number two, what's important is occasionally you've got to say no, to -- to -- to folks both in your own party and in the other party.
+303	When he came home and he wanted to become a nurse, he had to start from scratch.
+304	And those principles include human rights, human dignity, free enterprise, freedom of expression, elections.
+305	But Governor, when it comes to our foreign policy, you seem to want to import the foreign policies of the 1980s, just like the social policies of the 1950s and the economic policies of the 1920s.
+306	This is the approach we have to take to get America to a balanced budget.
+307	We want a peaceful planet.
+308	You have to have regulation.
+309	Now, he says by not overpaying hospitals and providers.
+310	That's exactly what our budget does, and it also then allows us to reduce our deficit, which is a significant national security concern.
+311	Now, Governor Romney has ruled out revenue.
+312	And all that raises revenue.
+313	That doesn't get the job done.
+314	China has been a currency manipulator for years and years and years.
+315	Well, first of all, I think it's important to tell you that we did come in during some tough times.
+316	... no troops through whatsoever.
+317	It's a nation that's not like -- like others and it does not have a civilian leadership that is calling the shots there.
+318	That's probably not going to survive you get that rate down to 25 percent.
+319	We also had to make sure that Moammar Gadhafi didn't stay there.

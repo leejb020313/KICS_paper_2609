@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	Because I'm offsetting some of the reductions with holding down some of the deductions.
+161	I'll restore that $716 billion to Medicare.
+162	...and -- and that's why I have the kind of commitment to ensure that our industries in this country can compete and be successful.
+163	And by the way, this is not just when it comes to individual taxes.
+164	We organized the Friends of Syria.
+165	It's what are our capabilities.
+166	China has an interest that's very much like ours in one respect, and that is they want a stable world.
+167	Part of what had happened is we'd forgotten why we had gone.
+168	We take program after program that we don't absolutely have to have, and we get rid of them.
+169	It's an election about the course of America.
+170	Under the president's policies, middle-income Americans have been buried.
+171	That, in my view, is making -- is making our future less certain and less secure.
+172	The ambassador of the United Nations went on the Sunday television shows and spoke about how --
+173	With half of college kids graduating this year without a college -- excuse me, without a job.
+174	I would also make sure that their diplomats are treated like the pariah they are around the world.
+175	Government does not create jobs.
+176	George Bush embraced comprehensive immigration reform.
+177	And so I just want to wish, Sweetie, you happy anniversary and let you know that a year from now we will not be celebrating it in front of 40 million people.
+178	But there's still a problem, because what happens is, those insurance companies are pretty clever at figuring out who are the younger and healthier seniors.
+179	The problem is that he's been asked over 100 times how you would close those deductions and loopholes, and he hasn't been able to identify them.
+180	Number four, the rule of law.
+181	Over the last 15, over the last 20 years.
+182	I wish that, looking back at the beginning of the president's term and even further back than that, that we'd have recognized that there was a growing energy and passion for freedom in that part of the world, and that we would have worked more aggressively with our friend and with other friends in the region to have them make the transition towards a more representative form of government, such that it didn't explode in the way that it did.
+183	And the -- the challenge we have -- I know you haven't been in a position to actually execute foreign policy -- but every time you've offered an opinion, you've been wrong.
+184	Governor -- here -- here's -- here's one thing...
+185	And that's why it's so critical, that we make America once again the most attractive place in the world to start businesses, to build jobs, to grow the economy.
+186	And this is one of the reasons why one of the first -- the first bill I signed was something called the Lily Ledbetter bill.
+187	And I want to continue those tax cuts for middle-class families, and for small business.
+188	But the military -- let's get back to the military, though.
+189	And production on private -- on government land --
+190	When it comes to our tax code, Governor Romney and I both agree that our corporate tax rate is too high, so I want to lower it, particularly for manufacturing, taking it down to 25 percent.
+191	I expect those new energy sources to be built right here in the United States.
+192	But I also believe that government has the capacity, the federal government has the capacity to help open up opportunity and create ladders of opportunity and to create frameworks where the American people can succeed.
+193	It just reminds me of, you know, he says that he's going to close deductions and loopholes for his tax plan.
+194	And also make sure that when they get out of college, there's a job.
+195	We cut taxes 19 times and balanced our budget.
+196	We have to be competitive if we're going to create more jobs here.
+197	And I'm not going to cede those jobs of the future to those countries.
+198	You know, I -- I don't look at my pension.
+199	And three-quarters of them said it makes us less likely to hire people.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2160	And you will see the dozens of sources which verify that he was for the invasion of Iraq.
+2161	The hardest decision a president makes is ever to use force.
+2162	And that's one of the reasons the Afghan Security Forces have so much work to do to be able to fight against that.
+2163	And if we did that, we'd have more consumption ability in America, which is what we need right now in order to kick our economy into gear.
+2164	You got a 265 billion dollar tax increase.
+2165	What I've done is set priorities and funded them.
+2166	And the final judgment about the future of the nation - war, peace, involvement, reticence, thoughtfulness, care, consideration, concern - has to be made by the man in the Oval Office.
+2167	I can't think of any.
+2168	Well, for 18 months he's been running on this tax plan.
+2169	I want a smaller and smarter government.
+2170	Now, my opponent says he's going to try to change the dynamics on the ground.
+2171	And if you want a tough President who uses that strength to get arms control and draws the line in the heavens, vote for Walter Mondale.
+2172	Senator McCain, this is the guy who sang, "Bomb, bomb, bomb Iran," who called for the annihilation of North Korea.
+2173	I said it was a mistake.
+2174	And I ask you to embark on that journey with me.
+2175	As president, I will make certain we travel it.
+2176	And if Mr. Carter alleges that His Holiness by signing that has done it, he is totally inaccurate.
+2177	We're a serious debtor nation.
+2178	And the WIC program, and the school lunch program with senators like George McGovern, Hubert Humphrey and others, to name a few of my Democratic friends.
+2179	Well, Warren would be a pretty good choice -- Warren Buffett, and I'm pleased to have his support.
+2180	You have thousands of mothers and fathers and relatives all over the country.
+2181	That's what works in other countries and that's what'll work here.
+2182	If the uh - list was, uh - in my opinion, fairly uniform, if there was no outstanding person, then I would undoubtedly choose someone who would most accurately reflect my own basic politi- political philosophy as best I could determine it.
+2183	My plan -- you can read my plan.
+2184	For those what I think we need to do is to develop an investment-type vehicle that would be an incentive for them to invest, like medical savings accounts with rollover capacity.
+2185	And you say Exxon and Mobil.
+2186	I think the General Motors thing is very relevant.
+2187	You can't disallow someone the right to visit their partner in a hospital.
+2188	If you think the Republican party is some place for you to come if you're narrow minded or bigoted or don't like certain people in America, the exits are clearly marked for you to walk out of as I stand here without compromise, because this is the party of Lincoln.
+2189	We could allow our troops to just be on the defensive and absorb those blows again and again and again, if Pakistan is unwilling to cooperate, or we have to start making some decisions.
+2190	On the broad issue here, when you're trying to solve a problem, you get the best plans.
+2191	You know, I -- I don't look at my pension.
+2192	And so, we've got to introduce high technology into health care.
+2193	We've been discouraged too long.
+2194	The fact of the matter is that the next president of the United States is going to have to go to the White House seriously, he is going to have to work with the Congress seriously he can't turn to the Congress and blame them for the fact that we don't have a balanced budget and that we have billions and billions of dollars in red ink.
+2195	As to Ferdinand Marcos, he isn't there any more.
+2196	That means we've got to work more closely with our allies, and that's something that Donald has been very dismissive of.
+2197	I think if you're going to have tax relief, everybody ought to get it.
+2198	We've added five hundred thousand jobs in the last two months.
+2199	But when we look at the growth of G.N.P.

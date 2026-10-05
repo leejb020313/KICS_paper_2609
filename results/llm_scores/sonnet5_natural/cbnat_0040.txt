@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	You know, just a couple of weeks ago, actually, probably about a month, I saw a mother, who I had met at the bedside of her son, who had been shot in that theater.
+41	And I do, both for corporations and for individuals.
+42	This is a -- this is an important election and I'm concerned about America.
+43	And what we've done when it comes to trade is not only sign three trade deals to open up new markets, but we've also set up a task force for trade that goes after anybody who is taking advantage of American workers or businesses and not creating a level playing field.
+44	And crippling sanctions are something I called for five years ago, when I was in Israel, speaking at the Herzliya Conference.
+45	I -- I served as a missionary for my church.
+46	And these businesses, many of them have gone out of business, I think about half of them, of the ones have been invested in have gone out of business.
+47	If I become president, I'll get America working again.
+48	I've got three part- time jobs.
+49	And then let's take the last one, championing small business.
+50	But let's -- let's mention -- let me mention the other one.
+51	Is -- is al-Qaida on the run, on its heels?
+52	Bob, Mr. President, folks at Lynn University, good to be with you.
+53	And that record shows he just hasn't been able to cut the deficit, to put in place reforms for Medicare and Social Security to preserve them, to get us the rising incomes we need.
+54	They have to make sure that they're cooperating with us when it comes to counterterrorism.
+55	But in order for us not to lose revenue, have the government run out of money, I also lower deductions and credits and exemptions, so that we keep taking in the same money when you also account for growth.
+56	And I say that because from the very beginning, the president in his campaign four years ago, said he would meet with all the world's worst actors in his first year, he'd sit down with Chavez and Kim Jong-il, with Castro and President Ahmadinejad of Iran.
+57	Now, I've identified areas where we can, right away, make a change that I believe would actually help the economy.
+58	It's not just Donald Trump you're taxing.
+59	He hasn't even made a proposal on either one.
+60	We need to be talking about space.
+61	I want to do those two things and get this -- get this to a balanced budget with eight -- eight to 10 years.
+62	They put out a plan, a bipartisan plan.
+63	For -- so if you're -- if you're 54 or 55, you might want to listen 'cause this -- this will affect you.
+64	And the plans that I talked about will create even more.
+65	You said that they could get it in the private marketplace.
+66	And your plan is to take the tax rate on successful small businesses from 35 percent to 40 percent.
+67	Well, let me talk specifically about what I think we need to do.
+68	And the number of small businesses I've gone to that are saying they're dropping insurance because they can't afford it, the cost of health care is just prohibitive.
+69	Because if you bring rates down, it makes it easier for small business to keep more of their capital and hire people.
+70	So we want to promote those principles around the world.
+71	What we can do to help young women and women of all ages is to have a strong economy, so strong that employers that are looking to find good employees and bringing them into their workforce and adapting to a flexible work schedule that gives women opportunities that they would otherwise not be able to afford.
+72	Now, Governor Romney just said, you know he wants to help those young people too, but during the Republican primary, he said, "I will veto the DREAM Act", that would allow these young people to have access."
+73	I'll make one more point.
+74	That's part of my health care plan.
+75	All right, I'm not going to cut education funding.
+76	Now, Governor Romney actually wants to expand those tax breaks.
+77	It's wonderful that Libya seems to be making some progress, despite this terrible tragedy.
+78	So, we have to make decisions based upon uncertainty, and that means a strong military.
+79	Boy, great question and important question, because you're absolutely right.

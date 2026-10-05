@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2560	And part of that is bringing in a pipeline of oil from Canada, taking advantage of the oil and coal we have here, drilling offshore in Alaska, drilling offshore in Virginia where the people want it.
+2561	And we would have lost a million jobs.
+2562	I'm happy to do that, too.
+2563	That's the kind of leadership we'll continue to show.
+2564	And I think they looked and thought, well, that's an unusual honor to receive from the President of the United States.
+2565	And coal, coal production is not up; coal jobs are not up.
+2566	And then that number disappears for high-income people.
+2567	The policies of the last four years have seen incomes in America decline every year for middle income families, now down $4,300 during your term.
+2568	Including Senators previously who had supported it on the Republican side.
+2569	That is not the kind of leadership that you need, but you should expect that those are promises he's going to keep.
+2570	We need to be thinking about cyber security.
+2571	He didn't call for self-deportation.
+2572	He's praised George Bush as a good economic steward and Dick Cheney as somebody who's -- who shows great wisdom and judgment.
+2573	When you add up all the loopholes and deductions that upper-income individuals can -- are currently taking advantage of, you take those all away, you don't come close to paying for $5 trillion in tax cuts and $2 trillion in additional military spending.
+2574	We can't expect entrepreneurs and businesses large and small to take their life savings or their company's money and invest in America if they think we're headed to the road to Greece.
+2575	We went because there were people who were responsible for 3,000 American deaths.
+2576	And there are some parts of Dodd-Frank that make all the sense in the world.
+2577	But I tell you, those workers don't feel that way.
+2578	That's the net of what's happened in the last four years.
+2579	I would say that ships that carry Iranian oil, can't come into our ports.
+2580	I want to bring it back and get back good jobs and rising take-home pay.
+2581	So it's adding to cost.
+2582	And these aren't just representatives of the United States, they are my representatives.
+2583	My grandmother, she started off as a secretary in a bank.
+2584	Well, let's step back and talk about what's happening in Syria and how important it is.
+2585	And, by the way the idea came not even from Paul Ryan or -- or Senator Wyden, who's the co-author of the bill with -- with Paul Ryan in the Senate, but also it came from Bill -- Bill Clinton's chief of staff.
+2586	First of all, I don't have a $5 trillion tax cut.
+2587	In addition, we're now able to transition out of Afghanistan in a responsible way, making sure that Afghans take responsibility for their own security.
+2588	I know what it takes to make sure that you have the kind of opportunity you deserve.
+2589	We're 9 million jobs short of that.
+2590	When you came to office 32 million people on food stamps.
+2591	How in the world the president said no to that pipeline?
+2592	We can care for our own poor in so much better and more effective a way than having the federal government tell us how to care for our poor.
+2593	What your plan does is to duplicate what's already the law, which says if you are out of health insurance for three months, then you can end up getting continuous coverage and an insurance company can't deny you if you've -- if it's been under 90 days.
+2594	And the -- the central question at this point is going to be: Who is going to be credible to all parties involved?
+2595	Well what you're seeing in this country is 23 million people struggling to find a job.
+2596	But, you know, if we get that tax rate from 35 percent down to 25 percent, why that $2.8 billion is on the table.
+2597	Because they have been hit hard over the last decade.
+2598	In the same way that you initially opposed a timetable in Afghanistan, now you're for it, although it depends.
+2599	Thank you to Hofstra University and to Candy Crowley for organizing and leading this -- this event.

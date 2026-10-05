@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2240	We have to have the benefits high for those that are low income, but for higher income people, we're going to have to lower some of the benefits.
+2241	When you've got thousands of people right now in Iowa, right now in Colorado, who are working, creating wind power with good-paying manufacturing jobs, and the Republican senator in that -- in Iowa is all for it, providing tax breaks (ph) to help this work and Governor Romney says I'm opposed.
+2242	You'll get your chance in a moment.
+2243	We also have 50 percent of doctors who say they won't take more Medicare patients.
+2244	We don't know what a qualified mortgage is yet.
+2245	And I -- I don't blame the administration for the fact that the relationship with Pakistan is strained.
+2246	We have made it less attractive for enterprises to stay here than to go offshore from time to time.
+2247	My plan was to have the company go through bankruptcy like 7-Eleven did and Macy's and Condell (ph) Airlines and come out stronger.
+2248	But when it came time to making sure that Gadhafi did not stay in power, that he was captured, Governor, your suggestion was that this was mission creep, that this was mission muddle.
+2249	I'm going to make sure --
+2250	That's the height of silliness...
+2251	Our Navy is old -- excuse me, our Navy is smaller now than at any time since 1917.
+2252	But the right answer is not to have the federal government take over health care and start mandating to the providers across America, telling a patient and a doctor what kind of treatment they can have.
+2253	In Egypt we stood on the side of democracy.
+2254	But once it exploded, I felt the same as the president did, which is these freedom voices and the streets of Egypt, where the people who were speaking of our principles and the President Mubarak had done things which were unimaginable and the idea of him crushing his people was not something that we could possibly support.
+2255	I'll do it by more drilling, more permits and licenses.
+2256	But I think it's important to step back and think about what happened in Libya.
+2257	Well, the primary responsibility for education is -- is, of course, at the state and local level.
+2258	And we're going to make sure that if they do not meet the demands of the international community, then we are going to take all options necessary to make sure they don't have a nuclear weapon.
+2259	I just don't know how the president could have come into office, facing 23 million people out of work, rising unemployment, an economic crisis at the -- at the kitchen table, and spend his energy and passion for two years fighting for Obamacare instead of fighting for jobs for the American people.
+2260	We -- we had to go into Pakistan.
+2261	I can tell you at the same time, that we will make sure that we look at what's happening in Pakistan, and recognize that what's happening in Pakistan is going to have a major impact on the success in Afghanistan.
+2262	When you came to office, just over $10 trillion in debt, now $16 trillion in debt.
+2263	Try and get a mortgage these days.
+2264	Well, that's how the commission -- bipartisan commission that talked about how we should move forward suggested we have to do it, in a balanced way with some revenue and some spending cuts.
+2265	And the reason is because small business pays that individual rate; 54 percent of America's workers work in businesses that are taxed not at the corporate tax rate, but at the individual tax rate.
+2266	We don't have to live like this.
+2267	I want to do that in industries, not just in Detroit, but all across the country and that means we change our tax code so we're giving incentives to companies that are investing here in the United States and creating jobs here.
+2268	I wanted to make it more effective and efficient.
+2269	Make up a number, $25,000, $50,000.
+2270	There are 3.5 million more women living in poverty today than when the president took office.
+2271	The price of electricity is up.
+2272	Health care costs have gone up by $2,500 a family.
+2273	But there were a lot of families who didn't have that good fortune and whose sons or daughters or husbands didn't survive.
+2274	That's not the right course for America.
+2275	Well, as I've indicated, I think that it has a significant role to play.
+2276	I like the fact that in my state, we had Republicans and Democrats come together and work together.
+2277	Number two, by stealing our intellectual property; our designs, our patents, our technology.
+2278	And they have said that they want to see Israel wiped off the map.
+2279	I appreciate wind jobs in Iowa and across our country.

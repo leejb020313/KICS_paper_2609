@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	If he's trying to allege that I'm a hard-hearted person and I don't care about children, he's absolutely wrong.
+241	And I hope that he'll be out of office very shortly.
+242	And people are willing to invest capital in the brown fields don't want to do so for fear of lawsuit.
+243	for a specific cause or a specific objective, come with such red tape, such priorities established by a bureaucracy in Washington, that the local government's hands are tied with regard to using that money as they feel could best be used, and for what they think might be the top priority.
+244	A cease-fire, the United States, Russia, and Syria.
+245	And, as a result, America is now bearing this extraordinary burden where we are not as safe as we ought to be.
+246	Number one, we've got to get the debt down to get the interest rates down so the economy will grow and people will be employed.
+247	We have in the Dole-Kemp economic plan, unless unless your home's worth over 500,000 dollars.
+248	That was their response to that sort of action.
+249	To stay strong, to stay at peace, to raise high the banner of human rights, to set an example for the rest of the world, to let our deep beliefs and commitments be felt by others in other nations, is my plan for the future.
+250	Now, the example that the President cites has nothing to do with abortion.
+251	And I can tell you right now the security of your young men and women who are serving in the military are my first priority right after our nation's security.
+252	Barb and I lost a child, you know that we lost a daughter, Robin.
+253	So, I don't think vouchers are the right way to go.
+254	We just did a drug bust a week earlier, and the guy we arrested had an AK-47 lying on the bed right beside him. "
+255	I've got three part- time jobs.
+256	I want to bring that change to the American people.
+257	And then we would have to start all over again.
+258	The Chinese Communists have always had a large population.
+259	Now, here's what I want to do.
+260	I would go after Baghdadi.
+261	On that question the Vice President and I disagreed.
+262	Those issues you mentioned, Social Security, prescription drugs, the big drug companies are against the prescription drug proposal that I've made.
+263	How could we have not known?
+264	I'm not even certain you were too excited about that.
+265	Another very important - uh aspect of our - uh economy would be to increase production in every way possible, uh to hold down - uh taxes on individuals, and to uh shift the tax burdens onto those who have avoided paying taxes in the past.
+266	We don't think that those people should be allowed to continue operating free.
+267	It does involve going after them online.
+268	I love the principle it's founded on.
+269	Well, these special kinds of programs have - have robbed the average taxpayer and have benefited those who are powerful, and who can employ lobbyists, and who can have their CPAs and their lawyers to help them benefit from the roughly uh - eight thousand pages of the tax code.
+270	Well, the Administration was the first major country to stand up to the abuse in Tiananmen Square.
+271	And we'll get you home as soon as the mission's done, because this is a vital mission."
+272	They just passed an electoral...
+273	Well he made the promise.
+274	I said that we'd go after al-Qaeda and bin Laden, we have.
+275	And now I suggest that maybe you go to some of these organizations that are the watchdogs of what we do, like the Citizens Against Government Waste or the National Taxpayers Union or these other organizations that watch us all the time.
+276	I was given the briefing and told that any time, night or day, I might be called upon to make the most fateful decision on Earth -- whether to fire these atomic weapons that could destroy the human species.
+277	Number 2, I think you have to take on specifically the insurance companies and require them to make some significant change in the way they rate people in the big community pools.
+278	And I think that the Constitution has a right to privacy in it that shouldn't be subject to state referendum, any more than our First Amendment rights are subject to state referendum, any more than many of the other rights that we have should be subject to popular vote.
+279	I have my own plan.

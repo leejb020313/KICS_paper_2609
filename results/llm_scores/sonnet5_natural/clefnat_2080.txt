@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2080	It's more difficult to defend this nation.
+2081	Mr. President, you measure it by whether you're getting the job done.
+2082	One of the best in advancing all kinds of benefits for children to grow up healthy and strong.
+2083	Is this any reason for complacency?
+2084	Right now, Syria is fighting ISIS.
+2085	It's not like you want to close the loopholes.
+2086	It's time for America to find new leadership.
+2087	Now, we're going to have to make sure that as we trade with other nations that they play by the rules.
+2088	One-third of the president's budget is at the president's discretion, or really the Congress, since they appropriate every dime and tell a president how to spend every dime.
+2089	But I think we've got to be very careful in balancing the ethics and the science.
+2090	He inherited the worst financial crisis since the Great Depression.
+2091	You know, Elizabeth, I really respect your -- the feeling that's in your question.
+2092	You have ancient ethnic rivalries that have cropped up as Yugoslavia's dissolved or getting dissolved, and it isn't going to be solved by sending in the 82nd Airborne, and I'm not going to do that as commander-in-chief.
+2093	But when these huge deficits went in place in 1981, what's called the real interest rates -- the spread between inflation and what a loan costs you doubled -- and that's still the case today.
+2094	But we cannot guarantee equal results in America.
+2095	We have had less man-hours lost by strikes in these last seven years than we had in the previous seven years, by a great deal.
+2096	In this case, in the case of a financial crisis, I would gather all the facts before I made the decision as to what the government ought or ought not to do.
+2097	We're going to have to put in place a very comprehensive and robust strategy to help the -- the world of Islam and other parts of the world, reject this radical violent extremism, which is -- it's certainly not on the run.
+2098	The problem I have with the Perot prescription is that almost all economists who've looked at it say that if you cut the deficit this much this quick it will increase unemployment, it will slow down the economy.
+2099	That's the net of what's happened in the last four years.
+2100	And if I'm elected president, I will do something about that.
+2101	Now, as far as the lawsuit, yes, when I was very young, I went into my father's company, had a real estate company in Brooklyn and Queens, and we, along with many, many other companies throughout the country -- it was a federal lawsuit -- were sued.
+2102	And I also agree that most police officers, of course, are doing a good job and hate this practice also.
+2103	But Jesse Jackson is an independent person.
+2104	Whether it be bringing climate change to the floor of the Senate for the first time.
+2105	For example, Germany will spend a trillion dollars building infrastructure over the next 10 years.
+2106	The US is doing better than a lot.
+2107	Teddy Roosevelt used to talk about the arena, you know, daring to fail greatly or succeed, no matter.
+2108	I've acknowledged that in union halls across the country.
+2109	Our country is not strong anymore; we're not respected anymore.
+2110	Look at the evidence of the last four years.
+2111	I don't see any evidence that it's a deterrent, and I think there are better and more effective ways to deal with violent crime.
+2112	That's going to be up to the people, isn't it?
+2113	They oppose mine because they don't want to get Medicare involved because they're afraid that Medicare will negotiate lower prices for seniors who currently pay the highest prices of all.
+2114	He puts no real assets into the Social Security system.
+2115	Thank you very, very much.
+2116	And the way you get things done is bury yourselves in the room with one another, put together the best program, take it to the American people, use the electronic town hall, the kind of thing you're doing here tonight, build a consensus and then do it and then go on to the next one.
+2117	First of all, to channel research and development funds into areas that will provide uh large numbers of jobs.
+2118	And if we'd used smart diplomacy, we could have saved $200 billion and an invasion of Iraq.
+2119	I can do a better job of waging a smarter, more effective war on terror and guarantee that we will go after the terrorists.

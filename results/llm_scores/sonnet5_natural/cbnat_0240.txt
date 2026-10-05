@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+240	... the small businesses we're talking about...
+241	Of course we see in Syria, 30,000 civilians having been killed by the military there.
+242	But I do want to reduce the burden being paid by middle-income Americans.
+243	But in the past, Governor Romney has said he just want to repeal Dodd- Frank, roll it back.
+244	And the way we do it is $2.50 for every cut, we ask for $1 of additional revenue, paid for, as I indicated earlier, by asking those of us who have done very well in this country to contribute a little bit more to reduce the deficit.
+245	Imagine if we had pulled out at that point.
+246	We're a nation that believes that we're all children of the same god and we care for those that have difficulties, those that are elderly and have problems and challenges, those that are disabled.
+247	And his forecast for the next four years is more deficits, almost that large.
+248	Bill and that allowed him to go to college, that wasn't a handout.
+249	But I find more troubling than this, that on -- on the day following the assassination of the United States ambassador, the first time that's happened since 1979, when -- when we have four Americans killed there, when apparently we didn't know what happened, that the president, the day after that happened, flies to Las Vegas for a political fund-raiser, then the next day to Colorado for another event, other political event.
+250	But that's not what you've done in the last four years.
+251	I said I would cut taxes for small businesses, who are the drivers and engines of growth.
+252	She said, I can't be here until 7 or 8 o'clock at night.
+253	You're going to get a repeat of the last four years.
+254	I expect to have the opportunity to do so myself.
+255	That's not the way we're going to create jobs here.
+256	And why do I want to bring rates down, and at the same time lower exemptions and deductions, particularly for people at the high end?
+257	That's what I've been doing for the last four years.
+258	My plan is not to put in place any tax cut that will add to the deficit.
+259	I need to be able to get home at 5 o'clock so I can be there for making dinner for my kids and being with them when they get home from school.
+260	I'll get us on track to a balanced budget.
+261	And with regards to young people coming along, I've got proposals to make sure Medicare and Social Security are there for them without any question.
+262	But the idea of cutting $716 billion from Medicare to be able to balance the additional cost of Obamacare is, in my opinion, a mistake.
+263	Energy is critical, and the president pointed out correctly that production of oil and gas in the U.S. is up.
+264	My priority is making sure that we get more people hired.
+265	But let me -- let me come back -- we can come back.
+266	And what I'm afraid of is we've watched over the past year or so, first the president saying, well we'll let the U.N. deal with it.
+267	I think most Americans would say that doesn't make sense.
+268	That's -- Governor, you're the last person who's going to get tough on China.
+269	And in Medicare, what we did was we said, we are going to have to bring down the costs if we're going to deal with our long-term deficits, but to do that, let's look where some of the money's going.
+270	That's why I want to down the tax rates on small employers, big employers, so they want to be here.
+271	And I'll bring that pipeline in from Canada.
+272	Governor Romney says, well, those top 3 percent, they're the job creators, they'd be burdened.
+273	We can get this economy going again.
+274	And there was no demonstration involved.
+275	And the best course for health care is to do what we did in my state: craft a plan at the state level that fits the needs of the state.
+276	Social Security is structurally sound.
+277	You put $90 billion into -- into green jobs.
+278	They're suffering in this country.
+279	Our relationship with Israel, my relationship with the prime minister of Israel is such that we would not get a call saying our bombers are on the way, or their fighters are on the way.

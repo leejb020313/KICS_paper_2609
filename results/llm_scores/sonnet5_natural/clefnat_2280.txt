@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2280	I want to change many of its provisions.
+2281	And we have to vote it up or down, Mr. President.
+2282	If you're 10 we'll put you here, 12 you put here.
+2283	And acting upon that lesson in the aftermath of our great victory in World War II, we laid down the Marshall Plan, President Truman did.
+2284	I'll just have to tell Mr. Morton that.
+2285	Number 2, I think it would increase the influence of unelected staff members in the Congress who have too much influence already.
+2286	The CBO said very clearly that if you were to adopt the president's plan, there would be a $2 trillion hole in Social Security, because today's workers pay in to the system for today's retirees.
+2287	I have a plan for doing that.
+2288	If it ever becomes necessary, and is wise economically and essential to our security, I would have no hesitancy in suggesting a tax increase or any other policy which would defend the United States.
+2289	You know, I fell off a platform out in California, Chico, a while back.
+2290	Now there isn't a dollar shortage, and yet many of these countries continue to move against our goods.
+2291	Well I think this Republican administration has been almost all style, and spectacular, and not substance.
+2292	And, very simply, in the inner city, they're starved -- you see, small business is the way to jump start the inner city, not --
+2293	And in that process, they can get government help and government guarantees, but they need to go through bankruptcy to get rid of excess cost and the debt burden that they'd -- they'd built up.
+2294	Well, I think -- let's talk about taxes, because I think it's instructive.
+2295	You know the Japanese are breathing down our necks on this.
+2296	And I believe if we do a better job in education, we'll -- we'll give people the -- the hope and opportunity they deserve and perhaps less violence from that.
+2297	That is not in conflict with sensible, commonsense regulation.
+2298	In the terrorist situation, there are terrorist factions all over.
+2299	And, in fact, an across-the-board spending freeze is a hatchet, and we do need a scalpel, because there are some programs that don't work at all.
+2300	There are certain army bases that the act calls for that can be used in certain cases to shelter people when it's rough.
+2301	That's not what we are going to do.
+2302	But there are limits to what we can spend.
+2303	I think that we're showing the proper compassion and concern.
+2304	No, but I pay tax, and I pay federal tax, too.
+2305	You can't change the dynamics on the ground if you've criticized the brave leader of Iraq.
+2306	The President says that when the Democratic Party made its turn, he left it.
+2307	I would like to unite this country to get an agenda done that will speak to the hopes and aspirations of the future.
+2308	I want to make America the most attractive place in the world for entrepreneurs, for small business, for big business, to invest and grow in America.
+2309	Humvees -- 10,000 out of 12,000 Humvees that are over there aren't armored.
+2310	Earmarks account for 0.5 percent of the total federal budget.
+2311	Do you know that he voted for every increase in spending that I saw come across the floor of the United States Senate while we were working to eliminate these pork barrel earmarks?
+2312	All of this can be cured and all of it can be solved.
+2313	We can get into a war by letting events get out of hand, as they have in the last three and a half years under the foreign policies of this Administration of Mr. Carter's, until we're faced each time with a crisis.
+2314	When I'm President of the United States, we're going to use the National Guard and whatever sources we need to stop some of the drugs coming into America.
+2315	Mr. Vice President, thank you very much, and I would like to thank the folks here at Wake Forest, and I want to thank you all for listening.
+2316	But our goal is to get Iran to recognize it needs to give up its nuclear program and abide by the U.N. resolutions that have been in place.
+2317	So we're now going to take Mosul.
+2318	I think that we also have to keep a weather eye toward Saddam Hussein because he is taking advantage of this situation to once again make threats, and he needs to understand that he's not only dealing with Israel, he is dealing -- he's dealing with us if he is making the kind of threats that he's talking about there.
+2319	For a return to traditions and values that we once had.

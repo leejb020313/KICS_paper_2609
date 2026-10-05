@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	Quotas tend to pit one group of people against another.
+201	When that field is online it will produce one million barrels a day.
+202	Well, first of all, I admire Senator Kerry's service to our country.
+203	Can they rely on us?
+204	I have major disagreements with my opponent about these issues and others that will be before the Supreme Court.
+205	They can buy a computer for their kid who's going off to college, which means they're spending more money, businesses have more customers, businesses make more profits, and then hire more workers.
+206	I have a clear record of bipartisanship.
+207	That's one way one could do it.
+208	I think most people know that I did not seek the presidency.
+209	Well, I'll tell you what it means.
+210	I think of Dr. Fauci.
+211	It was part of our other economic plan.
+212	I consider myself in the mainstream even of the bipartisan list of Presidents who served before me.
+213	I want to underline that: no tax cut that adds to the deficit.
+214	And if they can't do it, if the Congress can't do it, let them then have to do it across the board.
+215	You know, my father came from Kenya.
+216	And in terms of peace, we are on the right track.
+217	It is the same overall strategy.
+218	I think I've addressed it.
+219	We certainly must maintain an engagement there.
+220	If people would say, well, he got elected to do this and then the Congress says, okay, I'm going to do it.
+221	Government always needs the money it gets.
+222	The Patriot Act is vital, by the way.
+223	The government pays for Medicare and Medicaid, as you know, and that's very important.
+224	But there have been too many instances during the course of my presidency, where I've had to comfort families who have lost somebody.
+225	Why, I had a great response to that.
+226	The governor used the phrase phony numbers, but if you look at the plan and add the numbers up, these numbers are correct.
+227	So, it is good fo the American people to remember that there is a sharp basic historical difference between Governor Reagan and me on these crucial issues - also, between the two parties that we represent.
+228	She's the 36th student in that classroom.
+229	First let me just say one comment about what the vice president said.
+230	And I'm so proud of what she accomplished in getting them on there.
+231	So with all the talk about family values, I know about family values -- I wouldn't be here without them.
+232	You were trying to defend your cut which was not a cut either, Reduction in the growth of spending.
+233	In other words, you say to a youngster, it will be in your financial interest to start saving for future illness, but for the working folks that do want to have health care that can't afford it, a couple of things we need to do.
+234	But when we get rid of those lines, you will have competition, and we will be able to keep pre-existing, we'll also be able to help people that can't get -- don't have money because we are going to have people protected.
+235	And if you can't get there, just recognize we're all stuck with one another because nobody's going anywhere, right?
+236	You may have said that, too.
+237	But I want to respond to what Donald said about refugees.
+238	My opponent said that America must pass a global test before we used force to protect ourselves.
+239	I don't agree with nearly anything else he says or does, but I do respect that.

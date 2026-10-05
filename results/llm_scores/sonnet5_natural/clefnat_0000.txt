@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	The ideals and the values of the United States inspired the entire world.
+1	But I want to emphasize that what is at stake here is the ambitions and the aggressiveness of Russia.
+2	We learned that Bernie Sanders was taken advantage of by your people, by Debbie Wasserman Schultz.
+3	When we talk about child care, and the credits that we're providing.
+4	We feel that there must be a continued obligation to the people, the some nineteen or twenty million people in Taiwan.
+5	Medicaid's in one agency; Medicare is in a different one.
+6	And everybody's getting a fair shot.
+7	Uh - He sent a mission - the President - in 1955 of Mr. uh - Robertson and Admiral Radford.
+8	So we have -- as we said, if you want to keep doing business and selling your products over here, you're going to have to quit pirating our CDs, and they agreed to do things and verify that they had done it, which will make the problem much better.
+9	Well, very quickly, we at the Clinton Foundation spend 90 percent -- 90 percent of all the money that is donated on behalf of programs of people around the world and in our own country.
+10	That's why I'd have regulation.
+11	Called James Watt an excellent Secretary of the Interior?
+12	If Iran acquires nuclear weapons, all the other countries will acquire them, too.
+13	We believe that you can uhh - do something more effectively with a moderate increase in money in the drug abuse program.
+14	And people, Chris, will again go back to work and they'll make a lot of money.
+15	We wish you a lot of luck.
+16	My Social Security payroll contribution will go up, as will Donald's, assuming he can't figure out how to get out of it.
+17	We haven't been paying attention to them.
+18	How's it going to affect my house?
+19	That's -- that's important, of course.
+20	You are robbing the American people of their savings.
+21	Abraham Lincoln came to the presidency in 1860 after a rather little known uh - session in the House of Representatives and after being defeated for the Senate in fifty-eight and was a distinguished president.
+22	I vetoed 993 measures without having a veto overturned.
+23	Take a look at Libya.
+24	I think something this big, this important has to be done on a bipartisan basis.
+25	We've expanded Pell Grants by a million students.
+26	He said I misled on Iraq.
+27	I don't believe trickle down economics will work.
+28	In the last few years government has gotten bigger and bigger; industry has gotten larger and larger; labor unions have gotten bigger and bigger; and our children have been the victims of mass education.
+29	I agree with Senator Kennedy completely on that score.
+30	They're foreign lobbyists taking leaves.
+31	I believe we need some fairness.
+32	If we don't repeal and replace -- now, it's probably going to die of its own weight.
+33	And it was one of the largest declines in our history.
+34	We're going to reform our intelligence services to make sure that we get the best intelligence possible.
+35	I am trying to provide leadership now, before the election, so that the American people can participate in that decision.
+36	But you're investing in companies doesn't do that.
+37	But, frankly, I look -- I look at that, and I say, isn't that amazing?
+38	would agree with us as well.
+39	Again and again and again, in the middle of the night, at 2 or 3 o'clock in the morning, my government has called me to take extraordinary steps for Americans in distress, and again and again and again I have responded.

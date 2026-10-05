@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2360	Those are the kinds of choices that the American people face right now.
+2361	This is what I have done.
+2362	My plan to get the industry on its feet when it was in real trouble was not to start writing checks.
+2363	And so what can we do to intervene, to make sure that young people have opportunity; that our schools are working; that if there's violence on the streets, that working with faith groups and law enforcement, we can catch it before it gets out of control.
+2364	My plan has five basic parts.
+2365	That's why we've kept on pushing trade deals, but trade deals that make sure that American workers and American businesses are getting a good deal.
+2366	Your question -- your question is one that's being asked by college kids all over this country.
+2367	Cutting our education budget, that's not a smart choice.
+2368	And by the way, I've had that experience.
+2369	But I believe -- we want to make sure that we have the relationships of friendship with the people that take his place, steps that in the years to come we see Syria as a -- as a friend, and Syria as a responsible party in the Middle East.
+2370	Number three, we do have to make sure that we're protecting religious minorities and women because these countries can't develop unless all the population, not just half of it, is developing.
+2371	The disagreement I have with Governor Romney is that, during the course of this campaign, he's often talked as if we should take premature military action.
+2372	The way we're going to create jobs here is not just to change our tax code, but also to double our exports.
+2373	And so we have to understand that we can't just surrender and lose jobs year in and year out.
+2374	I know that you and your running mate keep saying that and I know it's a popular thing to say with a lot of people, but it's just not the case.
+2375	I want 100 percent of the American people to have a bright and prosperous future.
+2376	So for instance, I would not give driver's licenses to those that have come here illegally as the president would.
+2377	What I will do is I'll put in place an employment verification system and make sure that employers that hire people who have come here illegally are sanctioned for doing so.
+2378	Giving them access to higher education.
+2379	I mean, you have to have regulations so that you can have an economy work.
+2380	It wasn't thought through properly.
+2381	All those changes in our tax code would make a difference.
+2382	And then you cut education spending when you came into office.
+2383	They can take the diplomatic route and end their nuclear program or they will have to face a united world and a United States president, me, who said we're not going to take any options off the table.
+2384	It's all those businesses that employ one-quarter of the workers in America; these small businesses that are taxed as individuals.
+2385	It's critical to our future.
+2386	I think they looked at that and saw weakness.
+2387	Canada's tax rate on companies is now 15 percent.
+2388	As a matter of fact, Latin America's economy is almost as big as the economy of China.
+2389	If we had taken your advice Governor Romney about our auto industry, we'd be buying cars from China instead of selling cars to China.
+2390	First of all, the Department of Energy has said the tax break for oil companies is $2.8 billion a year.
+2391	And they can look at my track record, whether it's Iran sanctions, whether it's dealing with counterterrorism, whether it's supporting democracy, whether it's supporting women's rights, whether it's supporting religious minorities.
+2392	And I don't believe employers should tell someone whether they could have contraceptive care of not.
+2393	Number one, we are going to have North American energy independence.
+2394	This is not because I didn't have commitment to education.
+2395	Cutting our investments in research and technology, that's not a smart choice.
+2396	Look, we have to have regulation on Wall Street.
+2397	It's important for the nuclear weapons.
+2398	And they don't have the same capacities to attack the U.S. homeland and our allies as they did four years ago.
+2399	This is obviously an area of great concern to the entire world, and to America in particular, which is to see a -- a complete change in the -- the structure and the -- the environment in the Middle East.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1640	In the meantime, by the way, we also made sure that all the help that we provided those banks was paid back every single dime, with interest.
+1641	When we talk about child care, and the credits that we're providing.
+1642	He's in the electronics business in -- in St. Louis.
+1643	And the reality is it's not just wealthy people -- you mentioned Donald Trump.
+1644	And we want to encourage that.
+1645	But when you were a candidate in 2008, as I was, and I said if I got bin Laden in our sights I would take that shot, you said we shouldn't move heaven and earth to get one man.
+1646	You've now heard three debates, months of campaigning and way too many TV commercials.
+1647	Well, thank you very much, Jim, for this opportunity.
+1648	If we're not training engineers to make sure that they are equipped here in this country.
+1649	There's even an Apple store in China that's a counterfeit Apple store, selling counterfeit goods.
+1650	Libya's 6 million population; Egypt, 80 million population.
+1651	This was the president's plan.
+1652	The president hasn't balanced a budget yet.
+1653	And when it comes to tightening sanctions, look, as I said before, we've put in the toughest, most crippling sanctions ever.
+1654	And we've cut them 18 times.
+1655	But, number one, preexisting conditions are covered under my plan.
+1656	That's not the kind of advocacy that women need.
+1657	But I do not want to see a military involvement on the part of our -- of our troops.
+1658	And if we lower that rate, they will be able to hire more people.
+1659	No, I don't, because I think that America has to stand with democracy.
+1660	The budget that we are talking about is not reducing our military spending.
+1661	I said that I'd end the war in Iraq, and I did.
+1662	And the fact is, while we were coordinating an international coalition to make sure these sanctions were effective, you were still invested in a Chinese state oil company that was doing business with the Iranian oil sector.
+1663	All those things are designed to make sure that the American people, their genius, their grit, their determination, is -- is channeled and -- and they have an opportunity to succeed.
+1664	Veterans who've sacrificed for this country.
+1665	That makes a difference in whether they can go out there and -- and earn a living for their family.
+1666	But over time, what they can do is regain credibility.
+1667	Governor Romney, you did not...
+1668	Every free economy has good regulation.
+1669	We don't have to settle for what we're going through.
+1670	We've got to do that in Washington.
+1671	... talked about Medicaid and how we could send it back to the states, but effectively this means a 30 percent cut in the primary program we help for seniors who are in nursing homes, for kids who are with disabilities.
+1672	And the amount of debt we're adding, at a trillion a year, is simply not moral.
+1673	And so one of the things that we've been doing is, is, for example, organizing entrepreneurship conferences with these Egyptians to give them a sense of how they can start rebuilding their economy in a way that's noncorrupt, that's transparent.
+1674	It holds down the prices of their goods.
+1675	And so what I want is a -- is a comprehensive strategy.
+1676	I don't think anyone really believes that you're a person who's going to be pushing for oil and gas and coal.
+1677	Government does not create jobs.
+1678	Those who've come here illegally take their place.
+1679	That's creating tens of thousands of jobs all across the country.

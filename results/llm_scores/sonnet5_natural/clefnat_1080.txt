@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1080	During the Clinton years, as you may recall, there was a fight over affirmative action.
+1081	And when I'm president, I will go line by line to make sure that we are not spending money unwisely.
+1082	I'm really excited about getting it done, too.
+1083	I'm not that concerned. "
+1084	And Senator Obama is parsing words when he says precondition means preparation.
+1085	The fact happens to be that education spending is up by the federal government; it is up.
+1086	And that means being smart about allowing people to be fully educated, to know what their options are in life, and making certain that you don't deny a poor person the right to be able to have whatever the constitution affords them if they can't afford it otherwise.
+1087	I would have hoped that the president of the United States would have been possible for him to indicate it clearly that uh - the Supreme Court decision was going to be carried out.
+1088	We had to make cuts.
+1089	You got to send down some more people, because the president's found out there are death squads on his on his, in his own property.
+1090	Now, the three things they try to say I've changed position on are the Patriot Act; I haven't.
+1091	For a belief that law must be based on a higher law.
+1092	This is indeed a very important issue.
+1093	I wrote a book about it several years ago -- six, seven years ago -- called "The New War," which saw the difficulties of this international criminal network.
+1094	If you're from Washington, you want to pick and choose winners.
+1095	And yet the cash register's empty and it used to have our money, the taxpayers' money, in it, and we didn't get the results.
+1096	It only whets their appetite; and then the question comes, when do you stop them?
+1097	And after that, a number of women have come forward saying that's exactly what he did to them.
+1098	As an example, in San Bernardino, many people saw the bombs all over the apartment of the two people that killed 14 and wounded many, many people.
+1099	Susan, I don't agree that there are no women and minorities in important positions in my campaign.
+1100	The uh - description just made of this administration's record is hard to uh - recognize.
+1101	And if you look at CNN this past week, Patti Solis Doyle was on Wolf Blitzer saying that this happened.
+1102	We also need to provide an adequate supply of enriched uranium.
+1103	We keep the good faith and credit of the United States.
+1104	In fact, it doesn't ask you to do anything -- if you don't want to take it, you don't have to.
+1105	I worked with Senator Mitchell, who played me, I guess, in the debate warmup.
+1106	First of all, what kind of mixed message does it send when you have $500 million going over to Iraq to put police officers in the streets of Iraq, and the president is cutting the COPS program in America?
+1107	Does this show that Communism has the bigger pull, or freedom has the bigger pull?
+1108	So I want to keep the quality of health care.
+1109	And I think the housing community is ready.
+1110	And I have said again and again and again let's get off mud wrestling, let's get off personalities and let's talk about jobs, health care, crime, the things that concern the American people.
+1111	But again, I did not hear a repudiation of Congressman...
+1112	But if we keep the lid on federal spending, which I think we can - with the help of the Congress, we can justify fully a $28 billion tax reduction.
+1113	Fourthly, I believe we should not carry out a hard money, high interest rate policy which helped intensify certainly the recession of 1958, and I think helped bring the slow-down of 1960.
+1114	Former chief of the -- Joint Chiefs of Staff said that -- Admiral Mullen said that our debt is the biggest national security threat we face.
+1115	They were injured, but they turned the lights on and they powered their factories.
+1116	The disagreement I have with Governor Romney is that, during the course of this campaign, he's often talked as if we should take premature military action.
+1117	Then you get what you want, and shouldn't you?
+1118	I don't believe that Mr. Mondale has a plan for balancing the budget; he has a plan for raising taxes.
+1119	Well, that is just not accurate.

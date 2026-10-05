@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	My grandfather died a while back.
+401	It's time for a new path.
+402	So we just have a different theory.
+403	Of course it's on the table.
+404	Well, I definitely think there are differences.
+405	I mean, I had a friend who said you don't just pick the winners and losers, you pick the losers, all right?
+406	And if we're strong in each of those things, American influence will grow.
+407	But my experience -- my experience the private sector typically is able to provide a better product at a lower cost.
+408	Well, but -- but virtually -- virtually everything he just said about my tax plan is inaccurate.
+409	Today, 47 million people are on food stamps.
+410	So this -- this is not -- this is not the kind of policy you want to have if you want to get America energy secure.
+411	You know, under my leadership, what we've done is reformed education, working with governors, 46 states.
+412	For what purpose it was put in place, I can't imagine.
+413	We don't know what the world is going to throw at us down the road.
+414	I'm sorry, Jim, I'm going to stop the subsidy to PBS.
+415	But I think that one area we agree on is the important of parents and the importance of schools, because I do believe that if our young people have opportunity, then they are less likely to engage in these kinds of violent acts.
+416	One way, for instance, would be to have a single number.
+417	We're going to bring that pipeline in from Canada.
+418	And when you move to a voucher system, you are putting seniors at the mercy of those insurance companies.
+419	As you hear from intelligence sources even today, the -- the insurgents are highly disparate.
+420	I have sat down with Democrats and Republicans at the beginning of my term.
+421	All of those things will make a difference, so the point is the commitments I've made, I've kept.
+422	This is about bringing good jobs back for the middle class of America, and that's what I'm going to do.
+423	It means our goods aren't as competitive and we lose jobs.
+424	You don't have to have the government mandate that for that to occur.
+425	We have freed other nations from dictators.
+426	The problem is they'll be in china.
+427	It's bigger than our respective parties.
+428	And the answer is, yes, we can help, but it's going to take a different path.
+429	The surge has been successful and the training program is proceeding apace.
+430	I said we'd transition out of Afghanistan, and start making sure that Afghans are responsible for their own security, that's what I'm doing.
+431	Fourth, there was a survey done of small businesses across the country, said, what's been the effect of Obamacare on your hiring plans?
+432	I want to build on our strengths.
+433	I'm excited about our prospects as a nation.
+434	I think it's, frankly, not moral for my generation to keep spending massively more than we take in, knowing those burdens are going to be passed on to the next generation and they're going to be paying the interest and the principal all their lives.
+435	Candy, there's no doubt that world demand's gone up, but our production is going up, and we're using oil more efficiently.
+436	And I think it's important to know that that was a process that was necessary to get those companies back on their feet, so they could start hiring more people.
+437	It's an honor to be here with you, and I appreciate the chance to be with the president.
+438	And that plan is to make sure that folks at the top play by a different set of rules.
+439	But I've made a different bet on American workers.

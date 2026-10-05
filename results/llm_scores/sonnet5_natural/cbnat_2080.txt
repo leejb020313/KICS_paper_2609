@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2080	Whether there was some misleading, or instead whether we just didn't know what happened, you have to ask yourself why didn't we know five days later when the ambassador to the United Nations went on TV to say that this was a demonstration.
+2081	Now there are some 10,000 centrifuges spinning uranium, preparing to create a nuclear threat to the United States and to the world.
+2082	I -- I was -- I was someone who ran businesses for 25 years, and balanced the budget.
+2083	But, of course, if you're a small business or a mom-and-pop business or a big business starting up here, you've got to pay even the reduced rate that Governor Romney's talking about.
+2084	I ran the -- the state of Massachusetts as a governor, to the extent any governor does, and balanced the budget all four years.
+2085	In fact, just recently steelworkers in Ohio and throughout the Midwest -- Pennsylvania -- are in a position now to sell steel to China because we won that case.
+2086	We should make sure our legal system works.
+2087	If you're getting interest from a bank, if you're getting a statement from a mutual fund or any other kind of investment you have, you don't have to worry about filing taxes on that, because there'll be no taxes for anybody making $200,000.00 per year and less, on your interest, dividends and capital gains.
+2088	The role of government is to promote and protect the principles of those documents.
+2089	And -- and attacking me is not an agenda.
+2090	If we're going to talk about trips that we've taken -- when I was a candidate for office, first trip I took was to visit our troops.
+2091	There are a lot of points I want to make tonight, but the most important one is that 20 years ago I became the luckiest man on Earth because Michelle Obama agreed to marry me.
+2092	So, for example, on wind energy, when Governor Romney says "these are imaginary jobs."
+2093	We're talk about those two paths.
+2094	I -- I know this is bigger than an election about the two of us as individuals.
+2095	But we also believe in maintaining for individuals the right to pursue their dreams and not to have the government substitute itself for the rights of free individuals.
+2096	So nobody is more concerned about their safety and security than I am.
+2097	Fifty-four percent of America's workers work in businesses that are taxed as individuals.
+2098	In fact he is on Medicare.
+2099	As Commander in Chief, I will maintain the strongest military in the world, keep faith with our troops and go after those who would do us harm.
+2100	But unfortunately, in -- nowhere in the world is America's influence greater today than it was four years ago.
+2101	But what I've also said is that now that you have a democratically elected government in Egypt, that they have to make sure that they take responsibility for protecting religious minorities.
+2102	But, you should pay attention to this campaign, because Governor Romney has made some commitments as well.
+2103	But, look, my philosophy has been, I will take ideas from anybody, Democrat or Republican, as long as they're advancing the cause of making middle-class families stronger and giving ladders of opportunity to the middle class.
+2104	We know that the path we're taking is not working.
+2105	Bringing down our deficit by adding $7 trillion of tax cuts and military spending that our military is not asking for, before we even get to the debt that we currently have, that is not going to make us more competitive.
+2106	So if you're starting a business, where would you rather start it?
+2107	And one last thing -- just -- just to make this point.
+2108	There -- there are people in Iran who have the same aspirations as people all around the world for a better life.
+2109	And the reason we did this is because a nuclear Iran is a threat to our national security, and it is a threat to Israel's national security.
+2110	Number three, it puts in place an unelected board that's going to tell people ultimately what kind of treatments they can have.
+2111	I'll restore the vitality that gets America working again.
+2112	Why am I lowering taxes on the middle-class?
+2113	I just want to take one of those points, again, attacking me as not talking about an agenda for -- for getting more trade and opening up more jobs in this country.
+2114	Now, so what this board does is basically identifies best practices and says, let's use the purchasing power of Medicare and Medicaid to help to institutionalize all these good things that we do.
+2115	And today there's a memorial service for one of those that was lost in this tragedy.
+2116	And when Governor Romney stands here, after a year of campaigning, when during a Republican primary he stood on stage and said "I'm going to give tax cuts" -- he didn't say tax rate cuts, he said "tax cuts to everybody," including the top 1 percent, you should believe him because that's been his history.
+2117	Then when there were dissidents in the streets of Tehran, a Green Revolution, holding signs saying, is America with us, the president was silent.
+2118	We have to help these nations create civil societies.
+2119	Candy, it's not going to --

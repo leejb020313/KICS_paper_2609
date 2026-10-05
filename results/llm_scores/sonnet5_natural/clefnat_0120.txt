@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	Why take it in the first place if you're going to give it back?
+121	I've heard of those dividends in the past; it always happens.
+122	We have a situation in this country that has to be taken care of.
+123	Seventy percent of my state's money goes to the public schools, and I was really honored when Time magazine said that our schools have shown more improvement than any other state in the country except one other -- they named 2 states showing real strides forward in the 80s.
+124	In addition to that, we just passed a sweeping small business reform that makes it easier for small business people to take out 401 K plans for themselves and employees and much easier for employees to carry it from job to job.
+125	I will tell you this: I will not give anyone special treatment and I will strictly adhere to the law.
+126	It's going to help Jeremy get a job when he comes out of school.
+127	Well, we've taken the first step.
+128	You're going to be examining our proposals tonight and in the future, and energy independence is a way to do that, is one of them.
+129	And I was making the point that it is hard sometimes to get the Congress to do what you want to do and you have to keep working at it.
+130	They can't have an election right now.
+131	Uh - I might make a correction uh - of what uh - Governor Carter said, uh speaking of uh - uh - gun control, uh - yes, it is true, I believe that the sale of uh - Saturday Night S- Specials should be cut out, but he wants the registration of handguns.
+132	And we have a Fed that's doing political things.
+133	I'm a Catholic, raised a Catholic.
+134	In giving our people better mental health care, we increased the number of employees.
+135	Let's talk about housing which the question was.
+136	I'm in favor of testing as a way of measuring performance.
+137	But this law can be used as leverage to get other countries to help us to move Cuba to democracy.
+138	Justice Scalia, great judge, died recently.
+139	But I'm very -- that's one of the real success stories here of the work we've done.
+140	That might be the explanation, if you tell me the program.
+141	how well it could be done.
+142	Soldiers know over there that this isn't being done right yet.
+143	I want to do something about that.
+144	I believe that we have to win this.
+145	And then the president began what I have called an apology tour, of going to various nations in the Middle East and criticizing America.
+146	And in Crawford, Texas, Jiang Zemin and I agreed that the nuclear-weapons-free peninsula, Korean Peninsula, was in his interest and our interest and the world's interest.
+147	And I believe this is a final verdict on the failed economic policies of the last eight years, strongly promoted by President Bush and supported by Senator McCain, that essentially said that we should strip away regulations, consumer protections, let the market run wild, and prosperity would rain down on all of us.
+148	But the joint chiefs say we're stronger and more confident and solid than ever.
+149	I have made the cause of children and families really my life's work.
+150	But as long as they have an economy that leaves so many people in dire poverty and unemployment, they are going to seek that employment across our borders.
+151	It's sort of their golden oldie, you know.
+152	What I worry about with the president is that he's not acknowledging what's on the ground, he's not acknowledging the realities of North Korea, he's not acknowledging the truth of the science of stem-cell research or of global warming and other issues.
+153	Over the next four years, we'll continue to rally the armies of compassion, to help heal the hurt that exists in some of our country's neighborhoods.
+154	But because I still believe that there is some discrimination and that not everybody has an opportunity to prove they're qualified, I favor the right kind of Affirmative Action.
+155	I do want to make sure that...
+156	In the last five pres- vice presidential uh - nominees, uh - incumbents, three of them have become president.
+157	I think the lesson in Central America, this recent embarrassment in Nicaragua where we are giving instructions for hired assassins, hiring criminals, and the rest -- all of this has strengthened our opponents.
+158	When my husband was president, we went from a $300 billion deficit to a $200 billion surplus and we were actually on the path to eliminating the national debt.
+159	We can have health care for all Americans.

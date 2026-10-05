@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	Let -- let -- let's...
+641	I've worked hard to help families impart values to their own children.
+642	They were completely beyond the pale of the law, and I signed the Helms-Burton legislation.
+643	Now, just a comment on Senator Kennedy's last answer.
+644	Well, he raised the question of my father -- it was a good line, well rehearsed and well delivered.
+645	We used to be there.
+646	I think of the man who grabbed me by the shoulder once with tears in his eyes and said his daughter was dying of cancer and he thanked me for giving him a chance to spend some time with her without losing his job because of the Family and Medical Leave Act.
+647	Not on their defending some minority opinion on the right or the left.
+648	Once again, the president is misleading America.
+649	What we've done is organize the international community, saying Assad has to go.
+650	It failed because the House did not pass it and the House failed by eleven votes.
+651	I think, habitually, Governor Reagan has advocated the injection of military forces into troubled areas, when I and my predecessors - both Democrats and Republicans - have advocated resolving those troubles in those difficult areas of the world peacefully, diplomatically, and through negotiation.
+652	So I think the lesson to be drawn is that we should never hesitate to use military force, and I will not, as president, in order to keep the American people safe.
+653	And I beat back the Congress on that, and then we passed a decent civil rights bill that offers guarantees against discrimination in employment.
+654	But I am happy, in fact I'm thrilled to talk about the Clinton Foundation, because it is a world-renowned charity and I am so proud of the work that it does.
+655	The reason why Prime Minister Allawi said they're coming across the border is because he recognizes that this is a central part of the war on terror.
+656	But we don't use those people.
+657	Just to uh - correct the record, Mr. Nixon said on depletion that his record was the opposite of mine.
+658	Governor Carter in November of 1975 indicated that he wanted to cut the defense budget by $15 billion.
+659	The program which I advocated, which failed by five votes in the United States Senate, would have put medical care for the aged in Social Security, and would have been paid for through the Social Security System and the Social Security tax.
+660	And today, we have about five hundred Georgians at their own expense - just working people who believe in me - spread around the country uh - involved in the political campaign.
+661	That's the largest cut in the discretionary domestic budget since Dwight Eisenhower.
+662	And that is the continued discussion and claim that somehow I am the villain who is going to pull the Social Security checks out from those people who are dependent on them.
+663	Now, step one was a rescue package that was passed last week.
+664	There is no litmus test on any issue.
+665	In Europe, we have massed troops as if the Soviet Union existed and was going to invade into Europe, but those days are over with.
+666	And in fact, employers are looking for skilled workers.
+667	It wasn't created as a welfare program.
+668	And also, I'm going to institute zero-based budgeting which I used four years in Georgia, which uh - assesses every program every year, and eliminates those programs that are obsolete or obsolescent.
+669	Can we take the time --
+670	So we won't make them famous.
+671	The President doesn't have any ideas so he's out trashing ours.
+672	Well it, after World War I, we had, you know, a policy of disengagement.
+673	And also General Petraeus said the same thing.
+674	And they are being slaughtered...
+675	I - I think it's accurate to say that Mr. Ford's position on gun control has changed.
+676	But, also, I have the ability, and the knowledge, and the background to make the right judgments, to keep this country safe and secure.
+677	It presents a threat not only to our friends but ultimately a threat to us to have Iran have nuclear material, nuclear weapons that could be used against us or used to be threatening to us.
+678	That gets to the national honor.
+679	They just wouldn't do it, and everybody now knows the terrible price they're paying by waiting until it's obvious to the brain-dead that they have problems.

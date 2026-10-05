@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2000	The president always has the right, and always has had the right, for preemptive strike.
+2001	Look, this isn't about Governor Bush, it's not about me.
+2002	My -- my number-one principal is, there will be no tax cut that adds to the deficit.
+2003	I think maybe there's a political reason why you can't say it, but I really don't believe -- in New York City, stop-and-frisk, we had 2,200 murders, and stop-and-frisk brought it down to 500 murders.
+2004	Well, everybody's nibbling around the edges.
+2005	And that really is going to be a challenge for the next president of the United States; I don't think there's any question about it.
+2006	There's now a general strike going on.
+2007	Most small businesses are Subchapter S corps.
+2008	As to the drug itself, I mentioned I was disappointed.
+2009	And that's why the Congress, including the Republicans, have not gone along with the President's recommendations.
+2010	But it's in your hands.
+2011	One of the great giveaways of all time, of all time, including $400 million in cash.
+2012	I vetoed a number of bills of that kind myself, when I was in California.
+2013	We have 35 million people without any insurance at all -- and I see them all the time.
+2014	And that didn't make any sense.
+2015	It's going to grow at a record rate of growth.
+2016	This has not been Mr. Oil, or Mr. Gas, or Mr. Coal.
+2017	Here is one place where I think that our program does a better job than his.
+2018	But, the Dorgan Task Force, the bipartisan task force estimated that we could collect about $35 billion in the fifth year, $105 billion over five years, the other study even more than that
+2019	Because they felt that the American society was moving again.
+2020	Let me say what I've said already about this pardon issue.
+2021	I mean, Senator McCain has been talking tough about earmarks, and that's good, but earmarks account for about $18 billion of our budget.
+2022	And we need a fresh start, a new credibility, a president who can bring allies to our side.
+2023	They didn't go over to coddle.
+2024	That's what Admiral Mullen said.
+2025	It would be very disturbing to American people.
+2026	And we've got to make sure that we reduce our deficit.
+2027	We're all God's children, Bob.
+2028	I believe if we find poor children trapped in schools that won't teach, we need to free the parents.
+2029	But that's the time when you're tested not only -- it's the time to test your mettle, a time to test your heart when you see people whose lives have been turned upside down.
+2030	And then, on the floor of the State Senate, as he did 130 times as a state senator, he voted present.
+2031	If I may just briefly, Jim, note.
+2032	Now last year, of course, was 1958.
+2033	And that's why I've proposed a $4,000 tuition credit, every student, every year, in exchange for some form of community service, whether it's military service, whether it's Peace Corps, whether it's working in a community.
+2034	So my view is, sir, you have to increase investment, grow the economy and reduce the deficit by controlling health care costs, prudent reductions in defense, cuts in domestic programs and asking the wealthiest Americans and foreign corporations to pay their fair share of taxes and investing and growing this economy.
+2035	The only bright spot is that over 300,000 jobs have been created by small businesses.
+2036	And if it won't come down, the economy's going to slow down, maybe go into a recession.
+2037	I find that deeply disturbing.
+2038	It would ruin the quality of health care in America.
+2039	And that's not the kind of advocacy that women need in any economy.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2120	And I think it's her campaign.
+2121	And the concentration of employment opportunities in those areas would help greatly not only to reestablish the tax base, but also to help reduce the extraordinary welfare cost.
+2122	It was laughed at all over the world what happened.
+2123	I built an unbelievable company.
+2124	Now it's in over 30 countries.
+2125	So let's not be throwing stones about it.
+2126	We don't know what a qualified mortgage is yet.
+2127	These are the kinds of elements of a national health insurance, important to the American people.
+2128	And I think that when the president said he was going to create daylight between ourselves and Israel, that they noticed that as well.
+2129	I figured you'd ask the question tonight, of course.
+2130	The president has been AWOL for four years.
+2131	In many instances we've made agreements, like in Vietnam, uh - that have uh - been revealed later on to our uh - embarrassment.
+2132	We've got 1,000 extra border patrol on the southern border; want 1,000 on the northern border.
+2133	One I don't have a list yet.
+2134	And we pushed our allies aside.
+2135	And I think he made a mistake.
+2136	Put everybody that's breathing to work.
+2137	They do some great things.
+2138	Making life so miserable on folks that they'll leave.
+2139	And it is one of the things I've learned in the White House, is that there's enormous pressure on the president, and he cannot wilt under that pressure.
+2140	He has done a superb job in getting the prime minister of South Africa, Mr. Vorster, to agree that the time had come for a solution to the problem of Rhodesia.
+2141	I think it's a disgrace.
+2142	We could add to jobs in the major metropolitan areas by a proposal that I recommended that would give tax incentives to business to move into the inner city and to expand or to build new plants so that they would take a plant, or expand a plant where people are, and people are currently unemployed.
+2143	We passed an area redevelopment bill far more effective than the bill the Administration suggested, on two occasions, and the President vetoed it both times.
+2144	He was hoping to turn a blind eye.
+2145	And if I can't make a great deal -- then we're going to terminate NAFTA and we're going to create new deals.
+2146	But I want to answer as specifically as I can the question that you have just put to me.
+2147	We have to make up for lost times, because I want to invest in you.
+2148	We go back to Washington and very difficult to get it through the Congress.
+2149	And so, again, look at the record, particularly the energy bill.
+2150	No other state programs do that.
+2151	But I favor public school choice, and I favor radical decentralization in giving more power to better-trained principals and teachers with parent councils to control their schools.
+2152	And if you have some of each -- and I have some age, some experience and some intelligence -- that adds up to wisdom.
+2153	We should have more debates.
+2154	I don't mind those enterprise zones; let's try them, but not as a substitute for the others.
+2155	And I believe it's a good idea, has strong bipartisan support.
+2156	Now, finally, if you can't pay the bills you're dead in the water.
+2157	Now Governor Romney had a very different response.
+2158	He points out that he would make pay-as-you-go be the basis for our natural resources development.
+2159	My brother probably died partly because of cigarettes.

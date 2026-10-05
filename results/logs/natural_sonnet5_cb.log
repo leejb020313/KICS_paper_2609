@@ -1,0 +1,15 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1155.21it/s]
+[sonnet5 cb] run 0
+[sonnet5 cb] run 20
+[sonnet5 cb] run 40
+[sonnet5 cb] run 60
+[sonnet5 cb] run 80
+sonnet5 cb (n_learn 716): allcall 0.861  svm 0.771  svmrep50 0.853  svmfuse50 0.843  | jev 0.836  jevrep30 0.863  jevrep50 0.863  jevfuse50 0.845  jevrep_sel 0.841 (rate 0.04)
+   svmfuse_0.5_vs_allcall: -1.75%p  sig higher 0  lower 93
+   svmrep_0.5_vs_allcall: -0.73%p  sig higher 0  lower 64
+   svmfuse_0.5_vs_svmrep_0.5: -1.02%p  sig higher 2  lower 80
+   jevrep_0.3_vs_allcall: +0.19%p  sig higher 4  lower 0
+   jevrep_0.5_vs_allcall: +0.22%p  sig higher 4  lower 0
+   jevfuse_0.5_vs_jevrep_0.5: -1.76%p  sig higher 0  lower 83
+   jevrep_sel_vs_allcall: -1.93%p  sig higher 0  lower 84

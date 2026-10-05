@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1680	And I want to thank the University of Denver.
+1681	That's one way one could do it.
+1682	Recognize -- I believe that Assad must go.
+1683	It's just -- it's -- we've got -- when the president took office, 32 million people on food stamps; 47 million on food stamps today; economic growth this year slower than last year, and last year slower than the year before.
+1684	I think that would be a mistake, because when I've sent young men and women into harm's way, I always understand that that is the last resort, not the first resort.
+1685	I came through small business.
+1686	Number two, let's look at history.
+1687	Because if there's a two parent family, the prospect of living in poverty goes down dramatically.
+1688	What I will do as president is make sure it's more attractive to come to America again.
+1689	But, what you can't do is spend $2 trillion in additional military spending that the military is not asking for, $5 trillion on tax cuts.
+1690	The proof of that is 1 out of 6 people in poverty.
+1691	That's how we signed three trade deals into law that are helping us to double our exports and sell more American products around the world.
+1692	That's not the right answer for America.
+1693	And that makes them advantageous in the marketplace.
+1694	Now, you cite a study.
+1695	I will get America working again and see rising take-home pay again, and I'll do it with five simple steps.
+1696	We didn't also do something that I think a number of people across this country recognize, which is put -- put people in a position where they're going to lose the insurance they had and they wanted.
+1697	So we've -- we've seen progress even under Republican control of the House of Representatives.
+1698	Then you have the military and then you have the civilian government.
+1699	And number three, I will not under any circumstances raise taxes on middle-income families.
+1700	But -- but what it did do is to -- if you extrapolated how much money we're talking about, you'd look at cutting the education budget by up to 20 percent.
+1701	And we have stood on the side of democracy.
+1702	And because of the resilience and the determination of the American people, we've begun to fight our way back.
+1703	And the suggestion that anybody in my team, whether the Secretary of State, our U.N.
+1704	So you may keep referring to it as a $5 trillion tax cut, but that's not my plan.
+1705	I don't like that idea.
+1706	I see our trade deficit with China, larger than it's -- growing larger every year, as a matter of fact.
+1707	We're the great nation that has allies, 42 allies and friends around the world.
+1708	The other thing we have to do to save Medicare?
+1709	Over the last 30 months, we've seen 5 million jobs in the private sector created.
+1710	You know, Moammar Gadhafi had more American blood on his hands than any individual other than Osama bin Laden.
+1711	Now, in fairness, what Governor Romney has now said is he'll maintain traditional Medicare alongside it.
+1712	My -- my number-one principal is, there will be no tax cut that adds to the deficit.
+1713	Well, actually it's -- it's -- it's a lengthy description.
+1714	It's not government investments that makes businesses grow and hire people.
+1715	They convince the international community they are not pursuing a nuclear program.
+1716	And let me step back and tell you what I would like to do with our immigration policy broadly and include an answer to your question.
+1717	And we talk about evidence.
+1718	You can't have kids coming out of college, half of them can't find a job today, or a job that's commensurate with their college degree.
+1719	I just want to make sure that, I think I was supposed to get that last answer, but I want to point out that that I don't believe...

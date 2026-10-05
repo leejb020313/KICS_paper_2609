@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1320	And Governor Romney at the beginning of this debate wrote and said what we did in Massachusetts could be a model for the nation.
+1321	Having a tax code that rewards companies that are shipping jobs overseas instead of companies that are investing here in the United States, that will not make us more competitive.
+1322	And that's probably a promise that Governor Romney thinks I've kept.
+1323	Absolutely, because that was a fight that needed to be had.
+1324	It's time to end it.
+1325	But it's one of the great tragedies related to violence in our society which has occurred during this administration.
+1326	You know, one of the challenges over the last decade is we've done experiments in nation building in places like Iraq and Afghanistan and we've neglected, for example, developing our own economy, our own energy sectors, our own education system.
+1327	So that's on the record.
+1328	Number five, champion small business.
+1329	In my opinion, the government is not effective in -- in bringing down the cost of almost anything.
+1330	And what we've also done is engaged these governments in the kind of reforms that are actually going to make a difference in people's lives day to day, to make sure that their governments aren't corrupt, to make sure that they're treating women with the kind of respect and dignity that every nation that succeeds has shown and to make sure that they've got a free market system that works.
+1331	I think that's a mistake.
+1332	So where'd the increase come from?
+1333	And I said, let's fix this system.
+1334	Number two, we have to make America the most attractive place for entrepreneurs, for people who want to expand their business.
+1335	That's why we've invested in solar and wind and biofuels, energy efficient cars.
+1336	The president's spending, the president's borrowing will cost this nation to have to raise taxes on the American people.
+1337	We have seen increases in coal production and coal employment.
+1338	And thank you for agreeing to moderate this debate this evening.
+1339	A lot of us are.
+1340	The -- look, I think anybody out there can check the record.
+1341	Actually it was a town hall, and I said I would cut taxes for middle- class families, and that's what I've done, by $3,600.00.
+1342	And I think that's a mistake.
+1343	With the Arab Spring, came a great deal of hope that there would be a change towards more moderation, and opportunity for greater participation on the part of women in public life, and in economic life in the Middle East.
+1344	This was just a few weeks ago that you indicated that we should still have troops in Iraq.
+1345	I don't check it that often.
+1346	And that's why the plan that I've put forward for manufacturing and education, and reducing our deficit in a sensible way, using the savings from ending wars, to rebuild America and putting people back to work.
+1347	But you also had banks making money hand over fist, churning out products that the bankers themselves didn't even understand, in order to make big profits, but knowing that it made the entire system vulnerable.
+1348	He said when I took office, the price of gasoline was $1.80, $1.86.
+1349	I'll get America and North America energy independent.
+1350	Ultimately, we're going to have to make some decisions.
+1351	He said the standard bearer wasn't for it.
+1352	I care about 100 percent of the American people.
+1353	These are folks who've worked hard, like my grandmother, and there are millions of people out there who are counting on this.
+1354	If the president were reelected, we'd go to almost $20 trillion of national debt.
+1355	It's what I look forward to doing and I know what it takes to make an economy work, and I know what a working economy looks like.
+1356	Number three, we're going to have to have training programs that work for our workers and schools that finally put the parents and the teachers and the kids first, and the teachers' unions going to have to go behind.
+1357	I'm going to help women in America get good work by getting a stronger economy and by supporting women in the workforce.
+1358	They can buy a computer for their kid who's going off to college, which means they're spending more money, businesses have more customers, businesses make more profits, and then hire more workers.
+1359	They'll have at least two plans.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2440	A half a million manufacturing jobs have been lost in the last four years.
+2441	We had a tire case in which they were flooding us with cheap domestic tires -- or -- or cheap Chinese tires.
+2442	And by the way, I've done these things.
+2443	And we said, "Why not cut out the middleman?"
+2444	We've got a long tradition of hunting and sportsmen and people who want to make sure they can protect themselves.
+2445	We need to put the pressure on them as hard as we possibly can, because if we do that, we won't have to take the military action.
+2446	A woman came to me and she said, look, I can't afford insurance for myself or my son.
+2447	And I'm looking forward to having that debate.
+2448	We're headed down to the low 200s if we go through a sequestration.
+2449	Governor Romney said this has to be done on a bipartisan basis.
+2450	I was able to do that in my state and bring these two together.
+2451	I went to a number of women's groups and said, "Can you help us find folks," and they brought us whole binders full of women.
+2452	And we're organizing trade relations with countries other than China so that China starts feeling more pressure about meeting basic international standards.
+2453	Look, when we think about immigration, we have to understand there are folks all around the world who still see America as the land of promise.
+2454	Attacking me is not talking about how we're going to deal with the challenges that exist in the Middle East, and take advantage of the opportunity there, and stem the tide of this violence.
+2455	And with respect to this pipeline that Governor Romney keeps on talking about, we've -- we've built enough pipeline to wrap around the entire earth once.
+2456	But you're investing in companies doesn't do that.
+2457	And it's referred to as an assault weapon ban, but it had, at the signing of the bill, both the pro-gun and the anti-gun people came together, because it provided opportunities for both that both wanted.
+2458	Well I -- I absolutely believe that America has a -- a responsibility, and the privilege of helping defend freedom and promote the principles that -- that make the world more peaceful.
+2459	If they did have coverage, insurance companies might impose an arbitrary limit.
+2460	As a matter of fact, when Massachusetts did something quite extraordinary -- elected a Republican senator to stop Obamacare, you pushed it through anyway.
+2461	We've gone from $10 trillion of national debt, to $16 trillion of national debt.
+2462	I'm not in favor of a $5 trillion tax cut.
+2463	Instead, it's gone up by that amount.
+2464	We welcome people coming to this country as immigrants.
+2465	But it's very hard for Republican's in Congress to support comprehensive immigration reform, if their standard bearer has said that, this is not something I'm interested in supporting.
+2466	And the reason they do is because they do some smart things.
+2467	And as a consequence, we've seen millions of young people be able to afford college, and that's going to make sure that young women are going to be able to compete in that marketplace.
+2468	I believe Governor Romney is a good man.
+2469	And likewise you've got more and more debt on your back.
+2470	He said, "I'll get back to you."
+2471	The difference between where it is and 5.4 percent is 9 million Americans without work.
+2472	He hasn't done that either.
+2473	Because if it's just us that are imposing sanctions -- we've had sanctions in place a long time.
+2474	But I'm not in favor of rounding up people and -- and -- and taking them out of this country.
+2475	That way we can invest in the research and technology that's always kept us at the cutting edge.
+2476	I send them there, oftentimes into harm's way.
+2477	One of the reasons for that is that people think it's more attractive in some cases to go offshore than to stay here.
+2478	That's what took us from surplus to deficit.
+2479	What we can't do is go back to the same policies that got us into such difficulty in the first place.

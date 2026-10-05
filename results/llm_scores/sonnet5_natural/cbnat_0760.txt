@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	Because if they put their currency down low, that means their prices on their goods are low.
+761	George Bush didn't propose turning Medicare into a voucher.
+762	It added up to well over 50 percent of what they earned.
+763	We're not going to get rid of all regulation.
+764	We need moms and dads, helping to raise kids.
+765	It was the largest expansion of private insurance.
+766	And we are on pace to double our exports, one of the commitments I made when I was president.
+767	And the way you define small businesses includes folks at the very top.
+768	I was astonished at the creativity and innovation that exists in the American people.
+769	Four years ago you said in your first year you would file legislation.
+770	And that's the kind of tough trade actions that are required.
+771	The idea, which was originally presented by Congressman Ryan, your running mate, is that we would give a voucher to seniors and they could go out in the private marketplace and buy their own health insurance.
+772	Number two, with regards to Iran and the threat of Iran, there's no question but that a nuclear Iran, a nuclear-capable Iran is unacceptable to America.
+773	The role of government: Look behind us.
+774	We have not seen the progress we need to have, and I'm convinced that with strong leadership and an effort to build a strategy based upon helping these nations reject extremism, we can see the kind of peace and prosperity the world demands.
+775	It's hurt the housing market because Dodd-Frank didn't anticipate putting in place the kinds of regulations you have to have.
+776	And they can say that the President of the United States and the United States of America has stood on the right side of history.
+777	And how do we make sure that we are reducing spending in a responsible way, but also, how do we have enough revenue to make those investments?
+778	... we can't -- we have not seen Republicans serious about this issue at all.
+779	So I reject the idea that I don't believe in great teachers or more teachers.
+780	You might say, "Well, you got an example of one that worked better?"
+781	Asking the wealthy to pay a little bit more along with cuts so that we can invest in education like yours.
+782	Mr. President, have you looked at your pension?
+783	As a matter of fact, oil production is down 14 percent this year on federal land, and gas production was down 9 percent.
+784	And that's because we're doing exactly what we should be doing to try to promote a moderate Syrian leadership and a -- an effective transition so that we get Assad out.
+785	If the president's reelected, Obamacare will be fully installed.
+786	Some 15 percent of hospitals and nursing homes say they won't take anymore Medicare patients under that scenario.
+787	Energy independence for North America in five years.
+788	You're going to lose some deductions, and you can't buy the sales pitch.
+789	I know these folks and I know their families.
+790	In fact, this week we'll be carrying out the largest military exercise with Israel in history, this very week.
+791	You had people who were borrowing money to buy a house that they couldn't afford.
+792	So I get the last question -- last answer --
+793	No tax on your savings.
+794	And congratulations to you, Mr. President, on your anniversary.
+795	That's going to help to create jobs here.
+796	That's not what you did in that generation.
+797	That will help us maintain the kind of American leadership that we need.
+798	As a matter of fact, free people and free enterprises trying to find ways to do things better are able to be more effective in bringing down the cost than the government will ever be.
+799	And how do we do that?

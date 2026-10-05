@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2040	That's a place where we can use our generosity to influence in a positive way, influence nations.
+2041	So what, what is in my plan and I think it's almost identical in Senator Dole's plans is we make more people eligible to save in an IRA and let couples, married couples save more and then they could withdraw from it tax-free if they needed to, for medical emergencies or buy a home or education, but they could also save to supplement retirement.
+2042	I've had a strong record of working with Democrats and Republicans in Texas to make sure no child is left behind.
+2043	We have to move ahead in order to stay ahead.
+2044	We may have different approaches in terms of how we deal with local folks.
+2045	If they're space weapons, I assume they'll be in space.
+2046	I'm proud of the record of this Administration.
+2047	We need to insist that Arafat send out instructions to halt some of the provocative acts of violence that have been going on.
+2048	But we have got to reform government.
+2049	The best way to defend America in this world we live in is to stay on the offense.
+2050	But I will be a tolerant person.
+2051	He said, "Sarah and I live on the east side of the mountain.
+2052	But we have work to do in this nation.
+2053	That's right at the top of my agenda.
+2054	Right now, other nations are taking our jobs and they're taking our wealth.
+2055	And, absolutely, we need earmark reform.
+2056	One of the major responsibilities on the shoulders of uh - New York City is to - is to finance welfare.
+2057	We're going to have conventional forces that are well maintained, well equipped, well trained, well supported.
+2058	And I know that we did give back authority and autonomy to the people.
+2059	What I want the President to do, and I think he may have done it, his last statement, call for an unconditional end of the violence and have the parties keep on talking as they should talk and have a resolution.
+2060	overlapping, aren't those the real costs?
+2061	We cannot just say law and order.
+2062	Daniel, I don't support a draft.
+2063	And that's why I want to get the deficit down by controlling the growth of mandatory spending.
+2064	When he fought regulatory reform that cost the average family 6 to $7,000 a year.
+2065	Once and for all, I want to do something about Medicare.
+2066	I'm concerned that we're overdeployed around the world.
+2067	It just takes - from the people.
+2068	We're suing each other too much and caring for each other too little.
+2069	We knew he'd been -- invaded other countries.
+2070	I think the only people that are going to show up to register or get a license -- I guess licensing like a driver's license for a gun, the only people that are going to show up are law-abiding citizens.
+2071	If we do well here, if we meet our obligations, if we're moving ahead, then I think freedom will be secure around the world.
+2072	And it would also take making it clear to the Russians and the Syrians that our purpose here was to provide safe zones on the ground.
+2073	But let's look at the facts here.
+2074	Well, look, I want to make sure that we are investing in energy in order to free ourselves from the dependence on foreign oil.
+2075	They were told: Don't even bother; we're not going to listen to it.
+2076	So in those two cases I think uh - such uh - a constitutional amendment would be proper, and I really don't think in either case they're trivial matters.
+2077	It means that Governor Romney...
+2078	Now, Senator McCain and I do agree, this is the greatest nation on earth.
+2079	I just want to mention if I could --

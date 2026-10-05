@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1840	But I think it's unconscionable, Ann, that we should be talking or thinking about imposing new taxes on average Americans when there are billions out there, over $100 billion, in taxes owed that aren't being paid.
+1841	We need more resources there.
+1842	Why that's more than the average teacher makes.
+1843	I believe that a lot of people are skeptical about people in politics today because we have seen a time of great challenge for our country.
+1844	Well, first of all, I will not let anyone into our country that I think poses a risk to us.
+1845	Now, they look at us and say, Is it a good idea to be with America?
+1846	I've taken on Putin and others, and I would do that as president.
+1847	And although we've heard a lot about Wall Street, those of you on Main Street I think have been struggling for a while, and you recognize that this could have an impact on all sectors of the economy.
+1848	But I think there are personal differences.
+1849	And then, of course, the - the final thing is that I have signed and approved of more scenic rivers, more wilderness areas, since I've been president than any other president in the history of the United States.
+1850	That's why I will never stop at anything to hunt down and kill the terrorists.
+1851	And we should demand that Donald release all of his tax returns so that people can see what are the entanglements and the financial relationships that he has...
+1852	He had bilateral talks with the North Koreans.
+1853	But what I've also said is that now that you have a democratically elected government in Egypt, that they have to make sure that they take responsibility for protecting religious minorities.
+1854	Obviously, Medicare, which is a single-payer system, which takes care of our elderly and does a great job doing it, by the way, and then all of the people who were employed, but people who were working but didn't have the money to afford insurance and didn't have anybody, an employer or anybody else, to help them.
+1855	And motorists are using 8% less than they were back at that time of the oil embargo.
+1856	But I do know that if the president of the United States and the Congress of the United States and the people of the United States said, "I believe our nation is greater than what we are now."
+1857	I believe in the sanctity of marriage.
+1858	We don't have a person to waste in this country.
+1859	And I think first you should -- I should understand that the question on your mind is do I understand your problem.
+1860	Now, again this statement that somehow, I wanted to destroy it and I just changed my tune, that I am for voluntary Social Security, which would mean the ruin of it.
+1861	Now, Senator McCain is also right that it's difficult.
+1862	The United States of America, Tom, is the greatest force for good, as I said.
+1863	I think there need to be reforms in the IMF.
+1864	What is an article of faith for me is not something that I can legislate on somebody who doesn't share that article of faith.
+1865	Mr. Bush picked Dan Quayle.
+1866	That's the wrong way to go.
+1867	I hadn't gotten around to reregistering as yet.
+1868	If you take a trillion dollars out of that Social Security Trust Fund, how are the checks going to be -- how are you going to keep faith with the seniors?
+1869	And the fact of the matter is that, when Obamacare is fully implemented, we're going to be in a position to show that costs are going down.
+1870	The president reneged on his promise to fund No Child Left Behind.
+1871	It was once called voodoo economics.
+1872	This is an area where I've led on in the Senate, working with a Republican ranking member of the Senate Foreign Relations Committee, Dick Lugar, to deal with the proliferation of loose nuclear weapons.
+1873	I don't favor a litmus test, but I know that there are ways to assess how a potential justice interprets the Constitution.
+1874	This -- we have 4 million people on Medicare Advantage that will lose Medicare Advantage because of those $716 billion in cuts.
+1875	There are 900 sequestered in the White House.
+1876	Today it is up to about $38,000 of earnings that is subject to the payroll tax for Social Security.
+1877	And while I was there I worked on a bipartisan basis, as I did in the House, I worked with former President Reagan on the modernization of our strategic weaponry.
+1878	And we support the U.N. efforts there.
+1879	We're even shipping 3,000 Kurds to Guam.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1200	And the idea that has been suggested that I would liquidate the industry, of course not.
+1201	We do it by getting -- by reducing spending in a whole series of programs.
+1202	What I've said is I won't put in place a tax cut that adds to the deficit.
+1203	But the idea of taxing people more, putting more people out of work, you'll never get there.
+1204	I'm sorry, you actually -- there was a -- there was an effort on the part of the president to have a status of forces agreement, and I concurred in that, and said that we should have some number of troops that stayed on.
+1205	I'm ready to sign that bill right now.
+1206	That is not a recipe for making sure that we are taking advantage of the opportunities and meeting the challenges of the Middle East.
+1207	And businesses did very well.
+1208	Well, first of all, I think Governor Romney's going to have a busy first day, because he's also going to repeal Obamacare, which will not be very popular among Democrats as you're sitting down with them.
+1209	Well, think about what the governor -- think about what the governor just said.
+1210	You were very clear that you would not provide, government assistance to the U.S. auto companies, even if they went through bankruptcy.
+1211	I was in Pennsylvania with someone who had just graduated -- this was in Philadelphia -- and she said, "I've got my degree.
+1212	If you didn't balance your budget, you went out of business.
+1213	In fact, it's estimated that by repealing Obamacare, you're looking at 50 million people losing health insurance...
+1214	And I saw families there who showed me there where missiles had come down near their children's bedrooms.
+1215	I'm going to make sure you get a job.
+1216	I laid out seven steps, crippling sanctions were number one.
+1217	You look at how we get to a balanced budget within eight to 10 years.
+1218	That's the largest cut in the discretionary domestic budget since Dwight Eisenhower.
+1219	And I've put forward a plan to make sure that we're bringing manufacturing jobs back to our shores by rewarding companies and small businesses that are investing here, not overseas.
+1220	But I also believe that we've got to look at the energy sources of the future, like wind and solar and biofuels, and make those investments.
+1221	But not just jobs, good paying jobs.
+1222	But gosh to tell our kids that before they have babies, they ought to think about getting married to someone, that's a great idea.
+1223	The only reason it's not happening is because Governor Romney's allies in Congress have held the 98 percent hostage because they want tax breaks for the top 2 percent.
+1224	Look, I look at what's happening around the world, and i see Iran four years closer to a bomb.
+1225	Now, does that mean you're not struggling?
+1226	I will fight for oil, coal and natural gas.
+1227	How we pay for that, reduce the deficit, and make the investments that we need to make, without dumping those costs onto middle-class Americans, I think is one of the central questions of this campaign.
+1228	And so the question is: Does anybody out there think that the big problem we had is that there was too much oversight and regulation of Wall Street?
+1229	Governor Romney then also wants to spend $2 trillion on additional military programs even though the military's not asking for them.
+1230	And I will not -- I will not under any circumstances, reduce the share that's being paid by the highest income taxpayers.
+1231	And we spent some time, and we said a prayer and, remarkably, about two months later, this young man and his mom showed up, and he looked unbelievable, good as new.
+1232	We've going to make sure that you've got to have a living will so -- so we can know how you're going to wind things down if you make a bad bet so we don't have other taxpayer bailouts.
+1233	I want a great relationship with China.
+1234	And the fact that you're going to college is great, but I want everybody to get a great education and we've worked hard to make sure that student loans are available for folks like you, but I also want to make sure that community colleges are offering slots for workers to get retrained for the jobs that are out there right now and the jobs of the future.
+1235	But they lead in very different directions.
+1236	Let -- let me just finish their point, because you're looking for contrast.
+1237	They would have gone through a...
+1238	One is it designates a number of banks as too big to fail, and they're effectively guaranteed by the federal government.
+1239	That's already offered in the private marketplace.

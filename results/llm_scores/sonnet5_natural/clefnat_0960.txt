@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	I'm running to be a president who happens to be Catholic. "
+961	If you think that was good, then you do.
+962	I want to give small business employers a tax credit, 25%, to encourage the providing of health insurance for the employees in small businesses.
+963	I think the governor's instinct is not necessarily bad because we have worked with the Russians in a constructive way in Kosovo, for example, to end the conflict there.
+964	We differ on the Arctic National Wildlife Refuge, as I have said.
+965	But look, what's really important, Charlie, is the president is just trying to scare everybody here with throwing labels around.
+966	We need to expand our exports, and they're going very, very well, indeed.
+967	So the worst of all things has happened.
+968	Look at that horrible -- these are radical Islamic terrorists.
+969	That's how you determine if children are progressing to excellence.
+970	Japan is going to have a summit for the donors; $14 billion pledged.
+971	The banking system in this country is fundamentally sound with some weak banks.
+972	Then companies won't come here.
+973	It cut funds to clean up toxic waste dumps with 10 million of our kids still living within four miles of a toxic waste dump, by a third.
+974	It's the right thing for the consumers.
+975	I think we need to have clean coal technologies.
+976	So this is, that's a good start.
+977	This is what it's all about.
+978	I've thought a lot about what it means to be the president.
+979	George McGovern is a friend of mine, so I don't mean, but he was a liberal, proud liberal.
+980	And in our country we have evolved to a point where we've put millions of innocent people in jail because you go to the poor neighborhoods and they've put bars on their windows and bars on their doors and put themselves in jail to protect the things that they acquired legitimately.
+981	We seem to come full circle again.
+982	And finally, with regards to that tax cut, look, I'm not looking to cut massive taxes and to reduce the -- the revenues going to the government.
+983	What we got to do is keep working, as the Labor Dept is doing a first-class job on, to break down discrimination, to break down the glass ceiling.
+984	I don't think we ought to be giving welfare payments to illegal immigrants.
+985	And it is a mistake and it plays into the hands of the terrorists to act as though we are.
+986	We in effect tried to make Israel the scapegoat for the problems in the Middle East.
+987	Already many people see the strange weather conditions that the old timers say they've never seen before in their lifetimes.
+988	I've made that clear throughout my presidency.
+989	There are now over 2,000 more warheads pointed at us today than there were when he was sworn in, and that does not strengthen us.
+990	You'll have a shot at me in 4 years and you can vote me right out if you think I've done a lousy job and I would welcome you to do that.
+991	You can't engage in some of this risky behavior that is putting Main Street at risk.
+992	And $13 trillion in family wealth was wiped out.
+993	The security aspect of cyber is very, very tough.
+994	But why start an arms race now?
+995	I think if we learned anything in Vietnam is you first commit this nation before you commit the troops to the battlefield.
+996	He and I haven't spoken, and I disagree.
+997	They're going backwards on the water quality.
+998	We are not at war.
+999	I can't say it any more plainly.

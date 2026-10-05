@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	That means that that mission succeeds, just like those young people who re-enlisted in Baghdad, just like the mother I met at the airport the other day whose son was killed.
+481	So you can say any way you want to say it, but Bill Clinton was abusive to women.
+482	It permits us to make sure that the projects which are invested in are going to produce greater wealth.
+483	The second thing that we can do is provide a fair trade playing field.
+484	We ask the people that are viewing tonight, are you better off than you were four years ago.
+485	Right here in St. Louis, you've laid off 350 teachers.
+486	I saw cases in West Virginia, here in the United States, where children took home part of their school lunch in order to feed their families because I don't think we're meeting our obligations toward these Americans.
+487	Well, the United States uh - has on occasion attempted uh - mostly in the middle fifties, to persuade Chiang Kai-shek to pull his troops back to Formosa.
+488	Well, some of those facts and figures just don't stand up.
+489	We've got to stop drifting.
+490	You see, I don't think we need to tax more and spend more, and then say that's going to make the problem better.
+491	You must always remember that a president can't stop anything unless he has the people behind him.
+492	First, we've had Muslims in America since George Washington.
+493	And that's why I have made it a number one priority in my budget, not a tax cut for the wealthy.
+494	I'll look at it at the time.
+495	I've got an agenda that I want to get done for the country.
+496	I have -- I understand everybody in this country doesn't agree with the decisions I've made.
+497	Well, the other day, Vice President Bush disclosed his tax returns to the American people.
+498	But we're not there yet.
+499	I have watched these people -- the same for our local law enforcement people.
+500	I believe that every agreement we reach must be verifiable, and I will not agree to anything that we cannot tell every day.
+501	I think we can bring it down by 50% in 4 years and grow the economy.
+502	Now, John Podesta said you have terrible instincts.
+503	So I'll let the American people decide, judge, who's going to be more effective and more credible when it comes to imposing crippling sanctions.
+504	And I've heard this question from a lot of Muslim-Americans across our country, because, unfortunately, there's been a lot of very divisive, dark things said about Muslims.
+505	A capital gains differential will increase jobs, increase risk taking, increase revenues to the Federal Government.
+506	We've got to innovate through this America 2000 program.
+507	Cleaning up two-thirds of the worst toxic waste dumps.
+508	But it is clear, when you look at what Donald has been proposing, he started his campaign bashing immigrants, calling Mexican immigrants rapists and criminals and drug dealers, that he has a very different view about what we should do to deal with immigrants.
+509	There ought to be a clear, unequivocal commitment without change to Israel.
+510	I think we've seen a deterioration of values.
+511	It was personal e-mails, not official.
+512	Secretary of State Kissinger has done a superb job in working with the black African nations, the so-called front-line nations.
+513	I hope and trust, in the best interest of both countries, and in the best interests of all people throughout this globe, that the Soviet Union and the United States can make a mutually beneficial agreement.
+514	What I'm against is Senator Dole's plan to take money away from all the children we now help with limited Federal funds and help far fewer.
+515	The world is better off without Saddam Hussein.
+516	I would never normalize relationships with Vietnam, nor permit them to join the United Nations until they've taken this action.
+517	Not only that, you named the day.
+518	I think this election has to be geared toward the future.
+519	I have 21 Congressional Medal of Honor recipients who endorsed me.

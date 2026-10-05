@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+400	But you know what we also need to do as Americans is never let the terrorists change the Constitution of the United States in a way that disadvantages our rights.
+401	Our program was an amendment to the Kerr bill.
+402	We do have to lower the cost of health care, not just in Medicare and Medicaid... 
+403	We felt strongly about them, and they did so well by us.
+404	A lot of uh - very high quality, low-carbon coal, uh - low-sulfur coal is there, it's where our employment is needed.
+405	But I just don't want to mandate it and risk putting this - setting the recovery back.
+406	My friends, we are not going to be able to provide the same benefit for present-day workers that we are going -- that present-day retirees have today.
+407	But, Peter, please understand, the liberals do not like me talking about liberal They don't like it when I say that he says he's a card carrying member.
+408	I would say the only way -- because those stories are all totally false, I have to say that.
+409	We didn't put in place a board that can tell people ultimately what treatments they're going to receive.
+410	Three weeks from now -- 2 weeks from tomorrow, America goes to the polls and you're going to have to decide who you want to lead this country to economic recovery.
+411	The immediate problem we have is to stimulate our economy now so that we can get rid of unemployment.
+412	But it's important that our leaders demonstrate those values from the top.
+413	Under my plan it will be -- its solvency will be extended until you're 100.
+414	Well, I think there are a number of issues that we should be addressing.
+415	They should be judged on their qualifications.
+416	It's crooked -- she's -- she's guilty of a very, very serious crime.
+417	I want to keep taxes low.
+418	Well, we finally passed the Kassebaum bill.
+419	That's a lot of marijuana.
+420	When we re-engaged -- because, again, the Bush administration reversed course on this -- then we have at least made some progress, although right now, because of the problems in North Korea, we are seeing it on shaky ground.
+421	I have been fighting for very strong anti-crime legislation -- habeas corpus reform, so you don't have these endless appeals, so when somebody gets sentenced, hey, this is for real.
+422	My opponent had trouble, criticized us, on our policy in Angola.
+423	And it's -- our nation stands alone right now in the world in terms of power, and that's why we have to be humble.
+424	The government's bigger than it was when President Kennedy was around, even though he says it's not.
+425	I don't want to stampede.
+426	Our people are out of work, and there's a sense of withdrawal.
+427	After 9/11, when the 28 nations of NATO said that they would go to Afghanistan with us to fight terrorism, something that they still are doing by our side.
+428	The record does not show that.
+429	And so it's a combination of these things.
+430	And in those two cases, I would favor them.
+431	That's not specific in terms of a program.
+432	We also wanted Medicare to be able to negotiate bulk purchasing.
+433	There are no more than a handful of American military personnel in Haiti now.
+434	And they said no because they got a memo from one of their political advisers saying that instead they should characterize whatever we did as big government and make sure nothing was done to aid healthcare before the '94 elections so they could make that claim.
+435	Well, let's come back and talk about the military, but all the way -- all the way through.
+436	We gave more scholarships to the Congo - this summer we offered them - than we've given to all of Africa the year before.
+437	It is time to have a new commander in chief who will rebuild the military, pay our men and women more, make sure they're housed better and have a focused mission for our military.
+438	Since I've got about 20 seconds, let me just say one thing.
+439	That's what reporters called it.

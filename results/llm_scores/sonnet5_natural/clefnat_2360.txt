@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2360	So, my formula says grow at the rate of inflation.
+2361	We need a program for the uninsured.
+2362	You know, it's just not that simple.
+2363	He's 10 years old now.
+2364	Well, the record in Arkansas.
+2365	Every time there's been an out-of-bounds remark made by a Republican, no matter where they are, I have repudiated them.
+2366	But we have got to instill values in these young people.
+2367	And I'm glad that we have a good director in George Bush.
+2368	I was able to do that in my state and bring these two together.
+2369	And we are seeing a major offensive taking place -- Al Qaida and Taliban crossing the border and attacking our troops in a brazen fashion.
+2370	So it's one of my top priorities.
+2371	The point -- the point is -- the point is, we need to examine every agency of government.
+2372	We don't know what's going to happen.
+2373	If you cut the amount going in 1 out of every $6, then you have to cut the value of each check by 1 out of every $6 unless you come up with the money from somewhere else.
+2374	And I think it is very important for us to make clear to our children that our country really is great because we're good.
+2375	I'm sure that you know that in the resolutions passed by the Congress, that have added about $17 billion in more spending, by the Congress over the budget that I recommended.
+2376	I would not agree to any negotiations or any agreement that involved conduct on the part of the Soviet Union that we couldn't verify every day.
+2377	If they weren't willing to work a deal, then we could have put sanctions together.
+2378	But I'd say, if you had to separate out, I think it's experience at this level.
+2379	So she wants to fight.
+2380	Now, as to why I should be and he shouldn't be, when he was a candidate in 1976, President Carter invented a thing he called the misery index.
+2381	I was a little disappointed in Magic because he came to me and I said, "Now if you see something we're not doing, get ahold of me.
+2382	Forty-four Democrats voted for it, one Republican voted for it.
+2383	But I know putting artificial deadlines won't work.
+2384	Next year they're going to go up over 100 percent.
+2385	He even said, well, you know, if there were nuclear war in East Asia, well, you know, that's fine...
+2386	If we grow the economy it's going to help Social Security.
+2387	But I do not want to see a military involvement on the part of our -- of our troops.
+2388	And in the process, as a result of that will and that decision and that toughness, we now have ancient enemies talking peace in the Middle East.
+2389	The Japanese, the British, the French do it.
+2390	First of all, we didn't find out he didn't have weapons until we got there, and my opponent thought he had weapons and told everybody he thought he had weapons.
+2391	This year the Republican Congress, as far as student loans went from 24 billion to 36 billion over the next six years.
+2392	And we kicked this man out of Kuwait.
+2393	Number one, I want to cut taxes for 95 percent of Americans.
+2394	Yes, we have to succeed, and I have a better plan to help us do it.
+2395	She's telling us how to fight ISIS.
+2396	Well, I think cyber security, cyber warfare will be one of the biggest challenges facing the next president, because clearly we're facing at this point two different kinds of adversaries.
+2397	And you know, there were some of us that stood up two years ago and said we've got to enact legislation to fix this.
+2398	Well, thank you very much, Jim, for this opportunity.
+2399	And the reason Pakistan -- the popular opinion of America had diminished in Pakistan was because we were supporting a dictator, Musharraf, had given him $10 billion over seven years, and he had suspended civil liberties.

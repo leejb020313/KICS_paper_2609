@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+640	And then make sure they have the arms necessary to defend themselves.
+641	And I want to help people in the middle-class.
+642	This has been probably the biggest whopper that's been told during the course of this campaign.
+643	There were a whole bunch of oil companies.
+644	And if not, I'll get rid of it.
+645	We saved an auto industry that was on the brink of collapse.
+646	My dad was born in Mexico of American parents; Ann's dad was born in Wales and is a first-generation American.
+647	So that's how I've used my travels, when I travel to Israel and when I travel to the region.
+648	When they said, "We're going to cut Planned Parenthood funding."
+649	America can help that happen.
+650	When it comes to community colleges, we are setting up programs, including with Nassau Community College, to retrain workers, including young people who may have dropped out of school but now are getting another chance, training them for the jobs that exist right now.
+651	Look, I want to make sure we use our oil, our coal, our gas, our nuclear, our renewables.
+652	Is -- are Israel and the Palestinians closer to reaching a peace agreement?
+653	And there's no question but that Obamacare has been an extraordinary deterrent to enterprises of all kinds hiring people.
+654	You heard what I said about my tax plan.
+655	But I'm not going to reduce the share of taxes paid by high-income people.
+656	First, we've got to improve our education system and we've made enormous progress drawing on ideas both from Democrats and Republicans that are already starting to show gains in some of the toughest to deal with schools.
+657	If we have more people hired, if we get back manufacturing jobs, if we get back all kinds of jobs into this country, then you're going to see rising incomes again.
+658	And they provide us energy and they provide us innovation and they start companies like Intel and Google.
+659	And so what I'm trying to do is to get a broader conversation about how do we reduce the violence generally.
+660	But, Governor, when you were in Massachusetts, small businesses development ranked about 48th, I think out of 50 states in Massachusetts, because the policies that you are promoting actually don't help small businesses.
+661	That's the strategy you need, an all-of-the-above strategy, and that's what we're going to do in the next four years.
+662	And we've been through tough times but we always bounce back because of our character, because we pull together and if I have the privilege of being your president for another four years, I promise you I will always listen to your voices.
+663	The problem with raising taxes is that it slows down the rate of growth.
+664	You said that, first, we should not have a timeline in Afghanistan.
+665	Did I get that right?
+666	How much did you cut them by, then?
+667	Bill Clinton tried the approach that I'm talking about.
+668	It's not that Dodd-Frank always was wrong with too much regulation.
+669	But you've been -- but you've been president four years...
+670	And I am confident that Assad's days are numbered.
+671	I know Americans had seen jobs being shipped overseas; businesses and workers not getting a level playing field when it came to trade.
+672	I propose we grade our schools so parents know which schools are succeeding and failing, so they can take their child to a -- to a school that he's being more successful.
+673	And I want to make sure that we keep tuition low for our young people.
+674	Why wouldn't we eliminate tax breaks for corporate jets?
+675	That's part of what I'm fighting for as president of the United States.
+676	This -- this is a critical opportunity for America.
+677	People grabbed my arms and said, "Please save my job."
+678	Let me also note that the greatest threat that the world faces, the greatest national security threat is a nuclear Iran.
+679	Now, in order for us to do it, we do have to close our deficit, and one of the things I'm sure we'll be discussing tonight is, how do we deal with our tax code?

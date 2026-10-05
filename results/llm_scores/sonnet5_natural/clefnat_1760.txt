@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1760	Now, it's not the Republicans' fault, of course, and it's not the Democrats' fault.
+1761	But as we learned in the same report I quoted, Saddam Hussein was gaming the oil-for-food program to get rid of sanctions.
+1762	Thank you, Jim; thank you, Mr. President; thank everyone for watching and listening.
+1763	It also could be somebody sitting on their bed that weighs 400 pounds, OK?
+1764	And I came to the conclusion that our love was strong enough to be able to do it.
+1765	It brought the crime rate way down.
+1766	And my plan say why don't we pass 1.3 trillion of that back to the people who pay the bills?
+1767	I want to make sure that the Iranians are put enough -- that we put enough pressure on the Iranians by joining with our allies, imposing significant, tough sanctions to modify their behavior.
+1768	We've had some disagreements about that.
+1769	I can run this more efficiently than the federal government and states, by the way, are proving it.
+1770	And I have -- well, not quite that long.
+1771	The other thing we have to do to save Medicare?
+1772	And actually, you said it back in 2010.
+1773	Did get a 3 percent increase this year, but that's not enough.
+1774	I simply think that when we are confronting a budget deficit this year - and this fiscal year will end in about 10 days, and we are confronted with the possibility of a deficit of $60 billion, perhaps as much as $63 billion - that that simply would be irresponsible.
+1775	It's obvious that there are certain things that have to be done and there are 50 or 60 different options, and a bipartisan commission to take it out of politics, will make recommendations and build support for the people.
+1776	And when we had Osama bin Laden cornered in the mountains of Tora Bora, 1,000 of his cohorts with him in those mountains.
+1777	I don't think we can do that for a few years.
+1778	And we also have to affirm all the fledgling democracies in that region, you know, the Estonians, the Lithuanians, the Latvians, the Poles, the Czechs, that we are, in fact, going to be supportive and in solidarity with them in their efforts.
+1779	When I took office, the worst war in Europe was waging in Bosnia.
+1780	The governor has described Medicare as a government HMO.
+1781	How much for my family?
+1782	Here we are with a government that's been dealing with a drug-running Panamanian dictator.
+1783	And, so, I'm encouraged with what I see when I talk to Mr. -- what I hear when I talk to Mr. Gorbachev and Mr. Shevardnadze, but can they pull it off.
+1784	So we can fight this war, and we can win this war.
+1785	I don't want to be sending parents away from children.
+1786	In the first place, never go back to that Democratic grain embargo, that liberal Democrat grain embargo that knocked the markets right out from under us and made Mr. Gorbachev say to me when I was here, how do I know you're reliable suppliers?
+1787	Let me say again, there is no more important responsibility for the president than to say if you believe in the constitution, the Bill of Rights, and the Declaration of Independence, that's all we need to know.
+1788	We've got to anticipate some of these problems ahead of time.
+1789	And I finally -- I thought I didn't understand it -- called all the experts, and they said, oh, it'll be disruptive for 12 to 15 years.
+1790	I have supported the Administration's position and I think that that position has been correct; I think my position has been correct.
+1791	I just have an honest philosophical difference.
+1792	He is for registration of guns.
+1793	I would say that the issue will stay with us as a campaign issue just as long as Senator Kennedy persists in what I think is a fundamental error.
+1794	Now, this economic package, Tim, I'm glad you asked, because you look like the type that might be able to benefit from a 15 percent across- the-board tax cut and $500-per-child tax credit, or -- you know, estate tax relief which you're not interested in right now, but capital gains rate reduction.
+1795	Well, it's cost-effective to help Russia succeed in its revolution; it's pennies on the dollar compared to going back to the Cold War.
+1796	And the reason, one of the major reasons why we're in the difficulties we are in today is because spending got out of control.
+1797	But again, we have a big difference on child care, for example.
+1798	He's going to tax everybody here to fund his programs.
+1799	It's a difference of opinion.

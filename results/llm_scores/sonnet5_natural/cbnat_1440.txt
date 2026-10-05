@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1440	We had to go in there to get Osama bin Laden.
+1441	And I -- and I went to my staff, and I said, "How come all the people for these jobs are -- are all men."
+1442	But -- but I can say this, that we're talking about the Middle East and how to help the Middle East reject the kind of terrorism we're seeing, and the rising tide of tumult and -- and confusion.
+1443	Then companies won't come here.
+1444	Or, alternatively, it's got to be paid for, not only by closing deductions for wealthy individuals, that -- that will pay for about 4 percent reduction in tax rates.
+1445	I felt that -- I wish we'd have had a better vision of the future.
+1446	The secretary of defense called these trillion dollars of cuts to our military devastating.
+1447	And there are a bunch of things we can do to make sure your future is bright.
+1448	So if you're 60 or around 60 or older, you don't need to listen any further.
+1449	That's why we've got to make sure that we've got the best science and research in the world.
+1450	It's going to help Jeremy get a job when he comes out of school.
+1451	Now, Governor Romney has a different philosophy.
+1452	...will be there for you.
+1453	No, it can become out of date.
+1454	He said he was going to broaden the base.
+1455	I know what it takes to get this economy going.
+1456	That's why we doubled fuel efficiency standards on cars.
+1457	Now when the president ran for office, he said that he'd put in place, in his first year, a piece of legislation -- he'd file a bill in his first year that would reform our -- our immigration system, protect legal immigration, stop illegal immigration.
+1458	I was on the world of business for 25 years.
+1459	Now, I know Donald Trump doesn't like to think of himself as small anything, but -- but that's how you define small businesses if you're getting business income.
+1460	When it comes to corporate taxes, Governor Romney has said he wants to, in a revenue neutral way, close loopholes, deductions -- he hasn't identified which ones they are -- but that thereby bring down the corporate rate.
+1461	Every woman in America should have access to contraceptives.
+1462	I was not the standard bearer.
+1463	You keep your own doctor.
+1464	I'm happy to answer the question.
+1465	Our party has been focused too long.
+1466	... at a time when it's vitally important.
+1467	The secretary of defense has said these would be even devastating.
+1468	I don't anticipate that in the future.
+1469	In spite of his policies.
+1470	They want jobs, they want to be able to make sure their kids are going to a good school.
+1471	The top 5 percent of taxpayers will continue to pay 60 percent of the income tax the nation collects.
+1472	Look at the evidence of the last four years.
+1473	We have to make sure this program is there for the long term.
+1474	And those that I haven't been able to keep, it's not for lack of trying and we're going to get it done in a second term.
+1475	We've opened up public lands.
+1476	We -- we make decisions today in the military that -- that will confront challenges we can't imagine.
+1477	And you could never quite get the job done.
+1478	Now, it ultimately is going to be up to the voters -- to you -- which path we should take.
+1479	And the world needs a strong America, and it is stronger now than when I came into office.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2320	We had 7 billion this year and 10 billion more than the president.
+2321	That's not the right course for America.
+2322	And I made it plain to them, we're not.
+2323	But I must tell you, I think legalization of narcotics, or something of that nature, in the face of the medical evidence, would be totally counterproductive.
+2324	And that's not going to happen by just hiring teachers.
+2325	He's man of solid judgment and he's going to be a person to stand by my side.
+2326	And then he has as a model for doing that a board of people at the government, an unelected board, appointed board, who are going to decide what kind of treatment you ought to have.
+2327	I hope we can do it.
+2328	And you see, yes, my position has evolved.
+2329	He had to pay an $850,000 fine to one of the women.
+2330	The American people see this debt, and they know it's got to come down.
+2331	It's absolutely the right thing to do, to have crippling sanctions.
+2332	About another woman, he said, "That wouldn't be my first choice."
+2333	It's also a curious thing for him to say since right after 1993 he voted to cut the intelligence budget by $7.5 billion.
+2334	We also have capital gains now for people that invest in new small businesses and hold the investment for five years.
+2335	Take for example the marriage penalty.
+2336	I want to see market economies spring up all around the world and to the degree they do, we are succeeding.
+2337	The problem with raising taxes is that it slows down the rate of growth.
+2338	It's time to put the American people first, to invest and grow this economy.
+2339	Keep in mind that I and Americans took leadership in organizing an international coalition that made sure that we were able to, without putting troops on the ground at the cost of less than what we spent in two weeks in Iraq, liberate a country that had been under the yoke of dictatorship for 40 years.
+2340	We cannot be strong militarily when we're teeter-tottering on top of a mountain of debt which has been created in the past eight years.
+2341	(chuckle) Well, in the first place, I'm not criticizing His Holiness the Pope.
+2342	Instead of just comes the soft bigotry of low expectations, that there has to be a consequence.
+2343	But younger workers, in order to make sure the system exists tomorrow, younger workers ought to be able to take some of your own money and invest it in safe securities to get a better rate of return on that money.
+2344	The Ford administration will not let down, will not eliminate or forget our obligation to the people of Taiwan.
+2345	And with all of the money they have, we're defending them, and they're not paying?
+2346	Mr. Ford quite often puts forward a program just as a public relations stunt, and never tries to put it through the Congress by working with the Congress.
+2347	We have record numbers of new small businesses.
+2348	So let's go through them one by one.
+2349	And we're not talking about failure of institutions on Wall Street.
+2350	I met a couple in Appleton, Wisconsin, and they said, we're thinking of dropping our insurance, we can't afford it.
+2351	For instance, we now have uh - in the health area three hundred and two different programs administered by eleven major departments and agencies, sixty other advisory commissions responsible for this.
+2352	Our recession was one of the shallowest in modern history.
+2353	I don't have a one of them, and I haven't taken a penny of foreign money, and I never will.
+2354	I've picked a lot of people.
+2355	But the point is, that - that a president ought to lead this country.
+2356	And the rest of my minute, I want to make a very brief comment here in terms of Saddam Hussein.
+2357	Between the World Trade Center bombing in, what was it, 1993 or so, and the next time was five years, seven years.
+2358	In the private sector, Governor Romney's company invested in what were called pioneers of outsourcing.
+2359	We convinced Libya to disarm.

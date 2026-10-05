@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	Pakistan is -- is technically an ally, and they're not acting very much like an ally right now.
+801	Natural gas production is the highest it's been in decades.
+802	Not the one we've been on, not the one the president describes as a top-down, cut taxes for the rich.
+803	... and reduce our violence.
+804	I think it's not just an economic issue, I think it's a moral issue.
+805	In the last four years, you cut permits and licenses on federal land and federal waters in half.
+806	Nothing could be further from the truth.
+807	We have to get our economy going.
+808	As I indicated before, when you talk about shifting Medicaid to states, we're talking about potentially a 30 -- a 30 percent cut in Medicaid over time.
+809	I met a young woman in -- in Philadelphia who's coming out of -- out of college, can't find work.
+810	You said in the Rose Garden the day after the attack, it was an act of terror.
+811	If I'm elected we won't have Obama.
+812	I met a couple in Appleton, Wisconsin, and they said, we're thinking of dropping our insurance, we can't afford it.
+813	I'm -- I'm -- I'm happy.
+814	So, in some ways, we've got some data on which approach is more likely to create jobs and opportunity for Americans and I believe that the economy works best when middle-class families are getting tax breaks so that they've got some money in their pockets, and those of us who have done extraordinarily well because of this magnificent country that we live in, that we can afford to do a little bit more to make sure we're not blowing up the deficit.
+815	Number two, I'll take programs that are currently good programs but I think could be run more efficiently at the state level and send them to the state.
+816	They get to choose -- and they'll have at least two plans that will be entirely at no cost to them.
+817	I'm glad you thought I was a standard bearer four years ago, but I wasn't.
+818	You said that on occasion America had dictated to other nations.
+819	It's not driven by politics.
+820	We've seen progress over the past several years.
+821	The approach that Governor Romney's talking about is the same sales pitch that was made in 2001 and 2003, and we ended up with the slowest job growth in 50 years, we ended up moving from surplus to deficits, and it all culminated in the worst financial crisis since the Great Depression.
+822	And I think that would be a mistake.
+823	They put a plan out.
+824	They look at the fact that we owe 'em a trillion dollars and owe other people $16 trillion in total, including that.
+825	You say we were giving mortgages to people who weren't qualified.
+826	Well, first of all those are reports in the newspaper.
+827	We need to have strong allies.
+828	First of all, Russia I indicated is a geopolitical foe.
+829	I'm going to be able to balance the budget.
+830	And it's time for them to get serious on it.
+831	I think you know better.
+832	We've been there a long time, and we've got to make sure that we and our coalition partners are pulling out responsibly and giving Afghans the capabilities that they need.
+833	And as governor of my state, I was able to get 100 percent of my people insured, all my kids, about 98 percent of the adults.
+834	And everything that I've tried to do, and everything that I'm now proposing for the next four years in terms of improving our education system or developing American energy or making sure that we're closing loopholes for companies that are shipping jobs overseas and focusing on small businesses and companies that are creating jobs here in the United States, or closing our deficit in a responsible, balanced way that allows us to invest in our future.
+835	Let me give you some advice.
+836	I know what it takes to bring them back, and I'm going to do that, and make sure that when you graduate -- when do you graduate?
+837	The opportunities for us in Latin America we have just not taken advantage of fully.
+838	And she worked hard every day and made a lot of sacrifices to make sure we got everything we needed.
+839	And Republicans and Democrats both love America.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1920	You shouldn't be worrying if you get a new job as to whether that's gonna -- and part of our plan is to make it what they call portable -- big word, but that means if you're working for the Jones Company and you go to the Smith Company, your insurance goes with you.
+1921	No -- well, what the Vice President must not understand is we've got a hate crimes bill in Texas.
+1922	Now he's having to say that again.
+1923	And I would just say there are three things that I would like to say -- number one -- we do have to maintain the world's strongest defense.
+1924	Now, the President can say well he wants to mend it, not end it.
+1925	This man has outspent me and the special interests are outspending me.
+1926	I am for the North American Free Trade Agreement.
+1927	The first half of '84 it's up 81/2 percent.
+1928	That's why what I have put forward doesn't add a penny to the debt, but it is the kind of approach that will enable more people to take those new jobs, higher-paying jobs.
+1929	Indeed, we had to borrow $17 billion to pay the checks.
+1930	And we have now achieved an historic arms control agreement.
+1931	Now, but here is why it's directly relevant, Jim.
+1932	We had to stand up against a tyrant.
+1933	I would have put them in place earlier.
+1934	And -- and I just -- so I just have to make this general point that the Bush administration, some of Senator McCain's own advisers all think this is important, and Senator McCain appears resistant.
+1935	And perhaps the dominant domestic issue of our times is what do we do about these enormous deficits.
+1936	That will strengthen us and weaken them when it comes to issues like Georgia.
+1937	Government does not create jobs.
+1938	We have got to win our national strategy against drugs, the fight against drugs.
+1939	But we went in in the interest of peace and to keep Israel and Syria from getting into the sixth war between them.
+1940	I think that's been proven.
+1941	The secretary of defense has said these would be even devastating.
+1942	... get to do pretty much whatever they want, including saying, look, I'm sorry, you've got diabetes, you had cancer, your child has asthma...
+1943	Well, first of all, Jim, I would like to respond to what the governor just said.
+1944	Textiles, shoes, things like that that we say are yesterday's industries.
+1945	They understand that a free Afghanistan or a free Iraq will be a major defeat for them.
+1946	He not only advocates the scrapping of this treaty - and I don't know that these men that he quotes are against the treaty in its final form - but he also advocates the possibility, he said it's been a missing element, of playing a trump card against the Soviet Union of a nuclear arms race, and is insisting upon nuclear superiority by our own nation, as a predication for negotiation in the future with the Soviet Union.
+1947	They concluded there was no case; he said the FBI was rigged.
+1948	You pay $500 for a $5 hammer, you're not buying strength.
+1949	I just want to take one of those points, again, attacking me as not talking about an agenda for -- for getting more trade and opening up more jobs in this country.
+1950	Who does he owe money to?
+1951	Well, let me just said that that this is -- he -- Senator Obama doesn't want a free trade agreement with our best ally in the region but wants to sit down across the table without precondition to -- with Hugo Chavez, the guy who has been helping FARC, the terrorist organization.
+1952	Ours is a great land, and one of the reasons why is because we're free.
+1953	Children across our country don't have health care.
+1954	But I have lived the American dream.
+1955	And a lot of it has to do with the fact that our taxes are so high, just about the highest in the world.
+1956	I'll just mention one -- the Beasley Academic Center in Chicago.
+1957	Now, that's the kind of leadership that I want to provide as president of the United States.
+1958	I think they're different because they're based on prejudice and hatred, which gives rise to crimes that have not just a single victim, but they're intended to stigmatize and dehumanize a whole group of people.
+1959	We're going to make elections.

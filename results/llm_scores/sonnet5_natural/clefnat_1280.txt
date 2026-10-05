@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1280	We've got the plan announced for what we can do for small business.
+1281	But look who's around with him there.
+1282	Senator McCain talks a lot about drilling, and that's important, but we have three percent of the world's oil reserves and we use 25 percent of the world's oil.
+1283	This one's kind of old.
+1284	There ought to be a standardized design.
+1285	I didn't favor it when it was in, started.
+1286	If you notice that in all of this proposal, Senator -- government wants -- Senator Obama wants government to do the job.
+1287	Now with respect to Libya, as I indicated in the last debate, when we received that phone call, I immediately made sure that, number one, that we did everything we could to secure those Americans who were still in harm's way; number two, that we would investigate exactly what happened, and number three, most importantly, that we would go after those who killed Americans and we would bring them to justice.
+1288	That's how we signed three trade deals into law that are helping us to double our exports and sell more American products around the world.
+1289	And it's also unfair to dump these tremendous bills on our children.
+1290	I hope it isn't Christmas when you make that decision.
+1291	He introduced some 300 bills and he's passed five.
+1292	I will be the president and we will get it done.
+1293	We've lost in our foreign policy, the character of the American people.
+1294	Of course, he voted for the resolution - it was virtually unanimous.
+1295	I'm asking the people's support as president.
+1296	We simply are going to provide a deterrent so that it will be too costly for them if they are nursing any ideas of aggression against us.
+1297	I have indicated to General Brown that uh - the words that he used in that interview, in that particular case and in several others, were very ill advised.
+1298	Recycle those proceeds, then, back into the pockets of the American workers by reducing their tax payments.
+1299	But I believe -- we want to make sure that we have the relationships of friendship with the people that take his place, steps that in the years to come we see Syria as a -- as a friend, and Syria as a responsible party in the Middle East.
+1300	That's really about all we can do.
+1301	We got to cut it out.
+1302	Syria is Russia and it's Iran, who she made strong and Kerry and Obama made into a very powerful nation and a very rich nation, very, very quickly, very, very quickly.
+1303	Because I settled that lawsuit with no admission of guilt, but that was a lawsuit brought against many real estate firms, and it's just one of those things.
+1304	And uh - I don't believe that our security would be directly threatened if the Soviet Union went uh - into Yugoslavia.
+1305	And the reality is it's not just wealthy people -- you mentioned Donald Trump.
+1306	The National Federation of Independent Businesses has said that will cost 700,000 jobs.
+1307	Permit the president to set the priorities on where we do the spending.
+1308	The right answer for government is say, How do we make the private sector become more efficient and more effective?
+1309	You're running ads right now that say that I oppose federal funding for stem cell research.
+1310	And that's one of the reasons why my state has cut crime by more than any other industrial state in America.
+1311	And I'm trying to emphasize that what I want to do is to continue to do that.
+1312	You've gone up 64 percent.
+1313	I would wind up -- I mean, it's the last question and I would mischaracterize it to try to make you happy.
+1314	It's easy to say in retrospect I would have done something differently.
+1315	And he used to tell me things that I knew were not quite accurate.
+1316	But we all know, my friends, until we stabilize home values in America, we're never going to start turning around and creating jobs and fixing our economy.
+1317	Chris, she should never have been allowed to run for the presidency based on what she did with e-mails and so many other things.
+1318	We know where they're cutting.
+1319	That's after losing 5 million jobs.

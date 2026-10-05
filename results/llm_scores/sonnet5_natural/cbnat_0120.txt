@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+120	And the challenges America faces right now -- look, the reason I'm in this race is there are people that are really hurting today in this country.
+121	That's how it's going to be paid for, but we don't know the details.
+122	My five-point plan does it.
+123	I want to make sure our timekeepers are working here.
+124	Getting us to a balanced budget.
+125	You said by now we'd be at 5.4 percent unemployment.
+126	We all understand what this country has become because talent from all around the world wants to come here.
+127	Well, I did with my first statement.
+128	And as a matter of fact, when the president ran for office, he said that, by this year, he would have brought down the cost of insurance for each family by $2,500 a family.
+129	The first two weeks she's got them, some of them sitting on the floor until finally they get reassigned.
+130	Because they have the opportunity to reenter the community of nations, and we would welcome that.
+131	When it comes to community colleges, we are seeing great work done out there all over the country because we have the opportunity to train people for jobs that exist right now.
+132	I'd like to clear up the record and go through it piece by piece.
+133	And the reason is, because I believe that we do best when the middle class is doing well.
+134	And kids across this country are going to recognize, we're bringing back an economy.
+135	We created 23 million new jobs.
+136	And he said, "Yes, I think that's fair."
+137	They don't want to see protectionism.
+138	That's why we have to invest in advanced manufacturing.
+139	China can be our partner, but -- but that doesn't mean they can just roll all over us and steal our jobs on an unfair basis.
+140	And as far as currency manipulation, the currency has actually gone up 11 percent since I've been president because we have pushed them hard.
+141	Look, I've got five boys.
+142	What I believe is we have to do, as the president mentioned towards the end of his remarks there, which is to make enormous efforts to enforce the gun laws that we have, and to change the culture of violence that we have.
+143	What was his participation there?
+144	Let's talk about military spending, and that's this.
+145	Look, the revenue I get is by more people working, getting higher pay, paying more taxes.
+146	And so the right course for us, is working through our partners and with our own resources, to identify responsible parties within Syria, organize them, bring them together in a -- in a form of -- if not government, a form of -- of -- of council that can take the lead in Syria.
+147	There are a number of things that sound good, but frankly, we just can't afford them.
+148	And we've put unprecedented trade pressure on China.
+149	A lot of good people have lost jobs.
+150	One by holding down the value of their currency.
+151	I'm a son of Detroit.
+152	I mean, the president received a letter from 38 Democrat senators saying the tensions with Israel were a real problem.
+153	So as soon as we found out that the Benghazi consulate was being overrun, I was on the phone with my national security team and I gave them three instructions.
+154	And, unfortunately, Governor Romney's budget and his proposals would not allow us to make those investments.
+155	Because -- because this is important.
+156	We're blessed with terrific soldiers, and extraordinary technology and intelligence.
+157	I want to get America's economy going again.
+158	It means that the teacher that I met in Las Vegas, a wonderful young lady, who describes to me -- she's got 42 kids in her class.
+159	States like Arizona, Rhode Island have taken these -- these Medicaid dollars; have shown they can run these programs more cost-effectively.

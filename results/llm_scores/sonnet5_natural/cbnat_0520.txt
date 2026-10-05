@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+520	But it is -- the basic structure is sound.
+521	That's exactly the philosophy that we've seen in place for the last decade.
+522	That is not a recipe for growth.
+523	I will not let that happen.
+524	His top adviser on immigration is the guy who designed the Arizona law, the entirety of it; not E-Verify, the whole thing.
+525	Number four, get to us a balanced budget.
+526	And we are now reletting them so that we can actually make a profit.
+527	And, you know, I was raised by a single mom who had to put herself through school while looking after two kids.
+528	And then he has as a model for doing that a board of people at the government, an unelected board, appointed board, who are going to decide what kind of treatment you ought to have.
+529	So, it's conceivable that Governor Romney could bring down gas prices because with his policies, we might be back in that same mess.
+530	Well, Katherine, that's a great question.
+531	Because we ended the war in Iraq, we were able to refocus our attention on not only the terrorist threat, but also beginning a transition process in Afghanistan.
+532	We've got to reduce our deficit, but we've got to do it in a balanced way.
+533	Wasn't a top-down approach, Governor.
+534	If I'm president I will create -- help create 12 million new jobs in this country with rising incomes.
+535	We've got potentially 600,000 jobs and 100 years worth of energy right beneath our feet with natural gas.
+536	They must not develop nuclear capability.
+537	That's not what I believe.
+538	Folks on Social Security who've worked all their lives.
+539	One last point I want to make.
+540	So 77 government programs, everything from aircrafts that the Air Force had ordered but weren't working very well, 18 government -- 18 government programs for education that were well-intentioned, not weren't helping kids learn, we went after medical fraud in Medicare and Medicaid very aggressively, more aggressively than ever before, and have saved tens of billions of dollars, $50 billion of waste taken out of the system.
+541	We are mobilizing humanitarian support, and support for the opposition.
+542	You said that we should still have troops in Iraq to this day.
+543	I will not cut our military budget.
+544	And there's one going on right now, which we don't know about it.
+545	But that's already the law and that doesn't help the millions of people out there with preexisting conditions.
+546	And when I went to Israel as a candidate, I didn't take donors.
+547	Well, the truth of the matter is, is that that's exactly what we've done.
+548	You know, his -- his running mate, Congressman Ryan, put forward a budget that reflects many of the principles that Governor Romney's talked about.
+549	But I'm going to make an important point here, Jim.
+550	First thing I'm going to do," despite the fact that it's the same health care plan that he passed in Massachusetts and is working well.
+551	And -- and what's at stake here is one of two things, either Candy -- this blows up the deficit because keep in mind, this is just to pay for the additional spending that he's talking about, $7 trillion - $8 trillion before we even get to the deficit we already have.
+552	And as a consequence, we now have a system in which we have the opportunity to start bringing down costs, as opposed to just leaving millions of people out in the cold.
+553	And then a few days later, I was there greeting the caskets coming into Andrews Air Force Base and grieving with the families.
+554	But I'm not going to -- I'm not going to keep on spending money on things to borrow money from China to pay for.
+555	But let me also note that as I said earlier, we're going to have to do more than just going after leaders and -- and killing bad guys, important as that is.
+556	When Governor Romney was asked whether teachers, hiring more teachers was important to growing our economy, Governor Romney said that doesn't grow our economy.
+557	...I would liquidate the industry.
+558	The answer was we got...
+559	Massachusetts schools are ranked number one in the nation.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	No, no, no, but I could say, you know, that I ran a small grocery store on the corner, therefore I extrapolate that into the fact that I can run Wal-Mart.
+1001	That's the same percentage that it was twenty years ago.
+1002	Now, it ultimately is going to be up to the voters -- to you -- which path we should take.
+1003	But maybe you meant that some in the country don't have the will to fight it, but those that are out there on the front line, as you know -- you've been a strong backer of law enforcement -- really -- I just want to clear that up --have the will to fight it, and, frankly, some of them are giving their lives.
+1004	Government -- he says invest government, grow government.
+1005	For instance, if the Arab countries ever again declare an embargo against our nation on oil I would consider that not a military but an economic declaration of war, and I would respond instantly and in kind.
+1006	We're four years closer to a nuclear Iran.
+1007	I will not cut our commitment to our military.
+1008	And that's why it's going to be so important for us to work with homeowners to make sure that they can stay in their homes.
+1009	It is absolutely essential in terms of bringing our banking system and credit system into the new age instead of having it living back in the dark ages.
+1010	The Soviet Union is making great gains.
+1011	I ask Hillary, why doesn't -- she made $250 million by being in office.
+1012	But that's the kind of thinking that our country needs.
+1013	I want to make sure we rebuild our military to keep the peace.
+1014	We paid more military aid, more aid into Laos po- per - per person than in any country in the world and we ought to know now that Laos is moving from neutralism in the direction of the Communists.
+1015	That's why I want to have an intelligence surge that protects us here at home, why we have to go after them from the air, on the ground, online, why we have to make sure here at home we don't let terrorists buy weapons.
+1016	I assume she had nothing to do with it.
+1017	And it's going to be tough.
+1018	I make sure that we have a health care system that allows for everyone to have basic coverage.
+1019	Sixty to seventy percent of our colored children do not finish high school.
+1020	First of all, as I say, I don't think that -- we're not going to have another Cold War with Russia.
+1021	But we did factor in our own ideas with regard to increases in the projected military spending that we believe would, over a period of time, do what is necessary.
+1022	I also believe that we should offer college scholarships to people who will agree to work them off as police officers, and I think, as we reduce our military forces, we should let people earn military retirement by coming out and working as police officers.
+1023	I'm going to continue to push on this issue for the next four years.
+1024	It wasn't thought through properly.
+1025	And I'll bring new competition to bring the price down.
+1026	94% comes from the local level.
+1027	Get the economy going, cut the capital gains rate, create more jobs and opportunities for everybody in America.
+1028	But the fact is that it has taken many turns which I think are unacceptable.
+1029	They've intermarried with Al Qaida and the Taliban.
+1030	I can make American safer than President Bush has made us.
+1031	I say that the American people don't want to go back to those policies.
+1032	I want to finally get something done on Social Security.
+1033	-- this was a spontaneous --
+1034	Maybe we can work that out.
+1035	And, John, I -- you're absolutely right that presidents have to be prudent in what they say.
+1036	And therefore prevent war from happening in the first place.
+1037	What I've seen -- what I've seen is so bad.
+1038	I think you have to have a system of primary and preventive clinics in our inner cities and our rural areas so people can have access to health care.
+1039	He has no respect for our president.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	I see jihadists continuing to spread, whether they're rising or just about the same level, hard to precisely measure, but it's clear they're there.
+601	Well, President, you're -- Mr. President, you're absolutely right, which is that, with regards to 97 percent of the businesses are not -- not taxed at the 35 percent tax rate, they're taxed at a lower rate.
+602	I ran the Olympics and balanced the budget.
+603	And if Israel is attacked, we have their back, not just diplomatically, not just culturally, but militarily.
+604	We're now spending 42 percent of our economy on government.
+605	I'm not quite sure where that came in, except this, which is, I would like to take the Medicaid dollars that go to states and say to a state, you're going to get what you got last year, plus inflation, plus 1 percent, and then you're going to manage your care for your poor in the way you think best.
+606	But we're always also going to have to maintain vigilance when it comes to terrorist activities.
+607	So my attitude coming into office was that we are going to insist that China plays by the same rules as everybody else.
+608	The Navy said they needed 313 ships to carry out their mission.
+609	...you've had the floor for a while.
+610	They've held a torch for the world to see -- the torch of freedom and hope and opportunity.
+611	That will not help us compete with China.
+612	Part of it is seeing if we can get an assault weapons ban reintroduced.
+613	I know what it takes to get this country back, and will work with good Democrats and good Republicans to do that.
+614	I committed that I would rein in the excesses of Wall Street, and we passed the toughest Wall Street reforms since the 1930s.
+615	But I have said that for incomes over $250,000 a year, that we should go back to the rates that we had when Bill Clinton was president, when we created 23 million new jobs, went from deficit to surplus, and created a whole lot of millionaires to boot.
+616	Governor Romney doesn't have a five-point plan.
+617	That statement also says that we are endowed by our creator with the right to pursue happiness as we choose.
+618	Now one of the reasons I was able to get so many good women to be part of that team was because of our recruiting effort.
+619	The right course for America is to have a true all-of-the-above policy.
+620	I'm going to change that.
+621	You can't engage in some of this risky behavior that is putting Main Street at risk.
+622	I believe he will go.
+623	I learned how to get along on the other side of the aisle.
+624	Bob, I just need to comment on this.
+625	And it's important for them.
+626	I want to get us on track to a balanced budget, and I'm going to reduce the tax burden on middle income families.
+627	We have -- we have a president talking about someone's plan in a way that's completely foreign to what my real plan is.
+628	And hard-pressed states right now can't all do that.
+629	You know when members of the Republican Congress say, "We're going to sign a no tax pledge, so that we don't ask a dime for millionaires and billionaires to reduce our deficit so we can still invest in education, and helping kids go to college.
+630	While we were still dealing with our diplomats being threatened, Governor Romney put out a press release, trying to make political points, and that's not how a commander in chief operates.
+631	We're starting to see gains in math and science.
+632	That's -- that's important, of course.
+633	Because under the last four years, they've been buried.
+634	You also have investments outside the United States.
+635	And, by the way, I like coal.
+636	You need transparency, you need to have leverage limits for...
+637	There's no question in my mind that if the president were to be reelected you'll continue to see a middle-class squeeze with incomes going down and prices going up.
+638	We're still down 580,000 jobs.
+639	Jim, I -- you may want to move onto another topic, but I -- I would just say this to the American people.

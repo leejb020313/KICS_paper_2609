@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1480	And I've told everything I know about it.
+1481	So let's be clear about what the threat is and how we are best going to be able to meet it.
+1482	He wants to grow the government and I trust you with your own money.
+1483	The president has never said whether or not he would do that.
+1484	But she is raising your taxes and I'm lowering your taxes.
+1485	But there's no doubt there's a lot of opposition to it in the Senate.
+1486	We let families save in an IRA, withdraw tax free to pay for the cost of education and it's all paid for.
+1487	That's part of what I'm fighting for as president of the United States.
+1488	Nuclear is the single greatest threat.
+1489	Syria will remain a hotbed of terrorism as long as the civil war, aided and abetted by the Iranians and the Russians, continue.
+1490	The worst thing is, again, it's a mistake.
+1491	My best friend from grade school is a computer software salesman and he told me last time he changed employers it took him nine months to figure out how to transfer his 401K plan.
+1492	Exaggerations like, for example, only 5% of seniors receive benefits under my Medicare reform package.
+1493	But nevertheless, they're out there.
+1494	What I can promise you is that I will make the playing field as fair as possible, that I will, for instance, make certain that with respect to the tax system that you as a worker in America are not subsidizing the loss of your job.
+1495	I don't think that is a smart strategy.
+1496	When I was that far ahead, it was immediately following the Democratic Convention, and before the Republican Convention.
+1497	Well, Terry, first of all, we honor your service, and we're grateful for it.
+1498	They write me, and one woman wrote me about her son, Felix.
+1499	So nobody is more concerned about their safety and security than I am.
+1500	They shouldn't misuse their bench.
+1501	And I think it's time that the wealthy and corporations paid their fair share to support this country.
+1502	Well, Oliver, first, let me tell you what's in the rescue package for you.
+1503	It means that there will be increased hires.
+1504	Everybody who was around then, and had been there, and knew about it knew that it was a failed state.
+1505	I do disagree with her judgment in many cases.
+1506	We cut the rate of increase in spending in half.
+1507	"No, we're spending your money.
+1508	I've met people who struggled with this for years, people who were in a marriage because they were living a sort of convention, and they struggled with it.
+1509	They taught me that this was the greatest country in the world.
+1510	It is a question of leadership.
+1511	I said in my acceptance speech in San Diego about two months ago that the exits are clearly marked.
+1512	And let me say this-all he can talk about-he goes around ranting about Noriega.
+1513	Well a lot of it came from the Bakken Range in North Dakota.
+1514	The uh - emphasis, I think, of the - of the court system uh - should be to interpret the uh - the Constitution and the laws uh - equally between property protection and personal protection.
+1515	They're moving about eight or nine days in Texas.
+1516	And while he's been diverted, with 9 out of 10 active duty divisions of our Army, either going to Iraq, coming back from Iraq, or getting ready to go, North Korea's gotten nuclear weapons and the world is more dangerous.
+1517	All that his advisers do is to give counsel when he asks for it.
+1518	We are spending a fortune doing it.
+1519	But have no doubt, but have no doubt that the Iranians continue on the path to the acquisition of a nuclear weapon as we speak tonight.

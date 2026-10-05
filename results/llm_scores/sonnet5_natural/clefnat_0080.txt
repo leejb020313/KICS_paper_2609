@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	And of course, a military action is the last resort.
+81	Well, it isn't going to go back up.
+82	And I think that in that case uh - some of the more liberal uh - members of the uh - so-called Warren Court agreed with those decisions.
+83	She said a lot of things that were false.
+84	So as far as the respect of our own people toward our own government, as far as participating in the shaping of uh - concepts and commitments, as far as the trust of our country among the nations of the world, as far as dependence of our country in meeting the needs and obligations that we've expressed to our allies, as far as the respect of our country - even among our potential adversaries - we are weak.
+85	I'm not going to ask them.
+86	And I've got a different vision for America.
+87	First of all, I had a very good meeting with the president of Mexico.
+88	And that's exactly what we're going to do.
+89	I believe strongly we should d- do so in Formosa and I believe we should meet our commitments to every country whose security we've guaranteed.
+90	I grew up in the segregated South, thankfully raised by a grandfather with almost no formal education but with a heart of gold who taught me early that all people were equal in the eyes of God.
+91	A lot of them are thrown out because of all the scandals.
+92	But if you just want to keep the music going, just stay traditional this next time around, and 4 years from now you'll have everybody blaming everybody else for a bad health care system.
+93	I think that we have to put more emphasis on early learning and pre-school.
+94	I have a winning temperament.
+95	Number three, the Vice President - on May fifteenth after the U-2 flight - indicated that the flights were going on, even though the Administration and the President had canceled the flights on May twelfth.
+96	They think a lot of the ISIS leaders are in Mosul.
+97	I think we're going to have to do better.
+98	Five million Americans have lost their health care; 620,000 Missourians have no health care at all; 96,000 Missourians have lost their health care under President Bush.
+99	But when I proposed my plan this past Tuesday, he or one of his spokesmen called it socialized medicine.
+100	When the Vice President makes a decision, that will be his decision.
+101	And we used - yes, we used - the Senate Budget Committee's projections for five years, which are based on an average inflation rate of 7.5% - which, I think, that under our plan, can be eliminated.
+102	Well, is a homebuyer better off he can refinance the home, because interest rates are down?
+103	I have fought for Social Security and Medicare and for things to help people who are vulnerable all my life, and I will do it as President of the United States.
+104	we're confronted with the horrendous problems that we've discussed here tonight.
+105	All of these things have brought an improvement in the college entrance exams for the first time in some 20 years.
+106	That's one that I understand and certainly will carry out.
+107	And so we are going to do very careful, thorough vetting.
+108	But I think in terms of the American people's concern about my commitment, I'm here tonight, folks; I never quit supporting you as you put me on the ballot in the other 26 states; and when you asked me to come back in, I came back in.
+109	We have never in the history of our country been in a situation where an adversary, a foreign power, is working so hard to influence the outcome of the election.
+110	And I'll do a good job, because I am committed.
+111	I don't use language like that and I don't think that we should.
+112	His running mate Jack Kemp once said that Bob Dole never met a tax he didn't hike.
+113	We have not known what we've wanted and we've been out-traded in almost every instance.
+114	I wouldn't relish doing it but I wouldn't shrink from it.
+115	And we're going to put our laboratories and our colleges and our universities to work.
+116	We can get this economy going again.
+117	And the flow of imports into this country is swamping the American people.
+118	But, let's start with Somalia, where they dragged Americans through the streets, and where 18 Americans were killed one day, because they didn't have, they were pinned down for eight hours, the rangers.
+119	There were too many infantrymen there, not enough heavy artillery; and certainly I don't think there was any implication in Secretary Dulles' statement that Quemoy and Matsu should not be defended in the event that they were attacked, and that attack was a preliminary to an attack on Formosa.

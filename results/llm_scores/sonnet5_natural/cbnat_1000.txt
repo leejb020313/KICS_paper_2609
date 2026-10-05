@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1000	I know what it takes to balance budgets.
+1001	But just a few weeks ago, you said you think we should have more troops in Iraq right now.
+1002	And what I want to do, is build on the five million jobs that we've created over the last 30 months in the private sector alone.
+1003	If we take your advice with respect to how we change our tax codes so that companies that earn profits overseas don't pay U.S. taxes compared to companies here that are paying taxes.
+1004	But we also have to recognize that, you know, for us to get more entangled militarily in Syria is a serious step, and we have to do so making absolutely certain that we know who we are helping; that we're not putting arms in the hands of folks who eventually could turn them against us or allies in the region.
+1005	That's not how America was built.
+1006	And that means 98 percent of American families, 97 percent of small businesses, they will not see a tax increase.
+1007	If you wanted to make some adjustments to it, take it, go to Congress, fight for it.
+1008	Now, we're going to have to make sure that as we trade with other nations that they play by the rules.
+1009	And I suspect he'll keep those too.
+1010	AARP thinks that the -- the savings that we obtained from Medicare bolster the system, lengthen the Medicare trust fund by eight years.
+1011	You can make a lot of money and pay lower tax rates than somebody who makes a lot less.
+1012	And that means, yes, we still continue to open up new areas for drilling.
+1013	Number two, we do have to deal with our border so we put more border patrol on the -- any time in history and the flow of undocumented works across the border is actually lower than it's been in 40 years.
+1014	So more debt and less jobs.
+1015	But we're also a nation of laws.
+1016	We're not going to eliminate everybody who is mentally disturbed and we have got to make sure they don't get weapons.
+1017	We haven't done that yet.
+1018	Jim, I had the great experience -- it didn't seem like it at the time -- of being elected in a state where my legislature was 87 percent Democrat.
+1019	I'm a guy who wants to help with the experience I have, the American people.
+1020	And there are a number of things.
+1021	And when it comes to our military and Chinese security, part of the reason that we were able to pivot to the Asia-Pacific region after having ended the war in Iraq and transitioning out of Afghanistan, is precisely because this is going to be a massive growth area in the future.
+1022	We cut taxes 19 times.
+1023	For me, this is about jobs.
+1024	And what I did was work with our joint chiefs of staff to think about, what are we going to need in the future to make sure that we are safe?
+1025	We've changed for the first time since FDR -- since FDR we had the -- we've always had the strategy of saying we could fight in two conflicts at once.
+1026	Their aspirations are similar to young people's here.
+1027	If the president's energy policies are working, you're going to see the cost of energy come down.
+1028	I see the Middle East with a rising tide of violence, chaos, tumult.
+1029	Actually, this $2.8 billion goes largely to small companies, to drilling operators and so forth.
+1030	So those are the kinds of things that we can now do because we're making that transition in Afghanistan.
+1031	I want it to be clearer.
+1032	But more importantly it is true that in order for us to be competitive, we're going to have to make some smart choices right now.
+1033	When -- when we were fighting about whether or not we were going to make sure that Americans had more security with their health insurance and they said no, yes, that was a fight that we needed to have.
+1034	And then somehow you're also going to deal with the deficit that we've already got.
+1035	Former chief of the -- Joint Chiefs of Staff said that -- Admiral Mullen said that our debt is the biggest national security threat we face.
+1036	They'll have more than Great Britain sometime in the -- in the relatively near future.
+1037	But in my view, the president should have grabbed it.
+1038	But there have been too many instances during the course of my presidency, where I've had to comfort families who have lost somebody.
+1039	It was a moment ago and I didn't get a chance to, when he was describing Chinese investments and so forth.

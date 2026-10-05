@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2000	I did not say that the Arizona law was a model for the nation in that aspect.
+2001	By the way, number one I get rid of is Obamacare.
+2002	No, I think -- I had five seconds before you interrupted me, was ...
+2003	We're a nation that believes in the Second Amendment, and I believe in the Second Amendment.
+2004	And we hope that their leadership takes the right decision, but the deal we'll accept is they end their nuclear program.
+2005	Now, I want to build on that.
+2006	What I've also said is if we're going to go after folks who are here illegally, we should do it smartly and go after folks who are criminals, gang bangers, people who are hurting the community, not after students, not after folks who are here just because they're trying to figure out how to feed their families.
+2007	I want to bring down the tax burden on middle-income families.
+2008	But ultimately, Syrians are going to have to determine their own future.
+2009	Trickle-down government has never worked here, has never worked anywhere.
+2010	But number five, the other thing that we have to do is recognize that we can't continue to do nation building in these regions.
+2011	Number two, we're going to increase our trade.
+2012	Because when there are elections, people tend to vote for peace.
+2013	So -- so let's state -- one of the magnificent things about this country is the whole idea that states are the laboratories of democracy.
+2014	That's $1 -- that's $1 for every $15 you've cut.
+2015	And we -- we look for discovery and innovation, all these things desired out of the American heart to provide the pursuit of happiness for our citizens.
+2016	You raise taxes and you kill jobs.
+2017	You've been president four years.
+2018	I can run this more efficiently than the federal government and states, by the way, are proving it.
+2019	And that is not reflected in the kind of budget that you're putting forward because it just doesn't work.
+2020	I care about our kids.
+2021	That's what we need more of, Candy.
+2022	What you just heard Governor Romney said is he doesn't have different ideas.
+2023	That's the kind of leadership that we'll continue to show.
+2024	We didn't put in place a board that can tell people ultimately what treatments they're going to receive.
+2025	That doesn't restrict people's freedom.
+2026	The proof of that is we've gone from 32 million on food stamps to 47 million on food stamps.
+2027	...here's one thing I've learned as commander in chief.
+2028	He's already taken that off the board, capital gains are going to continue to be at a low rate so we -- we're not going to get money that way.
+2029	He was right, but then he put in place deficits twice that size for every one of his four years.
+2030	Katherine, I just want to point out that when Governor Romney's campaign was asked about the Lilly Ledbetter bill, whether he supported it?
+2031	When it comes to making college affordable, whether it's two-year or four-year, one of the things that I did as president was we were sending $60 billion to banks and lenders as middlemen for the student loan program, even though the loans were guaranteed.
+2032	Is the Middle East in tumult?
+2033	So now I want to hire another 100,000 new math and science teachers, and create 2 million more slots in our community colleges so that people can get trained for the jobs that are out there right now.
+2034	So for instance when he says, "Yours is a $5 trillion cut."
+2035	And finally, with regards to that tax cut, look, I'm not looking to cut massive taxes and to reduce the -- the revenues going to the government.
+2036	I think we've got to invest in education and training.
+2037	And natural gas isn't just appearing magically.
+2038	Now, if you take such an unbalanced approach, then that means you are going to be gutting our investments in schools and education.
+2039	And the answer they came up with was this:

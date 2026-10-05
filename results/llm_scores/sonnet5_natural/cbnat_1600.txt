@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1600	Well, I would repeal and replace it.
+1601	The people who are having the hard time right now are middle- income Americans.
+1602	Earlier, Governor Romney talked about he wants to make Pell Grants and other education accessible for young people.
+1603	Jim, let me just come back on that -- on that point, which is these...
+1604	The president's reelected you'll see dramatic cuts to our military.
+1605	They're making some progress; they need to make more.
+1606	We want to end those conflicts to the extent humanly possible.
+1607	We are working with countries in the region to make sure, for example, that ships can pass through; that commerce continues.
+1608	And the answer is I don't believe people think that's the case --
+1609	They haven't formed a unity group, a council of some kind.
+1610	So they don't have to pay additional money, no additional $6,000.
+1611	He's lost his most recent job and we've now just lost our home.
+1612	If -- if we're serious, we've got to take a balanced, responsible approach.
+1613	But I also promised that I'd fight every single day on behalf of the American people, the middle class, and all those who were striving to get into the middle class.
+1614	And that's what we've done over the last four years.
+1615	And, by the way, if a state gets in trouble, well, we can step in and see if we can find a way to help them.
+1616	That's how we built the world's greatest middle class.
+1617	Keep in mind that I and Americans took leadership in organizing an international coalition that made sure that we were able to, without putting troops on the ground at the cost of less than what we spent in two weeks in Iraq, liberate a country that had been under the yoke of dictatorship for 40 years.
+1618	But when we make this into a divisive political issue, and when we don't have bipartisan support -- I can deliver, Governor, a whole bunch of Democrats to get comprehensive immigration reform done, and we can't...
+1619	He called the Arizona law a model for the nation.
+1620	I know my own view is I'd rather have a private plan.
+1621	Well, I fundamentally disagree with that.
+1622	I mean, you have said before you'd cut the deficit in half.
+1623	Let's get back to Medicare.
+1624	But with respect to China, China is both an adversary, but also a potential partner in the international community if it's following the rules.
+1625	And as a consequence, Al Qaeda's core leadership has been decimated.
+1626	And as a consequence, veterans' unemployment is actually now lower than general population.
+1627	I interpret that as, one, making sure that those people who are less fortunate and can't care for themselves are cared by -- by one another.
+1628	It was President Bush that wrote the first checks.
+1629	But if you calculated that unemployment rate, taking back the people who dropped out of the workforce, it would be 10.7 percent.
+1630	Nobody who's looked at it that's serious, actually believes it adds up.
+1631	We do need to make sure that they don't have arms that get into the -- the wrong hands.
+1632	And so as a consequence, they're paying their premiums, somebody gets really sick, lo and behold, they don't have enough money to pay the bills, because the insurance companies say that they've hit the limit.
+1633	Governor, the problem is, is that on a whole range of issues, whether it's the Middle East, whether it's Afghanistan, whether it's Iraq, whether it's now Iran, you've been all over the map.
+1634	But we all know that we've still got a lot of work to do.
+1635	That's in America's national interest and that will be the case so long as I'm president.
+1636	But in order to be able to fulfill our role in the world, America must be strong.
+1637	Let's talk about corporate taxes.
+1638	What we've said is to states, we'll give you more money if you initiate reforms.
+1639	We've seen progress and gains in schools that were having a terrible time.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+160	I understand that the report today is accurate.
+161	We - quite often we have a transient problem.
+162	It means their job is tougher.
+163	Again, you can look it up.
+164	So, I would think that this would be the point of enforcement on this.
+165	Whether we're going to give our children a world-class education.
+166	We need to accelerate the drug approval process.
+167	And I feel strongly that the Supreme Court needs to stand on the side of the American people, not on the side of the powerful corporations and the wealthy.
+168	And we -- we look for discovery and innovation, all these things desired out of the American heart to provide the pursuit of happiness for our citizens.
+169	We comprise about 30 percent of the world's economic trade power influence.
+170	Mr. Edwards, I don't think it's a wise idea for presidential candidates to appoint the members of his cabinet prospectively, or to suggest four people - indicate that one of them surely will be appointed.
+171	If you don't want to take the offer of the plan that I want to put forward, you don't have do.
+172	And the fact that you're going to college is great, but I want everybody to get a great education and we've worked hard to make sure that student loans are available for folks like you, but I also want to make sure that community colleges are offering slots for workers to get retrained for the jobs that are out there right now and the jobs of the future.
+173	Congress passed a paperwork reduction act.
+174	I want my fellow Americans to hear one more time.
+175	And so John likes -- John, you like to pretend like the war started in 2007.
+176	There's a lot of talk about trigger locks being on guns sold in the future.
+177	But everybody knew what we were doing and I've opposed that.
+178	And her son had been shot through the head.
+179	That's the kind of approach that will work.
+180	You know, four years ago we went through the worst financial crisis since the Great Depression.
+181	We're not going to spend billions on MX's on railroad cars, which is a weapons system we don't need, can't afford and won't help our defense posture at all.
+182	But when you look at NATO, I was asked on a major show, what do you think of NATO?
+183	If we could've stopped Rwanda, surely, if we had the ability, that would be something that we would have to strongly consider and act.
+184	(Laughter, scattered applause) I'm serious though I think I'm a little more lovable these days than I used to be back in my youth when I began in my state legislature.
+185	So what we want to do is called opportunity scholarships.
+186	Our country is so, so -- it's just so imperative that we have the right justices.
+187	That is what I want to do.
+188	They actually said that she lied.
+189	To destroy life to save life is -- it's one of the real ethical dilemmas that we face.
+190	I want to invest in your family.
+191	I sat there watching ad after ad after ad, false ad.
+192	There is a very strong moral basis for this concept of equality of opportunity.
+193	We're going to bring the $2.5 trillion...
+194	I don't think there are any villains, but, boy, is the system rotten.
+195	And I pushed for some core principles: making sure that taxpayer can get their money back if they're putting money up.
+196	That's been missing over the last eight years.
+197	But history will look back, and I'm fully prepared to accept any mistakes that history judges to my administration, because the president makes the decisions, the president has to take the responsibility.
+198	But we will have vetting that is as tough as it needs to be from our professionals, our intelligence experts and others.
+199	They have done a brilliant job, and General Petraeus has done a brilliant job.

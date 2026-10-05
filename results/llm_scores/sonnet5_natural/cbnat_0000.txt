@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+0	There is a deal to be had, and that is that they abide by the rules that have already been established.
+1	We've got a program called Race to the Top that has prompted reforms in 46 states around the country, raising standards, improving how we train teachers.
+2	When we're talking about math that doesn't add up, how about $4 trillion of deficits over the last four years, $5 trillion?
+3	And that's what we've done.
+4	And we've won just about every case that we've filed, that has been decided.
+5	They said, "Well, these are the people that have the qualifications."
+6	If that's the case, then it will always be the best product that people can purchase.
+7	And then I went down to the border towns of Storok (ph), which had experienced missiles raining dowm from Hamas.
+8	We'll also make sure that we have trade relations with China that work for us.
+9	This has not been Mr. Oil, or Mr. Gas, or Mr. Coal.
+10	Well, first, I love great schools.
+11	We have enormous trade imbalance with China, and it's worse this year than last year, and it's worse last year than the year before.
+12	They'll do fine whether you're president or I am.
+13	The truth, though, is that Al Qaeda is much weaker than it was when I came into office.
+14	I appreciate the jobs in coal and oil and gas.
+15	The entire record is such that the unemployment has not been reduced in this country.
+16	I'm going to continue to push on this issue for the next four years.
+17	There've been 122 community and small banks have closed since Dodd- Frank.
+18	I'm concerned about the direction America has been taking over the last four years.
+19	Production on government land of oil is down 14 percent.
+20	Mr. President, America has not dictated to other nations.
+21	Now that's estimated to create 800,000 jobs, the problem is they won't be here, they'll be in places like China.
+22	I think what grows the economy is when we make sure small businesses are getting a tax credit for hiring veterans who fought for our country.
+23	Governor Romney not only opposed it, he suggested that in fact employers should be able to make the decision as to whether or not a woman gets contraception through her insurance coverage.
+24	We have fewer people working today than we had when the president took office.
+25	And I say that because I know a lot of people that feel like we should just brush our hands and walk away.
+26	And by the way, you skipped Israel, our closest friend in the region, but you went to the other nations.
+27	And the principles that we put in place, we also gave kids not just a graduation exam that determined whether they were up to the skills needed to -- to be able compete, but also if they graduated the quarter of their class, they got a four-year tuition- free ride at any Massachusetts public institution of higher learning.
+28	We still have trillion-dollar deficits.
+29	That's another trillion dollars -- that's $8 trillion.
+30	But the problem is, he hasn't described what exactly we'd replace it with, other than saying we're going to leave it to the states.
+31	But what I've also said is let's hire another 100,000 math and science teachers to make sure we maintain our technological lead and our people are skilled and able to succeed.
+32	My -- my passion probably flows from the fact that I believe in God.
+33	That's not the right course for us.
+34	Now, it wasn't just on Wall Street.
+35	Let me step back and talk about what I think our mission has to be in the Middle East and even more broadly, because our purpose is to make sure the world is more -- is peaceful.
+36	My plan is not like anything that's been tried before.
+37	So what we said was you can't just sit on this for 10, 20, 30 years, decide when you want to drill, when you want to produce, when it's most profitable for you.
+38	And every fact checker and every reporter who's looked at it, Governor, has said this is not true.
+39	It's also going to make sure that you're not paying as much for gas.

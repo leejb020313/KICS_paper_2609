@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2120	I don't think so, Candy.
+2121	On government land, your administration has cut the number of permits and licenses in half.
+2122	That's saying we're cutting the rates.
+2123	Don't forget, what's key to bringing back jobs here is not just finding someone else to punish, and I'm going to be strict with people who we trade with to make sure they -- they follow the law and play by the rules, but it's also to make America the most attractive place in the world for businesses of all kinds.
+2124	Well, Jim, our seniors depend on these programs, and I know anytime we talk about entitlements, people become concerned that something's going to happen that's going to change their life for the worse.
+2125	Now we're changing to one conflict.
+2126	Russia does continue to battle us in the U.N. time and time again.
+2127	When he said, "We're going to repeal Obamacare.
+2128	And it won't help us grow.
+2129	It was higher when I came into office.
+2130	We didn't have a lot of chance to talk about this in the last debate.
+2131	And people -- not everybody agrees with some of the decisions I've made.
+2132	We can do better than this.
+2133	There are more people in poverty, one out of six people in poverty.
+2134	We talk a lot about these things, but you look at the -- the record, you look at the record.
+2135	And the president has a regular opportunity to label them as a currency manipulator, but refuses to do so.
+2136	That's part of what took us from deficits to surplus.
+2137	I said I'd end the war in Libya -- in -- in Iraq, and I did.
+2138	I will keep America strong and get America's middle class working again.
+2139	It wasn't a government takeover of health care.
+2140	And by giving them those tax cuts, they had a little more money in their pocket, and so maybe they can buy a new car.
+2141	Your example of the Cleveland Clinic is my case in point, along with several others I could describe.
+2142	This nation is the hope of the earth.
+2143	And let me tell you, you're absolutely right about part of that, which is I want to bring the rates down, I want to simplify the tax code, and I want to get middle- income taxpayers to have lower taxes.
+2144	In the meantime, though, we're not going to let up the pressure until we have clear evidence that that takes place.
+2145	I am looking to cut taxes for middle-income people.
+2146	The administration brought a criminal action against the people drilling up there for oil, this massive new resource we have.
+2147	Because the president cut in half the number of licenses and permits for drilling on federal lands, and in federal waters.
+2148	And so, in terms of bringing down deductions, one way of doing that would be say everybody gets -- I'll pick a number -- $25,000 of deductions and credits, and you can decide which ones to use.
+2149	Now, let me mention one other thing, and that is self-deportation says let people make their own choice.
+2150	We're now at under 285.
+2151	And that meant I figured out from day one I had to get along and I had to work across the aisle to get anything done.
+2152	And so the question here tonight is not where we've been, but where we're going.
+2153	And that's not going to happen by just hiring teachers.
+2154	That makes a big difference, but that requires some federal support.
+2155	Let me make one last point.
+2156	I mean that's how our free market works.
+2157	But let's get at the bottom line.
+2158	Thank you for your question.
+2159	Why don't I want to raise taxes on people?

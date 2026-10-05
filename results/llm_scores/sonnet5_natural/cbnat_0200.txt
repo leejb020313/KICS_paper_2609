@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+200	I don't think there is a necessity to put our military in Syria at this stage.
+201	What I support is no change for current retirees and near-retirees to Medicare.
+202	We're going to do it by taking full advantage of oil, coal, gas, nuclear and our renewables.
+203	That means those cars can be exported, 'cause that's the demand around the world, and it also means that it'll save money in your pocketbook.
+204	And so part of leadership and governing is both saying what it is that you are for, but also being willing to say no to some things.
+205	That's why everything I'll do is designed to help small businesses grow and add jobs.
+206	You have the ISI, their intelligence organization, is probably the most powerful of the -- of three branches there.
+207	First of all, 30,000 people being killed by their government is a humanitarian disaster.
+208	He was on 60 Minutes just two weeks ago and he was asked: Is it fair for somebody like you, making $20 million a year, to pay a lower tax rate than a nurse or a bus driver, somebody making $50,000 year?
+209	My -- my view is that this president should have honored his promise to do as he said.
+210	And you say Exxon and Mobil.
+211	They look at America's commitments around the world and they see what's happening, and they say, well, OK. Is America going to be strong?
+212	There were hunting opportunities, for instance, that haven't previously been available and so forth, so it was a mutually agreed- upon piece of legislation.
+213	That's not just going after places where there's abuse.
+214	So our troops will come home at that point.
+215	You know that I mean what I say.
+216	The math simply doesn't work.
+217	Now you say maybe or it depends, which means not only were you wrong, but you were also confusing in sending mixed messages both to our troops and our allies.
+218	Governor Romney, here's what we did.
+219	...I indicated that you failed to put in place a status...
+220	He said he and his son calculated how much they pay in taxes, federal income tax, federal payroll tax, state income tax, state sales tax, state property tax, gasoline tax.
+221	And we have fought back for four years to get out of that mess.
+222	They don't happen to be accurate.
+223	Loves his family, cares about his faith.
+224	I've kept that promise and if you'll vote for me, then I promise I'll fight just as hard in a second term.
+225	If they had a pre-existing condition, they might not be able to get coverage at all.
+226	It's small business that creates the jobs in America, and over the last four years, small business people have decided that America may not be the place to open a new business because new business startups are down to a 30-year low.
+227	Well, let's come back and talk about the military, but all the way -- all the way through.
+228	And I think that when the president said he was going to create daylight between ourselves and Israel, that they noticed that as well.
+229	You'll virtually -- it's virtually impossible given our regulations."
+230	And that we do those things that make America the most attractive place in the world for entrepreneurs, innovators, businesses to grow.
+231	I think also that pulling our missile defense program out of Poland in the way we did was also unfortunate in terms of, if you will, disrupting the relationship in some ways that existed between us.
+232	That's why exports have significantly increased under my presidency.
+233	No, it's not time to divorce a nation on Earth that has 100 nuclear weapons and is on the way to double that at some point, a nation that has serious threats from terrorist groups within its nation, as I indicated before, the Taliban, Haqqani Network.
+234	You know, four years ago, we were going through a major crisis.
+235	And it turns out that the work involved in setting up these crippling sanctions is painstaking.
+236	I don't have any plan to cut education funding and -- and grants that go to people going to college.
+237	Governor Romney earlier mentioned the Bowles-Simpson commission.
+238	Yeah, I'm not in favor of new pieces of legislation on -- on guns and taking guns away or making certain guns illegal.
+239	Had gone to school here, pledged allegiance to the flag.

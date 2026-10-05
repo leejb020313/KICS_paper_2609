@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1560	The auto industry has come roaring back.
+1561	If I'm president, I'll double them, and also get the -- the oil from offshore and Alaska.
+1562	I went into the Olympics that was out of balance, and we got it on balance, and made a success there.
+1563	But the key that we're going to have to pursue is a -- is a pathway to get the Muslim world to be able to reject extremism on its own.
+1564	In the same way that you say you would have ended the war in Iraq, but recently gave a speech saying that we should have 20,000 more folks in there.
+1565	That was my posture as well.
+1566	And her son had been shot through the head.
+1567	We have increased oil production to the highest levels in 16 years.
+1568	Let's make sure that we're providing preventive care so we're catching the onset of something like diabetes.
+1569	And the reason I want middle-income taxpayers to have lower taxes is because middle-income taxpayers have been buried over the past four years.
+1570	And you ask how -- how are we going to do that?
+1571	Look, the right course for America's government, we were talking about the role of government, is not to become the economic player, picking winners and losers, telling people what kind of health treatment they can receive, taking over the health care system that has existed in this country for a long, long time and has produced the best health records in the world.
+1572	They're using cheap hand guns.
+1573	You know, I was in New Hampshire.
+1574	We need to make sure as well that we coordinate this effort with our allies, and particularly with -- with Israel.
+1575	Well, they sell us about this much stuff every year, and we sell them about this much stuff every year.
+1576	After the election, he'll get more backbone.
+1577	When Governor Romney says that we should eliminate funding for Planned Parenthood, there are millions of women all across the country, who rely on Planned Parenthood for, not just contraceptive care, they rely on it for mammograms, for cervical cancer screenings.
+1578	But when -- when Governor Romney says that he'll replace it with something, but can't detail how it will be in fact replaced and the reason he set up the system he did in Massachusetts was because there isn't a better way of dealing with the preexisting conditions problem.
+1579	That's one of the unintended consequences of Dodd-Frank.
+1580	But what we can't do is to simply suggest that, as Governor Romney at times has suggested, that giving heavy weapons, for example, to the Syrian opposition is a simple proposition that would lead us to be safer over the long term.
+1581	I served as governor and showed I could get them done.
+1582	I'm optimistic about the future.
+1583	This seems to be a trend.
+1584	My priority is putting people back to work in America.
+1585	I'm not going to wear rose-colored glasses when it comes to Russia, or Mr. Putin.
+1586	We recognize that there are places of conflict in the world.
+1587	That's been one of the hallmarks of my administration.
+1588	Governor Romney, you keep on trying to, you know airbrush history here.
+1589	Thank you, Mr. President, also for being part of this -- this debate.
+1590	You'll have 4 million people who will lose Medicare Advantage.
+1591	Mr. President, all of the increase in natural gas and oil has happened on private land, not on government land.
+1592	We were together at a humorous event a little earlier, and it's nice to maybe funny this time, not on purpose.
+1593	We in this country can -- can compete successfully with anyone in the world, and we're going to.
+1594	My philosophy on taxes has been simple.
+1595	Now that represents the opportunity we have to take advantage of.
+1596	And I was reminded of what that would mean if those were my kids.
+1597	So I'm not planning on making changes there.
+1598	We're going to give a better prescription program.
+1599	And when it comes to this issue, when I say that we are going to find out exactly what happened, everybody will be held accountable.

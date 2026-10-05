@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1080	...the choice in this election is going to be whose promises are going to be more likely to help you in your life?
+1081	Number two, with regards to Iraq, you and I agreed I believe that there should be a status of forces agreement.
+1082	Number four, we do have to develop their economic -- their economic capabilities.
+1083	Why wouldn't we want to eliminate that?
+1084	And every health care economist that looks at it says, over time, what'll happen is the traditional Medicare system will collapse.
+1085	Because China, Germany, they're making these investments.
+1086	But the policies he's put in place from Obamacare to Dodd-Frank to his tax policies to his regulatory policies, these policies combined have not let this economy take off and grow like it could have.
+1087	And this is the reason why, working with Israel, we have created the strongest military and intelligence cooperation between our two countries in history.
+1088	But it's an honor that we have it.
+1089	We are playing the leadership role.
+1090	And -- and that is part of what's at stake in this election.
+1091	would agree with us as well.
+1092	The -- first of all, I think Governor Romney was for an assault weapons ban before he was against it.
+1093	They asked him, please repair the tension -- Democrat senators -- please repair the tension...
+1094	There were other issues associated with this -- with this tragedy.
+1095	If I don't like them, I can get rid of them and find a different insurance company.
+1096	Look what's happening in Syria, in Egypt, now in Libya.
+1097	You know a major difference in this campaign is that Governor Romney feels comfortable having politicians in Washington decide the health care choices that women are making.
+1098	I -- I want to invest in research.
+1099	And this is the reason why AARP has said that your plan would weaken Medicare substantially.
+1100	Number three, I'll make government more efficient and to cut back the number of employees, combine some agencies and departments.
+1101	Syria -- Syria's not just a tragedy of 30,000 civilians being killed by a military, but also a strategic -- strategically significant player for America.
+1102	It's absolutely the right thing to do, to have crippling sanctions.
+1103	... the damage in his -- in his own party.
+1104	When the president took office, the price of gasoline here in Nassau County was about $1.86 a gallon.
+1105	This is for Governor Romney?
+1106	And we have to have a president who can reach across the aisle and fashion important legislation with the input from both parties.
+1107	But to the issue of Iran, as long as I'm president of the United States Iran will not get a nuclear weapon.
+1108	I'm going to stop other things.
+1109	I was with one company that makes valves and -- and process industries and they said, look, we were -- we were having some valves coming in that -- that were broken and we had to repair them under warranty and we looked them and -- and they had our serial number on them.
+1110	And we've got to make sure that we reduce our deficit.
+1111	I've sat across the table from people who were out of work and worked with them to try and find new work or to help them through tough times.
+1112	And -- and -- we should not have wasted these four years to the extent they -- they continue to be able to spin these centrifuges and get that much closer.
+1113	And by the way, they noticed that you skipped Israel.
+1114	Well, Governor Romney's right, you are familiar with jobs being shipped overseas because you invested in companies that were shipping jobs overseas.
+1115	We like free enterprise, but you got to play by the rules.
+1116	Well, Governor, we also have fewer horses and bayonets, because the nature of our military's changed.
+1117	And it's actually an accounting treatment, as you know, that's been in place for a hundred years.
+1118	And the reason is because of its people, because of the woman I met in North Carolina who decided at 55 to go back to school because she wanted to inspire her daughter and now has a job from that new training that she's gotten; because a company in Minnesota who was willing to give up salaries and perks for their executives to make sure that they didn't lay off workers during a recession.
+1119	When I came into office, we were still bogged down in Iraq and Afghanistan had been drifting for a decade.

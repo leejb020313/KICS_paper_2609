@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2200	How strong are we going to be?
+2201	Now, they look at us and say, Is it a good idea to be with America?
+2202	And we're now in a position where we can transition out, because there's no reason why Americans should die when Afghans are perfectly capable of defending their own country.
+2203	But she works for me.
+2204	You know, because of the intelligence coordination that we do with a range of countries, including Israel, we have a sense of when they would get breakout capacity, which means that we would not be able to intervene in time to stop their nuclear program.
+2205	They say, "We feel like we're under attack from our own government."
+2206	Let me just say one final example.
+2207	That's how we cut taxes for middle- class families and small businesses.
+2208	$716 billion we were able to save from the Medicare program by no longer overpaying insurance companies by making sure that we weren't overpaying providers.
+2209	That's why I'm asking for your vote and that's why I'm asking for another four years.
+2210	Well, mathematically, there are three ways that you can cut a deficit.
+2211	Now, you point out, well, we're putting some back.
+2212	And President Bush has a very different path for a very different time.
+2213	You took General Motors bankrupt.
+2214	It's not my term, it's the president's own Secretary of Defense, called them devastating.
+2215	And I want to make sure that the next generation has those same opportunities.
+2216	And Mr. President, it's good to be with you again.
+2217	First of all, Governor Romney talks about small businesses.
+2218	Trillion-dollar deficits for the last four years.
+2219	We absolutely have to make more progress and that's why we're going to keep on pressing.
+2220	Because this is not just a -- a health issue, it's an economic issue for women.
+2221	-- we haven't had the leadership in Washington to work on a bipartisan basis.
+2222	That's not going to happen.
+2223	And finally, championing small business.
+2224	And I make that point because that's the kind of clarity of leadership, and those decisions are not always popular.
+2225	I can't find a job.
+2226	Students who are out there trying to hopefully advance their own dreams, but also this country's dreams.
+2227	That's exactly what our budget does, but it's driven by strategy.
+2228	That's why I put out a five-point plan that gets America 12 million new jobs in four years and rising take-home pay.
+2229	So what I've tried to do is be consistent.
+2230	But what the American people understand is that I look at what we need to get done to keep the American people safe and to move our interests forward, and I make those decisions.
+2231	Now, not only oil and natural gas, which we've been investing in; but also, we've got to make sure we're building the energy source of the future, not just thinking about next year, but ten years from now, 20 years from now.
+2232	But let me -- let me not just stop there.
+2233	This is obviously a very tender topic.
+2234	The president said that the government can provide the service at lower cost and without a profit.
+2235	Making life so miserable on folks that they'll leave.
+2236	It -- when Governor Romney talks about this board, for example, unelected board that we've created, what this is, is a group of health care experts, doctors, et cetera, to figure out, how can we reduce the cost of care in the system overall?
+2237	And for me, this is about jobs.
+2238	That's how we cut a trillion dollars of spending that wasn't advancing that cause.
+2239	She worked her way up, only had a high school education, started as a secretary, ended up being the vice president of a local bank.

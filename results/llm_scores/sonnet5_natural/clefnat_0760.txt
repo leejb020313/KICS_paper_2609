@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+760	But I'm concerned that that will get overturned.
+761	Obama draws the line in the sand.
+762	Our country has tremendous problems.
+763	And I will stand up for that right.
+764	I haven't heard a big difference in the last few exchanges.
+765	It's a $1 million loan.
+766	I'm not un-proud of it, to be honest with you.
+767	Now, we've got to address one of the biggest threats to our democracy.
+768	My call to our fellow Americans is if you're healthy, if you're younger, don't get a flu shot this year.
+769	And they were graphically demonstrated again today.
+770	But Social Security is a tax.
+771	We will continue to stay on the offense.
+772	My answer is that this campaign isn't over yet.
+773	I mean, there are enormous opportunities out there to expand markets and to build a strong future for our farmers.
+774	And as far as nuclear power is concerned, again, look at the record.
+775	Donald Trump is a small business.
+776	He lost the Wisconsin primary.
+777	And now suddenly you're a big champion of coal.
+778	Seventy-five percent of the people live in the cities.
+779	And how do we expect to be able to implement those?
+780	Senator Obama refuses to acknowledge that we are winning in Iraq.
+781	I believe that there is enough extravagance and fat in government.
+782	As I said at the beginning, the question before us all, that faces all Republicans and all Democrats, is: can freedom in the next generation conquer, or are the Communists going to be successful?
+783	I'd like to see it expanded in two ways.
+784	I mean, you have said before you'd cut the deficit in half.
+785	It's catastrophic in certain ways.
+786	You know, we have 17,000 men and women today wearing our uniform that receive food stamps.
+787	Cutting 500,000 kids from after-school programs, cutting 365,000 kids from health care, running up the biggest deficits in American history.
+788	We're a country of laws.
+789	After he left the senate, we abandoned that.
+790	He said he was optimistic when he came here, then he turned on the TV and listened to the political rhetoric and all of a sudden he was pessimistic.
+791	Vladimir is going to have to make some hard choices.
+792	I believe in the balanced budget.
+793	I have a record of reform, and taking on my party, the other party, the special interests, whether it be an HMO Patients' Bill of Rights, or trying to clean up the campaign finance system in -- in this country, or whether it be establishment of a 9/11 Commission, I have a long record of it.
+794	We stand for those values and we have to be willing to assert them.
+795	They avoided even the advice of their own general.
+796	We received the support first of the Administration and then not, and we were defeated by one vote in the Senate.
+797	But while the President is negotiating with the Soviet Union, I simply do not want to make these unilateral cuts.
+798	To the millions of fine decent people who did the unthinkable and took their country back in their own hands and put me on the ballot, let me pledge to you that tonight is just the beginning.
+799	That is why I say that in this period of the sixties, America must move forward in every area.

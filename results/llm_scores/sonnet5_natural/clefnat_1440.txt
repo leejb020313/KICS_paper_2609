@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1440	That is the way it will stay.
+1441	I don't think he was misleading.
+1442	You cannot lead an alliance if you say, you know, you're going alone.
+1443	I would like to see eventually in this country some form of universal health care, but I'm not for a government-run system.
+1444	The all- volunteer army works.
+1445	We've got a good, common-sense policy.
+1446	In fact, I do have a plan that deals with people with pre-existing conditions.
+1447	Now, maybe I'm expected to ask that same question again.
+1448	And for Mr. Carter to suggest that I want to do away with the safety laws and with the laws that pertain to clean water and clean air, and so forth.
+1449	The last eight years the average growth has been about two and a half per cent.
+1450	We have a government that doesn't work.
+1451	High-income people are doing just fine in this economy.
+1452	We're ahead in this competition, as Senator Kennedy, I think, has implied.
+1453	Oh, I'm a pretty calm guy.
+1454	You know, going to a Buddhist temple and then claiming it wasn't a fundraiser isn't my view of responsibility.
+1455	That way we can invest in the research and technology that's always kept us at the cutting edge.
+1456	Now why were we successful, as our predecessors were not successful?
+1457	But, when I had quoted a Democratic President, as the President says, I was a Democrat.
+1458	And in a way, I should be complaining.
+1459	But just briefly, the Clinton Foundation made it possible for 11 million people around the world with HIV-AIDS to afford treatment, and that's about half all the people in the world who are getting treatment.
+1460	Decide who you think will do the job.
+1461	I have a clear record of reaching across the aisle, whether it be Joe Lieberman or Russ Feingold or Ted Kennedy or others.
+1462	I'm opposed to that, too.
+1463	I don't have an indoor gymnasium and an indoor tennis and an indoor every other thing they can think of; I don't have a place where I can go make free TV to send to my constituents to try to brainwash them to elect me the next time.
+1464	They didn't volunteer the information.
+1465	We are going to appoint justices that will feel very strongly about the Second Amendment, that will not do damage to the Second Amendment.
+1466	And that's the tragedy of the Iran/Contra scandal.
+1467	We are a country founded on religious freedom and liberty.
+1468	But if we repeal it, as Donald has proposed, and start over again, all of those benefits I just mentioned are lost to everybody, not just people who get their health insurance on the exchange.
+1469	And instead of retreating -- instead of being strong where we should be strong, he wants to make it strong and intervene in the most private and personal questions in American life.
+1470	As far as child care is concerned and so many other things, I think Hillary and I agree on that.
+1471	Curriculum that works and phonics needs to be an integral part of our reading curriculum.
+1472	And so we can be a partner with China.
+1473	Shortly after I became president in uh - December of 1974, I met with uh - General Secretary Brezhnev in Vladivostok and we agreed to a mutual cap on the ballistic missile launchers at a ceiling of twenty-four hundred - which means that the Soviet Union, if that becomes a permanent agreement, will have to make a reduction in their launchers that they now have or plan to have.
+1474	He doesn't fix it for ten years.
+1475	It's now four years later.
+1476	Now I think we have a selective engagement policy.
+1477	We have a divided nation.
+1478	Paula Jones, who's also here tonight.
+1479	No litmus test except for how they interpret the Constitution.

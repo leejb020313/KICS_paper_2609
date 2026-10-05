@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1720	These are reasonable ways to help promote a culture of life in America.
+1721	And we put a stop to it and as a consequence saved jobs throughout America.
+1722	We need gas pipelines to bring the gas down.
+1723	That wasn't true in his time, that's why my policy starts with a very robust policy to get all that energy in North America -- become energy secure.
+1724	We need an answer to this problem, but it must be an American answer that is consistent with justice and due process.
+1725	And we're going to get the great entrepreneurial spirit of this country, and we're going to free ourselves from this dependency on Mideast oil.
+1726	First of all, I cannot tell you how deeply I respect the belief about life and when it begins.
+1727	Unfortunately, he escaped in the mountains of Tora Bora.
+1728	I don't believe it is.
+1729	I want to take that $716 billion you've cut and put it back into Medicare.
+1730	We can lend money but we have to do it wisely.
+1731	Go back to work at 30,000 bucks a month representing some other country.
+1732	I am a firm believer that our America 2000 education problem is the answer--a little longer run; it's going to take awhile to educate.
+1733	I believe we can do better.
+1734	We have to be able to compete in the world market.
+1735	I hope you will give me a chance to serve as your president.
+1736	And I don't think the record justifies the conclusion that you come to.
+1737	Sometimes we - we get the opinion that in getting programs through the House or the Senate it's purely a question of legislative finagling and all that sort of thing.
+1738	They send it to Congress, and we have to vote it up or down.
+1739	But this is an important issue.
+1740	We cannot frighten, as we have with the threats and the campaign rhetoric that has gone on in this campaign, our senior citizens - leave them thinking that in some way, they're endangered and they would have no place to turn.
+1741	You're not going to worry about it anymore.
+1742	Let me tell you something.
+1743	We can meet our destiny - and that destiny to build a land here that will be, for all mankind, a shining city on a hill.
+1744	What tools do we need to fight us?
+1745	But he's an incumbent, and we've got to look at all the facts.
+1746	And right now I have to tell you I don't think there is any excuse for the interest rates being as high as they are because we have brought inflation down so low.
+1747	Governor Reagan and his new Republican Party have departed from this commitment - a very severe blow to the opportunity for women to finally correct discrimination under which they have suffered.
+1748	But, you see, my fundamental philosophy is give local and state government as much control as possible.
+1749	In addition, we're now able to transition out of Afghanistan in a responsible way, making sure that Afghans take responsibility for their own security.
+1750	We need to make it clear we're for human liberty.
+1751	We can do better than that, particularly in Latin America.
+1752	They have to understand we want to trade with them.
+1753	And the final thing I would say, this is the 10th or 12th time that he's denied being for the war in Iraq.
+1754	I believe we can and we ought to.
+1755	Mr. Lodge, on "Meet the Press" a month ago, said if there was ever a case when we did not have law an our side it was in the U-2 incident.
+1756	We've climbed the mighty mountain.
+1757	So I don't believe that the fact you've got that long resume or had that experience is the real question.
+1758	By the way, my friend, Dr. Kissinger, who's been my friend for 35 years, would be interested to hear this conversation and Senator Obama's depiction of his -- of his positions on the issue.
+1759	And, so, that's the way I'd reply to it and I believe we can have the strongest and best defense possible if we modernize, if we go forward with competitive strategies and if we do follow through on the Packard Commission report.

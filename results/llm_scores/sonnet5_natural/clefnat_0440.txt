@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	Virtually every economic analysis that I've heard of, including the distinguished Congressional Budget Office, which is respected by, I think, almost everyone, says that even with historically high levels of economic growth, we will suffer a $263 billion deficit.
+441	We have a divided nation, because people like her -- and believe me, she has tremendous hate in her heart.
+442	Over the last eight years, we've seen that dream diminish.
+443	And over the long run they will be more reliable partners.
+444	And that's exactly what I have proposed.
+445	So I agree that we have to speak responsibly and we have to act responsibly.
+446	You've got 99 other senators to correct that mistake, if it is a mistake.
+447	We share a common border with another nation.
+448	And still he talks about - uh success.
+449	What we can't do, I think, is try to characterize each other as bad people.
+450	The governor wants to divert 1 out of every $6 off into the stock market, which means that he would drain a trillion dollars out of the Social Security Trust Fund in this generation over the next ten years, and Social Security under that approach would go bankrupt within this generation.
+451	When they protested that and suggested a smaller number, perhaps, I went along with that.
+452	We've got a pilot program.
+453	The next four years we will continue to strengthen our homeland defenses.
+454	The world -- let me tell you.
+455	My plan is not like anything that's been tried before.
+456	But I do say a majority are.
+457	Who will dominate Asia in the next five or ten years?
+458	And for that to happen, we have to strengthen our economy here at home.
+459	And I have long ago said I supported the president on this other matter.
+460	I subscribe to the Justice Potter Stewart standard.
+461	The foreign policy of the United States meets the highest standards of morality.
+462	And I've put forward a plan to make sure that we're bringing manufacturing jobs back to our shores by rewarding companies and small businesses that are investing here, not overseas.
+463	If you confiscate the Forbes 400 wealth, take it all, you cannot balance the budget this year.
+464	My -- my view is that this president should have honored his promise to do as he said.
+465	He's broken the pay-as-you-go rules.
+466	I guess it's because you will lose your right to tell them what to think.
+467	Well, I guess I'm reminded a little bit of what Will Rogers once said about Hoover.
+468	For the very reason that those Senators knew, as the President of the United States knew, that you should not indicate to the Communists in advance that you're going to surrender an area that's free.
+469	And I've gotten good people, like former Secretary of the Treasury Bob Rubin, for instance, who showed how to balance budgets and give you a good economy, to help me crunch these numbers and make them work.
+470	We have a budget deficit in the federal government, but we also have an investment, a jobs, an income deficit.
+471	Part of what had happened is we'd forgotten why we had gone.
+472	One of the people who's here with me today met a woman in the airport saying her son, Jess was able to be present at the birth of her child because of the Family Leave Law.
+473	And as I just said that I believe that the passage of the so-called Title Three, which gives the Attorney General the power to protect Constitutional rights in those cases where it's not possible for the person involved to bring the suit.
+474	As soon as I became president, I initiated a meeting with the NATO heads of state and met with them in Brussels to discuss how we could improve the re- defense relationship in Western Europe.
+475	But you also had banks making money hand over fist, churning out products that the bankers themselves didn't even understand, in order to make big profits, but knowing that it made the entire system vulnerable.
+476	They're making some progress; they need to make more.
+477	Most health-care costs are covered by third parties.
+478	I want think they want somebody with common sense who can do what's best for the American people.
+479	You know, he always is looking for some conspiracy.

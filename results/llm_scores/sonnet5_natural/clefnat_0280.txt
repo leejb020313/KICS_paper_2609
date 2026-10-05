@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+280	Now, four years ago, when I stood on this stage, I said that I would cut taxes for middle-class families.
+281	If you make more -- if you make less than a quarter million dollars a year, then you will not see your income tax go up, your capital gains tax go up, your payroll tax.
+282	We've done it in Arkansas.
+283	Can we say, really say that we will be better off when we pull away from sort of that basic American instinct of decency and fairness?
+284	Now, we have allocated $750 billion.
+285	If I think it's in our nation's strategic interest I'll commit troops.
+286	That's quite different than taking a position where you know it's best for you.
+287	There is $2.3 trillion of surplus that we can use to make sure that younger workers have a Social Security plan in the future.
+288	And so, today, we are 90 percent of the casualties and 90 percent of the cost: $200 billion -- $200 billion that could have been used for health care, for schools, for construction, for prescription drugs for seniors, and it's in Iraq.
+289	This should continue and it can be stepped up to give them hope and to keep alive the hope for freedom that I can testify they have so deeply within them.
+290	And if not, I'll get rid of it.
+291	I don't think that uh - America can go on a big spending spree with a whole lot of new programs uh - that would add significantly to the federal budget.
+292	I came from a tiny town, as you know, Plains, and didn't hold public office, didn't have very much money.
+293	As President, I would press for long-term, vigorous economic growth.
+294	fiscal restraint, I think is necessary.
+295	First of all, let me say he's not for a government-run health care system?
+296	And FEMA has been a major flagship project of our reinventing government efforts.
+297	Well, you talk about walking a waffle line -- he says he's allowed it, which means he's going to allow the destruction of life up to a certain amount and then he isn't going to allow it.
+298	The mines are closed down; there are 22000 miners out of work.
+299	I mean, you can like it or not like it.
+300	We all thought there was weapons there, Robin.
+301	My opponent looked at the same intelligence I looked at and declared in 2002 that Saddam Hussein was a grave threat.
+302	I agree that too many incumbent politicians in Washington in both parties have consistently opposed campaign finance reform.
+303	I love my grandchildren --
+304	I wasn't misleading when I said he was a threat.
+305	-- we're taking advantage of our energy resources.
+306	I know what it takes to get this country back, and will work with good Democrats and good Republicans to do that.
+307	We had the slowest growth, about 2.5 percent.
+308	So I think he's a bit taller than I am.
+309	Yes, I understand what it means to the commander in chief.
+310	He always talks about Arkansas having a balanced budget and they do, but he has a balanced budget amendment.
+311	May I ask you a question?
+312	Our military is meant to fight and win war.
+313	But unfortunately, in -- nowhere in the world is America's influence greater today than it was four years ago.
+314	Would we be better off building that bridge to the future together so we can all walk across it or saying you can get across yourself?
+315	Only about half the people in this country have pension plans.
+316	Uh - very few people knew who I was.
+317	This is a place where my opponent and I have strong disagreement.
+318	A brown field is an abandoned industrial site that just sits idle in some of our urban centers.
+319	But I want you to think about just 2 or 3 things.

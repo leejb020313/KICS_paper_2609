@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2040	Number two, something I would add today is I would tighten those sanctions.
+2041	I'd get rid of it.
+2042	I said they need -- these companies need to go through a managed bankruptcy.
+2043	Bob, let me just respond.
+2044	And that's an example of the kind of advocacy that we need, because women are increasingly the breadwinners in the family.
+2045	And it's Katherine Fenton, who has a question for you.
+2046	You can't -- but you can't have the president just lay out a whole series of items without giving me a chance to respond.
+2047	And our eighth graders number one in English and also in math.
+2048	But for younger people, we need to talk about what changes are going to be occurring.
+2049	But look, this has been going on for a year.
+2050	You say that you're not interested in duplicating what happened in Iraq.
+2051	So at Cleveland Clinic, one of the best health care systems in the world, they actually provide great care cheaper than average.
+2052	I'm used to people saying something that's not always true, but just keep on repeating it and ultimately hoping I'll believe it.
+2053	A lot of great single moms, single dads.
+2054	If you're re-elected, we'll get to a trillion-dollar debt.
+2055	This -- the administration -- the administration indicated this was a reaction to a video and was a spontaneous reaction.
+2056	Thank you, Jim, and Mr. President.
+2057	Unfortunately, Governor Romney's plan doesn't do it.
+2058	While I was governor, I was proud that our fourth graders came out number one of all 50 states in English, and then also in math.
+2059	Cracking down on China when they cheat.
+2060	We should have taken a leading role, not militarily, but a leading role organizationally, governmentally to bring together the parties; to find responsible parties.
+2061	Innermountain Healthcare does it superbly well, Mayo Clinic is doing it superbly well, Cleveland Clinic, others.
+2062	A recent study has shown the people in the middle-class will see $4,000.00 per year in higher taxes as a result of the spending and borrowing of this administration.
+2063	$90 billion, that would have -- that would have hired 2 million teachers.
+2064	Benefits were not affected at all.
+2065	But we do need to make sure that as we -- as we send support for them, that this is tied to them making progress on -- on matters that would lead them to becoming a civil society.
+2066	I told you I'd cut taxes for small businesses, and I have.
+2067	He actually got the first question.
+2068	You can invest in a company, bankrupt it, lay off the workers, strip away their pensions, and you still make money.
+2069	You know, when Governor Romney stood on a stage with other Republican candidates for the nomination and he was asked, would you take $10 of spending cuts for just $1 of revenue?
+2070	Number one, if you've got health insurance, it doesn't mean a government takeover.
+2071	The president's put it in place as much public debt -- almost as much debt held by the public as al prior presidents combined.
+2072	But the key thing is to make sure you can get a job when you get out of school.
+2073	But when Governor Romney says that he has a very different economic plan, the centerpiece of his economic plan are tax cuts.
+2074	The last thing we need to do is to go back to the very same policies that got us there.
+2075	What we do have right now is a setting where I'd like to bring money from overseas back to this country.
+2076	I think you know that these last four years haven't been so good as the president just described and that you don't feel like your confident that the next four years are going to be much better either.
+2077	And then in those nations, and on Arabic TV, you said that America had been dismissive and derisive.
+2078	I -- I'm -- I feel very deeply sympathetic for the families of those who lost loved ones.
+2079	And then we have his own record, which is we have four consecutive years where he said when he was running for office, he would cut the deficit in half.

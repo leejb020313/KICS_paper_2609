@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1480	The first -- the first -- the first -- and we kept our schools number one in the nation.
+1481	No, no, I had a question and the question was how much did you cut them by?
+1482	The -- where they're partnering so that they're designing training programs.
+1483	We're also going to have our loan program, so that people are able to afford school.
+1484	Talk to the people that are working in those industries.
+1485	Ann yesterday was at a rally in Denver and a woman came up to her with a baby in her arms and said, "Ann, my husband has had four jobs in three years, part-time jobs.
+1486	But what's been happening over the last couple of years is, as we've watched this tumult in the Middle East, this rising tide of chaos occur, you see Al Qaida rushing in, you see other jihadist groups rushing in.
+1487	I believe in self-reliance and individual initiative and risk takers being rewarded.
+1488	And a lot of them, as you say, Candy, have been out of work for a long, long, long time.
+1489	Making sure that we're bringing manufacturing back to our shores so that we're creating jobs here, as we've done with the auto industry, not rewarding companies that are shipping jobs overseas.
+1490	And for them to be able to provide nuclear technology to non-state actors, that's unacceptable.
+1491	But we also have to develop clean energy technologies that will allow us to cut our exports in half by 2020.
+1492	They're back away from a nuclear proliferation treaty that we had with them.
+1493	They're stealing our intellectual property, our patents, our designs, our technology, hacking into our computers, counterfeiting our goods.
+1494	I think what grows the economy is when you get that tax credit that we put in place for your kids going to college.
+1495	But there are always going to be elements in these countries that potentially threaten the United States.
+1496	And the answer is, yes, if I'm president, America will be very strong.
+1497	And, you know, Governor Romney, I'm glad that you agree that we have been successful in going after Al Qaida, but I have to tell you that, you know, your strategy previously has been one that has been all over the map and is not designed to keep Americans safe or to build on the opportunities that exist in the Middle East.
+1498	So we can make changes in the way our culture works to help bring people away from violence and give them opportunity, and bring them in the American system.
+1499	And we will help them with respect to developing their own economy, because ultimately what's going to make the Egyptian revolution successful for the people of Egypt, but also for the world, is if those young people who gathered there are seeing opportunities.
+1500	I don't want to cut our commitment to education.
+1501	But Pakistan is important to the region, to the world and to us, because Pakistan has 100 nuclear warheads and they're rushing to build a lot more.
+1502	I'll get incomes up again.
+1503	They also have the Haqqani Network and the Taliban existent within their country.
+1504	So I'll get rid of that.
+1505	I made that clear when I came into office.
+1506	I want to see growing peace in this country.
+1507	I think these -- these actions taken by a president and a leader have symbolic significance and perhaps even material significance in that you'd hope that during that time we could call in the people who were actually eyewitnesses.
+1508	You said you'd cut the deficit in half.
+1509	I understand what it takes to make a bright and prosperous future for America again.
+1510	I congratulate him on -- on taking out Osama bin Laden and going after the leadership in al-Qaeda.
+1511	The average middle-class family with children would pay about $2,000 more.
+1512	We don't have to be an adversary in any way, shape or form.
+1513	You can look at the record.
+1514	I think they saw weakness where they had expected to find American strength.
+1515	Jim, the president began this segment, so I think I get the last word.
+1516	They'll make things happen to create jobs here in the United States.
+1517	That's why we have to move forward and not go back.
+1518	I want to make America the most attractive place in the world for entrepreneurs, for small business, for big business, to invest and grow in America.
+1519	Number two, trade -- I'll crack down on China, President Bush didn't.

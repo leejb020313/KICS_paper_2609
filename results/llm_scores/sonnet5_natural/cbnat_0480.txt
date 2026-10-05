@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+480	That's the wrong way to go.
+481	And that's exactly what I did.
+482	And for the next decade, she was haunted by that conversation.
+483	But instead, we've seen in nation after nation, a number of disturbing events.
+484	When it comes to Social Security, as I said, you don't need a major structural change in order to make sure that Social Security is there for the future.
+485	This is part of the choice in this election.
+486	I have never said I would liquidate...
+487	So what did we do?
+488	The good news is (inaudible).
+489	Well, in fact we saved 1,000 jobs.
+490	Because if you do, then Governor Romney is your candidate.
+491	Consider the distance between ourselves and -- and Israel, the president said that -- that he was going to put daylight between us and Israel.
+492	The same way we treated the apartheid diplomats of South Africa.
+493	And the reason this is important is because by doing that, we cannot only reduce the deficit, we cannot only encourage job growth through small businesses, but we're also able to make the investments that are necessary in education or in energy.
+494	And she was fiercely independent.
+495	We've got to do it in a responsible way by cutting out spending we don't need, but also asking the wealthiest to pay a little bit more.
+496	It's not by trickle-down government, saying we're going to take more money from people and hire more government workers, raise more taxes, put in place more regulations.
+497	And yet my faith and confidence in the American future is undiminished.
+498	The reason is, is because, when we reform Wall Street, when we tackle the problem of pre-existing conditions, then, you know, these are tough problems and we've got to make choices.
+499	I was born in Detroit.
+500	I've done it my entire life.
+501	They have to understand we want to trade with them.
+502	My plan is to bring down rates, but also bring down deductions and exemptions and credits at the same time so the revenue stays in, but that we bring down rates to get more people working.
+503	So all federal funds, instead of going to the -- to the state or to the school district, I'd have go, if you will, follow the child and let the parent and the child decide where to send their -- their -- their student.
+504	But part of it is also looking at other sources of the violence.
+505	Look, Governor Romney's called for $5 trillion of tax cuts that he says he's going to pay for by closing deductions.
+506	Jim, if I -- if I can just respond very quickly, first of all, every study has shown that Medicare has lower administrative costs than private insurance does, which is why seniors are generally pretty happy with it.
+507	This is -- this is an important part of the world for us.
+508	I will not reduce the taxes paid by high-income Americans.
+509	Well, we've had this discussion before.
+510	The first lady has done great work with an organization called Joining Forces putting our veterans back to work.
+511	And so budgets reflect choices.
+512	Actually just going to them and saying, "We're going to reduce the rates you get paid across the board, everybody's going to get a lower rate."
+513	But first of all, this is a nation of immigrants.
+514	So, I'm all for pipelines.
+515	We stepped in and had the toughest reforms on Wall Street since the 1930s.
+516	It's gone up by $2,500 a year.
+517	Number three, I'm going to get us to a balanced budget.
+518	This is not research, Mr President, these are the government investing in companies.
+519	The opportunities that the child will -- will be able to achieve increase dramatically.

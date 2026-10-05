@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	And at some point, I think the American people have to ask themselves, is the reason that Governor Romney is keeping all these plans to replace secret because they're too good?
+561	And as commander-in-chief, that is something that I've worked on and thought about every single day that I've been in the Oval Office.
+562	The president's path means 20 million people out of work struggling for a good job.
+563	Four years in a row, Democrats and Republicans came together to balance the budget.
+564	Their currency has dropped 80 percent.
+565	And there are ways of doing it.
+566	Fixing our training programs for our workers.
+567	...because the private sector's not going to invest in a...
+568	And it's a bad policy.
+569	Well, let's talk about what we need to compete.
+570	I have clear eyes on this.
+571	And I don't mean you, Mr. President, but some people in the -- in our nation feel that Pakistan is being nice to us, and that we should walk away fro mthem.
+572	It was very clear this was not a demonstration.
+573	It's just a tragedy in a nation so prosperous as ours, that the last four years have been so hard.
+574	We spend more on our military than the next 10 countries combined; China, Russia, France, the United Kingdom, you name it.
+575	And the kinds of budget proposals that you've put forward, when we don't ask either you or me to pay a dime more in terms of reducing the deficit, but instead we slash support for education, that's undermining our long-term competitiveness.
+576	We have to remain vigilant, as I just said.
+577	The first role of the federal government is to keep the American people safe.
+578	What we've done is organize the international community, saying Assad has to go.
+579	I don't want to kill jobs in this environment.
+580	I'll get people back to work with 12 million new jobs.
+581	I want to put that money back in Medicare for our seniors.
+582	The place where we've seen manufacturing go has been China.
+583	So the way for us to deal with Medicare in particular is to lower health care costs.
+584	They hack into our computers.
+585	I want to lower spending and encourage economic growth at the same time.
+586	And so seeing Syria remove Assad is a very high priority for us.
+587	The National Federation of Independent Businesses has said that will cost 700,000 jobs.
+588	In fact, it was a Republican idea.
+589	Mr. President, have you looked at your pension?
+590	China's been cheating over the years.
+591	So I'd get rid of that one from day one.
+592	And -- and so we -- we took a concerted effort to go out and find women who had backgrounds that could be qualified to become members of our cabinet.
+593	I'm going to make sure we can continue to burn clean coal.
+594	One is to simply leave a whole bunch of people uninsured and let them fend for themselves, to let businesses figure out how long they can continue to pay premiums until finally they just give up, and their workers are no longer getting insured, and that's been the trend line.
+595	Jim, let's -- we've gone on a lot of topics there, and so it's going to take a minute to go from Medicaid to schools...
+596	There are inspections that are very intrusive.
+597	He was asked this on Univision the other day.
+598	They were counterfeit products being made overseas with the same serial number as a U.S. company, the same packaging, these were being sold into our market and around the world as if they were made by the U.S. competitor.
+599	I want to bring the rates down, at the same time lower deductions and exemptions and credits and so forth, so we keep getting the revenue we need.

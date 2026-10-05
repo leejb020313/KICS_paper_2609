@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2320	What I'm not for is us ignoring the other half of the equation.
+2321	It also means we're helping them and small businesses to export all around the world to new markets.
+2322	This was a bipartisan idea.
+2323	You had loan officers were -- that were giving loans and mortgages that really shouldn't have been given, because the folks didn't qualify.
+2324	I want to provide tax breaks for companies that are investing here in the United States.
+2325	And so what I do is I bring down the tax rates, lower deductions and exemptions, the same idea behind Bowles-Simpson, by the way, get the rates down, lower deductions and exemptions, to create more jobs, because there's nothing better for getting us to a balanced budget than having more people working, earning more money, paying more taxes.
+2326	And the president's right in terms of the additional oil production, but none of it came on federal land.
+2327	We want a world that's stable.
+2328	I said that we would provide guarantees, and -- and that was what was able to allow these companies to go through bankruptcy, to come out of bankruptcy.
+2329	I believe very much in our renewable capabilities; ethanol, wind, solar will be an important part of our energy mix.
+2330	It presents a threat not only to our friends but ultimately a threat to us to have Iran have nuclear material, nuclear weapons that could be used against us or used to be threatening to us.
+2331	If somebody came to you, Governor, with a plan that said, here, I want to spend $7 or $8 trillion, and then we're going to pay for it, but we can't tell you until maybe after the election how we're going to do it, you wouldn't take such a sketchy deal and neither should you, the American people, because the math doesn't add up.
+2332	We have to make sure that we make it easier for kids to afford college.
+2333	I want to make sure our take-home pay turns around and starts to grow.
+2334	So that's -- that's number one.
+2335	And then let's focus on getting the costs down for people, rather than raising it with the $2,500 additional premium.
+2336	That was facilitated in part because we had ended the war in Iraq.
+2337	And -- and that upset them, but obviously there was a great deal of anger even before that.
+2338	Have you looked at your pension?
+2339	They're just barely enough to pay for my food and pay for an apartment.
+2340	And it was worth moving heaven and earth to get him.
+2341	We use something called Race to the Top.
+2342	I want to underline that: no tax cut that adds to the deficit.
+2343	That's not the kind of small business promotion we need.
+2344	But we can't kill our way out of this mess.
+2345	I want to control our own energy by developing oil and natural gas but also the energy sources of the future.
+2346	When I came into office, the world was divided.
+2347	And if we've got math teachers who are able to provide the kind of support that they need for our kids, that's what's going to determine whether or not the new businesses are created here.
+2348	I know what it takes to get this to happen, and my plan will do that, and one part of it is to make sure that we keep China playing by the rules.
+2349	And all these things have contributed to us lowering our oil imports to the lowest levels in 16 years.
+2350	But -- but the idea that you get a break for shipping jobs overseas is simply not the case.
+2351	I appreciate your -- your question, and thank you for being here this evening and to all of those from Nassau County that have come, thank you for your time.
+2352	And there are two very different paths the country can take.
+2353	I will make sure we don't hurt the functioning of our -- of our marketplace and our business, because I want to bring back housing and get good jobs.
+2354	That's the reason why we have brought more cases against China for violating trade rules than the other -- the previous administration had done in two terms.
+2355	We don't have to settle for, how many months, 43 months with unemployment above 8 percent, 23 million Americans struggling to find a good job right now.
+2356	You've seen, as middle-income people in this country, incomes go down $4,300 a family, even as gasoline prices have gone up $2,000.
+2357	That's after losing 5 million jobs.
+2358	But what I think the American people recognize is after a decade of war it's time to do some nation building here at home.
+2359	Well, let me first of all talk about our diplomats, because they serve all around the world and do an incredible job in a very dangerous situation.

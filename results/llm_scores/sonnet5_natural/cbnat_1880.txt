@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1880	Got rid of a despot who had killed Americans and as a consequence, despite this tragedy, you had tens of thousands of Libyans after the events in Benghazi marching and saying America is our friend.
+1881	The president has tried, but his policies haven't worked.
+1882	The head of the EPA said, "You can't build a coal plant.
+1883	It's driven by, what are we going to need to keep the American people safe?
+1884	Let me come back and -- and answer your question.
+1885	They can't impose arbitrary lifetime limits.
+1886	Can you say that a little louder, Candy?
+1887	And let me tell you exactly what Obamacare did.
+1888	Which is why as president, we funded an Iron Dome program to stop those missiles.
+1889	Part of American leadership is making sure that we're doing nation building here at home.
+1890	And so we're going to have to remain helpful in encouraging Pakistan to move towards a more stable government and rebuild the relationship with us.
+1891	And we do have a difference, though, when it comes to definitions of small business.
+1892	That's what brings jobs in.
+1893	Let's come back to what the president was speaking about, which is what's happening in the world and the president's statement that things are going so well.
+1894	And we know where it came from: two wars that were paid for on a credit card; two tax cuts that were not paid for; and a whole bunch of programs that were not paid for; and then a massive economic crisis.
+1895	And Assad -- excuse me, Kofi Annan came in and said we're going to try to have a ceasefire.
+1896	I said that we'd go after al-Qaeda and bin Laden, we have.
+1897	I can tell you that if you were to elect President Obama, you know what you're going to get.
+1898	And then we noticed that there was more than one with that same serial number.
+1899	Let me just finish the point.
+1900	And that's exactly the kind of top-down economics that is not going to work if we want a strong middle class and an economy that's striving for everybody.
+1901	This is the kind of thing that would have been discussed and thoroughly evaluated well before that kind of --
+1902	Is it -- is it because that somehow middle-class families are going to benefit too much from them?
+1903	And we are making sure that those we help are those who will be friends of ours in the long term and friends of our allies in the region over the long term.
+1904	People who are working hard every day, paying payroll tax, gas taxes, but don't make enough income.
+1905	It will be good for our economy and it will be good for job creation.
+1906	But I also believe that when he said behind closed doors that 47 percent of the country considered themselves victims who refuse personal responsibility, think about who he was talking about.
+1907	My dad was head of a car company.
+1908	Those are the -- the cornerstones of my plan.
+1909	If my daughter or yours looks to somebody like they're not a citizen, I don't want -- I don't want to empower somebody like that.
+1910	Let's have a flexible schedule so you can have hours that work for you.
+1911	And -- and we're going to have to recognize that we have to do as the president has done.
+1912	And the president supports taking $716 billion out of that program.
+1913	But the last point I want to make is this.
+1914	And so we were going to make sure that we finished the job.
+1915	...of forces agreement at the end of the conflict that existed.
+1916	First time one state had been number one in all four measures.
+1917	And that kind of credibility is precisely why we've been able to show leadership on a wide range of issues facing the world right now.
+1918	And they include you and me.
+1919	Five million jobs doesn't even keep up with our population growth.

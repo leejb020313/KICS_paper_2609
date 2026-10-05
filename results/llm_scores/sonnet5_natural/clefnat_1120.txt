@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1120	We have to work with Nigeria.
+1121	Uh - those uh programs were designed to help those who need it most.
+1122	They did it on the Medicaid prescription drug bill and we have to change the culture.
+1123	That's another story that we're going to pay a big price for right after the election.
+1124	Now, referring to your question with regard to Quemoy and Matsu.
+1125	All I said is, we have to renegotiate these agreements, because our country cannot afford to defend Saudi Arabia, Japan, Germany, South Korea, and many other places.
+1126	The President's economic plan calls for increasing the taxes to the point that we finally take so much money away from the people that we can balance the budget in that way.
+1127	I do not believe in cutting our military.
+1128	You rely on good military people to execute the military component of the strategy, but winning the peace is larger than just the military component.
+1129	But I'll tell you this.
+1130	We could have an urban homestead act.
+1131	My intentions in the field of civil rights have been spelled out in the Republican platform.
+1132	A judicious use of the military which will help keep the peace.
+1133	We have to make it the number one priority.
+1134	I think the greatest thing that ever happened to the South was the passage of the Civil Rights Act and the opening up of opportunities - uh to black people - the chance to vote, to hold a job, to buy a house, to go to school, and to participate in public affairs.
+1135	We have to make quality education there for all of our citizens, not just the privileged few.
+1136	We talked about the economy is more important.
+1137	So I think we are going to have to change and strengthen the pension requirements on private retirement plans.
+1138	For me to have made such a statement would been in direct uh - opposition to that treaty.
+1139	They wonder how an elected representative uh - can serve them and participate in such activities uh - serving in the Congress of the United States.
+1140	In the audience tonight, we have four mothers of -- I mean, these are unbelievable people that I've gotten to know over a period of years whose children have been killed, brutally killed by people that came into the country illegally.
+1141	Because there's a huge pool, we can drop the costs.
+1142	17 new taxes, price controls, 50 new bureaucracies.
+1143	That line's getting a little bit old, I must say.
+1144	The proposal advanced by you and by Mr. Javits would have cost six hundred millions of dollars - Mr. Rockefeller rejected it in New York, said he didn't agree with the financing at all, said it ought to be on Social Security.
+1145	If somebody came to you, Governor, with a plan that said, here, I want to spend $7 or $8 trillion, and then we're going to pay for it, but we can't tell you until maybe after the election how we're going to do it, you wouldn't take such a sketchy deal and neither should you, the American people, because the math doesn't add up.
+1146	Republicans wanted to have just a majority vote to confirm a judge and the Democrats were blocking in an unprecedented fashion.
+1147	As a governor, I thought please, give me this program.
+1148	You mentioned the Heller decision.
+1149	And it will be fun if we all work together to do it.
+1150	You've got to be able to look in the eyes of families and say to those parents, "I tried to do everything in my power to prevent the loss of your son and daughter."
+1151	When I said that we had to make sure that China was not flooding our domestic market with cheap tires, Governor Romney said I was being protectionist; that it wouldn't be helpful to American workers.
+1152	I think that's an important part of leadership.
+1153	I like Meg Whitman, she knows what it's like to be out there in the marketplace.
+1154	And we were stymied until the families of 9/11 came, and they descended on Washington, and we got that legislation passed.
+1155	We don't have to settle for 23 million people struggling to find a good job.
+1156	It's against the law in the United States to hire people illegally, and we ought to be enforcing that law properly.
+1157	It's a matter of being strong.
+1158	And that means, yes, we still continue to open up new areas for drilling.
+1159	There are alternatives to accomplish the objective I have, which is to bring down rates, broaden the base, simplify the code, and create incentives for growth.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2280	... but -- but -- but overall.
+2281	I was proud of the fact that after I staffed my Cabinet and my senior staff, that the University of New York in Albany did a survey of all 50 states, and concluded that mine had more women in senior leadership positions than any other state in America.
+2282	So there was no risk for the banks or the lenders, but they were taking billions out of the system.
+2283	And that begins with a strong economy here at home.
+2284	A group of Arab scholars came together, organized by the U.N., to look at how we can help the -- the world reject these -- these terrorists.
+2285	The federal government can get local and -- and state schools to do a better job.
+2286	Look, there's no question but the people recognize that we have not produced more (inaudible) on federal lands and in federal waters.
+2287	Middle-income people are going to get a tax break.
+2288	Number two, seeing a -- a replacement government being responsible people is critical for us.
+2289	And without a college level job, that's just unacceptable.
+2290	As a matter of fact, it's growing much more slowly now than when you made that statement.
+2291	Jeremy, first of all, your future is bright.
+2292	So entirely on a partisan basis, instead of bringing America together and having a discussion on this important topic, you pushed through something that you and Nancy Pelosi and Harry Reid thought was the best answer and drove it through.
+2293	I don't think the American people believe that.
+2294	But this can't keep on going.
+2295	And the essence of the plan is that you would turn Medicare into a voucher program.
+2296	You know, four years ago, I said that I'm not a perfect man and I wouldn't be a perfect president.
+2297	You said we should have gone into Iraq, despite that fact that there were no weapons of mass destruction.
+2298	We've mobilized sanctions against that government.
+2299	And this is not my own -- only my opinion.
+2300	Now, Governor Romney talked about China, as I already indicated.
+2301	Today, 47 million people on food stamps.
+2302	That's the analysis of economists who have looked at this.
+2303	And I said that at that time.
+2304	In fact, he doubled it.
+2305	I've had the occasion over the last couple of years of meeting people across the country.
+2306	I talk to small businesses across the country.
+2307	But I wouldn't designate five banks as too big to fail and give them a blank check.
+2308	You did not say that you would provide government help.
+2309	I want regulators to see their job as encouraging small enterprise, not crushing it.
+2310	And over time, if traditional Medicare has decayed or fallen apart, then they're stuck.
+2311	I'll get our incomes up.
+2312	But my strategy is broader than that.
+2313	Small business is where jobs come from.
+2314	Yes, I want to reduce our deficit by cutting spending that we don't need but also by asking the wealthy to do a little bit more so that we can invest in things like research and technology that are the key to a 21st century economy.
+2315	One is a path represented by the president, which at the end of four years would mean we'd have $20 trillion in debt heading towards Greece.
+2316	And for that to happen, we have to strengthen our economy here at home.
+2317	When you come out in 2014, I presume I'm going to be president.
+2318	America's going to have that kind of leadership and continue to promote principles of peace to make a world a safer place and make people in this country more confident that their future is secure.
+2319	I don't have a tax cut of a scale that you're talking about.

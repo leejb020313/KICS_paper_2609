@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1600	This is about, somebody said earlier, one of the first questions, we're together.
+1601	Now, ladies and gentlemen, important to understand, the president and his friends try to make a big deal out of it.
+1602	I would take eh - the strongest possible measures short of uh - actual military uh - action there by our own troops, but I doubt that that would be an eventuality.
+1603	And what I think needs to happen in order to encourage the young to become involved is to shoot straight, is to set aside the partisan differences, and set an agenda that will make sense.
+1604	We don't know whether he's developing weapons of mass destruction.
+1605	I would not favor the uh - payment of uh - of a given fixed income to people unless they are not able to work.
+1606	I'm trying to save your Medicare, just as I rescued Social Security with a bipartisan commission.
+1607	That leaves all of you who live in the other 50 states without an education reform policy from Senator McCain.
+1608	Absolutely we can win, because it's your country.
+1609	I have kept the faith.
+1610	It's energy and trade, the right kind of training programs, balancing our budget and helping small business.
+1611	That's why we opposed the government take over health care plan that President Clinton tried and tried and tried to get through Congress.
+1612	I want to keep this expansion going.
+1613	Mr. Greenspan I thought missed an opportunity to say there's a third way, and that is to get a better rate of return on the Social Security monies coming into the trust.
+1614	That's an interruption, by the way.
+1615	Three times since World War II, the Vice President has had to suddenly become the President and commander in chief.
+1616	Well, I would say first of all that Senator's - Kennedy's statement that he's just made is not going to help our Gallup Polls abroad and it isn't going to help our prestige either.
+1617	She negotiated with the oil companies and faced them down, a $40 billion pipeline of natural gas that's going to relieve the energy needs of the United -- of what they call the lower 48.
+1618	He says that he's going to give you a $5,000 tax credit.
+1619	But I will tell you what isn't fictionalized are her e-mails, where she destroyed 33,000 e-mails criminally, criminally, after getting a subpoena from the United States Congress.
+1620	I want to make sure we get that for the record because it took the president 14 days before he called the attack in Benghazi an act of terror.
+1621	And we want to pursue that plan in a way which will bring down the level of nuclear armament, will build a more stable and more peaceful world while making choices here at home.
+1622	Just to finish briefly, I started to say that for the last eight years I've been on the National Security Council.
+1623	So what one hand giveth, the other hand taketh away.
+1624	If they don't do that, it's a very difficult situation for our country, because you look at Orlando and you look at San Bernardino and you look at the World Trade Center.
+1625	Not willing to give up the need to do it but there may be individual components that we can't do.
+1626	In Lebanon, this President exercised American power, all right, but the management of it was such that our marines were killed, we had to leave in humiliation, the Soviet Union became stronger, terrorists became emboldened.
+1627	And you ought to have some of this surplus so you can save and dream and build.
+1628	Now you tell me who stands on the side of the fence.
+1629	Our health-care system is the envy of the world because we believe in making sure that the decisions are made by doctors and patients, not by officials in the nation's capital.
+1630	But it would require what is known as secondary or tertiary efforts to bring it out of the ground.
+1631	The Reagan-Bush administration was right.
+1632	But yet, after conceding that, he still says that he would oppose the surge if he had to decide that again today.
+1633	This one concerned uh - Great Britain.
+1634	The contracts need to be smaller, the agencies need to be -- need to recruit and to work hard to find people to bid on the state contracts.
+1635	And the result is our forces today are overextended.
+1636	And, as a matter of fact, it just so happens that in the quirks of administering these taxes, those above $50,000 actually did not get quite as big a tax cut percentage-wise as did those from 50,000 down.
+1637	The coal that the President mentioned - yes, we have it - and yet one-eighth of our total coal resources is not being utilized at all right now.
+1638	What bothers me is this growing tendency to try to use one's own personal interpretation of faith politically, to question others' faith, and to try to use the instrumentalities of government to impose those views on others.
+1639	And, you know, we can't be -- we can't allow ourselves to get overextended.

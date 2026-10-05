@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+40	We want people to be able to enjoy their lives and know they're going to have a bright and prosperous future, not be at war.
+41	We're working with Canada to hopefully -- that they'll produce a -- help us realize the vaccine necessary to make sure our citizens have got flu vaccinations during this upcoming season.
+42	If one vote per precinct had changed in 1960, John Kennedy would never have been President of this nation.
+43	But we have a very different view about how to make America stronger and safer.
+44	Let's look at the other side of the coin.
+45	We've gotten away fro values and the fundamentals.
+46	And it seemed to me if you want to send a signal, you've got to send a signal, Mr. President.
+47	In public education when we just move children through the schools.
+48	Again it's important to put the situation in perspective.
+49	I have devoted 24 years of my life to public service and I've said this before and I'll say it again, if you entrust me with the presidency, I may not be the most exciting politician, but I will work hard for you every day.
+50	It puts a heavy burden on a states like California.
+51	Well, nobody was pressing it, nobody was caring much about it.
+52	And you have to vote for somebody with a plan.
+53	We need to step up exchange; we need to step up technical assistance so that trained people in these newly developing countries can operate the economies.
+54	Throughout my career in public service, I have fought for the working men and women of this country, middle-class families.
+55	The safest of federal investments yields 4%.
+56	Now six years ago, I stood up and opposed this war at a time when it was politically risky to do so because I said that not only did we not know how much it was going to cost, what our exit strategy might be, how it would affect our relationships around the world, and whether our intelligence was sound, but also because we hadn't finished the job in Afghanistan.
+57	We retained control as though we had sovereignty.
+58	Another point I wanna make is this.
+59	As long as Vietnam, North Vietnam, does not give us a full and complete accounting of our missing in action, I will never uh - go along with the admission of Vietnam to the United Nations.
+60	And I'm for enforcing laws on the books.
+61	What I want to find, if I am privileged to have the opportunity to do it -- and the Supreme Court of the United States is at stake in this race, ladies and gentlemen.
+62	We need to know the full extent of Senator Obama's relationship with ACORN, who is now on the verge of maybe perpetrating one of the greatest frauds in voter history in this country, maybe destroying the fabric of democracy.
+63	When a factory closes, I know the people who ran it.
+64	I never criticized the U-2 flights in general, however.
+65	Now, my fellow Americans, that's an invitation to disaster.
+66	There's enough money to pay seniors today in the current affairs of Social Security.
+67	We cut taxes for 15 million working Americans.
+68	I support it; the president opposes it.
+69	But until we're strong here, until we're moving here, I believe a summit could not be successful.
+70	We can further the cause of equality in our nation.
+71	You can't have an economy that over the last three years keeps slowing down its growth rate.
+72	We collect 35 cents, and we don't have it to spend.
+73	And -- and I know that we can reprocess the spent nuclear fuel.
+74	Lower crime rates for eight years in a row.
+75	And we are not equal in this treaty for one reason alone - our B-2 bombers are considered to be strategic weapons; their Backfire bombers are not.
+76	One important way of looking at this is to ask who are you going to fight for?
+77	But that there would be an answer in our lifetime is unimaginable.
+78	And as far as currency manipulation, the currency has actually gone up 11 percent since I've been president because we have pushed them hard.
+79	But you have to work together.

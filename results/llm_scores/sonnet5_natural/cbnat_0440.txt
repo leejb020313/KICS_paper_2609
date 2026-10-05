@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+440	I've made that clear throughout my presidency.
+441	My cutbacks will be done through attrition, by the way.
+442	They don't want to see the world break out into -- into various forms of chaos, because they have to -- they have to manufacture goods and put people to work and they have about 20,000 -- 20 million, rather, people coming out of the farms every year coming into the cities, needing jobs.
+443	We've got to get those dollars back to the states and go to the workers so they can create their own pathways to get in the training they need for jobs that will really help them.
+444	This -- we have weakened our economy.
+445	Latin America is a huge opportunity for us -- time zone, language opportunities.
+446	I went to the Olympics when they were in trouble to try and get them on track.
+447	We don't have to settle for 23 million people struggling to find a good job.
+448	Now with respect to what we've done with China already, U.S. exports have doubled since I came into office, to China and actually currencies are at their most advantageous point for U.S. exporters since 1993.
+449	We're actually drilling more on public lands than in the previous administration and my -- the previous president was an oil man.
+450	I'm also going to dramatically expand trade in Latin America.
+451	And that clock is ticking.
+452	And I've got two daughters and I want to make sure that they have the same opportunities that anybody's sons have.
+453	We created partnerships throughout the region to deal with extremism in Somalia, in Yemen, in Pakistan.
+454	I mean for instance, we can now, by virtue of new technology actually get all the energy we need in North America without having to go to the -- the Arabs or the Venezuelans or anyone else.
+455	We see in -- in Libya, an attack apparently by, I think we know now, by terrorists of some kind against -- against our people there, four people dead.
+456	... people, right, not for current retirees.
+457	I'll call it the economy tax.
+458	Well, I think -- let's talk about taxes, because I think it's instructive.
+459	I'd like to be the next president of the United States to support and help this great nation and to make sure that we all together remain America as the hope of the earth.
+460	Wherever possible the -- the benefit of having two parents in the home, and that's not always possible.
+461	And to suggest -- am I incorrect in that regard, on Sunday, the -- your secretary --
+462	I want to make sure we keep our Pell grant program growing.
+463	They're still number one today.
+464	When -- when he was asked would class size...
+465	And the magnitude of the tax cuts that you're talking about, Governor, would end up resulting in severe hardship for people, but more importantly, would not help us grow.
+466	Our hearts and -- and minds go out to them.
+467	Let me just make this comment.
+468	The problem is that because the voucher wouldn't necessarily keep up with health care inflation, it was estimated that this would cost the average senior about $6,000 a year.
+469	Our diplomatic isolation needs to be tougher.
+470	Because frankly, in my home town of Chicago, there's an awful lot of violence and they're not using AK-47s.
+471	And there really are two very different paths that we began speaking about this evening, and over the course of this month we're going to have two more presidential debates and a vice presidential debate.
+472	He said that by now we'd have unemployment at 5.4 percent.
+473	This is a company, this isn't basic research.
+474	You know, I suspect that, on Social Security, we've got a somewhat similar position.
+475	You know, four years ago we went through the worst financial crisis since the Great Depression.
+476	And I -- look, I'm all in favor of green energy.
+477	So what we have to do is two things.
+478	Number two, open up more trade, particularly in Latin America.
+479	That's total over the last four years.

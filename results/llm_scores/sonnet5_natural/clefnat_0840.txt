@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+840	And for the next decade, she was haunted by that conversation.
+841	And we're asking to be able to allow you to get them.
+842	But the price of coal is down worldwide.
+843	We need to make it very clear -- whether it's Russia, China, Iran or anybody else -- the United States has much greater capacity.
+844	It's not a government plan.
+845	I remember being in a high school in my own state as we were organizing something we call the Governor's Alliance Against Drugs, and a young 16 year old girl coming up to me, desperate, addicted, dependent, saying, Governor, I need help.
+846	And so I would want to see the Supreme Court reverse Citizens United and get dark, unaccountable money out of our politics.
+847	Yet at the same time, he was very -- we were very unpopular in Europe because of the decisions he made.
+848	We need to deal with managed care.
+849	In 1979 he made similar statements, the same effect, that the deficits -- there was nothing wrong with having deficits.
+850	I remember a lady in Houston, Texas, told me, "Reading is the new civil right," and she's right.
+851	Osama bin Laden doesn't get to decide.
+852	Well, that's because he'd rather have a puppet as president of the United States.
+853	Let me make it very clear that the bill that Mr. Nixon talked about did not mention Wilkes-Barre or Scranton; it did not mention West Virginia.
+854	There've been 122 community and small banks have closed since Dodd- Frank.
+855	Which is a worse decision?
+856	By the time the century turns, we have got to have our deficit under control, we have to work out of so that surplus is building up so when the baby boomers like me retire, we're okay.
+857	You don't help yourself with other nations when you turn away from the global warming treaty, for instance, or when you refuse to deal at length with the United Nations.
+858	I think, for example, take -- when they took 40 million acres of land out of circulation without consulting local officials, I thought that was --
+859	We have believed in partnership, and that was an example of a partnership between, not only local government and the Federal Government but also between the private sector that built that particular structure.
+860	I was in the Senate before I became secretary of state.
+861	They know it better than anybody.
+862	I know that's a controversial view, but I do believe it's a deterrent.
+863	Because we cut taxes on everybody -- remember, we ran up the child credit by $1,000, we reduced the marriage penalty, we created a 10 percent bracket, everybody who pays taxes got relief -- the recession was one of the shortest in our nation's history.
+864	The people of the United States individually could not have developed the Tennessee Valley; collectively they could have.
+865	Franklin Roosevelt said in 1936 that that generation of Americans had a rendezvous with destiny.
+866	He even said the other day that he would not meet potentially with the prime minister of Spain, because he -- you know, he wasn't sure whether they were aligned with us.
+867	I'm very pleased that the Fraternal Order of Police in Little Rock, Arkansas endorsed me because I think they see I'm trying to strengthen the anti-crime legislation.
+868	But I've got a better idea.
+869	First of all, vouchers are up to states.
+870	There's a special protocol recently been passed that allows for inspections.
+871	He said he just discovered that most Soviet missiles are on land, and that's why his proposal didn't work.
+872	We're the United States of America.
+873	That happens to be a fact.
+874	There is a lot of blame to go around.
+875	Here's what I do: We take over Medicaid children from the states so that every child in America is covered.
+876	I think that in the aftermath of the Cold War, it's time for us to do something very similar, to step up to the plate, to provide the leadership on the environment, leadership to make sure the world economy keeps moving in the right direction.
+877	Our plan is better, it will take us into the future with a growing economy and healthier families.
+878	But we're opening the Old Post Office.
+879	There is no greater return to an economy or to a society than an educational system second to none.

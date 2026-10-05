@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	But just a few years ago you said that's something you'd never do.
+921	So my approach is to say, how do we strengthen the system over the long term?
+922	And so I've put forward a specific $4 trillion deficit reduction plan.
+923	Now, that transition has to take place in a responsible fashion.
+924	We then started to build up Afghan forces.
+925	And now, five weeks before the election, he's saying that his big, bold idea is, "Never mind."
+926	That's its most basic function.
+927	The unemployment, the number of people who are still looking for work, is still 23 million Americans.
+928	George Bush never suggested that we eliminate funding for Planned Parenthood, so there are differences between Governor Romney and George Bush, but they're not on economic policy.
+929	But the idea of a trillion dollar in cuts through sequestration and budget cuts to the military would change that.
+930	I know how to make that happen.
+931	Let me come back and say, why is it that I don't want to raise taxes?
+932	Well, the president took Detroit bankrupt.
+933	Well, first of all, I will eliminate all programs by this test, if they don't pass it: Is the program so critical it's worth borrowing money from China to pay for it?
+934	Well, let me give you some advice.
+935	I thought we were talking about immigration.
+936	And the answer is neither the president nor I are proposing any changes for any current retirees or near retirees, either to Social Security or Medicare.
+937	You didn't want a status of...
+938	And if we're not making investments in education and basic research, which is not something that the private sector is doing at a sufficient pace right now and has never done, then we will lose the (inaudible) in things like clean energy technology.
+939	... the irony is that we've seen this model work really well in Massachusetts, because Governor Romney did a good thing, working with Democrats in the state to set up what is essentially the identical model and as a consequence people are covered there.
+940	Now, it's $4.00 a gallon.
+941	But I want to get our private sector growing and I know how to do it.
+942	It is also essential for us to understand what our mission is in Iran, and that is to dissuade Iran from having a nuclear weapon through peaceful and diplomatic means.
+943	That's unacceptable for us, and it's essential for a president to show strength from the very beginning, to make it very clear what is acceptable and not acceptable.
+944	I'm not looking to cut taxes for wealthy people.
+945	Well, for 18 months he's been running on this tax plan.
+946	Number two, we take some programs that we are doing to keep, like Medicaid, which is a program for the poor; we'll take that healthcare program for the poor and we give it to the states to run because states run these programs more efficiently.
+947	But the president mentioned a couple of other ideas I'll just note.
+948	This is the private market.
+949	I'm sure this was the most romantic place you could imagine, here -- here with me.
+950	Ones that can support a family.
+951	But people make their own choice.
+952	That's going to help Jeremy get a job.
+953	I was able also to get our schools ranked number one in the nation, so 100 percent of our kids would have a bright opportunity for a future.
+954	Simpson-Bowles, the president should have grabbed that.
+955	And what I now want to do is to hire more teachers, especially in math and science, because we know that we've fallen behind when it comes to math and science.
+956	And then what you've got is folks like my grandmother at the mercy of the private insurance system precisely at the time when they are most in need of decent health care.
+957	When my grandfather fought in World War II and he came back and he got a G.I.
+958	I said that we would put in place health care reform to make sure that insurance companies can't jerk you around and if you don't have health insurance, that you'd have a chance to get affordable insurance, and I have.
+959	And even some in my own party, including my current vice president, had the same critique as you did.

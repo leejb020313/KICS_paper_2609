@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2520	That is not good for America's position in the world, and the world notices.
+2521	Iran is at its weakest point, economically, strategically, militarily, then since -- then in many years.
+2522	Of course the greatest threat of all is Iran, four years closer to a nuclear weapon.
+2523	I have my own plan.
+2524	And when we do things like that -- when we bring those who have harmed us to justice, that sends a message to the world and it tells Peyton (ph) that we did not forget her father.
+2525	I want to go down the path of growth that puts Americans to work with more money coming in because they're working.
+2526	One of his big ideas when it comes to corporate tax reform would be to say, if you invest overseas, you make profits overseas, you don't have to pay U.S. taxes.
+2527	And this -- I love this idea of $4 trillion in cuts.
+2528	Now, we've got to make sure that we do it in a smart way and a comprehensive way, and we make the legal system better.
+2529	That's part -- that's part one.
+2530	And if they -- if they find that -- that they can't get the benefits here that they want and they can't -- and they can't find the job they want, then they'll make a decision to go a place where -- where they have better opportunities.
+2531	And Governor Romney, our alliances have never been stronger, in Asia, in Europe, in Africa, with Israel, where we have unprecedented military and intelligence cooperation, including dealing with the Iranian threat.
+2532	We'll bring back manufacturing to America.
+2533	That's not how we're going to move our economy forward.
+2534	We were losing 800,000 jobs a month when I started.
+2535	And that's where we're going right now unless we finally get off this spending and borrowing binge.
+2536	And what's that going to do?
+2537	You know, the name itself implies some sense of dependency on the part of these folks.
+2538	It's not the same as Simpson- Bowles.
+2539	We started from the day we got into office.
+2540	I -- I have to respond to that.
+2541	They need to be tightened.
+2542	Look, the genius of America is the free enterprise system and freedom and the fact that people can go out there and start a business, work on an idea, make their own decisions.
+2543	When the president ran for office, he said if you build a coal plant, you can go ahead, but you'll go bankrupt.
+2544	I don't just talk about it.
+2545	Number two is to cut spending.
+2546	The commanders and the generals there are on track to do so.
+2547	So when you say that I wanted to take the auto industry bankrupt, you actually did.
+2548	This is not just a women's issue, this is a family issue, this is a middle-class issue, and that's why we've got to fight for it.
+2549	And in one year, you provided $90 billion in breaks to the green energy world.
+2550	We have a responsibility to protect the lives and liberties of our people, and that means a military second to none.
+2551	I see our influence receding, in part because of the failure of the president to deal with our economic challenges at home; in part because of our withdrawal from our commitment to our military in the way I think it ought to be; in part because of the -- the -- the turmoil with Israel.
+2552	Number three, we've got to control our own energy.
+2553	But for us to be able to promote those principles of peace requires us to be strong.
+2554	Middle-income families are being crushed.
+2555	One, get us energy independent, North American energy independent.
+2556	It was not a spontaneous demonstration, is that what you're saying?
+2557	We can work with them, we can collaborate with them, if they're willing to be responsible.
+2558	And I agree that the Democratic legislators in Massachusetts might have given some advice to Republicans in Congress about how to cooperate, but the fact of the matter is, we used the same advisers, and they say it's the same plan.
+2559	Just going to make a point.

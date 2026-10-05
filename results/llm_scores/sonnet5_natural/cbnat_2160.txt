@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2160	I would indict him for it.
+2161	Twenty-three million Americans still struggling to find a good job.
+2162	And actually, you said it back in 2010.
+2163	In some ways, he's gone to a more extreme place when it comes to social policy.
+2164	It is our greatest ally in the region.
+2165	It's their route to the sea.
+2166	This is an enormous boon for them.
+2167	First of all, I'm going through from the very beginning -- we're going to cut about 5 percent of the discretionary budget, excluding military.
+2168	We're going to have to have employers in the new economy, in the economy I'm going to bring to play, that are going to be so anxious to get good workers they're going to be anxious to hire women.
+2169	The right course for us is to make sure that we go after the -- the people who are leaders of these various anti-American groups and these -- these jihadists, but also help the Muslim world.
+2170	The right answer for government is say, How do we make the private sector become more efficient and more effective?
+2171	And -- and I -- I think the president just said correctly that the buck does stop at his desk and -- and he takes responsibility for -- for that -- for the failure in providing those security resources, and -- and those terrible things may well happen from time to time.
+2172	And we need to win that future.
+2173	And if we had asked Pakistan permission, we would not have gotten him.
+2174	It's not driven by members of Congress, and what they would like to see.
+2175	But our goal is to get Iran to recognize it needs to give up its nuclear program and abide by the U.N. resolutions that have been in place.
+2176	It's not going to be like the last four years.
+2177	That this was an act of terror and I also said that we're going to hunt down those who committed this crime.
+2178	And the proof, the proof of whether a strategy is working or not is what the price is that you're paying at the pump.
+2179	We have provided humanitarian assistance and we are helping the opposition organize, and we're particularly interested in making sure that we're mobilizing the moderate forces inside of Syria.
+2180	Now, the last point I'd make before...
+2181	But let's come back to something the president and I agree on, which is the key task we have in health care is to get the cost down so it's more affordable for families.
+2182	That's how we get growth and how we balance the budget.
+2183	Governor Romney says he wasn't referring to Arizona as a model for the nation.
+2184	As I said, we have made sure that millions of young people are able to get an education that they weren't able to get before.
+2185	And the proof of that is 23 million people out of work.
+2186	Now, Governor Romney has said he wants to repeal Dodd-Frank.
+2187	When the -- when the president of Iraq -- excuse me, of Iran, Ahmadinejad, says that our debt makes us not a great country, that's a frightening thing.
+2188	I don't want to go down the path to Spain.
+2189	And this was a -- this was a program of the government.
+2190	I've been -- Ann was with someone just the other day that was just weeping about not being able to get work.
+2191	Thank you Kerry for your question, it's an important one.
+2192	Now, Governor Romney, when you were asked by teachers whether or not this would help the economy grow, you said this isn't going to help the economy grow.
+2193	Now, that also means that you've got more customers.
+2194	Well, Candy, actually, in my state, the pro-gun folks and the anti-gun folks came together and put together a piece of legislation.
+2195	And over the last two years, health care premiums have gone up -- it's true -- but they've gone up slower than any time in the last 50 years.
+2196	Donald Trump is a small business.
+2197	And what was the cost?
+2198	So what I've said is, your first $250,000.00 worth of income, no change.
+2199	People around the world with accredited degrees in science and math get a green card stapled to their diploma, come to the U.S. of A.

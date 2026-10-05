@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	That's why we doubled clean -- clean energy production like wind and solar and biofuels.
+681	As a governor, I thought please, give me this program.
+682	We're going to have to put in place a very comprehensive and robust strategy to help the -- the world of Islam and other parts of the world, reject this radical violent extremism, which is -- it's certainly not on the run.
+683	We continue to make it a priority for us to go after natural gas.
+684	Governor, we have actually produced more oil --
+685	What I want to do is to create an economy that is strong, and at the same time produce energy.
+686	That's a pocketbook issue for women and families all across the country.
+687	And the reason she could be independent was because of Social Security and Medicare.
+688	Through our Race to the Top program, we've worked with Republican and Democratic governors to initiate major reforms, and they're having an impact right now.
+689	It doubles about every -- every five or so years.
+690	And I've got to tell you, Governor Romney, when it comes to his own party during the course of this campaign, has not displayed that willingness to say no to some of the more extreme parts of his party.
+691	And so we decimated Al Qaida's core leadership in the border regions between Afghanistan and Pakistan.
+692	Good, I look forward to it.
+693	Now with respect to Libya, as I indicated in the last debate, when we received that phone call, I immediately made sure that, number one, that we did everything we could to secure those Americans who were still in harm's way; number two, that we would investigate exactly what happened, and number three, most importantly, that we would go after those who killed Americans and we would bring them to justice.
+694	They used those weapons against -- against their own citizens and killed Americans with them.
+695	And the key to great schools, great teachers.
+696	But I think Governor Romney maybe hasn't spent enough time looking at how our military works.
+697	Over the long term, in order for us to compete with China, we've also got to make sure, though, that we're taking -- taking care of business here at home.
+698	Under -- under my plan, 97 percent of small businesses would not see their income taxes go up.
+699	Bob, let me -- let me respond.
+700	And we are now in a position where we have met many of the objectives that got us there in the first place.
+701	We have to also stand by our allies.
+702	So they want the economy to work and the world to be free and open.
+703	And when Governor Romney says, the challenge is, "Well Obama didn't try."
+704	I'll make sure we can reform Medicare and Social Security to preserve them for coming -- coming generations.
+705	I want to make small businesses grow and thrive.
+706	You can look at all the numbers, what cuts we make and what revenue we raise.
+707	You don't turn national security into a political issue.
+708	I'd rather be able to have an insurance company.
+709	Well, we've gone through a tough four years.
+710	For me, I look at what's happened in the last four years and say this has been a disappointment.
+711	How do we get schools to be more competitive?
+712	He said that he'd cut in half the deficit.
+713	It's energy and trade, the right kind of training programs, balancing our budget and helping small business.
+714	Both at home and abroad, he has proposed wrong and reckless policies.
+715	They're willing to work with us.
+716	And the way to make sure they understand that is by having, from the very beginning, the tightest sanctions possible.
+717	But under Governor Romney's definition, there are a whole bunch of millionaires and billionaires who are small businesses.
+718	That's -- that's a big topic.
+719	He's great as a -- as a -- as a speaker and describing his plans and his vision.

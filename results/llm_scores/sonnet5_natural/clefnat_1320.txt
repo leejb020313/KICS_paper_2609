@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1320	I wouldn't have supported either.
+1321	And whenever the uh - automobile manufacturers come forward and say they can't meet the uh - amendments that the Congress has put forward, this Republican administration has delayed the implementation dates.
+1322	Are you going to go after Social Security and Medicare and student assistance and the handicapped again as you did last time?
+1323	That bill pays for these urban enterprise zones by asking the wealthiest Americans to pay a little more.
+1324	Some of it's said -- somebody who's been very vicious to me, Rosie O'Donnell, I said very tough things to her, and I think everybody would agree that she deserves it and nobody feels sorry for her.
+1325	Guinea and Ghana, two independent countries within the last three years - Guinea in fifty-seven, Ghana within the last eighteen months - both now are supporting the Soviet foreign policy at the U.N. Mr. Herter said so himself.
+1326	So the work that we've done with respect to sanctions now offers Iran a choice.
+1327	And my opponent was unwilling to support that action.
+1328	And spending restraint has got to be a vital part of that.
+1329	We know that the path we're taking is not working.
+1330	This is the kind of leadership that we've had in this administration on the most deadly issue of our times.
+1331	The facts are that he was systematically deceiving the inspectors.
+1332	People who will strictly interpret the Constitution and not use the bench to write social policy.
+1333	Obviously if Social Security is a very important program, it should -- it will be preserved.
+1334	We're lucky to have her heading the commission.
+1335	No, it's not just campaign rhetoric.
+1336	On the fourth of July we had a wonderful two hundredth birthday - for our great country.
+1337	So let's talk about this.
+1338	We have the best health care delivery system in the world and we want to keep it that way.
+1339	I've got no illusions about that.
+1340	And I've put ours together in something called the Agenda for American Renewal, and it makes sense, it's sensible, it creates jobs, it gets to the base of the kind of jobs we need.
+1341	To involve them in the administration of government and the feeling that they belong to the societal structure that makes decisions in the judiciary and in the executive branch is a very important commitment which I am trying to realize and will continue to do so in the future.
+1342	Now they have to try harder if they want to keep getting federal funds.
+1343	And I saw the cocaine scene treated with humor, as though this was a humorous little incident.
+1344	That was the key legislation at the time and put us on the road to eliminating this issue of nuclear waste and the nuclear fuel that has to be taken care of.
+1345	But I have uh - an adequate background, I believe.
+1346	Well, I think the fact that they're facing these repeated call-ups, some of them two and three deployments, and there's a stop- loss policy that prevents people from being able to get out when their time was up, is a reflection of the bad judgment this president exercised in how he has engaged in the world and deployed our forces.
+1347	I took the pledge we'd cut it out.
+1348	I hope it will not be necessary for any power to resume uh - testing in the atmosphere.
+1349	We went into Russia, we said here is some IMF money, and it ended up in Viktor Chemomyrdin's pocket, and others, and yet we played like there was reform.
+1350	There's no easy way to do this when you're dealing with an economy that's traditionally been more closed than one that's traditionally been more open.
+1351	We have one of the most advanced patient's bill of rights.
+1352	Yeah, I can't imagine what it would be like to be singled out because of race and stopped and harassed.
+1353	I'm going to make sure you get a job.
+1354	In New Hampshire Senator Kerrey said you ought to level, you ought to tell the truth about it.
+1355	I then did an interview with Neil Cavuto.
+1356	Now General Petraeus has praised the successes, but he said those successes are fragile and if we set a specific date for withdrawal -- and by the way, Senator Obama's original plan, they would have been out last spring before the surge ever had a chance to succeed.
+1357	For 3 months -- quarters I've been fighting, 3 quarters been fighting to get the Congress to pass some incentives for small business.
+1358	And I don't appreciate it when a candidate for president denigrates the contributions of these brave soldiers.
+1359	I think it's time to have a truce.

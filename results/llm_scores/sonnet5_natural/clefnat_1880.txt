@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1880	First of all, let's talk about this troop funding issue because John always brings this up.
+1881	The only thing consistent about my opponent's position is that he's been inconsistent.
+1882	I hope they'll think it's good that democracy and freedom is on the move.
+1883	So it isn't worth the paper it's printed on.
+1884	We've got a plan to do so.
+1885	He attacked the woman reporter writing the story, called her "disgusting," as he has called a number of women during this campaign.
+1886	I can say this: I do not believe Yassir Arafat wants us to send troops to the West Bank.
+1887	When Guinea became independent, the Soviet Ambassador showed up that very day.
+1888	So Mosul is going to be a wonderful thing.
+1889	We want to work with the Russians.
+1890	So we have the toughest laws, and you have tremendous gun violence.
+1891	We need to put one person in charge of the battle against AIDS to cut across all the agencies that deal with it.
+1892	It's ironic that there are now -- there is now a smaller percentage of the voters made up of parents with children than ever in American history because of the aging of our population, but at the same time we've got the largest generation of students in public schools ever.
+1893	And what I would like to do is see the National Guard and Reserve be deployed differently here in our own country.
+1894	You know, back in the 1970s, I worked for the Children's Defense Fund.
+1895	There was a lot at stake there, my friends.
+1896	Well, let me first of all talk about our diplomats, because they serve all around the world and do an incredible job in a very dangerous situation.
+1897	So we have to bring communities together in order to begin working on that as a mutual goal.
+1898	Well, the other day my opponent was given a briefing by the CIA.
+1899	You don't muddle through stamping out the Taliban.
+1900	Now, $18 billion is important; $300 billion is really important.
+1901	The other is John Neuhaus, who's one of the most distinguished arms control specialists in our country.
+1902	This exciting future will not only give us more energy security, but will also open up vast opportunities for Americans to live a better life and to have millions of new jobs associated with this new and very dynamic industry now in prospect because of the new energy policy that we've put into effect.
+1903	When I say "phony spirit," I mean phony, not because the spirit is not good on our side, but because the Soviet Union simply doesn't intend to carry out what they say.
+1904	That was a tax credit for the employer.
+1905	It's either unfair for some or unfair for all.
+1906	And I don't think it's uh - the Congress is Mr. Ford's opponent; but if uh - if - if he insists that uh - that I be responsible for the Democratic Congress, of which I'm - have not been a part, then I think it's only fair that he be responsible for the Nixon administration in its entirety, of which he was a part.
+1907	The farmer plants in the spring and harvests in the fall.
+1908	And I think most people know my position on the sanctity of life.
+1909	And uh - the only purpose that I would see in registering uh - handguns and not long guns of any kind would be to prohibit the uh - ownership of those guns by those who've used them in the commission of a crime, or who uh - have been proven to be mentally incompetent to own a gun.
+1910	Or whether it be Nixon's trip to China, which was preceded by Henry Kissinger, many times before he went.
+1911	You know, there's a lot of talk about how to keep the economy growing.
+1912	It can and will grow even more in the next four.
+1913	It's a remarkable thing in a country like ours, a man who grew up in Russell, Kansas, and one who was born to a widowed mother in Hope, Arkansas, could wind up running for president.
+1914	There's a -- no, look, there's a systemic problem.
+1915	I think we've got to be very careful when we commit our troops.
+1916	But I take advantage of the laws of the nation because I'm running a company.
+1917	And we had an initiative that we were working on to raise women's pay.
+1918	The rest of the Western world, we are told, may see its consumption increase from 51 million barrels to about 66 million.
+1919	Over $60 million at least will go into this campaign to leave the American dream to you and your children, to get this country straightened out, because if anybody owes it to you, I do.

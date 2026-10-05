@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+680	Well, I've expressed my heartfelt difference with Governor Clinton on organizing demonstrations while in a foreign land against your country, when young ghetto kids have been drafted and are dying.
+681	I'll tell you what PAYGO means, when you're a senator from Massachusetts, when you're a colleague of Ted Kennedy, pay go means: You pay, and he goes ahead and spends.
+682	Particularly where it's someone where you've had business dealings.
+683	Second, he's wrong in the analogies that he makes.
+684	Terrorists can now come into America and go to a gun show and, without even a background check, buy an assault weapon today.
+685	Child safety trigger locks on a mandatory basis, and others.
+686	Office estimate that there is probably tens of billions of dollars that is lost in fraud alone, and they have added that waste adds even more to that.
+687	They had thirty of them; we had seven of them.
+688	I think by acting firmly and decisively, it will mean it is less likely we have to use force.
+689	Maybe in your case maybe just two.
+690	And so I acknowledge that his daughters -- I've watched them.
+691	They're trying to defeat us.
+692	So all federal funds, instead of going to the -- to the state or to the school district, I'd have go, if you will, follow the child and let the parent and the child decide where to send their -- their -- their student.
+693	Let me just say one final example.
+694	Can you run through the list again?
+695	This permits a company to create uh - a dummy corporation, to export their products, and then not to pay the full amount of taxes on them.
+696	We ought to make one last effort.
+697	Those are very clear differences.
+698	Everybody -- every economist, every businessman -- believes that.
+699	We've got to begin to get back to the business of building and rehabilitating housing for families of low and moderate income in this country; housing for young families that they can look forward some day to buy.
+700	Some of it's said in entertainment.
+701	We can only be strong overseas if we're strong at home; and when I became president we'll not only be strong in those areas but also in defense - a defense capability second to none.
+702	We've got to help them.
+703	It's in this way, by making wise choices, that we're stronger, we enhance the chances of arms control.
+704	So it seems to me that there's also a public trust.
+705	Now, you can come back in and you can become a citizen.
+706	I've got 5.5 million hard-working people who put me on the ballot, and I belong to them.
+707	If the -- the unemployment rate was 7.8 percent when he took office, it's 7.8 percent now.
+708	This election is not about debating tricks, it is about your future.
+709	And I think we've now got so many examples around the country that we really have to find ways to end this.
+710	What about drugs that have increased, doubled in the last 44 months?
+711	Here is the role of the federal government.
+712	And there's been a constant squabbling between the president and the Congress, and that's not the way this country ought to be run.
+713	The biggest crime increase in history, the biggest drug increase in history in Arkansas.
+714	There -- there are people in Iran who have the same aspirations as people all around the world for a better life.
+715	Why did he fail to even promote legislation that would have provided an answer for those that want to come legally and for those that are here illegally today?
+716	We need to restore the faith and the trust of the American people in their own government.
+717	And we have proven, I think very conclusively, that you can reduce the rate of inflation and increase jobs.
+718	To me, that's the best way to secure America.
+719	I have fought against excessive spending and outrages.

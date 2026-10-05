@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	How about the growth of the economy?
+361	That happened before you came into office.
+362	... because I'm -- I'm so proud of the state that I had the chance to be governor of.
+363	And I believe if we do a better job in education, we'll -- we'll give people the -- the hope and opportunity they deserve and perhaps less violence from that.
+364	The president's path will mean continuing declining in take-home pay.
+365	There's a fundamentally different vision about how we move our country forward.
+366	And the only reason the unemployment rate seems a little lower today is because of all the people that have dropped out of the workforce.
+367	Because our energy is low cost, that are already beginning to come back because of our abundant energy.
+368	It's because I care about education for all of our kids.
+369	And the one thing that I'm absolutely clear about is that after a decade in which we saw drift, jobs being shipped overseas, nobody championing American workers and American businesses, we've now begun to make some real progress.
+370	He said in his first year he'd put out an immigration plan that would deal with our immigration challenges.
+371	It's a geopolitical foe, and I said in the same -- in the same paragraph I said, and Iran is the greatest national security threat we face.
+372	And, finally, Medicaid to states?
+373	You also have investments in Chinese companies.
+374	We can compete with anyone in the world as long as the playing field is level.
+375	I spent my life in the private sector, not in government.
+376	... to oil, to tax breaks, then companies going overseas.
+377	We've created five million jobs, and gone from 800 jobs a month being lost, and we are making progress.
+378	There are six other studies that looked at the study you describe and say it's completely wrong.
+379	In the 2000 debates, there was no mention of terrorism, for instance.
+380	No, let -- let -- let me go back and speak to the points that the president made and -- and -- and let's get them correct.
+381	Health insurance premiums, up $2,500.
+382	And that was -- that was -- that was what allowed us to become the number one state in the nation.
+383	But I also want to close those loopholes that are giving incentives for companies that are shipping jobs overseas.
+384	Which I think the American people would like to understand fully, it's been investigated to a degree, but -- but the administration has carried out executive privilege to prevent all of the information from coming out.
+385	But that's not what I believe.
+386	And I'm certainly not going to say to him, I'll give you more flexibility after the election.
+387	Now, you know, that may not seem like a big deal when it just is, you know, numbers on a sheet of paper, but if we're talking about a family who's got an autistic kid and is depending on that Medicaid, that's a big problem.
+388	When he talks about getting tough on China, keep in mind that Governor Romney invested in companies that were pioneers of outsourcing to China, and is currently investing in countries -- in companies that are building surveillance equipment for China to spy on its own folks.
+389	You keep your own insurance.
+390	That's not what we do.
+391	I will fight to create more energy in this country, to get America energy secure.
+392	So that's one reason I don't want it.
+393	But it does say insurance companies can't jerk you around.
+394	But those businesses that are in the last 3 percent of businesses happen to employ half -- half of all the people who work in small business.
+395	And housing has begun to rise.
+396	They're smart enough to know that's not a good trade.
+397	We, of course, don't want to have automatic weapons, and that's already illegal in this country to have automatic weapons.
+398	But what I've also said is, if we're serious about reducing the deficit, if this is genuinely a moral obligation to the next generation, then in addition to some tough spending cuts, we've also got to make sure that the wealthy do a little bit more.
+399	And so Dodd-Frank correctly says we need to have qualified mortgages, and if you give a mortgage that's not qualified, there are big penalties, except they didn't ever go on and define what a qualified mortgage was.

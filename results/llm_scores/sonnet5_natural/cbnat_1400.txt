@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1400	The oil industry gets $4 billion a year in corporate welfare.
+1401	You're going to see health premiums go up by some $2,500 per family.
+1402	We don't have to settle for gasoline at four bucks.
+1403	These are small -- these are enterprises competing with each other, learning how to do better and better jobs.
+1404	Well, Jim, I want to thank you, and I want to thank Governor Romney, because I think was a terrific debate, and I very much appreciate it.
+1405	I maybe need to get a new accountant.
+1406	On energy, Governor Romney and I, we both agree that we've got to boost American energy production, and oil and natural gas production are higher than they've been in years.
+1407	Number three, make sure our people have the skills they need to succeed and the best schools in the world.
+1408	So let's go through them one by one.
+1409	She had worked all her life, put in this money, and understood that there was a basic guarantee, a floor under which she could not go.
+1410	Number one, beef up our security and procedures, not just in Libya, but at every embassy and consulate in the region.
+1411	That's not an energy strategy for the future.
+1412	In my health care bill, I said insurance companies need to provide contraceptive coverage to everybody who is insured.
+1413	And that certainly would not help us in the Middle East.
+1414	So if you want to drill on public lands, you use it or you lose it.
+1415	And we believe China can be a partner, but we're also sending a very clear signal that America is a Pacific power; that we are going to have a presence there.
+1416	Number two, we're going to have to stop illegal immigration.
+1417	On day one, I will label China a currency manipulator, which will allow me as president to be able to put in place, if necessary, tariffs where I believe that they are taking unfair advantage of our manufacturers.
+1418	And so what I've done throughout my presidency and will continue to do is, number one, make sure that these countries are supporting our counterterrorism efforts.
+1419	Which was a program under this administration, and how it worked exactly I think we don't know precisely, where thousands of automatic, and AK-47 type weapons were -- were given to people that ultimately gave them to -- to drug lords.
+1420	It used to be the United States of America.
+1421	That's the kind of leadership that we need to show.
+1422	Syria is Iran's only ally in the Arab world.
+1423	You look at the record of the last four years and say is Iran closer to a bomb?
+1424	We've got 23 million people out of work or stopped looking for work in this country.
+1425	And if we're asking for no revenue, then that means that we've got to get rid of a whole bunch of stuff.
+1426	I understand that I can get this country on track again.
+1427	I want to make sure take-home pay turns around and starts to grow.
+1428	And I -- and I agree with Secretary Arne Duncan, he's -- some ideas he's put forward on Race to the Top, not all of them, but some of them I agree with and -- and congratulate him for pursuing that.
+1429	And I've got a different vision for America.
+1430	Well, first of all, it's not government that makes business successful.
+1431	He keeps saying, "Look, I've created 5 million jobs."
+1432	Not only that, he said, "I think that's what grows the economy."
+1433	I have to say that Governor Romney criticized me for being too tough in that tire case; said this wouldn't be good for American workers and that it would be protectionist.
+1434	Mr. President, let me finish.
+1435	He said he would have by now put forward a plan to reform Medicare and Social Security, because he pointed out they're on the road to bankruptcy.
+1436	I couldn't agree more about going forward, but I certainly don't want to go back to the policies of the last four years.
+1437	One could follow Bowles-Simpson as a model and take deduction by deduction and make differences that way.
+1438	Now, it's our turn to take that torch.
+1439	I mentioned 31/2 million women, more now in poverty than four years ago.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+920	That's not wishy-washy, and that's what I'm fighting for, you.
+921	But we're not going to simply kill some people to say, "Oh, look, we got even.''
+922	I strongly support local control, so does Governor Bush.
+923	The only building that was guarded when the troops when into Baghdad was the oil ministry.
+924	We want to see that they do have adequate medical care.
+925	I would take the use of force very seriously.
+926	And, Senator McCain, he says -- he talks about Arizona.
+927	Well, keep in mind our strategy wasn't just going after bin Laden.
+928	That is something that every family that advocates on behalf of disabled children talk about.
+929	You just want to add an additional tax cut over the loopholes.
+930	We are the strongest and most powerful free society on Earth.
+931	My attitude is you take preemptive action in order to protect the American people, that you act in order to make this country secure.
+932	While they didn't talk at all, the fuel rods came out, the inspectors were kicked out, the television cameras were kicked out.
+933	They didn't have the weapons, they didn't have the tanks.
+934	I favor that because I believe that's the best way to aid our schools without running any risk whatever of the federal government telling our teachers what to teach.
+935	I started working on welfare reform in 1980 because I was sick of seeing people trapped in a system that was increasingly isolating them and making their kids more vulnerable to get in trouble.
+936	And we have to do a much better job at giving companies incentives to build new companies or to expand, because they're not doing it.
+937	It's a terrible problems in terms of flexibility on private insurance.
+938	I want to see growing peace in this country.
+939	To do what the Congress and Governor Clinton is suggesting, you'd isolate and ruin Hong Kong.
+940	In order to defend ourselves, we'd have to get international approval.
+941	Most recently out in Aurora.
+942	Well, I would suggest, Mr. Vanocur, that uh - if you know the President, that was probably a facetious remark.
+943	We're not going to eliminate everybody who is mentally disturbed and we have got to make sure they don't get weapons.
+944	So, I think that many Democrats are seeing the same thing this Democrat saw: The leadership isn't taking us where we want to go.
+945	We're 9 million jobs short of that.
+946	Maybe that's why he's asked for 860 -- sought and proposed $860 billion worth of new spending and wants to raise people's taxes in a time of incredible challenge and difficulty and heartache for the American families.
+947	And so, the plan he talks about simply won't work.
+948	He did block it, because we passed it in the United States Senate.
+949	I thought that was wrong.
+950	But - and I, look, mental - that was a little overstated it.
+951	The day after the attack, governor, I stood in the Rose Garden and I told the American people in the world that we are going to find out exactly what happened.
+952	We need a strong economic package; we need a tax cut; we need the $500 child credit, and we'll have that soon.
+953	As well, help is on the way, but it's certainly hard to tell it when he voted against the $87-billion supplemental to provide equipment for our troops, and then said he actually did vote for it before he voted against it.
+954	He has vetoed bills passed by Congress within the congressional budget guidelines job opportunities for two million Americans.
+955	And if you make less than $250,000, less than a quarter-million dollars a year, then you will not see one dime's worth of tax increase.
+956	And take a look at mine, also, and you'll see.
+957	I mean, I think in general, let's talk about these issues.
+958	In fact, Chris, I think that would be a big red flag waving for ISIS to reconstitute itself.
+959	And when I stood up there and spoke to the Congress, I was speaking off the same intelligence he looked at to make his decisions to support the authorization of force.

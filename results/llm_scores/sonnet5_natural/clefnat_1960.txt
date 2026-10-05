@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1960	We've changed for the first time since FDR -- since FDR we had the -- we've always had the strategy of saying we could fight in two conflicts at once.
+1961	We're going to have free trade, more free trade than we have right now.
+1962	Let's take 300 of that billion and go in and buy those home loan mortgages and negotiate with those people in their homes, 11 million homes or more, so that they can afford to pay the mortgage, stay in their home.
+1963	For comparable states our size, we're signing them up as fast as any other state.
+1964	Had gone to school here, pledged allegiance to the flag.
+1965	He wants to give you sort of a government tax cut, which really doesn't mean anything.
+1966	I'm in public service because I love this country.
+1967	President Clinton opposes term limits, President Clinton opposes a constitutional amendment to balance the budget.
+1968	They had stocked them with centrifuges that were whirling away.
+1969	And therein, I think Governor Clinton keeps talking about trickle down, trickle down, and he's still talking about spending more and taxing more.
+1970	Then I would really focus on let's get these things out.
+1971	And what we've seen over the last several years is Iran's influence grow.
+1972	We're on a different system.
+1973	Those people -- I don't know those people.
+1974	Our children will not see the American dream because of this debt that somebody somewhere dropped on us.
+1975	I went to meet with the members of the Security Council in the week before we voted.
+1976	Yes, we had grain credits for Iraq, and there isn't any evidence that those grain credits were diverted into weaponry -- none, none whatsoever.
+1977	We've had a uh - higher tax load from the Treasury for the farmer in the last few years with the lowest farm income in many years.
+1978	And I think we have enormous opportunity for trade.
+1979	2nd thing, there are not many times in your life when you get to talk to a whole country.
+1980	But we also have to take demand seriously.
+1981	Four Democrats voted for it.
+1982	Is it really the view of the American people, however you feel on the question of abortion, that government ought to be reaching into your livingrooms and making choices like this?
+1983	We all know about the vote held this week - of the five neutralists - and it was generally regarded as a defeat for the United States.
+1984	I'd like to respond to that.
+1985	This is not an ordinary time, and this is not an ordinary election.
+1986	No, I think -- I had five seconds before you interrupted me, was ...
+1987	I think that answers itself.
+1988	They analyzed the senator's plan.
+1989	Women work for 76 cents on the dollar for the same work that men do.
+1990	Free nations will answer the hopes and aspirations of their people.
+1991	So I don't think they ought to look at us in any way other than what we are.
+1992	By adequate preparation I mean that at that level we must prepare an agenda, an agenda agreed upon with the approval of the heads of state involved.
+1993	He is -- listen, they went through a horrible situation in Beslan, where these terrorists gunned down young school kids.
+1994	I wish he could have been with me when I sat with a group of teenagers who were black, and who were telling me about their unemployment problems, and that it was the minimum wage that had done away with the jobs that they once could get.
+1995	Personal income has dropped while people have worked harder.
+1996	And as a matter of fact, when the president ran for office, he said that, by this year, he would have brought down the cost of insurance for each family by $2,500 a family.
+1997	And I've seen at first hand, in a very vivid way, the deep hurt that's come to this country in the aftermath of Vietnam and Cambodia, Chile, and Pakistan, and Angola, and Watergate, CIA revelations.
+1998	But in 16 months we should be able to reduce our combat troops, put -- provide some relief to military families and our troops and bolster our efforts in Afghanistan so that we can capture and kill bin Laden and crush al Qaeda.
+1999	(Laughter) I'm against that; I oppose that.

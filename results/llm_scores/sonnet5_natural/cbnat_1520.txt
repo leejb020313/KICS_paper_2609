@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1520	And what's happened over the last four years has been very, very hard for America's young people.
+1521	People are willing to take risks.
+1522	And it wasn't just that small businesses were seeing costs skyrocket and they couldn't get affordable coverage even if they wanted to provide it to their employees.
+1523	And it's not just looking to our words that you have to take in evidence of where they go.
+1524	And this is a major difference that Governor Romney and I have.
+1525	And so you've got higher administrative costs, plus profit on top of that.
+1526	And Governor Romney's says he's got a five-point plan?
+1527	And what we're seeing right now is, in my view, a -- a trickle-down government approach, which has government thinking it can do a better job than free people pursuing their dreams.
+1528	And the fact that you're making an investment in higher education is critical.
+1529	And that one doesn't sound good and it's not affordable.
+1530	We were able to drive our schools to be number one in the nation in my state.
+1531	I've met them in Appleton, Wisconsin.
+1532	And this isn't -- this isn't going to be necessary.
+1533	The Constitution and the Declaration of Independence.
+1534	It's about who can get the middle class in this country a bright and prosperous future and assure our kids the kind of hope and optimism they deserve.
+1535	There are alternatives to accomplish the objective I have, which is to bring down rates, broaden the base, simplify the code, and create incentives for growth.
+1536	These are not just women's issues.
+1537	I want to make sure that regulators see their job as encouraging small business, not crushing it.
+1538	And in that process, they can get government help and government guarantees, but they need to go through bankruptcy to get rid of excess cost and the debt burden that they'd -- they'd built up.
+1539	So he's got the oil and gas part, but he doesn't have the clean energy part.
+1540	Our association and connection with our allies is essential to America's strength.
+1541	And I know he keeps saying, you want to take Detroit bankrupt.
+1542	I wasn't the one that said 5.4 percent.
+1543	In fact it makes it less likely for them to come here...
+1544	And so the question is not a game of Battleship, where we're counting slips.
+1545	But going back to Libya -- because this is an example of how we make choices.
+1546	You can take a look at the op-ed...
+1547	We -- as president, I will sit on day one -- actually, the day after I get elected -- I'll sit down with leaders -- the Democratic leaders, as well as Republican leaders, and continue -- as we did in my state -- we met every Monday for a couple hours, talked about the issues and the challenges in the -- in the -- in our state in that case.
+1548	We have these ships that go underwater, nuclear submarines.
+1549	And the thing I find the most troubling about Obama Care, well it's a long list, but one of the things I find most troubling is that when you go out and talk to small businesses and ask them what they think about it, they tell you it keeps them from hiring more people.
+1550	We have not made the progress we need to make to put people back to work.
+1551	The president said he'd cut the deficit in half.
+1552	The president's policies have been exercised over the last four years and they haven't put Americans back to work.
+1553	Number two, I asked the president a question I think Hispanics and immigrants all over the nation have asked.
+1554	What you did instead was to push through a plan without a single Republican vote.
+1555	The proof of that is that 50 percent of college graduates this year can't find work.
+1556	And then, of course, with regards to standing for our principles, when -- when the students took to the streets in Tehran and the people there protested, the Green Revolution occurred, for the president to be silent I thought was an enormous mistake.
+1557	Now, the most important thing we can do is to make sure that we are creating jobs in this country.
+1558	Look, the cost of lowering rates for everybody across the board, 20 percent.
+1559	And of course, a military action is the last resort.

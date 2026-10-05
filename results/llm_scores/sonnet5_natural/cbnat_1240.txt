@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1240	It also allowed us to refocus on alliances and relationships that had been neglected for a decade.
+1241	Of course, we don't have Medicare, but we didn't cut Medicare by $716 billion.
+1242	Now, Governor Romney has taken a different approach throughout this campaign.
+1243	Millions of jobs were lost, the auto industry was on the brink of collapse.
+1244	We need to get rid of that provision because it's killing regional and small banks.
+1245	So how do we deal with it?
+1246	The -- the greatest failure we've had with regards to -- to gun violence in some respects is what -- what is known as Fast and Furious.
+1247	We want people to be able to enjoy their lives and know they're going to have a bright and prosperous future, not be at war.
+1248	You had a whole bunch of oil companies who had leases on public lands that they weren't using.
+1249	And one of the things that makes us grow as an economy is when everybody participates and women are getting the same fair deal as men are.
+1250	That is a red line for us, because not only is Israel's security at stake, but our security is at stake if that unravels.
+1251	They -- they say, if a patient's coming in, let's get all the doctors together at once, do one test instead of having the patient run around with 10 tests.
+1252	So here's what I've done since I've been president.
+1253	I want our legal system to work better.
+1254	We're 9 million jobs short of that.
+1255	Well, keep in mind our strategy wasn't just going after bin Laden.
+1256	And so what we did was take away those leases.
+1257	The second topic, which is you said you get a deduction for taking a plant overseas.
+1258	Opening up more trade, particularly in Latin America.
+1259	Thank you to Lynn University for welcoming us here.
+1260	I will fight for your families and I will work every single day to make sure that America continues to be the greatest nation on earth.
+1261	We have to say to our friend in China, look, you guys are playing aggressively.
+1262	How much did you cut licenses and permits on federal land and federal waters?
+1263	So I want to make sure that we make -- we make America more competitive.
+1264	And number is to grow the economy, because if more people work in a growing economy, they're paying taxes, and you can get the job done that way.
+1265	Most recently out in Aurora.
+1266	Iran is a state sponsor of terrorism.
+1267	We just can't afford four more years like the last four years.
+1268	And important topic, and one which I learned a great deal about, particularly as I was serving as governor of my state, because I had the chance to pull together a cabinet and all the applicants seemed to be men.
+1269	Well, first of all, I want to underscore the same point the president mad,e which is that if I'm President of the United States, when I'm President of the United States, we will stand with Israel.
+1270	I do not believe in cutting our military.
+1271	20 or 25 birds were killed and brought out a migratory bird act to go after them on a criminal basis.
+1272	And the fact is that if you are lowering the rates the way you described, Governor, then it is not possible to come up with enough deductions and loopholes that only affect high-income individuals to avoid either raising the deficit or burdening the middle class.
+1273	You thought it should have been 5,000 troops...
+1274	But you make a very good point, which is that the place you put your money just makes a pretty clear indication of where your heart is.
+1275	We will have to have people play on a fair basis, that's number one.
+1276	The reason incomes are down is because unemployment is so high.
+1277	And I want to fight for them.
+1278	It's growing more slowly this year than last year, and more slowly last year than the year before.
+1279	America's going to come back, and for that to happen, we're going to have to have a president who can work across the aisle.

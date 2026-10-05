@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1040	So we're already beginning to see progress.
+1041	And what I've also said is for young people who come here, brought here often times by their parents.
+1042	You've raised them by $1 trillion under Obamacare.
+1043	And the reason is was so important -- and this is a testament to how we've restored American credibility and strength around the world -- is we had to make sure that all the countries participated, even countries like Russia and China.
+1044	But I think math, common sense, and our history shows us that's not a recipe for job growth.
+1045	The second area, taxation, we agree, we ought to bring the tax rates down.
+1046	With Mali now having North Mali taken over by Al Qaida; with Syria having Assad continuing to -- to kill, to murder his own people, this is a region in tumult.
+1047	I also want to make sure that we get this economy going.
+1048	The notion that we would have tanks run over those young people who were in Tahrir Square, that is not the kind of American leadership that John F. Kennedy talked about 50 years ago.
+1049	We drove our schools to be number one in the nation.
+1050	It is something one would only - only consider if all of the other avenues had been -- had been tried to their full extent.
+1051	No, they haven't had talks in two years.
+1052	And it's named after this amazing woman who had been doing the same job as a man for years, found out that she was getting paid less, and the Supreme Court said that she couldn't bring suit because she should have found about it earlier, whereas she had no way of finding out about it.
+1053	She never got a college education, even though she was smart as a whip.
+1054	My view is that we ought to provide tax relief to people in the middle class.
+1055	But it's important for us to recognize that we can't just walk away from Pakistan.
+1056	But -- but I want to talk about the values behind Social Security and Medicare, and then talk about Medicare, because that's the big driver of our deficits right now.
+1057	And so the question now is how do we build on those strengths.
+1058	And what I want to do is continue the tax rates -- the tax cuts that we put into place for small businesses and families.
+1059	Number one, I want to build manufacturing jobs in this country again.
+1060	I was just at a coal facility, where some 1,200 people lost their jobs.
+1061	I won't put in place magnets for people coming here illegally.
+1062	And that's why they were supportive of the approach that we took.
+1063	Number two, we've got to make sure that we have the best education system in the world.
+1064	You couldn't have people opening up banks in their -- in their garage and making loans.
+1065	Instead let people make their own choice.
+1066	We've been blessed by having a nation that's free and prosperous thanks to the contributions of the greatest generation.
+1067	We -- we think of their families and care for them deeply.
+1068	Number two, if you don't have health insurance, we're essentially setting up a group plan that allows you to benefit from group rates that are typically 18 percent lower than if you're out there trying to get insurance on the individual market.
+1069	But number two, because I recognized that if you're going to have women in the workforce that sometimes you need to be more flexible.
+1070	And as a consequence, what we've been able to do is to provide millions more students assistance, lower or keep low interest rates on student loans.
+1071	But they're not creative enough to make up for 30 percent of revenue on something like Medicaid.
+1072	And now suddenly you're a big champion of coal.
+1073	And when it comes to our economy here at home, I know what it takes to create 12 million new jobs and rising take-home pay.
+1074	And so everything we're doing, we're doing in consultation with our partners in the region, including Israel which obviously has a huge interest in seeing what happens in Syria; coordinating with Turkey and other countries in the region that have a great interest in this.
+1075	You know, after we killed bin Laden I was at ground zero for a memorial and talked to a young women who was four years old when 9/11 happened.
+1076	That was something I concurred with...
+1077	Now, and -- and I've talked to a guy who has a very small business.
+1078	At the same time, regulation can become excessive.
+1079	Same thing with oil, same thing with natural gas.

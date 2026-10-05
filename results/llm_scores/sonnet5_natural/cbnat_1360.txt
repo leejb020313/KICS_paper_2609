@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1360	By the way, we can include a prescription program if we need to improve it.
+1361	To the extent humanly possible, we get that out.
+1362	And they're going now because of the policies of this administration.
+1363	I'm all for oil production.
+1364	But the fact of the matter is that some of the prescriptions that he's offered, like letting you buy insurance across state lines, there's no indication that that somehow is going to help somebody who's got a pre-existing condition be able to finally buy insurance.
+1365	I used to consult to businesses -- excuse me, to hospitals and to health care providers.
+1366	I look around the world and I don't feel that you see North Korea, continuing to export their nuclear technology, Russia said they're not going to follow Nunn-Lugar any more.
+1367	And I appreciate that question.
+1368	It's one of the reasons for the great financial calamity we had.
+1369	It's going to help those families, and it's going to create incentives to start growing jobs again in this country.
+1370	but after a decade of war, I think we all recognize we've got to do some nation building here at home, rebuilding our roads, our bridges and especially caring for our Veterans who sacrificed so much for our freedom.
+1371	And it includes within it a number of provisions that I think has some unintended consequences that are harmful to the economy.
+1372	An economy with 50 percent of kids graduating from college that can't finds a job, or a college level job, that's not what we have to have.
+1373	We're four years closer to a nuclear Iran.
+1374	We've had 43 straight months with unemployment above 8 percent.
+1375	If we don't have the best education system in the world, if we don't continue to put money into research and technology that will allow us to create great businesses here in the United States, that's how we lose the competition.
+1376	Well of course they add up.
+1377	And, you know, yes, have we had some fights between me and the Republicans when -- when they fought back against us reining in the excesses of Wall Street?
+1378	We've expanded Pell Grants for millions of people, including millions of young women, all across the country.
+1379	Fourth graders and eighth graders are tested in English and math.
+1380	Under no circumstances would I do anything other than to help this industry get on its feet.
+1381	But there's a difference in terms of how we would do it.
+1382	And this calls into question the president's whole policy in the Middle East.
+1383	Let the states and localities do that.
+1384	But let's take an example that we know is going to make a difference in the 21st century and that's our education policy.
+1385	Or, alternatively, we can figure out, how do we make the cost of care more effective?
+1386	And that -- don't take my word for it, take the executives at GM and Chrysler, some of whom are Republicans, may even support Governor Romney.
+1387	But let's go back to what Governor Romney indicated, that under his plan, he would be able to cover people with preexisting conditions.
+1388	And our military, we've got to strengthen our military long-term.
+1389	The president's policies throughout the Middle East began with an apology tour and -- and -- and pursue a strategy of leading from behind, and this strategy is unraveling before our very eyes.
+1390	This -- we have 4 million people on Medicare Advantage that will lose Medicare Advantage because of those $716 billion in cuts.
+1391	So I will not grant amnesty to those who have come here illegally.
+1392	I mean, I'm -- I'm pleased that you now are endorsing our policy of applying diplomatic pressure and potentially having bilateral discussions with the Iranians to end their nuclear program.
+1393	Now, there are some other issues that have a bearing on how women succeed in the workplace.
+1394	The auto workers that you meet in Toledo or Detroit take such pride in building the best cars in the world, not just because of a paycheck, but because it gives them that sense of pride, that they're helping to build America.
+1395	So across the board, we are engaging them in building capacity in these countries.
+1396	And that's because we've become weaker in each of those four...
+1397	I'm pleased to be at the University of Denver, appreciate their welcome, and also the Presidential Commission on these debates.
+1398	Anybody can have deductions up to that amount.
+1399	Going forward with the status quo is not going to cut it for the American people who are struggling today.

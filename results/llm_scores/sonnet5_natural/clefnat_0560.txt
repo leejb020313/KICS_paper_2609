@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+560	His has been in the legislative branch.
+561	We're going to say you have a five-year limit.
+562	This kind of deterioration in our economic strength is bound to weaken us around the world.
+563	First contact should be with the money when she's pregnant.
+564	We'll stay on the hunt on Al Qaida.
+565	I think we have to get NATO to go into the Middle East with us, in addition to surrounding nations, and we have to knock the hell out of ISIS, and we have to do it fast, when ISIS formed in this vacuum created by Barack Obama and Secretary Clinton.
+566	I want to spend my time making this country even better than it is, not trying to make you out to be a bad person.
+567	So you, dear voters, are out there on the auction block, and these two candidates are bidding for your votes.
+568	And he has made the point that you have not repudiated some of the semidiplomatic activity of the Reverend Jackson, particularly in Central America.
+569	Now so that we get it absolutely clear: Senator Kennedy must as a candidate - as I as a candidate in fifty-two - criticize us when we're wrong.
+570	But we had been digging our way out of policies that were misplaced and focused on the top doing very well and middle class folks not doing well.
+571	We need comprehensive background checks, and we need to keep guns out of the hands of those who will do harm.
+572	No, but you got to go back to what social security was when it was created.
+573	I strongly support new investments in clean coal technology.
+574	The people who have jobs and educations and opportunities that didn't have them 10 years ago don't think it's irrelevant at all; they think it's highly relevant and they wish the rest of the country had them.
+575	It's hard work to go from a place where people get their hands cut off, or executed, to a place where people are free.
+576	And he is leaving office with a popularity at an all-time high, because American people
+577	But we didn't use American forces, the best trained in the world, to go kill him.
+578	But it's also that his entire life he has never forgotten where he came from, coming from Scranton, fighting on behalf of working families, remembering what it's like to see his father lose his job and go through a downward spiral economically.
+579	About a thousand raised their hands.
+580	Under my plan, if you make -- the top -- the wealthy people pay 62% of the taxes today.
+581	The bad news is we lost.
+582	That conference has met six times.
+583	I think you have heavy obligations which affect our security, which we're going to have to meet.
+584	There is much to be done.
+585	We have to also stand by our allies.
+586	The Russians are preventing significant action in the United Nations Security Council.
+587	I mean, it could be Russia, but it could also be China.
+588	A lot of things happened which maybe shouldn't have happened.
+589	Number two, young people are able to stay on their family plan.
+590	You could knock out the tax increases and you could do what the people want, and that's create enterprise zones.
+591	And the reason I want middle-income taxpayers to have lower taxes is because middle-income taxpayers have been buried over the past four years.
+592	But there's going to be a new Congress.
+593	The Patriot Act is necessary, for example, because parts of the FBI couldn't talk to each other.
+594	He is the man on conventional forces that wants to eliminate two carrier battle groups.
+595	Before I decided to run, I had to resolve two issues in my mind.
+596	There's been too much finger pointing and too much name calling in Washington, D.C.
+597	Muslims have to report the problems when they see them.
+598	And so, the answer to your question is: When our general is on the ground and Ambassador Negroponte tells me that Iraq is ready to defend herself from these terrorists, that elections will have been held by then, that their stability and that they're on their way to, you know, a nation that's free; that's when.
+599	But it was also military.

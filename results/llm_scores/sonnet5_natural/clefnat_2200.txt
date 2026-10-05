@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2200	Doctors don't dare to deliver babies sometimes because they're afraid that somebody's going to sue them.
+2201	I also believe that it is -- one of the reasons we can't do it is we're overextended.
+2202	The Soviet Union may not agree to an inspection system.
+2203	I didn't want to give a slush fund to Halliburton.
+2204	See, I understand the tax code better than anybody that's ever run for president.
+2205	We're the great nation that has allies, 42 allies and friends around the world.
+2206	And now that the energy prices are high, I guess he's not advocating those big energy taxes right now.
+2207	We've doubled it on research and on every other aspect of it.
+2208	Well, Jim, I want to thank you, and I want to thank Governor Romney, because I think was a terrific debate, and I very much appreciate it.
+2209	Joe Lieberman and I gave them six months to clean up their act.
+2210	We encourage parents to take a look at the comparative results of schools.
+2211	I said I did if administered fairly and justly.
+2212	It would depend entirely on what they asked us to do, but the real secret there is for them to abide by the agreements they've made and find a way to trust each other, and they're going to have to spend some time and trust each other.
+2213	Whether or not one makes decisions based on sound principles or whether or not you rely upon polls and focus groups on how to decide what the course of action is.
+2214	And when they made that horrible deal with Iran, they should have included the fact that they do something with respect to North Korea.
+2215	You resisted the appointment of a drug czar there because you thought it might interfere with treatment.
+2216	I don't know if that was a criminal issue or a paternal issue, but the fact is that it was $3 million of our taxpayers' money.
+2217	And it seems to me what we need to do is to talk about not only tobacco but drugs, because drug use between 12- and 17-year-olds has doubled in this administration in the last 44 months.
+2218	It's one of the reasons why we have the lowest murder rate of any industrial state in the country.
+2219	K-2 diagnostic testing so we know whether or not there's a deficiency.
+2220	He forgot to tell you he voted to tax Social Security benefits more than one time.
+2221	I accept his objective and his dream; we all do.
+2222	What Senator McCain refers to is a measure in the Senate that would try to broaden the mandate inside of Iraq.
+2223	And I got a long history of doing that.
+2224	Governor Carter uh - brags about the unemployment during Democratic administrations and condemns the unemployment at the present time.
+2225	And then that number disappears for high-income people.
+2226	The last point I want to make on the issue of abortion.
+2227	I think I should also add that as far as Senator Kennedy's proposals are concerned, if he intends to carry out his platform - the one adopted in Los Angeles - it is just impossible for him to make good on those promises without raising taxes or without having a rise in t- prices or both.
+2228	My plan to get the industry on its feet when it was in real trouble was not to start writing checks.
+2229	And it's a bad policy.
+2230	We've got to provide additional help to small businesses so that they can afford to provide health insurance.
+2231	I would just like to s- add this one point.
+2232	I don't think it should be used as a piggy bank for other programs.
+2233	We try to help people with disabilities.
+2234	This is the highest honor that I have ever had in my life, to think that somebody from Russell, Kansas, somebody who grew up living in a basement apartment, someone whose parents didn't finish high school, somebody who spent about 39 months in hospitals after World War II, someone who uses a buttonhook every day to get dressed.
+2235	He said, we will look at offshore drilling.
+2236	And that's why proliferation is one of the centerpieces of a multi-prong strategy to make the country safer.
+2237	It was a new negotiation because, as I say, President Ford was within about 10% of having a solution that could be acceptable.
+2238	Bad health care at the most expensive price.
+2239	I mean, "compassionate conservative," what does that mean?

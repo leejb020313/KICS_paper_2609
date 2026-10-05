@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1800	And finally, we don't want to have military involvement there.
+1801	I am in favor, as the president has said, and I agree with him, which is that if people have committed crimes we got to get them out of this country.
+1802	Mr. President, I'm still speaking.
+1803	That's math that doesn't add up.
+1804	First of all, the sequester is not something that I've proposed.
+1805	I'm pleased that I've balanced budgets.
+1806	They don't vote for war.
+1807	We want -- we want to make sure that we're seeing progress throughout the Middle East.
+1808	You know, my grandmother -- some of you know -- helped to raise me.
+1809	But this will make a difference in terms of whether or not we can move this economy forward for these young people...
+1810	And the last conversation she had with her father was him calling from the twin towers, saying "Peyton (ph), I love you and I will always watch over you."
+1811	But the president mentioned the auto industry and that somehow I would be in favor of jobs being elsewhere.
+1812	We instead need to put insurance plans, providers, hospitals, doctors on target such that they have an incentive, as you say, performance pay, for doing an excellent job, for keeping costs down, and that's happening.
+1813	This is a time -- this should have been a time for American leadership.
+1814	The president's path will mean continuing declining in take-home pay.
+1815	Over the last four years we've made real progress digging our way out of policies that gave us two prolonged wars, record deficits and the worst economic crisis since the Great Depression.
+1816	We need to have a very effective leadership effort in Syria, making sure that the -- the insurgent there are armed and that the insurgents that become armed, are people who will be the responsible parties.
+1817	Soldiers who are overseas fighting for us right now.
+1818	And I worked with Democrats and Republicans to cut a trillion dollars out of our discretionary domestic budget.
+1819	There's a reason why Governor Romney set up the plan that he did in Massachusetts.
+1820	This is a nation, which, if it falls apart, if it -- if it becomes a failed state, there are nuclear weapons there and you've got -- you've got terrorists there who could grab their -- their hands onto those nuclear weapons.
+1821	And in fact, employers are looking for skilled workers.
+1822	He has a one-point plan.
+1823	You can ship jobs overseas and get tax breaks for it.
+1824	You've done a great job.
+1825	I want to add more free trade agreements so we'll have more trade.
+1826	I want to make sure that we have the ships that are required by our Navy.
+1827	And, of course, Iran on the path to a nuclear weapon, we've got real (inaudible).
+1828	So we did work on this, alongside working on jobs, because this is part of making sure that middle-class families are secure in this country.
+1829	Now, we all know that we've got to do more.
+1830	Bob, let's not go into hypotheticals of that nature.
+1831	The -- the fact that he only has to pay 14 percent on his taxes when a lot of you are paying much higher.
+1832	I want it to be streamlined.
+1833	I was in coal country.
+1834	And I remember, as a governor, when this idea was floated by Tommy Thompson, the governors -- Republican and Democrats -- said, please let us do that.
+1835	It's called premium support, but it's understood to be a voucher program.
+1836	Number two, young people are able to stay on their family plan.
+1837	An economy that has 23 million people looking for work is not a strong economy.
+1838	Sometimes they didn't come out with a clear regulation.
+1839	That's by far the most effective and efficient way to get this budget balanced.

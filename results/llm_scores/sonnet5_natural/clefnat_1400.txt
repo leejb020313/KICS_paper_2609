@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1400	We spent $300 billion a year defending the world.
+1401	You know, that's a tough question and there's a lot of qualified Americans.
+1402	You take the raw product you produce, I presume you're a farmer, off your farm, and you convert it.
+1403	So it's not a question of his heart, as far as I know.
+1404	I think that judgment could be made after election, if I'm successful.
+1405	He choked and then got into a Twitter war because the Mexican president said we're not paying for that wall.
+1406	Now, our relations with Pakistan are critical, because the border areas are being used as safe havens by the Taliban and Al Qaida and other extremist organizations, and we have to get their support.
+1407	Well, in the uh - last two years, as I indicated before, we had a very tough time.
+1408	Is it true that this Administration, as Senator Kennedy has charged, has been an Administration of retreat, of defeat, of stagnation?
+1409	He would also strip away the ability of states to provide some of the regulations on insurance companies to make sure you're not excluded for pre-existing conditions or your mammograms are covered or your maternity is covered.
+1410	Now, on this issue of aiding Pakistan, if you're going to aim a gun at somebody, George Shultz, our great secretary of state, told me once, you'd better be prepared to pull the trigger.
+1411	I support the farm bill, the 1985 farm bill and spending is moving in the right direction.
+1412	Where we're not making the progress, Sander, is in -- we're making it in teenagers, and thank God, because I thought what Ross said was most appropriate about these families and these children.
+1413	I think of people in the law enforcement community who are taking their lives in their hands everyday, when they go up to one of those doors and kick it down and try to stop this flow of drugs into our communities and into our kids.
+1414	We need a good strong economic package, let the private sector creates the jobs and they can do it.
+1415	That's what Speaker Gingrich and Senator Dole did, not me.
+1416	And we formed a historic coalition, and we brought him down, and we destroyed the 4th largest army.
+1417	Coming from the political process.
+1418	Very interesting why she's leaving carried interest.
+1419	That's not bad for a guy that's never been there, right?
+1420	When Senator McCain was cheerleading the president to go into Iraq, he suggested it was going to be quick and easy, we'd be greeted as liberators.
+1421	It is the bipartisan bill that is now pending in the Congress.
+1422	In the Oval Office, you can't predict what kind of crisis is going to come up.
+1423	I think that in dealing with the Soviet Union one has to be realistic.
+1424	It's called make America great again.
+1425	Most of this is due to regulations which either interfere with the mining of it or prevent the burning of it:.
+1426	There is a tax loophole right now.
+1427	And you pick out 20,000, whether they need the money or not, and they get paid for volunteering.
+1428	It was my very first bill, and I'm very proud of it because it symbolizes what I think we ought to be doing.
+1429	And so we're moving troops out of Europe and replacing it with more effective equipment.
+1430	I thought they would stay and fight, but they didn't.
+1431	The president's done nothing to try to fix it.
+1432	But this is an exciting time.
+1433	I've got reply on that.
+1434	And I think the federal government could be in a position where we would offer and provide that.
+1435	And it will have, I think, an important effect on the price of a barrel of oil.
+1436	He has taken the position, when he first indicated in October of last year, that he would even favor compulsory arbitration as one of the weapons the president might have to stop a national emergency strike.
+1437	But it is things that people say.
+1438	And the best course for health care is to do what we did in my state: craft a plan at the state level that fits the needs of the state.
+1439	You've got to go to the people.

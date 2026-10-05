@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2480	By the way, I don't like to have the federal government start pushing its weight deeper and deeper into our schools.
+2481	And, Candy, we haven't had a chance to talk about education much, but I think it is very important to understand that the reforms we've put in place, working with 46 governors around the country, are seeing schools that are some of the ones that are the toughest for kids starting to succeed.
+2482	Now, Governor Romney will say he's got an all-of-the-above plan, but basically his plan is to let the oil companies write the energy policies.
+2483	And so what I've tried to do as president is to apply those same principles.
+2484	But I also share your belief that weapons that were designed for soldiers in war theaters don't belong on our streets.
+2485	We don't want another Iraq, we don't want another Afghanistan.
+2486	Because they are low wage, low skill jobs.
+2487	And that is, I want to give middle-class families and folks who are striving to get into the middle-class some relief.
+2488	Well, let's look at the president's policies, all right, as opposed to the rhetoric, because we've had four years of policies being played out.
+2489	And ironically, if you repeal Obamacare, and I have become fond of this term, "Obamacare," if you repeal it, what happens is those seniors right away are going to be paying $600 more in prescription care.
+2490	So we're going to make sure that people we trade with around the world play by the rules.
+2491	We're going to have to have a president, however, that doesn't think that somehow the government investing in -- in car companies like Tesla and -- and Fisker, making electric battery cars.
+2492	The president said he would.
+2493	Then it went to the Russians and said, let's see if you can do something.
+2494	But -- but it'll -- it'll -- it'll be...
+2495	He wanted to take them into bankruptcy without providing them any way to stay open.
+2496	This is an idea that's been around a long time, which is saying, hey, let's see if we can't get competition into the Medicare world so that people can get the choice of different plans at lower cost, better quality.
+2497	I'm planning on (inaudible) to grow.
+2498	Why, when you said you'd filed legislation in your first year didn't you do it?
+2499	Now, it is absolutely true that we cannot just meet these challenges militarily.
+2500	The most important thing we can do is to make sure we control our own energy.
+2501	I agree: Education is key, particularly the future of our economy.
+2502	You found $4 trillion of ways to reduce or to get closer to a balanced budget, except we still show trillion-dollar deficits every year.
+2503	A number of them happened to be owned by people who were contributors to your campaigns.
+2504	You said, "Look, I'm going to extend the tax policies that we have now; I'm not going to raise taxes on anyone, because when the economy is growing slow like this, when we're in recession, you shouldn't raise taxes on anyone."
+2505	Let -- let -- let's...
+2506	That's been his philosophy in the private sector, that's been his philosophy as governor, that's been his philosophy as a presidential candidate.
+2507	He -- he doesn't answer that question.
+2508	I can't begin to pay back my student loans."
+2509	The day after the attack, governor, I stood in the Rose Garden and I told the American people in the world that we are going to find out exactly what happened.
+2510	This -- what we're seeing taking place in Syria is heartbreaking, and that's why we are going to do everything we can to make sure that we are helping the opposition.
+2511	Because we've got to make sure that our economy is strong at home so that we can project military power overseas.
+2512	I do, because I think that that is the kind of investment where the federal government can help.
+2513	We don't have to settle for unemployment at a chronically high level.
+2514	They look at our -- our decision to -- to cut back on our military capabilities.
+2515	Oh, I just thought about one.
+2516	And with regards to health care, you had remarkable details with regards to my pre-existing condition plan.
+2517	What I would not have had done was left 10,000 troops in Iraq that would tie us down.
+2518	At the same time, gasoline prices have doubled under the president.
+2519	And if Israel is attacked, America will stand with Israel.

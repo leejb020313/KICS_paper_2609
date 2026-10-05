@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1120	And I intend to win it as President of the United States.
+1121	I know what it takes to create good jobs again.
+1122	I believe, as the president indicated, and said at the time that I supported his -- his action there.
+1123	Any investments I have over the last eight years have been managed by a blind trust.
+1124	And I will not, under any circumstances increase taxes on the middle-class.
+1125	You know, there are some things where Governor Romney is different from George Bush.
+1126	Now, I'm concerned that the path that we're on has just been unsuccessful.
+1127	And then we're going to have to get to a balanced budget.
+1128	So four years ago I stood on a stage just like this one.
+1129	So what I've said is we need to fix a broken immigration system and I've done everything that I can on my own and sought cooperation from Congress to make sure that we fix the system.
+1130	So banks are reluctant to make loans, mortgages.
+1131	And that's what I've done administratively.
+1132	Let's get back to Medicare.
+1133	That was actually mine, actually, Mr. President.
+1134	And they're starting to finally make progress.
+1135	But we need to have leadership -- leadership in Washington that will actually bring people together and get the job done and could not care less if -- if it's a Republican or a Democrat.
+1136	You obviously studied up on -- on my plan.
+1137	That's not what I'm going to do.
+1138	I know why jobs come and why they go.
+1139	And what we've seen over the last four years is something I don't want to see over the next four years.
+1140	President Bush and I are -- are different people and these are different times and that's why my five point plan is so different than what he would have done.
+1141	And people who are going through them know that there's a job waiting for them if they complete it.
+1142	That's the wrong way to go.
+1143	Providing funding to universities and think tanks is great.
+1144	That means that in the middle of the next decade, any car you buy, you're going to end up going twice as far on a gallon of gas.
+1145	I -- I think the tension that existed between Israel and the United States was very unfortunate.
+1146	That's why on day one, i will label them a currency manipulator, which allows us to apply tariffs where they're taking jobs.
+1147	But next door, of course, we have Egypt.
+1148	But what we don't need is to have the president keeping us from taking advantage of oil, coal and gas.
+1149	In the -- in the last women have lost 580,000 jobs.
+1150	When you were asked about reduced class sizes, you said class sizes don't make a difference.
+1151	On Social Security he's not.
+1152	But what it does say is that "insurers, you've got to take everybody."
+1153	You also have investments through a Cayman's trust.
+1154	This was an attack by terrorists.
+1155	We ended the war in Iraq, refocused our attention on Afghanistan, and we did deliver a surge of troops.
+1156	So I want to get some relief to middle-income families.
+1157	I'd like to be that leader with your support.
+1158	I had the chance to be governor of a state.
+1159	And I'm going to work together with Congress to say, OK, what -- what are the various ways we could bring down deductions, for instance?

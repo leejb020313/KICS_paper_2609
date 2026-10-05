@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1520	But I also believe we need an agricultural policy which doesn't cost us 15 to 20 to 25 billion dollars a year that it's been costing us over the course of the past three or four years under this administration.
+1521	I think we need to invest and save more.
+1522	I'll never give a veto over American security to any other entity -- not a nation, not a country, not an institution.
+1523	It's time for government, industry, labor, manufacturing, agriculture, education, other entities in our society to cooperate.
+1524	We want to help pay for you to gain the skills necessary to fill the jobs of the 21st century.
+1525	Her tax plan is a disaster.
+1526	So here's what I've done since I've been president.
+1527	Our analysis indicates that something in the magnitude of about one hundred fifty to two hundred thousand jobs would uh - be made available.
+1528	Now look, he says Arkansas's a poor state.
+1529	And crippling sanctions are something I called for five years ago, when I was in Israel, speaking at the Herzliya Conference.
+1530	I'm here with a group of 13 people from around the country who helped me prepare.
+1531	But we know we've got lots of work to do.
+1532	But I salute him for his passion.
+1533	Well, where are the papers?
+1534	I am for reform in this area, for tough enforcement at the border, and for many other aspects of the Simpson-Mazzoli bill, but all my life I've fought for a fair nation.
+1535	We offered an amendment to do so.
+1536	I told people that it would be impossible to be fact-checking Donald all the time.
+1537	They now have a plan to cover everybody and their premiums are two-thirds of the rest of the country.
+1538	I believe very deeply that you have to be willing to stand up and fight no matter what powerful forces might be on the other side.
+1539	No, I don't happen to share that goal.
+1540	They are now raiding our troops in Afghanistan, destabilizing the situation.
+1541	What does this mean in real life?
+1542	Secondly, we need an active exploration program in America.
+1543	That was Senator McCain's judgment and it was the wrong judgment.
+1544	They have had their chance to get something done.
+1545	That's the kind of approach that is just not going to work.
+1546	They're building some of the biggest plants anywhere in the world, some of the most sophisticated, some of the best plants.
+1547	Their budget cut enforcement for the Environmental Protection Agency by a third.
+1548	And, you know, the Bush administration has come to recognize that it hasn't worked, this notion that we are simply silent when it comes to our enemies.
+1549	I'm also going to dramatically expand trade in Latin America.
+1550	My friends, we have gone to all four corners of the Earth and shed American blood in defense, usually, of somebody else's freedom and our own.
+1551	We have gone certainly the extra mile and then some in making offers to the Soviet Union on control of tests, on disarmament, and in every other way.
+1552	Now with respect to a couple of things Senator McCain said, the notion that I voted for a tax increase for people making $42,000 a year has been disputed by everybody who has looked at this claim that Senator McCain keeps on making.
+1553	And there are folks out there who've been struggling before this crisis took place.
+1554	If I make a mistake, I admit it.
+1555	Well, I'm a little confused here, because I don't see how you can grow the deficit down by raising people's taxes.
+1556	That is a fundamental difference that I have with Senator McCain.
+1557	And we're more respected because of the way we have conducted ourselves.
+1558	I have no idea what you're talking about.
+1559	I think it's really up to all of us to demonstrate who we are and who our country is, and to stand up and be very clear about what we expect from our next president, how we want to bring our country together, where we don't want to have the kind of pitting of people one against the other, where instead we celebrate our diversity, we lift people up, and we make our country even greater.

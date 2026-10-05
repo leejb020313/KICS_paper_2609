@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+320	His leading advisor on this plan actually said that would be okay, because then the Social Security Trust Fund could start borrowing.
+321	But I think it's worth it, Jim.
+322	We've increased Pell Grants by a million students.
+323	But now I think there have been a couple of instances where the Burger Court has made technical rulings where an obviously guilty person was later found to be guilty.
+324	So, we've got to move forward with those negotiations, get the level of strategic weapons down.
+325	The second topic, which is you said you get a deduction for taking a plant overseas.
+326	It's just not credible to say he's going to keep taxes down and balance budgets.
+327	I'm talking about our willingness to bear any burdens in order to maintain our own freedom and in order to meet our freedom around the globe.
+328	And the reason I say that is not in a braggadocios way.
+329	Well, I always have difficulty recognizing my positions when they're stated by the Vice President.
+330	If I can answer the question.
+331	You get to defer your taxes.
+332	When the businesses go bankrupt, I know them.
+333	... including $3 million for an overhead projector in a planetarium in his hometown.
+334	And, in this connection, I think that uh - we must look to the future having in mind the fact that we fight Communism at home not only by our laws to deal with Communists uh - the few who do become Communists and the few who do become tra- fellow travelers, but we also fight Communism at home by moving against those various injustices which exist in our society which the Communists feed upon.
+335	I raise the child-care credit by $1,000 for families to help them be able to take care of their kids.
+336	We will not be a great country unless we have a strong family unit in every home.
+337	I believe that if we ask those questions that bear on our future, not just congratulate ourselves but challenge us to solve those problems, you'll see that we need new leadership.
+338	Look, we're in an information age.
+339	I read a report, or a memo, from somebody in his 1988 campaign -- I forgot the fellow's name -- warning then Senator Gore to be careful about exaggerating claims.
+340	I think we need to put Medicare and Social Security in a lockbox.
+341	In the Africa south of the Sahara, which is the major new section, we have less students from all of Africa in that area studying under government auspices today than from the country of Thailand.
+342	There are 200,000 people in California, for example, who have lost their defense related jobs.
+343	But I'm running on the record of what we have asked for.
+344	If we got along well, that would be good.
+345	I am going to stand by and use the moral persuasion of the US to get satisfaction in terms of prison camps, and we're making some progress there, and in terms of getting humanitarian relief in there.
+346	You learn a lot from financial disclosure.
+347	It will probably have to be done by a commission.
+348	First of all, Governor Romney talks about small businesses.
+349	We've got to sit down together across the table.
+350	And we don't have enough troops there.
+351	Those are the people -- these are the greatest negotiators in the world.
+352	I just got today the, as you know, the endorsement of the Fraternal Order of Police, we just -- just came in.
+353	I don't have any speechwriters.
+354	I am proud to have been part of an administration that past the first catastrophic health bill.
+355	I'm appalled at the highest outrageous numbers of divorces -- it happens in families, it's happened in ours.
+356	Lester, one thing I'd like to say.
+357	Now that's estimated to create 800,000 jobs, the problem is they won't be here, they'll be in places like China.
+358	He's going to probably go to jail.
+359	Understand themselves as Americans in every way except having papers.

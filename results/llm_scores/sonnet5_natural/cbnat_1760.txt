@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1760	Part of it is seeing if we can get automatic weapons that kill folks in amazing numbers out of the hands of criminals and the mentally ill.
+1761	And now you've got a choice.
+1762	So at the same time that my tax plan has already lowered taxes for 98 percent of families, I also lowered taxes for small businesses 18 times.
+1763	It wasn't just that this was the biggest driver of our federal deficit, our overall health care costs, but it was families who were worried about going bankrupt if they got sick, millions of families, all across the country.
+1764	I look around the world, I don't see our influence growing around the world.
+1765	His words amount to genocide incitation.
+1766	So it's pretty clear who doesn't want a trade war.
+1767	But I also believe that everybody should have a fair shot and everybody should do their fair share and everybody should play by the same rules, because that's how our economy's grown.
+1768	I've got a policy for the future and agenda for the future.
+1769	I get the last word (inaudible) I hope.
+1770	And we should make sure that we give them a pathway to citizenship.
+1771	Barry, I think a lot of this campaign, maybe over the last four years, has been devoted to this nation that I think government creates jobs, that that somehow is the answer.
+1772	I understand how hard it is to start a small business.
+1773	Making sure that we've got the best education system in the world, including retraining our workers for the jobs of tomorrow.
+1774	And likewise, a study by McKinsey and Company of American businesses said 30 percent of them are anticipating dropping people from coverage.
+1775	But when it comes to our national security, I mean what I say.
+1776	We said you've got -- banks, you've got to raise your capital requirements.
+1777	Now, does anybody think that ExxonMobil needs some extra money, when they're making money every time you go to the pump?
+1778	I -- I think interesting the president just said something which -- which is that on the day after the attack he went into the Rose Garden and said that this was an act of terror.
+1779	This is the biggest kiss that's been given to -- to New York banks I've ever seen.
+1780	We have an opportunity to have real leadership.
+1781	Make sure your kids can go to college.
+1782	Sorry, but that's just not -- that's just not the facts.
+1783	Unfortunately, the economy is not stronger.
+1784	What I was saying is, we're not going to round up 12 million people, undocumented illegals, and take them out of the nation.
+1785	And it's widely reported that drones are being used in drone strikes, and I support that and entirely, and feel the president was right to up the usage of that technology, and believe that we should continue to use it, to continue to go after the people that represent a threat to this nation and to our friends.
+1786	And I -- and to do that, that also means I cannot reduce the burden paid by high-income Americans.
+1787	And I will not cut our military budget by a trillion dollars, which is a combination of the budget cuts the president has, as well as the sequestration cuts.
+1788	But your rate comes down and the burden also comes down on you for one more reason, and that is every middle-income taxpayer no longer will pay any tax on interest, dividends or capital gains.
+1789	But I'll respond to a couple of things that you mentioned.
+1790	I thought there should have been more troops, but you know what?
+1791	We've brought twice as many cases against unfair trading practices than the previous administration and we've won every single one that's been decided.
+1792	When he took office, 32 million people were on food stamps.
+1793	Well, thank you very much, Bob, Governor Romney, and to Lynn University.
+1794	We've also got to look to the future.
+1795	He also wants to continue the Bush tax cuts for the wealthiest Americans.
+1796	You mentioned the Navy, for example, and that we have fewer ships than we did in 1916.
+1797	Governor Romney has a perspective that says if we cut taxes, skewed towards the wealthy, and roll back regulations, that we'll be better off.
+1798	So, I don't think vouchers are the right way to go.
+1799	Every school district, every state should make that decision on their own.

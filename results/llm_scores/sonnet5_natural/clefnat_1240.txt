@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1240	You don't see Margaret Tutwiler sitting in there with me today.
+1241	In fact, we put together a $5.6 trillion surplus in the '90s that was for the purpose of saving Social Security.
+1242	Is it easier for you to go and buy things in the stores than it was four years ago?
+1243	Well, Mr. Carter has uh indicated that uh - he would give a blanket pardon to all uh - draft evaders.
+1244	And the "Los Angeles Times" spent a lot of ink going into that.
+1245	Jim, you permitted Mr. Bush to break the rules, he said, to defend the honor of the country.
+1246	Now, as far as my position then is concerned, it is exactly opposite to the Senator's.
+1247	And, you know, I appreciate and it appears we've got some agreement that a marketplace to work has to have some regulation.
+1248	I believe that the opposite is true with President Ford's campaign, and uh - I hope that we can leave those issues in this next ten days about personalities and mistakes of the past - we've both made some mistakes - and talk about unemployment, inflation, housing, education, taxation, government organization, stripping away of secrecy, and the things that are crucial to the American people.
+1249	It would be the highest honor for me to have your support on November second and for you to say, "Jerry Ford, you've done a good job, keep on doing it."
+1250	Well, again, while you were on the board of the Woods Foundation, you and Mr. Ayers, together, you sent $230,000 to ACORN.
+1251	And a recent book that just came out by perhaps the Nation's most respected author in this field, Strobe Talbott, called "Deadly Gambits,'' concludes that this President has failed to master the essential details needed to command and lead us, both in terms of security and terms of arms control.
+1252	I was honored to be there.
+1253	I have seen what's happened in this last 4 years when -- in my state, when people lose their jobs there's a good chance I'll know them by their names.
+1254	Now, you cite a study.
+1255	You said that they could get it in the private marketplace.
+1256	Doesn't make me popular with the teachers union.
+1257	They've had a chance to form consensus.
+1258	We have 100,000 to 200,000 embryos that are frozen in nitrogen today from fertility clinics.
+1259	The Taliban came back in, Al Qaida, we then had the situation that required us to conduct the Afghan war.
+1260	As a matter of fact your question brings out a point that I am very glad to make.
+1261	Premiums have gotten too high.
+1262	... in order to give -- in order to give additional tax cuts to Joe the plumber before he was at the point where he could make $250,000.
+1263	Again, well it's, you are very selective, Mr. President.
+1264	It's the route for them to arm Hezbollah in Lebanon, which threatens, of course, our ally, Israel.
+1265	That turned out to be wrong.
+1266	this year, a year of recovery, we find that it's six and nine-tenths per cent and one of the highest in the world today.
+1267	What's he say to Tony Blair?
+1268	I can't give you a specific answer on Pension Guarantee Fund.
+1269	Well, it would be if they're given special protective status.
+1270	And why do I want to bring rates down, and at the same time lower exemptions and deductions, particularly for people at the high end?
+1271	We've got an aggressive brown field program to refurbish inner-city sore spots to useful pieces of property.
+1272	No, the argument is that we have to take the guns away from these people that have them and they are bad people that shouldn't have them.
+1273	I don't just talk about it.
+1274	If we're lucky and we do it right, that could potentially happen but in the short term there's an outlay and we may not see that money for a while.
+1275	I've been the governor of a big state.
+1276	I think the support prices are tied to the average market price of the last three years, which was Mr. Benson's theory.
+1277	I'd like to ask the American people what, what's been accomplished.
+1278	Because of the uh - great -ly- greatly uh - advantaged uh - tho- per - persons who live in the suburbs, better education, better organization, more articulate, more aware of what the laws are, quite often this money has been channeled out of the downtown centers where it's needed.
+1279	The killer -- the mastermind of the September 11th attacks, Khalid Sheik Mohammed, is in prison.

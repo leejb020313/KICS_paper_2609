@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1640	I don't ever want to see another generation of young Americans bleed their lives into sandy beachheads in the Pacific, or rice paddies and jungles in the in Asia or the muddy battlefields of Europe.
+1641	I would support an effort to ban corporate soft money and labor union soft money so long as there was dues check-off.
+1642	Let me just make it clear: I will never allow any country to have a veto over our security.
+1643	We've signed up over 110,000 children to the CHIPS program.
+1644	Gene, there is a problem in the sense that there are some problem banks, and on December 19th new regulations will go into effect which will in effect give the government the responsibility to close some banks that are not technically insolvent but that are plainly in trouble.
+1645	And it's a big fight.
+1646	I think it's not just an economic issue, I think it's a moral issue.
+1647	That's why I support a teacher liability act at the federal level, that says if a teacher or principal upholds reasonable standards of classroom discipline they can't be sued.
+1648	Now I don't know what Senator Kennedy suggests when he says that we should help those who oppose the Castro regime, both in Cuba and without.
+1649	So he goes around with crocodile tears about how terrible it is, but he has given jobs to Chinese steelworkers, not American steelworkers.
+1650	He said nice things about me.
+1651	We are cutting off the significant items that the Cuban regime needs in order to survive.
+1652	I think we can do better if we have the courage to change.
+1653	And the budget plan that I've put out, according to the "Los Angeles Times" again, the way these things are typically measured as a percentage of the GDP, will bring government spending down to the lowest level in 50 years.
+1654	I used to consult to businesses -- excuse me, to hospitals and to health care providers.
+1655	She's a fantastic lady I met in Charlotte, North Carolina.
+1656	To the best of my knowledge he's never once suggested that a session of the Senate begin with the Pledge of Allegiance.
+1657	Instead let people make their own choice.
+1658	We've gotten the Americans for Disabilities Act, which I think is one of the foremost pieces of civil rights legislation.
+1659	And that law has died in committee also because of the same kind of opposition.
+1660	Now let's keep going by finishing the work of putting the police on the street and tackling juvenile gangs.
+1661	I think the record should show, Mr. Newman, that uh - the Bureau of Census - we checked it just yesterday - indicates that uh - in the four years that uh - Governor Carter was governor of the state of Georgia, uh - expenditures by the government went up over 50 percent Uh - employees of the government in Georgia during his term of office went up over 25 percent; and the figures also show that the uh, uh - bonded indebtedness of the state of Georgia during his governorship went up over 20 percent.
+1662	As far as the cyber, I agree to parts of what Secretary Clinton said.
+1663	They have done a good job in integrating the money supply with the uh - fiscal policy of the uh - executive and legislative branches of the government.
+1664	Saddam Hussein is probably better off than he was four years ago.
+1665	I just don't believe that's the answer.
+1666	Well, one thing I did was oppose the government takeover health care that President Clinton offered in 1993, which created 17 new taxes and 50 new bureaucracies and price controls, because we were afraid the very thing you mentioned would have happened.
+1667	And we have fought back for four years to get out of that mess.
+1668	I notice particularly that he didn't endorse the Humphrey-Hawkins bill which he has on occasions and which is included as a part of the Democratic platform.
+1669	Now, here's what that means.
+1670	And I think right now we got to go back.
+1671	My dad was born in Mexico of American parents; Ann's dad was born in Wales and is a first-generation American.
+1672	We uh - streamlined the structure of the court, put in administrative officers, put a unified court system in, required that all uh - severe sentences be reviewed far uniformity.
+1673	They're not correct and if you look at my life, until I got involved in this effort, I was one person.
+1674	The truth is what good policy is based on.
+1675	(Laughter, boos) That's my five seconds.
+1676	So I have very clear views about what I want to see to kind of change the balance on the Supreme Court.
+1677	Medicare, I know you talked about it, but Medicare is relevant for all of us, young and old alike.
+1678	So this is a serious threat.
+1679	This one must be stepped up.

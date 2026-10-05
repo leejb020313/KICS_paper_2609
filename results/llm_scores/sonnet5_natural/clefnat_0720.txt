@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	We expect to have a lower deficit in fiscal year 1978.
+721	We've lost 357,000 manufacturing jobs.
+722	That is one of the major challenges and major undertakings that I will assume as the next president.
+723	If we turn to Helsinki - I'm glad you raised it, Mr. uh - Frankel.
+724	You've said the same thing, you're going to simplify the tax code, broaden the base.
+725	I've said to the extent we spend federal money on disadvantaged children, we want the schools to show us whether or not the children are learning.
+726	Well, actually it's -- it's -- it's a lengthy description.
+727	My philosophy on taxes has been simple.
+728	I believe we must meet our commitment to uh - Formosa.
+729	Nobody talked about attacking Pakistan.
+730	I get audited almost every year.
+731	Mr. President, have you looked at your pension?
+732	I think our relationships with China are important and I don't want to isolate China, but I think it is a mistake for us to do what this Administration did when all those kids went out there carrying the Statue of Liberty in Tiananmen Square.
+733	And thanks to the people of San Diego for giving us this opportunity to have another discussion about the decision we all face in front of people who will make the decision.
+734	Spending research and development money so that we can use our technological base to figure out new uses for farm products.
+735	You've got to have the best intelligence in the world.
+736	Other members on that board were the presidents of the University of Illinois, the president of Northwestern University, who happens to be a Republican, the president of The Chicago Tribune, a Republican- leaning newspaper.
+737	I've seen the tough times, I know they can be better and I'll lead America to a brighter future.
+738	And so I think this is an issue.
+739	I think the record shows otherwise.
+740	We met the goals this year, but in the previous years we have not met recruiting goals.
+741	I've done the same thing in the appointment of women, and also Spanish-speaking Americans.
+742	We're going to tax -- cut taxes and balance the budget.
+743	But don't just sit here slow dancing for 4 years doing nothing.
+744	We tried this with Hitler.
+745	We've got five-hundred thousand more Americans unemployed today than we had three months ago.
+746	And there were many people, like myself, who opposed quotas, who felt there were places where it was overreaching.
+747	That's why I want a tax cut for education and child rearing, but it's got to be paid for.
+748	Well, I wondered, when Governor Clinton was talking to the auto workers, whether he talked about his and Senator Gore's favoring CAFE standards, fuel efficiency standards, of 40 miles per gallon.
+749	And the United States needs help from other countries.
+750	It means addressing the problems of injustice and inequity, along the lines of race and ethnicity here at home, because in all these other places around the world where they're having these terrible problems, when they feel hope, it is often because they see in us a reflection of their potential.
+751	That wasn't best for me and I knew it in the very beginning.
+752	I will not let that happen.
+753	So the Ford administration has done a good job in helping our good ally, Israel, and we're dedicated to the survival and security of Israel.
+754	He talked about the unemployed.
+755	But here's what I said.
+756	Under Vice President Gore's plan, he is going to grow the federal government in the largest increase since Lyndon Baines Johnson in 1965.
+757	We have to tell the truth.
+758	They'll have more than Great Britain sometime in the -- in the relatively near future.
+759	The biggest one, a multinational one known as CAFTA, I voted against.

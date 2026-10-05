@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1720	I'd be happy to have you take a look.
+1721	The first thing we did was to streamline the legal immigration system, to reduce the backlog, make it easier, simpler and cheaper for people who are waiting in line, obeying the law to make sure that they can come here and contribute to our country and that's good for our economic growth.
+1722	So, what -- what we need to do with respect to the Middle East is strong, steady leadership, not wrong and reckless leadership that is all over the map.
+1723	So for me, I look at this as both a need to help move Pakistan in the right direction, and also to get Afghanistan to be ready, and they will be ready by the end of 2014.
+1724	And the fact of the matter is that, when Obamacare is fully implemented, we're going to be in a position to show that costs are going down.
+1725	And one of the things I suspect Governor Romney and I probably agree on is getting businesses to work with community colleges so that they're setting up their training programs...
+1726	High-income people are doing just fine in this economy.
+1727	Think of this as their country.
+1728	We do have to lower the cost of health care, not just in Medicare and Medicaid... 
+1729	If the president were to be reelected you're going to see a $716 billion cut to Medicare.
+1730	And that is, in fact, I was wrong when I said the president isn't proposing any changes for current retirees.
+1731	I'd like to understand who it was that did this, what the idea was behind it, why it led to the violence, thousands of guns going to Mexican drug lords.
+1732	One thing I think Americans should be proud of, when Tunisians began to protest, this nation -- me, my administration -- stood with them earlier than just about any country.
+1733	And then the president began what I have called an apology tour, of going to various nations in the Middle East and criticizing America.
+1734	And, unfortunately, when -- when -- when you look at Obamacare, the Congressional Budget Office has said it will cost $2,500 a year more than traditional insurance.
+1735	Crack down on China, if and when they cheat.
+1736	We have to stand for our principles, stand for our allies, stand for a strong military and stand for a stronger economy.
+1737	I have no idea what you're talking about.
+1738	I want to keep their taxes down on small business.
+1739	What things would I cut from spending?
+1740	You're going to be paying for it.
+1741	And everybody's getting a fair share -- everybody's doing a fair share, and everybody's playing by the same rules.
+1742	Number two is for people coming along that are young, what I do to make sure that we can keep Medicare in place for them is to allow them either to choose the current Medicare program or a private plan.
+1743	So any -- any language to the contrary is simply not accurate.
+1744	Well a lot of it came from the Bakken Range in North Dakota.
+1745	And the primary beneficiary of that repeal are insurance companies that are estimated to gain billions of dollars back when they aren't making seniors any healthier.
+1746	And that's why independent studies looking at this said the only way to meet Governor Romney's pledge of not reducing the deficit or -- or -- or not adding to the deficit is by burdening middle-class families.
+1747	That's how we repealed "don't ask/don't tell."
+1748	When we went in to Libya, and we were able to immediately stop the massacre there, because of the unique circumstances and the coalition that we had helped to organize.
+1749	The middle-income families in America have been crushed over the last four years.
+1750	And a year later, 9/11 happened.
+1751	We have these things called aircraft carriers, where planes land on them.
+1752	We cannot afford to have a nuclear arms race in the most volatile region of the world.
+1753	I think from the very beginning, one of the challenges we've had with Iran is that they have looked at this administration, and felt that the administration was not as strong as it needed to be.
+1754	Our military is second to none in the world.
+1755	And it wasn't very detailed.
+1756	I said we'd refocus attention on those who actually attacked us on 9/11, and we have gone after Al Qaeda's leadership like never before and Osama bin Laden is dead.
+1757	I would have put them in place earlier.
+1758	They have to abide by their treaty with Israel.
+1759	This used to be a bipartisan issue.

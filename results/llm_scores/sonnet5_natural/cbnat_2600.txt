@@ -1,0 +1,35 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+2600	So when you bring those rates down, those small businesses are able to keep more money and hire more people.
+2601	And we put a stop to it and as a consequence saved jobs throughout America.
+2602	I do want to make sure that...
+2603	But we're going to have to work with the -- with the people in Pakistan to try and help them move to a more responsible course than the one that they're on.
+2604	You've said the same thing, you're going to simplify the tax code, broaden the base.
+2605	The rate of regulations quadrupled under this president.
+2606	I was in a state where my legislature was 87 percent Democrat.
+2607	You say that you're going to pay for it by closing loopholes and deductions, without naming what those loopholes and deductions are.
+2608	I said that the E-Verify portion of the Arizona law, which is -- which is the portion of the law which says that employers could be able to determine whether someone is here illegally or not illegally, that that was a model for the nation.
+2609	I'm glad you raised that, and it's a -- it's a critical issue.
+2610	But when he's asked, how are you going to do it, which deductions, which loopholes are you going to close?
+2611	Look, I've been in business for 25 years.
+2612	It is something that Congress has proposed.
+2613	And he said that the reason he changed his mind was, in part, because he was seeking the endorsement of the National Rifle Association.
+2614	And the proof is our oil imports are down to the lowest levels in 20 years.
+2615	Those things will get us the energy we need.
+2616	My chief of staff, for instance, had two kids that were still in school.
+2617	Mr. President, Mr. President, you're entitled as the president to your own airplane and to your own house, but not to your own facts.

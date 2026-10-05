@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1160	We have to be tough on the Soviet Union, but I think the American people -- --
+1161	We've got battling green eye shades.
+1162	And I believe that if we can tap the tremendous untapped reservoir of innate strength in this country, that we can once again have a government as good as our people, and let the world know what we still know and hope for - that we still live in the greatest and the strongest and the best country on earth.
+1163	So we have to have, in my judgment, a drastic simplification of the basic health insurance policies of this country, be very comprehensive for everybody.
+1164	But what the American people understand is that I look at what we need to get done to keep the American people safe and to move our interests forward, and I make those decisions.
+1165	But here's something that we can take great pride in because it really does get to what you're talking about.
+1166	And I've had to deal with those crises as best I could.
+1167	Every school and every school district, have every state test the children.
+1168	There's lots we can do in the Pentagon where dishonest contractors have been lining their pockets at the expense of the American taxpayer.
+1169	And then if a little of it comes my way, they load it up with Christmas trees and tax increases, and I have to stand up and favor the taxpayer.
+1170	He should have produced it a long time before.
+1171	Let us move now to the future.
+1172	We need to get rid of that provision because it's killing regional and small banks.
+1173	In terms of this one on taxes spells out the biggest difference between us.
+1174	And my whole concept was to make America great again.
+1175	And in the middle of the discussion, to tell them about the missiles in Cuba, he said, "Here, let me show you the photos."
+1176	I think it cannot work, won't work, and will lead to all kinds of cynical evasions of the law.
+1177	My opponent thinks the government -- the surplus is the government's money.
+1178	The quality of the air's cleaner since I've been the president.
+1179	For one thing, let me just follow up here.
+1180	We announce we're going after Mosul.
+1181	Today, according to Prime Minister Rabin, the Soviet Union is weaker in the Middle East than they have been in many, many years.
+1182	If you've been on television about it, you think you did it.
+1183	So I think our selection uh - of Bob Dole as vice president uh - is based on merit.
+1184	I think I did the right thing.
+1185	I'm a father of sons; I have a grandson.
+1186	Now it seems to me that uh - as we look at the recommendations of the budget committees and our own projections, there isn't going to be any $60 billion dividend.
+1187	I have recommended to the Congress that we develop the uranium enrichment plant at Portsmouth, Ohio, which is a publicly owned - U.S. government facility and have indicated that the private program which would follow on in Alabama is one that may or may not uhh - be constructed.
+1188	That was the second time.
+1189	And I thank you, and I thank you, my friend.
+1190	And so people are going to have to look at the record.
+1191	The point is, the big winner is going to be Iran.
+1192	We can't have the industries of tomorrow unless we have the best educated workforce.
+1193	When he said, "We're going to repeal Obamacare.
+1194	All of those things will make a difference, so the point is the commitments I've made, I've kept.
+1195	You don't negotiate with Mr. Brezhnev from weakness.
+1196	And we almost had it done.
+1197	But I've always said trickle-down government is bad.
+1198	I just thought when I came into office it was time that there was some realistic talk to and about the Soviet Union.
+1199	Iran continued to sell oil to the United States.

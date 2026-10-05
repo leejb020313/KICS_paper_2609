@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+800	But to the extent that we continue to use atomic power, I would be responsible as president to make sure that the safety precautions were initiated and maintained.
+801	We've got a program called Race to the Top that has prompted reforms in 46 states around the country, raising standards, improving how we train teachers.
+802	He said he's for -- you're now for capping punitive damages?
+803	Let me just tell you...
+804	It's been a time, therefore, of illusion and false hopes, and the longer it continues, the more dangerous it becomes.
+805	That's going to help Jeremy get a job.
+806	And I really want to just talk about something slightly different.
+807	Just -- would you like to hear...
+808	And now we're going back to budgeting for additional lands for our parks.
+809	So now there are five voices speaking to Kim Jong Il, not just one.
+810	Now, there are terrorists trying to get their hands on that stuff today.
+811	I've touched more people's lives and seen more heartbreak and hope, more pain and more promise, than anybody else who's run for president this year.
+812	Now, accountability, we basically agree on accountability.
+813	This uh - talking about more people at work - uh is distorted because with a 14 percent increase in the cost of living in the last uh - two years, it means that - that women and young people have had to go to work when they didn't want to because their fathers didn't make enough to pay the increased cost of uh - food and uh housing and clothing.
+814	They don't want to see the world break out into -- into various forms of chaos, because they have to -- they have to manufacture goods and put people to work and they have about 20,000 -- 20 million, rather, people coming out of the farms every year coming into the cities, needing jobs.
+815	I can't protect an Arkansas company, you notice there, Governor.
+816	That wasn't proven when Ronald Reagan said we would do SDI, which is missile defense.
+817	I have seen four wars in my lifetime.
+818	Now, I could probably give you some other examples of decisions over the last 24 years.
+819	In the first century of our nation's history our forefathers gave us the finest form of government in the history of mankind.
+820	So we're making dramatic progress.
+821	Senator Dole remembers well that we actually offered not to even put in a healthcare bill in 1994, uh '93, but instead to work with the Senate Republicans and write a joint bill.
+822	By the way, when I'm subcommittee chairman, we take up the issues under my subcommittee.
+823	Now, I believe, also, that this meeting this mission, this responsibility for preserving the peace, which I believe is a responsibility peculiar to our country, and that we cannot shirk our responsibility as a leader of the free world because we're the only ones that can do it.
+824	This president rushed to war, pushed our allies aside.
+825	Take a look at Iraq.
+826	And I think Ross Perot has done a good job in having them.
+827	Now he did use uh - ill-advised words, but I think in the fact that he apologized, that he was reprimanded, uh - does permit him to stay on and continue that kind of leadership that's we so badly need as we enter into uh - negotiations uh - under the SALT II agreement, or if we have operations that might be developing uh in the Middle East or southern Africa, in the Pacific, uh - we need a man with that experience, that knowledge, that know-how, and I think, in light of the fact that he has uh - apologized, uh - would not have justified my asking for his resignation.
+828	We didn't recognize them for two months; the American Ambassador didn't show up for nearly eight months.
+829	Now, look, Americans are hurting tonight and they're angry and I understand that, and they want a new direction.
+830	He voted against it and, obviously, we had to take Saddam Hussein out of Kuwait or it would've threatened the Middle Eastern world supply.
+831	And three of those checks were my grandparents'.
+832	I want to remind people listening tonight that a plan is not a litany of complaints, and a plan is not to lay out programs that you can't pay for.
+833	Jim, we have a direct disagreement on this.
+834	I'd make sure that Ahmadinejad is indicted under the Genocide Convention.
+835	We're talking about six percentage points over six years, and with that money you give it back to the working people.
+836	The bottom line on nuclear weapons is that when the president gives the order, it must be followed.
+837	I don't think that even if that effort fails that it will be necessary to carry on tests in the atmosphere which pollute the atmosphere.
+838	So mandatory conservation measures - yes.
+839	And our team of -- our country's team over there did a great job.

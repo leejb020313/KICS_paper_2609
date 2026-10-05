@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	And therefore, I have been in favor of a separate minimum for them.
+881	We've got thousands and thousands of homes owned by government boarded up, being vandalized, that have been taken in mortgage foreclosures.
+882	We've had record numbers of new small businesses and 10 and a half million jobs.
+883	You don't get a hand gun, you don't get a rifle, you don't get a shot gun, you get zippo.
+884	And I think that's a mistake.
+885	... million new jobs, a balanced budget...
+886	We can invite all the candidates.
+887	One of the things we've done is we've taken the -- we're beginning to transform our military.
+888	That's the importance of party; only if it tells something about the record.
+889	You have -- wait a minute.
+890	One of my promises is going to be Social Security reform, and you bet, we need to take a trillion dollars out of that $2.4 trillion surplus.
+891	I think it's accurate to say that Mr. Ford voted against the uh - Voting Rights Acts and the uh - Civil Rights Acts in their uh - debative stage I think once it was assured they were going to pass he finally voted for it.
+892	But I do not expect it to come.
+893	Number two, that strip-mining bill would've severely set back our need for more coal, and Governor Carter has said repeatedly that coal is the resource that we need to use more in the effort to become independent of the uh - Arab oil supply.
+894	I'm not aware of any program -- well, I'll just leave it at that.
+895	We've been uh - having a very clear decision in the last eight years.
+896	They were at 21.5% under Jimmy Carter, and inflation was 15.
+897	But 2 former defense secretaries recently issued a report saying that 100,000 or slightly fewer troops would be enough, including President Reagan's former defense secretary, Mr. Carlucci.
+898	It's very simple for him to clear it up.
+899	We will not have open borders.
+900	And he will not advise me in the White House.
+901	Could be wrong, but I think so.
+902	I know the morality that's prompting that question, and I respect it enormously.
+903	If he unbalances the budget, that means you have inflation, and that will be, of course, a very cruel blow to the very people - the older people - that we've been talking about.
+904	I completely respect their views.
+905	I said that wasn't the right thing to do.
+906	And number three, we need to be a force for freedom and democracy and we need to use our unique position to support freedom, whether it's in Haiti or in China or in any other place, wherever the seeds of freedom are sprouting.
+907	Number four, if you're under 26, and your parents have a policy, you can be on that policy until the age of 26, something that didn't happen before.
+908	The African-American community -- because -- look, the community within the inner cities has been so badly treated.
+909	Although they have been moving faster in growth than we have, we find, for example, today that their total gross national product is only forty-four per cent of our total gross national product.
+910	And she was in the hospital, and I went in to talk to her and tell her what I was thinking of doing.
+911	So it's the obligation of the president to do just that, and I intend to do so.
+912	So we have taken the home page of my website, HillaryClinton.com, and we've turned it into a fact-checker.
+913	Now, I've identified areas where we can, right away, make a change that I believe would actually help the economy.
+914	And this is a gift to ISIS and the terrorists, violent jihadist terrorists.
+915	I'd never get to talk about anything I want to do and how we're going to really make lives better for people.
+916	I hear this talk about a blank check.
+917	It's a great thing for the middle class.
+918	I don't think he'll be reelected because trickle down economics is a failure and he's offering more of it, and what he's saying about my program is just not true.
+919	We then organized the strongest coalition and the strongest sanctions against Iran in history, and it is crippling their economy.

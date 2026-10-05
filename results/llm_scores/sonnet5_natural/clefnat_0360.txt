@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+360	Why didn't you change it when you were a senator?
+361	It's how we got the sanctions on Iran that put a lid on the Iranian nuclear program without firing a single shot.
+362	But we have no leadership.
+363	Mr. Mondale, could I ask you to address the question of nuclear strategy then?
+364	When it comes to the wall that Donald talks about building, he went to Mexico, he had a meeting with the Mexican president.
+365	And the last thing I wanna make is this.
+366	We need to demand on results.
+367	The whole thing was a fraud, and it doesn't work.
+368	We took the Senate report, of course.
+369	But he's in the arena.
+370	We would have to stretch out our aircraft procurement, we would have to reduce our naval construction program, we would have to reduce the uh - research and development for the Army, the Navy, the Air Force and Marines by 8 percent.
+371	If you've got an employer-based health care plan, you keep it.
+372	He is right that I'm not in favor of energy taxes.
+373	So it's adding to cost.
+374	We, of course, don't want to have automatic weapons, and that's already illegal in this country to have automatic weapons.
+375	We arm to parley, Winston Churchill said ten years ago.
+376	I don't want to kill jobs in this environment.
+377	But I think strength must also require wisdom and smarts in its exercise.
+378	That's why -- to go back to your question -- I want to send a message -- we all should -- to every boy and girl and, indeed, to the entire world that America already is great, but we are great because we are good, and we will respect one another, and we will work with one another, and we will celebrate our diversity.
+379	And, like Franklin Roosevelt, I don't care whether an idea is a Republican idea or a Democrat idea.
+380	And all you have to do is go to a great place like West Virginia or places like Ohio, which is phenomenal, or places like Pennsylvania and you see what they're doing to the people, miners and others in the energy business.
+381	Now we've got three of them.
+382	Eh- He was talking about the Castro regime and what we had been eh- doing in Latin America.
+383	And let's give him the credit he deserves for organizing Operation Desert Storm and Desert Shield.
+384	I think they noticed that as well.
+385	... and a great first lady.
+386	It's ruining us in trade.
+387	You can be on welfare.
+388	I think, unfortunately, too many of us in our great country jump to conclusions about each other.
+389	I think there are still lot of problems in Bosnia.
+390	Too many people have been left behind.
+391	Renee Proval (ph) is probably better off than he was four years ago.
+392	That happened long before I arrived in Washington, D.C.
+393	Now, as long as we put up with that, that's what you're going to get.
+394	That's why I'm for Stealth technology, to build a Stealth bomber -- which I've supported for years -- that can penetrate the Soviet air defense system without any hope that they can perceive where it is because their radar system is frustrated.
+395	and that's simply why I proposed, 15 months ago, the emergency excise tax on gasoline that I did.
+396	Let's not raise anybody's taxes.
+397	I think that's a mistake.
+398	Well, I'll tell you exactly why not, but I first want to say something about those sanctions on Iran.
+399	And if we do, you don't have to bother asking your question, because we have a tremendous machine.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+600	One is we've got to have the money to be able to pay for defense, and we've got to manufacture here.
+601	That meant immediately 46% of your people that were signing up had no reason for signing up.
+602	Well of course they add up.
+603	I can remember the fires that swept Parker County, Texas.
+604	I favor higher salaries for teachers.
+605	Now, I know millions of you still have anxieties.
+606	They ought to have their voices heard, but they shouldn't have a big megaphone that drowns out the American people.
+607	But again, the test or the difference between us, the president has had four years to try to do something about it, and North Korea has got more weapons; Iran is moving towards weapons.
+608	The chairman of the Federal Reserve Board should be independent.
+609	Maybe that's part of the answer.
+610	Secretary, is it President Obama's fault?
+611	I know what it's like to see somebody you love nearly lose their lives, and I hate drugs, Senator.
+612	He's broken it three times in the past year already.
+613	Right now, that's not the case in a lot of our neighborhoods.
+614	I'll tell you another way to help protect America in the long run is to continue with missile defenses.
+615	While we were still dealing with our diplomats being threatened, Governor Romney put out a press release, trying to make political points, and that's not how a commander in chief operates.
+616	I'm not sure where he's coming from.
+617	This is the problem I have with the big spending liberals.
+618	I haven't given lots of thought to NATO.
+619	And we got weapons of mass destruction crossing the border every single day, and they're blowing people up.
+620	We are mobilizing humanitarian support, and support for the opposition.
+621	I can't let the man continue with fuzzy math.
+622	We can put the Communists on the defensive.
+623	I was opposing one piece of legislation versus another.
+624	And it's just a fact that if you're a young African-American man and you do the same thing as a young white man, you are more likely to be arrested, charged, convicted, and incarcerated.
+625	And there's one going on right now, which we don't know about it.
+626	Those are two hypo-rhetorical questions.
+627	Anybody who says America's been standing still for the last seven and a half years hasn't been traveling around America.
+628	If you look at Bill Clinton, far worse.
+629	Now there are other places where the executive can lead, but let me just sum up by saying this: why do I talk every time I'm in the South on civil rights?
+630	Liberal, conservative, you put whatever label you want on it.
+631	Which would be uh - to continue the progress that has been made under the last two uh - courts - the Warren Court and the Burger Court.
+632	And we have to work more closely with our partners and allies on the ground.
+633	I was over running records in west Texas, and I got a call from her, come home; went to the doctor; the doctor said, beautiful child, your child has a few weeks to live.
+634	I think price controls would hurt our ability to continue important research and development.
+635	People are coming into our country like we have no idea who they are, where they are from, what their feelings about our country is, and she wants 550 percent more.
+636	And I introduced the first legislation, and we forced votes on it.
+637	Let me say in my case, if I'm out of work, I'll cut grass tomorrow to take care of my family; I'll be happy to make shoes, I'll be happy to make clothing, I'll make sausage.
+638	I don't have a dog in this fight, but I'd like to get in on this.
+639	But there are two main focal points of this election.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1200	And he just called for new elections.
+1201	And obviously we hope that diplomacy works before you ever use force.
+1202	Margaret, I'm not sure I can get all of this in in one minute.
+1203	There is no doubt that we have seen in recent years - in recent months - additional acts of violence against Jews in France and, of course, against those who live in Israel, by the PLO and other terrorist organizations.
+1204	That's the highest we've ever been in our country.
+1205	We should sustain uh - the Department of Justice in its efforts and the F.B.I., and we should be continually alert.
+1206	And I'm, you know -- there would be special rights for different groups in America.
+1207	That's called business, by the way.
+1208	I want to have a surcharge on incomes above $5 million.
+1209	Now he can't have it both ways.
+1210	Just today, policemen was shot, two killed.
+1211	They don't want this arms race.
+1212	No one is suggesting that.
+1213	In my speech last night I indicated that I thought that Cuba one day again would be free.
+1214	And we're of course going to have to consider the costs.
+1215	That's a decision that only a woman can make, after consulting her conscience and consulting her religious principles.
+1216	Seven administrations were dealing with Mr. Noriega.
+1217	And until we can begin to recreate the basic infrastructure of the great cities of America, particularly in the upper Midwest and in the Northeast, they simply are not going to provide the kind of economic climate that will enable them to retain industry, enable them to retain the kind of solid industrial base that they need, so that they can provide jobs.
+1218	And what that means, then, is that there are people out there who are working every day, who are not getting a tax cut, and you want to give them more.
+1219	If we can get that right, then we can move in a direction not only of energy independence, but we can create 5 million new jobs all across America, including in the heartland where we can retool some of these plants to make these highly fuel-efficient cars and also to make wind turbines and solar panels, the kinds of clean energy approaches that should be the driver of our economy for the next century.
+1220	That's just one example of how you can save money and improve the quality of life at the same time.
+1221	I don't want to try to put our troops in all places at all times.
+1222	But make no mistake about it, we should do everything we can to see that the will of the Serbian people expressed in this extraordinary election is done.
+1223	And even some in your own party couldn't buy that.
+1224	Here is Ahmadinenene (ph), Ahmadinejad, who is, Ahmadinejad, who is now in New York, talking about the extermination of the State of Israel, of wiping Israel off the map, and we're going to sit down, without precondition, across the table, to legitimize and give a propaganda platform to a person that is espousing the extermination of the state of Israel, and therefore then giving them more credence in the world arena and therefore saying, they've probably been doing the right thing, because you will sit down across the table from them and that will legitimize their illegal behavior.
+1225	But let's stop labeling each other and lets' get to the heart of the matter which is the future of this country.
+1226	I'm interested in 240 million points of light.
+1227	The Vice President talks about national security.
+1228	You are going to approve one of the biggest tax increases in history.
+1229	But I don't think it's fair to say, you haven't had cancer.
+1230	And because we didn't listen to the freeze advocates, and strengthen the defense of this country, we now have the first arms control agreement in the nuclear age.
+1231	But I'm totally opposed to discrimination.
+1232	I support it for the middle class, not that part of it that goes to people earning more than $200,000 a year.
+1233	And I've been supporting those and I know how to fix this economy, and eliminate our dependence on foreign oil, and stop sending $700 billion a year overseas.
+1234	Immediately before the Kansas City convention, he added back another one point eight billion dollars in the defense budget.
+1235	And I've been the chief executive officer of the second biggest state in the union.
+1236	My opponent voted against it.
+1237	All I know is that we have firm government credit to guarantee the pensions.
+1238	Now, there are all kinds of good ideas, brilliant ideas, terrific ideas on health care.
+1239	Right now, the CBO says up to 20 million people will lose their insurance as Obamacare goes into effect next year.

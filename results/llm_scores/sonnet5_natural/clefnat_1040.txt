@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1040	I invite the American people tomorrow -- because I will issue the statement quoting President Reagan -- he said exactly what I said he said.
+1041	I have a plan for Iraq.
+1042	Now, Governor Romney, when you were asked by teachers whether or not this would help the economy grow, you said this isn't going to help the economy grow.
+1043	The degree of unpopularity of a regime when the choice is total authoritarianism totalitarianism, I should say, in the alternative government, makes one wonder whether you are being helpful to the people.
+1044	I want to give robust support to the groups that are trying to overthrow Saddam Hussein, and I know there are allegations that they're too weak to do it, but that's what they said about the forces that were opposing Milosevic in Serbia, and you know, the policy of enforcing sanctions against Serbia has just resulted in a spectacular victory for democracy just in the past week, and it seems to me that having taken so long to see the sanctions work there, building upon the policy of containment that was successful over a much longer period of time against the former Soviet Union in the communist block, seems a little early to declare that we should give up on the sanctions.
+1045	And I believe strongly that commonsense gun safety measures would assist us.
+1046	And one thing we have to do: Repeal and replace the disaster known as Obamacare.
+1047	Right now, in the United States of America, business pays the second-highest business taxes in the world, 35 percent.
+1048	But the fact of it is we're so far away from research that even comes close to that, that the Director of Engineering Research at the Defense Department said to get there we would have to solve eight problems, each of which are more difficult than the atomic bomb and the Manhattan project.
+1049	I refer to the fact that in 1958, as a member of the Senate Foreign Relations Committee, I'm very familiar with the position that the United States took in negotiating with the Chinese Communists on these two islands.
+1050	But at least it took that burden away from them.
+1051	I remember talking by the telephone.
+1052	So that's one reason I don't want it.
+1053	This is my point tonight.
+1054	Government-sponsored health care would lead to rationing.
+1055	I think under those circumstances they would refrain from pushing us to our knees as they did in 1973 with their previous oil embargo.
+1056	He has a 15-year-old daughter named Caley, who is in Sarasota High School.
+1057	But I do believe that no one in this country should be denied the right to express themselves, or to even try to persuade others to follow their leader.
+1058	First of all, I don't see how it's possible for a one-third of a body, such as the Republicans have in the House and the Senate to stop two-thirds, if the two-thirds are adequately led.
+1059	His words amount to genocide incitation.
+1060	And the only one she talked to was Sidney Blumenthal, who's her friend and not a good guy, by the way.
+1061	We can't continue to shuffle children through school.
+1062	Thank you very much tonight, Jim.
+1063	And we're not doing what we ought to do in terms of the technology.
+1064	So I'm not going to begin, and I'm not going to go to entitlements as a means for cutting that deficit when we're spending billions on something like Star Wars, when we're spending billions on other weapon systems which apparently the Vice President wants to keep in his back pocket or some place, but which, if we continue to spend billions on them, will force us to cut Social Security, to cut Medicare, to cut these basic entitlements to people of very, very modest means.
+1065	Do you want to fix the problem or sound-bite it?
+1066	Ã‚ But I do have a lot of experience in getting things done.
+1067	But I think what we want to avoid is falling back into this nationalized health care system that President Clinton wanted to give us in 1993.
+1068	America is not temporary; we're forever.
+1069	Right now, I meet young people all across the country who either have decided not to go to college or if they're going to college, they are taking on $20,000, $30,000, $50,000, $60,000 worth of debt, and it's very difficult for them to go into some fields, like basic research in science, for example, thinking to themselves that they're going to have a mortgage before they even buy a house.
+1070	I think the IMF has got a role in the world, but I don't want to see the IMF out there as a way to say to world bankers, if you make a bad loan, we'll bail you out.
+1071	It should be a helping hand, and tax relief and the proposals I just described should be a good helping hand.
+1072	We need to help people who are between jobs.
+1073	Nobody ever told the American people that we increased spending $1.83 for every dollar of taxes raised.
+1074	And they went out and bought up these mortgages.
+1075	That's not the kind of advocacy that women need.
+1076	And no one has approached it from that matter.
+1077	Also I favor all revenue sharing money being used for local governments, and also to remove prohibitions in the use of revenue sharing money so that it can be used to improve education, and health care.
+1078	An African American was my chief economic development officer.
+1079	Oh, you're going to let me.

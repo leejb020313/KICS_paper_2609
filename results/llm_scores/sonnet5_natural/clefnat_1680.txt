@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1680	Instead of the federal government, we had that tax credit, pick up some of the costs, because if you have to hire a replacement worker, that's a cost.
+1681	Mr. Carter wants to increase taxes for roughly half of the taxpayers of this country.
+1682	Laura and I are proud parents of teenage girls, twin daughters, and I know what you're saying.
+1683	I met a young woman in -- in Philadelphia who's coming out of -- out of college, can't find work.
+1684	There needs to be more community health clinics where the poor can go get health care.
+1685	And I favor a shifting of the welfare cost away from the local governments altogether.
+1686	I have kept the faith with our country.
+1687	But I just find it fascinating that while we sit here tonight we will go into debt an additional $50 million in an hour and a half.
+1688	Iraq was not even close to the center of the war on terror before the president invaded it.
+1689	It's sort of like what Senator Dole did when he sponsored the Americans with Disabilities Act and said to certain stores, okay, you have to make it accessible to people in wheelchairs.
+1690	We must let them know that the great American ideals - of independence, of the right of people to be free, and of the right to progress - that these are ideals that belong not to ourselves alone, but they belong to everybody.
+1691	But on all of these things, a sound economy is the only way to get it going.
+1692	And that means, for example, standing up for human rights.
+1693	I also intend to double the number of special forces so that we can do the job we need to do with respect fighting the terrorists around the world.
+1694	And that's why I support that.
+1695	I'll do everything I can as president to stop the boycott of American businesses by the Arab countries.
+1696	I mean, whether we like it or not, and we could be very politically correct, but whether we like it or not, there is a problem.
+1697	I think, joining with our allies and friends in a league of democracies, that we can effectively abridge their behavior, and hopefully they would abandon this quest that they are on for nuclear weapons.
+1698	And look at her website.
+1699	I supported us going into Bosnia, when a number of my own party and colleagues was against that operation in Bosnia.
+1700	Be strict and firm about it.
+1701	And 3 days after the election in 1982, they came to us and said, Social Security, we know, is broke.
+1702	I also think that we should give visas to people -- green cards, rather, to people who graduate with skills that we need.
+1703	Our nation is involved in two wars, and we are going through the worst financial crisis since the Great Depression.
+1704	That will reduce medical errors and reduce costs.
+1705	It hasn't produced a quart of oil or a lump of coal, or anything else in the line of energy.
+1706	I guess the one thing that concerns me about this, Ann, is this attempt to label things which all of us believe in.
+1707	The present bureaucratic structure of the - of the Federal Government is a mess.
+1708	This is part of the choice in this election.
+1709	Let me just tell you who the jury is.
+1710	Let's take all these four years in a row.
+1711	There were a number of things in there that weakened that bill.
+1712	I am for licensing by states of new handgun purchases.
+1713	But we have not had the kind of leadership we should have had.
+1714	I'm going to be able to balance the budget.
+1715	Sure, absolutely, so long as they're based upon science and they're reasonable.
+1716	And that's what we have to -- I think that's the test of public service.
+1717	When you stop and think that we are only drilling on 2%.
+1718	Amnesty means that - that you uh - that what you did was right.
+1719	Energy we have to deal with today, because you're paying $3.80 here in Nashville for gasoline, and it could go up.

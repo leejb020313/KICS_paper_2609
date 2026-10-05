@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+880	And I would do nothing to hurt the U.S. auto industry.
+881	I believe we have a responsibility to care for one another.
+882	Why did he fail to even promote legislation that would have provided an answer for those that want to come legally and for those that are here illegally today?
+883	And we need to make sure they have the arms they need to carry out the very important role which is getting rid of Assad.
+884	But we had been digging our way out of policies that were misplaced and focused on the top doing very well and middle class folks not doing well.
+885	And, finally, we have to stand by our principles.
+886	Let's take advantage of the energy resources we have, as well as the energy sources for the future.
+887	That's explicitly prohibited in the law.
+888	Was -- Lorranna -- Lorraine -- we are a nation of immigrants.
+889	The answer is very straightforward.
+890	And so we can be a partner with China.
+891	And, you know, that's -- you're right.
+892	The federal government didn't hire our teachers.
+893	But four years ago, I told the American people and I told you I would cut taxes for middle class families.
+894	They have to let you keep your kid on their insurance -- your insurance plan until you're 26 years old.
+895	And as a consequence, there's no doubt that attitudes about Americans have changed.
+896	The middle class is getting crushed under the policies of a president who has not understood what it takes to get the economy working again.
+897	We've cut our oil imports to the lowest level in two decades because we've developed oil and natural gas.
+898	We went from deficit to surplus.
+899	Let me give you an example.
+900	But don't forget, you put $90 billion, like 50 years' worth of breaks, into -- into solar and wind, to Solyndra and Fisker and Tester and Ener1.
+901	I want to see peace.
+902	The top 5 percent will continue to pay 60 percent, as they do today.
+903	We have to work on a collaborative basis, not because we're going to compromise our principle, but because there's common ground.
+904	It's been growing about 12 percent per year over a long period of time.
+905	But we've also got to continue to figure out how we have efficiency energy, because ultimately that's how we're going to reduce demand and that's what's going to keep gas prices lower.
+906	And by the way, if the government can be as efficient as the private sector and offer premiums that are as low as the private sector, people will be happy to get traditional Medicare or they'll be able to get a private plan.
+907	I do want to make sure that -- I do want to make sure that we just understand something.
+908	Right now, the CBO says up to 20 million people will lose their insurance as Obamacare goes into effect next year.
+909	He should have answered the first question.
+910	And number three, we are going to find out who did this and we're going to hunt them down, because one of the things that I've said throughout my presidency is when folks mess with Americans, we go after them.
+911	The fact of the matter is...
+912	Because if they succeed, I believe the country succeeds.
+913	That will not help us compete with China.
+914	And as a consequence, you had 46 states around the country who have made a real difference.
+915	Look, this, in my view, is the highest responsibility of the President of the United States, which is to maintain the safety of the American people.
+916	I don't want to cost jobs.
+917	We're not going to allow Iran to perpetually engage in negotiations that lead nowhere.
+918	And I don't think that's the right approach when it comes to making sure that Medicare is stronger over the long term.
+919	But we did so in a careful, thoughtful way, making certain that we knew who we were dealing with, that those forces of moderation on the ground were ones that we could work with, and we have to take the same kind of steady, thoughtful leadership when it comes to Syria.

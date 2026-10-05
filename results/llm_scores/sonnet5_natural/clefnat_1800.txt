@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1800	Proud that they voted hopefully for me.
+1801	What kind of message does it send to be sending money to open firehouses in Iraq, but we're shutting firehouses who are the first- responders here in America.
+1802	We don't want to go back to that.
+1803	Let me remind you it was a Democratic tax increase, and I didn't want to do it and I went along with it.
+1804	I understand exactly what the Soviets are up to, but that, too, is a part of national strength.
+1805	Makes you feel real good to hear that, right?
+1806	The only people affected by my plan are the top income earners of America.
+1807	It's a good idea, they saw it, they picked it up and put it in theirs, but it's only temporary.
+1808	We need to increase pressure time, and time again on Iran because anything other than a -- a -- a solution to this, which says -- which stops this -- this nuclear folly of theirs, is unacceptable to America.
+1809	It is on the ballot in this election, make no mistake about it.
+1810	If these young Americans don't have the skills that make them attractive to employees, they're not going to get jobs.
+1811	We said, "All right, if that's what you want to do.''
+1812	You showed no recognition of the Administration program to try to persuade Chiang Kai-shek for the last five years to withdraw from the islands.
+1813	--notwithstanding my opponent's ad, my plan triggers in at gross incomes, family incomes of $200,000 and above.
+1814	Now there are some things we can do to help people who currently do get entitlements to get off public assistance.
+1815	In 1974, we had a so-called oil shock, wherein the price of OPEC oil was raised to an extraordinary degree.
+1816	Four, in the votes at the U.N., particularly the vote dealing with Red China last Saturday, we received the support on the position that we had taken of only two African countries - one, Liberia, which had been tied to us for more than a century, and the other, Union of South Africa, which is not a popular country in Africa.
+1817	Send us some people that will pass the idea.
+1818	Now, Governor Romney talked about China, as I already indicated.
+1819	That's what I learned in Vietnam.
+1820	I call it trumped-up trickle-down, because that's exactly what it would be.
+1821	I'll answer it straight to America.
+1822	we'd be in a stronger place today.
+1823	That's just what the president did when he vetoed the Family Leave Act.
+1824	If we fail then, if we're unable to come to an agreement - and I hope we can come to an agreement because it does not merely involve now the United States, Britain, France, and the Soviet Union as atomic powers.
+1825	Now give me 1 second...
+1826	We've been dormant too long.
+1827	There are some who allege, I can't prove it true or untrue, that uh - such a statement uh - in effect invited the North Koreans to invade South Korea.
+1828	I don't think he should say that our prestige is at an all-time low.
+1829	Let's be honest about it.
+1830	They were just shuffling too many kids through the system, year after year, grade after grade, without learning the basics.
+1831	And I'm very, very proud of it.
+1832	This is something that we can do; the Congress failed to do it, and we intend to do it.
+1833	Let me just talk to you about one of the short-term fixes.
+1834	It wasn't a government takeover of health care.
+1835	But let me mention another thing.
+1836	I see our trade deficit with China, larger than it's -- growing larger every year, as a matter of fact.
+1837	And at the end of that seven years we were engaged in a war in Korea which cost of thirty thousand American lives.
+1838	And why don't we offer incentives for business and industry to start up in those zones?
+1839	Since this campaign began I have had a very rare privilege.

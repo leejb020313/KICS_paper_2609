@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1960	And that's the reason why I set up a trade task force to go after cheaters when it came to international trade.
+1961	And that's one of the reasons the Afghan Security Forces have so much work to do to be able to fight against that.
+1962	And so a Pakistan that falls apart, becomes a failed state, would be of extraordinary danger to Afghanistan and to us.
+1963	And unfortunately, that's the kind of opinions that you've offered throughout this campaign, and it is not a recipe for American strength, or keeping America safe over the long haul.
+1964	And the choices we've made have been ones that ultimately are benefiting middle-class families all across the country.
+1965	I'd make sure that Ahmadinejad is indicted under the Genocide Convention.
+1966	Now when Governor Romney said we should let Detroit go bankrupt.
+1967	The CBO says we'll have a trillion-dollar deficit each of the next four years.
+1968	They are certainly in a better position to weather the extraordinary recession that we went through.
+1969	So I'll let the American people decide, judge, who's going to be more effective and more credible when it comes to imposing crippling sanctions.
+1970	And you'd think, well, then why lower the rates?
+1971	And -- and the -- and the president's statement of my policy is completely and totally wrong.
+1972	But the Saudi's and the Qatari, and -- and the Turks are all very concerned about this.
+1973	You can't have 23 million people struggling to get a job.
+1974	Our Air Force is older and smaller than at any time since it was founded in 1947.
+1975	They're using text books that are 10 years old.
+1976	And it also says that you're going to have to get rebates if insurance companies are spending more on administrative costs and profits than they are on actual care.
+1977	I'm not looking for a $5 trillion tax cut.
+1978	You know, there have been times, Governor, frankly, during the course of this campaign, where it sounded like you thought that you'd do the same things we did, but you'd say them louder and somehow that -- that would make a difference.
+1979	Ambassador, anybody on my team would play politics or mislead when we've lost four of our own, governor, is offensive.
+1980	I'm convinced we'll do it.
+1981	I'm happy to have a longer conversation --
+1982	Two-thirds of our jobs come from small businesses.
+1983	And production on gas --
+1984	Number two, Mr. President, the reason I call it an apology tour is because you went to the Middle East and you flew to Egypt and to Saudi Arabia and to Turkey and Iraq.
+1985	And we've got to maintain that pressure.
+1986	It's important for the success of Afghanistan.
+1987	What ends up happening is some people end up not getting help.
+1988	His main strategy during the Republican primary was to say, "We're going to encourage self-deportation."
+1989	And so what we're seeing is a pretty dramatic reversal in the kind of hopes we had for that region.
+1990	In the meantime, folks out there with insurance, you're already getting a rebate.
+1991	... if you'll let me, Bob, just about education...
+1992	We're four years closer to a nuclear Iran.
+1993	I've got a different view.
+1994	Secondly, Syria is an opportunity for us because Syria plays an important role in the Middle East, particularly right now.
+1995	Now, I like green energy as well, but that's about 50 years' worth of what oil and gas receives.
+1996	So how much did you cut (inaudible)?
+1997	You want me to answer a question --
+1998	Your home mortgage interest deduction, charity, child tax credit, and so forth, you can use those as part of filling that bucket, if you will, of deductions.
+1999	I mean we're just a few miles away from Ellis Island.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1840	Governor Romney says, we should replace it, I'm just going to repeal it, but -- but we can replace it with something.
+1841	There are now a large number of Afghan Security Forces, 350,000 that are ready to step in to provide security and we're going to be able to make that transition by the end of 2014.
+1842	It also means that we've got to make sure that young people like yourself are able to afford a college education.
+1843	That's why I'd have regulation.
+1844	My grandmother died three days before I was elected president.
+1845	We did it by taking $60 billion that was going to banks and lenders as middlemen for the student loan program, and we said, let's just cut out the middleman.
+1846	In fact we've seen layoffs of hundreds of thousands of teachers over the last several years, and Governor Romney doesn't think we need more teachers.
+1847	And we can do it in an environmentally sound way.
+1848	One, of course, is to raise taxes.
+1849	So my belief is that, (A), we have to enforce the laws we've already got, make sure that we're keeping guns out of the hands of criminals, those who are mentally ill. We've done a much better job in terms of background checks, but we've got more to do when it comes to enforcement.
+1850	Along with what he also wants to do in terms of eliminating the estate tax, along what he wants to do in terms of corporates, changes in the tax code, it costs about $5 trillion.
+1851	I think they noticed that as well.
+1852	I believe that the free enterprise system is the greatest engine of prosperity the world's ever known.
+1853	I like PBS, I love Big Bird.
+1854	And if we do that, if we do what I'm planning on doing, which is getting us energy independent, North America energy independence within eight years, you're going to see manufacturing jobs come back.
+1855	And he is saying that he is going to pay for it by closing loopholes and deductions.
+1856	But not due to his policies.
+1857	He gets the first --
+1858	We need to indict Ahmadinejad.
+1859	That's exactly what we're doing.
+1860	So, in the middle of the Civil War, Abraham Lincoln said, let's help to finance the Transcontinental Railroad, let's start the National Academy of Sciences, let's start land grant colleges, because we want to give these gateways of opportunity for all Americans, because if all Americans are getting opportunity, we're all going to be better off.
+1861	Oil production is up, natural gas production is up, and, most importantly, we're also starting to build cars that are more efficient.
+1862	Governor Romney, I'm glad that you recognize that Al Qaida is a threat, because a few months ago when you were asked what's the biggest geopolitical threat facing America, you said Russia, not Al Qaida; you said Russia, in the 1980s, they're now calling to ask for their foreign policy back because, you know, the Cold War's been over for 20 years.
+1863	We don't have to settle for 50 percent of kids coming out of college not able to get work.
+1864	But that was 10 years before you took office.
+1865	Those arms could be used to hurt us down the road.
+1866	And you said we should ask Pakistan for permission.
+1867	I use that term with all respect, by the way.
+1868	First of all, I think it's important for Governor Romney to present this plan that he says will only affect folks in the future.
+1869	We cut taxes for middle-class families by about $3,600.
+1870	And -- and we've got to deal with cost.
+1871	Now Governor Romney had a very different response.
+1872	And with respect to our attitude about the Iranian revolution, I was very clear about the murderous activities that had taken place and that was contrary to international law and everything that civilized people stand for.
+1873	That's wonderful, except we have a record to look at.
+1874	They recruit them, leaving the older, sicker seniors in Medicare.
+1875	Well -- well, I need to speak a moment...
+1876	And -- and so the strength that we have shown in Iran is shown by the fact that we've been able to mobilize the world.
+1877	I think this is a great example.
+1878	In his first year, I was just getting -- licking my wounds from having been beaten by John McCain, all right.
+1879	And taking us back to those kinds of strategies that got us into this mess are not the way that we are going to maintain leadership in the 21st century.

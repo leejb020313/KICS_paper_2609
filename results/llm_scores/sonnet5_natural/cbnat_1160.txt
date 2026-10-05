@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1160	How strong is our economy?
+1161	Well, we're going to be finished by 2014, and when I'm president, we'll make sure we bring our troops out by the end of 2014.
+1162	And very little of what Governor Romney just said is true.
+1163	And if Obamacare is passed, or implemented -- it's already been passed -- if it's implemented fully, it'll be another $2,500 on top.
+1164	And that's not the kind of advocacy that women need in any economy.
+1165	This puts us on a road to Greece.
+1166	But we've got to enforce the laws, which is what we are doing, and we've also got to make sure that in every walk of life we do not tolerate discrimination.
+1167	-- all of these wonderful folks are going to have a chance to get some of their questions answered.
+1168	Make sure that you are getting a good paying job, making sure that Medicare and Social Security... (CROSSTALK)
+1169	'Cause I'm going to bring rates down across the board for everybody, but I'm going to limit deductions and exemptions and credits, particularly for people at the high end, because I am not going to have people at the high end pay less than they're paying now.
+1170	When I was governor of Massachusetts, to get a high school degree, you had to pass an exam.
+1171	She trained people who would end up becoming her bosses during the course of her career.
+1172	Well, the economy is still growing slow.
+1173	As a businessperson, I had to have -- I need to know the regulations.
+1174	You'll have hospital and providers that'll no longer accept Medicare patients.
+1175	Because there -- there are two ways of dealing with our health care crisis.
+1176	Right now, you can actually take a deduction for moving a plant overseas.
+1177	Those are the businesses that employ one-quarter of all the workers in America.
+1178	We're all focused on China.
+1179	-- this was a spontaneous --
+1180	One of the reasons -- or one of the ways they don't play by the rules is artificially holding down the value of their currency.
+1181	So that'll stay the same.
+1182	I was in Dayton, Ohio, and a woman grabbed my arm and she said, "I've been out of work since May.
+1183	Can we -- can we stay on Medicare?
+1184	They want to make sure that they have a roof over their heads and that they have the prospects of a better life in the future.
+1185	The presidents would -- president would prefer raising taxes.
+1186	How did we do that?
+1187	And thank you for tuning in this evening.
+1188	That is, I want to bring down rates.
+1189	And -- and that is not a right strategy for us to move forward.
+1190	This is about getting jobs for the American people.
+1191	I think something this big, this important has to be done on a bipartisan basis.
+1192	That was something that advanced the entire country.
+1193	Now, that's not my analysis.
+1194	And manufacturers here in the U.S. making the same products can't compete.
+1195	Don't have the federal government tell everybody what kind of training programs they have to have and what kind of Medicaid they have to have.
+1196	I'll lead you in an open and honest way, and I ask for your vote.
+1197	This is money out of that family's pocket.
+1198	He said that by now middle-income families would have a reduction in their health insurance premiums by $2,500 a year.
+1199	Then you said we should.

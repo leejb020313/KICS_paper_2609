@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1360	There are some programs that are very important that are under funded.
+1361	Because what I have proposed...
+1362	And then you add to that food and wardrobe, and all the other things, and you only have a small portion going for weapons.
+1363	There are some really interesting technologies.
+1364	In his last litany of misstatements.
+1365	Every place I go I talk about it, and I think they want it done.
+1366	If you leave a business, I think your insurance should go with you to some other business.
+1367	Look at the votes in the United Nations over the past seven and a half years.
+1368	I could run this string out a long time, but remember this, Jim.
+1369	We can do better in our public schools.
+1370	Start asking the question, what do you know?
+1371	So there's a great deal of cynicism out there.
+1372	She's a United States -- she was a United States senator.
+1373	So we use diplomacy every chance we get, believe me.
+1374	I'm more optimistic today than I was when I began about this nation providing we have the kind of leadership in Washington that can work with you, that can build partnerships, that can build jobs in every part of this country, not certain parts of this country.
+1375	I do not say that.
+1376	It's a totally different point of view.
+1377	The answer is very straightforward.
+1378	That has been their priority.
+1379	Now, just a few days ago a bipartisan commission of Republicans and Democrats -- more Republicans than Democrats -- said my plan will save the average family $1200 a year more than the Bush plan will by the year 2000, $2.2 trillion in the next 12 years, $400 billion a year by the end of this decade.
+1380	Certainly not right when it's happening.
+1381	What he's quoting is not the Senate Budget Commiitte, it is a partisan press release by the Republicans on the Senate Budget Committee that's not worth the government -- the taxpayer-paid paper that it's printed on.
+1382	If - Iran is not an Arab country, as you know, it is a Moslem country - but if Saudi Arabia should declare an oil embargo against us, then I would consider that an economic declaration of war.
+1383	If we tried everything else, if we have allies.
+1384	But the key thing is to make sure you can get a job when you get out of school.
+1385	I supported it because ethnic cleansing and genocide was taking place there.
+1386	One-quarter of the surplus for important projects, and I want to send one-quarter of the surplus back to the people who pay the bills.
+1387	Fixing our training programs for our workers.
+1388	Uh - we've always had, I think, a lot of constitutional amendments proposed, but the passage of them has been uh - fairly slow, and uh - few and far between.
+1389	We need a strong, credible, effective nuclear deterrent.
+1390	And therefore, the actual user of health care is not the purchaser of health care.
+1391	So my plan -- we're going to renegotiate trade deals.
+1392	There is a huge difference in this campaign.
+1393	It's not as big as yours so it doesn't take as long.
+1394	And it's now the smallest number that we have had since the -- the smallest in size since John Kennedy's administration.
+1395	Again, a little bit of naivete there.
+1396	Well, that's what a President's supposed to know -- where those weapons are going to be.
+1397	First of all, I'd like to thank the League of Women Voters for making this debate possible.
+1398	At the same time, we have to make certain that the Soviet Union's Backfire, which they claim is not an intercontinental aircraft and which some of our people contend is, must also be included if we are to get the kind of agreement which is in the best interest of both countries.
+1399	If affirmative action means what I just described what I'm for, then I'm for it.

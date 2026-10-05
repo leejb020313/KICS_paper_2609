@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+80	First of all, I like the way we did it in Massachusetts.
+81	Candy, there are some jobs that are not going to come back.
+82	The same way that you said that it was mission creep to go after Gadhafi.
+83	Now, Governor Romney was a very successful investor.
+84	We ended the war in Iraq, refocused our attention on those who actually killed us on 9/11.
+85	Which is -- which is my experience as a governor is if I come in and -- and lay down a piece of legislation and say, "It's my way or the highway," I don't get a lot done.
+86	I think that grows the economy.
+87	We don't want to get drawn into a military conflict.
+88	He said he was going to lower tax rates.
+89	You got that fact wrong.
+90	But unfortunately, in nowhere in the world is America's influence will grow.
+91	That's how we went after Al Qaida and bin Laden.
+92	And -- and that kind of top -- top-down economics, where folks at the top are doing well, so the average person making $3 million is getting a $250,000 tax break, while middle-class families are burdened further, that's not what I believe is a recipe for economic growth.
+93	I've watched year in and year out as companies have shut down and people have lost their jobs because China has not played by the same rules, in part by holding down artificially the value of their currency.
+94	Well, Republicans and Democrats came together on a bipartisan basis to put in place education principles that focused on having great teachers in the classroom.
+95	These countries can't develop if young women are not given the kind of education that they need.
+96	In fact, I do have a plan that deals with people with pre-existing conditions.
+97	This is a group that is now involved in 10 or 12 countries, and it presents an enormous threat to our friends, to the world, to America, long term, and we must have a comprehensive strategy to help reject this kind of extremism.
+98	Second reason, it cuts $716 billion from Medicare to pay for it.
+99	People in the coal industry feel like it's getting crushed by your policies.
+100	There were many days that passed before we knew whether this was a spontaneous demonstration, or actually whether it was a terrorist attack.
+101	It's why Republicans said, do not do this, and the Republicans had -- had the plan.
+102	I see Syria with 30,000 civilians dead, Assad still in power.
+103	And so we're matching them up.
+104	I believe in maintaining the strength of America's military.
+105	And it makes a difference in terms of how well and effectively women are able to work.
+106	You know, I was having lunch with some -- a veteran in Minnesota who had been a medic dealing with the most extreme circumstances.
+107	Secretary Clinton has done an extraordinary job.
+108	You'll never balance the budget by raising taxes.
+109	This is a president who has not been able to do what he said he'd do.
+110	Secondly, I'd take on diplomatic isolation efforts.
+111	But, ultimately, part of being principled, part of being a leader is, A, being able to describe exactly what it is that you intend to do, not just saying, "I'll sit down," but you have to have a plan.
+112	The president has a view very similar to the view he had when he ran four years, that a bigger government, spending more, taxing more, regulating more -- if you will, trickle-down government -- would work.
+113	But what I've also said is we can't just produce traditional source of energy.
+114	And part of the way to do it is to not give tax breaks to companies that are shipping jobs overseas.
+115	Part of the Arizona law said that law enforcement officers could stop folks because they suspected maybe they looked like they might be undocumented workers and check their papers.
+116	People who want to build on their dreams and make sure their kids have an even bigger dreams than they have.
+117	But let me mention another thing.
+118	And if you are going to save any money through what Governor Romney's proposing, what has to happen is, is that the money has to come from somewhere.
+119	Because the economy was on the verge of collapse, because we were about to go through the worst recession since the Great Depression, as a consequence of some of the same policies that Governor Romney's now promoting.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1280	We then organized the strongest coalition and the strongest sanctions against Iran in history, and it is crippling their economy.
+1281	It's not my term, it's the president's own secretary of defense called these trillion dollars of cuts to our military devastating.
+1282	Understand themselves as Americans in every way except having papers.
+1283	And I understand they do include investments outside the United States, including in -- in Chinese companies.
+1284	And what we can now do is free up some resources, to, for example, put Americans back to work, especially our veterans, rebuilding our roads, our bridges, our schools, making sure that, you know, our veterans are getting the care that they need when it comes to post-traumatic stress disorder and traumatic brain injury, making sure that the certifications that they need for good jobs of the future are in place.
+1285	But what we also have been able to do is position ourselves so we can start rebuilding America, and that's what my plan does.
+1286	President Obama was right, he said that that was outrageous to have deficits as high as half a trillion dollars under the Bush years.
+1287	But we can make a difference in terms ensuring that every young person in America, regardless of where they come from, what they look like, have a chance to succeed.
+1288	Let's -- let's pay providers on the basis of performance as opposed to on the basis of how many procedures they've -- they've engaged in.
+1289	Yeah, in the Reagan recession where unemployment hit 10.8 percent, between that period -- the end of that recession and the equivalent of time to today, Ronald Reagan's recovery created twice as many jobs as this president's recovery.
+1290	And the mantle of leadership for the -- promoting the principles of peace has fallen to America.
+1291	Governor, the people in Detroit don't forget.
+1292	It's going to have to be tweaked the way it was by Ronald Reagan and Speaker -- Democratic Speaker Tip O'Neill.
+1293	And -- and they're throughout many nations in the Middle East.
+1294	We've read their accounts now about what happened.
+1295	I want to make sure we've got the best education system in the world.
+1296	That makes life a lot easier.
+1297	Look, I love to -- I love teachers, and I'm happy to have states and communities that want to hire teachers do that.
+1298	We didn't ask for it.
+1299	That's why the National Federation of Independent Businesses said your plan will kill 700,000 jobs.
+1300	He says that he's going to replace Dodd-Frank, Wall Street reform, but we don't know exactly which ones.
+1301	And what we've said is let's change those certifications.
+1302	You're seeing it right now in the economy.
+1303	I will stand with Israel if they are attacked.
+1304	We -- we have, with our partners in the region, we have sufficient resources to support those groups.
+1305	So their economy is in a shambles.
+1306	Let me just point out first of all this board that we're talking about can't make decisions about what treatments are given.
+1307	And as a consequence we'll have a better trained workforce and that will create jobs because companies want to locate in places where we've got a skilled workforce.
+1308	And we want to shrink those groups and those networks and we can do that.
+1309	The kids of those that came here illegally, those kids, I think, should have a pathway to become a permanent resident of the United States and military service, for instance, is one way they would have that kind of pathway to become a permanent resident.
+1310	First of all, Israel is a true friend.
+1311	And I'm glad that Governor Romney agrees with the steps that we're taking.
+1312	Are we going to double on top-down economic policies that helped to get us into this mess or do we embrace a new economic patriotism that says America does best when the middle class does best?
+1313	My path is designed in getting small businesses to grow and hire people.
+1314	That's not what I do as president, that's not what I do as Commander in Chief.
+1315	So for those reasons, for the tax, for Medicare, for this board, and for people losing their insurance, this is why the American people don't want Medicare -- don't want Obamacare.
+1316	Second, in that line that says we are endowed by our creator with our rights, I believe we must maintain our commitment to religious tolerance and freedom in this country.
+1317	Well, I think it will continue to be terrorist networks.
+1318	It took them a long time to say this was a terrorist act by a terrorist group.
+1319	Number two, make sure that they are standing by our interests in Israel's security, because it is a true friend and our greatest ally in the region.

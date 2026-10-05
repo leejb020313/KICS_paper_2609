@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+720	This is the way we're going to create jobs in this country.
+721	It was a terrorist attack and it took a long time for that to be told to the American people.
+722	Now, Governor Romney and I do share a deep interest in encouraging small-business growth.
+723	We're encouraging it and working with the industry.
+724	I said we're going to bet on American workers and the American auto industry and it's come surging back.
+725	And despite that, what we've said is, yes, we had to take some initial emergency measures to make sure we didn't slip into a Great Depression, but what we've also said is, let's make sure that we are cutting out those things that are not helping us grow.
+726	I want you to be able to get a job.
+727	You can't have an economy that over the last three years keeps slowing down its growth rate.
+728	China is now the largest manufacturer in the world.
+729	Let me mention another regulation in Dodd-Frank.
+730	What's a question I think the -- the president will have a chance to answer right now.
+731	They feel as if they had finally an administration who was going to take this issue seriously.
+732	What kind of America do you want to have for yourself and for your children.
+733	And that kind of approach, I believe, will not grow our economy, because the only way to pay for it without either burdening the middle class or blowing up our deficit is to make drastic cuts in things like education, making sure that we are continuing to invest in basic science and research, all the things that are helping America grow.
+734	We do those things, not only is your future going to be bright but America's future is going to bright as well.
+735	My own view, by the way, is I've added to that.
+736	I don't want to have our military involved in Syria.
+737	That -- that Detroit -- that Detroit answer...
+738	Basically, they get deductions that those small businesses that Governor Romney refers to, they don't get.
+739	We need to have as well a strong military.
+740	Making sure that we are controlling our own energy, but not only the energy of today, but also the energy of the future.
+741	I served as a pastor in my congregation for about 10 years.
+742	New business formation is down to the lowest level in 30 years under this administration.
+743	Now, we've seen 30 consecutive -- 31 consecutive months of job growth; 5.2 million new jobs created.
+744	And that allows us also to rebuild alliances and make friends around the world to combat future threats.
+745	And Governor Romney wants to take us back to those policies, a foreign policy that's wrong and reckless, economic policies that won't create jobs, won't reduce our deficit, but will make sure that folks at the very top don't have to play by the same rules that you do.
+746	The private market and individual responsibility always work best.
+747	Because inside Pakistan, you have a -- a large group of Pashtun that are -- that are Taliban.
+748	Well, of course I don't concur with what the president said about my own record and the things that I've said.
+749	Now, four years ago, when I stood on this stage, I said that I would cut taxes for middle-class families.
+750	Those investments are what's going to help to make sure that we continue to lead this world economy, not just next year, but 10 years from now, 50 years from now, 100 years from now.
+751	It's how we're going to grow this economy over the long term.
+752	And an economy with 7.8 percent unemployment is not a real strong economy.
+753	... and the rest of the answer, way off the mark.
+754	He had a Democrat House, a Democrat Senate, super majority in both Houses.
+755	And we are going to continue to keep the pressure on to make sure that they do not get a nuclear weapon.
+756	That's the kind of leadership we've shown in the region.
+757	Not just at the high end.
+758	It means that Governor Romney...
+759	And we face -- this deficit could crush the future generations.

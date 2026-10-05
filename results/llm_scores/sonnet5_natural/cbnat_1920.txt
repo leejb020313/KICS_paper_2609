@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+1920	So all of this is possible.
+1921	The financial system had frozen up.
+1922	That's how we ended the war in Iraq, as I promised, and that's how we're going to wind down the war in Afghanistan.
+1923	And when it comes to education what I've said is we've got to reform schools that are not working.
+1924	I want to thank Governor Romney and the University of Denver for your hospitality.
+1925	There are 4 million people who are waiting in line to get here legally.
+1926	I just want to make sure that --
+1927	And an Iranian nuclear program is not acceptable to us.
+1928	He now says he's going to replace Obamacare and ensure that all the good things that are in it are going to be in there and you don't have to worry.
+1929	They're now going to have to be paying copays for basic checkups that can keep them healthier.
+1930	Candy, what Governor Romney said just isn't true.
+1931	And I want to make sure they get armed and they have the arms necessary to defend themselves, but also to remove -- to remove Assad.
+1932	Not just to you, but to the entire nation.
+1933	Those decisions generally -- generally are not poll-tested.
+1934	We're far away from that now.
+1935	So if the tax plan he described were a tax plan I was asked to support, I'd say absolutely not.
+1936	That wasn't true in his time, that's why my policy starts with a very robust policy to get all that energy in North America -- become energy secure.
+1937	There's no doubt about it.
+1938	Well, I'll -- I'll be very quick.
+1939	And for us to be able to make sure that they've got that opportunity and they can walk through that door, that is vitally important not just to those kids.
+1940	When I said that we had to make sure that China was not flooding our domestic market with cheap tires, Governor Romney said I was being protectionist; that it wouldn't be helpful to American workers.
+1941	The president said by now we'd be a 5.4 percent unemployment.
+1942	...that's a -- I indicated...
+1943	And both Governor Romney and I agree actually that we should lower our corporate tax rate.
+1944	And it's very hard for us to project leadership around the world when we're not doing what we need to do...
+1945	It can't do it all, but it can make a difference.
+1946	In order to bring the cost of health care down, we don't need to have a board of 15 people telling us what kinds of treatments we should have.
+1947	...they would have gone through a...
+1948	And when we talk about deficits, if we're adding to our deficit for tax cuts for folks who don't need them, and we're cutting investments in research and science that will create the next Apple, create the next new innovation that will sell products around the world, we will lose that race.
+1949	He then wants to spend another $2 trillion on military spending that our military is not asking for.
+1950	Thank you, and that's an opportunity for me, and I appreciate it.
+1951	And so if we take a balanced approach, what that then allows us to do is also to help young people, the way we already have during my administration, make sure that they can afford to go to college.
+1952	Median income is down $4,300 a family and 23 million Americans out of work.
+1953	Is that a -- is that a separate topic?
+1954	That's part of the reason why the Libyans stand with us.
+1955	Doing everything we can to control our own energy.
+1956	But I tell you, if you talk to teachers, they will tell you it does make a difference.
+1957	I spent my life in the private sector.
+1958	And everybody's getting a fair shot.
+1959	I'd just note that I don't believe that bureaucrats in Washington should tell someone whether they can use contraceptives or not.

@@ -1,0 +1,57 @@
+# YOUR ROLE
+You are an impartial fact-checker. You are aware of what kind of statements that goes
+around news and published media are fact-check-worthy claims or not based on following
+check-worthiness criteria.
+• High-stakes, society-level, quantitative or study-based claims are very highly
+check-worthy.
+• Broad policy mechanism or sector-wide quantitative claims are highly check-worthy.
+• Mid-tier, localized or mixed claims with numbers/opinions are medium check-worthy.
+• Isolated incidents, hearsay, or loosely phrased generalizations are low check-worthy.
+• Personal stories, greetings, meta, nostalgia, logistics are very low check-worthy.
+• Statements containing factual claims that are not check-worthy by above check-worthiness
+criteria or non claim statements (e.g. opinions, speculations, feelings, rhetorical
+statements, campaign slogans, predictions) are not check-worthy.
+
+# YOUR TASK
+Below are numbered statements (id<TAB>statement). For EACH, assign a score between 0 and 1 for how confident you are that it is a check-worthy claim under the criteria above. Output ONLY a JSON object mapping id (as string) to score, e.g. {"0":0.9,"1":0.1}. Include every id.
+
+960	Now, keep in mind that our military spending has gone up every single year that I've been in office.
+961	How could we have not known?
+962	This is a -- this is a tax in and of itself.
+963	That's the plan that I've put forward.
+964	What we did in a legislature 87 percent Democrat, we worked together; 200 legislators in my legislature, only two voted against the plan by the time we were finished.
+965	Now, the math doesn't work, but he continues to claim that he's going to do it.
+966	And what's happened with some of the legislation that's been passed during the president's term, you've seen regulation become excessive, and it's hurt -- it's hurt the economy.
+967	I want to take that $716 billion you've cut and put it back into Medicare.
+968	We created 23 million new jobs.
+969	The reason we have been in such a enormous economic crisis was prompted by reckless behavior across the board.
+970	All of these things suggested, I think, to the Iranian mullahs that, hey, you know, we can keep on pushing along here, we can keep talks going on, we're just going to keep on spinning centrifuges.
+971	Well, I want to do the same thing, but I've actually identified how we can do that.
+972	The time -- the time...
+973	You can't have a free market work if you don't have regulation.
+974	It's going to help people across the country that are unemployed right now.
+975	But our training programs right now, we've got 47 of them, housed in the federal government, reporting to eight different agencies.
+976	And that's the perspective I bring when I think about what's called entitlements.
+977	But they'll tell you his prescription wasn't going to work.
+978	The federal government taking over health care for the entire nation and whisking aside the 10th Amendment, which gives states the rights for these kinds of things, is not the course for America to have a stronger, more vibrant economy.
+979	Certainly not right when it's happening.
+980	People can look it up, you're right.
+981	But as Abraham Lincoln understood, there are also some things we do better together.
+982	But the federal government also can play a very important role.
+983	That creates about 4 million jobs.
+984	And she worked her way up to become a vice president of a local bank, but she hit the glass ceiling.
+985	We welcome legal immigrants into this country.
+986	And let me explain why.
+987	So that's the next area I'm different than President Bush.
+988	What's happening in the Middle East, there are developments around the world that are of real concern.
+989	You just gave a speech a few weeks ago in which you said we should still have troops in Iraq.
+990	But that -- that is not the case.
+991	But on Medicare, for current retirees, he's cutting $716 billion from the program.
+992	It's now four years later.
+993	We need to increase pressure time, and time again on Iran because anything other than a -- a -- a solution to this, which says -- which stops this -- this nuclear folly of theirs, is unacceptable to America.
+994	I will not cut our commitment to our military.
+995	And she said to me, "You know, by finally getting bin Laden, that brought some closure to me."
+996	Nothing Governor Romney just said is true, starting with this notion of me apologizing.
+997	It's the route for them to arm Hezbollah in Lebanon, which threatens, of course, our ally, Israel.
+998	If you're paying less than you paid a year or two ago, why, then, the strategy is working.
+999	And I'll get us on track to a balanced budget.
