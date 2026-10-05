@@ -242,7 +242,6 @@ FL = json.load(open(os.path.join(ROOT, "results", "paper", "flips.json"), encodi
 BROKE = {d: {v: round(FL[d][v]["broke"]) for v in ("replace", "fuse")} for d in (cl, cb)}
 FIXR = {d: round(100 * FL[d]["fuse"]["fixed"] / FL[d]["replace"]["fixed"]) for d in (cl, cb)}
 BR_RATIO = {d: FL[d]["fuse"]["broke"] / FL[d]["replace"]["broke"] for d in (cl, cb)}
-assert all(0.35 <= r <= 0.6 for r in BR_RATIO.values())  # abstract: "절반 안팎"
 wf = lambda d, k: f3(R[d]["metrics"][k]["wf1"][0])
 assert all(R[d]["metrics"]["fuse_0.5"]["wf1"][0] > max(R[d]["metrics"][k]["wf1"][0] for k in ("replace_0.5", "sonnet_thr", "sonnet_nnppi"))
            for d in (cl, cb))  # "가중 F1에서도 … 높았다"
@@ -269,11 +268,11 @@ body(doc, (
     "팩트체크 필요성 탐지(check-worthiness detection)는 수많은 문장 중 사실 확인이 필요한 문장을 골라내는 기술이다. "
     "대형 언어 모델(LLM)은 이 판정을 잘 수행하지만, 모든 문장에 LLM을 호출하면 비용과 처리 시간이 크게 늘어난다. "
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하되, 분류기의 판정을 LLM의 판정으로 교체하지 않고 "
-    "두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 "
-    f"문장에 LLM을 호출한 경우보다 평균 정확도가 {MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았고(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster "
-    f"{f3(acc(cb,'fuse_0.5'))}), {RUNS}회 반복 중 유의하게 낮은 경우는 없었다. 또한 LLM의 판정으로 교체하는 방식에 비해 분류기가 "
-    f"맞힌 판정을 틀리게 바꾼 경우가 절반 안팎이었다. 이를 통해 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
-    "기대된다."
+    "두 모델의 점수를 결합하여 최종 판정하는 결합형 캐스케이드를 제안한다. 두 공개 데이터셋(CLEF 2024, ClaimBuster)에서 평가한 결과, 제안 방법은 LLM 호출을 절반으로 줄이고도 "
+    f"두 종류의 LLM 모두에서 모든 문장에 LLM을 호출한 경우보다 유의하게 낮았던 반복이 {RUNS}회 중 한 번도 없었으며, LLM의 판정으로 "
+    "교체하는 방식보다 평균 정확도가 높았다. 특히 판정 기준이 라벨보다 엄격했던 Claude Sonnet 5에서는 전량 호출보다 오히려 "
+    f"{MEAN_GAIN[cl]:.1f}~{MEAN_GAIN[cb]:.1f}%p 높았다(CLEF {f3(acc(cl,'fuse_0.5'))}, ClaimBuster {f3(acc(cb,'fuse_0.5'))}). "
+    f"이를 통해 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 기대된다."
 ), size=9, indent=0.5, after=2.5)
 
 doc.add_section(0)
@@ -353,14 +352,14 @@ body(doc, (
     f"{R[cb]['n_calib_gemma']:,}문장을 학습 세트로, 2016년 토론 {R[cb]['n_test']:,}문장을 테스트로 사용하였다. NN-PPI는 원 논문[2]과 같이 Gemma 3 4B로 "
     "재현하였으며, 원 논문과 같은 분할에서 가중 F1은 "
     f"CLEF {R_ORIG[cl]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}, "
-    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 보고값 0.827, 0.760). LLM은 Claude Sonnet 5를 "
-    "사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다."
+    f"ClaimBuster {R[cb]['metrics']['gemma_nnppi_sel']['wf1'][0]:.3f}였다(원 논문 보고값 0.827, 0.760). LLM은 Claude Sonnet 5(비교용 "
+    "Haiku 4.5)를 사용하였고, NN-PPI의 판정 기준 프롬프트로 40문장씩 묶어 채점하였다."
 ))
 subheading(doc, "3.2 평가 방법")
 CAL_GAIN = {d: max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)) for d in (cl, cb)}
 body(doc, (
     f"평가 지표는 테스트 정확도이며, 학습 세트의 80%를 비복원 추출하여 {RUNS}회 반복한 평균을 보고한다(LLM 점수와 테스트 세트는 반복 간 동일). 방법 간 차이는 각 반복의 "
-    f"예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하고, 차이의 95% 신뢰구간은 테스트 문장 부트스트랩(2,000회)으로 구하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
+    f"예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
     f"안에서만 정하였고(두 데이터셋 모두 k={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 그 이상 높여도 학습 "
     f"세트의 교차검증 정확도가 {max(CAL_GAIN.values()) * 100:.1f}%p 이하로만 오르는 50%로 정하였다."
 ))
@@ -458,9 +457,9 @@ body(doc, (
 body(doc, (
     "이하 전량 호출은 정확도가 더 높았던 임계값 조정 설정을 뜻한다. 호출률 50%의 결합형은 전량 호출보다 정확도가 "
     f"평균 {MEAN_GAIN[cl]:.1f}%p, {MEAN_GAIN[cb]:.1f}%p 높았고 {RUNS}회 중 {UP[cl]}회, {UP[cb]}회 유의하게 높았으며 유의하게 낮은 "
-    f"경우는 없었다. 신뢰구간 하한이 −{NI:.1f}%p 이상인 반복은 {NIF[cl]}회, {NIF[cb]}회(교체형 {NIR[cl]}회, {NIR[cb]}회)였고, "
-    f"NN-PPI를 적용한 전량 호출보다 {nsig(cl, 'fuse_0.5_vs_sonnet_nnppi')}회, {nsig(cb, 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 "
-    f"높았다. NN-PPI가 보고한 가중 F1에서도 결합형({wf(cl,'fuse_0.5')}, {wf(cb,'fuse_0.5')})이 교체형({wf(cl,'replace_0.5')}, "
+    "경우는 없었다. "
+    f"NN-PPI를 적용한 전량 호출보다는 {nsig(cl, 'fuse_0.5_vs_sonnet_nnppi')}회, {nsig(cb, 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 "
+    f"높았다. NN-PPI의 평가 지표인 가중 F1에서도 결합형({wf(cl,'fuse_0.5')}, {wf(cb,'fuse_0.5')})이 교체형({wf(cl,'replace_0.5')}, "
     f"{wf(cb,'replace_0.5')})과 전량 호출({wf(cl,'sonnet_thr')}, {wf(cb,'sonnet_thr')})보다 높았다."
 ))
 body(doc, (
@@ -487,28 +486,33 @@ body(doc, (  # may split across the columns (fills the bottom of the first colum
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
 hk = lambda d, k: f3(HK[d]["mean_acc"][k])
-nsig_hk = lambda d: HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"]
 HB = {d: HK[d]["best_full"] for d in (cl, cb)}
 assert HB[cl] == HB[cb] == "sonnet_raw"  # text: "전량 호출" = Haiku at the 0.5 threshold on both datasets
-assert all(HK[d]["per_seed"][f"fuse_0.5_vs_best_full({HB[d]})"]["n_sig"] == 0 for d in (cl, cb))
-assert all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < MAJ for d in (cl, cb))
+# "0.5 기준을 그대로 쓴 전량 호출이 임계값 조정보다 정확"
+assert all(HK[d]["mean_acc"]["sonnet_raw"] > HK[d]["mean_acc"]["sonnet_thr"] for d in (cl, cb))
+_sig = lambda ps, sign: sum(1 for x, p in zip(ps["diff"], ps["p"]) if p < 0.05 and sign * x > 0)  # runs significantly higher (+1) / lower (-1)
+HLOW_F = {d: _sig(HK[d]["per_seed"][f"fuse_0.5_vs_best_full({HB[d]})"], -1) for d in (cl, cb)}
+HLOW_R = {d: _sig(HK[d]["per_seed"][f"replace_0.5_vs_best_full({HB[d]})"], -1) for d in (cl, cb)}
+assert all(v == 0 for v in HLOW_F.values())  # abstract/conclusion: never significantly lower, with either LLM
+assert HLOW_R[cl] >= MAJ  # "교체형은 CLEF에서 … 유의하게 낮았다"
+assert all(HK[d]["mean_acc"]["fuse_0.5"] > HK[d]["mean_acc"]["replace_0.5"] for d in (cl, cb))  # "교체형보다 평균 정확도가 높았다"
+assert all(acc(d, "fuse_0.5") > acc(d, "replace_0.5") for d in (cl, cb))  # same for Sonnet (abstract)
 HDROP = {d: 100 * (HK[d]["mean_acc"][HB[d]] - HK[d]["mean_acc"]["fuse_0.5"]) for d in (cl, cb)}
-assert all(v > 0 for v in HDROP.values())  # "평균 … 낮았지만"
+assert all(v > 0 for v in HDROP.values())  # "평균 … 낮았으나"
 body(doc, (
-    f"Haiku 4.5에서는 결합형(50%)이 전량 호출보다 평균 {HDROP[cl]:.1f}%p, {HDROP[cb]:.1f}%p 낮았으나 유의하게 "
-    f"낮은 반복은 없었고, 하한이 −{NI_HK:.1f}%p 이상인 반복은 {n_ni('haiku45', cl, 'fuse_0.5', NI_HK)}회, "
-    f"{n_ni('haiku45', cb, 'fuse_0.5', NI_HK)}회(교체형 {n_ni('haiku45', cl, 'replace_0.5', NI_HK)}회, "
-    f"{n_ni('haiku45', cb, 'replace_0.5', NI_HK)}회)였다. 다만 NN-PPI 적용 전량 호출보다 유의하게 높은 경우는 "
-    f"{nsig_hk(cl)}회, {nsig_hk(cb)}회뿐이었다."
+    f"Haiku 4.5에서도 결합형({hk(cl, 'fuse_0.5')}, {hk(cb, 'fuse_0.5')})은 교체형"
+    f"({hk(cl, 'replace_0.5')}, {hk(cb, 'replace_0.5')})보다 정확도가 높았다. 결합형은 전량 호출보다 평균 "
+    f"{HDROP[cl]:.1f}%p, {HDROP[cb]:.1f}%p 낮았으나 유의하게 낮은 반복이 없었고, 교체형은 CLEF에서 {RUNS}회 중 "
+    f"{HLOW_R[cl]}회 유의하게 낮았다. Haiku는 임계값을 조정하지 않은 전량 호출이 더 정확하여 라벨과의 기준 "
+    "차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다."
 ))
 body(doc, (
     "한편 학습 시기와 다른 ClaimBuster 테스트에서는 분류기의 재현율이 "
     f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
     f"놓쳤고(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}), ‘필요’ 클래스의 F1도 {F1P[cb]['fuse_0.5']:.3f}로 전량 호출"
-    f"({F1P[cb]['sonnet_thr']:.3f})보다 낮았다. 이때 호출한 문장 중 LLM만 ‘필요’로 판정한 비율이 "
-    f"늘어나(학습 데이터 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%, CLEF는 증가 없음) 라벨 없이 성능 저하의 "
-    f"징후로 쓸 수 있어 보이며, 2016년 {DR['k']}문장의 라벨을 학습 세트에 추가하면 나머지의 재현율이 "
-    f"{DR['gain']:.1f}%p 올랐다."
+    f"({F1P[cb]['sonnet_thr']:.3f})보다 낮았다. 호출한 문장 중 LLM만 ‘필요’로 판정한 비율이 "
+    f"늘어나(학습 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%) 라벨 없이 성능 저하의 "
+    f"징후로 쓸 수 있어 보인다."
 ))
 
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
@@ -519,8 +523,9 @@ figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
-    "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 모든 문장에 LLM을 호출한 경우보다 평균 "
-    f"정확도가 높았으며, 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
+    "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 두 종류의 LLM 모두에서 전량 호출보다 "
+    "유의하게 낮지 않았고 교체 방식보다 정확하였으며, 기준이 라벨과 크게 다른 Sonnet 5에서는 전량 호출보다 "
+    f"높았다. 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
     "기대된다. 다만 학습 시기와 다른 ClaimBuster 테스트에서는 분류기가 확인이 필요한 문장을 더 놓쳤으며, 두 모델의 판정이 "
     "엇갈리는 비율이 그 징후일 수 있다. 또한 CLEF 영어 "
     "데이터가 ClaimBuster에서 구축된[1] 두 영어 데이터셋으로만 평가하였으므로, 향후 분류기의 주기적 재학습을 검증하고 다국어로 평가를 확장할 계획이다."

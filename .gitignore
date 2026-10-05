@@ -2,7 +2,13 @@ data/raw/
 __pycache__/
 *.pyc
 .venv/
-paper/references/pdfs/
+# cited source PDFs: only the openly licensed ones are committed (see paper/references/pdfs/README.md)
+paper/references/pdfs/*
+!paper/references/pdfs/README.md
+!paper/references/pdfs/clef2024_task1_overview.pdf
+!paper/references/pdfs/2608.30731.pdf
+!paper/references/pdfs/2606.08605.pdf
+!paper/references/pdfs/2609.07786.pdf
 paper/template/
 results/cache/
 paper/review_1004/*.docx

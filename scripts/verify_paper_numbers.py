@@ -46,6 +46,7 @@ pp = lambda d, a, b: f"{100 * (acc(d, a) - acc(d, b)):.1f}%p"
 best = {d: max(("sonnet_raw", "sonnet_thr"), key=lambda n: acc(d, n)) for d in ("clef", "cb")}
 FL = json.load(open(os.path.join(RESULTS, "flips.json"), encoding="utf-8"))  # mechanism + positive-class F1 (scripts/flips_paper.py)
 wf = lambda d, n: f"{R[d]['metrics'][n]['wf1'][0]:.3f}"
+hsig = lambda d, c, sign: sum(1 for x, p in zip(HK[d]["per_seed"][c]["diff"], HK[d]["per_seed"][c]["p"]) if p < 0.05 and sign * x > 0)
 up = lambda d: sum(1 for x, p in zip(SR[d]["per_seed"][f"fuse_0.5_vs_best_full({best[d]})"]["diff"],
                                      SR[d]["per_seed"][f"fuse_0.5_vs_best_full({best[d]})"]["p"]) if p < 0.05 and x > 0)
 
@@ -69,22 +70,23 @@ for d in ("clef", "cb"):
     checks += [(f"{d} recall sonnet_raw", f"{m(d, 'sonnet_raw', 'rec1'):.2f}"), 
 ]
 checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("best full-call acc cb", f"{acc('cb', best['cb']):.3f}"),
-           ("fuse50 vs sonnet+nnppi: n_sig", f"NN-PPI를 적용한 전량 호출보다 {ns('clef', 'fuse_0.5_vs_sonnet_nnppi')}회, {ns('cb', 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 높았다"),
-           ("abstract mean gain + accs", f"평균 정확도가 {gain('clef')}~{gain('cb')}%p 높았고(CLEF {acc('clef', 'fuse_0.5'):.3f}, ClaimBuster {acc('cb', 'fuse_0.5'):.3f}), {RUNS}회 반복 중 유의하게 낮은 경우는 없었다"),
-           ("abstract mechanism", "맞힌 판정을 틀리게 바꾼 경우가 절반 안팎이었다"),
+           ("fuse50 vs sonnet+nnppi: n_sig", f"NN-PPI를 적용한 전량 호출보다는 {ns('clef', 'fuse_0.5_vs_sonnet_nnppi')}회, {ns('cb', 'fuse_0.5_vs_sonnet_nnppi')}회 유의하게 높았다"),
+           ("abstract never lower (both LLMs)", f"두 종류의 LLM 모두에서 모든 문장에 LLM을 호출한 경우보다 유의하게 낮았던 반복이 {RUNS}회 중 한 번도 없었으며"),
+           ("abstract vs replacement", "교체하는 방식보다 평균 정확도가 높았다"),
+           ("abstract Sonnet gain + accs", f"전량 호출보다 오히려 {gain('clef')}~{gain('cb')}%p 높았다(CLEF {acc('clef', 'fuse_0.5'):.3f}, ClaimBuster {acc('cb', 'fuse_0.5'):.3f})"),
            ("results mean gain + sig higher", f"평균 {gain('clef')}%p, {gain('cb')}%p 높았고 {RUNS}회 중 {up('clef')}회, {up('cb')}회 유의하게 높았으며 유의하게 낮은 경우는 없었다"),
-           ("results non-inferiority counts", f"−{NI:.1f}%p 이상인 반복은 {nni('sonnet5', 'clef', 'fuse_0.5', NI)}회, {nni('sonnet5', 'cb', 'fuse_0.5', NI)}회(교체형 {nni('sonnet5', 'clef', 'replace_0.5', NI)}회, {nni('sonnet5', 'cb', 'replace_0.5', NI)}회)였고"),
            ("weighted F1", f"결합형({wf('clef', 'fuse_0.5')}, {wf('cb', 'fuse_0.5')})이 교체형({wf('clef', 'replace_0.5')}, {wf('cb', 'replace_0.5')})과 전량 호출({wf('clef', 'sonnet_thr')}, {wf('cb', 'sonnet_thr')})보다 높았다"),
            ("mechanism broke", f"맞힌 판정을 CLEF {round(FL['clef']['replace']['broke'])}개, ClaimBuster {round(FL['cb']['replace']['broke'])}개 틀리게 바꿨으나 결합형은 {round(FL['clef']['fuse']['broke'])}개, {round(FL['cb']['fuse']['broke'])}개에 그쳤고"),
            ("mechanism fixed ratio", f"바로잡은 판정 수는 교체형의 {round(100 * FL['clef']['fuse']['fixed'] / FL['clef']['replace']['fixed'])}%, {round(100 * FL['cb']['fuse']['fixed'] / FL['cb']['replace']['fixed'])}%였다"),
            ("positive-class F1 (CB)", f"F1도 {FL['cb']['f1_pos']['fuse_0.5']:.3f}로 전량 호출({FL['cb']['f1_pos']['sonnet_thr']:.3f})보다 낮았다"),
            ("haiku mean drop", f"전량 호출보다 평균 {hdrop('clef')}%p, {hdrop('cb')}%p 낮았으나"),
-           ("haiku non-inferiority counts", f"하한이 −{NI_HK:.1f}%p 이상인 반복은 {nni('haiku45', 'clef', 'fuse_0.5', NI_HK)}회, {nni('haiku45', 'cb', 'fuse_0.5', NI_HK)}회(교체형 {nni('haiku45', 'clef', 'replace_0.5', NI_HK)}회, {nni('haiku45', 'cb', 'replace_0.5', NI_HK)}회)였다"),
-           ("haiku vs nnppi n_sig", f"유의하게 높은 경우는 {HK['clef']['per_seed']['fuse_0.5_vs_sonnet_nnppi']['n_sig']}회, {HK['cb']['per_seed']['fuse_0.5_vs_sonnet_nnppi']['n_sig']}회뿐이었다"),
+           ("haiku fused vs replacement accs", f"Haiku 4.5에서도 결합형({hk('clef', 'fuse_0.5')}, {hk('cb', 'fuse_0.5')})은 교체형({hk('clef', 'replace_0.5')}, {hk('cb', 'replace_0.5')})보다 정확도가 높았다"),
+           ("haiku replacement sig lower (CLEF)", f"교체형은 CLEF에서 {RUNS}회 중 {hsig('clef', 'replace_0.5_vs_best_full(sonnet_raw)', -1)}회 유의하게 낮았다"),
+           ("haiku interpretation (hedged)", "라벨과의 기준 차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다"),
+           ("conclusion both LLMs", "두 종류의 LLM 모두에서 전량 호출보다 유의하게 낮지 않았고 교체 방식보다 정확하였으며"),
            ("runs (method)", f"80%를 비복원 추출하여 {RUNS}회 반복한 평균"),
            ("calib rate rule", f"교차검증 정확도가 {100 * max(max(cal(d, f'fuse_{b}') for b in (.6, .7, .8, .9, 1.0)) - cal(d, 'fuse_0.5') for d in ('clef', 'cb')):.1f}%p 이하로만 오르는 50%"),
            ("fig 2 caption", f"({RUNS}회 평균, 띠는 표준편차)"),
-           ("bootstrap", "부트스트랩(2,000회)"),
 
            ("example d", f"d={EX['example']['d']:.2f}".replace("-", "−")),
            ("example s", f"s={EX['example']['s']:.2f}"), ("example LLM threshold", f"t={EX['llm_threshold']:.2f}"),
@@ -99,8 +101,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("conclusion cost/time (expected)", f"이에 따라 LLM 비용은 약 {100 * (1 - C['0.5']['usd'] / C['1.0']['usd']):.0f}%, 처리 시간은 약 "
                                                f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("conclusion recall limitation", f"분류기의 재현율이 {m('cb', 'svm', 'rec1'):.2f}에 그쳐(CLEF {m('clef', 'svm', 'rec1'):.2f})"),
-           ("drift warning", f"(학습 데이터 {100 * DR['warning']['cb_learning_oof']:.1f}% → 테스트 {100 * DR['warning']['cb_test']:.1f}%, CLEF는 증가 없음)"),
-           ("drift remedy", f"300문장의 라벨을 학습 세트에 추가하면 나머지의 재현율이 {100 * (DR['remedy_cb']['300']['fused']['recall'] - DR['remedy_cb']['0']['fused']['recall']):.1f}%p 올랐다"),
+           ("drift warning", f"(학습 {100 * DR['warning']['cb_learning_oof']:.1f}% → 테스트 {100 * DR['warning']['cb_test']:.1f}%)"),
            ("conclusion recall numbers", f"(재현율 {m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
@@ -124,18 +125,17 @@ directional = {
         all(x >= 0 for x, p in zip(SR[d]["per_seed"][f"fuse_0.5_vs_best_full({best[d]})"]["diff"], SR[d]["per_seed"][f"fuse_0.5_vs_best_full({best[d]})"]["p"]) if p < 0.05)
         for d in ("clef", "cb")),
     "svm vs nnppi: CB n.s. in all runs, CLEF higher": ns("cb", "svm_vs_gemma_nnppi_sel") == 0 and acc("clef", "svm") > acc("clef", "gemma_nnppi_sel"),
-    "drift: CLEF disagreement does not rise; CB rises; retraining keeps accuracy":
-        DR["warning"]["clef_test"] <= DR["warning"]["clef_learning_oof"] and DR["warning"]["cb_test"] > DR["warning"]["cb_learning_oof"]
-        and DR["remedy_cb"]["300"]["fused"]["acc"] >= DR["remedy_cb"]["0"]["fused"]["acc"],
+    "drift: CB disagreement rises": DR["warning"]["cb_test"] > DR["warning"]["cb_learning_oof"],
     "CB recall: fused50 below threshold-tuned all-call; SVM recall lower on CB than CLEF":
         m("cb", "fuse_0.5", "rec1") < m("cb", "sonnet_thr", "rec1") and m("cb", "svm", "rec1") < m("clef", "svm", "rec1"),
     "haiku: stronger all-call = raw on both": all(HK[d]["best_full"] == "sonnet_raw" for d in ("clef", "cb")),
     "haiku: fuse50 never significantly below all-call": all(HK[d]["per_seed"]["fuse_0.5_vs_best_full(sonnet_raw)"]["n_sig"] == 0 for d in ("clef", "cb")),
     "haiku: fused50 mean below all-call (text: 낮았으나)": all(HK[d]["mean_acc"]["fuse_0.5"] < HK[d]["mean_acc"]["sonnet_raw"] for d in ("clef", "cb")),
-    "haiku: fuse50 vs all-call+NN-PPI significant on fewer than half the runs": all(HK[d]["per_seed"]["fuse_0.5_vs_sonnet_nnppi"]["n_sig"] < MAJ for d in ("clef", "cb")),
+    "haiku: fuse50 never significantly lower than all-call (direction-aware)": all(hsig(d, "fuse_0.5_vs_best_full(sonnet_raw)", -1) == 0 for d in ("clef", "cb")),
+    "haiku: raw all-call more accurate than threshold-tuned (text: 임계값을 조정하지 않은 전량 호출이 더 정확)": all(HK[d]["mean_acc"]["sonnet_raw"] > HK[d]["mean_acc"]["sonnet_thr"] for d in ("clef", "cb")),
+    "fused50 mean above replacement50, both LLMs and datasets": all(acc(d, "fuse_0.5") > acc(d, "replace_0.5") and HK[d]["mean_acc"]["fuse_0.5"] > HK[d]["mean_acc"]["replace_0.5"] for d in ("clef", "cb")),
     "LLM raw recall below tuned recall (text: 라벨보다 엄격)": all(m(d, "sonnet_raw", "rec1") < m(d, "sonnet_thr", "rec1") for d in ("clef", "cb")),
     "fused breaks fewer correct SVM decisions than replacement, both datasets": all(FL[d]["fuse"]["broke"] < FL[d]["replace"]["broke"] for d in ("clef", "cb")),
-    "abstract '절반 안팎': fused/replacement broken ratio in [0.35, 0.6]": all(0.35 <= FL[d]["fuse"]["broke"] / FL[d]["replace"]["broke"] <= 0.6 for d in ("clef", "cb")),
 }
 bad = 0
 for name, s in checks:
