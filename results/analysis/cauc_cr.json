@@ -1,0 +1,58 @@
+{
+ "sonnet5_clef": {
+  "all": {
+   "cr_mean": -0.006392931392931393,
+   "gain_mean": 75.45,
+   "loss_mean": 87.75,
+   "runs_cr_pos": 5
+  },
+  "called_half": {
+   "cr_mean": -0.057224532224532235,
+   "gain_mean": 20.05,
+   "loss_mean": 75.1,
+   "runs_cr_pos": 0
+  }
+ },
+ "sonnet5_cb": {
+  "all": {
+   "cr_mean": -0.007611798287345385,
+   "gain_mean": 39.0,
+   "loss_mean": 47.0,
+   "runs_cr_pos": 3
+  },
+  "called_half": {
+   "cr_mean": -0.05533333333333333,
+   "gain_mean": 11.5,
+   "loss_mean": 40.55,
+   "runs_cr_pos": 0
+  }
+ },
+ "haiku45_clef": {
+  "all": {
+   "cr_mean": -0.021205821205821204,
+   "gain_mean": 64.0,
+   "loss_mean": 104.8,
+   "runs_cr_pos": 0
+  },
+  "called_half": {
+   "cr_mean": -0.0600831600831601,
+   "gain_mean": 35.25,
+   "loss_mean": 93.05,
+   "runs_cr_pos": 0
+  }
+ },
+ "haiku45_cb": {
+  "all": {
+   "cr_mean": -0.01450999048525214,
+   "gain_mean": 32.95,
+   "loss_mean": 48.2,
+   "runs_cr_pos": 0
+  },
+  "called_half": {
+   "cr_mean": -0.04761904761904762,
+   "gain_mean": 15.0,
+   "loss_mean": 40.0,
+   "runs_cr_pos": 0
+  }
+ }
+}
