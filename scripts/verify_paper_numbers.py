@@ -83,7 +83,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
            ("haiku fused vs replacement accs", f"Haiku 4.5에서도 결합형({hk('clef', 'fuse_0.5')}, {hk('cb', 'fuse_0.5')})은 교체형({hk('clef', 'replace_0.5')}, {hk('cb', 'replace_0.5')})보다 정확도가 높았다"),
            ("haiku replacement sig lower (CLEF)", f"교체형은 CLEF에서 {RUNS}회 중 {hsig('clef', 'replace_0.5_vs_best_full(sonnet_raw)', -1)}회 유의하게 낮았다"),
            ("haiku interpretation (hedged)", "기준 차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다"),
-           ("conclusion both LLMs", "두 종류의 LLM 모두에서 전량 호출보다 유의하게 낮지 않았고 교체 방식보다 정확하였으며"),
+           ("conclusion both LLMs", "두 LLM 모두에서 전량 호출보다 유의하게 낮지 않았고 교체 방식보다 정확하였으며"),
            ("runs (method)", f"80%를 비복원 추출하여 {RUNS}회 반복한 평균"),
            ("calib rate rule", f"교차검증 정확도가 {100 * max(max(cal(d, f'fuse_{b}') for b in (.6, .7, .8, .9, 1.0)) - cal(d, 'fuse_0.5') for d in ('clef', 'cb')):.1f}%p 이하로만 오르는 50%"),
            ("fig 2 caption", f"({RUNS}회 평균, 띠는 표준편차)"),
@@ -102,7 +102,7 @@ checks += [("best full-call acc clef", f"{acc('clef', best['clef']):.3f}"), ("be
                                                f"{100 * (1 - C['0.5']['seconds'] / C['1.0']['seconds']):.0f}% 줄일 수 있을 것으로 기대된다"),
            ("conclusion recall limitation", f"분류기의 재현율이 {m('cb', 'svm', 'rec1'):.2f}에 그쳐(CLEF {m('clef', 'svm', 'rec1'):.2f})"),
            ("drift warning", f"(학습 {100 * DR['warning']['cb_learning_oof']:.1f}% → 테스트 {100 * DR['warning']['cb_test']:.1f}%)"),
-           ("conclusion recall numbers", f"(재현율 {m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
+           ("CB recall fused vs all-call", f"결합형의 재현율도 전량 호출보다 낮았고({m('cb', 'fuse_0.5', 'rec1'):.2f} 대 {m('cb', 'sonnet_thr', 'rec1'):.2f})")]
 # the text names which full-call setting is the stronger one on each dataset
 BF_NAME = {"sonnet_thr": "임계값 조정", "sonnet_raw": "조정 전"}
 assert best["clef"] == best["cb"] == "sonnet_thr"

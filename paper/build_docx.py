@@ -128,6 +128,20 @@ def set_font(run, name=BODY_FONT, size=9.5, bold=False, italic=False):
     rFonts.set(qn("w:eastAsia"), name)
 
 
+MATH_FONT = "Cambria Math"
+
+
+def add_text(p, text, size=9):
+    """Add text to a paragraph; segments wrapped in backticks are math variables and set in italic (d(x), s, ρ …)."""
+    for i, seg in enumerate(text.split("`")):
+        if seg:
+            if i % 2:  # the advisor's ver.2 set these as Word equations (Cambria Math, italic)
+                set_font(p.add_run(seg), MATH_FONT, size, italic=True)
+            else:
+                set_font(p.add_run(seg), BODY_FONT, size)
+    return p
+
+
 def centered(doc, text, size=10, bold=False, font=BODY_FONT, after=4):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -136,8 +150,10 @@ def centered(doc, text, size=10, bold=False, font=BODY_FONT, after=4):
     return p
 
 
-def heading(doc, text, size=9):
+def heading(doc, text, size=9, center=False):
     p = doc.add_paragraph()
+    if center:  # the template centres 참 고 문 헌 (and ACKNOWLEDGMENT)
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(6)
     p.paragraph_format.space_after = Pt(4.75)
     p.paragraph_format.keep_with_next = True  # never leave a heading alone at the bottom of a column
@@ -183,7 +199,7 @@ def body(doc, text, size=9, indent=0.3175, after=3.5, align=WD_ALIGN_PARAGRAPH.J
         pf.first_line_indent = Cm(indent)
     if lead:
         set_font(p.add_run(lead + " "), BODY_FONT, size, bold=True)
-    set_font(p.add_run(text), BODY_FONT, size)
+    add_text(p, text, size)
     return p
 
 
@@ -311,22 +327,22 @@ body(doc, (
 ))
 subheading(doc, "2.2 전체 구조")
 body(doc, (
-    "그림 1은 제안하는 결합형 캐스케이드의 전체 구조이다. 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 가장 불확실한 문장, 즉 "
-    "결정값의 절댓값 |d(x)|가 가장 작은 문장부터 전체의 ρ(호출률)만큼 골라(그림 1의 yes 경로) LLM을 호출한다. 호출하지 않은 문장은 분류기의 "
-    "판정(d(x)>0)을 그대로 사용하고, 호출한 문장은 2.4절의 결합 판정으로 최종 판정한다."
+    "그림 1은 제안하는 결합형 캐스케이드의 전체 구조이다. 제안 방법은 저비용 분류기가 모든 문장을 먼저 판정하고, 분류기가 가장 불확실한 문장, 즉 "
+    "결정값의 절댓값 |`d`(`x`)|가 가장 작은 문장부터 전체의 `ρ`(호출률)만큼 골라(그림 1의 yes 경로) LLM을 호출한다. 호출하지 않은 문장은 분류기의 "
+    "판정(`d`(`x`)>0)을 그대로 사용하고, 호출한 문장은 2.4절의 결합 판정으로 최종 판정한다."
 ))
 # figures/method_diagram.tex, compiled at its printed size (Tectonic) and inserted at that size
 _dg = pymupdf.open(os.path.join(ROOT, "figures", "method_diagram.pdf"))[0].rect
 figure(doc, os.path.join(ROOT, "figures", "method_diagram.png"), _dg.width / 72 * 2.54, "그림 1. 결합형 캐스케이드의 전체 구조")
 subheading(doc, "2.3 저비용 분류기")
 body(doc, (
-    "문장 x의 팩트체크 필요 여부 y∈{0,1}을 판정하며, 라벨이 있는 학습 세트 L(NN-PPI의 보정 세트)을 사용한다. 저비용 "
+    "문장 `x`의 팩트체크 필요 여부 `y`∈{0,1}을 판정하며, 라벨이 있는 학습 세트 `L`(NN-PPI의 보정 세트)을 사용한다. 저비용 "
     "분류기(이하 임베딩 SVM)는 NN-PPI가 이웃 검색에 쓰는 문장 임베딩 all-MiniLM-L6-v2를 입력으로 하는 "
-    "RBF-SVM이다. 클래스 불균형을 고려한 가중치로 L에서 학습하며, 결정값 d(x)가 양수이면 팩트체크가 필요하다는 판정이고 절댓값이 "
+    "RBF-SVM이다. 클래스 불균형을 고려한 가중치로 `L`에서 학습하며, 결정값 `d`(`x`)가 양수이면 팩트체크가 필요하다는 판정이고 절댓값이 "
     "클수록 확신이 높다."
 ))
 subheading(doc, "2.4 결합 판정")
-body(doc, "호출한 문장에 대해 LLM이 출력한 점수 s(x)∈[0,1]와 분류기의 결정값 d(x)를 다음과 같이 결합한다.")
+body(doc, "호출한 문장에 대해 LLM이 출력한 점수 `s`(`x`)∈[0,1]와 분류기의 결정값 `d`(`x`)를 다음과 같이 결합한다.")
 eq = doc.add_paragraph()
 eq.paragraph_format.space_before = Pt(3)
 eq.paragraph_format.space_after = Pt(3)
@@ -336,12 +352,12 @@ eq.paragraph_format.tab_stops.add_tab_stop(Cm(col_w), WD_TAB_ALIGNMENT.RIGHT)
 eq.add_run("\t")
 add_math(eq.add_run(), "eq1")
 set_font(eq.add_run(",\t(1)"), BODY_FONT, 9)
-p = body(doc, "여기서 (a, b, c)는 L에서 5겹 교차검증으로 얻은 d와 s로 학습한 로지스틱 회귀 계수, σ는 시그모이드 함수, ")
+p = body(doc, indent=0, text="여기서 `a`, `b`, `c`는 `L`에서 5겹 교차검증으로 얻은 `d`와 `s`로 학습한 로지스틱 회귀 계수, `σ`는 시그모이드 함수, ")
 add_math(p.add_run(), "indicator")
-set_font(p.add_run(
-    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a×d)/b와 비교하므로, 분류기가 "
-    "‘불필요’로 기울수록(즉, d가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 s를 "
-    "L에서 정확도가 가장 높은 임계값 t(표 1의 임계값 조정)와 비교한다."), BODY_FONT, 9)
+add_text(p, (
+    "는 조건이 참이면 1인 지시함수이다. 식 (1)을 `s`에 대해 정리하면 결합형은 `s`를 (−`c`−`a`×`d`)/`b`와 비교하므로, 분류기가 "
+    "‘불필요’로 기울수록(즉, `d`가 작을수록) LLM에 더 높은 점수를 요구한다. 반면 교체형 캐스케이드(이하 교체형)는 `s`를 "
+    "`L`에서 정확도가 가장 높은 임계값 `t`(표 1의 임계값 조정)와 비교한다."))
 
 # ---------------- III. 실험 ----------------
 heading(doc, "Ⅲ. 실 험")
@@ -360,8 +376,8 @@ subheading(doc, "3.2 평가 방법")
 CAL_GAIN = {d: max(cal(d, f'fuse_{b}') - cal(d, 'fuse_0.5') for b in (.6, .7, .8, .9, 1.0)) for d in (cl, cb)}
 body(doc, (
     f"평가 지표는 테스트 정확도와 가중 F1이며, 학습 세트의 80%를 비복원 추출하여 {RUNS}회 반복한 평균을 보고한다(LLM 점수와 테스트 세트는 반복 간 동일). 방법 간 차이는 각 반복의 "
-    f"예측에 McNemar 검정(α=0.05, 다중 비교 보정 없음)을 적용하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 k는 모두 학습 세트 "
-    f"안에서만 정하였고(두 데이터셋 모두 k={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 그 이상 높여도 학습 "
+    f"예측에 McNemar 검정(`α`=0.05, 다중 비교 보정 없음)을 적용하였다. LLM 임계값, 결합 계수, 호출률, NN-PPI의 이웃 수 `k`는 모두 학습 세트 "
+    f"안에서만 정하였고(두 데이터셋 모두 `k`={R[cl]['k_sel']}), 임베딩 SVM은 기본 하이퍼파라미터를 사용하였다. 호출률은 그 이상 높여도 학습 "
     f"세트의 교차검증 정확도가 {max(CAL_GAIN.values()) * 100:.1f}%p 이하로만 오르는 50%로 정하였다."
 ))
 
@@ -447,7 +463,7 @@ for row in t.rows[:-1]:
 GAP = {d: f"{100 * SR[d]['gap_to_best_full']['0.5']['replace']:+.2f}" for d in (cl, cb)}
 mneg = lambda x: f"{x:.1f}".replace("-", "−")
 first = body(doc, (
-    f"임베딩 SVM은 NN-PPI보다 CLEF에서 {RUNS}회 중 "
+    f"표 1과 같이 임베딩 SVM은 NN-PPI보다 CLEF에서 {RUNS}회 중 "
     f"{nsig(cl,'svm_vs_gemma_nnppi_sel')}회 유의하게 높았고, ClaimBuster에서는 유의차가 없었다."
 ))
 first.paragraph_format.space_before = Pt(5)  # air between Table 1 and the text below it
@@ -481,8 +497,8 @@ neg = lambda x, n=2: f"{x:.{n}f}".replace("-", "−")
 assert E["d"] < 0 and EX["llm_threshold"] <= E["s"] < E["bar"]  # replacement says "needed", fused says "not needed"
 body(doc, (
     "예를 들어 CLEF의 "
-    f"한 공약 문장(라벨: 불필요, s={E['s']:.2f})은 교체형이 t={EX['llm_threshold']:.2f} 기준으로 틀렸으나, "
-    f"결합형은 d={neg(E['d'])}에 따라 기준이 {ro(f'{E['bar']:.2f}')} 높아져 옳게 판정하였다."
+    f"한 공약 문장(라벨: 불필요, `s`={E['s']:.2f})은 교체형이 `t`={EX['llm_threshold']:.2f} 기준으로 틀렸으나, "
+    f"결합형은 `d`={neg(E['d'])}에 따라 기준이 {ro(f'{E['bar']:.2f}')} 높아져 옳게 판정하였다."
 ))
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
@@ -508,12 +524,12 @@ body(doc, (
     "차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다."
 ))
 body(doc, (
-    "한편 학습 시기와 다른 ClaimBuster 테스트에서는 분류기의 재현율이 "
-    f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
-    f"놓쳤고(재현율 {REC['cb_fuse']} 대 {REC['cb_thr']}), ‘필요’ 클래스의 F1도 {F1P[cb]['fuse_0.5']:.3f}로 전량 호출"
+    "한편 시기가 다른 ClaimBuster 테스트에서는 분류기의 재현율이 "
+    f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형의 재현율도 전량 호출보다 "
+    f"낮았고({REC['cb_fuse']} 대 {REC['cb_thr']}), ‘필요’ 클래스 F1도 {F1P[cb]['fuse_0.5']:.3f}로 전량 호출"
     f"({F1P[cb]['sonnet_thr']:.3f})보다 낮았다. 호출한 문장 중 LLM만 ‘필요’로 판정한 비율이 "
     f"늘어나(학습 {DR['warn_cb_learn']:.1f}% → 테스트 {DR['warn_cb_test']:.1f}%) 라벨 없이 성능 저하의 "
-    f"징후로 쓸 수 있어 보인다."
+    f"징후로 보인다."
 ))
 
 # built at the printed column width by scripts/make_figure.py --full, so inserted without rescaling
@@ -524,17 +540,17 @@ figure(doc, os.path.join(ROOT, "figures", "cascade_budget_full.png"), 8.2,
 heading(doc, "Ⅳ. 결 론")
 body(doc, (
     "본 논문에서는 저비용 분류기가 확신하지 못하는 문장에만 LLM을 호출하고, 두 모델의 점수를 결합하여 최종 판정하는 "
-    "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 두 종류의 LLM 모두에서 전량 호출보다 "
+    "결합형 캐스케이드를 제안하였다. 제안 방법은 LLM 호출을 절반으로 줄이면서도 두 LLM 모두에서 전량 호출보다 "
     "유의하게 낮지 않았고 교체 방식보다 정확하였으며, 기준이 라벨과 크게 다른 Sonnet 5에서는 전량 호출보다 "
     f"높았다. 이에 따라 LLM 비용은 약 {CUT_USD:.0f}%, 처리 시간은 약 {CUT_SEC:.0f}% 줄일 수 있을 것으로 "
     "기대된다. 다만 학습 시기와 다른 ClaimBuster 테스트에서는 분류기의 재현율이 낮았으며, LLM만 "
-    "‘필요’로 판정하는 비율이 그 징후일 수 있다. 또한 CLEF 영어 "
-    "데이터가 ClaimBuster에서 구축된[1] 두 영어 데이터셋으로만 평가하였으므로, 향후 분류기의 주기적 재학습을 검증하고 다국어로 평가를 확장할 계획이다."
+    "‘필요’로 판정하는 비율이 그 징후일 수 있다. 또한 CLEF "
+    "데이터가 ClaimBuster에서 구축된[1] 두 영어 데이터셋으로만 평가하였으므로, 향후 주기적 재학습을 검증하고 다국어로 평가를 확장할 계획이다."
 ))
 
 # ACKNOWLEDGMENT omitted (no funding to acknowledge); re-add here if needed
 
-heading(doc, "참 고 문 헌")
+heading(doc, "참 고 문 헌", center=True)
 refs = [
     "[1] M. Hasanain et al., \"Overview of the CLEF-2024 CheckThat! Lab Task 1 on Check-Worthiness Estimation of Multigenre Content,\" CEUR-WS vol. 3740, pp. 276-286, 2024.",
     "[2] P. Amatya, Venktesh V, and V. Setty, \"Calibrating Small Language Models for Claim Check-Worthiness Detection,\" arXiv:2608.30731, 2026.",
@@ -544,7 +560,7 @@ refs = [
     "[6] F. Arslan et al., \"A Benchmark Dataset of Check-Worthy Factual Claims,\" in Proc. ICWSM, vol. 14, pp. 821-829, 2020.",
 ]
 for r in refs:
-    ref = body(doc, r, size=9, indent=0, after=0, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format
+    ref = body(doc, r, size=9, indent=0, after=2, align=WD_ALIGN_PARAGRAPH.LEFT).paragraph_format  # template has 4.75 pt; 2 pt keeps the paper at 2 pages
     ref.line_spacing = 1.0
     ref.left_indent, ref.first_line_indent = Pt(12.3), Pt(-12.3)  # hanging indent as in the template
 
