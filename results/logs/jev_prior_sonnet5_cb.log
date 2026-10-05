@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 1029.67it/s]
+[cb] run 0
+[cb] run 20
+[cb] run 40
+[cb] run 60
+[cb] run 80
+cb: sonnet_all 0.862  jev_alone 0.837  rate {'0': 42, '0.05': 39, '0.1': 17, '0.2': 2}  jevfuse_sel 0.842  jevrep_sel 0.842  CR +4.61%p (>0 in 79)
+  by rate  0: fuse 0.837 rep 0.837  0.05: fuse 0.844 rep 0.844  0.1: fuse 0.847 rep 0.850  0.2: fuse 0.847 rep 0.859  0.3: fuse 0.847 rep 0.864  0.4: fuse 0.847 rep 0.866  0.5: fuse 0.847 rep 0.864  0.6: fuse 0.847 rep 0.863  0.7: fuse 0.847 rep 0.863  0.8: fuse 0.847 rep 0.862  0.9: fuse 0.847 rep 0.862  1.0: fuse 0.847 rep 0.862
+  jevfuse_sel_vs_sonnet_all: -2.00%p  sig higher 0  lower 94
+  jevfuse_sel_vs_jevrep_sel: -0.04%p  sig higher 0  lower 1
+  jevrep_sel_vs_sonnet_all: -1.97%p  sig higher 0  lower 96
+  jev_alone_vs_sonnet_all: -2.51%p  sig higher 0  lower 100
+  jevfuse_0.3_vs_sonnet_all: -1.54%p  sig higher 0  lower 89
+  jevfuse_0.5_vs_sonnet_all: -1.54%p  sig higher 0  lower 89
+  jevfuse_0.3_vs_jevrep_0.3: -1.69%p  sig higher 0  lower 90
+  jevfuse_0.5_vs_jevrep_0.5: -1.76%p  sig higher 0  lower 90
