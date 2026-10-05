@@ -178,6 +178,7 @@ def body(doc, text, size=9, indent=0.3175, after=3.5, align=WD_ALIGN_PARAGRAPH.J
     pf = p.paragraph_format
     pf.space_after = Pt(after)
     pf.line_spacing = BODY_LINE_SPACING
+    pf.keep_together = True  # the advisor dislikes paragraphs split across columns/pages
     if indent:
         pf.first_line_indent = Cm(indent)
     if lead:
@@ -336,7 +337,6 @@ eq.add_run("\t")
 add_math(eq.add_run(), "eq1")
 set_font(eq.add_run(",\t(1)"), BODY_FONT, 9)
 p = body(doc, "여기서 (a, b, c)는 L에서 5겹 교차검증으로 얻은 d와 s로 학습한 로지스틱 회귀 계수, σ는 시그모이드 함수, ")
-p.paragraph_format.widow_control = False  # may split across the column so its bottom is not left empty
 add_math(p.add_run(), "indicator")
 set_font(p.add_run(
     "는 조건이 참이면 1인 지시함수이다. 식 (1)을 s에 대해 정리하면 결합형은 s를 (−c−a×d)/b와 비교하므로, 분류기가 "
@@ -479,11 +479,11 @@ EX = json.load(open(os.path.join(ROOT, "results", "paper", "example_case.json"),
 E = EX["example"]
 neg = lambda x, n=2: f"{x:.{n}f}".replace("-", "−")
 assert E["d"] < 0 and EX["llm_threshold"] <= E["s"] < E["bar"]  # replacement says "needed", fused says "not needed"
-body(doc, (  # may split across the columns (fills the bottom of the first column)
+body(doc, (
     "예를 들어 CLEF의 "
     f"한 공약 문장(라벨: 불필요, s={E['s']:.2f})은 교체형이 t={EX['llm_threshold']:.2f} 기준으로 틀렸으나, "
     f"결합형은 d={neg(E['d'])}에 따라 기준이 {ro(f'{E['bar']:.2f}')} 높아져 옳게 판정하였다."
-)).paragraph_format.widow_control = False
+))
 
 # second LLM (Claude Haiku 4.5, same prompt and batches)
 hk = lambda d, k: f3(HK[d]["mean_acc"][k])
@@ -506,7 +506,7 @@ body(doc, (
     f"{HDROP[cl]:.1f}%p, {HDROP[cb]:.1f}%p 낮았으나 유의하게 낮은 반복이 없었고, 교체형은 CLEF에서 {RUNS}회 중 "
     f"{HLOW_R[cl]}회 유의하게 낮았다. Haiku는 임계값을 조정하지 않은 전량 호출이 더 정확하여 기준 "
     "차이가 작았던 것으로 보이며, LLM의 기준이 라벨과 다를수록 결합의 이득이 커질 것으로 기대된다."
-)).paragraph_format.widow_control = False  # may start at the bottom of the left column
+))
 body(doc, (
     "한편 학습 시기와 다른 ClaimBuster 테스트에서는 분류기의 재현율이 "
     f"{REC['cb_svm']}에 그쳐(CLEF {REC['cl_svm']}), 결합형도 확인이 필요한 문장을 임계값을 조정한 전량 호출보다 많이 "
