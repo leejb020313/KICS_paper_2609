@@ -1,0 +1,14 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2336.20it/s]
+[clef] run 0
+[clef] run 20
+[clef] run 40
+[clef] run 60
+[clef] run 80
+clef: sonnet_all 0.935  jevrep_sel 0.922  rate mean 0.09 {'0': 38, '0.05': 17, '0.1': 13, '0.2': 30, '0.3': 2}  svmrep_0.5 0.930
+  learning curve 0:0.872  0.05:0.873  0.1:0.874  0.2:0.876  0.3:0.875  0.4:0.871  0.5:0.871  0.6:0.870  0.7:0.870  0.8:0.870  0.9:0.870  1.0:0.870
+  jevrep_sel_vs_sonnet_all: -1.28%p  sig higher 0  lower 55
+  jevrep_sel_vs_svmrep_0.5: -0.85%p  sig higher 4  lower 46
+  jevrep_0.3_vs_sonnet_all: +0.15%p  sig higher 0  lower 0
+  jevrep_0.4_vs_sonnet_all: +0.10%p  sig higher 0  lower 0
+  jevrep_0.5_vs_sonnet_all: +0.03%p  sig higher 0  lower 0
